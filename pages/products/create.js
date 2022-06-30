@@ -1,6 +1,6 @@
-import React from 'react'
-import {useState} from 'react'
-function create() {
+
+import { useState } from 'react'
+function Create() {
  
     const initialState = {name:'',price:0}
     const [product, setProduct] = useState(initialState)
@@ -77,4 +77,4 @@ function create() {
   )
 }
 
-export default create
+export default Create

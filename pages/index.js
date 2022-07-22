@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
      <div>
-      <Link href='/products/create'>Create product..</Link>
+      <Link href='/products/create'>Creese un producto</Link>
      </div>
     </div>
   )

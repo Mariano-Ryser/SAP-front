@@ -36,7 +36,7 @@ function Create() {
   return (
     <>
         <div>
-            <h1>Nuevo producto para mi amigo MongoDB =D</h1>
+            <h1>Nuevo producto y su precio</h1>
             <form>
                 <input
                  type='text'

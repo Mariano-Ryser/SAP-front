@@ -57,20 +57,31 @@ function Create() {
         </div>
         <style jsx>
             {`
+            h1{
+                text-align:center;
+                color: white;
+            }
                 form{
                     display:flex;
                     flex-direction:column;
                     width:20rem;
-                    margin: 0 auto
+                    margin: 0 auto;
                 }
                 input{
                     margin-bottom:0.5rem;
+                    height:3rem;
+                    font-size: 1.5rem;
+                    color:black;
+                }
+                button{
+                    height:4rem;
+                    font-size: 1.5rem;
+
+                    color:black;
+                    height:3rem;
                 }
 
-                h1{
-                    text-align:center;
-                    background-color:rgb(241, 241, 241);
-                }
+                
                 `}
         </style>
     </>

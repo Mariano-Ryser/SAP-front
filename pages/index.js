@@ -1,4 +1,4 @@
-
+import Nav from '../components/NavRespon'
 import Image from 'next/image'
 import Link from 'next/link'
 

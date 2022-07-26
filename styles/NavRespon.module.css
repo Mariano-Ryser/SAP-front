@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     min-height: 5rem;
+    border-bottom: solid rgb(56, 226, 217) 1px;
     /* background-color: rgb(255, 210, 210); */
     /* color: rgb(255, 255, 255);
     border-bottom: 2px solid rgb(190, 190, 190); */
@@ -30,7 +31,14 @@
     font-size: 1.5rem;
     font-weight: 600;
     cursor: pointer;
+    animation: logo 3s infinite alternate;
   }
+  @keyframes logo {
+    0%{}
+    100%{}
+    
+  }
+  
   
   .navToggle{
     position: absolute;
@@ -82,7 +90,7 @@
   .nav{
     display: flex;
     align-items: center;
-    min-height: 10vh;
+    min-height: 5vh;
     /* background-color: rgb(255, 210, 210); */
     color: black;
     /* border-bottom: 2px solid rgb(110, 110, 110); */
@@ -121,7 +129,7 @@
       color: rgb(255, 255, 255);
       margin-left: 0.5rem;
       margin-right: auto;
-      font-size: 2.2rem;
+      font-size: 1.2rem;
       font-weight: 600;
       cursor: pointer;
       font-family: 'Fredoka', sans-serif;

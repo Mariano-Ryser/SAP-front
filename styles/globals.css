@@ -2,20 +2,22 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: rgb(12, 12, 12);
+
+    background-color: #090C15;
+    
 }
 
 a {
-  color: inherit;
+  color: #84ba64;
   text-decoration: none;
+  font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 }
 
 * {
   box-sizing: border-box;
-  color: rgb(0, 234, 234);
-  
 }
-
-
+h1{font: 400 22px/0.7 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
+h2 {font: 400 20px/0.7 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
+h3 {font: 400 18px/0.7 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
+p{font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  }

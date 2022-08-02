@@ -4,8 +4,7 @@
     display: flex;
     align-items: center;
     min-height: 5rem;
-    border-bottom: solid rgb(56, 226, 217) 1px;
-    /* background-color: rgb(255, 210, 210); */
+     background-color: #233056; 
     /* color: rgb(255, 255, 255);
     border-bottom: 2px solid rgb(190, 190, 190); */
     font-family: 'Fredoka', sans-serif;
@@ -28,7 +27,7 @@
     color: rgb(255, 255, 255);
     margin-left: 1rem;
     margin-right: auto;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     font-weight: 600;
     cursor: pointer;
     animation: logo 3s infinite alternate;
@@ -38,7 +37,6 @@
     100%{}
     
   }
-  
   
   .navToggle{
     position: absolute;
@@ -51,7 +49,7 @@
     height: 5rem;
     color: rgb(0, 0, 0);
     /* background-color: #424242; */
-    border-bottom: solid rgb(56, 226, 217) 1px;
+    border-bottom: solid rgb(104, 226, 56) 1px;
     transition: 0.4s;
     opacity: 100%;
     animation: to 0.5s 1 ease-in-out ;
@@ -85,15 +83,13 @@
   
   
   @media (max-width: 600px) {
-    
-   
   .nav{
     display: flex;
     align-items: center;
-    min-height: 5vh;
-    /* background-color: rgb(255, 210, 210); */
+    height: 6rem;
+    background-color: #233056; 
     color: black;
-    /* border-bottom: 2px solid rgb(110, 110, 110); */
+    
   }
   .navToggle{
     position: absolute;
@@ -109,7 +105,6 @@
     opacity: 100%;
     animation: to 0.5s 1 ease-in-out ;
   }
-  
     .li{
         font-size: 1.1rem;
         color: white;
@@ -129,11 +124,11 @@
       color: rgb(255, 255, 255);
       margin-left: 0.5rem;
       margin-right: auto;
-      font-size: 1.2rem;
+      /* font-size: 1.2rem; */
       font-weight: 600;
       cursor: pointer;
-      font-family: 'Fredoka', sans-serif;
-  font-family: 'Shadows Into Light', cursive;
+      font: 400 25px/1 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+   /*font-family: 'Shadows Into Light', cursive; */
     }
     
   }

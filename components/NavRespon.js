@@ -9,7 +9,7 @@ const NavRespon = () => {
   return (
     <nav className={styles.nav}>
         <div className={styles.img}>
-        <h1 className={styles.logo}>V</h1>
+        <h1 className={styles.logo}>LESSON</h1>
       </div> 
      
       {/* <div className={styles.navToggle}>

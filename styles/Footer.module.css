@@ -1,0 +1,32 @@
+.footer{
+    height: 7rem;
+    width: 100%;
+    background-color: #233056; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.a{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .footer{
+        height: 7rem;
+        width: 100%;
+        background-color: #233056; 
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .a{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}

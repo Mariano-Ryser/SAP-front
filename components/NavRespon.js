@@ -3,14 +3,20 @@ import Link from 'next/link';
 import styles from "../styles/NavRespon.module.css"
 import Image from "next/image"
 
+
+//C:\Users\MR22\stock-app\frontend\public
 const NavRespon = () => {
 
  
   return (
     <nav className={styles.nav}>
         <div className={styles.img}>
-        <h1 className={styles.logo}>LESSON</h1>
-      </div> 
+         <Link href="/"><h1 className={styles.logo}>LESSON</h1></Link> 
+        </div>
+
+        <div className={styles.burger}>
+        <Image src={'/burgerWhite.png'} height={35} width={40}></Image>
+        </div> 
      
       {/* <div className={styles.navToggle}>
         <ul className={styles.ulRes}>

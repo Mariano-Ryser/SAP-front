@@ -15,7 +15,7 @@ const NavRespon = () => {
         </div>
 
         <div className={styles.burger}>
-        <Image src={'/burgerWhite.png'} height={35} width={40}></Image>
+        <Image alt='Burger-Icon' src={'/burgerWhite.png'} height={35} width={40}></Image>
         </div> 
      
       {/* <div className={styles.navToggle}>

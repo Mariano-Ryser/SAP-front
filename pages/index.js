@@ -5,12 +5,11 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <>
-     <div className='box'>
+     <article className='box'>
 {/*       
        <Link href='/products/create'>Creese un producto</Link> <br></br>
       <Link href='/products/create'>Creese un producto</Link>   */}
-
-        <div className='code'>
+        <article className='article'>
           <h1>Expresion simple</h1>
           <p>Parrafo comun para testear en el telefono la vista.
             seguimos probando y tressteando escribiendo cualquier ganadad.
@@ -21,52 +20,23 @@ export default function Home() {
             Parrafo comun para testear en el telefono la vista.
             seguimos probando y tressteando escribiendo cualquier ganadad.
             <a>Node JS</a>
-          </p>
-        </div>
-        <div className='code'>
-          <h1>Expresion compleja</h1>
-          <p>Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            <a>Node JS</a>
-          </p>
-        </div>
-        <div className='code'>
-          <h1>Expresion Dificil</h1>
-          <p>Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            <a>Node JS</a>
-          </p>
-        </div>
-
-
+          </p>          
+        </article>
+        <textarea className='text-area'>
+          asdasdasdasdasd
+        </textarea>
+      </article>
       <style jsx>
             {`
                 .box{
-                    margin-top:1rem
-                }
-                .code{
-                  margin-top:2rem;
-                  border: solid rgb(104, 226, 56) 0px;
-                  width: 95%;
+                  color: rgb(212, 212, 212);
+                  width: 100%;
                   margin:auto;
-                  color:white;
-                  
+                  padding: 1rem;
+                  background-color: black;
                 }
                 `}
         </style>
-     </div>
     
   </>
   )

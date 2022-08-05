@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     min-height: 5rem;
-     background-color: #233056; 
+    background-color: #13192e; 
     /* color: rgb(255, 255, 255);
     border-bottom: 2px solid rgb(190, 190, 190); */
     font-family: 'Fredoka', sans-serif;
@@ -16,7 +16,7 @@
   .burger{
     position: absolute;
     right: 2rem;
-    top: 1.6rem;
+    top: 1.9rem;
   }
 
   /* @keyframes nav{
@@ -31,7 +31,7 @@
   } */
   
   .logo{
-    color: rgb(255, 255, 255);
+    color: rgb(204, 204, 204);
     margin-left: 1rem;
     margin-right: auto;
     /* font-size: 1.5rem; */
@@ -94,30 +94,15 @@
     display: flex;
     align-items: center;
     height: 6rem;
-    background-color: #233056; 
+    background-color: #13192e; 
     color: black;
     
   }
   .burger{
     position: absolute;
     right: 2rem;
-    top: 2rem;
+    top: 2.22rem;
   }
-
-
-  /* .navToggle{
-    position: absolute;
-    right: 0;
-    top: 5.1rem;
-    height: 5rem;
-    padding: 0.6rem;
-    width: 100%;
-    color: white;
-    border-bottom: solid rgb(102, 102, 102) 2px; 
-    transition: 0.4s;
-    opacity: 100%;
-    animation: to 0.5s 1 ease-in-out ;
-  } */
     .li{
         font-size: 1.1rem;
         color: white;
@@ -134,7 +119,7 @@
         cursor: pointer;
     }
     .logo{
-      color: rgb(255, 255, 255);
+      color: rgb(182, 182, 182);
       margin-left: 0.5rem;
       margin-right: auto;
       /* font-size: 1.2rem; */

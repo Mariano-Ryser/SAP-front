@@ -22,8 +22,25 @@ export default function Home() {
             <a>Node JS</a>
           </p>          
         </article>
-        <textarea className='text-area'>
-          asdasdasdasdasd
+        <textarea className='text-area' placeholder='Comentario...'>
+          
+        </textarea>
+        <br></br>
+        <article className='article'>
+          <h1>Expresion simple</h1>
+          <p>Parrafo comun para testear en el telefono la vista.
+            seguimos probando y tressteando escribiendo cualquier ganadad.
+            Parrafo comun para testear en el telefono la vista.
+            seguimos probando y tressteando escribiendo cualquier ganadad.
+            Parrafo comun para testear en el telefono la vista.
+            seguimos probando y tressteando escribiendo cualquier ganadad.
+            Parrafo comun para testear en el telefono la vista.
+            seguimos probando y tressteando escribiendo cualquier ganadad.
+            <a>Node JS</a>
+          </p>          
+        </article>
+        <textarea className='text-area' placeholder='Comentario...'>
+          
         </textarea>
       </article>
       <style jsx>

@@ -28,7 +28,7 @@ p{font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", He
   width: 100%;
   margin:auto;
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   background-color: rgb(41, 39, 39);
 }
 .text-area{
@@ -37,11 +37,9 @@ p{font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", He
   font-size:1.2rem;
   width:100%;
   border-radius:0.2rem;
+  margin-bottom: 1rem;
   color: #84ba64;
   border-color: #84ba64;
   padding: 0.4rem;
   height: 15rem;
-}
-textarea:invalid {
-  border: 2px dashed red;
 }

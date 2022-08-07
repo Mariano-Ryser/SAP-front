@@ -12,83 +12,60 @@
     transform: translateY(0%);
     /* animation: nav 0.8s 1 ease-in-out; */
   }
-
   .burger{
     position: absolute;
     right: 2rem;
     top: 1.9rem;
   }
+  .asideBar{
+    overflow: hidden;
+    overflow-y: scroll;
+    
+    background-color: #13192e; 
+    position: absolute;
+    right: 0;
+    top: 0rem;
+    height: 20rem;
+    width: 10rem;
+    border-radius: 0rem 0rem 0.2rem 0.2rem;
+    transition: 0.4s;
+    z-index: 0;
+  }
+  .asideBar::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+  .asideBar::-webkit-scrollbar-track {
+    background: #13192E;
+  }
+  .asideBar::-webkit-scrollbar-thumb {
+    background: rgb(66, 110, 57);
+  }
+  .ul{
+    list-style-type: none;
+    padding-inline-start: 0.5rem;
+    padding-inline-end: 0.5rem;
 
-  /* @keyframes nav{
-    0%{
-      opacity: 0%;
-      transform: translateY(-100%);
-    }
-    100%{
-      opacity: 100%;
-      transform: translateY(0%);
-    }
-  } */
-  
+  }
+  .li{
+    color: rgb(201, 201, 201);
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    padding: 0.3rem;
+    border: solid 2px rgb(92, 128, 45);
+  }
+
   .logo{
     color: rgb(204, 204, 204);
     margin-left: 1rem;
     margin-right: auto;
-    /* font-size: 1.5rem; */
     font-weight: 600;
-    cursor: pointer;
-    animation: logo 3s infinite alternate;
   }
-  @keyframes logo {
-    0%{}
-    100%{}
-    
-  }
-  
-  .navToggle{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0;
-    top: 5rem;
-    width: 100%;
-    height: 5rem;
-    color: rgb(0, 0, 0);
-    /* background-color: #424242; */
-    border-bottom: solid rgb(104, 226, 56) 1px;
-    transition: 0.4s;
-    opacity: 100%;
-    animation: to 0.5s 1 ease-in-out ;
-    transform: translateX(0%);
-  }
-  @keyframes to {
-    from{opacity: 0%;
-      transform: translateX(-100%);}
-    to{opacity: 100%;
-      transform: translateX(0%)}
-  }
+
   .img{
     margin: 1rem;
     cursor: pointer;
   }
-  
-    .li{
-        font-size: 1.5rem;
-        color: white;
-        font-weight: 600;
-        text-decoration: none;
-        padding: 20px 30px;
-        margin-right: 2rem;
-        border-radius: 5px;
-    }
-    .li:hover{
-        background-color: rgb(230, 243, 50);
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-    }
-  
-  
+
   @media (max-width: 600px) {
   .nav{
     display: flex;
@@ -96,28 +73,54 @@
     height: 6rem;
     background-color: #13192e; 
     color: black;
+    z-index: 2;
     
   }
   .burger{
     position: absolute;
+    transform: rotateZ(0deg);
     right: 2rem;
     top: 2.22rem;
+    transition: 0.05s;
   }
-    .li{
-        font-size: 1.1rem;
-        color: white;
-        font-weight: 600;
-        list-style: none;
-        padding: 10px 20px;
-        margin-right: 0.4rem;
-        font-family: 'Fredoka', sans-serif;
-        font-family: 'Shadows Into Light', cursive;
-        
-    }
-    .li:hover{
-        background-color: rgb(50, 202, 30);
-        cursor: pointer;
-    }
+  .asideBar{
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #13192e; 
+    position: absolute;
+    transform: translateY(-100%);
+    right: 0;
+    top: 6rem;
+    height: 20rem;
+    width: 10rem;
+    border-radius: 0rem 0rem 0.2rem 0.2rem;
+    transition: 0.4s;
+    z-index: 1;
+  }
+  .asideBar::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+  .asideBar::-webkit-scrollbar-track {
+    background: #13192E;
+  }
+  .asideBar::-webkit-scrollbar-thumb {
+    background: rgb(66, 110, 57);
+  }
+
+  .ul{
+    list-style-type: none;
+    padding-inline-start: 0.5rem;
+    padding-inline-end: 0.5rem;
+
+  }
+  .li{
+    color: rgb(201, 201, 201);
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    padding: 0.3rem;
+    border: solid 2px rgb(92, 128, 45);
+  }
+   
     .logo{
       color: rgb(182, 182, 182);
       margin-left: 0.5rem;

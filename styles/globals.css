@@ -41,5 +41,30 @@ p{font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", He
   color: #84ba64;
   border-color: #84ba64;
   padding: 0.4rem;
-  height: 15rem;
+  height: 5rem;
+}
+
+.blue{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgb(111, 153, 216);
+  
+}
+.yellow{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgb(189, 187, 85);
+  
+}
+.yellow2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgb(247, 244, 114);
+
+}
+.white{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgb(255, 255, 255);
+  
+}
+.htmlColor{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgb(204, 119, 70);
 }

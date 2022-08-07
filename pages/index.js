@@ -11,37 +11,22 @@ export default function Home() {
       <Link href='/products/create'>Creese un producto</Link>   */}
         <article className='article'>
           <h1>Expresion simple</h1>
+          
           <p>Parrafo comun para testear en el telefono la vista.
             seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            <a>Node JS</a>
+           Exelente el trabajo de hoy en mi aplicacion node, donde agregamos modalidades, 
+           animaciones en el Navbar, y estilando colores en los codigos, aqui un ejemplo...
+            <a> Node JS</a>
           </p>          
+          <span className='blue'>const</span> <span className='yellow'>express</span> <span className='white'>=</span> <span className='yellow'>require</span><span className='yellow2'>(</span><span className='htmlColor'>"express"</span><span className='yellow2'>)</span>
+          <br></br>
+          
         </article>
         <textarea className='text-area' placeholder='Comentario...'>
           
         </textarea>
         <br></br>
-        <article className='article'>
-          <h1>Expresion simple</h1>
-          <p>Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-            <a>Node JS</a>
-          </p>          
-        </article>
-        <textarea className='text-area' placeholder='Comentario...'>
-          
-        </textarea>
+      
       </article>
       <style jsx>
             {`

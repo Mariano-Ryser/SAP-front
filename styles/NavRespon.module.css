@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    min-height: 5rem;
+    min-height: 6rem;
     background-color: #13192e; 
     /* color: rgb(255, 255, 255);
     border-bottom: 2px solid rgb(190, 190, 190); */
@@ -11,25 +11,28 @@
     opacity: 100%;
     transform: translateY(0%);
     /* animation: nav 0.8s 1 ease-in-out; */
+    z-index: 2;
   }
   .burger{
     position: absolute;
+    transform: rotateZ(0deg);
     right: 2rem;
-    top: 1.9rem;
+    top: 2.22rem;
+    transition: 0.05s;
   }
   .asideBar{
     overflow: hidden;
     overflow-y: scroll;
-    
     background-color: #13192e; 
     position: absolute;
+    transform: translateY(-100%);
     right: 0;
-    top: 0rem;
+    top: 6rem;
     height: 20rem;
     width: 10rem;
     border-radius: 0rem 0rem 0.2rem 0.2rem;
     transition: 0.4s;
-    z-index: 0;
+    z-index: 1;
   }
   .asideBar::-webkit-scrollbar {
     width: 0.4rem;

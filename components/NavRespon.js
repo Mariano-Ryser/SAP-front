@@ -21,10 +21,10 @@ const NavRespon = () => {
         aside.style.transform = 'translateY(0%)'
       },0);
     }
-    if(burger.style.transform == 'rotateZ(0deg)'){
-      burger.style.transform = 'rotateZ(45deg)'
-    } else {
+    if(burger.style.transform == 'rotateZ(45deg)'){
       burger.style.transform = 'rotateZ(0deg)'
+    } else {
+      burger.style.transform = 'rotateZ(45deg)'
     }
   }
 

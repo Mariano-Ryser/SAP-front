@@ -18,8 +18,7 @@ export default function Home() {
            animaciones en el Navbar, y estilando colores en los codigos, aqui un ejemplo...
             <a> Node JS</a>
           </p>          
-          <span className='blue'>const</span> <span className='yellow'>express</span> <span className='white'>=</span> <span className='yellow'>require</span><span className='htmlColor'>"express"</span>
-          <br></br>
+  
           <p>
            No puedo escribir los parentesis en html... 
           </p>   

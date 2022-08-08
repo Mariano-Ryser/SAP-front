@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Product from '../../../backend/models/product';
 import styles from '../../styles/BoxComentar.module.css'
 function BoxComentar(){
 

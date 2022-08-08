@@ -1,0 +1,26 @@
+.form{
+  position: relative;
+}
+.textArea{
+    background-color: black;
+    color: white;
+    font-size:1.2rem;
+    width:100%;
+    border-radius:0.2rem;
+    margin-bottom: 1rem;
+    color: #84ba64;
+    border-color: #84ba64;
+    padding: 0.4rem;
+    height: 5rem;
+  }
+
+.button{
+  position: absolute;
+  top: 5.7rem;
+  right: 0rem;
+  height: 2rem;
+  width: 5rem;
+  color: aliceblue;
+  background-color: rgb(65, 62, 60);
+  border-radius: 0.2rem;
+}

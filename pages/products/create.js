@@ -1,18 +1,25 @@
 
 import { useState } from 'react'
 function Create() {
- 
     const initialState = {name:'',price:0}
     const [product, setProduct] = useState(initialState)
 
     const handleChange = (e) =>{
+
         const inputValue = e.target.value
         const inputName = e.target.name
+
+        console.log("input Value: ", inputValue,
+        "input Name: ", inputName,
+        "Product: ", product
+
+        )
         setProduct({
             ...product,
             [inputName]: inputValue,
         })
     }
+
     const handleClick = (e)=> {
         e.preventDefault()
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products`,{

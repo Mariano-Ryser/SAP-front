@@ -22,49 +22,4 @@ h3 {font: 400 18px/0.7 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", 
 p{font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 }
 
-.article{
-  border-radius: 0.4rem;
-  color: rgb(212, 212, 212);
-  width: 100%;
-  margin:auto;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: rgb(41, 39, 39);
-}
-.text-area{
-  background-color: black;
-  color: white;
-  font-size:1.2rem;
-  width:100%;
-  border-radius:0.2rem;
-  margin-bottom: 1rem;
-  color: #84ba64;
-  border-color: #84ba64;
-  padding: 0.4rem;
-  height: 5rem;
-}
 
-.blue{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:rgb(111, 153, 216);
-  
-}
-.yellow{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:rgb(189, 187, 85);
-  
-}
-.yellow2{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:rgb(247, 244, 114);
-
-}
-.white{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:rgb(255, 255, 255);
-  
-}
-.htmlColor{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:rgb(204, 119, 70);
-}

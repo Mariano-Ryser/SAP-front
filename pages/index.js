@@ -1,6 +1,8 @@
 import Nav from '../components/NavRespon'
 import Image from 'next/image' 
 import Link from 'next/link'
+import BoxComentar from '../components/comentarBox/BoxComentar'
+
 
 export default function Home() {
   return (
@@ -9,7 +11,7 @@ export default function Home() {
 {/*       
        <Link href='/products/create'>Creese un producto</Link> <br></br>
       <Link href='/products/create'>Creese un producto</Link>   */}
-        <article className='article'>
+         <article className='article'>
           <h1>Expresion simple</h1>
           
           <p>Parrafo comun para testear en el telefono la vista.
@@ -22,10 +24,9 @@ export default function Home() {
           <p>
            No puedo escribir los parentesis en html... 
           </p>   
-        </article>
-        <textarea className='text-area' placeholder='Comentario...'>
-          
-        </textarea>
+        </article> 
+        <BoxComentar/>
+        
         <br></br>
       
       </article>
@@ -38,6 +39,16 @@ export default function Home() {
                   padding: 1rem;
                   background-color: black;
                 }
+                .article{
+                  border-radius: 0.4rem;
+                  color: rgb(212, 212, 212);
+                  width: 100%;
+                  margin:auto;
+                  padding: 1rem;
+                  margin-bottom: 1rem;
+                  background-color: rgb(41, 39, 39);
+                }
+                
                 `}
         </style>
     

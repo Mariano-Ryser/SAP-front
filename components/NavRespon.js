@@ -43,17 +43,7 @@ const NavRespon = () => {
     </nav>
     <aside id='aside' className={styles.asideBar}>
           <ul className={styles.ul}>
-            <li className={styles.li}>Node</li>
-            <li className={styles.li}>JavaScript</li>
-            <li className={styles.li}>Ejem.</li>
-            <li className={styles.li}>Tepc</li>
-            <li className={styles.li}>Mebo</li>
-            <li className={styles.li}>Ses</li>
-            <li className={styles.li}>Ejem.</li>
-            <li className={styles.li}>Mebo</li>
-            <li className={styles.li}>Ses</li>
-            <li className={styles.li}>Ejem.</li>
-            <li className={styles.li}>Mebo</li>
+            <li className={styles.li}><Link href="/msj"><a>Mensajeria</a></Link></li>
           </ul>
         </aside>
   </>

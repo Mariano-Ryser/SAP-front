@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from '../../styles/BoxComentar.module.css'
+
 function BoxComentar(){
 
   const initialState = {text:''};
@@ -15,7 +16,6 @@ function BoxComentar(){
       ...comentar, 
       [inputName]: inputValue,
     });
-    
   }
 
 
@@ -41,7 +41,9 @@ function BoxComentar(){
   return (
     <>
     <form className={styles.form}>
+      <p>Deja tu comentario...</p>
       <textarea className={styles.textArea}
+      maxlength="88"
       type='text'
       name='text'
       value={comentar.text}

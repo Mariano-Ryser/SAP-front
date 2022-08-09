@@ -75,7 +75,8 @@ function Create() {
                 className={style.button}
                 onClick={handleClick}
                 >Crear producto</button>
-                 <div>
+
+             <div>
              {products.map(({name, price}) => (
                 <div className='prodBox'>
                     <span>Nombre:{name}</span>

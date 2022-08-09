@@ -42,7 +42,7 @@ function BoxComentar(){
     <form className={styles.form}>
       <p>Deja tu comentario...</p>
       <textarea className={styles.textArea}
-      maxlength="88"
+      maxLength="88"
       type='text'
       name='text'
       value={comentar.text}

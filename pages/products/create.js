@@ -77,7 +77,7 @@ function Create() {
                 >Crear producto</button>
                  <div>
              {products.map(({name, price}) => (
-                <div className={style.prodBox}>
+                <div className='prodBox'>
                     <span>Nombre:{name}</span>
                     <br></br>
                     <span>Precio:{price}</span>
@@ -86,8 +86,24 @@ function Create() {
            
          </div> 
             </form>
+            <style jsx> 
+           {
+           `
+             .prodBox{
+                border: rgb(2, 105, 2) 0.1rem dashed;
+                padding: 0.26rem;
+                height: 3rem;
+                width: 100%;
+                background-color: black;
+                color:rgb(28, 221, 28);
+                font-family: monospace;
+                font-size: 1rem;
+            }
+            `
+           }
 
-           
+            </style>
+
         
 
             

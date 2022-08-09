@@ -79,9 +79,9 @@ function Create() {
              <div>
              {products.map(({name, price}) => (
                 <div className='prodBox'>
-                    <span>Nombre:{name}</span>
+                    <span>Nombre:</span> <span>{name}</span>
                     <br></br>
-                    <span>Precio:{price}</span>
+                    <span>Precio:</span> <span>{price}</span>
                 </div>
             ))}
            

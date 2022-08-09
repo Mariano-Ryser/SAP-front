@@ -1,0 +1,38 @@
+
+.form{
+    width:20rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: solid 0.2rem rgb(22, 99, 34);
+    box-shadow: 1px 1px 4px  rgb(22, 99, 34);
+}
+.h1{
+    font-family: monospace;
+    color: white;
+} 
+     .input{
+        font-family: monospace;
+        margin-bottom:0.5rem;
+        height:1.6rem;
+        font-size: 1rem;
+        color:black;
+    }
+    .button{
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color:black;
+        height:2rem;
+        font-family: monospace;
+    } 
+    .prodBox{
+        border: rgb(2, 105, 2) 0.1rem dashed;
+        padding: 0.26rem;
+        height: 3rem;
+        width: 100%;
+        background-color: black;
+        color:rgb(28, 221, 28);
+        font-family: monospace;
+        font-size: 1rem;
+    }
+   

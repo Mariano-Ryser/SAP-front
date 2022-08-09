@@ -1,8 +1,11 @@
-
-import { useState } from 'react'
+import style from '../../styles/create.module.css'
+import { useState, useEffect } from 'react'
 function Create() {
     const initialState = {name:'',price:0}
     const [product, setProduct] = useState(initialState)
+    const [products, setProducts] = useState([])
+
+    console.log('Productos: ', products)
 
     const handleChange = (e) =>{
 
@@ -19,7 +22,6 @@ function Create() {
             [inputName]: inputValue,
         })
     }
-
     const handleClick = (e)=> {
         e.preventDefault()
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products`,{
@@ -39,57 +41,58 @@ function Create() {
             console.log({err})
         })
     }
-    
+
+    useEffect(()=>{
+     fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products`)
+        .then(res => res.json())
+        .then( ({ products }) =>{
+            setProducts(products);
+    })
+    },[])
+
   return (
     <>
-        <div>
-            <h1>Nuevo producto y su precio</h1>
-            <form>
+        <div className={style.container}>
+            <form className={style.form}>
+            <h1 
+            className={style.h1}
+            >Nuevo producto y su precio </h1>
                 <input
+                className={style.input}
                  type='text'
                   name='name'
                   value={product.name}
                   onChange={handleChange}
                   ></input>
                 <input
+                className={style.input}
                  type='number'
                  name='price'
                  value={product.price}
                  onChange={handleChange}
                  ></input>
                 <button
+                className={style.button}
                 onClick={handleClick}
                 >Crear producto</button>
+                 <div>
+             {products.map(({name, price}) => (
+                <div className={style.prodBox}>
+                    <span>Nombre:{name}</span>
+                    <br></br>
+                    <span>Precio:{price}</span>
+                </div>
+            ))}
+           
+         </div> 
             </form>
-        </div>
-        <style jsx>
-            {`
-            h1{
-                text-align:center;
-                color: white;
-            }
-                form{
-                    display:flex;
-                    flex-direction:column;
-                    width:20rem;
-                    margin: 0 auto;
-                }
-                input{
-                    margin-bottom:0.5rem;
-                    height:3rem;
-                    font-size: 1.5rem;
-                    color:black;
-                }
-                button{
-                    height:4rem;
-                    font-size: 1.5rem;
 
-                    color:black;
-                    height:3rem;
-                }
-                       
-                `}
-        </style>
+           
+        
+
+            
+        </div>
+       
     </>
   )
 }

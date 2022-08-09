@@ -37,13 +37,15 @@ const NavRespon = () => {
         </div>
 
         <div id='burger' className={styles.burger} onClick={openList}>
-        <Image alt='Burger-Icon' src={'/burgerWhite.png'} height={25} width={30}></Image>
+         <Image alt='Burger-Icon' src={'/burgerWhite.png'} height={25} width={30}></Image>
         </div> 
-        
+
     </nav>
     <aside id='aside' className={styles.asideBar}>
           <ul className={styles.ul}>
+            <li className={styles.li}><Link href="/"><a>Home</a></Link></li>
             <li className={styles.li}><Link href="/msj"><a>Mensajeria</a></Link></li>
+            <li className={styles.li}><Link href="/products/create"><a>Cree Producto</a></Link></li>
           </ul>
         </aside>
   </>

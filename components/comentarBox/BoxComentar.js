@@ -6,9 +6,9 @@ function BoxComentar(){
   const initialState = {text:''};
   const [comentar, setComentar] = useState(initialState)
   
+  
 
   const handleChange = (e) =>{
-
         const inputValue = e.target.value
         const inputName = e.target.name
 
@@ -17,8 +17,6 @@ function BoxComentar(){
       [inputName]: inputValue,
     });
   }
-
-
   const handleClick = (e)=> {
         e.preventDefault()
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/comentars`,{
@@ -38,6 +36,7 @@ function BoxComentar(){
             console.log({err})
         })
     }
+
   return (
     <>
     <form className={styles.form}>
@@ -56,7 +55,6 @@ function BoxComentar(){
         onClick={handleClick}
         >Send
         </button>
-
     </form>
   </>
   )

@@ -37,7 +37,6 @@ export default function Home() {
                   width: 100%;
                   margin:auto;
                   padding: 1rem;
-                  background-color: black;
                 }
                 .article{
                   border-radius: 0.4rem;
@@ -48,7 +47,6 @@ export default function Home() {
                   margin-bottom: 1rem;
                   background-color: rgb(41, 39, 39);
                 }
-                
                 `}
         </style>
     

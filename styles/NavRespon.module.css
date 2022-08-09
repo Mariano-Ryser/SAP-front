@@ -5,9 +5,9 @@
     align-items: center;
     min-height: 6rem;
     background-color: #13192e; 
-    /* color: rgb(255, 255, 255);
-    border-bottom: 2px solid rgb(190, 190, 190); */
-    font-family: 'Fredoka', sans-serif;
+    /* color: rgb(255, 255, 255);*/
+    /* border-bottom: 2px solid rgb(190, 190, 190);  */
+    font-family: monospace;
     opacity: 100%;
     transform: translateY(0%);
     /* animation: nav 0.8s 1 ease-in-out; */
@@ -19,6 +19,7 @@
     right: 2rem;
     top: 2.22rem;
     transition: 0.05s;
+    cursor: pointer;
   }
   .asideBar{
     overflow: hidden;
@@ -50,11 +51,12 @@
 
   }
   .li{
+    font-family: monospace;
     color: rgb(201, 201, 201);
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
     padding: 0.3rem;
-    border: solid 2px rgb(92, 128, 45);
+    border: dashed 2px rgb(92, 128, 45);
   }
 
   .logo{

@@ -67,8 +67,8 @@ function BoxComentar(){
         </button>
 
         <div>
-             {comentars.map(({text}) => (
-                <div key={comentars} className={styles.comentarBox}>
+             {comentars.map(({text, idx}) => (
+                <div key={comentars.id} className={styles.comentarBox}>
                     <span></span> <span>{text}</span>
                 </div>
             ))}

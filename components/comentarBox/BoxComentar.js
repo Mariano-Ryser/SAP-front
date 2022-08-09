@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '../../styles/BoxComentar.module.css'
 
 function BoxComentar(){
 
   const initialState = {text:''};
   const [comentar, setComentar] = useState(initialState)
+  const [comentars, setComentars] = useState([])
   
   
 
@@ -36,6 +37,15 @@ function BoxComentar(){
             console.log({err})
         })
     }
+  
+    useEffect(()=>{
+      fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/comentars`)
+         .then(res => res.json())
+         .then( ({comentars}) =>{
+          setComentars(comentars)
+             console.log('Comentarios:', comentars)
+     })
+     },[])
 
   return (
     <>
@@ -55,6 +65,15 @@ function BoxComentar(){
         onClick={handleClick}
         >Send
         </button>
+
+        <div>
+             {comentars.map(({text}) => (
+                <div key={comentars} className={styles.comentarBox}>
+                    <span></span> <span>{text}</span>
+                </div>
+            ))}
+         </div> 
+
     </form>
   </>
   )

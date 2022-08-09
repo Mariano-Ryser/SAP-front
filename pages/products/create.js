@@ -76,7 +76,7 @@ function Create() {
                 onClick={handleClick}
                 >Crear producto</button>
 
-             <div>
+        <div>
              {products.map(({name, price}) => (
                 <div key={products} className={style.prodBox}>
                     <span>Nombre:</span> <span>{name}</span>
@@ -84,8 +84,8 @@ function Create() {
                     <span>Precio:</span> <span>{price}</span>
                 </div>
             ))}
-           
          </div> 
+         
             </form>
             <style jsx> 
            {

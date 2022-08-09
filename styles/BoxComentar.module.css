@@ -7,21 +7,30 @@
     font-size:1.2rem;
     width:100%;
     border-radius:0.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: #84ba64;
     border-color: #84ba64;
     padding: 0.4rem;
     height: 6rem;
+
   }
 
 .button{
   position: absolute;
-  /* top: 6.7rem; */
-  bottom: -1.4rem;
-  right: 0rem;
+  right: 0;
+  top: 9rem;
   height: 2rem;
   width: 5rem;
   color: aliceblue;
   background-color: rgb(65, 62, 60);
   border-radius: 0.2rem;
+}
+.comentarBox{
+  margin-top: 0.6rem;
+  background-color: #000000;
+  color: rgb(172, 170, 60);
+  font-family: monospace;
+  font-size: 1rem;
+  border: dashed green 2px;
+  padding: 0.5rem;
 }

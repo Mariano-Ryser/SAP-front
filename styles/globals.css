@@ -20,5 +20,18 @@ h2 {font: 400 20px/0.7 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", 
 h3 {font: 400 18px/0.7 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
 p{font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 }
-
-
+.box{
+  color: rgb(212, 212, 212);
+  width: 100%;
+  margin:auto;
+  padding: 1rem;
+}
+.article{
+  color: rgb(172, 172, 172);
+  border: #50743b solid 1px;
+  width: 100%;
+  margin:auto;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgb(41, 39, 39);
+}

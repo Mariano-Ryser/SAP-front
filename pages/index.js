@@ -13,16 +13,22 @@ export default function Home() {
       <Link href='/products/create'>Creese un producto</Link>   */}
          <article className='article'>
           <h1>Expresion simple</h1>
-          
-          <p>Parrafo comun para testear en el telefono la vista.
-            seguimos probando y tressteando escribiendo cualquier ganadad.
-           Exelente el trabajo de hoy en mi aplicacion node, donde agregamos modalidades, 
-           animaciones en el Navbar, y estilando colores en los codigos, aqui un ejemplo...
+          <p> 
+            node, modalidades, 
+            kompliziertere sache um zu verstehen ...
             <a> Node JS</a>
           </p>          
-  
           <p>
-           No puedo escribir los parentesis en html... 
+           -Objeto. niveles, estructura.-
+          </p>  
+          <p>
+           -Nodo... 
+          </p>  
+          <p>
+           -Dicen que cacha me la agita con su facha viednamita... 
+          </p>  
+          <p>
+           -callBack, funcionalidad de componente, folderStruktur ? "Ya visto"
           </p>   
         </article> 
         <BoxComentar/>
@@ -32,21 +38,7 @@ export default function Home() {
       </article>
       <style jsx>
             {`
-                .box{
-                  color: rgb(212, 212, 212);
-                  width: 100%;
-                  margin:auto;
-                  padding: 1rem;
-                }
-                .article{
-                  border-radius: 0.4rem;
-                  color: rgb(212, 212, 212);
-                  width: 100%;
-                  margin:auto;
-                  padding: 1rem;
-                  margin-bottom: 1rem;
-                  background-color: rgb(41, 39, 39);
-                }
+                
                 `}
         </style>
     

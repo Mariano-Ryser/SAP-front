@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import styles from '../../styles/BoxComentar.module.css'
 
 function BoxComentar(){
+  const current = new Date();
+  const datee = `${current.getDate()} / ${current.getMonth()+1} / ${current.getFullYear()}`;
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
   const initialState = {text:''};
   const [comentar, setComentar] = useState(initialState)
@@ -58,9 +60,10 @@ function BoxComentar(){
      },[])
 
   return (
+    
     <>
     <form className={styles.form}>
-      <p>Deja tu comentario...</p>
+      <p className={styles.date}> {datee}</p>
       <textarea className={styles.textArea}
       maxLength="88"
       type='text'

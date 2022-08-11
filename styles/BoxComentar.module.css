@@ -27,11 +27,23 @@
   border-radius: 0.2rem;
 }
 .comentarBox{
+  display: flex;
+  justify-content: space-between;
   margin-top: 0.6rem;
   background-color: #000000;
   color: rgb(172, 170, 60);
   font-family: monospace;
   font-size: 1rem;
   border: dashed green 2px;
-  padding: 0.5rem;
+  padding: 0.7rem;
 }
+.x{
+  background-color: rgb(117, 22, 22);
+  font-weight: 600;
+  color: white;
+cursor: pointer;
+height: 1.5rem;
+width: 2rem;
+border: #84ba64 solid 1px;
+text-align: center;
+padding: 0.1rem;}

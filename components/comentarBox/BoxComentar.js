@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from '../../styles/BoxComentar.module.css'
 
 function BoxComentar(){
-
+  const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
   const initialState = {text:''};
   const [comentar, setComentar] = useState(initialState)
   const [comentars, setComentars] = useState([])
@@ -79,8 +79,20 @@ function BoxComentar(){
         <div>
              {comentars.map(({_id, text}) => (
                 <div key={_id} className={styles.comentarBox}>
-                    <span>-</span> <span>{text}</span>
+                    <span>-{text}</span> 
+                    <div className={styles.x}>
+                      <span
+                      onClick={
+                        ()=>{
+                          fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
+                          .then((res) => res.json())
+                          .then((data)  => {
+                              console.log({data})
+                          })
+                      }}>X</span>
+                  </div>
                 </div>
+                
             ))}
          </div> 
 

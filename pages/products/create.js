@@ -87,17 +87,17 @@ function Create() {
                     <br></br>
                     <span>Precio:</span> <span>${price}</span>
                     </div>
-                    <div>
+                    <div className={style.x}>
                     <span
-                    className={style.x}
-                    onClick={()=>{
-                        fetch(`${baseURL}/products/${_id}`, {method:'DELETE'})
-                        .then((res) => res.json())
-                        .then((data)  => {
-                            console.log({data})
-                        })
-                    }}
-                    >X</span>
+                        onClick={()=>{
+                            fetch(`${baseURL}/products/${_id}`, {method:'DELETE'})
+                            .then((res) => res.json())
+                            .then((data)  => {
+                                console.log({data})
+                            })
+                        }}
+                        >X
+                    </span>
                     </div>
                 </div>
             ))}

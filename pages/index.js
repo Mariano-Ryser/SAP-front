@@ -28,7 +28,7 @@ export default function Home() {
            -Dicen que cacha me la agita con su facha viednamita... 
           </p>  
           <p>
-           -callBack, funcionalidad de componente, folderStruktur ? "Ya visto"
+           -callBack, funcionalidad de componente, folderStruktur - Ya visto
           </p>   
         </article> 
         <BoxComentar/>

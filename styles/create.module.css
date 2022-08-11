@@ -1,22 +1,27 @@
 
-.form{
+.form{align-content: center;
     width:20rem;
     margin: 0 auto;
     padding: 1rem;
-    border-radius: 1rem;
-    border: solid 0.2rem rgb(22, 99, 34);
+    /* border-radius: 1rem; */
+    border: solid 0.1rem rgb(126, 255, 255);
     box-shadow: 1px 1px 4px  rgb(22, 99, 34);
 }
-.h1{
+.h1{text-align: center;
     font-family: monospace;
     color: white;
+    font-weight: 600;
 } 
      .input{
+        width: 100%;
         font-family: monospace;
         margin-bottom:0.5rem;
-        height:1.6rem;
+        height:1.8rem;
         font-size: 1rem;
+        font-weight: 600;
         color:black;
+        outline: none;
+        
     }
     .button{
         margin-bottom: 1rem;
@@ -26,12 +31,22 @@
         font-family: monospace;
     } 
     .prodBox{
-        border: rgb(2, 105, 2) 0.1rem dashed;
+        display: flex;
+        justify-content: space-between;
+        border: solid 0.1rem rgb(126, 255, 255);
         padding: 0.26rem;
         height: 3rem;
+        margin-bottom: 0.5rem;
+        overflow: hidden;
         width: 100%;
-        background-color: black;
-        color:rgb(28, 221, 28);
+        background-color: rgb(0, 0, 0);
+        color:rgb(31, 204, 31);
         font-family: monospace;
         font-size: 1rem;
+    }
+    .x{
+        background-color: rgb(216, 30, 30);
+        color: rgb(0, 0, 0);
+        font-weight: 900;
+        cursor: pointer;
     }

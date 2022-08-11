@@ -20,6 +20,8 @@ function BoxComentar(){
   }
   const handleClick = (e)=> {
         e.preventDefault()
+
+    
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/comentars`,{
             method:'POST',
             headers:{
@@ -31,20 +33,28 @@ function BoxComentar(){
         .then((data) =>{
             setComentar(initialState)
             console.log("Comentario creado con exito!")
+            const newComentars = [data.comentar, ...comentars]
+            setComentars(newComentars)
+            // fetchComentars();
         })
         .catch( err=> {
             console.log("Aqui algo anda mal")
             console.log({err})
         })
+
     }
-  
-    useEffect(()=>{
+
+    const fetchComentars= () =>{
       fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/comentars`)
          .then(res => res.json())
          .then( ({comentars}) =>{
           setComentars(comentars)
              console.log('Comentarios:', comentars)
      })
+    }
+  
+    useEffect(()=>{
+      fetchComentars();
      },[])
 
   return (
@@ -69,7 +79,7 @@ function BoxComentar(){
         <div>
              {comentars.map(({text, idx}) => (
                 <div key={comentars.id} className={styles.comentarBox}>
-                    <span></span> <span>{text}</span>
+                    <span>-</span> <span>{text}</span>
                 </div>
             ))}
          </div> 

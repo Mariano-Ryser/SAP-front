@@ -1,53 +1,56 @@
 import style from '../../styles/create.module.css'
 import { useState, useEffect } from 'react'
 function Create() {
+    const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
     const initialState = {name:'',price:0}
     const [product, setProduct] = useState(initialState)
     const [products, setProducts] = useState([])
 
-    console.log('Productos: ', products)
 
     const handleChange = (e) =>{
-
         const inputValue = e.target.value
         const inputName = e.target.name
-
-        console.log("input Value: ", inputValue,
-        "input Name: ", inputName,
-        "Product: ", product
-
-        )
+        // console.log("input Value: ", inputValue,
+        // "input Name: ", inputName,
+        // "Product: ", product
+        // )
         setProduct({
             ...product,
             [inputName]: inputValue,
         })
     }
-    const handleClick = (e)=> {
+    const handleClick = async(e)=> {
         e.preventDefault()
-        fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products`,{
-            method:'POST',
-            headers:{
-                'Content-Type': 'application/json'
-            },
-            body:JSON.stringify(product)
-        })
+        try {
+            const res = await fetch(`${baseURL}/products`,{
+                 method:'POST',
+                 headers:{
+                     'Content-Type': 'application/json'
+                 },
+                 body:JSON.stringify(product)
+             })
+             const data = await res.json()
+                 setProduct(initialState)
+                 console.log({data})
+                 const newProducts = [data.product, ...products]
+                 setProducts(newProducts) 
+                //  fetchProducts()
+                 console.log("Producto creado con exito!")
+        } catch (error) {
+            console.log({error})
+        }
+    }
+    const fetchProducts = ()=>{
+        fetch(`${baseURL}/products`)
         .then(res => res.json())
-        .then((data) =>{
-            setProduct(initialState)
-            console.log("Producto creado con exito!")
-        })
-        .catch( err=> {
-            console.log("Aqui algo anda mal")
-            console.log({err})
-        })
+        .then( ({ products }) =>{
+            console.log(products)
+            setProducts(products);
+    })
     }
 
     useEffect(()=>{
-     fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products`)
-        .then(res => res.json())
-        .then( ({ products }) =>{
-            setProducts(products);
-    })
+     fetchProducts();
     },[])
 
   return (
@@ -77,11 +80,25 @@ function Create() {
                 >Crear producto</button>
 
         <div>
-             {products.map(({name, price}) => (
-                <div key={products} className={style.prodBox}>
+             {products.map(({_id, name, price}) => (
+                <div key={_id} className={style.prodBox}>
+                    <div>
                     <span>Nombre:</span> <span>{name}</span>
                     <br></br>
-                    <span>Precio:</span> <span>{price}</span>
+                    <span>Precio:</span> <span>${price}</span>
+                    </div>
+                    <div>
+                    <span
+                    className={style.x}
+                    onClick={()=>{
+                        fetch(`${baseURL}/products/${_id}`, {method:'DELETE'})
+                        .then((res) => res.json())
+                        .then((data)  => {
+                            console.log({data})
+                        })
+                    }}
+                    >X</span>
+                    </div>
                 </div>
             ))}
          </div> 

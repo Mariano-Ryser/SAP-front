@@ -33,7 +33,7 @@ const NavRespon = () => {
     <>
     <nav className={styles.nav}>
         <div className={styles.img}>
-         <Link href="/"><h1 className={styles.logo}>LESSON</h1></Link> 
+         <Link href="/"><h1 className={styles.logo}></h1></Link> 
         </div>
 
         <div id='burger' className={styles.burger} onClick={openList}>
@@ -44,8 +44,8 @@ const NavRespon = () => {
     <aside id='aside' className={styles.asideBar}>
           <ul className={styles.ul}>
             <li className={styles.li}><Link href="/"><a>Home</a></Link></li>
-            <li className={styles.li}><Link href="/msj"><a>Mensajeria</a></Link></li>
             <li className={styles.li}><Link href="/products/create"><a>Cree Producto</a></Link></li>
+            <li className={styles.li}><Link href="/msj"><a>Mensajeria</a></Link></li>
           </ul>
         </aside>
   </>

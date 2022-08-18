@@ -9,8 +9,6 @@ function BoxComentar(){
   const [comentar, setComentar] = useState(initialState)
   const [comentars, setComentars] = useState([])
   
-  
-
   const handleChange = (e) =>{
         const inputValue = e.target.value
         const inputName = e.target.name
@@ -23,8 +21,7 @@ function BoxComentar(){
   const handleClick = (e)=> {
         e.preventDefault()
 
-    
-        fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/comentars`,{
+        fetch(`${baseURL}/comentars`,{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -38,6 +35,7 @@ function BoxComentar(){
             const newComentars = [data.comentar, ...comentars]
             setComentars(newComentars)
             // fetchComentars();
+            console.log("Comentario creado con exito!")
         })
         .catch( err=> {
             console.log("Aqui algo anda mal")
@@ -47,7 +45,7 @@ function BoxComentar(){
     }
 
     const fetchComentars= () =>{
-      fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/comentars`)
+      fetch(`${baseURL}/comentars`)
          .then(res => res.json())
          .then( ({comentars}) =>{
           setComentars(comentars)
@@ -60,7 +58,6 @@ function BoxComentar(){
      },[])
 
   return (
-    
     <>
     <form className={styles.form}>
       <p className={styles.date}> {datee}</p>
@@ -90,6 +87,7 @@ function BoxComentar(){
                           fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
                           .then((res) => res.json())
                           .then((data)  => {
+                            fetchComentars();
                               console.log({data})
                           })
                       }}>X</span>

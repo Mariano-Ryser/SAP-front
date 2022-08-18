@@ -1,17 +1,27 @@
 import React from 'react'
 import style from '../styles/Msj.module.css'
+import Image from 'next/image' 
+import Link from 'next/link'
+import BoxComentar from '../components/comentarBox/BoxComentar'
 
 function msj() {
   return (
     <>
-      <div className={style.b}>
-        <card className={style.card}>
-          <p className={style.msj}>
-          </p>
+    <article className='box'>
 
-        </card>
-      </div>
-    </>
+        
+       <BoxComentar/>
+       
+       <br></br>
+     
+     </article>
+     <style jsx>
+           {`
+               
+               `}
+       </style>
+   
+ </>
   )
 }
 

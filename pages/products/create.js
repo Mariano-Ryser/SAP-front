@@ -37,6 +37,7 @@ function Create() {
                 //  fetchProducts()
                  console.log("Producto creado con exito!")
         } catch (error) {
+            console.log("Aqui algo anda mal")
             console.log({error})
         }
     }
@@ -94,6 +95,7 @@ function Create() {
                             .then((res) => res.json())
                             .then((data)  => {
                                 console.log({data})
+                                fetchProducts();
                             })
                         }}
                         >X

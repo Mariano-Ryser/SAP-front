@@ -52,7 +52,7 @@ function Create() {
 
     useEffect(()=>{
      fetchProducts();
-    },[])
+    }) //<---- Eliminar array
 
   return (
     <>

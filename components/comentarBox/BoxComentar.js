@@ -20,7 +20,6 @@ function BoxComentar(){
   }
   const handleClick = (e)=> {
         e.preventDefault()
-
         fetch(`${baseURL}/comentars`,{
             method:'POST',
             headers:{
@@ -55,7 +54,7 @@ function BoxComentar(){
   
     useEffect(()=>{
       fetchComentars();
-     },[])
+     })
 
   return (
     <>

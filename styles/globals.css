@@ -3,35 +3,49 @@ body {
   padding: 0;
   margin: 0;
   background-color: #1b1b1b;
-    
 }
-
+* {
+  box-sizing: border-box;
+}
+.entrada{
+  padding: 1rem;
+}
+article{
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: rgb(0, 0, 0);
+  border: #50743b solid 1px;
+  width: 95%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.personajes{
+  color: yellow;
+  font-size: 1.22rem;
+}
+h1{color: rgb(238, 238, 238);
+  font: 400 22px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
+h2 {color: rgb(209, 209, 209);
+  font: 400 20px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
+h3 {color: rgb(209, 209, 209);
+  font: 400 18px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
+p{font: 400 16px/1.4 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+}
 a {
   color: #84ba64;
   text-decoration: none;
   font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 }
+.a{
+  
+  color: #84ba64;
+  text-decoration: none;
+  font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+}
 
-* {
-  box-sizing: border-box;
+.footerArticle{
+  display: flex;
+  justify-content: center;
 }
-h1{font: 400 22px/0.7 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
-h2 {font: 400 20px/0.7 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
-h3 {font: 400 18px/0.7 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
-p{font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
-}
-.box{
-  color: rgb(212, 212, 212);
-  width: 100%;
-  margin:auto;
-  padding: 1rem;
-}
-.article{
-  color: rgb(172, 172, 172);
-  border: #50743b solid 1px;
-  width: 100%;
-  margin:auto;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: rgb(41, 39, 39);
-}
+

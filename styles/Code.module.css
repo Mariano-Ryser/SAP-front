@@ -11,9 +11,12 @@
     font-size: 1.3rem;
     display: block;
     margin-top: 0.5rem;
-
   }
- 
+  
+  .h2{
+    color: rgb(209, 209, 209);
+    line-height: 1.5rem;
+  }
   .cor{
     color:rgb(214, 22, 214);
   }

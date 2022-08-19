@@ -10,10 +10,6 @@ function Create() {
     const handleChange = (e) =>{
         const inputValue = e.target.value
         const inputName = e.target.name
-        // console.log("input Value: ", inputValue,
-        // "input Name: ", inputName,
-        // "Product: ", product
-        // )
         setProduct({
             ...product,
             [inputName]: inputValue,
@@ -34,7 +30,6 @@ function Create() {
                  console.log({data})
                  const newProducts = [data.product, ...products]
                  setProducts(newProducts) 
-                //  fetchProducts()
                  console.log("Producto creado con exito!")
         } catch (error) {
             console.log("Aqui algo anda mal")
@@ -52,7 +47,7 @@ function Create() {
 
     useEffect(()=>{
      fetchProducts();
-    }) //<---- Eliminar array
+    }) //<------ [] -- aqui va 
 
   return (
     <>

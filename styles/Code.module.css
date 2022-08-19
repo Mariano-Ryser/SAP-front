@@ -1,0 +1,54 @@
+.contain{
+    /* border: solid rgb(65, 65, 65) 1px; */
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: white;
+    font-size: rem;
+    padding:0.5rem ;
+  }
+  .boxCode{
+    background-color: black;
+    border: solid rgb(65, 65, 65) 1px;
+    font-size: 1rem;
+    display: block;
+    margin-top: 0.5rem;
+
+  }
+ 
+  .cor{
+    color:rgb(214, 22, 214);
+  }
+  .tags{
+    color: #4A87BB;
+  }
+  .fun{
+    color: #4b8cc4;
+  }
+  .nameFun{
+    color: rgb(209, 209, 136);
+  }
+  .paren{
+    color:rgb(224, 193, 13);
+  }
+  .parenV{
+    color:rgb(214, 22, 214);
+  }
+  .brace{
+    color:rgb(224, 193, 13);
+  }
+  .console{
+    color:#92cfeb
+  }
+  .params{
+    color:#92cfeb
+  }
+  .log{
+    color: rgb(209, 209, 136);
+  }
+  .braceV{
+    color:rgb(214, 22, 214);
+  }
+.string{
+    color: rgb(221, 156, 103);
+}

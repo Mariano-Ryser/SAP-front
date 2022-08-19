@@ -1,16 +1,14 @@
 .contain{
     /* border: solid rgb(65, 65, 65) 1px; */
     margin-top: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    color: white;
-    font-size: rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
     padding:0.5rem ;
   }
   .boxCode{
     background-color: black;
     border: solid rgb(65, 65, 65) 1px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     display: block;
     margin-top: 0.5rem;
 

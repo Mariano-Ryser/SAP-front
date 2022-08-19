@@ -17,7 +17,7 @@ export default function code() {
             <span className={style.brace}>&#123;</span><br></br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span className={style.console}>console.</span><span className={style.log}>log</span>
             <span className={style.paren}>&#40;</span>
-            <span className={style.string}>"hello Word"</span>
+            <span className={style.string}>&quot;hello Word&quot;</span>
             <span className={style.paren}>&#41;</span>
             <br></br>&nbsp;
             <span className={style.brace}>&#125;</span>

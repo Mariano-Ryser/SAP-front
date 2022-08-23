@@ -54,7 +54,7 @@ function BoxComentar(){
   
     useEffect(()=>{
       fetchComentars();
-     })
+     },[])
 
   return (
     <>

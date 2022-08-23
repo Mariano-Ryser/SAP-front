@@ -47,7 +47,7 @@ function Create() {
 
     useEffect(()=>{
      fetchProducts();
-    }) //<------ [] -- aqui va 
+    },[]) //<------ [] -- aqui va 
 
   return (
     <>

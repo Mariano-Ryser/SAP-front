@@ -48,6 +48,7 @@ const NavRespon = () => {
             <li className={styles.li}><Link href="/products/create"><a>Cree Producto</a></Link></li>
             <li className={styles.li}><Link href="/msj"><a>Mensajeria</a></Link></li>
             <li className={styles.li}><Link href="/code"><a>Codes</a></Link></li>
+            <li className={styles.li}><Link href="/viventa"><a>Viventa</a></Link></li>
           </ul>
           
         </aside>

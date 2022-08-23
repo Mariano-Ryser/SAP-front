@@ -27,7 +27,7 @@
     transform: translateY(-100%);
     right: 0;
     top: 4rem;
-    height: 12rem;
+    height: 15rem;
     width: 10rem;
     transition: 0.4s;
     z-index: 1;
@@ -98,7 +98,7 @@
     border-left: 1px solid rgb(31, 160, 5);   
     right: 0;
     top: 4rem;
-    height: 12.5rem;
+    height: 15rem;
     width: 10rem;
     border-radius: 0rem 0rem 0.2rem 0.2rem;
     transition: 0.4s;

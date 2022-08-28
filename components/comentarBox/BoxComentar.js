@@ -61,7 +61,7 @@ function BoxComentar(){
     <form className={styles.form}>
       <p className={styles.date}> {datee}</p>
       <textarea className={styles.textArea}
-      maxLength="88"
+      maxLength="1200"
       type='text'
       name='text'
       value={comentar.text}
@@ -76,24 +76,33 @@ function BoxComentar(){
         </button>
 
         <div>
+
+
              {comentars.map(({_id, text}) => (
-                <div key={_id} className={styles.comentarBox}>
-                    <span>-{text}</span> 
-                    <div className={styles.x}>
-                      <span
-                      onClick={
-                        ()=>{
-                          fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
-                          .then((res) => res.json())
-                          .then((data)  => {
-                            fetchComentars();
-                              console.log({data})
-                          })
-                      }}>X</span>
-                  </div>
+              <div>
+
+                      <div key={_id} className={styles.comentarBox}>
+                          <span>-{text}</span> 
+                      </div>
+                  
+                      <div className={styles.x}>
+                            <span
+                            className={styles.buttonX}
+                            onClick={
+                              ()=>{
+                                fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
+                                .then((res) => res.json())
+                                .then((data)  => {
+                                  fetchComentars();
+                                    console.log({data})
+                                })
+                            }}>X</span>
+                      </div>
+
                 </div>
-                
-            ))}
+                ))}
+
+
          </div> 
 
     </form>

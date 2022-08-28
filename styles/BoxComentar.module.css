@@ -4,17 +4,18 @@
   margin: auto;
 }
 .textArea{
-    background-color: rgb(19, 19, 19);
-    color: white;
-    font-size:1.2rem;
-    width:100%;
-    border-radius:0.2rem;
-    margin-bottom: 2rem;
-    color: #84ba64;
-    border-color: #84ba64;
-    padding: 0.4rem;
-    height: 6rem;
-    outline: none;
+  font-size:1.2rem;
+  width:100%;
+  border-radius:0.2rem;
+  margin-bottom: 2rem;
+  padding: 0.4rem;
+  height: 6rem;
+  outline: none;
+
+  background-color: rgb(255, 255, 255);
+    border-color: #000000;
+    color: #000000;
+    font: 400 22px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 
   }
 
@@ -24,54 +25,70 @@
   top: 9rem;
   height: 2rem;
   width: 5rem;
-  color: aliceblue;
-  background-color: rgb(65, 62, 60);
   border-radius: 0.2rem;
+  background-color: white;
+  color: rgb(0, 0, 0);
 }
 .comentarBox{
-  display: flex;
-  justify-content: space-between;
   margin-top: 0.6rem;
-  background-color: #000000;
-  color: rgb(172, 170, 60);
   font-family: monospace;
   font-size: 1rem;
-  border: dashed green 2px;
   padding: 0.7rem;
+  color: rgb(0, 0, 0);
+  font: 400 22px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
 }
 .x{
+
+  display: block;
   background-color: rgb(117, 22, 22);
   font-weight: 600;
   color: white;
-cursor: pointer;
-height: 1.5rem;
-width: 2rem;
-border: #84ba64 solid 1px;
-text-align: center;
-padding: 0.1rem;}
-
+  cursor: pointer;
+  height: 1.5rem;
+  width: 100%;
+  border: #84ba64 solid 1px;
+  text-align: center;
+  padding: 0.1rem;
+}
+  .buttonX{
+    height: 2rem;
+    width: 2rem;
+  }
+  
 .date{
-  color: #84ba64;
-font-weight: 900;}
+  color: #ffffff;
+  font-weight: 900;
+}
 
 @media (max-width: 600px) {
+  .date{
+    color: #ffffff;
+  font-weight: 900;
+  font: 400 22px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  
+
+}
+
   .form{
     position: relative;
     width: 100%;
     margin: auto;
   }
   .textArea{
-      background-color: rgb(19, 19, 19);
-      color: white;
       font-size:1.2rem;
       width:100%;
       border-radius:0.2rem;
       margin-bottom: 2rem;
-      color: #84ba64;
-      border-color: #84ba64;
       padding: 0.4rem;
       height: 6rem;
       outline: none;
+
+      background-color: rgb(255, 255, 255);
+      border-color: #000000;
+      color: #000000;
+      font: 400 22px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  
   
     }
   
@@ -81,34 +98,27 @@ font-weight: 900;}
     top: 9rem;
     height: 2rem;
     width: 5rem;
-    color: aliceblue;
-    background-color: rgb(65, 62, 60);
+    background-color: white;
+    color: rgb(0, 0, 0);
     border-radius: 0.2rem;
   }
   .comentarBox{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.6rem;
-    background-color: #000000;
-    color: rgb(172, 170, 60);
+
+    margin-top: 0.6rem;color: rgb(172, 170, 60);
     font-family: monospace;
-    font-size: 1rem;
-    border: dashed green 2px;
-    padding: 0.7rem;
+    font-size: 1rem;padding: 0.7rem;
+
+    color: rgb(0, 0, 0);
+    font: 400 22px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
   }
   .x{
-    background-color: rgb(117, 22, 22);
-    font-weight: 600;
-    color: white;
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   cursor: pointer;
-  height: 1.5rem;
-  width: 2rem;
-  border: #84ba64 solid 1px;
-  text-align: center;
-  padding: 0.1rem;}
+  border: #000000 solid 1px;
+  text-align: center;}
   
-  .date{
-    color: #84ba64;
-  font-weight: 900;}
 
 }

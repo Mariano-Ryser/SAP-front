@@ -51,10 +51,14 @@ text-align: center;
 padding: 0.1rem;}
 
 .date{
-  color: #84ba64;
+  color: #000000;
 font-weight: 900;}
 
 @media (max-width: 600px) {
+  .date{
+    color: #000000;
+  font-weight: 900;}
+  
   .form{
     position: relative;
     width: 100%;
@@ -64,15 +68,15 @@ font-weight: 900;}
     font-size:1.2rem;
     width:100%;
     border-radius:0.2rem;
-    margin-bottom: 2rem;
-    background-color: rgb(255, 255, 255);
+    margin-bottom: 0.2rem;
+    background-color: rgb(231, 231, 231);
       color: #000000;
       border-color: #000000;
       padding: 0.4rem;
       height: 6rem;
       outline: none;
       font: 400 22px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
-  
+      font-weight: 600;
     }
   
   .button{
@@ -81,34 +85,38 @@ font-weight: 900;}
     top: 9rem;
     height: 2rem;
     width: 5rem;
-    color: aliceblue;
-    background-color: rgb(65, 62, 60);
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     border-radius: 0.2rem;
   }
   .comentarBox{
     font: 400 22px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: space-between;
-    margin-top: 0.6rem;
+    font-weight: 600;
+    margin-top: 3.6rem;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px 0px rgb(68, 68, 68);
     /* font-family: monospace;
     font-size: 1rem; */
     padding: 0.7rem;
   }
-  .x{
-    background-color: rgb(117, 22, 22);
+  .x{position: absolute;
+    margin: 0.2rem;
+    right: 1px;
+    background-color: rgb(255, 255, 255);
     font-weight: 600;
-    color: white;
+    color: rgb(0, 0, 0);
   cursor: pointer;
   height: 1.5rem;
   width: 2rem;
-  border: #84ba64 solid 1px;
+  border: #adadad solid 1px;
+  box-shadow: 0px 0px 5px 0px rgb(179, 179, 179);
+  border-radius: 5px;
   text-align: center;
   padding: 0.1rem;}
   
-  .date{
-    color: #84ba64;
-  font-weight: 900;}
-
 }

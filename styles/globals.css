@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #1b1b1b;
+  background-color: #ffffff;
 }
 * {
   box-sizing: border-box;
@@ -14,32 +14,32 @@ body {
 article{
   margin-top: 1rem;
   margin: auto;
-  background-color: rgb(102, 102, 102);
-  border: #50743b solid 1px;
+  background-color: rgb(255, 255, 255);
+  border: #ffffff solid 1px;
   width: 75%;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 .personajes{
-  color: yellow;
+  color: rgb(0, 0, 0);
   font-size: 1.22rem;
 }
-h1{color: rgb(238, 238, 238);
+h1{color: rgb(0, 0, 0);
   font: 400 22px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
-h2 {color: rgb(209, 209, 209);
+h2 {color: rgb(0, 0, 0);
   font: 400 20px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
-h3 {color: rgb(209, 209, 209);
+h3 {color: rgb(0, 0, 0);
   font: 400 18px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
 p{font: 400 16px/1.4 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 }
 a {
-  color: #84ba64;
+  color: #ffffff;
   text-decoration: none;
   font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 }
 .a{
   
-  color: #84ba64;
+  color: #000000;
   text-decoration: none;
   font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 }
@@ -54,10 +54,15 @@ a {
   article{
     margin-top: 1rem;
     margin: auto;
-    background-color: rgb(102, 102, 102);
+    background-color: rgb(255, 255, 255);
     border: #000000 solid 1px;
     width: 95%;
     padding: 1rem;
     margin-bottom: 1rem;
+  }
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
   }
   }

@@ -6,8 +6,9 @@ export default function viventa() {
   return (
     <>
     <div className={style.vcontain}> 
+    <h1>Math</h1> 
       <section className={style.section}>
-        <h1>Zahlen</h1>
+        <h2>Zahlen</h2>
         <p>Die Zahlen 0.1.2.3... heissen naturliche Zahlen
           Um Zahlen darzustellen, verwenden wir das Zehnersystem. Die Bedeutung einer Ziffer in einer Zahl hangt davon ab, an welcher Stelle sie steht.
           <br></br>
@@ -67,8 +68,8 @@ export default function viventa() {
               <div className={style.block}>3</div>
             </td>
             <td className={style.td}>
-            <div className={style.block}>9</div>
-              <div className={style.block}>5</div>
+            <div className={style.block}>1</div>
+              <div className={style.block}>2</div>
               <div className={style.block}>3</div>
             </td>
           </tr>
@@ -77,8 +78,8 @@ export default function viventa() {
       <tfoot>
           <tr>
             <td className={style.td}>
-            <div className={style.block}>0</div>
-              <div className={style.block}>4</div>
+            <div className={style.block}>1</div>
+              <div className={style.block}>2</div>
               <div className={style.block}>3</div>
             </td>
             <td className={style.td}>
@@ -87,14 +88,14 @@ export default function viventa() {
               <div className={style.block}>3</div>
             </td>
             <td className={style.td}>
-            <div className={style.block}>2</div>
+            <div className={style.block}>1</div>
               <div className={style.block}>2</div>
-              <div className={style.block}>7</div>
+              <div className={style.block}>3</div>
             </td>
             <td className={style.td}>
             <div className={style.block}>1</div>
-              <div className={style.block}>5</div>
-              <div className={style.block}>5</div>
+              <div className={style.block}>2</div>
+              <div className={style.block}>3</div>
             </td>
           </tr>
       </tfoot>
@@ -107,10 +108,6 @@ export default function viventa() {
 
         </section>
     
-    </div>
-
-    <div className={style.vcontain}> 
-  
     </div>
 
     </>

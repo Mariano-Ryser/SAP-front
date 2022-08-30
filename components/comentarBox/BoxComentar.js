@@ -77,12 +77,9 @@ function BoxComentar(){
 
         <div>
              {comentars.map(({_id, text}) => (
-              <div>
                 <div key={_id} className={styles.comentarBox}>
-                    <span>-{text}</span>
-                </div>
-
-                  <div className={styles.x}>
+                    <span>-{text}</span> 
+                    <div className={styles.x}>
                       <span
                       onClick={
                         ()=>{
@@ -92,11 +89,10 @@ function BoxComentar(){
                             fetchComentars();
                               console.log({data})
                           })
-                      }}>X
-                    </span>
+                      }}>X</span>
                   </div>
                 </div>
-
+                
             ))}
          </div> 
 

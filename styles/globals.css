@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #ffffff;
+  background-color: #eeeeee;
 }
 * {
   box-sizing: border-box;
@@ -14,14 +14,15 @@ body {
 article{
   margin-top: 1rem;
   margin: auto;
+  color: black;
   background-color: rgb(255, 255, 255);
-  border: #ffffff solid 1px;
+  border: #000000 solid 1px;
   width: 75%;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 .personajes{
-  color: rgb(0, 0, 0);
+  color: yellow;
   font-size: 1.22rem;
 }
 h1{color: rgb(0, 0, 0);
@@ -33,13 +34,12 @@ h3 {color: rgb(0, 0, 0);
 p{font: 400 16px/1.4 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 }
 a {
-  color: #ffffff;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 }
 .a{
-  
-  color: #000000;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
 }
@@ -56,13 +56,9 @@ a {
     margin: auto;
     background-color: rgb(255, 255, 255);
     border: #000000 solid 1px;
+    color: rgb(0, 0, 0);
     width: 95%;
     padding: 1rem;
     margin-bottom: 1rem;
-  }
-  a {
-    color: #ffffff;
-    text-decoration: none;
-    font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
   }
   }

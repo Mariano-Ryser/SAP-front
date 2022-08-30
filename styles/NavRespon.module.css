@@ -4,8 +4,8 @@
     display: flex;
     align-items: center;
     min-height: 4rem;
-    background-color: #000000; 
-    border-bottom: 1px solid rgb(0, 0, 0);  
+    background-color: #2e2e2e; 
+    border-bottom: 1px solid rgb(31, 160, 5);  
     font-family: monospace;
     opacity: 100%;
     transform: translateY(0%);
@@ -22,7 +22,6 @@
   }
   .asideBar{
     overflow: hidden;
-    color: white;
     overflow-y: scroll;
     position: absolute;
     transform: translateY(-100%);
@@ -40,7 +39,7 @@
     background: #13192E;
   }
   .asideBar::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255);
+    background: rgb(66, 110, 57);
   }
   .ul{
     list-style-type: none;
@@ -73,9 +72,9 @@
   .nav{
     display: flex;
     align-items: center;
-    background-color: #000000; 
-    border-bottom: 1px solid rgb(255, 255, 255);  
-    color: rgb(255, 255, 255);
+    background-color: #2e2e2e; 
+    border-bottom: 1px solid rgb(31, 160, 5);  
+    color: black;
     z-index: 2;
     
   }
@@ -89,15 +88,14 @@
 
   .asideBar{
     /* filter: blur(1px); */
-    background-color: #000000;
-    color: white;
+    background-color: #2e2e2e;
     overflow: hidden;
     overflow-y: scroll;
     position: absolute;
     transform: translateY(-100%);
-    border-bottom: 1px solid rgb(180, 180, 180);   
-    border-right: 1px solid rgb(255, 255, 255);   
-    border-left: 1px solid rgb(255, 255, 255);   
+    border-bottom: 1px solid rgb(31, 160, 5);   
+    border-right: 1px solid rgb(31, 160, 5);   
+    border-left: 1px solid rgb(31, 160, 5);   
     right: 0;
     top: 4rem;
     height: 15rem;
@@ -110,33 +108,31 @@
     width: 0.2rem;
   }
   .asideBar::-webkit-scrollbar-track {
-    background: #000000;
+    background: #13192E;
   }
   .asideBar::-webkit-scrollbar-thumb {
-    background: rgb(0, 0, 0);
+    background: rgb(66, 110, 57);
   }
 
   .ul{
     list-style-type: none;
     padding-inline-start: 0.5rem;
     padding-inline-end: 0.5rem;
-    color: white;
   }
   .li{
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
     padding: 0.3rem;
-    color: white;
-    border: solid 2px rgb(245, 245, 245);
+    border: solid 2px rgb(92, 128, 45);
   }
    
     .logo{
+      color: rgb(182, 182, 182);
       margin-left: 0.5rem;
       margin-right: auto;
       /* font-size: 1.2rem; */
       font-weight: 600;
       cursor: pointer;
-      color: white;
       font: 400 25px/1 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
    /*font-family: 'Shadows Into Light', cursive; */
     }

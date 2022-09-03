@@ -1,0 +1,57 @@
+.entrada{
+    padding: 1rem;
+    text-align: center;
+  }
+  article{
+    margin-top: 1rem;
+    margin: auto;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border: #000000 solid 1px;
+    width: 75%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .personajes{
+    color: yellow;
+    font-size: 1.22rem;
+  }
+  h1{color: rgb(0, 0, 0);
+    font: 400 22px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
+  h2 {color: rgb(0, 0, 0);
+    font: 400 20px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
+  h3 {color: rgb(0, 0, 0);
+    font: 400 18px/1.2 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;}
+  p{font: 400 16px/1.4 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  }
+  a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font: 400 16px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  }
+  .a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    
+    font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  
+  }
+  
+  .footerArticle{
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  @media (max-width: 600px) {
+    article{
+      margin-top: 1rem;
+      margin: auto;
+      background-color: rgb(255, 255, 255);
+      border: #000000 solid 1px;
+      color: rgb(0, 0, 0);
+      width: 95%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    }

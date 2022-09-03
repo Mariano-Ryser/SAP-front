@@ -1,17 +1,42 @@
 .nav{
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    min-height: 4rem;
-    background-color: #2e2e2e; 
-    border-bottom: 1px solid rgb(31, 160, 5);  
-    font-family: monospace;
-    opacity: 100%;
-    transform: translateY(0%);
-    /* animation: nav 0.8s 1 ease-in-out; */
-    z-index: 2;
-  }
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  color: black;
+  z-index: 2;
+}
+.asideBar{
+  /* filter: blur(1px); */
+  backdrop-filter: blur(3px);
+  overflow: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  right: 10%;
+  top: 6rem;
+  height: 15rem;
+  width: 20rem;
+  border-radius: 0rem 0rem 0.2rem 0.2rem;
+  transition: 0.4s;
+  z-index: 1;
+  text-align: center;
+}
+.a{
+  font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.li{
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  padding: 0.3rem;
+  color: rgb(255, 255, 255);
+  background-color: #13192E;
+}
   .burger{
     position: absolute;
     transform: rotateZ(0deg);
@@ -20,23 +45,12 @@
     transition: 0.05s;
     cursor: pointer;
   }
-  .asideBar{
-    overflow: hidden;
-    overflow-y: scroll;
-    position: absolute;
-    transform: translateY(-100%);
-    right: 0;
-    top: 4rem;
-    height: 15rem;
-    width: 10rem;
-    transition: 0.4s;
-    z-index: 1;
-  }
+
   .asideBar::-webkit-scrollbar {
     width: 0.4rem;
   }
   .asideBar::-webkit-scrollbar-track {
-    background: #13192E;
+    background: transparent;
   }
   .asideBar::-webkit-scrollbar-thumb {
     background: rgb(66, 110, 57);
@@ -49,11 +63,10 @@
   }
   .li{
     font-family: monospace;
-    color: rgb(201, 201, 201);
+    color: rgb(255, 255, 255);
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
     padding: 0.3rem;
-    border: dashed 2px rgb(92, 128, 45);
   }
 
   .logo{
@@ -69,15 +82,18 @@
   }
 
   @media (max-width: 600px) {
+  
   .nav{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 5rem;
     display: flex;
     align-items: center;
-    background-color: #2e2e2e; 
-    border-bottom: 1px solid rgb(31, 160, 5);  
     color: black;
     z-index: 2;
-    
   }
+
   .burger{
     position: absolute;
     transform: rotateZ(0deg);
@@ -88,21 +104,24 @@
 
   .asideBar{
     /* filter: blur(1px); */
-    background-color: #2e2e2e;
+    position: fixed;
+    backdrop-filter: blur(3px);
     overflow: hidden;
     overflow-y: scroll;
-    position: absolute;
-    transform: translateY(-100%);
-    border-bottom: 1px solid rgb(31, 160, 5);   
-    border-right: 1px solid rgb(31, 160, 5);   
-    border-left: 1px solid rgb(31, 160, 5);   
-    right: 0;
-    top: 4rem;
+    transform: translateY(-100%); 
+    top: 6rem;
     height: 15rem;
-    width: 10rem;
-    border-radius: 0rem 0rem 0.2rem 0.2rem;
+    width: 100%;
     transition: 0.4s;
     z-index: 1;
+    text-align: center;
+  }
+  .a{
+    font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 900;
   }
   .asideBar::-webkit-scrollbar {
     width: 0.2rem;
@@ -123,7 +142,7 @@
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
     padding: 0.3rem;
-    border: solid 2px rgb(92, 128, 45);
+    color: rgb(255, 255, 255);
   }
    
     .logo{

@@ -51,8 +51,6 @@
 
 @media (max-width: 600px) {
   .vcontain{
-    border: solid rgb(145, 153, 156) 1px; 
-    height: 100em;
     margin: auto;
     margin-top: 1.5rem;
     width: 95%;

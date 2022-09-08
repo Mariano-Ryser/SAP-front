@@ -24,7 +24,7 @@
 .a{
   font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(155, 155, 155);
   font-size: 1.5rem;
   font-weight: 900;
 }
@@ -32,8 +32,10 @@
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
   padding: 0.3rem;
-  color: rgb(255, 255, 255);
+  color: rgb(177, 177, 177);
   background-color: #13192E;
+  border-radius: 1rem;
+  box-shadow: inset 1px 1px 3px 1px rgb(29, 29, 29);
 }
   .burger{
     position: absolute;
@@ -59,7 +61,7 @@
   }
   .li{
     font-family: monospace;
-    color: rgb(255, 255, 255);
+    color: rgb(131, 131, 131);
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
     padding: 0.3rem;
@@ -98,7 +100,7 @@
   .asideBar{
     /* filter: blur(1px); */
     position: fixed;
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(0px);
     height: 100%;
     overflow: hidden;
     overflow-y: scroll;
@@ -107,19 +109,41 @@
     transition: 0.4s;
     z-index: 1;
     text-align: center;
+  animation: blur 15s infinite alternate ;
   }
+  @keyframes blur {
+    0%{
+      backdrop-filter: blur(0px);
+    }
+    100%{
+      backdrop-filter: blur(10px);
+    }
+    
+  }
+
+
   .a{
     font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
     font-weight: 900;
+    animation: a 20s infinite alternate; 
   }
+  
+   @keyframes a {
+    0%{
+      color: rgb(255, 255, 255);
+    }
+    100%{
+      color: rgb(134, 134, 134);
+    }
+  } 
   .asideBar::-webkit-scrollbar {
-    width: 0.2rem;
+    width: 0rem;
   }
   .asideBar::-webkit-scrollbar-track {
-    background: #13192E;
+    background: transparent;
   }
   .asideBar::-webkit-scrollbar-thumb {
     background: transparent;

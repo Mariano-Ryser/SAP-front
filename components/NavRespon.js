@@ -37,7 +37,7 @@ const NavRespon = () => {
         </div>
 
         <div id='burger' className={styles.burger} onClick={openList}>
-         <Image alt='Burger-Icon' src={'/burgerWhite.png'} height={20} width={25}></Image>
+         <Image alt='Burger-Icon' src={'/burgerWhite.png'} height={40} width={60}></Image>
         </div> 
 
     </nav>

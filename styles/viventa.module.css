@@ -1,46 +1,58 @@
 .vcontain{
   margin: auto;
+  color: azure;
   margin-top: 2rem;
   width: 70%;
   display: column;
   justify-content: center;
   text-align: center;
 }
-.section{
-  padding: 0.5rem;
-  color: white;
-  background-color: black;
-}
-
-.boxTabele{
-  display: flex;
-  justify-content: center;
-}
-.tabele{
-  border:solid white 1px;
-}
-.th{
-  border: solid white 1px;
-}
-.td{
-  border: none;
-}
-.block{
-  display: flex;
-  justify-content: center;
-  height: 1.3rem;
-  width: 2rem;
-  border: solid white 1px;
-  display: inline-block;
-}
 
 
+
+.cor{
+  color:rgb(214, 22, 214);
+}
+.tags{
+  color: #4A87BB;
+}
+.fun{
+  color: #4b8cc4;
+}
+.nameFun{
+  color: rgb(209, 209, 136);
+}
+.paren{
+  color:rgb(224, 193, 13);
+}
+.parenV{
+  color:rgb(214, 22, 214);
+}
+.brace{
+  color:rgb(224, 193, 13);
+}
+.console{
+  color:#92cfeb
+}
+.params{
+  color:#92cfeb
+}
+.log{
+  color: rgb(209, 209, 136);
+}
+.braceV{
+  color:rgb(214, 22, 214);
+}
+.string{
+  color: rgb(221, 156, 103);
+}
 
 
 
 @media (max-width: 600px) {
   .vcontain{
-    border: solid rgb(145, 153, 156) 1px;
+    border: solid rgb(145, 153, 156) 1px; 
+    height: 100em;
     margin: auto;
     margin-top: 1.5rem;
     width: 95%;

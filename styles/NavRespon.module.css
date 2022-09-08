@@ -14,8 +14,6 @@
   overflow: hidden;
   overflow-y: scroll;
   position: fixed;
-  right: 10%;
-  top: 6rem;
   height: 15rem;
   width: 20rem;
   border-radius: 0rem 0rem 0.2rem 0.2rem;
@@ -40,8 +38,9 @@
   .burger{
     position: absolute;
     transform: rotateZ(0deg);
-    right: 2rem;
-    top: 1.3rem;
+    border-radius: 5px;
+    bottom: 4rem;
+    top: 0rem;
     transition: 0.05s;
     cursor: pointer;
   }
@@ -53,13 +52,10 @@
     background: transparent;
   }
   .asideBar::-webkit-scrollbar-thumb {
-    background: rgb(66, 110, 57);
+    background: rgb(0, 0, 0);
   }
   .ul{
     list-style-type: none;
-    padding-inline-start: 0.5rem;
-    padding-inline-end: 0.5rem;
-
   }
   .li{
     font-family: monospace;
@@ -68,14 +64,11 @@
     margin-bottom: 0.4rem;
     padding: 0.3rem;
   }
-
   .logo{
-    color: rgb(204, 204, 204);
     margin-left: 1rem;
     margin-right: auto;
     font-weight: 600;
   }
-
   .img{
     margin: 1rem;
     cursor: pointer;
@@ -97,8 +90,8 @@
   .burger{
     position: absolute;
     transform: rotateZ(0deg);
-    right: 2rem;
-    top: 1.4rem;
+    right: 0rem;
+    top: 0rem;
     transition: 0.05s;
   }
 
@@ -109,8 +102,7 @@
     overflow: hidden;
     overflow-y: scroll;
     transform: translateY(-100%); 
-    top: 6rem;
-    height: 15rem;
+    height: 10rem;
     width: 100%;
     transition: 0.4s;
     z-index: 1;
@@ -130,17 +122,18 @@
     background: #13192E;
   }
   .asideBar::-webkit-scrollbar-thumb {
-    background: rgb(66, 110, 57);
+    background: transparent;
   }
 
   .ul{
+    padding-left: 0;
     list-style-type: none;
-    padding-inline-start: 0.5rem;
-    padding-inline-end: 0.5rem;
   }
   .li{
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
+    width: 100%;
+    text-align: center;
     padding: 0.3rem;
     color: rgb(255, 255, 255);
   }

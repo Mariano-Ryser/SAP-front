@@ -60,7 +60,7 @@ function BoxComentar(){
     <>
     <form className={styles.form}>
       <p className={styles.date}> {datee}</p>
-      <textarea className={styles.textArea}
+      <textarea placeholder='Añade un comentario...' className={styles.textArea}
       maxLength="700"
       type='text'
       name='text'
@@ -77,7 +77,7 @@ function BoxComentar(){
 
         <div>
              {comentars.map(({_id, text}) => (
-                <div key={_id} className={styles.comentarBox}>
+                <div  key={_id} className={styles.comentarBox}>
                     <span>-{text}</span> 
                     <div className={styles.x}>
                       <span
@@ -89,7 +89,7 @@ function BoxComentar(){
                             fetchComentars();
                               console.log({data})
                           })
-                      }}>X</span>
+                      }}>...</span>
                   </div>
                 </div>
                 

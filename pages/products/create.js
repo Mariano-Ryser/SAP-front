@@ -73,7 +73,7 @@ function Create() {
                 <button
                 className={style.button}
                 onClick={handleClick}
-                >Crear producto</button>
+                >erstellen</button>
 
         <div>
              {products.map(({_id, name, price}) => (
@@ -93,7 +93,7 @@ function Create() {
                                 fetchProducts();
                             })
                         }}
-                        >X
+                        >...
                     </span>
                     </div>
                 </div>

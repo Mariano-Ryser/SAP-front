@@ -78,19 +78,23 @@ function BoxComentar(){
         <div>
              {comentars.map(({_id, text}) => (
                 <div  key={_id} className={styles.comentarBox}>
+
                     <span>-{text}</span> 
-                    <div className={styles.x}>
-                      <span
-                      onClick={
-                        ()=>{
-                          fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
-                          .then((res) => res.json())
-                          .then((data)  => {
-                            fetchComentars();
-                              console.log({data})
-                          })
-                      }}>...</span>
-                  </div>
+
+                      <div className={styles.x}>
+                        <span
+                          onClick={
+                              ()=>{
+                                fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
+                                .then((res) => res.json())
+                                .then((data)  => {
+                                fetchComentars();
+                                  console.log({data})
+                              })
+                          }}>...</span>
+                    </div>
+
+                  
                 </div>
                 
             ))}

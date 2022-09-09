@@ -55,7 +55,7 @@ function Create() {
             <form className={style.form}>
             <h1 
             className={style.h1}
-            >Nuevo producto y su precio </h1>
+            >-o+ </h1>
                 <input
                 className={style.input}
                  type='text'

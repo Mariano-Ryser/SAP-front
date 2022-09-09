@@ -7,3 +7,7 @@ body {
 * {
   box-sizing: border-box;
 }
+.hs1{
+  height: 100vh;
+  background-color: rgb(31, 27, 27);
+}

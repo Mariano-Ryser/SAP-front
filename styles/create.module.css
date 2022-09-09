@@ -9,18 +9,23 @@
 }
 .h1{text-align: center;
     font-family: monospace;
-    color: white;
-    font-weight: 600;
+    color: rgb(25, 151, 141);
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 0rem;
+    margin-bottom: 1rem;
+    
 } 
      .input{
         width: 100%;
-        font-family: monospace;
+        font-family: Arial, Helvetica, sans-serif;
         margin-bottom:0.5rem;
-        height:1.8rem;
-        font-size: 1rem;
+        height:3.5rem;
+        font-size: 3rem;
         font-weight: 600;
-        color:black;
+        color:rgb(46, 181, 190);
         outline: none;
+        background-color: rgb(11, 17, 17);
         
     }
     .button{
@@ -33,23 +38,24 @@
     .prodBox{
         display: flex;
         justify-content: space-between;
-        border: solid 1px rgb(31, 160, 5);
+        border: solid 2px rgb(31, 74, 83);
         padding: 0.26rem;
-        height: 3rem;
+        height: 5rem;
         margin-bottom: 0.5rem;
         overflow: hidden;
         width: 100%;
         background-color: rgb(39, 39, 39);
-        color:rgb(8, 187, 8);
+        color:rgb(24, 177, 182);
         font-family: monospace;
         font-size: 1rem;
     }
     .x{
-        background-color: rgb(216, 30, 30);
-        color: rgb(0, 0, 0);
+        background-color: rgb(88, 76, 76);
+        color: rgb(34, 21, 21);
         font-weight: 900;
         height: 1.5rem;
         width: 1.5rem;
+        border-radius: 45%;
         cursor: pointer;
         text-align: center;
     }

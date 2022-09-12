@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import styles from '../../styles/BoxComentar.module.css'
+import Image from "next/image"
 
 function BoxComentar(){
   const current = new Date();
   const datee = `${current.getDate()} / ${current.getMonth()+1} / ${current.getFullYear()}`;
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
+
   const initialState = {text:''};
   const [comentar, setComentar] = useState(initialState)
   const [comentars, setComentars] = useState([])
@@ -13,10 +15,10 @@ function BoxComentar(){
         const inputValue = e.target.value
         const inputName = e.target.name
 
-    setComentar({
-      ...comentar, 
-      [inputName]: inputValue,
-    });
+      setComentar({
+        ...comentar, 
+        [inputName]: inputValue,
+      });
   }
   const handleClick = (e)=> {
         e.preventDefault()
@@ -41,17 +43,15 @@ function BoxComentar(){
             console.log({err})
         })
 
-    }
-
-    const fetchComentars= () =>{
+  }
+  const fetchComentars= () =>{
       fetch(`${baseURL}/comentars`)
          .then(res => res.json())
          .then( ({comentars}) =>{
           setComentars(comentars)
              console.log('Comentarios:', comentars)
      })
-    }
-  
+  }
     useEffect(()=>{
       fetchComentars();
      },[])
@@ -79,7 +79,7 @@ function BoxComentar(){
              {comentars.map(({_id, text}) => (
                 <div  key={_id} className={styles.comentarBox}>
 
-                    <span>-{text}</span> 
+                    <span className={styles.text}>-{text}</span> 
 
                       <div className={styles.x}>
                         <span
@@ -87,14 +87,22 @@ function BoxComentar(){
                               ()=>{
                                 fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
                                 .then((res) => res.json())
-                                .then((data)  => {
+                                .then((data) => {
                                 fetchComentars();
                                   console.log({data})
                               })
                           }}>...</span>
                     </div>
+                             {/* <div className={styles.heart}
+                             onClick={handleLike}
+                             > 
+                              <Image
+                              alt='Burger-Icon' 
+                              src={'/heart.png'} 
+                              height={18} 
+                              width={22}></Image>
 
-                  
+                            </div>  */}
                 </div>
                 
             ))}

@@ -44,11 +44,11 @@ const NavRespon = () => {
     <aside id='aside' className={styles.asideBar}>
           <ul className={styles.ul}>
             <li className={styles.li}><Link href="/"><a className={styles.a}>Home</a></Link></li>
-            <li className={styles.li}><Link href="/products/create"><a className={styles.a}>Producto</a></Link></li>
+            {/* <li className={styles.li}><Link href="/products/create"><a className={styles.a}>Producto</a></Link></li>
             <li className={styles.li}><Link href="/msj"><a className={styles.a}>Mensajeria</a></Link></li>
             <li className={styles.li}><Link href="/viventa"><a className={styles.a}>Plano</a></Link></li>
             <li className={styles.li}><Link href="/"><a className={styles.a}>Qrs Copiar y pegar?</a></Link></li>
-            <li className={styles.li}><Link href="/"><a className={styles.a}>...</a></Link></li>
+            <li className={styles.li}><Link href="/"><a className={styles.a}>...</a></Link></li> */}
             {/* <li className={styles.li}><Link href="/tecnologies"><a className={styles.a}>Tecnologies</a></Link></li> */}
             {/* <li className={styles.li}><Link href="/viventa"><a>Viventa</a></Link></li> */}
             {/* <li className={styles.li}><Link href="/code"><a>Codes</a></Link></li> */}

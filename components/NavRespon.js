@@ -54,9 +54,9 @@ const NavRespon = () => {
             <li className={styles.li}><Link href="/viventa"><a className={styles.a}>Plano</a></Link></li>
             <li className={styles.li}><Link href="/"><a className={styles.a}>Qrs Copiar y pegar?</a></Link></li>
             <li className={styles.li}><Link href="/"><a className={styles.a}>...</a></Link></li> 
+             <li className={styles.li}><Link href="/viventa"><a className={styles.a}>V1</a></Link></li> 
+             <li className={styles.li}><Link href="/code"><a className={styles.a}>Codes</a></Link></li> 
             {/* <li className={styles.li}><Link href="/tecnologies"><a className={styles.a}>Tecnologies</a></Link></li> */}
-            {/* <li className={styles.li}><Link href="/viventa"><a>Viventa</a></Link></li> */}
-            {/* <li className={styles.li}><Link href="/code"><a>Codes</a></Link></li> */}
           </ul>
           
         </aside>

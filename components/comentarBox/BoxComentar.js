@@ -60,8 +60,8 @@ function BoxComentar(){
     <>
     <form className={styles.form}>
       <p className={styles.date}> {datee}</p>
-      <textarea placeholder='Añade un comentario...' className={styles.textArea}
-      maxLength="700"
+      <textarea placeholder='Añade un enlace...' className={styles.textArea}
+      maxLength="9999999"
       type='text'
       name='text'
       value={comentar.text}

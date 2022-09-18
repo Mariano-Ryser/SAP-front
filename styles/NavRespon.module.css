@@ -24,18 +24,23 @@
 .a{
   font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  color: rgb(155, 155, 155);
+  color: rgb(255, 255, 255);
   font-size: 1.5rem;
   font-weight: 900;
 }
-.li{
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
-  padding: 0.3rem;
-  color: rgb(177, 177, 177);
-  background-color: #00244e;
-  border-radius: 1rem;
-  box-shadow: inset 1px 1px 3px 1px rgb(29, 29, 29);
+.li{ 
+  width: 65%;
+  margin: auto;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    background-color: #0F05A0;
+    margin-top: 0.2rem;
+    margin-bottom: 2rem;
+    padding-top: 0.9rem;
+    height: 4rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
 }
   .burger{
     position: absolute;
@@ -57,14 +62,14 @@
     background: rgb(0, 0, 0);
   }
   .ul{
+    margin: 0;
+    padding: 0;
     list-style-type: none;
   }
   .li{
+    list-style-type: none;
     font-family: monospace;
-    color: rgb(131, 131, 131);
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-    padding: 0.3rem;
+    color: rgb(131, 131, 131)
   }
   .logo{
     margin-left: 1rem;
@@ -108,11 +113,16 @@
     width: 100%;
     transition: 0.4s;
     z-index: 1;
-    text-align: center;
   animation: blur 5s infinite alternate ;
   }
   @keyframes blur {
     0%{
+      backdrop-filter: blur(0px);
+    }
+    20%{
+      backdrop-filter: blur(20px);
+    }
+    80%{
       backdrop-filter: blur(0px);
     }
     100%{
@@ -120,26 +130,26 @@
     }
     
   }
-
-
   .a{
+    list-style-type: none;
     font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 900;
-    animation: a 15s infinite alternate; 
+    animation: a 2s 1 linear; 
+    backdrop-filter: blur(0px);
   }
-  
    @keyframes a {
     0%{
-      color: rgb(255, 255, 255);
+      color: rgb(73, 73, 73);
     }
     50%{
-      color: rgb(16, 158, 23);
+
+      color: rgb(255, 255, 255);
     }
-    100%{
-      color: rgb(173, 157, 9);
+    100%{ 
+      color: rgb(255, 255, 255);
     }
   } 
   .asideBar::-webkit-scrollbar {
@@ -151,17 +161,27 @@
   .asideBar::-webkit-scrollbar-thumb {
     background: transparent;
   }
-
   .ul{
-    padding-left: 0;
+    margin: 0rem;
+    padding: 0rem;
     list-style-type: none;
+    display: column;
+    justify-content: center;
+    align-items: center;
+    
   }
   .li{
-    margin-top: 0.4rem;
+    width: 79%;
+  margin: auto;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    background-color: #0F05A0;
+    margin-top: 0.2rem;
     margin-bottom: 2rem;
-    width: 100%;
+    padding-top: 0.9rem;
+    height: 4rem;
     text-align: center;
-    padding: 0.3rem;
     color: rgb(255, 255, 255);
   }
    

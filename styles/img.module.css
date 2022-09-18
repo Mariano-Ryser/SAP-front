@@ -1,0 +1,11 @@
+.img{
+  display: flex;
+  justify-content: center;
+  border: solid 2px rgb(70, 70, 70);
+  border-radius: 10px;
+  box-shadow: rgb(94, 94, 94) 0px 0px 10px 1px;
+  margin-bottom: 1rem;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

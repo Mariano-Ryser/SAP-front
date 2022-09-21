@@ -21,7 +21,7 @@ body {
     height: 100vh;
     background-color: rgb(31, 27, 27);
     background-image: url('/me/me.jpg');
-    background-position: 26%;
+    background-position: 40%;
     background-size: cover;
   }
 }

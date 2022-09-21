@@ -7,21 +7,19 @@ export default function viventa() {
   
   return (
     <>
+    {/* <div className={style.img}>
+      <Image alt='team' src={'/me/teamVivent1.jpeg'}
+      height={1300} width={1000}
+       ></Image>
+    </div> */}
+     <div className={style.img}>
+      <Image alt='me' src={'/fw/me.jpg'}
+      height={1500} width={1500}
+       ></Image>
+    </div>
+    
     <div className={style.img}>
       <Image alt='Book' src={'/fw/book.jpg'}
-      height={1500} width={1500}
-       ></Image>
-    </div>
-
-    <div className={style.img}>
-      <Image alt='box' src={'/fw/bow.jpg'}
-      height={1500} width={1500}
-       ></Image>
-    </div>
-
-
-    <div className={style.img}>
-      <Image alt='me' src={'/fw/me.jpg'}
       height={1500} width={1500}
        ></Image>
     </div>
@@ -37,6 +35,7 @@ export default function viventa() {
       height={1500} width={1500}
        ></Image>
     </div>
+    
     <div className={style.img}>
       <Image alt='Burger-Icon' src={'/fw/momie.jpg'}
       height={1500} width={1500}

@@ -81,8 +81,9 @@ function BoxComentar(){
 
                     <span className={styles.text}>-{text}</span> 
 
-                      <div className={styles.x}>
+                      <div >
                         <span
+                        className={styles.x}
                           onClick={
                               ()=>{
                                 fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
@@ -91,18 +92,20 @@ function BoxComentar(){
                                 fetchComentars();
                                   console.log({data})
                               })
-                          }}>...</span>
-                    </div>
-                             {/* <div className={styles.heart}
-                             onClick={handleLike}
+                          }}>x</span>
+
+
+                            <div className={styles.like}
                              > 
                               <Image
                               alt='Burger-Icon' 
-                              src={'/heart.png'} 
-                              height={18} 
-                              width={22}></Image>
+                              src={'/like.png'} 
+                              height={22} 
+                              width={24}></Image>
 
-                            </div>  */}
+                            </div>
+                    </div>
+                               
                 </div>
                 
             ))}

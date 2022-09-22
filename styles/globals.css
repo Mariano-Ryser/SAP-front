@@ -24,6 +24,15 @@ body {
     background-position: 40%;
     background-size: cover;
   }
+  .react{
+    height: 2rem;
+    width: 2rem;
+    background-image: url('/me/react.gif');
+    background-size: cover;
+    position: absolute;
+    top: 3.5rem;
+    right: 8rem;
+  }
   .visual{
     height: 5rem;
     width: 5rem;
@@ -51,24 +60,34 @@ body {
     top: 20.8rem;
     left: 1rem;
   }
+  /* .logoMark{
+    height: 7rem;
+    width: 7rem;
+    background-image: url('/me/logoMark.png');
+    background-size: cover;
+    position: absolute;
+    bottom: 10rem;
+    left: 1rem;
+  } */
   .github{
     height: 5rem;
     width: 5rem;
     background-image: url('/me/github.png');
     background-size: cover;
     position: absolute;
-    bottom: 3rem;
-    left: 7rem;
-
+    bottom: 1.45rem;
+    left: 16.5rem;
   }
-
-  .react{
-    height: 2rem;
-    width: 2rem;
-    background-image: url('/me/react.gif');
+  .linkedin{
+    height: 5rem;
+    width: 5rem;
+    background-image: url('/me/linkedin.png');
     background-size: cover;
     position: absolute;
-   top: 3.5rem;
-    right: 8rem;
+    bottom: 1.4rem;
+    left: 10rem;
   }
+
+
+ 
 }

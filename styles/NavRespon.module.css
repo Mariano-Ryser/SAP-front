@@ -97,8 +97,8 @@
   .burger{
     position: absolute;
     transform: rotateZ(0deg);
-    right: 0rem;
-    top: 0rem;
+    right: 2rem;
+    top: -1rem;
     transition: 0.05s;
   }
 

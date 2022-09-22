@@ -114,28 +114,17 @@ padding: 0.7rem;}
     background-color: rgb(65, 62, 60);
     border-radius: 0.2rem;
   }
-  /* .comentarBox{
-    position: relative; 
-    display: flex;
-  justify-content: space-between;
-  margin-top: 0.6rem;
-  background-color: #1a1a1a;
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-  padding: 0.7rem;
-  box-shadow: #3a3a3a 1px 1px 1px 0px;
-  border: solid rgb(56, 56, 56) 1px;
-  font: 400 16px/1 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
-} */
 .comentarBox{
   position: relative; 
   display: flex;
 justify-content: space-between;
-margin-top: 0rem;
-background-color: #a19d83;
-color: rgb(48, 48, 48);
+margin-top: 0.5rem;
+margin-bottom: 0.5rem;
+background-color: #9e9b8b;
+color: rgb(46, 46, 46);
 /* font-size: 1rem; */
 padding: 0.7rem;
+padding-bottom: 2rem;
 box-shadow: #3a3a3a 1px 1px 1px 0px;
 border: solid rgb(56, 56, 56) 1px;
 font-weight: bold;
@@ -150,20 +139,27 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     position: absolute;
     right: 0.2rem;
     bottom: 0rem;
-  color: rgb(161, 161, 161);
+  color: rgb(0, 0, 0);
   cursor: pointer;
   height: 1.5rem;
   width: 1.5rem;
-  /* border: #444444 solid 1px; */
   border-radius: 40%;
+  font-family: sans-serif;
   text-align: center;
   padding: 0.1rem;
-  /* box-shadow: #535353 0.5px 1px 30px 2.2px; */
 }
-.heart{
+.like{
   position: absolute;
-  left: 0.2rem;
-  bottom: -1.8rem;
+  color: rgb(0, 0, 0);
+  bottom: 0rem;
+  left: 1rem;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 40%;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0.1rem;
 }
   
 }

@@ -47,7 +47,7 @@ const NavRespon = () => {
             <li className={styles.li}><Link href="/img"><a className={styles.a}>Images</a></Link></li>
              <li className={styles.li}><Link href="/products/create"><a className={styles.a}>Productos?</a></Link></li>
             <li className={styles.li}><Link href="/msj"><a className={styles.a}>Mensajeria</a></Link></li>
-            <li className={styles.li}><Link href="https://mnr.netlify.app/"><a className={styles.a}>Icons?</a></Link></li>
+            <li className={styles.li}><Link href="/icons"><a className={styles.a}>Icons?</a></Link></li>
             <li className={styles.li}><Link href="https://nrto.netlify.app/alien/alien.html"><a className={styles.a}>Uhr ?</a></Link></li>
             <li className={styles.li}><Link href="https://nrto.netlify.app/tictactoe/tic.html"><a className={styles.a}>Tic- Tac- Toe?</a></Link></li>
             

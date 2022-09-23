@@ -12,7 +12,7 @@ export default function Home() {
         <Link href="https://de.wikipedia.org/wiki/Hypertext_Markup_Language#:~:text=Die%20Hypertext%20Markup%20Language%20(HTML,und%20werden%20von%20Webbrowsern%20dargestellt."><a ><div className='html'></div></a></Link>
         <Link href="https://de.wikipedia.org/wiki/Cascading_Style_Sheets"><a ><div className='css'></div></a></Link>
         {/* <Link href="https://logomakr.com/app/7S2oum#"><a ><div className='logoMark'></div></a></Link> */}
-
+        <div><h2 className='msj'>Immernoch Working in this Web :p ...</h2></div>
         
         
  

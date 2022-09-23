@@ -13,6 +13,13 @@ body {
   background-image: url('/me/me.jpg');
   background-position: 2000%;
   background-size: cover;
+}
+.msj{
+  position: absolute;
+  margin: 0rem;
+  margin-top: 0.2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
@@ -76,7 +83,7 @@ body {
     background-size: cover;
     position: absolute;
     bottom: 1.45rem;
-    left: 16.5rem;
+    left: 10.5rem;
   }
   .linkedin{
     height: 5rem;
@@ -85,9 +92,6 @@ body {
     background-size: cover;
     position: absolute;
     bottom: 1.4rem;
-    left: 10rem;
+    left: 4rem;
   }
-
-
- 
 }

@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import styles from "../styles/Icons.module.css"
+import styles from "../styles/Icons.module.css";
 import Image from "next/image"
-
-import Alienverde from "/public/img/alien.png"
 
 
 const Icons = () => {
-
-
- 
   return (
     <>
-       
-       
         <div className={styles.boxIcons}
         //  style={{height: size}}
          >
-
           <div className={styles.icon} style={{backgroundImage: `url('/img/node.png')`}}></div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/insta.png')`}}></div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/Alienverde.gif')`}}></div>
@@ -69,12 +61,7 @@ const Icons = () => {
           <div className={styles.icon} style={{backgroundImage: `url('/img/mars-unscreen.gif')`}}></div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/jupiter.gif')`}}></div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/saturn.png')`}}></div>
-          
         </div>
-
-       
-
-      
   </>
   )
 }

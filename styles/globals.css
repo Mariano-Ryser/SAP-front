@@ -10,9 +10,8 @@ body {
 .hs1{
   height: 100vh;
   background-color: rgb(31, 27, 27);
-  background-image: url('/img/background.png');
-  background-position: 2000%;
-  background-size: cover;
+  /* background-image: url('/img/background.png'); */
+
 }
 .msj{
   position: absolute;

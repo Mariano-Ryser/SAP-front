@@ -20,6 +20,7 @@
     width: 130px;
    grid-column: span 2;
    filter: blur(0.4px);
+   /* filter: drop-shadow(4px 4px 6px rgb(109, 109, 109));  */
    margin: auto;
    transition:0.3s 
   }
@@ -27,6 +28,7 @@
     cursor: pointer;
     transform: scale(105%) rotateZ(1.5deg);
      filter: blur(0.0px); 
+     /* filter: drop-shadow(2px 2px 6px rgb(109, 109, 109));  */
   }
   
   

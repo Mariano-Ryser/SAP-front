@@ -3,12 +3,11 @@ import Link from 'next/link';
 import styles from "../styles/NavRespon.module.css"
 import Image from "next/image"
 
-
 //C:\Users\MR22\stock-app\frontend\public
 const NavRespon = () => {
 
    function openList(){
-    const burger = document.getElementById('burger')
+    // const burger = document.getElementById('burger')
     const aside = document.getElementById('aside')
     if(aside.style.transform == 'translateY(0%)'){
       aside.style.transform = 'translateY(-100%)';
@@ -21,11 +20,11 @@ const NavRespon = () => {
         aside.style.transform = 'translateY(0%)'
       },0);
     }
-    if(burger.style.transform == 'rotateZ(90deg)'){
-      burger.style.transform = 'rotateZ(0deg)'
-    } else {
-      burger.style.transform = 'rotateZ(90deg)'
-    }
+    // if(burger.style.transform == 'rotateZ(90deg)'){
+    //   burger.style.transform = 'rotateZ(0deg)'
+    // } else {
+    //   burger.style.transform = 'rotateZ(90deg)'
+    // }
   }
 
  
@@ -44,21 +43,11 @@ const NavRespon = () => {
     <aside id='aside' className={styles.asideBar}>
           <ul className={styles.ul}>
             <li className={styles.li}><Link href="/"><a className={styles.a}>Home</a></Link></li>
-            <li className={styles.li}><Link href="/img"><a className={styles.a}>Images</a></Link></li>
+            <li className={styles.li}><Link href="/icons"><a className={styles.a}>Icons?</a></Link></li>
+            {/* <li className={styles.li}><Link href="/img"><a className={styles.a}>Images</a></Link></li> */}
              <li className={styles.li}><Link href="/products/create"><a className={styles.a}>Productos?</a></Link></li>
             <li className={styles.li}><Link href="/msj"><a className={styles.a}>Mensajeria</a></Link></li>
-            <li className={styles.li}><Link href="/icons"><a className={styles.a}>Icons?</a></Link></li>
-            <li className={styles.li}><Link href="https://nrto.netlify.app/alien/alien.html"><a className={styles.a}>Uhr ?</a></Link></li>
-            <li className={styles.li}><Link href="https://nrto.netlify.app/tictactoe/tic.html"><a className={styles.a}>Tic- Tac- Toe?</a></Link></li>
-            
-            
-            <li className={styles.li}><Link href="/viventa"><a className={styles.a}>Plano?</a></Link></li>
-            {/* <li className={styles.li}><Link href="/"><a className={styles.a}>Qrs Copiar y pegar?</a></Link></li> */}
-            {/* <li className={styles.li}><Link href="/"><a className={styles.a}>...?</a></Link></li>  */}
             <li className={styles.li}><Link href="https://nrto.netlify.app/3d/3d.html"><a className={styles.a}>Kubik?</a></Link></li>
-             <li className={styles.li}><Link href="/viventa"><a className={styles.a}>V1?</a></Link></li> 
-             <li className={styles.li}><Link href="/code"><a className={styles.a}>Codes?</a></Link></li> 
-            {/* <li className={styles.li}><Link href="/tecnologies"><a className={styles.a}>Tecnologies</a></Link></li> */}
           </ul>
           
         </aside>

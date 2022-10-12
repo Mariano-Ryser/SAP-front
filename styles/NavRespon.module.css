@@ -1,7 +1,7 @@
 .nav{
   position: fixed;
-   /* bottom: 0px; */
-   top: 2rem;
+   bottom: 1rem; 
+   /* top: 2rem; */
   right: 1rem; 
   width: 5rem;
   display: flex;
@@ -86,8 +86,9 @@
   
   .nav{
     position: fixed;
-    bottom: 0px;
-    right: 0px;
+    /* top: 2rem;  */
+    bottom: 1rem;
+    /* right: 1rem; */
     width: 10rem;
     display: flex;
     align-items: center;

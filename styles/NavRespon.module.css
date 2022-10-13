@@ -21,7 +21,7 @@
    transition: 0.4s;
    z-index: 1;
    text-align: center;
-   padding-top: 8.7rem;
+   padding-top: 13.7rem;
 }
 .a{
   font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
@@ -115,7 +115,6 @@
     transform: translateY(-100%); 
     width: 100%;
     transition: 0.4s;
-    z-index: 1;
   animation: blur 5s infinite alternate ;
   }
   @keyframes blur {

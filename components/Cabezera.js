@@ -12,6 +12,10 @@ const Cabezera = () => {
                 <div  className={styles.foto} style={{backgroundImage: `url('/me/me.jpg')`}}>
                 </div>
                 <span className={styles.name}>Mariano ryser</span>
+       
+        <div className={styles.noti1}></div>
+       
+       
         </div>
   </>
   )

@@ -2,31 +2,78 @@
     position: fixed;
     z-index: 9;
     background-color: black;
-    height: 7rem;
+    height: 12rem;
     width: 100%;
-    border-bottom: 1px solid rgb(0, 202, 17) ;
-
+    border-bottom: 1px solid rgb(68, 68, 68) ;
+        box-shadow: rgb(22, 22, 22) 0px 0px 30px 1px;
 }
 .foto{
+    display: inline-block;
     border-radius: 50%;
-    height: 4rem;
-    width: 4rem;
+    height: 8rem;
+    width: 8rem;
     margin-top: 0.8rem;
     margin-left: 1.1rem;
     background-size: cover;
-    background-position: -1.3rem -0rem;
+    background-position: -2.6rem 0rem;
+    box-shadow: rgb(54, 54, 54) 0px 0px 30px -3px;
 }
 .name{
-    color: white;
+    color: rgb(202, 202, 202);
     position: absolute;
-    top: 5rem;
-    left: 0.4rem;
-    font-size: 1rem;
+    top: 9.2rem;
+    left: 1rem;
+    font-size: 1.5rem;
     font-family: 'Courier New', Courier, monospace;
-    
-    
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+/* .noti1{
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    border: solid gray 2px;
+    top: 1rem;
+    left: 10rem;
+
+} */
+
+
+@media (max-width:600px){ 
+
+    .cabezera{
+        position: fixed;
+        z-index: 9;
+        background-color: black;
+        height: 7rem;
+        width: 100%;
+        border-bottom: 1px solid rgb(68, 68, 68) ;
+        box-shadow: rgb(22, 22, 22) 0px 0px 30px 1px;
+    }
+    .foto{
+        border-radius: 50%;
+        height: 4rem;
+        width: 4rem;
+        margin-top: 0.8rem;
+        margin-left: 1.1rem;
+        background-size: cover;
+        background-position: -1.3rem -0rem;
+    }
+    .name{
+        color: rgb(136, 136, 136);
+        position: absolute;
+        top: 5rem;
+        left: 0.4rem;
+        font-size: 1rem;
+    
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    
+  }
+  
+  
+  

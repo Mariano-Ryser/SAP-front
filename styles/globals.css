@@ -8,11 +8,27 @@ body {
   box-sizing: border-box;
 }
 .hs1{
+  position: relative;
+  height: 100vh;
+  background-image: url('/img/about3.jpg'); 
+  background-size: cover;
+}
+.hs2{
+  position: relative;
   height: 100vh;
   background-color: rgb(31, 27, 27);
-  /* background-image: url('/img/background.png'); */
-
-}
+   background-image: url('/img/about1.jpg'); 
+  background-size: cover;
+  background-attachment: fixed;
+  }
+  .hs3{
+  position: relative;
+    height: 100vh;
+    background-color: rgb(31, 27, 27);
+     background-image: url('/img/fondo.png'); 
+    background-size: cover;
+    background-attachment: fixed;
+    }
 .msj{
   position: absolute;
   margin: 0rem;
@@ -23,28 +39,35 @@ body {
 
 @media (max-width: 600px) {
   .hs1{
+    position: relative;
     height: 100vh;
     background-color: rgb(31, 27, 27);
-    background-image: url('/img/background.png');
-    background-position: 40%;
+     background-image: url('/img/about3.jpg'); 
     background-size: cover;
-  }
-  .react{
-    height: 2rem;
-    width: 2rem;
-    background-image: url('/me/react.gif');
-    background-size: cover;
-    position: absolute;
-    top: 3.5rem;
-    right: 8rem;
-  }
+    }
+    .hs2{
+      position: relative;
+      height: 100vh;
+      background-color: rgb(31, 27, 27);
+       background-image: url('/img/about1.jpg'); 
+      background-size: cover;
+      background-attachment: fixed;
+      }
+      .hs3{
+        height: 100vh;
+        background-color: rgb(31, 27, 27);
+         background-image: url('/img/fondo.png'); 
+        background-size: cover;
+        background-attachment: fixed;
+        }
+
   .visual{
     height: 5rem;
     width: 5rem;
     background-image: url('/me/visual.gif');
     background-size: cover;
     position: absolute;
-    top: 5rem;
+    bottom: 1rem;
     left: 2rem;
   }
   .html{
@@ -53,7 +76,7 @@ body {
     background-image: url('/me/html.gif');
     background-size: cover;
     position: absolute;
-    top: 12rem;
+    bottom: 8rem;
     left: 1rem;
   }
   .css{
@@ -62,26 +85,19 @@ body {
     background-image: url('/me/css.gif');
     background-size: cover;
     position: absolute;
-    top: 20.8rem;
+    bottom: 16.4rem;
     left: 1rem;
   }
-  /* .logoMark{
-    height: 7rem;
-    width: 7rem;
-    background-image: url('/me/logoMark.png');
-    background-size: cover;
-    position: absolute;
-    bottom: 10rem;
-    left: 1rem;
-  } */
+
+
   .github{
     height: 5rem;
     width: 5rem;
     background-image: url('/me/github.png');
     background-size: cover;
     position: absolute;
-    bottom: 1.45rem;
-    left: 10.5rem;
+    bottom: 3rem;
+    left: 1rem;
   }
   .linkedin{
     height: 5rem;
@@ -89,7 +105,7 @@ body {
     background-image: url('/me/linkedin.png');
     background-size: cover;
     position: absolute;
-    bottom: 1.4rem;
-    left: 4rem;
+    bottom: 9rem;
+    left: 1rem;
   }
 }

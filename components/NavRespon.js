@@ -29,7 +29,7 @@ const NavRespon = () => {
 
  
   return (
-    <>
+    <>    
     <nav className={styles.nav}>
         <div className={styles.img}>
          <Link href="/"><h1 className={styles.logo}></h1></Link> 

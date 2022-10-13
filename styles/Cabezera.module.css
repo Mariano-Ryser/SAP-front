@@ -1,0 +1,32 @@
+.cabezera{
+    position: fixed;
+    z-index: 9;
+    background-color: black;
+    height: 7rem;
+    width: 100%;
+    border-bottom: 1px solid rgb(0, 202, 17) ;
+
+}
+.foto{
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    margin-top: 0.8rem;
+    margin-left: 1.1rem;
+    background-size: cover;
+    background-position: -1.3rem -0rem;
+}
+.name{
+    color: white;
+    position: absolute;
+    top: 5rem;
+    left: 0.4rem;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

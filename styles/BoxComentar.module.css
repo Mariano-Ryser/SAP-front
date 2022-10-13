@@ -2,18 +2,21 @@
   position: relative;
   width: 75%;
   margin: auto;
+  padding-top: 8rem;
 }
 .textArea{
-    background-color: red;
-    color: rgb(0, 0, 0);
-    width:100%;
-    border-radius:0.2rem;
-    margin-bottom: 2rem;
-    color: #ffffff;
-    padding: 0.4rem;
-    outline: none;
-    font: 400 18px/1.1 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
-    
+  position: relative;
+  background-color: rgb(70, 70, 70);
+  color: rgb(0, 0, 0);
+  width:100%;
+  border-radius:0.2rem;
+  margin-bottom: 0.2rem;
+  color: #ffffff;
+  padding: 0.4rem;
+  height: 6rem;
+  outline: none;
+  font: 400 18px/1.1 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  
   }
   .textArea::placeholder {
     color: rgb(235, 235, 235);
@@ -21,14 +24,14 @@
   }
 
 .button{
-  position: absolute;
-  right: 0;
-  top: 9rem;
   height: 2rem;
   width: 5rem;
+  
+  margin-bottom: 0.6rem;
   color: aliceblue;
   background-color: rgb(65, 62, 60);
   border-radius: 0.2rem;
+
 }
 .comentarBox{
   position: relative; 
@@ -105,9 +108,6 @@ padding: 0.7rem;}
     
     }
   .button{
-    position: absolute;
-    right: 0;
-    top: 8.5rem;
     height: 2rem;
     width: 5rem;
     color: aliceblue;

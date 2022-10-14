@@ -60,6 +60,14 @@ body {
         background-size: cover;
         background-attachment: fixed;
         }
+        .boxComentar{
+          border: solid rgb(53, 46, 46) 6px;
+          overflow: hidden;
+          overflow-y: scroll;
+          height: 22rem;
+          border-radius: 5px;
+          box-shadow: inset rgb(41, 41, 41) 1px 1px 25px 0.1px;
+        }
 
   .visual{
     height: 5rem;

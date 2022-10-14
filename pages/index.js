@@ -24,7 +24,9 @@ export default function Home() {
        
       </section>
       <section className='hs3'>
-      <BoxComentar/>
+        <div className='boxComentar'>
+        <BoxComentar/>
+        </div>
         {/* <Link href="https://visualstudio.microsoft.com/de/"><a ><div className='visual'></div></a></Link>
         <Link href="https://de.wikipedia.org/wiki/Hypertext_Markup_Language#:~:text=Die%20Hypertext%20Markup%20Language%20(HTML,und%20werden%20von%20Webbrowsern%20dargestellt."><a ><div className='html'></div></a></Link> */}
         {/* <Link href="https://de.wikipedia.org/wiki/Cascading_Style_Sheets"><a ><div className='css'></div></a></Link> */}

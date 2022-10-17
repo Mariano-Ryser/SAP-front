@@ -25,7 +25,7 @@ const icons= [
   {img: "email.png"},
   {img: "earth.gif"},
   {img: "earth2.gif"},
-  {img: "earth2.png"},
+  {img: "earth.png"},
   {img: "git.png"},
   {img: "js.png"},
   {img: "linkedin.png"},
@@ -72,19 +72,14 @@ const icons= [
             >
           </div>
 
-          {icons.map(({img}) => (
-               
-               <div 
+          {icons.map((item,index) => (
+            <div key={index}
                onClick={()=>{topo()}}
                className={styles.icon}
-               style={{backgroundImage: `url('/img/${img}')`}}
+               style={{backgroundImage: `url('/img/${item.img}')`}}
                 >
-                
-                </div>
-
+            </div>
          ))}
-
-     
         </div>
 
         

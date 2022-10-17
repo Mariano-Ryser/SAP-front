@@ -14,6 +14,8 @@ function Create() {
             ...product,
             [inputName]: inputValue,
         })
+        console.log(inputName)
+        console.log(inputValue)
     }
     const handleClick = async(e)=> {
         e.preventDefault()
@@ -24,13 +26,16 @@ function Create() {
                      'Content-Type': 'application/json'
                  },
                  body:JSON.stringify(product)
-             })
+                })
+                
              const data = await res.json()
-                 setProduct(initialState)
+             setProduct(initialState)
+                 console.log(data)
                  console.log({data})
                  const newProducts = [data.product, ...products]
                  setProducts(newProducts) 
                  console.log("Producto creado con exito!")
+                 console.log(newProducts)
         } catch (error) {
             console.log("Aqui algo anda mal")
             console.log({error})

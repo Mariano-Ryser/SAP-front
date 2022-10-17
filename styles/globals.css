@@ -22,7 +22,8 @@ body {
   background-attachment: fixed;
   }
   .boxComentar{
-    border: solid rgb(53, 46, 46) 6px;
+    border: solid rgb(53, 46, 46) 1px;
+    margin-top: 1rem;
     overflow: hidden;
     overflow-y: scroll;
     height: 22rem;
@@ -118,7 +119,6 @@ body {
         background-attachment: fixed;
         }
         .boxComentar{
-          border: solid rgb(53, 46, 46) 6px;
           overflow: hidden;
           overflow-y: scroll;
           height: 22rem;
@@ -132,7 +132,7 @@ body {
     background-image: url('/me/visual.gif');
     background-size: cover;
     position: absolute;
-    bottom: 1rem;
+    bottom: 4rem;
     left: 2rem;
   }
   .html{
@@ -141,7 +141,7 @@ body {
     background-image: url('/me/html.gif');
     background-size: cover;
     position: absolute;
-    bottom: 8rem;
+    bottom: 12rem;
     left: 1rem;
   }
   .css{
@@ -150,7 +150,7 @@ body {
     background-image: url('/me/css.gif');
     background-size: cover;
     position: absolute;
-    bottom: 16.4rem;
+    bottom: 20.4rem;
     left: 1rem;
   }
 

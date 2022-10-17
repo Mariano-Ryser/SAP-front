@@ -5,12 +5,29 @@ import Image from "next/image"
 
 
 const Icons = () => {
+const topo = () =>{alert("wala")
+  console.log("peticion")
+}
+
+const array= [
+  {key:1 , value: "saturn.png"},
+  {key:2 , value: "bichoWhite.png"},
+  {key:3 , value: "github.png"},
+  {key:4 , value: "alien.png"},
+]
+
   return (
     <>
         <div className={styles.boxIcons}
         //  style={{height: size}}
          >
-          <div className={styles.icon} style={{backgroundImage: `url('/img/node.png')`}}></div>
+          <div
+            onClick={()=>{topo()}}
+           className={styles.icon}
+            style={{backgroundImage: `url('/img/node.png')`}}
+            >
+
+          </div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/insta.png')`}}></div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/Alienverde.gif')`}}></div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/alien.png')`}}></div>
@@ -58,10 +75,29 @@ const Icons = () => {
           <div className={styles.icon} style={{backgroundImage: `url('/img/meteoro.gif')`}}></div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/mercurio2.gif')`}}></div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/marss.gif')`}}></div>
+
           <div className={styles.icon} style={{backgroundImage: `url('/img/mars-unscreen.gif')`}}></div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/jupiter.gif')`}}></div>
           <div className={styles.icon} style={{backgroundImage: `url('/img/saturn.png')`}}></div>
         </div>
+
+        {/* {array.map(({key, value}) => (
+                <div >
+                   <span style={{color: "red"}}>
+                    {key} {value} TAMBIEN DEJAMOS EN CLARO COmO ES EL TEMA DEL MAPEADO PARA CONTINUAR NO UN CODIGO LIMPIO
+                  </span> 
+
+                  <div 
+                  className={styles.icon}
+                  style={{backgroundImage: `url('/img/${value}')`}}
+                   >
+                    {key}"Hola"
+                   </div>
+
+
+                </div>
+                
+            ))} */}
   </>
   )
 }

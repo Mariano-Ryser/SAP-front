@@ -3,6 +3,7 @@ import Icons from '../pages/icons'
 import Image from 'next/image' 
 import Link from 'next/link';
 import BoxComentar from '../components/comentarBox/BoxComentar'
+import Products from '../pages/products/create'
 
 
 export default function Home() {
@@ -29,11 +30,10 @@ export default function Home() {
         <div className='boxComentar'>
          <BoxComentar/> 
         </div>
-        {/* <Link href="https://visualstudio.microsoft.com/de/"><a ><div className='visual'></div></a></Link>
-        <Link href="https://de.wikipedia.org/wiki/Hypertext_Markup_Language#:~:text=Die%20Hypertext%20Markup%20Language%20(HTML,und%20werden%20von%20Webbrowsern%20dargestellt."><a ><div className='html'></div></a></Link> */}
-        {/* <Link href="https://de.wikipedia.org/wiki/Cascading_Style_Sheets"><a ><div className='css'></div></a></Link> */}
-        {/* <Link href="https://logomakr.com/app/7S2oum#"><a ><div className='logoMark'></div></a></Link> */}
-        
+        <div className='boxComentar'>
+         <Products/> 
+        </div>
+      
       </section>
     </>
   )

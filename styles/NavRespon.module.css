@@ -11,7 +11,6 @@
 }
 .asideBar{
    /* filter: blur(1px); */
-   display: ;
    position: fixed;
    backdrop-filter: blur(7px);
    height: 100%;
@@ -82,6 +81,23 @@
   .img{
     margin: 1rem;
     cursor: pointer;
+  }
+.footer{
+  border-top: 1px gainsboro solid;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  height: 7rem;
+  width: 100%;
+}
+  .sap{
+    color: rgb(200, 200, 200);
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
   }
 
   @media (max-width: 600px) {

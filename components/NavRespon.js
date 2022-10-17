@@ -50,6 +50,9 @@ const NavRespon = () => {
             <li className={styles.li}><Link href="https://nrto.netlify.app/3d/3d.html"><a className={styles.a}>Kubik?</a></Link></li>
           </ul>
           
+          <footer className={styles.footer}>
+              <h3  className={styles.sap}>Sap</h3>
+          </footer>
         </aside>
       
   </>

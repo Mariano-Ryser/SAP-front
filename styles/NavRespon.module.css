@@ -9,6 +9,26 @@
   color: black;
   z-index: 2;
 }
+.header{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0rem;
+  height: 7rem;
+  width: 100%; 
+   backdrop-filter: blur(7px); 
+}
+.boxSap{
+  background-color: transparent;
+}
+.sap{
+  color: rgb(200, 200, 200);
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .asideBar{
    /* filter: blur(1px); */
    position: fixed;
@@ -69,10 +89,7 @@
     padding: 0;
     list-style-type: none;
   }
-  .li{
-    list-style-type: none;
-    font-family: monospace;
-  }
+ 
   .logo{
     margin-left: 1rem;
     margin-right: auto;
@@ -83,7 +100,6 @@
     cursor: pointer;
   }
 .footer{
-  border-top: 1px gainsboro solid;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -92,13 +108,7 @@
   height: 7rem;
   width: 100%;
 }
-  .sap{
-    color: rgb(200, 200, 200);
-    font-size: 2rem;
-    font-weight: 900;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-  }
+  
 
   @media (max-width: 600px) {
   .nav{

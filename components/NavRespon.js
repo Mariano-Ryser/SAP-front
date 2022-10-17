@@ -41,6 +41,13 @@ const NavRespon = () => {
 
     </nav>
     <aside id='aside' className={styles.asideBar}>
+
+    <header className={styles.header}>
+          <div className={styles.boxSap}>
+              <h3  className={styles.sap}>Sap</h3>
+          </div>
+    </header>
+
           <ul className={styles.ul}>
             <li className={styles.li}><Link href="/"><a className={styles.a}>Home</a></Link></li>
             <li className={styles.li}><Link href="/icons"><a className={styles.a}>Icons?</a></Link></li>
@@ -50,9 +57,9 @@ const NavRespon = () => {
             <li className={styles.li}><Link href="https://nrto.netlify.app/3d/3d.html"><a className={styles.a}>Kubik?</a></Link></li>
           </ul>
           
-          <footer className={styles.footer}>
+          {/* <footer className={styles.footer}>
               <h3  className={styles.sap}>Sap</h3>
-          </footer>
+          </footer> */}
         </aside>
       
   </>

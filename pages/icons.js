@@ -5,15 +5,58 @@ import Image from "next/image"
 
 
 const Icons = () => {
-const topo = () =>{alert("wala")
+const topo = () =>{alert("Wala ! - Mapeo de elementos")
   console.log("peticion")
 }
 
-const array= [
-  {key:1 , value: "saturn.png"},
-  {key:2 , value: "bichoWhite.png"},
-  {key:3 , value: "github.png"},
-  {key:4 , value: "alien.png"},
+const icons= [
+  {img: "insta.png"},
+  {img: "Alienverde.gif"},
+  {img: "alien.png"},
+  {img: "bootstrap.gif"},
+  {img: "bichoWhite.png"},
+  {img: "champi.png"},
+  {img: "css.gif"},
+  {img: "discord.png"},
+  {img: "docker.png"},
+  {img: "cubegif.gif"},
+  {img: "drag2.png"},
+  {img: "fo.gif"},
+  {img: "email.png"},
+  {img: "earth.gif"},
+  {img: "earth2.gif"},
+  {img: "earth2.png"},
+  {img: "git.png"},
+  {img: "js.png"},
+  {img: "linkedin.png"},
+  {img: "next.png"},
+  {img: "github.png"},
+  {img: "googleLogo.png"},
+  {img: "paint3d.png"},
+  {img: "html.gif"},
+  {img: "linux.png"},
+  {img: "window.png"},
+  {img: "watsap.png"},
+  {img: "visual.gif"},
+  {img: "php.png"},
+  {img: "twiter.png"},
+  {img: "terminal.png"},
+  {img: "snake.png"},
+  {img: "tic1.png"},
+  {img: "phone.png"},
+  {img: "pizza.png"},
+  {img: "obs.png"},
+  {img: "PacYellow.png"},
+  {img: "vue.png"},
+  {img: "venus.png"},
+  {img: "venus.gif"},
+  {img: "uranus.png"},
+  {img: "mooon.gif"},
+  {img: "meteoro.gif"},
+  {img: "marss.gif"},
+  {img: "mars-unscreen.gif"},
+  {img: "jupiter.gif"},
+  {img: "saturn.png"},
 ]
 
   return (
@@ -21,83 +64,30 @@ const array= [
         <div className={styles.boxIcons}
         //  style={{height: size}}
          >
+
           <div
             onClick={()=>{topo()}}
-           className={styles.icon}
+            className={styles.icon}
             style={{backgroundImage: `url('/img/node.png')`}}
             >
-
           </div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/insta.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/Alienverde.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/alien.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/bootstrap.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/bichoWhite.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/champi.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/css.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/discord.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/docker.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/cubegif.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/drag2.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/fo.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/email.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/earth.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/earth2.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/earth.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/git.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/js.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/linkedin.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/next.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/github.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/googleLogo.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/paint3d.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/html.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/linux.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/window.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/watsap.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/visual.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/php.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/twiter.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/terminal.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/snake.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/tic1.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/react.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/phone.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/pizza.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/obs.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/PacYellow.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/vue.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/venus.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/venus.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/uranus.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/pluto.png')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/mooon.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/meteoro.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/mercurio2.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/marss.gif')`}}></div>
 
-          <div className={styles.icon} style={{backgroundImage: `url('/img/mars-unscreen.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/jupiter.gif')`}}></div>
-          <div className={styles.icon} style={{backgroundImage: `url('/img/saturn.png')`}}></div>
+          {icons.map(({img}) => (
+               
+               <div 
+               onClick={()=>{topo()}}
+               className={styles.icon}
+               style={{backgroundImage: `url('/img/${img}')`}}
+                >
+                
+                </div>
+
+         ))}
+
+     
         </div>
 
-        {/* {array.map(({key, value}) => (
-                <div >
-                   <span style={{color: "red"}}>
-                    {key} {value} TAMBIEN DEJAMOS EN CLARO COmO ES EL TEMA DEL MAPEADO PARA CONTINUAR NO UN CODIGO LIMPIO
-                  </span> 
-
-                  <div 
-                  className={styles.icon}
-                  style={{backgroundImage: `url('/img/${value}')`}}
-                   >
-                    {key}"Hola"
-                   </div>
-
-
-                </div>
-                
-            ))} */}
+        
   </>
   )
 }

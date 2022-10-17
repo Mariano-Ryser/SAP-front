@@ -5,8 +5,8 @@ import Footer from "./Footer"
 const Layout = ({ children}) => {
     return (
         <div className="content">
-               <NavRespon />  
-               <Cabezera />  
+              <NavRespon />   
+                  <Cabezera /> 
              { children }
              {/* <Footer />   */}
         </div>

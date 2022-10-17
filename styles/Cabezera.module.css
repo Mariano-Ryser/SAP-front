@@ -1,78 +1,95 @@
+
 .cabezera{
-    position: fixed;
-    z-index: 9;
-    background-color: black;
-    height: 12rem;
-    width: 100%;
-    border-bottom: 1px solid rgb(68, 68, 68) ;
-        box-shadow: rgb(22, 22, 22) 0px 0px 30px 1px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    height: 3rem;
 }
-.foto{
-    display: inline-block;
-    border-radius: 50%;
-    height: 8rem;
-    width: 8rem;
-    margin-top: 0.8rem;
-    margin-left: 1.1rem;
-    background-size: cover;
-    background-position: -2.6rem 0rem;
-    box-shadow: rgb(54, 54, 54) 0px 0px 30px -3px;
+
+.cabezera2{
+    display: flex;
+    margin: auto;
+    height: 3rem;
+    position: relative;
+    border-bottom:1px rgb(77, 77, 77) solid ;
+}
+
+.boxData{
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+.boxData2{
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 .name{
-    color: rgb(202, 202, 202);
-    position: absolute;
-    top: 9.2rem;
-    left: 1rem;
-    font-size: 1.5rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(196, 196, 196);
+    letter-spacing: 0.05rem;
+    margin: 1.3em;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-family: 'Josefin Sans', sans-serif;
 }
-/* .noti1{
-    position: absolute;
-    height: 5rem;
-    width: 5rem;
-    border: solid gray 2px;
-    top: 1rem;
-    left: 10rem;
 
-} */
-
+.name2{
+    color: rgb(179, 179, 179);
+    letter-spacing: 0.3rem;
+    margin: 1rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.name:hover, .name2:hover, .name3:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.Date{
+    position: relative;
+    margin: 0rem;
+    padding: 0.7rem;
+    text-align: end;
+    color: #68f118;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 0.8rem;
+}
 
 @media (max-width:600px){ 
 
-    .cabezera{
-        position: fixed;
-        z-index: 9;
-        background-color: black;
-        height: 7rem;
-        width: 100%;
-        border-bottom: 1px solid rgb(68, 68, 68) ;
-        box-shadow: rgb(22, 22, 22) 0px 0px 30px 1px;
-    }
-    .foto{
-        border-radius: 50%;
-        height: 4rem;
-        width: 4rem;
-        margin-top: 0.8rem;
-        margin-left: 1.1rem;
-        background-size: cover;
-        background-position: -1.3rem -0rem;
-    }
-    .name{
-        color: rgb(136, 136, 136);
-        position: absolute;
-        top: 5rem;
-        left: 0.4rem;
-        font-size: 1rem;
-    
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    
-    
+.cabezera{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    height: 2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+
+.boxData{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.name{
+    color: rgb(196, 196, 196);
+    letter-spacing: 0.05rem;
+    margin: 1.3em;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.cabezera2{
+    display: none; 
+}
   }
   
   

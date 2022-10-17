@@ -11,6 +11,7 @@
 }
 .asideBar{
    /* filter: blur(1px); */
+   display: ;
    position: fixed;
    backdrop-filter: blur(7px);
    height: 100%;
@@ -36,7 +37,7 @@
     position: relative;
     align-items: center;
     align-content: center;
-    background-color: #0F05A0;
+    background-color: #2c2955;
     margin-top: 0.2rem;
     margin-bottom: 2rem;
     padding-top: 0.9rem;

@@ -8,7 +8,7 @@
     grid-auto-rows: 8rem;
     grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 4fr));
     grid-template-columns: repeat(12,1fr);
-    padding-top: 13.7rem;
+    padding-top: 1.4rem;
     padding-bottom: 22px;
     
   }
@@ -44,7 +44,7 @@
       gap: 0.4rem; 
       grid-auto-rows: 5rem;
       grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 5fr));
-      padding-top: 8rem;
+      padding-top: 0.3rem;
       padding-bottom: 12px;
     }
     .icon{

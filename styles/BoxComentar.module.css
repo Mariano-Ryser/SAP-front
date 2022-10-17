@@ -1,12 +1,12 @@
 .form{
   position: relative;
-  width: 75%;
+  width: 65%;
   margin: auto;
-  padding-top: 13.7rem;
+  padding-top: 0.7rem;
 }
 .textArea{
   position: relative;
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(115, 115, 115);
   color: rgb(0, 0, 0);
   width:100%;
   border-radius:0.2rem;
@@ -36,18 +36,16 @@
 .comentarBox{
   position: relative; 
   display: flex;
+  height: 4rem;
 justify-content: space-between;
 margin-top: 0rem;
-
 margin-bottom: 0;
 border-radius: 4px;
-
 /* background-color: #000000; */
 color: rgb(255, 255, 255);
 /* font-size: 1rem; */
 padding: 0.7rem;
-box-shadow: #3a3a3a 1px 1px 1px 0px;
-border: solid rgb(56, 56, 56) 1px;
+ box-shadow: #555555 1px 1px 1px 0px; 
 /* font: 400 16px/1 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif; */
 }
 .x{
@@ -66,9 +64,11 @@ padding: 0.1rem;
 
 .date{
   color: #84ba64;
+  font-size: 2rem;
 font-weight: 900;
 margin: 0rem;
-padding: 0.7rem;}
+padding: 0.7rem;
+}
 
 .heart{
   position: absolute;
@@ -79,21 +79,14 @@ padding: 0.7rem;}
 @media (max-width: 600px) {
   .form{
     position: relative;
-    width: 95%;
+    width: 85%;
     overflow: hidden;
 
     margin: auto;
-    padding-top: 6.9rem;
+    padding-top: .1rem;
   }
   .date{
-    position: relative;
-    margin: 0rem;
-    padding: 0.7rem;
-    text-align: end;
-    color: #84ba64;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 900;
-    font-size: 0.8rem;
+   display: none;
   }
 
   .textArea{

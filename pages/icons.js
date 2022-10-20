@@ -9,7 +9,7 @@ const topo = () =>{alert("Wala ! - Mapeo de elementos")
   console.log("peticion")
 }
 
-const icons= [
+const icons = [
   {img: "insta.png"},
   {img: "Alienverde.gif"},
   {img: "alien.png"},

@@ -20,7 +20,7 @@ function Create() {
     const handleClick = async(e)=> {
         e.preventDefault()
         try {
-            const res = await fetch(`${baseURL}/products`,{
+            const res = await fetch(`${baseURL}/products`,{  // <----- process.env.NEXT_PUBLIC_BACKEND_URL/products
                  method:'POST',
                  headers:{
                      'Content-Type': 'application/json'

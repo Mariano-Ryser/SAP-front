@@ -2,7 +2,6 @@
     background-color: rgb(117, 99, 99);
 }
 .form{
-   
     width: 75%;
     margin: auto;
     border: solid red 1px;
@@ -11,5 +10,4 @@
     width: 75%;
     margin: auto;
     border: solid black 1px;
-
 }

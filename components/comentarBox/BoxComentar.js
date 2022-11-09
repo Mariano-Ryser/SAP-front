@@ -7,7 +7,10 @@ function BoxComentar(){
   const datee = `${current.getDate()} / ${current.getMonth()+1} / ${current.getFullYear()}`;
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
 
-  const initialState = {text:''};
+  const initialState = {
+    text:'',
+    like: 0,
+  };
   const [comentar, setComentar] = useState(initialState)
   const [comentars, setComentars] = useState([])
   
@@ -30,6 +33,7 @@ function BoxComentar(){
             body:JSON.stringify(comentar)
         })
         .then(res => res.json())
+
         .then((data) =>{
             setComentar(initialState)
             console.log("Comentario creado con exito!")
@@ -38,6 +42,7 @@ function BoxComentar(){
             // fetchComentars();
             console.log("Comentario creado con exito!")
         })
+
         .catch( err=> {
             console.log("Aqui algo anda mal")
             console.log({err})
@@ -76,7 +81,7 @@ function BoxComentar(){
         </button>
 
         <div>
-             {comentars.map(({_id, text}) => (
+             {comentars.map(({_id, text, like}) => (
                 <div  key={_id} className={styles.comentarBox}>
 
                     <span className={styles.text}>-{text}</span> 
@@ -92,17 +97,32 @@ function BoxComentar(){
                                 fetchComentars();
                                   console.log({data})
                               })
-                          }}>x</span>
-
-
-                            <div className={styles.like}
-                             > 
+                          }}
+                          >x</span>
+                            <div
+                            className={styles.like}
+                            onClick={
+                              ()=>{
+                                fetch(`${baseURL}/comentars/${_id}`, {
+                                method:'POST',
+                                headers:{
+                                    'Content-Type': 'application/json'
+                                },
+                                body:JSON.stringify(comentar)
+                              })
+                                
+                                .then((data) => {
+                                
+                                  console.log({data})
+                              })
+                          }}
+                            > 
                               <Image
                               alt='Burger-Icon' 
                               src={'/like.png'} 
                               height={22} 
                               width={24}></Image>
-
+                            <span likeNumber>{like}</span> 
                             </div>
                     </div>
                                

@@ -9,7 +9,7 @@ body {
 }
 .hs1{
   position: relative;
-  height: 995vh;
+  height: 115vh;
   background-color: #000000;
   background-size: cover;
 }
@@ -70,7 +70,7 @@ font-family: 'Josefin Sans', sans-serif;
 @media (max-width: 600px) {
   .hs1{
     position: relative;
-    height: 995vh;
+    height: 125vh;
      background-color: rgb(31, 27, 27); 
      background-color: #000000;
     background-size: cover;

@@ -10,22 +10,23 @@ export default function Home() {
   return (
     <>
       <section className='hs1'>
-        {/* <section className='lectura'>
+        
+        <section className='lectura'>
           <h1 className='titulo'>Tipografías para libros</h1>
           <p className='parrafo'>Si pasas tiempo optimizando tu contenido, títulos, subtítulos y metadescripciones de tu blog o de tu sitio web para los motores de búsqueda, la imagen siguiente debería preocuparte:
           Hoy en día, las páginas de resultados de los motores de búsqueda (SERP, por sus siglas en inglés) de Google ofrecen tantos resultados de imágenes como resultados basados ​​en texto. La captura de pantalla de arriba es la primera SERP que Google produce para el término «diseño de boletín electrónico». Observa cómo, además de la pestaña «Imágenes» en la parte superior, Google extrae un paquete de imágenes al principio de la página principal, donde se puede hacer clic, incluso antes que los resultados de texto orgánicos sean visibles.</p>
-        </section> */}
+        </section> 
         
       </section>
-      <section className='hs2'>
-      </section>
+      {/* <section className='hs2'>
+      </section> */}
 
       <section className='hs3'>
         <div className='boxComentar'>
-         {/* <BoxComentar/>  */}
+         <BoxComentar/>  
         </div>
         <div className='boxComentar'>
-         {/* <Products/>  */}
+          <Products/>  
         </div>
       
       <Icons/>

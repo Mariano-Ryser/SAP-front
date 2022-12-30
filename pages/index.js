@@ -9,19 +9,28 @@ import Products from '../pages/products/create'
 export default function Home() {
   return (
     <>
-      <section className='hs1'>
-        
-        {/* <section className='lectura'>
-          <h1 className='titulo'>Tipografías para libros</h1>
-          <p className='parrafo'>Si pasas tiempo optimizando tu contenido, títulos, subtítulos y metadescripciones de tu blog o de tu sitio web para los motores de búsqueda, la imagen siguiente debería preocuparte:
-          Hoy en día, las páginas de resultados de los motores de búsqueda (SERP, por sus siglas en inglés) de Google ofrecen tantos resultados de imágenes como resultados basados ​​en texto. La captura de pantalla de arriba es la primera SERP que Google produce para el término «diseño de boletín electrónico». Observa cómo, además de la pestaña «Imágenes» en la parte superior, Google extrae un paquete de imágenes al principio de la página principal, donde se puede hacer clic, incluso antes que los resultados de texto orgánicos sean visibles.</p>
-        </section>  */}
-        
-      </section>
-      {/* <section className='hs2'>
-      </section> */}
 
-      {/* <section className='hs3'>
+      <div className='hs1'>
+
+         <div className='lectura'>
+          <h1 className='titulo'>Mars</h1>
+          <p className='parrafo'>
+          Der Mars ist, von der Sonne aus gezählt,
+           der vierte Planet im Sonnensystem und der äußere
+            Nachbar der Erde. Er zählt zu den erdähnlichen Planeten.
+             Sein Durchmesser ist mit knapp 6800 Kilometern etwa halb so 
+             groß wie der der Erde, sein Volumen beträgt gut ein Siebtel 
+             des Erdvolumens.
+          </p>
+        </div>  
+
+      </div>
+       {/* <section className='hs2'>
+
+
+      </section>  */}
+
+       {/* <section className='hs3'>
         <div className='boxComentar'>
          <BoxComentar/>  
         </div>
@@ -30,7 +39,7 @@ export default function Home() {
         </div>
       
       <Icons/>
-      </section> */}
+      </section>  */}
 
         <div className='containerIcons'>
         <Link href="https://visualstudio.microsoft.com/de/"><a ><div className='visual'></div></a></Link>

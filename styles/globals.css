@@ -7,27 +7,43 @@ body {
 * {
   box-sizing: border-box;
 }
+
+
 .hs1{
-  position: relative;
-  height: 40vh;
-  background-color: #000000;
-  background-size: cover;
+  height: 100vh;
+  
 }
 
 .lectura{
-  background-color: rgb(35, 35, 35);
-  width: 100%;
- 
+  margin: 5%;
+  position: relative;
+  width: 25rem;
+  height: 25rem;
   border: solid 2px rgb(25, 65, 29);
   padding: 1rem;
+  transition: 0.4s;
+  /* background-image: url('/img/mooon.gif');  */
+  background-image: url('/img/marss.gif'); 
+  background-size: calc(400px);
+}
+.lectura:hover{
+  cursor: pointer;
+  background-image: url('/img/marss.gif'); 
+  background-size: calc(480px);
+  color: rgb(151, 151, 151);
 }
 .titulo{
-color: rgb(221, 221, 221);
 font-size: 1.5rem;
 font-family: 'Josefin Sans', sans-serif;
 }
 .parrafo {
-  color: rgb(209, 209, 209);
+  color: transparent;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.parrafo:hover {
+  color: rgb(124, 124, 124);
   font-size: 1.2rem;
   font-family: 'Josefin Sans', sans-serif;
 }

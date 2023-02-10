@@ -8,8 +8,7 @@ function Datee(){
 
   return (
     <>
-      <p
-       > {datee}</p>
+      <p> {datee}</p>
   </>
   )
 }

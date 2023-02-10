@@ -65,7 +65,7 @@ function Personaje() {
 
   return (
     <>
-        <div className={style.container}>
+    <div className={style.container}>
         <form className={style.form}>
             <h1 className={style.h1}>Cree su personaje </h1>
                 <span>Name</span><input
@@ -116,8 +116,9 @@ function Personaje() {
                 onClick={handleClick}
                 >Crear personaje</button>
 </form>
-        <div >
-             
+
+        <div> 
+            <div>  
              {personajes.map(({_id, name, surname, age, email, city,}) => (
                 <div key={_id} className={style.listBoxP}>
                     <div >
@@ -129,35 +130,7 @@ function Personaje() {
                         <br></br>
 
                     </div>
-                    <div className={style.x}>
-                    <button
-                        onClick={()=>{
-                            fetch(`${baseURL}/personajes/${_id}`, {method:'DELETE'})
-                            .then((res) => res.json())
-                            .then((data)  => {
-                                console.log({data})
-                                fetchPersonajes();
-                            })
-                        }}
-                        >Eliminar
-                    </button>
-                    </div>
-                </div>
-            ))}
-
-<div >
-             
-             {personajes.map(({_id, name, surname, age, email, city,}) => (
-                <div key={_id} className={style.listBoxP}>
-                    <div >
-                        <span>name:</span> <span>{name}</span> <br></br>
-                        <span>surname:</span> <span>{surname}</span><br></br>
-                        <span>age:</span> <span>{age}</span><br></br>
-                        <span>email:</span> <span>{email}</span><br></br>
-                        <span>city:</span> <span>{city}</span><br></br>
-                        <br></br>
-
-                    </div>
+                    
                     <div className={style.x}>
                     <button
                         onClick={()=>{
@@ -174,7 +147,7 @@ function Personaje() {
                 </div>
             ))}
          </div> 
-         </div> 
+        </div> 
          
          
            

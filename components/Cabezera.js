@@ -5,12 +5,14 @@ import Date from '../components/Date';
 
 //C:\Users\MR22\stock-app\frontend\public
 const Cabezera = () => {
+
+  
  
   return (
     <>
         <div className={styles.cabezera}>
           <div className={styles.boxData}>
-                <span className={styles.name}>0 / Mariano Ryser / sap </span>
+                <span className={styles.name}>0 / Mariano Ryser / zap </span>
                 <span 
                 className={styles.Date}
                 >

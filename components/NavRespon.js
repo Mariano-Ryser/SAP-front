@@ -6,6 +6,7 @@ import Image from "next/image"
 //C:\Users\MR22\stock-app\frontend\public
 const NavRespon = () => {
 
+
    function openList(){
     // const burger = document.getElementById('burger')
     const aside = document.getElementById('aside')
@@ -30,7 +31,7 @@ const NavRespon = () => {
  
   return (
     <>    
-    <nav className={styles.nav}>
+<nav className={styles.nav}>
         <div className={styles.img}>
          <Link href="/"><h1 className={styles.logo}></h1></Link> 
         </div>
@@ -44,7 +45,7 @@ const NavRespon = () => {
 
     <header className={styles.header}>
           <div className={styles.boxSap}>
-              <h3  className={styles.sap}>Sap</h3>
+              <h3  className={styles.sap}>Zap</h3>
           </div>
     </header>
 
@@ -55,12 +56,14 @@ const NavRespon = () => {
              <li className={styles.li}><Link href="/products/create"><a className={styles.a}>Productos?</a></Link></li>
             <li className={styles.li}><Link href="/msj"><a className={styles.a}>Mensajeria</a></Link></li>
             <li className={styles.li}><Link href="https://nrto.netlify.app/3d/3d.html"><a className={styles.a}>Kubik?</a></Link></li>
+            {/* <li className={styles.li}><Link href="/social"><a className={styles.a}>Social</a></Link></li> */}
           </ul>
           
           {/* <footer className={styles.footer}>
               <h3  className={styles.sap}>Sap</h3>
           </footer> */}
         </aside>
+
       
   </>
   )

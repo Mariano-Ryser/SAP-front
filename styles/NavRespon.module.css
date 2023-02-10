@@ -1,3 +1,15 @@
+#nav.hidden {
+  display: none;
+}
+@media (max-width: 768px) {
+  #nav {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+  }
+}
+
 .nav{
   position: fixed;
    bottom: 1rem; 

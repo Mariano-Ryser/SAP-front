@@ -26,12 +26,10 @@
 .button{
   height: 2rem;
   width: 5rem;
-  
   margin-bottom: 0.6rem;
   color: aliceblue;
   background-color: rgb(65, 62, 60);
   border-radius: 0.2rem;
-
 }
 .comentarBox{
   position: relative; 
@@ -92,7 +90,7 @@ padding: 0.7rem;
 
   .textArea{
     position: relative;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(34, 30, 30);
     color: rgb(0, 0, 0);
     width:100%;
     border-radius:0.2rem;

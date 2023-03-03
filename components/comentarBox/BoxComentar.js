@@ -123,7 +123,7 @@ function BoxComentar(){
                               height={22} 
                               width={24}></Image>
                             <span likeNumber>{like}</span> 
-                            </div>
+                          </div>
                     </div>
                                
                 </div>

@@ -20,7 +20,7 @@ body {
  
   transform: rotateZ(0deg) rotateY(0deg);
 
-  animation: logoBox 22s infinite alternate;
+  animation: logoBox 15s infinite alternate;
 }
 @keyframes logoBox {
   0%{
@@ -39,7 +39,7 @@ body {
     background-color: rgb(0, 255, 149);
   }
   40%{
-    height: 150px;
+    height: 100px;
     background-color: rgb(0, 255, 213);
   }
   50%{
@@ -59,9 +59,9 @@ body {
   }
   100%{
     background-color: rgb(0, 0, 0);
-    transform: scale(4) rotateY(360deg) rotateZ(350deg);
-    height: 100px;
-    top: 19rem;
+    transform: scale(2.5) rotateY(190deg) rotateZ(490deg);
+    height: 150px;
+    top: 20rem;
   }
 }
 

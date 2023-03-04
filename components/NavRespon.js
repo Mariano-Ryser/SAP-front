@@ -55,6 +55,8 @@ const NavRespon = () => {
             {/* <li className={styles.li}><Link href="/img"><a className={styles.a}>Images</a></Link></li> */}
              <li className={styles.li}><Link href="/products/create"><a className={styles.a}>Productos?</a></Link></li>
             <li className={styles.li}><Link href="/msj"><a className={styles.a}>Mensajeria</a></Link></li>
+            <li className={styles.li}><Link href="/personaje"><a className={styles.a}>Create Char XD x 2</a></Link></li>
+            <li className={styles.li}><Link href="/fotos"><a className={styles.a}>Fotos</a></Link></li>
             <li className={styles.li}><Link href="https://nrto.netlify.app/3d/3d.html"><a className={styles.a}>Kubik?</a></Link></li>
             {/* <li className={styles.li}><Link href="/social"><a className={styles.a}>Social</a></Link></li> */}
           </ul>

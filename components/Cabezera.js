@@ -12,7 +12,8 @@ const Cabezera = () => {
     <>
         <div className={styles.cabezera}>
           <div className={styles.boxData}>
-                <span className={styles.name}>0 / Mariano Ryser / zap </span>
+          <Link href="/"><span className={styles.name}>0 / Mariano Ryser / zap </span></Link>
+                
                 <span 
                 className={styles.Date}
                 >
@@ -23,9 +24,8 @@ const Cabezera = () => {
 
         <div className={styles.cabezera2}>
           <div className={styles.boxData2}>
-                {/* <div className={styles.foto} style={{backgroundImage: `url('/me/me.jpg')`}}></div> */}
-                <span className={styles.name2}>https://sap-front.vercel.app/</span>
-                
+
+                <Link href="/"><span className={styles.name2}>https://sap-front.vercel.app/</span></Link>
           </div> 
         </div>
        

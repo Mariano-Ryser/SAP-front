@@ -25,10 +25,20 @@ const Cabezera = () => {
         <div className={styles.cabezera2}>
           <div className={styles.boxData2}>
 
-                <Link href="/"><span className={styles.name2}>https://sap-front.vercel.app/</span></Link>
+                <Link href="/"><span className={styles.name2}>https://zap-front.vercel.app/</span></Link>
           </div> 
+          <div className={styles.boxData2}>
+
+                <Link href="/"><span className={styles.name2}>Prototipo-Test</span></Link>
+          </div> 
+        
+
+         
         </div>
-       
+        <div className={styles.boxData3}>
+
+<Link href="/"><span className={styles.name3}>Prototipo-Test</span></Link>
+</div> 
         
   </>
   )

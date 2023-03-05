@@ -6,9 +6,9 @@ import Image from "next/image"
 
 
 const Fotos = () => {
-const topo = () =>{alert("Wala ! - Mapeo de elementos")
-  console.log("peticion")
-}
+// const topo = () =>{alert("Wala ! - Mapeo de elementos")
+//   console.log("peticion")
+// }
 
 const icons = [
   {img: "champi.png"},
@@ -34,7 +34,7 @@ const icons = [
         <div className={styles.boxFotos}>
 
           <div
-            onClick={()=>{topo()}}
+            // onClick={()=>{topo()}}
             className={styles.foto}
             style={{backgroundImage: `url('/3.png')`}}
             >
@@ -42,7 +42,7 @@ const icons = [
 
           {icons.map((item,index) => (
             <div key={index}
-               onClick={()=>{topo()}}
+            //    onClick={()=>{topo()}}
                className={styles.foto}
                style={{backgroundImage: `url('/img/${item.img}')`}}
                 >

@@ -8,19 +8,42 @@ const NavRespon = () => {
 
 
    function openList(){
+
     // const burger = document.getElementById('burger')
+
+    //con desplazamiento
+    // const aside = document.getElementById('aside')
+    // if(
+    //   aside.style.transform == 'translateY(0%)'){
+    //   aside.style.transform = 'translateY(-100%)';
+    //   setTimeout(()=>{
+    //     aside.style.display="none"
+    //   },200);
+    // }else{
+    //   aside.style.display = 'block'
+    //   setTimeout(()=>{
+    //     aside.style.transform = 'translateY(0%)'
+    //   },0);
+    // }
+
+    //con aparicion y menos flujo de datos cuanticos XD
+
     const aside = document.getElementById('aside')
-    if(aside.style.transform == 'translateY(0%)'){
-      aside.style.transform = 'translateY(-100%)';
-      setTimeout(()=>{
-        aside.style.display="none"
-      },200);
+    if(
+      aside.style.display == 'none'){
+      aside.style.display = 'block';
+      // setTimeout(()=>{
+    
+      // },200);
     }else{
-      aside.style.display = 'block'
-      setTimeout(()=>{
-        aside.style.transform = 'translateY(0%)'
-      },0);
+      aside.style.display = 'none'
+      // setTimeout(()=>{
+     
+      // },0);
     }
+
+
+
     // if(burger.style.transform == 'rotateZ(90deg)'){
     //   burger.style.transform = 'rotateZ(0deg)'
     // } else {
@@ -56,7 +79,7 @@ const NavRespon = () => {
              <li className={styles.li}><Link href="/products/create"><a className={styles.a}>Productos?</a></Link></li>
             <li className={styles.li}><Link href="/msj"><a className={styles.a}>Mensajeria</a></Link></li>
             <li className={styles.li}><Link href="/personaje"><a className={styles.a}>Create Char XD x 2</a></Link></li>
-            <li className={styles.li}><Link href="/fotos"><a className={styles.a}>Fotos</a></Link></li>
+            {/* <li className={styles.li}><Link href="/fotos"><a className={styles.a}>Fotos</a></Link></li> */}
             <li className={styles.li}><Link href="https://nrto.netlify.app/3d/3d.html"><a className={styles.a}>Kubik?</a></Link></li>
             {/* <li className={styles.li}><Link href="/social"><a className={styles.a}>Social</a></Link></li> */}
           </ul>

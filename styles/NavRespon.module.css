@@ -48,7 +48,7 @@
    height: 100%;
    overflow: hidden;
    overflow-y: scroll;
-   transform: translateY(-100%); 
+   /* transform: translateY(-100%);  */
    width: 100%;
    transition: 0.4s;
    z-index: 1;
@@ -144,17 +144,19 @@
   .asideBar{
     /* filter: blur(1px); */
     position: fixed;
-    backdrop-filter: blur(0px);
+    /* background-color: rgb(255, 255, 255);
+    opacity: 50%; */
+    backdrop-filter: blur(10px);
     height: 100%;
     overflow: hidden;
     overflow-y: scroll;
-    transform: translateY(-100%); 
+    /* transform: translateY(-100%);  */
     width: 100%;
     padding-top: 8.1rem;
     transition: 0.4s;
     animation: blur 5s infinite alternate ;
   }
-  @keyframes blur {
+  /* @keyframes blur {
     0%{
       backdrop-filter: blur(0px);
     }
@@ -168,7 +170,7 @@
       backdrop-filter: blur(10px);
     }
     
-  }
+  } */
   .a{
     list-style-type: none;
     font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;

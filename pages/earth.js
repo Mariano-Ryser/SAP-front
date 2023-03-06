@@ -19,6 +19,7 @@ export default function Earth
         </div>
         <div
         >
+          
         <Image alt='groenlandia' src={'/earth/02.png'}
         height={700} width={1500}
         ></Image>
@@ -30,6 +31,7 @@ export default function Earth
         height={700} width={1500}
         ></Image>
 
+      
         </div>
     </div>
     

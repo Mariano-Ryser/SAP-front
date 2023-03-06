@@ -9,7 +9,7 @@ import Products from '../pages/products/create'
 export default function Home() {
   return (
     <>
-  <Logo/> 
+  {/* <Logo/>  */}
     </>
   )
 }

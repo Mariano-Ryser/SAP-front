@@ -1,5 +1,5 @@
 
-import Nav from '../components/NavRespon'
+
 import Image from 'next/image' 
 import style from '/styles/img.module.css'
 

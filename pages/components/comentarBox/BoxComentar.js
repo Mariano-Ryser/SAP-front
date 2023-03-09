@@ -74,51 +74,33 @@ function BoxComentar(){
                     value={comentar.text}
                     onChange={handleChange}>
           </textarea>
-
         <button 
         className={styles.button}
         onClick={handleClick}
         >Send
         </button>
-
         <div>
-             {comentars.map(({_id, text, like}) => (
-                <div  key={_id} className={styles.comentarBox}>
+             {comentars.map(({_id, text}) => (
+                <div
+                key={_id}
+                className={styles.comentarBox}>
 
-                    <span className={styles.text}>-{text}</span> 
+                  <span
+                   className={styles.text}>
+                    -{text}
+                   </span> 
 
                       <div >
                         <span
                         className={styles.x}
-                          onClick={
-                              ()=>{
+                          onClick={()=>{
                                 fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
                                 .then((res) => res.json())
                                 .then((data) => {
                                 fetchComentars();
                                   console.log({data})
-                              })
-                          }}
-                          >x</span>
-                            <div
-                            className={styles.like}
-                            onClick={
-                              ()=>{
-                                fetch(`${baseURL}/comentars/${_id}`, {
-                                method:'POST',
-                                headers:{
-                                    'Content-Type': 'application/json'
-                                },
-                                body:JSON.stringify(comentar)
-                              })
-                                
-                                .then((data) => {
-                                
-                                  console.log({data})
-                              })
-                          }}
-                            > 
-                          </div>
+                              })}}
+                        >x</span>
                     </div>
                                
                 </div>

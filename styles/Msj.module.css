@@ -1,0 +1,28 @@
+.b{
+    display: flex;
+    justify-content: center;
+    
+}
+.card{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size:1.2rem;
+    width:90%;
+    border-radius:0.2rem;
+    margin-bottom: 1rem;
+    color: #84ba64;
+    border-color: #84ba64;
+    padding: 0.4rem;
+    height: 6rem;
+    
+}
+.msj{
+    font-family: monospace;
+    
+}
+.box{
+    background-color: #000000;
+}

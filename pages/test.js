@@ -8,12 +8,16 @@ function test() {
   return (
     <>
     <div className={style.box}>
+
         <p>Aqui nueva pagina</p>
+       
+       
+      
+     
+     </div>
 
-        <button className='button' onClick={Change}>Change</button>
-    </div>
-
-    
+     
+   
  </>
   )
 }

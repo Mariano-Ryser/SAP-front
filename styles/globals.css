@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #878686;
+  background-color: #000000;
 }
 * {
   box-sizing: border-box;
@@ -99,7 +99,7 @@ font-family: 'Josefin Sans', sans-serif;
   .hs1{
     position: relative;
     height: 60vh;
-    background-color: #ffffff;
+    background-color: #000000;
     background-size: cover;
   }
     .hs2{

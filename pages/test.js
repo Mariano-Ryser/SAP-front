@@ -13,14 +13,7 @@ function test() {
         <button className='button' onClick={Change}>Change</button>
     </div>
 
-     <style jsx>
-           {`
-           .button{
-            height:${valor}rem;
-            width:5rem;
-           }
-            `}
-       </style>
+    
  </>
   )
 }

@@ -1,6 +1,6 @@
 
   .boxIcons{
-    background-color: black;
+    background-color: rgb(131, 131, 131);
     display: grid;
     /* height: 240px; */
     overflow: hidden;
@@ -37,7 +37,7 @@
   @media (max-width:600px){ 
     
     .boxIcons{
-      background-color: black;
+      background-color: rgba(7, 35, 126, 0.428);
       display: grid;
       /* height: 240px; */
       overflow: hidden;

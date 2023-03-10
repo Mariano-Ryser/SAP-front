@@ -35,7 +35,7 @@
   background-color: transparent;
 }
 .sap{
-  color: rgb(200, 200, 200);
+  color: rgba(66, 102, 50, 0.579);
   font-size: 3rem;
   font-weight: 900;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -53,7 +53,12 @@
    transition: 0.4s;
    z-index: 1;
    text-align: center;
-   padding-top: 13.7rem;
+   padding-top: 8.1rem;
+}
+.ul{
+  margin-top: 0px;
+  padding: 0;
+  list-style-type: none;
 }
 .a{
   font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
@@ -96,30 +101,11 @@
   .asideBar::-webkit-scrollbar-thumb {
     background: rgb(0, 0, 0);
   }
-  .ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
- 
-  .logo{
-    margin-left: 1rem;
-    margin-right: auto;
-    font-weight: 600;
-  }
   .img{
     margin: 1rem;
     cursor: pointer;
   }
-.footer{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  height: 7rem;
-  width: 100%;
-}
+
   
 
   @media (max-width: 600px) {
@@ -156,43 +142,11 @@
     transition: 0.4s;
     animation: blur 5s infinite alternate ;
   }
-  /* @keyframes blur {
-    0%{
-      backdrop-filter: blur(0px);
-    }
-    20%{
-      backdrop-filter: blur(20px);
-    }
-    80%{
-      backdrop-filter: blur(0px);
-    }
-    100%{
-      backdrop-filter: blur(10px);
-    }
-    
-  } */
-  .a{
-    list-style-type: none;
-    font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1.3rem;
-    font-weight: 900;
-    animation: a 2s 1 linear; 
-    backdrop-filter: blur(0px);
-  }
-   @keyframes a {
-    0%{
-      color: rgb(73, 73, 73);
-    }
-    50%{
 
-      color: rgb(255, 255, 255);
-    }
-    100%{ 
-      color: rgb(255, 255, 255);
-    }
-  } 
+  .a{
+    
+    font-size: 1.3rem;
+  }
   .asideBar::-webkit-scrollbar {
     width: 0rem;
   }
@@ -201,15 +155,6 @@
   }
   .asideBar::-webkit-scrollbar-thumb {
     background: transparent;
-  }
-  .ul{
-    margin: 0rem;
-    padding: 0rem;
-    list-style-type: none;
-    display: column;
-    justify-content: center;
-    align-items: center;
-    
   }
   .li{
     width: 90%;
@@ -224,17 +169,4 @@
     height: 4.5rem;
     text-align: center;
   }
-
-   
-    .logo{
-      color: rgb(182, 182, 182);
-      margin-left: 0.5rem;
-      margin-right: auto;
-      /* font-size: 1.2rem; */
-      font-weight: 600;
-      cursor: pointer;
-      font: 400 25px/1 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
-   /*font-family: 'Shadows Into Light', cursive; */
-    }
-    
   }

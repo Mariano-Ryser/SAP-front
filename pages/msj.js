@@ -17,11 +17,12 @@ function msj() {
        <br></br>
      
      </article>
-     <style jsx>
+     
+     {/* <style jsx>
            {`
                
                `}
-       </style>
+       </style> */}
    
  </>
   )

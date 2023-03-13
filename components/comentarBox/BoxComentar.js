@@ -35,7 +35,7 @@ function BoxComentar(){
   const handleClick = (e)=> {
         e.preventDefault()
 
-        if(comentar.titulo.trim() === "") {  //.trim() significa toma como error los espacios en blanco
+      if(comentar.titulo.trim() === "") {  //.trim() significa toma como error los espacios en blanco
           setError("Debes indicar un titulo")
           return;
       }
@@ -164,7 +164,7 @@ function BoxComentar(){
 
         {/* MAPEO DE ELEMENTOS */}
         <div>
-             {comentars.map(({_id, text, author, titulo}) => (
+             {comentars.map(({_id, titulo, text, author}) => (
                 <div  key={_id} className={styles.comentarBox}>
                     <h1 className={styles.titulo}>{titulo}</h1>
                     <span className={styles.text}>-{text}...</span> 

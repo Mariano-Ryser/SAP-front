@@ -50,7 +50,6 @@ const icons = [
         <div className={styles.boxIcons}
         //  style={{height: size}}
          >
-
           <div
             // onClick={()=>{topo()}}
             className={styles.icon}

@@ -3,3 +3,9 @@
     width: 100%;
     background-color: rgb(221, 221, 221);
 }
+.item{
+    margin: 1rem;
+    background-size: cover;
+    height: 100px;
+    width: 60px;
+}

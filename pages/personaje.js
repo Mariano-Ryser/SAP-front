@@ -65,56 +65,72 @@ function Personaje() {
 
   return (
     <>
+
     <div className={style.container}>
         <form className={style.form}>
             <h1 className={style.h1}>Cree su personaje </h1>
-                <span>Name</span><input
-                className={style.input}
-                 type='text'
-                  name='name'
-                  value={personaje.name}
-                  onChange={handleChange}
+                <span>Name</span>
+                <input
+                    className={style.input}
+                    type='text'
+                    name='name'
+                    value={personaje.name}
+                    onChange={handleChange}
                   ></input>
+
                     <br></br>
+
                     <span>Surname</span><input
-                className={style.input}
-                 type='text'
-                  name='surname'
-                  value={personaje.surname}
-                  onChange={handleChange}
+
+                        className={style.input}
+                        type='text'
+                        name='surname'
+                        value={personaje.surname}
+                        onChange={handleChange}
+                  ></input>
+
+                    <span>GS</span><input
+                        className={style.input}
+                        type='text'
+                        name='gs'
+                        value={personaje.surname}
+                        onChange={handleChange}
                   ></input>
                 <br></br>
-                <span>Number</span><input
-                className={style.input}
-                 type='number'
-                 name='age'
-                 value={personaje.age}
-                 onChange={handleChange}
+                
+                <span>Number</span>
+                <input
+                    className={style.input}
+                    type='number'
+                    name='age'
+                    value={personaje.age}
+                    onChange={handleChange}
                  ></input>
                 <br></br>
                 <span>Email</span><input
-                className={style.input}
-                  type='text'
-                  name='email'
-                  value={personaje.email}
-                  onChange={handleChange}
+                    className={style.input}
+                    type='text'
+                    name='email'
+                    value={personaje.email}
+                    onChange={handleChange}
                   ></input>
 
                     <br></br>
                     <span>City</span>
                 <input
-                className={style.input}
-                 type='text'
-                  name='city'
-                  value={personaje.city}
-                  onChange={handleChange}
+                        className={style.input}
+                        type='text'
+                        name='city'
+                        value={personaje.city}
+                        onChange={handleChange}
                   ></input>
                 <br></br>
 
                 <button
-                className={style.button}
-                onClick={handleClick}
-                >Crear personaje</button>
+                    className={style.button}
+                    onClick={handleClick}
+                    >Crear personaje
+                </button>
 </form>
 
         <div> 

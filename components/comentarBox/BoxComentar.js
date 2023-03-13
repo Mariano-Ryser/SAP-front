@@ -8,11 +8,19 @@ function BoxComentar(){
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
 
   const initialState = {
+    titulo:'',
     text:'',
-    like: 0,
+    author:'',
   };
   const [comentar, setComentar] = useState(initialState)
   const [comentars, setComentars] = useState([])
+
+  const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(null);
+
+
+
+  //  ALERTAS DE COMPLETADO DE CASILLERO 
   
   const handleChange = (e) =>{
         const inputValue = e.target.value
@@ -23,8 +31,37 @@ function BoxComentar(){
         [inputName]: inputValue,
       });
   }
+
   const handleClick = (e)=> {
         e.preventDefault()
+
+        if(comentar.titulo.trim() === "") {  //.trim() significa toma como error los espacios en blanco
+          setError("Debes indicar un titulo")
+          return;
+      }
+      if(comentar.text.trim() === "") {
+          setError("Debes indicar una descripcion")
+          return;
+      }
+      if(comentar.author.trim() === "") {
+        setError("Debes indicar un Author")
+        return;
+    }
+      
+      else{
+        setSuccessMessage("Agregado con Exito!!")
+        setComentar(initialState)
+      }
+      
+     
+       setTimeout(()=> {
+           setSuccessMessage(null)}
+           , 2000)
+      setError(null);
+        
+
+
+
         fetch(`${baseURL}/comentars`,{
             method:'POST',
             headers:{
@@ -49,6 +86,7 @@ function BoxComentar(){
         })
 
   }
+
   const fetchComentars= () =>{
       fetch(`${baseURL}/comentars`)
          .then(res => res.json())
@@ -57,6 +95,7 @@ function BoxComentar(){
              console.log('Comentarios:', comentars)
      })
   }
+  
     useEffect(()=>{
       fetchComentars();
      },[])
@@ -64,30 +103,83 @@ function BoxComentar(){
   return (
     <>
     <form className={styles.form}>
+
       <p className={styles.date}> {datee}</p>
-      <textarea placeholder='Añade un comentario..' className={styles.textArea}
+
+      {/* Input Titulo */}
+      <input
+    placeholder='Titulo'
+    className={styles.authorInput}
+     maxLength="20"
+     type='text'
+     name='titulo'
+     value={comentar.titulo}
+     onChange={handleChange}
+    ></input>
+
+    {/* Input Text area */}
+      <textarea
+      className={styles.textArea}
+      placeholder='Añade un comentario..'
       maxLength="9999999"
       type='text'
       name='text'
       value={comentar.text}
       onChange={handleChange}
       >
+        
     </textarea>
 
+    {/* Input Autor */}
+    <input
+    placeholder='Author..'
+    className={styles.authorInput}
+     maxLength="9999999"
+     type='text'
+     name='author'
+     value={comentar.author}
+     onChange={handleChange}
+    ></input>
+
+      {/* Send Button */}
         <button 
         className={styles.button}
         onClick={handleClick}
         >Send
         </button>
+        {
+                error && 
+                (
+                    <div className={styles.error}>
+                        { error }
+                    </div>
+                ) 
+                
+            }
+            {
+                successMessage && 
+                (
+                    <div className={styles.success}>
+                        { successMessage }
+                    </div>
+                ) 
+                
+            }
 
+
+        {/* MAPEO DE ELEMENTOS */}
         <div>
-             {comentars.map(({_id, text, like}) => (
+             {comentars.map(({_id, text, author, titulo}) => (
                 <div  key={_id} className={styles.comentarBox}>
-
-                    <span className={styles.text}>-{text}</span> 
-
-                      <div >
-                        <span
+                    <h1 className={styles.titulo}>{titulo}</h1>
+                    <span className={styles.text}>-{text}...</span> 
+                    <br></br>
+                    <br></br>
+                    <span className={styles.author}>-{author}...</span> 
+                    
+                <div >
+              {/* Button Deleted */}
+              <span
                         className={styles.x}
                           onClick={
                               ()=>{
@@ -97,41 +189,21 @@ function BoxComentar(){
                                 fetchComentars();
                                   console.log({data})
                               })
-                          }}
-                          >x</span>
-                            <div
-                            className={styles.like}
-                            onClick={
-                              ()=>{
-                                fetch(`${baseURL}/comentars/${_id}`, {
-                                method:'POST',
-                                headers:{
-                                    'Content-Type': 'application/json'
-                                },
-                                body:JSON.stringify(comentar)
-                              })
-                                
-                                .then((data) => {
-                                
-                                  console.log({data})
-                              })
-                          }}
-                            > 
-                              <Image
-                              alt='Burger-Icon' 
-                              src={'/like.png'} 
-                              height={22} 
-                              width={24}></Image>
-                            <span likeNumber>{like}</span> 
-                          </div>
+                      }}>X</span>
+
                     </div>
                                
                 </div>
                 
             ))}
          </div> 
+       
 
     </form>
+
+    
+
+
   </>
   )
 }

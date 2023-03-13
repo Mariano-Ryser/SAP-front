@@ -10,6 +10,11 @@ function test() {
     <div className={style.box}>
 
         <p>Aqui nueva pagina</p>
+        <div className={style.item}
+            style={{backgroundImage: `url('/img/Dagger.png')`}}
+            
+            >
+          </div>
        
        
       

@@ -7,23 +7,13 @@ import BoxComentar from '../components/comentarBox/BoxComentar'
 function msj() {
   return (
     <>
-    <article
-    
-    className={style.box}>
-
-        
+    <article className={style.box}>
+ 
        <BoxComentar/>
        
        <br></br>
      
      </article>
-     
-     {/* <style jsx>
-           {`
-               
-               `}
-       </style> */}
-   
  </>
   )
 }

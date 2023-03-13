@@ -1,67 +1,4 @@
-.form{
-  position: relative;
-  width: 65%;
-  margin: auto;
-  padding-top: 0.7rem;
-}
-.textArea{
-  position: relative;
-  background-color: rgb(87, 87, 87);
-  width:100%;
-  border-radius:0.2rem;
-  margin-bottom: 0.2rem;
-  color: #e7e7e7;
-  padding: 0.4rem;
-  height: 6rem;
-  outline: none;
-  font: 400 18px/1.1 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
-  
-  }
-  .textArea::placeholder {
-    color: rgb(235, 235, 235);
-    opacity: 1; /* Firefox */
-  }
 
-.button{
-  height: 2rem;
-  width: 5rem;
-  margin-bottom: 0.6rem;
-  color: aliceblue;
-  background-color: rgb(65, 62, 60);
-  border-radius: 0.2rem;
-}
-.comentarBox{
-  position: relative; 
-  display: flex;
-  /* height: 4rem; */
-justify-content: space-between;
-margin-top: 0rem;
-margin-bottom: 0;
-border-radius: 4px;
-/* background-color: #000000; */
-color: rgb(255, 255, 255);
-/* font-size: 1rem; */
-padding: 0.7rem;
- box-shadow: #555555 1px 1px 1px 0px; 
-/* font: 400 16px/1 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif; */
-}
-.x{
-  position: absolute;
-  right: 0.2rem;
-  bottom: 0rem;
-color: rgb(222, 222, 222);
-cursor: pointer;
-height: 1.5rem;
-width: 1.5rem;
-/* border: #444444 solid 1px; */
-border-radius: 40%;
-text-align: center;
-padding: 0.1rem;
-}
-.likeNumber{
-  color: white;
-  font-size: 1rem;
-}
 
 .date{
   color: #84ba64;
@@ -71,27 +8,145 @@ margin: 0rem;
 padding: 0.7rem;
 }
 
+/* FORMULARIO A COMPLETAR */
+.form{
+  position: relative;
+  width: 65%;
+  margin: auto;
+  padding-top: 0.7rem;
+}
+
+.error{
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0.4rem;
+  margin: 0rem 1rem 0rem 1rem;
+  color: rgb(226, 226, 226);
+  background-color: #f40808ca;
+  transition: 0.2s;
+  animation: alert 0.2s 1 ease-in;
+}
+@keyframes alert {
+  0%{ opacity: 0%;}
+  100%{opacity: 100%;}
+  
+}
+.success{
+  display: inline-block;
+  padding: 0.4rem;
+  margin: 0rem 1rem 0rem 1rem;
+  color: white;
+  background-color: #15c31bdf;
+  transition: 0.2s;
+  animation: alert 0.2s 1 ease-in;
+}
+
+.textArea{
+  position: relative;
+  background-color: rgb(87, 87, 87);
+  width:100%;
+  color: white;
+  border-radius:0.2rem;
+  margin-bottom: 0.2rem;
+  height: 6rem;
+  outline: none;
+  font: 400 18px/1.1 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  
+  }
+
+  .textArea::placeholder {
+    color: #e7e7e7;
+    display: block;
+    margin-bottom: 1rem;
+    border: #383838 ;
+    padding: 0.4rem;
+  }
+
+  .authorInput{
+    color: #e7e7e7;
+    display: block;
+    margin-bottom: 1rem;
+    background-color: #383838;
+    border: #383838 ;
+    padding: 0.4rem;
+  }
+
+  .authorInput::placeholder{
+    color: #e7e7e7;
+    background-color: #383838;
+  }
+
+
+
+/* SEND BUTTON */
+.button{
+  height: 2rem;
+  width: 5rem;
+  margin-bottom: 0.6rem;
+  color: aliceblue;
+  background-color: rgb(65, 62, 60);
+  border-radius: 0.2rem;
+}
+
+/* NOTA */
+
+/* TTITULO EN TEXTO */
+.titulo{
+  color: white;
+  line-height: 0.3rem;
+}
+
+.comentarBox{
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  box-shadow: #3a3a3a 1px 1px 1px 0px;
+  border: solid rgb(56, 56, 56) 1px;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #f2f2f29c;
+  color: rgb(0, 0, 0);
+}
+
+.author{
+  font-size: 0.9rem;
+  display: block;
+  color: rgb(62, 62, 62);
+  text-align: start;
+}
+
+.x{
+  position: absolute;
+  right: 1rem;
+  color: rgb(251, 251, 251);
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+/* MOBIL - STYLE */
+
 @media (max-width: 600px) {
   .form{
     position: relative;
     width: 85%;
     overflow: hidden;
-
     margin: auto;
     padding-top: .1rem;
   }
   .date{
-   display: none;
+    color: #ced721c6;
+    font-size: 0.8rem;
+    font-weight: 900;
+    margin: 0.2rem;
+    padding: 0rem;
   }
 
   .textArea{
     position: relative;
-    background-color: rgb(34, 30, 30);
-    color: rgb(0, 0, 0);
     width:100%;
-    border-radius:0.2rem;
-    margin-bottom: 1rem;
-    color: #22b305;
     padding: 0.4rem;
     height: 6rem;
     outline: none;
@@ -106,47 +161,5 @@ padding: 0.7rem;
     border-radius: 0.2rem;
   }
 .comentarBox{
-  position: relative; 
-  display: flex;
-justify-content: space-between;
-margin-top: 0.5rem;
-margin-bottom: 0.5rem;
-background-color: #383838;
-color: rgb(60, 170, 38);
-/* font-size: 1rem; */
-padding: 0.3rem;
-padding-bottom: 2rem;
-box-shadow: #3a3a3a 1px 1px 1px 0px;
-border: solid rgb(56, 56, 56) 1px;
-font-weight: bold;
-font-size: 1rem;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
-  .x{
-    position: absolute;
-    right: 0.2rem;
-    bottom: 0rem;
-  color: rgb(235, 235, 235);
-  cursor: pointer;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 40%;
-  font-family: sans-serif;
-  text-align: center;
-  padding: 0.1rem;
-}
-.like{
-  color: rgb(252, 252, 252);
-  bottom: 0rem;
-  left: 1rem;
-  cursor: pointer;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 40%;
-  font-family: sans-serif;
-  text-align: center;
-  padding: 0.1rem;
-}
-  
 }

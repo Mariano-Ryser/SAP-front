@@ -60,7 +60,7 @@ const NavRespon = () => {
          <Link href="/"><h1 className={styles.logo}></h1></Link> 
         </div>
         <div id='burger' className={styles.burger} onClick={openList}>
-         <Image alt='Burger-Icon' src={'/burgerWhite.png'} height={40} width={60}></Image>
+         <Image alt='Burger-Icon' src={'/img/Alienverde.gif'} height={100} width={70}></Image>
         </div> 
 </nav>
 

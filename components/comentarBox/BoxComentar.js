@@ -50,18 +50,13 @@ function BoxComentar(){
       
       else{
         setSuccessMessage("Agregado con Exito!!")
-        setComentar(initialState)
       }
-      
-     
+    
        setTimeout(()=> {
            setSuccessMessage(null)}
            , 2000)
       setError(null);
         
-
-
-
         fetch(`${baseURL}/comentars`,{
             method:'POST',
             headers:{

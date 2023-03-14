@@ -90,6 +90,8 @@ function BoxComentar(){
              console.log('Comentarios:', comentars)
      })
   }
+
+  
   
     useEffect(()=>{
       fetchComentars();
@@ -197,8 +199,6 @@ function BoxComentar(){
     </form>
 
     
-
-
   </>
   )
 }

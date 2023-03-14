@@ -2,14 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #cdcdcdc2;
+  background-color: #000000e9;
 }
 * {
   box-sizing: border-box;
 }
-
-
-
 
 @media (max-width: 600px) {
  

@@ -7,6 +7,7 @@ import Image from "next/image"
 const NavRespon = () => {
 
 
+
    function openList(){
 
     // const burger = document.getElementById('burger')
@@ -50,7 +51,7 @@ const NavRespon = () => {
     //   burger.style.transform = 'rotateZ(90deg)'
     // }
   }
-
+  
 
   return (
     <>    
@@ -74,17 +75,47 @@ const NavRespon = () => {
     </header>
 
           <ul className={styles.ul}>
-              <Link href="/"><li className={styles.li}><a className={styles.a}>Home</a></li></Link>
-              <Link href="/msj"><li className={styles.li}><a className={styles.a}>Mensajeria</a></li></Link>
-              <Link href="/personaje"><li className={styles.li}><a className={styles.a}>Chars Creator</a></li></Link>
-              <Link href="/products/create"><li className={styles.li}><a className={styles.a}>Product Creator</a></li></Link>
-              <Link href="https://nrto.netlify.app/3d/3d.html"><li className={styles.li}><a className={styles.a}>3D - click box! </a></li></Link>
-              {/* <Link href="/products/create"><li className={styles.li}><a className={styles.a}>Icons</a></li></Link> */}
+              <Link href="/">
+                <li className={styles.li}>
+                  <a className={styles.a}>Home</a>
+                </li>
+              </Link>
+
+              <Link href="/msj">
+                <li className={styles.li}>
+                  <a className={styles.a}>Mensajeria</a>
+                </li>
+              </Link>
+
+              <Link href="">  {/* 3D link */}
+                <li className={styles.liBloqued}>
+                  <div className={styles.padlock}></div>
+                  <a className={styles.a}>Chars Creator</a>
+                </li>
+              </Link>
+
+              <Link href=""> {/* PRODUCT CREATOR link */}
+                <li className={styles.liBloqued}>
+                <div className={styles.padlock}></div>
+                  <a className={styles.a}>Product Creator</a>
+                </li>
+              </Link>
+
+              <Link href=""> {/* 3D link */}
+            
+                <li className={styles.liBloqued}>
+                  
+                <div className={styles.padlock}></div>
+
+                  <a className={styles.a}>3D - click box! </a>
+                </li>
+              </Link>
+
+    
+           
           </ul>
           
-          {/* <footer className={styles.footer}>
-              <h3  className={styles.sap}>Sap</h3>
-          </footer> */}
+          
    </aside>
 
       

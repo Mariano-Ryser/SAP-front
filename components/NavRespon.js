@@ -80,28 +80,31 @@ const NavRespon = () => {
                   <a className={styles.a}>Home</a>
                 </li>
               </Link>
-
+          {/* Mensajeria Link */}
               <Link href="/msj">
                 <li className={styles.li}>
                   <a className={styles.a}>Mensajeria</a>
                 </li>
               </Link>
 
-              <Link href="">  {/* 3D link */}
+          {/* CHAR CREATOR */}
+              <Link href="">  
                 <li className={styles.liBloqued}>
                   <div className={styles.padlock}></div>
                   <a className={styles.a}>Chars Creator</a>
                 </li>
               </Link>
 
-              <Link href=""> {/* PRODUCT CREATOR link */}
+          {/* PRODUCT CREATOR link */}
+              <Link href=""> 
                 <li className={styles.liBloqued}>
                 <div className={styles.padlock}></div>
                   <a className={styles.a}>Product Creator</a>
                 </li>
               </Link>
 
-              <Link href=""> {/* 3D link */}
+          {/* 3D link */}
+              <Link href=""> 
             
                 <li className={styles.liBloqued}>
                   

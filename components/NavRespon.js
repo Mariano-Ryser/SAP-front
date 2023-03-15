@@ -64,11 +64,7 @@ const NavRespon = () => {
     const lock = document.getElementsByTagName("lock")
     const inputValue = e.target.value
 
-    if(inputValue === "1234") {  //.trim() significa toma como error los espacios en blanco
-      // alert("correcto")
-      
-      // li.className = styles.li
-
+    if(inputValue === "1234") { 
        for (let i = 0; i < li.length; i++) {
         li[i].className = styles.li;
        }
@@ -125,45 +121,45 @@ const NavRespon = () => {
               </Link>
 
           {/* CHAR CREATOR */}
-              <Link href="">  
+              <Link href="/">  
                 <li
                   id='li'
-                 className={styles.liBloqued}
-                onClick={padlook}
-                 >
-                  <lock id='padlock' className={styles.padlock}></lock>
+                  className={styles.liBloqued}
+                  >
+                   <lock
+                       onClick={padlook}
+                       id='padlock'
+                      className={styles.padlock}></lock>
                   <a className={styles.a}>Chars Creator</a>
                 </li>
               </Link>
 
           {/* PRODUCT CREATOR link */}
-
-              <Link href=""> 
-
+          
+              <Link href="/msj"> 
                 <li 
                 id='li'
                 className={styles.liBloqued}
-                 onClick={padlook}
                  >
-
-                <lock id='padlock' className={styles.padlock}></lock>
+                <lock
+                onClick={padlook}
+                id='padlock'
+                className={styles.padlock}></lock>
                   <a className={styles.a}>Product Creator</a>
                 </li>
-                
-
               </Link>
-              
+            
           {/* 3D link */}
-              <Link href=""> 
+              <Link href="/test"> 
                 <li 
                 id='li'
                 className={styles.liBloqued}
-                  onClick={padlook}
                   >
                   
                 <lock
+                onClick={padlook}
                 id='padlock'
-                 className={styles.padlock}></lock>
+                className={styles.padlock}></lock>
 
                   <a className={styles.a}>3D - click box! </a>
                 </li>

@@ -1,27 +1,81 @@
 import React from 'react'
-import style from '../styles/test.module.css'
-import Image from 'next/image' 
-import Link from 'next/link'
+import { useEffect, useState } from 'react';
+import Image from "next/image"
+import styles from "../styles/Icons.module.css";
 // import BoxComentar from '../components/comentarBox/BoxComentar'
 
 function test() {
+
+ 
+
+  const initialState = [0]
+
+  const [numer, setNumer] = useState(initialState)
+
+  const handleClick = ()=> {
+
+    for(let i = 0; i < 20; i++){
+      var numer = Math.floor(Math.random() * 38)
+      console.log(numer)
+      setNumer(numer)
+    
+
+    const para = document.createElement("p");
+    if(numer === 15 ){
+      para.style.color = "white"
+      para.style.backgroundColor = "green"
+      para.style.border = "solid black 1px"
+      para.style.margin = "0.3rem"
+      para.style.padding= "0.3rem"
+      para.style.display = "inline-block"
+      para.innerHTML = "Numer " + numer;
+    }else{
+      para.style.color = "red"
+      para.style.border = "solid black 1px"
+      para.style.margin = "0.3rem"
+      para.style.padding= "0.3rem"
+      para.style.display = "inline-block"
+      para.innerHTML = "Numer " + numer;
+    }
+    document.getElementById("myDIV").appendChild(para);
+    // document.getElementById("myDIV").appendChild(numer);
+  }
+}
+  
+  var numero = "Numero Viejo"
+
+
   return (
     <>
-    <div className={style.box}>
+    
+    <div className="box">
+        <p className='p'>Aqui nueva pagina</p>
+        <h1>{numero}</h1>
+        <h1>{numer}</h1>
+        <button
+           className='button'
+          onClick={handleClick}
+        ></button>
 
-        <p>Aqui nueva pagina</p>
-        <div className={style.item}
-            style={{backgroundImage: `url('/img/Dagger.png')`}}
-            
-            >
-          </div>
-       
-       
-      
-     
+     <div id='myDIV'></div>
      </div>
+   
 
-     
+     <style jsx>{`
+                .button{
+                  position:fixed;
+                  top:90%;
+                  height:2rem;
+                  width:4rem;
+                }
+
+                .box{
+                    height: 100vh;
+                    width: 100%;
+                    background-color: rgb(221, 221, 221);
+                  }
+                
+         `}</style>
    
  </>
   )

@@ -134,6 +134,12 @@
   }
   
 }
+.bildBloque{
+  position: absolute;
+  height: 5rem;
+  border: solid 4px red;
+  background-color: red;
+}
 
   .burger{
     position: absolute;
@@ -239,6 +245,7 @@
       animation: pad infinite 0.5s alternate ease-in-out;
       
     }
+   
 
   
   }

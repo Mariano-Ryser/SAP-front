@@ -167,7 +167,7 @@ function BoxComentar(){
         {/* MAPEO DE ELEMENTOS */}
         <div>
              {comentars.map(({_id, titulo, text, author}) => (
-                <div  key={_id} className={styles.comentarBox}>
+                <div key={_id} className={styles.comentarBox}>
                     <h1 className={styles.titulo}>{titulo}</h1>
                     <span className={styles.text}>-{text}...</span> 
                     <br></br>
@@ -184,9 +184,8 @@ function BoxComentar(){
                                 .then((res) => res.json())
                                 .then((data) => {
                                 fetchComentars();
-                                  console.log({data})
-                              })
-                      }}>X</span>
+                                console.log({data})})}}
+                      >X</span>
 
                     </div>
                                

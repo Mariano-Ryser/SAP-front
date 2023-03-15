@@ -5,6 +5,7 @@ import Image from "next/image"
 
 //C:\Users\MR22\stock-app\frontend\public
 const NavRespon = () => {
+  const [close, setClose] = useState(null);
 
 
 
@@ -29,6 +30,7 @@ const NavRespon = () => {
 
     //con aparicion y menos flujo de datos cuanticos XD
 
+
     const aside = document.getElementById('aside')
     if(
       aside.style.display == 'block'){
@@ -44,14 +46,46 @@ const NavRespon = () => {
     }
 
 
-
     // if(burger.style.transform == 'rotateZ(90deg)'){
     //   burger.style.transform = 'rotateZ(0deg)'
     // } else {
     //   burger.style.transform = 'rotateZ(90deg)'
     // }
   }
-  
+
+  function padlook(){
+    setClose("Close")
+  }
+  function leaveA(){
+    setClose(null)
+  }
+
+  const correct = (e) =>{
+    const lock = document.getElementsByTagName("lock")
+    const inputValue = e.target.value
+
+    if(inputValue === "1234") {  //.trim() significa toma como error los espacios en blanco
+      // alert("correcto")
+      
+      // li.className = styles.li
+
+       for (let i = 0; i < li.length; i++) {
+        li[i].className = styles.li;
+       }
+
+       for (let e = 0; e < lock.length; e++) {
+        lock[e].style.display= "none";
+       }
+       setClose(null)
+      //  for (let e = 0; e < li.length; e++) {
+      //   padlock[e].display = "none"
+      //  }
+       
+
+      // return;
+  }
+
+}
 
   return (
     <>    
@@ -65,9 +99,7 @@ const NavRespon = () => {
         </div> 
 </nav>
 
-
     <aside id='aside' className={styles.asideBar}>
-
     <header className={styles.header}>
           <div className={styles.boxSap}>
               <h3  className={styles.sap}>Zap</h3>
@@ -75,11 +107,16 @@ const NavRespon = () => {
     </header>
 
           <ul className={styles.ul}>
+            {/* HOME*/}
               <Link href="/">
-                <li className={styles.li}>
+              
+                <li className={styles.li}
+                // onClick={padlook}
+                >
                   <a className={styles.a}>Home</a>
                 </li>
               </Link>
+             
           {/* Mensajeria Link */}
               <Link href="/msj">
                 <li className={styles.li}>
@@ -89,36 +126,115 @@ const NavRespon = () => {
 
           {/* CHAR CREATOR */}
               <Link href="">  
-                <li className={styles.liBloqued}>
-                  <div className={styles.padlock}></div>
+                <li
+                  id='li'
+                 className={styles.liBloqued}
+                onClick={padlook}
+                 >
+                  <lock id='padlock' className={styles.padlock}></lock>
                   <a className={styles.a}>Chars Creator</a>
                 </li>
               </Link>
 
           {/* PRODUCT CREATOR link */}
+
               <Link href=""> 
-                <li className={styles.liBloqued}>
-                <div className={styles.padlock}></div>
+
+                <li 
+                id='li'
+                className={styles.liBloqued}
+                 onClick={padlook}
+                 >
+
+                <lock id='padlock' className={styles.padlock}></lock>
                   <a className={styles.a}>Product Creator</a>
                 </li>
-              </Link>
+                
 
+              </Link>
+              
           {/* 3D link */}
               <Link href=""> 
-            
-                <li className={styles.liBloqued}>
+                <li 
+                id='li'
+                className={styles.liBloqued}
+                  onClick={padlook}
+                  >
                   
-                <div className={styles.padlock}></div>
+                <lock
+                id='padlock'
+                 className={styles.padlock}></lock>
 
                   <a className={styles.a}>3D - click box! </a>
                 </li>
               </Link>
 
+        
+            {/* INSERT PASSWORD FORM */}
+            {/* ASI PODEMOS MAPEAR ELEMENTOS CON UN BUEN TEMPLET*/}
+              {close &&(
+                  <div 
+                  onMouseLeave={leaveA}
+                  className="kleinForm">
+                    
+                      <p className='parraf'>{ close }</p>
+                      <input 
+                      onChange={correct}
+                      type='password'
+                      name="password"
+                      className='pass'
+                      placeholder='password' 
+                      ></input>
+
+                      <style jsx>{`
+                       .kleinForm{
+                          border-radius:5px;
+                          height:4rem;
+                          width:14rem;
+                          position:absolute;
+                          top:20rem;
+                          right:35%;
+                          background: #6c679dd5;
+                          transition: 0.2s;
+                          box-shadow: 2px 4px 6px 2px rgba(93, 87, 87, 0.287),  -2px -4px 20px 1px rgba(93, 87, 87, 0.187);
+                        }  
+                        .kleinForm:hover{
+                          background: #6c679dd8;;
+                        }  
+                        .parraf{
+                          color:white;
+                          line-height:0rem;
+                        }
+                        .pass{
+                          width: 8rem;
+                        }
+                          .li{
+                              width: 65%;
+                              margin: auto;
+                                position: relative;
+                                align-items: center;
+                                align-content: center;
+                                background-color: #5c579dd5;
+                                margin-top: 0.2rem;
+                                margin-bottom: 2rem;
+                                padding-top: 0.9rem;
+                                height: 4rem;
+                                text-align: center;
+                                color: rgb(255, 255, 255);
+                                transition: 0.2s;
+                              }
+        
+                        `}</style>
+
+                    </div>   
+                )}
+
     
            
           </ul>
-          
-          
+        
+           
+        
    </aside>
 
       

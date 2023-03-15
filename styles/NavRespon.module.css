@@ -107,6 +107,7 @@
   background-color: #ae391998;
 }
 .padlock{
+  display: block;
   position: absolute;
   bottom: -1rem;
   right: 15%;
@@ -220,9 +221,11 @@
   }
 
     .liBloqued{
+      display: block;
       width: 90%;
     }
     .padlock{
+      display: block;
       position: absolute;
       bottom: -1rem;
       right: 1.5rem;
@@ -239,3 +242,4 @@
 
   
   }
+

@@ -1,10 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import Image from "next/image"
-import styles from "../styles/Icons.module.css";
 // import BoxComentar from '../components/comentarBox/BoxComentar'
 
-function test() {
+function Test() {
 
  
 
@@ -81,5 +79,5 @@ function test() {
   )
 }
 
-export default test
+export default Test
 

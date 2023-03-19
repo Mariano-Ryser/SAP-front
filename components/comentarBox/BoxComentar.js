@@ -17,6 +17,7 @@ function BoxComentar(){
 
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
+  const [deletedMessage, setDeleted] = useState(null);
 
 
 
@@ -81,6 +82,12 @@ function BoxComentar(){
         })
 
   }
+
+  const handleDeleted = (e)=> {
+    e.preventDefault()
+
+
+}
 
   const fetchComentars= () =>{
       fetch(`${baseURL}/comentars`)
@@ -160,8 +167,18 @@ function BoxComentar(){
                         { successMessage }
                     </div>
                 ) 
-                
             }
+
+          {
+                deletedMessage && 
+                (
+                    <div className={styles.deleted}>
+                        { deletedMessage }
+                    </div>
+                ) 
+            }
+
+            
 
 
         {/* MAPEO DE ELEMENTOS */}
@@ -184,6 +201,11 @@ function BoxComentar(){
                                 .then((res) => res.json())
                                 .then((data) => {
                                 fetchComentars();
+                                setDeleted("Deleted!") 
+                                setTimeout(()=> {
+                                  setDeleted(null)}
+                                  , 2000)
+                                 setError(null);
                                 console.log({data})})}}
                       >X</span>
 

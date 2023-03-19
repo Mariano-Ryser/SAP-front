@@ -84,6 +84,7 @@
     transition: 0.2s;
   }
   .liBloqued{
+    /* visibility: hidden; */
     width: 65%;
     margin: auto;
       position: relative;
@@ -107,6 +108,7 @@
   background-color: #ae391998;
 }
 .padlock{
+ /* pointer-events: fill; */
   display: block;
   position: absolute;
   bottom: -1rem;

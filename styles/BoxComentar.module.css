@@ -40,6 +40,35 @@ padding: 0.7rem;
   animation: alert 0.2s 1 ease-in;
 }
 
+.deleted{
+  position: fixed;
+  top: 33%;
+  left: 43%;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0rem 1rem 0rem 1rem;
+  color: white;
+  background-color: #0aae1afe;
+  transform: rotateZ(360deg);
+  scale: 2;
+  transition: 0.2s;
+  animation:deleted 1s 1 ease-in;
+}
+@keyframes deleted {
+  
+  0%{transform: rotateZ(0deg);
+  scale:0}
+
+  50%{
+    scale:3;
+    }
+  100%{
+    scale:2;
+    transform: rotateZ(360deg)}
+}
+
+
 .textArea{
   position: relative;
   background-color: rgb(87, 87, 87);
@@ -144,6 +173,7 @@ padding: 0.7rem;
   }
 
   .textArea{
+    font-family: 'Courier New', Courier, monospace;
     position: relative;
     width:100%;
     padding: 0.4rem;

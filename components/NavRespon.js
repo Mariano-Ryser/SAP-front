@@ -121,7 +121,7 @@ const NavRespon = () => {
               </Link>
 
           {/* CHAR CREATOR */}
-              <Link href="/">  
+              <Link href="javascript: void(0)">  
                 <li
                   id='li'
                   className={styles.liBloqued}
@@ -150,7 +150,7 @@ const NavRespon = () => {
               </Link>
             
           {/* 3D link */}
-              <Link href="/test"> 
+              <Link href="/ztest/test"> 
                 <li 
                 id='li'
                 className={styles.liBloqued}
@@ -173,7 +173,7 @@ const NavRespon = () => {
                   onMouseLeave={leaveA}
                   className="kleinForm">
                     
-                      <p className='parraf'>{ close }</p>
+                    <p className='parraf'>{ close }</p>
                       <input 
                       onChange={correct}
                       type='password'

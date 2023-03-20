@@ -1,7 +1,9 @@
 import React from 'react'
 import Image from "next/image"
 import { useEffect, useState } from 'react';
-// import BoxComentar from '../components/comentarBox/BoxComentar'
+
+import Test3 from '../ztest/test3'
+import Test4 from '../ztest/test4'
 
 function Lectura() {
     const initialState = (1)
@@ -15,8 +17,7 @@ function Lectura() {
     const tipografia = ()=> {
         var section = document.getElementsByClassName("section")
            for (let i = 0; i < section.length; i++) {
-            section[i].style.fontFamily = "Garamond"
-            section[i].style.fontSize = "1.5rem"
+            section[i].style.fontSize = "1.3rem"
           }
     }
 
@@ -106,6 +107,17 @@ return (
                   Stet clita kasd gubergren, no sea takimata
                    sanctus est Lorem ipsum dolor sit amet.
         </section>
+        <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
+       {/* CUBO MAGICO */}
+       <h3>With background-color</h3>
+        <Test3/>
+       <h3>With out background-color</h3>
+        <Test4/>
+        magna aliquyam erat, sed diam voluptua.
+                 At vero eos et accusam et justo duo dolores et ea rebum.
+                  Stet clita kasd gubergren, no sea takimata
+                   sanctus est Lorem ipsum dolor sit amet.
+        </section>
         <br></br>
       
     </div>
@@ -176,7 +188,7 @@ return (
                     color: #000;
                     display:block;
                     margin:auto;
-                    width: 20rem;
+                    width: 21rem;
                   }
                   .img{
                     background-size: contain;
@@ -184,7 +196,7 @@ return (
                     background-repeat: no-repeat;
                     margin:auto;
                     height:16rem;
-                    width: 20rem;
+                    width: 21rem;
                     {/* border: solid 1px black; */}
                   }
                   .img:hover{

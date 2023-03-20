@@ -28,9 +28,9 @@ const NavRespon = () => {
     //   },0);
     // }
 
-    //con aparicion y menos flujo de datos cuanticos XD
 
 
+    //con aparicion but, menos flujo de datos cuanticos XD
     const aside = document.getElementById('aside')
     if(
       aside.style.display == 'block'){
@@ -112,6 +112,16 @@ const NavRespon = () => {
                   <a className={styles.a}>Home</a>
                 </li>
               </Link>
+            {/* Lectura*/}
+               <Link href="/lectura/lectura">
+              
+              <li className={styles.li}
+              // onClick={padlook}
+              >
+                <a className={styles.a}>Lectura
+                </a>
+              </li>
+            </Link>
              
           {/* Mensajeria Link */}
               <Link href="/msj">

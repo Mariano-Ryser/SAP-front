@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from "../styles/NavRespon.module.css"
 import Image from "next/image"
+import Test5 from '../pages/ztest/test5';
 
 //C:\Users\MR22\stock-app\frontend\public
 const NavRespon = () => {
   const [close, setClose] = useState(null);
-
+  const categori = "/lectura/lectura"
 
 
    function openList(){
@@ -95,6 +96,7 @@ const NavRespon = () => {
         </div> 
 </nav>
 
+              
     <aside id='aside' className={styles.asideBar}>
     <header className={styles.header}>
           <div className={styles.boxSap}>
@@ -127,6 +129,11 @@ const NavRespon = () => {
               <Link href="/msj">
                 <li className={styles.li}>
                   <a className={styles.a}>Mensajeria</a>
+                </li>
+              </Link>
+              <Link href={categori}>
+                <li className={styles.li}>
+                  <a className={styles.a}>...</a>
                 </li>
               </Link>
 
@@ -172,8 +179,9 @@ const NavRespon = () => {
                 className={styles.padlock}></lock>
 
                   <a className={styles.a}>3D - click box! </a>
-                </li>
+                </li> 
               </Link>
+              
 
         
             {/* INSERT PASSWORD FORM */}
@@ -215,6 +223,7 @@ const NavRespon = () => {
                           width: 8rem;
                         }
                           .li{
+                     
                               width: 65%;
                               margin: auto;
                                 position: relative;
@@ -239,7 +248,6 @@ const NavRespon = () => {
            
           </ul>
         
-           
         
    </aside>
 

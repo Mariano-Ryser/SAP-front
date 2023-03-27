@@ -10,7 +10,7 @@ function Test3() {
 
 return (
   <>
-  <div   onclick={over}
+  <div onClick={over}
   className='box'>
       <div id="cube"className='cube'
      

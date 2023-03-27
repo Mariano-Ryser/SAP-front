@@ -137,31 +137,33 @@ return (
          provide scheduling context and make time more easily 
          measureable. Each of these days is identifiable by specific 
          plans, moods, and tones.</p>
-        
-        
+
         <p>Monday is viewed by many to be the worst day of the week, as it marks the return to work following the weekend,
          when most full-time employees are given two days off. Most students attend school in the morning and return 
          home in the afternoon usually from about eight until three or seven until two, and most workers go to work in the 
-         morning and return home in the evening.</p>
+         morning and return home in the evening.
+         </p>
         
         <p>Tuesday is the second day of the week, and is in many ways similar
          to Monday. Not a whole lot of changes, schedule-wise, between Tuesday and Monday;
           most individuals go to school or work and return home to watch television, play video games,
-           make plans with friends, spend time with family, read, or engage in a similar leisure-related activity.</p>
+           make plans with friends, spend time with family, read, or engage in a similar leisure-related activity.
+           </p>
         
         <p> Wednesday is the third day of the week, and serves as the middle of the work week; 
         some individuals refer to Wednesday as hump day, as once its workday is complete, 
         employees will have passed the work-week hump,
-         and will be on the downturn, as only two days on the job will remain in the week.</p>
+         and will be on the downturn, as only two days on the job will remain in the week.
+         </p>
        
         <p>Thursday is the fourth day of the week, and is viewed favorably by many,
-         as it is rather close to the end of the work week.</p>
+         as it is rather close to the end of the work week.
+         </p>
         
-
-
         <p>Friday is the fifth day of the week, and marks the end of the workweek and school-week for the vast majority 
         of employees and students. By Friday afternoon/evening, most students/workers cannot wait to leave and go home,
-         as they won not have to report back to school/work until Monday.</p>
+         as they won not have to report back to school/work until Monday.
+         </p>
         
         <p> Saturday is perhaps the most highly regarded day of the week. Because Sunday follows it 
        , everyone is free to stay out until late at night, having fun with plans or other leisure-related activities.
@@ -170,17 +172,19 @@ return (
         <p> Sunday is the final day of the week, 
         and is used by most as a day of rest. Fewer late-night 
         plans are made on Sundays, compared to Saturdays, as most
-        individuals have to wake up for work or school on Monday morning.</p>
-       
+        individuals have to wake up for work or school on Monday morning.
+        </p>
        
         </section>
         <br></br>
         
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         <h1>TypeScript - Introduccion</h1>
-        <p>En este módulo se presenta el lenguaje TypeScript, se explica por qué se creó y se muestra en qué puede beneficiarle su uso para el desarrollo en JavaScript.
-
-Además, aquí configurará un entorno de desarrollo de TypeScript con vistas a prepararse para ejercicios futuros.</p>
+        <p>En este módulo se presenta el lenguaje TypeScript, 
+          se explica por qué se creó y se muestra en qué puede beneficiarle su uso para el 
+          desarrollo en JavaScript. Además, aquí configurará un entorno de desarrollo de TypeScript con vistas 
+          a prepararse para ejercicios futuros.
+        </p>
         </section>
        
       

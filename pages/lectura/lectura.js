@@ -165,7 +165,7 @@ return (
         
         <p> Saturday is perhaps the most highly regarded day of the week. Because Sunday follows it 
        , everyone is free to stay out until late at night, having fun with plans or other leisure-related activities.
-        To be sure, Saturday is generally thought of as a day to partake in hobbies that couldn't otherwise be enjoyed during the regular week.
+        To be sure, Saturday is generally thought of as a day to partake in hobbies that could nott otherwise be enjoyed during the regular week.
        </p>
         <p> Sunday is the final day of the week, 
         and is used by most as a day of rest. Fewer late-night 

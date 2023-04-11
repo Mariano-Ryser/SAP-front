@@ -1,47 +1,51 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
+
 
 function Test7() {
+  class ProductoElectronico {
+    nombre: string;
+    precio: number;
+    descripcion: string;
+  
+    constructor(nombre: string, precio: number, descripcion: string) {
+      this.nombre = nombre;
+      this.precio = precio;
+      this.descripcion = descripcion;
+    }
 
-  if (typeof window !== "undefined") {
-    var box = document.querySelector<HTMLElement>(".box")
+    mostrarInformacion(): void {
+      console.log(`El producto ${this.nombre} tiene un precio de ${this.precio} y su descripción es: ${this.descripcion}`);
+    }
   }
-  function click(){
-    box.style.backgroundColor = "red"
-  }
-  console.log(box)
+  const producto1 = new ProductoElectronico("Laptop", 1200, "Laptop ultraligera con procesador Intel Core i7 y pantalla de alta resolución.");
+  const producto2 = new ProductoElectronico("Smartphone", 800, "Smartphone con cámara de alta resolución y batería de larga duración.");
 
-
-var speeds = {
-  pause:500,
-  slow:120,
-  normal:70,
-  fast:40
-}
-
-    var textLines = [
-      {string: "Hey",speed:20},
-      {string: "What's up?",speed:20}
-    ]
 
 
 return (
   <>
-  <div className='box' onClick={click}></div>
+  <div className='box'>
 
-   
+    <p className="text">{producto1.nombre}</p>
+    <p className="text">{producto1.precio}</p>
+    <p className="text">{producto1.descripcion}</p>
+    <p className="text"></p>
+
+  </div>
+
+
+
+ 
+
    <style jsx>{`
-                  .box{
-                    background-color:pink;
-                    margin: auto;
-                    width: 100%;
-                    height: 30rem;
+                   .box{
+                    background-color:white;
+                    width:50%;
+                    margin:auto;
                   } 
-@media (max-width: 600px) {
+            
+            @media (max-width: 600px) {
                  .box{
-                    margin: auto;
-                    width: 100%;
-                    height: 30rem;
                   } 
 }
          `}</style>

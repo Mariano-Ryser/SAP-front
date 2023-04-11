@@ -3,13 +3,13 @@ import { useEffect, useState } from 'react';
 // import BoxComentar from '../components/comentarBox/BoxComentar'
 
 function Test() {
- const initialState = [0]
+ const initialState = null;
 
   const [numer, setNumer] = useState(initialState)
 
   const handleClick = ()=> {
     for(let i = 0; i < 20; i++){
-        var numer = Math.floor(Math.random() * 38)
+        var numer:number = Math.floor(Math.random() * 38)
         setNumer(numer)
         setTimeout(()=>{
         },1000);
@@ -28,7 +28,7 @@ function Test() {
           para.style.margin = "0.3rem"
           para.style.padding= "0.3rem"
           para.style.display = "inline-block"
-      para.innerHTML = "Numer " + numer;
+          para.innerHTML = "Numer " + numer;
     }
     document.getElementById("myDIV").appendChild(para);
     // document.getElementById("myDIV").appendChild(numer);
@@ -52,9 +52,7 @@ return (
      <div id='myDIV'></div>
      </div>
 
-
-
-   
+  
 
      <style jsx>{`
                 .button{

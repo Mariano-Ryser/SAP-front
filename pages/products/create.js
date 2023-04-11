@@ -17,6 +17,7 @@ function Create() {
         console.log(inputName)
         console.log(inputValue)
     }
+    
     const handleClick = async(e)=> {
         e.preventDefault()
         try {

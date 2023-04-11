@@ -1,4 +1,4 @@
-
+// Aqui Activamos TypeScript!!! Tenemos un problema en resolbeJsonModule
 {
   "compilerOptions": {
     "target": "es5",
@@ -17,13 +17,15 @@
     "module": "esnext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "moduleResolution":"node",
   },
   "include": [
+    
     "next-env.d.tsx",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "pages/ztest/test5.js", "pages/personaje.js", "components/comentarBox/BoxComentar.js", "components/Footer.js", "components/Cabezera.js", "components/Layout.js", "components/NavRespon.jsx", "components/NavRespon.tsx", "pages/ztest/test3.js"  ],
   "exclude": [
     "node_modules"
   ]

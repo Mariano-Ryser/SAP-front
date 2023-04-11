@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from "next/image"
+// import Image from "next/image"
 import { useEffect, useState } from 'react';
 
 import Test3 from '../ztest/test3'
@@ -8,6 +8,10 @@ import Test5 from '../ztest/test5'
 import Test6 from '../ztest/test6'
 
 function Lectura() {
+  // This code is to use Selectors with Document
+  if (typeof window !== "undefined") {
+  }
+
     const initialState = (1)
     const [gross, setGross] = useState(initialState)
 
@@ -17,7 +21,7 @@ function Lectura() {
     }
 
     const tipografia = ()=> {
-        var section = document.getElementsByClassName("section")
+        var section = document.querySelectorAll<HTMLElement>("section")
            for (let i = 0; i < section.length; i++) {
             section[i].style.fontSize = "1.3rem"
           }

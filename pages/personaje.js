@@ -88,16 +88,9 @@ function Personaje() {
                         value={personaje.surname}
                         onChange={handleChange}
                   ></input>
-
-                    <span>GS</span><input
-                        className={style.input}
-                        type='text'
-                        name='gs'
-                        value={personaje.surname}
-                        onChange={handleChange}
-                  ></input>
-                <br></br>
-                
+ 
+                <br></br>                
+               
                 <span>Number</span>
                 <input
                     className={style.input}
@@ -106,6 +99,7 @@ function Personaje() {
                     value={personaje.age}
                     onChange={handleChange}
                  ></input>
+                 
                 <br></br>
                 <span>Email</span><input
                     className={style.input}

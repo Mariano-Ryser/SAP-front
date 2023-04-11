@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from "next/image"
+// import Image from "next/image"
 import { useEffect, useState } from 'react';
 
 import Test3 from '../ztest/test3'
@@ -13,11 +13,15 @@ function Lectura() {
 
     
     const grosse = ()=> {
-        setGross(gross + 0.1)
+        setGross(gross + 0.01)
+    }
+
+    const grosseOut = ()=>{
+      setGross(gross - 0.01)
     }
 
     const tipografia = ()=> {
-        var section = document.getElementsByClassName("section")
+        var section = document.querySelectorAll<HTMLElement>("section")
            for (let i = 0; i < section.length; i++) {
             section[i].style.fontSize = "1.3rem"
           }
@@ -195,11 +199,15 @@ return (
     <button
      className='button'
      onClick={tipografia}
-     ></button>
+     >Tipograf</button>
      <button
      className='button2'
      onClick={grosse}
-     ></button>
+     >Size+</button>
+      <button
+     className='button3'
+     onClick={grosseOut}
+     >Size-</button>
     
      <style jsx>{`
                 .img{
@@ -220,14 +228,22 @@ return (
                     top: 2rem;
                     left:0.4rem;
                     background-color: white;
-                    height:50px;
+                    height:40px;
                     width:70px;
                 }.button2{
                     position: fixed;
                     top: 5rem;
                     left:0.4rem;
                     background-color: white;
-                    height:50px;
+                    height:40px;
+                    width:70px;
+                }
+                .button3{
+                    position: fixed;
+                    top: 8rem;
+                    left:0.4rem;
+                    background-color: white;
+                    height:40px;
                     width:70px;
                 }
                 .box{
@@ -255,8 +271,8 @@ return (
                     font-size: 1.1em;
                     color: #000;
                     display:block;
-                    margin:auto;
-                    width: 21rem;
+                    margin: auto;
+                    width: 27rem;
                   }
                   .img{
                     background-size: contain;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from '../../styles/BoxComentar.module.css'
-import Image from "next/image"
+// import Image from "next/image"
 
 function BoxComentar(){
   const current = new Date();

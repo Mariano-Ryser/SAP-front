@@ -9,7 +9,6 @@ const NavRespon = () => {
   const [close, setClose] = useState(null);
   const categori = "/lectura/lectura"
 
-
    function openList(){
 
     // const burger = document.getElementById('burger')
@@ -53,19 +52,18 @@ const NavRespon = () => {
     //   burger.style.transform = 'rotateZ(90deg)'
     // }
   }
-
   function padlook(){
     setClose("Close")
   }
   function leaveA(){
     setClose(null)
   }
-
   const correct = (e) =>{
-    const lock = document.getElementsByTagName("lock")
+    const lock = document.querySelectorAll<HTMLElement>("#padlock")
     const inputValue = e.target.value
 
     if(inputValue === "1234") { 
+      const li = document.querySelectorAll<HTMLElement>("li")
        for (let i = 0; i < li.length; i++) {
         li[i].className = styles.li;
        }
@@ -78,21 +76,24 @@ const NavRespon = () => {
       //   padlock[e].display = "none"
       //  }
        
-
       // return;
   }
 
 }
 
-  return (
+return (
     <>    
-
+   
 <nav className={styles.nav}>
+
         <div className={styles.img}>
          <Link href="/"><h1 className={styles.logo}></h1></Link> 
         </div>
-        <div id='burger' className={styles.burger} onClick={openList}>
-         <Image alt='Burger-Icon' src={'/img/Alienverde.gif'} height={100} width={70}></Image>
+
+      <div id='burger' className={styles.burger} onClick={openList}>
+    
+         <Image alt='Burger-Icon' src={'/img/Alienverde.gif'}
+          height={100} width={70}></Image>
         </div> 
 </nav>
 
@@ -138,30 +139,30 @@ const NavRespon = () => {
               </Link>
 
           {/* CHAR CREATOR */}
-              <Link href="javascript: void(0)">  
+              <Link href="/personaje">  
                 <li
                   id='li'
                   className={styles.liBloqued}
                   >
-                   <lock
+                   <div
                        onClick={padlook}
                        id='padlock'
-                      className={styles.padlock}></lock>
+                      className={styles.padlock}></div>
                   <a className={styles.a}>Chars Creator</a>
                 </li>
               </Link>
 
           {/* PRODUCT CREATOR link */}
           
-              <Link href="/msj"> 
+              <Link href="products/create"> 
                 <li 
                 id='li'
                 className={styles.liBloqued}
                  >
-                <lock
+                <div
                 onClick={padlook}
                 id='padlock'
-                className={styles.padlock}></lock>
+                className={styles.padlock}></div>
                   <a className={styles.a}>Product Creator</a>
                 </li>
               </Link>
@@ -173,12 +174,12 @@ const NavRespon = () => {
                 className={styles.liBloqued}
                   >
                   
-                <lock
+                <div
                 onClick={padlook}
                 id='padlock'
-                className={styles.padlock}></lock>
+                className={styles.padlock}></div>
 
-                  <a className={styles.a}>3D - click box! </a>
+                  <a className={styles.a}>Number test </a>
                 </li> 
               </Link>
               
@@ -201,6 +202,7 @@ const NavRespon = () => {
                       ></input>
 
                       <style jsx>{`
+                      
                        .kleinForm{
                           border-radius:5px;
                           height:4rem;
@@ -223,7 +225,6 @@ const NavRespon = () => {
                           width: 8rem;
                         }
                           .li{
-                     
                               width: 65%;
                               margin: auto;
                                 position: relative;
@@ -238,6 +239,7 @@ const NavRespon = () => {
                                 color: rgb(255, 255, 255);
                                 transition: 0.2s;
                               }
+                              
         
                         `}</style>
 

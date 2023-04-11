@@ -1,6 +1,5 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
-// import BoxComentar from '../components/comentarBox/BoxComentar'
+// import { useEffect, useState } from 'react';
 
 function Test5() {
 
@@ -36,9 +35,7 @@ return (
                     0% {
                     transform: rotate3d(0, 0, 0, 0);
                     }
-                    {/* 50% {
-                    transform: rotate3d(2, 2, 5, 5140deg);
-                    } */}
+                   
                     100% {
                     transform: rotate3d(2, 2, 1.2, 360deg);
                     }

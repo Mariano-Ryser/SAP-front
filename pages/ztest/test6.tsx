@@ -1,8 +1,10 @@
 import React from 'react'
 
 
-function Test4() {
+function Test6() {
 // var container = document.querySelector(".text")
+
+
 
 var speeds = {
   pause:500,
@@ -42,5 +44,5 @@ return (
   )
 }
 
-export default Test4
+export default Test6
 

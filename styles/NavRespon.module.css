@@ -9,7 +9,6 @@
     display: block;
   }
 }
-
 .nav{
   position: fixed;
    bottom: 4rem; 
@@ -40,7 +39,6 @@
   font-weight: 900;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 .asideBar{
   display: none;
    /* filter: blur(1px); */
@@ -166,6 +164,7 @@
     margin: 1.2rem;
     cursor: pointer;
   }
+
 
   
   @media (max-width: 600px) {

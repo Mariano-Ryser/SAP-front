@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 import styles from "../styles/Icons.module.css";
-import Image from "next/image"
+// import Image from "next/image"
 
 
 const Icons = () => {

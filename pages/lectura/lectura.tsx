@@ -210,13 +210,13 @@ return (
      >Size-</button>
     
      <style jsx>{`
-                .img{
-                    background-size: contain;
+                .img{ 
+                   background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
                     margin:auto;
-                    height:30rem;
-                    width: 32rem;
+                    height:28rem;
+                    width: 30rem;
                     transform: scale(1);
                     transition:0.2s;
                   }
@@ -272,7 +272,7 @@ return (
                     color: #000;
                     display:block;
                     margin: auto;
-                    width: 27rem;
+                    width: 20rem;
                   }
                   .img{
                     background-size: contain;
@@ -280,7 +280,7 @@ return (
                     background-repeat: no-repeat;
                     margin:auto;
                     height:16rem;
-                    width: 21rem;
+                    width: 20rem;
                     {/* border: solid 1px black; */}
                   }
                   .img:hover{

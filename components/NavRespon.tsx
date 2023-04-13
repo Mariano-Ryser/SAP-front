@@ -152,6 +152,20 @@ return (
                 </li>
               </Link>
 
+               {/* Icons */}
+               <Link href="/icons">  
+                <li
+                  id='li'
+                  className={styles.liBloqued}
+                  >
+                   <div
+                       onClick={padlook}
+                       id='padlock'
+                      className={styles.padlock}></div>
+                  <a className={styles.a}>icons</a>
+                </li>
+              </Link>
+
           {/* PRODUCT CREATOR link */}
           
               <Link href="products/create"> 

@@ -34,7 +34,7 @@
   background-color: transparent;
 }
 .sap{
-  color: rgb(2, 204, 2);
+  color: rgb(144, 144, 144);
   font-size: 3rem;
   font-weight: 900;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -55,11 +55,13 @@
    padding-top: 8.1rem;
 }
 .ul{
+  /* border:solid red 1px; */
   margin-top: 0px;
   padding: 0;
   list-style-type: none;
 }
 .a{
+  /* border:solid red 1px; */
   font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
   text-decoration: none;
   /* color: rgb(255, 255, 255); */
@@ -67,12 +69,15 @@
   font-weight: 900;
 }
 .li{ 
-  width: 65%;
+  /* border:solid red 1px; */
+  border-radius: 1rem;
+  width: 45%;
   margin: auto;
     position: relative;
     align-items: center;
     align-content: center;
-    background-color: #5c579dd5;
+    background-color: #404040d5;
+    border: solid 1px #404040d5;
     margin-top: 0.2rem;
     margin-bottom: 2rem;
     padding-top: 0.9rem;
@@ -99,6 +104,7 @@
   }
 .li:hover{
   cursor: pointer;
+  border: solid 1px white;
   background-color: #1a9526c1;
 }
 .liBloqued:hover{
@@ -107,7 +113,7 @@
 }
 .padlock{
  /* pointer-events: fill; */
-  display: block;
+  display: none;
   position: absolute;
   bottom: -1rem;
   right: 15%;
@@ -203,7 +209,6 @@
   }
 
   .a{
-    
     font-size: 1.3rem;
   }
   .asideBar::-webkit-scrollbar {
@@ -232,7 +237,7 @@
       width: 90%;
     }
     .padlock{
-      display: block;
+      display: none;
       position: absolute;
       bottom: -1rem;
       right: 1.5rem;

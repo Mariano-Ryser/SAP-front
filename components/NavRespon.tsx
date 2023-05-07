@@ -28,8 +28,6 @@ const NavRespon = () => {
     //   },0);
     // }
 
-
-
     //con aparicion but, menos flujo de datos cuanticos XD
     const aside = document.getElementById('aside')
     if(
@@ -87,7 +85,7 @@ return (
 <nav className={styles.nav}>
 
         <div className={styles.img}>
-         <Link href="/"><h1 className={styles.logo}></h1></Link> 
+         <Link href="/home"><h1 className={styles.logo}></h1></Link> 
         </div>
 
       <div id='burger' className={styles.burger} onClick={openList}>
@@ -107,7 +105,7 @@ return (
 
           <ul className={styles.ul}>
             {/* HOME*/}
-              <Link href="/">
+              <Link href="/home">
               
                 <li className={styles.li}
                 // onClick={padlook}
@@ -142,7 +140,7 @@ return (
               <Link href="/personaje">  
                 <li
                   id='li'
-                  className={styles.liBloqued}
+                  className={styles.li}
                   >
                    <div
                        onClick={padlook}
@@ -156,7 +154,7 @@ return (
                <Link href="/icons">  
                 <li
                   id='li'
-                  className={styles.liBloqued}
+                  className={styles.li}
                   >
                    <div
                        onClick={padlook}
@@ -171,7 +169,7 @@ return (
               <Link href="products/create"> 
                 <li 
                 id='li'
-                className={styles.liBloqued}
+                className={styles.li}
                  >
                 <div
                 onClick={padlook}
@@ -185,7 +183,7 @@ return (
               <Link href="/ztest/test"> 
                 <li 
                 id='li'
-                className={styles.liBloqued}
+                className={styles.li}
                   >
                   
                 <div
@@ -197,8 +195,6 @@ return (
                 </li> 
               </Link>
               
-
-        
             {/* INSERT PASSWORD FORM */}
             {/* ASI PODEMOS MAPEAR ELEMENTOS CON UN BUEN TEMPLET*/}
               {close &&(

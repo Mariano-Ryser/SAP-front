@@ -36,12 +36,12 @@ function Lectura() {
     
 return (
   <>
-    {/* <form>
-      <input type='text' name='text'></input>
-      <button onClick={text}></button>
-    </form> */}
+ 
     
     <div className="box">
+
+    
+
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         Ahora escribimos un texto cualquiera para ver como se ve a la hora de leer en la 
         pantalla del celular, los textos siguientes son sin sentido, solamente para rellenar

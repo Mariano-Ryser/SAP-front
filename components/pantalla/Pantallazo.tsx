@@ -6,7 +6,6 @@ function Pantallazo() {
 function click(){
     const logo =  document.getElementById('logo')
 
-
     logo.style.transition = "opacity 1s, visibility 1s linear";
     logo.style.opacity = "0";
     logo.style.visibility = "hidden";
@@ -33,12 +32,10 @@ return (
             src={'/img/Alienverde.gif'}
             height={280} width={200}></Image>
 
+    <div className="lds-facebook"><div></div><div></div><div></div></div>
         </div>
 
     </div>
-
-
-    
 
 
 
@@ -55,9 +52,54 @@ return (
            .logo{
             cursor:pointer;
             position:absolute;
-            top:40%;
-            left:43%;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%)
            }
+           .lds-facebook {
+            z-index:3;
+            display: inline-block;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top:110%;
+            left:50%;
+            transform:translate(-50%, -50%)
+          }
+          .lds-facebook div {
+            display: inline-block;
+            border-radius:4rem;
+            position: absolute;
+            left: 8px;
+            width: 23px;
+            background-color:rgb(122, 212, 221);
+            animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          }
+          .lds-facebook div:nth-child(1) {
+            left: -20px;
+            animation-delay: -0.35s;
+          }
+          .lds-facebook div:nth-child(2) {
+            left: 32px;
+            animation-delay: -0.17s;
+          }
+          .lds-facebook div:nth-child(3) {
+            left: 86px;
+            animation-delay: 0;
+          }
+          @keyframes lds-facebook {
+            0% {
+              top: 8px;
+              height: 64px;
+            }
+            50%, 100% {
+              top: 24px;
+              height: 32px;
+              border-radius:4rem;
+              background-color:rgb(21, 212, 21);
+            }
+          }
+
                  
 @media (max-width: 600px) {
     .pantallazo{
@@ -69,11 +111,7 @@ return (
             height:100%;
             background-color:black;
            }
-           .logo{
-            position:absolute;
-            top:33%;
-            left:23%;
-           }
+           
                  
 }
 

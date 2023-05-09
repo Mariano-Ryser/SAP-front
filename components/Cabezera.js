@@ -17,7 +17,7 @@ const Cabezera = () => {
                 <span className={styles.Date}>
                   <Date/>
                 </span>
-         
+
         </div>
        
         

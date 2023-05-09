@@ -8,6 +8,7 @@ const Layout = ({ children}) => {
               <NavRespon />   
                    <Cabezera />  
              { children }
+             
               {/* <Footer />     */}
         </div>
     );

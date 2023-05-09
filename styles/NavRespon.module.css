@@ -76,14 +76,14 @@
     position: relative;
     align-items: center;
     align-content: center;
-    background-color: #404040d5;
+    background-color: #484848d5;
     border: solid 1px #404040d5;
-    margin-top: 0.2rem;
-    margin-bottom: 2rem;
-    padding-top: 0.9rem;
-    height: 4rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.7rem;
+    padding: 0.26rem;
+    height: 3rem;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(214, 214, 214);
     transition: 0.2s;
   }
   .liBloqued{
@@ -226,11 +226,15 @@
     position: relative;
     align-items: center;
     align-content: center;
-    margin-top: 0.33rem;
-    margin-bottom: 2rem;
-    padding-top: 1.23rem;
-    height: 4.3rem;
+    background-color: #484848d5;
+      border: solid 1px #404040d5;
+      margin-top: 0.1rem;
+      margin-bottom: 0.7rem;
+      padding: 0.26rem;
+    height: 2.9rem;
   }
+
+ 
 
     .liBloqued{
       display: block;

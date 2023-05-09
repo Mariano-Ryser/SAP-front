@@ -5,8 +5,8 @@
     align-items: center;
     position: relative;
     margin: auto;
+    width:40rem;
     height: 3rem;
-    background-color: rgba(0, 0, 0, 0.574);
     border-bottom: 1px solid rgba(173, 172, 172, 0.282);
 }
 
@@ -26,10 +26,9 @@
 }
 .Date{
     position: relative;
-    margin: 0rem;
-    padding: 0.7rem;
+    margin-right: 1rem;
     text-align: end;
-    color: #000000;
+    color: #dedede;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     font-size: 1rem;
@@ -38,8 +37,8 @@
 @media (max-width:600px){ 
 
 .cabezera{
+    width: 90%;
     display: flex;
-    
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -53,7 +52,6 @@
 
 .name{
     /* border:solid red 1px; */
-    color: rgb(82, 82, 82);
     letter-spacing: 0.05rem;
     margin: 1.7em;
     margin-left: 0.5rem;

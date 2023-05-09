@@ -24,7 +24,6 @@ return (
 
         <div 
         onClick={click}
-        
         className='logo'>
 
            <Image

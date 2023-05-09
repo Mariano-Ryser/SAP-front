@@ -1,4 +1,4 @@
-
+import Link from 'next/link'
 import Pantallazo from '../components/pantalla/Pantallazo'
 // import Image from 'next/image' 
 // import Link from 'next/link';
@@ -10,9 +10,10 @@ export default function Home() {
   return (
     <>
    
+   
   <Pantallazo/>
   <ul>
-    <li>Preparacion automatica probando</li>
+  <Link href="/posts/titulo"><li>Preparacion automatica probando</li></Link>
     <li>Otro titulo al azar</li>
     <li>Seguimos programando escuchando a ! migue granados y la CURDA!</li>
     <li>Otro campo para completar y probar links</li>
@@ -25,9 +26,14 @@ export default function Home() {
     <li>i dont know</li>
     <li>me paso de rombo</li>
     <li>Creacion</li>
-  </ul>
+  </ul> 
 
   <style jsx>{`
+    ul{
+      width:40rem;
+      margin: auto;
+      padding:0rem;
+    }
     li{
       font-family: 'Courier New', Courier, monospace;
       line-height: 1.7rem;
@@ -43,13 +49,13 @@ export default function Home() {
       list-style:none;
       color:white;
     }
+      
+@media (max-width: 600px) {
     ul{
-      width:40rem;
+      width:95%;
       margin: auto;
       padding:0rem;
     }
-      
-@media (max-width: 600px) {
   li{
       font-family: 'Courier New', Courier, monospace;
       line-height: 1.7rem;
@@ -64,11 +70,6 @@ export default function Home() {
       line-height: 1.7rem;
       list-style:none;
       color:white;
-    }
-    ul{
-      width:95%;
-      margin: auto;
-      padding:0rem;
     }
            
                  

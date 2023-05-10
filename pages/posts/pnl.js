@@ -1186,6 +1186,10 @@ El poder en que radica la diferencia, consiste en establecer
 pautas concretas de comunicación interna orientadas de una 
 manera positiva y fructífera.</p></section>
 
+<br></br>
+<br></br>
+<br></br>
+
 
 <style jsx>{`
 h1,h2,h3{

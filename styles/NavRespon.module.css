@@ -34,10 +34,9 @@
   background-color: transparent;
 }
 .sap{
-  color: rgb(144, 144, 144);
-  font-size: 3rem;
-  font-weight: 900;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(172, 172, 172);
+  font-size: 1.7rem;
+  font-family: monospace;
 }
 .asideBar{
   display: none;
@@ -62,26 +61,25 @@
 }
 .a{
   /* border:solid red 1px; */
-  font: 400 20px/1.5 "Source Sans Pro", "Open Sans", Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+  font: 400 20px/1.5 monospace;
   text-decoration: none;
   /* color: rgb(255, 255, 255); */
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1.3rem;
 }
 .li{ 
   /* border:solid red 1px; */
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   width: 45%;
   margin: auto;
     position: relative;
     align-items: center;
     align-content: center;
-    background-color: #484848d5;
+    background-color: #232323d5;
     border: solid 1px #404040d5;
     margin-top: 0.1rem;
     margin-bottom: 0.7rem;
     padding: 0.26rem;
-    height: 3rem;
+    height: 2.5rem;
     text-align: center;
     color: rgb(214, 214, 214);
     transition: 0.2s;
@@ -104,8 +102,8 @@
   }
 .li:hover{
   cursor: pointer;
-  border: solid 1px white;
-  background-color: #1a9526c1;
+  border: solid 1px rgb(93, 93, 93);
+  background-color: #3f3f3fc1;
 }
 .liBloqued:hover{
   cursor: pointer;
@@ -226,12 +224,12 @@
     position: relative;
     align-items: center;
     align-content: center;
-    background-color: #484848d5;
-      border: solid 1px #404040d5;
-      margin-top: 0.1rem;
-      margin-bottom: 0.7rem;
-      padding: 0.26rem;
-    height: 2.9rem;
+    background-color: #232323d5;
+    border: solid 1px #404040d5;
+    margin-top: 0.1rem;
+    margin-bottom: 0.7rem;
+    padding: 0.26rem;
+    height: 2.5rem;
   }
 
  

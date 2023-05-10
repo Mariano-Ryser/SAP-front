@@ -113,16 +113,22 @@ return (
                   <a className={styles.a}>Home</a>
                 </li>
               </Link>
-            {/* Lectura*/}
-               <Link href="/lectura/lectura">
-              
-              <li className={styles.li}
-              // onClick={padlook}
-              >
-                <a className={styles.a}>Lectura
-                </a>
-              </li>
-            </Link>
+
+                {/* Icons */}
+                <Link href="/icons">  
+                <li
+                  id='li'
+                  className={styles.li}
+                  >
+                   <div
+                       onClick={padlook}
+                       id='padlock'
+                      className={styles.padlock}></div>
+                  <a className={styles.a}>Icons</a>
+                </li>
+              </Link>
+
+         
              
           {/* Mensajeria Link */}
               <Link href="/msj">
@@ -130,12 +136,7 @@ return (
                   <a className={styles.a}>Mensajeria</a>
                 </li>
               </Link>
-              <Link href={categori}>
-                <li className={styles.li}>
-                  <a className={styles.a}>...</a>
-                </li>
-              </Link>
-
+        
           {/* CHAR CREATOR */}
               <Link href="/personaje">  
                 <li
@@ -150,19 +151,7 @@ return (
                 </li>
               </Link>
 
-               {/* Icons */}
-               <Link href="/icons">  
-                <li
-                  id='li'
-                  className={styles.li}
-                  >
-                   <div
-                       onClick={padlook}
-                       id='padlock'
-                      className={styles.padlock}></div>
-                  <a className={styles.a}>icons</a>
-                </li>
-              </Link>
+             
 
           {/* PRODUCT CREATOR link */}
           
@@ -194,6 +183,17 @@ return (
                   <a className={styles.a}>Number test </a>
                 </li> 
               </Link>
+
+                 {/* Lectura*/}
+                 <Link href="/lectura/lectura">
+              
+              <li className={styles.li}
+              // onClick={padlook}
+              >
+                <a className={styles.a}>Fonts-test
+                </a>
+              </li>
+            </Link>
               
             {/* INSERT PASSWORD FORM */}
             {/* ASI PODEMOS MAPEAR ELEMENTOS CON UN BUEN TEMPLET*/}

@@ -13,7 +13,7 @@ export default function Home() {
    
   <Pantallazo/>
   <ul>
-  <Link href="/posts/titulo"><li>Preparacion automatica probando</li></Link>
+  <Link href="/posts/pnl"><li>PNL - Spanish</li></Link>
     <li>Otro titulo al azar</li>
     <li>Seguimos programando escuchando a ! migue granados y la CURDA!</li>
     <li>Otro campo para completar y probar links</li>

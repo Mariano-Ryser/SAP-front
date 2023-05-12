@@ -4,7 +4,7 @@ export default function one() {
     return (
       <>
       <div className='tula'>
-      https://www.youtube.com/watch?v=A0BmLYHLPZs
+         https://www.youtube.com/watch?v=A0BmLYHLPZs
       </div>
 
       <style jsx>{`

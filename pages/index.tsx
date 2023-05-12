@@ -13,7 +13,7 @@ export default function Home() {
    
   <Pantallazo/>
   <ul>
-  <Link href="/posts/pnl"><li>PNL - Spanish</li></Link>
+  <Link href="/posts/pnl"><li>Principios de la PNL</li></Link>
   <Link href="/posts/conciencia"><li>La magia de la Conciencia</li></Link>
   
 
@@ -30,7 +30,7 @@ export default function Home() {
       font-family: 'Courier New', Courier, monospace;
       line-height: 1.7rem;
       list-style:none;
-      color: rgb(191, 191, 191);
+      color: yellow;
       margin: 0.5rem 0.5rem 0.5rem 0.5rem;
       border-bottom:solid gray 1px;
     }

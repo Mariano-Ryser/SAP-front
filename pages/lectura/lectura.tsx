@@ -11,13 +11,12 @@ function Lectura() {
     const initialState = (1)
     const [gross, setGross] = useState(initialState)
 
-    
     const grosse = ()=> {
-        setGross(gross + 0.01)
+        setGross(gross + 0.05)
     }
 
     const grosseOut = ()=>{
-      setGross(gross - 0.01)
+      setGross(gross - 0.05)
     }
 
     const tipografia = ()=> {
@@ -32,8 +31,6 @@ function Lectura() {
     const img2 = "inputSystem.jpeg"
     const img3 = "js1.jpeg"
 
- 
-    
 return (
   <>
  
@@ -196,22 +193,23 @@ return (
 
 
     {/* BOTONES GROSSE BUCHSTABE*/}
-    <button
+    {/* <button
      className='button'
      onClick={tipografia}
-     >Tipograf</button>
+     >Tipograf</button> */}
+
      <button
      className='button2'
      onClick={grosse}
-     >Size+</button>
+     >+</button>
       <button
      className='button3'
      onClick={grosseOut}
-     >Size-</button>
+     >-</button>
     
      <style jsx>{`
                 .img{ 
-                   background-size: contain;
+                    background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
                     margin:auto;
@@ -220,9 +218,11 @@ return (
                     transform: scale(1);
                     transition:0.2s;
                   }
+
                 .img:hover{
-                  transform: scale(1.2);
+                  transform: scale(1.01);
                 }
+
                 .button{
                     position: fixed;
                     top: 2rem;
@@ -230,7 +230,10 @@ return (
                     background-color: white;
                     height:40px;
                     width:70px;
-                }.button2{
+                }
+                .button2{
+                    font-size:2rem;
+                    border-radius:4px;
                     position: fixed;
                     top: 5rem;
                     left:0.4rem;
@@ -239,6 +242,8 @@ return (
                     width:70px;
                 }
                 .button3{
+                    font-size:2rem;
+                    border-radius:4px;
                     position: fixed;
                     top: 8rem;
                     left:0.4rem;

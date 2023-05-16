@@ -8,6 +8,51 @@ const Conciencia = () => {
 
     <section>
     <h1>Conciencia</h1>
+    <p>La conciencia es uno de los mayores enigmas de la ciencia 
+      si miramos a nuestro alrededor comprobaremos que la mayoria de los ojetos 
+      que nos rodean son inanimados, sin embargo existen muchas otras formas de vidas como las plantas y las bacterias,
+      pero solo el ser humano y algunos animales han desarrollado conciencia, pero que es la conciencia?
+      Se define como la capacidad de una forma de vida, de reconocerce asi misma, tener conocimiento y una percepcion de su misma existencia y todo lo que lo rodea,
+      tambien se define como la conciencia en el mundo mismo, resulta algo increible que de unas cuantas particulas elementales y unas leyes fisicas, la materia evolucione y adquiera una
+      complejidad suficiente para generar vida y organismos concientes como nosotros mismos, no hay una maravilla semejante en el universo, mires donde mires en el cosmos veras estrellas,
+      gigantescas estrellas de plasmas generadas por fusion nuclear, enormes planetas de gas y rocosos, nebulosas, atomos de hidrogenos y otros elementos,
+      pero en ningun lugar hemos encontrado la belleza de la vida que alberga en nuestro mundo y en particular los seres concientes capaces de reconocerce asi mismos y 
+      hacerce preguntas, es como si el mismo cosmos hubiera despertado y se estuviera preguntando asi mismo quien soy? y de donde vengo?
+      <br></br>
+      <br></br>
+      Es algo asombroso como se puede crear vida de materia inanimada, la vida es la capacidad que tiene los organismos de nacer, tomar energia del medio, adaptarce, reproducirse y morir,
+      la ciencia esta intentando descubrir como se puede originar la vida apartir de la materia inerte, desde compuestos organicos.
+      <br></br>
+      <br></br>
+      Stanley Miller y Harold Urey de la universidad de chicago comprobaron con sus experimentos pioneros realizados en los años 50
+      que los aminoacidos con los que se forman las proteinas, los ladrillos de la vida, se forman apartir de compuestos sencillos, pero nadie de momento 
+      a conseguido crear un ser vivo en un laboratorio.
+      <br></br>
+      Es evidente que la materia inerte se puede
+       convertir en materia viva, despues de varios procesos quimicos, 
+       con mucho tiempo 
+      y adaptacion a las leyes universales,
+      se puede poner un buen ejemplo con nuestro universo.
+      <br></br>
+      <br></br>
+      La vida es algo casi milagroso, sigue evolucionando y en su complejidad empezo a crear seres que eran consientes de si mismos, nos permite reconocernos y al mismo tiempo 
+       el entorno, como nos volvimos concientes? donde comenzo todo? 
+       la conciencia no llego a su estado actual de repente, lo mas probable es que haya surgido de criaturas menos complejas y que la seleccion natural se encargara 
+       de ir uniendo bloques simples en una secuencia de pasos microscopicos, 
+       tecnicamente la conciencia no es necesesaria para vivir, como ejemplo los <a target='_blank' href='https://en.wikipedia.org/wiki/Placozoa'>placozoos</a> son seres pluricelulares que funcionan 
+       de modo similar a una maquina programados biologicamente hablando para desplazarce al azar en busca de alimentos, si hay comida cerca de ellos son mas lentos, si no hay nada que merezca la pena aceleran el ritmo, 
+       es un modo casi automatico de Gran efectividad, pero eso no los hace ser concientes de si mismo ni de su entorno para que se desarrollara una consciencia deberian haberse sumado muchas actitudes complejas en el transcurso de millones de años, aveces para sobrevivir,
+       no basta con tomar acciones automaticas sino entender el entorno, anticiparse a lo que esta por venir y escapar de los depredadores, 
+       <br></br>
+      <br></br>
+      Los <a target='_blank' href='https://de.wikipedia.org/wiki/Trilobiten'>Trilobites</a> fueron los primeros animales que desarrollaron ojos 
+      compuestos de celulas fotorreceptoras capaces de ver los cambios de luz y en movimiento, una parte del universo Ya podia contemplarse asi mismo y ver su entorno, como era de esperar en un entorno hostil la vista 
+      tampoco era suficiente, y los animales tambien fueron desarrollando memoria con la capacidad de recordar y reconocer lugares y otros animales y asi fuimos sumando la percepcion del tiempo 
+       gratificacion prevencion, anticipacion y desarrollo del lenguaje, 
+       hoy dia lo vemos como algo normal pero tenemos superpoderes que gracias a la seleccion natural nos fota de capacidades increibles para entender mejor el mundo, aprender 
+       incluso anticiparse a lo que esta por venir.
+
+    </p>
    <p>Piensa.
 ¿De quién es la magia que hace salir al sol cada otoño?
 ¿Quién hace que el pájaro gorjee sobre el esbelto árbol?</p>  
@@ -31,7 +76,7 @@ Y danza.</p>
 es la danza sin danzante.
 Así es como danzan los místicos</p>
 
-<h2>Prologo</h2>
+
 
 <p>La magia de la conciencia es el segundo libro de Anam Thubten
     basado en las enseñanzas impartidas en la Fundacion Dharmatam pt. Richmond, en California.
@@ -2811,7 +2856,9 @@ perdidos y seamos libres, de una vez para siempre. Depende de nosotros.</p>
 
 
 <style jsx>{`
-  
+ a{
+  color:yellow;
+ } 
 h1,h2,h3{
   color:white;
 }

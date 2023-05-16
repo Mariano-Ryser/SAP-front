@@ -129,7 +129,6 @@ return (
               </Link>
 
          
-             
           {/* Mensajeria Link */}
               <Link href="/msj">
                 <li className={styles.li}>
@@ -150,8 +149,6 @@ return (
                   <a className={styles.a}>Chars Creator</a>
                 </li>
               </Link>
-
-             
 
           {/* PRODUCT CREATOR link */}
           
@@ -180,7 +177,7 @@ return (
                 id='padlock'
                 className={styles.padlock}></div>
 
-                  <a className={styles.a}>Number test </a>
+                  <a className={styles.a}>Numeros Test </a>
                 </li> 
               </Link>
 

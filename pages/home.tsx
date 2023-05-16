@@ -19,7 +19,7 @@ export default function Homee() {
       font-family: 'Courier New', Courier, monospace;
       line-height: 1.7rem;
       list-style:none;
-      color: rgb(191, 191, 191);
+      color: yellow;
       margin: 0.5rem 0.5rem 0.5rem 0.5rem;
       border-bottom:solid gray 1px;
     }
@@ -41,7 +41,7 @@ export default function Homee() {
       font-family: 'Courier New', Courier, monospace;
       line-height: 1.7rem;
       list-style:none;
-      color: rgb(191, 191, 191);
+      color: yellow;
       margin: 0.5rem 0.5rem 0.5rem 0.5rem;
       border-bottom:solid gray 1px;
     }

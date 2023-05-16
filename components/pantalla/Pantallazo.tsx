@@ -31,8 +31,8 @@ return (
             src={'/img/Alienverde.gif'}
             height={280} width={200}></Image>
 
-    <div className="lds-facebook"><div></div><div></div><div></div></div>
-        </div>
+    {/* <div className="lds-facebook"><div></div><div></div><div></div></div> */}
+      </div>
 
     </div>
 

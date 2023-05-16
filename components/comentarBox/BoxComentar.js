@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import styles from '../../styles/BoxComentar.module.css'
 // import Image from "next/image"
 
 function BoxComentar(){
@@ -19,10 +18,7 @@ function BoxComentar(){
   const [successMessage, setSuccessMessage] = useState(null);
   const [deletedMessage, setDeleted] = useState(null);
 
-
-
   //  ALERTAS DE COMPLETADO DE CASILLERO 
-  
   const handleChange = (e) =>{
         const inputValue = e.target.value
         const inputName = e.target.name
@@ -47,12 +43,10 @@ function BoxComentar(){
       if(comentar.author.trim() === "") {
         setError("Debes indicar un Author")
         return;
-    }
-      
+    }    
       else{
         setSuccessMessage("Agregado con Exito!!")
       }
-    
        setTimeout(()=> {
            setSuccessMessage(null)}
            , 2000)
@@ -80,13 +74,9 @@ function BoxComentar(){
             console.log("Aqui algo anda mal")
             console.log({err})
         })
-
   }
-
   const handleDeleted = (e)=> {
     e.preventDefault()
-
-
 }
 
   const fetchComentars= () =>{
@@ -98,22 +88,19 @@ function BoxComentar(){
      })
   }
 
-  
-  
     useEffect(()=>{
       fetchComentars();
      },[])
 
   return (
     <>
-    <form className={styles.form}>
-
-      <p className={styles.date}> {datee}</p>
+    <form className="form">
+      <p className="date"> {datee}</p>
 
       {/* Input Titulo */}
       <input
     placeholder='Titulo'
-    className={styles.authorInput}
+    className="authorInput"
      maxLength="20"
      type='text'
      name='titulo'
@@ -123,7 +110,7 @@ function BoxComentar(){
 
     {/* Input Text area */}
       <textarea
-      className={styles.textArea}
+      className="textArea"
       placeholder='Añade un comentario..'
       maxLength="9999999"
       type='text'
@@ -137,7 +124,7 @@ function BoxComentar(){
     {/* Input Autor */}
     <input
     placeholder='Author..'
-    className={styles.authorInput}
+    className="authorInput"
      maxLength="9999999"
      type='text'
      name='author'
@@ -147,14 +134,14 @@ function BoxComentar(){
 
       {/* Send Button */}
         <button 
-        className={styles.button}
+        className="button"
         onClick={handleClick}
         >Send
         </button>
         {
                 error && 
                 (
-                    <div className={styles.error}>
+                    <div className="error">
                         { error }
                     </div>
                 ) 
@@ -163,7 +150,7 @@ function BoxComentar(){
             {
                 successMessage && 
                 (
-                    <div className={styles.success}>
+                    <div className="success">
                         { successMessage }
                     </div>
                 ) 
@@ -172,7 +159,7 @@ function BoxComentar(){
           {
                 deletedMessage && 
                 (
-                    <div className={styles.deleted}>
+                    <div className="deleted">
                         { deletedMessage }
                     </div>
                 ) 
@@ -184,17 +171,17 @@ function BoxComentar(){
         {/* MAPEO DE ELEMENTOS */}
         <div>
              {comentars.map(({_id, titulo, text, author}) => (
-                <div key={_id} className={styles.comentarBox}>
-                    <h1 className={styles.titulo}>{titulo}</h1>
-                    <span className={styles.text}>-{text}...</span> 
+                <div key={_id} className="comentarBox">
+                    <h1 className="titulo">{titulo}</h1>
+                    <span className="text">-{text}...</span> 
                     <br></br>
                     <br></br>
-                    <span className={styles.author}>-{author}...</span> 
+                    <span className="author">-{author}...</span> 
                     
                 <div >
               {/* Button Deleted */}
               <span
-                        className={styles.x}
+                        className="x"
                           onClick={
                               ()=>{
                                 fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
@@ -218,7 +205,210 @@ function BoxComentar(){
        
 
     </form>
+    <style jsx>{`
+        
+.date{
+  color: #84ba64;
+  font-size: 2rem;
+font-weight: 900;
+margin: 0rem;
+padding: 0.7rem;
+font-family:monospace;
+}
 
+/* FORMULARIO A COMPLETAR */
+.form{
+  position: relative;
+  width: 40rem;
+  margin: auto;
+  padding-top: 0.7rem;
+}
+
+.error{
+  font-family:monospace;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0.4rem;
+  margin: 0rem 1rem 0rem 1rem;
+  color: rgb(226, 226, 226);
+  background-color: #f40808ca;
+  transition: 0.2s;
+  animation: alert 0.2s 1 ease-in;
+}
+@keyframes alert {
+  0%{ opacity: 0%;}
+  100%{opacity: 100%;}
+  
+}
+.success{
+  font-family:monospace;
+  display: inline-block;
+  padding: 0.4rem;
+  margin: 0rem 1rem 0rem 1rem;
+  color: white;
+  background-color: #15c31bdf;
+  transition: 0.2s;
+  animation: alert 0.2s 1 ease-in;
+}
+
+.deleted{
+  position: fixed;
+  top: 33%;
+  left: 43%;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0rem 1rem 0rem 1rem;
+  color: white;
+  background-color: black;
+  transform: rotateZ(360deg);
+  scale: 2;
+  transition: 0.2s;
+  animation:deleted 1s 1 ease-in;
+  font-family:monospace;
+}
+@keyframes deleted {
+  
+  0%{transform: rotateZ(0deg);
+  scale:0}
+
+  50%{
+    scale:3;
+    }
+  100%{
+    scale:2;
+    transform: rotateZ(360deg)}
+}
+
+.textArea{
+  position: relative;
+  background-color: rgb(87, 87, 87);
+  width:100%;
+  color: rgb(240, 240, 240);
+  border-radius:0.2rem;
+  margin-bottom: 0.6rem;
+  height: 6rem;
+ font-size:1.1rem;
+ font-family:monospace; 
+  }
+
+  .textArea::placeholder {
+    color: #e7e7e7;
+    display: block;
+    margin-bottom: 1rem;
+    border: #383838 ;
+    padding: 0.4rem;
+    font-size:1.1rem;
+  font-family:monospace; 
+  }
+
+  .authorInput{
+    background-color: rgb(87, 87, 87);
+    color: #e7e7e7;
+    display: block;
+    margin-bottom: 1rem;
+    margin-top:0.2rem;
+    border: #383838 ;
+    padding: 0.4rem;
+    font-size:1.1rem;
+   font-family:monospace; 
+  }
+
+  .authorInput::placeholder{
+    background-color: rgb(87, 87, 87);
+    color: #e7e7e7;
+    font-size:1.1rem;
+  font-family:monospace; 
+  }
+
+/* SEND BUTTON */
+.button{
+  height: 2rem;
+  width: 5rem;
+  margin-bottom: 0.6rem;
+  color: aliceblue;
+  background-color: rgb(65, 62, 60);
+  border-radius: 0.2rem;
+}
+
+/* NOTA */
+
+/* TTITULO EN TEXTO */
+.titulo{
+  color: yellow;
+  font-family:monospace;
+  line-height: 0.3rem;
+}
+
+.comentarBox{
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  padding-bottom: 2rem;
+  border: solid rgb(56, 56, 56) 1px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family:monospace;
+  color: white;
+}
+.author{
+  font-size: 0.9rem;
+  display: block;
+  color: white;
+  text-align: start;
+}
+
+.x{
+  position: absolute;
+  right: 1rem;
+  color: rgb(251, 251, 251);
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+/* MOBIL - STYLE */
+
+@media (max-width: 600px) {
+  .form{
+    position: relative;
+    width: 95%;
+    overflow: hidden;
+    margin: auto;
+    padding-top: .1rem;
+  }
+  .date{
+    display:flex;
+    justify-content:end;
+    color: #ced721c6;
+    font-family:monospace;
+    font-size: 0.8rem;
+    font-weight: 900;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: 0rem;
+  }
+
+  .textArea{
+    font-family:monospace;
+    position: relative;
+    width:100%;
+    padding: 0rem;
+    height: 6rem;
+   }
+  .button{
+    height: 2rem;
+    width: 5rem;
+    margin-top: 0rem;
+    color: aliceblue;
+    background-color: rgb(65, 62, 60);
+    border-radius: 0.2rem;
+  }
+.comentarBox{
+  font-family:monospace;
+}
+}
+
+         `}</style>
     
   </>
   )

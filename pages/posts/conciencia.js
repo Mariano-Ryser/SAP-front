@@ -39,13 +39,13 @@ const Conciencia = () => {
        el entorno, como nos volvimos concientes? donde comenzo todo? 
        la conciencia no llego a su estado actual de repente, lo mas probable es que haya surgido de criaturas menos complejas y que la seleccion natural se encargara 
        de ir uniendo bloques simples en una secuencia de pasos microscopicos, 
-       tecnicamente la conciencia no es necesesaria para vivir, como ejemplo los <a target='_blank' rel="noopener" href='https://en.wikipedia.org/wiki/Placozoa'>placozoos</a> son seres pluricelulares que funcionan 
+       tecnicamente la conciencia no es necesesaria para vivir, como ejemplo los <a target='_blank' rel="noopener noreferrer" href='https://en.wikipedia.org/wiki/Placozoa'>placozoos</a> son seres pluricelulares que funcionan 
        de modo similar a una maquina programados biologicamente hablando para desplazarce al azar en busca de alimentos, si hay comida cerca de ellos son mas lentos, si no hay nada que merezca la pena aceleran el ritmo, 
        es un modo casi automatico de Gran efectividad, pero eso no los hace ser concientes de si mismo ni de su entorno para que se desarrollara una consciencia deberian haberse sumado muchas actitudes complejas en el transcurso de millones de años, aveces para sobrevivir,
        no basta con tomar acciones automaticas sino entender el entorno, anticiparse a lo que esta por venir y escapar de los depredadores, 
        <br></br>
       <br></br>
-      Los <a target='_blank' rel="noopener" href='https://de.wikipedia.org/wiki/Trilobiten'>Trilobites</a> fueron los primeros animales que desarrollaron ojos 
+      Los <a target='_blank' rel="noopener noreferrer" href='https://de.wikipedia.org/wiki/Trilobiten'>Trilobites</a> fueron los primeros animales que desarrollaron ojos 
       compuestos de celulas fotorreceptoras capaces de ver los cambios de luz y en movimiento, una parte del universo Ya podia contemplarse asi mismo y ver su entorno, como era de esperar en un entorno hostil la vista 
       tampoco era suficiente, y los animales tambien fueron desarrollando memoria con la capacidad de recordar y reconocer lugares y otros animales y asi fuimos sumando la percepcion del tiempo 
        gratificacion prevencion, anticipacion y desarrollo del lenguaje, 

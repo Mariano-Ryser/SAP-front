@@ -2,67 +2,57 @@ import React, { useState, useEffect } from 'react';
 
 
 const TestPagination = () => {
+  const initialState = (1)
+  const [gross, setGross] = useState(initialState)
 
-  
+  const grosse = ()=> {
+      setGross(gross + 0.05)
+  }
+
+  const grosseOut = ()=>{
+    setGross(gross - 0.05)
+  }
   return (
     <>
+  <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
+    <h1>Prueba de texto</h1>
+    <p>ejemplo parrafo lorem </p>
+    <p>Lorem Ipsum es simplemente el texto de relleno 
+      de las imprentas y archivos de texto. Lorem Ipsum ha 
+      sido el texto de relleno estándar de las industrias 
+      desde el año 1500, cuando un impresor (N. del T. 
+      persona que se dedica a la imprenta) desconocido 
+      usó una galería de textos y los mezcló de tal
+       manera que logró hacer un libro de textos especimen.
+        No sólo sobrevivió 500 años, sino que tambien ingresó 
+        como texto de relleno en documentos electrónicos,
+         quedando esencialmente igual al original. Fue
+          popularizado en los 60s con la creación de las hojas
+           "Letraset", las cuales contenian pasajes de 
+           Lorem Ipsum, y más recientemente con software 
+           de autoedición, como por ejemplo Aldus PageMaker, 
+           el cual incluye versiones de Lorem Ipsum.</p>
+  </section>
 
-    <section id="page" className='page'>
-      <h1>Pagina 1</h1>
-      <p>
-      Bla bla bla , probando pagination, que trata de explicar cómo funciona nuestro cerebro y definir sus patrones mentales, facilitándonos el conocimiento de nosotros mismos y permitiéndonos cambiarlos utilizando determinadas técnicas con el objetivo de optimizar nuestra capacidad de comunicación. 
-      </p>  
-    </section>
-
-    <section id="page1" className='page' >
-      <h1>Pagina 2</h1>
-      <p>
-      
-      Disciplina que trata de explicar cómo funciona nuestro cerebro y definir sus patrones mentales, facilitándonos el conocimiento de nosotros mismos y permitiéndonos cambiarlos utilizando determinadas técnicas con el objetivo de optimizar nuestra capacidad de comunicación. 
-      </p>  
-    </section>
-
-    <section id="page1" className='page'>
-      <h1>Pagina 3</h1>
-      <p>
-      La Programación Neurolingüística es una disciplina que trata de explicar cómo funciona nuestro cerebro y definir sus patrones mentales, facilitándonos el conocimiento de nosotros mismos y permitiéndonos cambiarlos utilizando determinadas técnicas con el objetivo de optimizar nuestra capacidad de comunicación. 
-      </p>  
-    </section>
-
-
-
-<div className='botonera-box'>
-    <button id="prevBtn" className='back'> back </button>
-    <button id="nextBtn" className='next'
-    > next </button>
-</div>
-
-
-<style jsx>{`
-.page {
-  display: none;
-}
-.page:first-child{
-  display: block;
-}
-
-  .botonera-box{
-    display:flex;
-    justify-content:center;
-  }
-  button{
-    height:1.3rem;
-    width:3rem;
-    margin:1rem;
-  }
+  <button
+     className='button2'
+     onClick={grosse}
+     >+</button>
+      <button
+     className='button3'
+     onClick={grosseOut}
+     >-</button>
+          <style jsx>{`
+          a{
+  color:yellow;
+ } 
 h1,h2,h3{
   color:white;
 }
 
     section{
-      display:none;
       font-family: monospace;
-      font-size:1rem;
+      font-size:1.3rem;
         color: rgb(191, 191, 191);
         width:40rem;
         margin:auto;
@@ -70,28 +60,60 @@ h1,h2,h3{
         margin-top: 1rem;
         padding:0rem;
     }
-    .section.active{
-      display:block;
-    }
-           .img{ 
-                   background-size: contain;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    margin:auto;
-                    height:32rem;
-                    width: 40rem;
-                    transform: scale(1);
-                    transition:0.2s;
-                  }
+                  .button2{    
+                    font-size:2rem;
+                    border-radius:10px;
+                    position: fixed;
+                    bottom:5rem;
+                    left:1rem;
+                    background-color: white;
+                    height: 2.4rem;
+                    width: 2.5rem;
+                    box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
+                }
+                .button3{
+                    font-size:2rem;
+                    border-radius:10px;
+                    position: fixed;
+                    bottom: 2rem;
+                    left:1rem;
+                    background-color: white;
+                    height: 2.4rem;
+                    width: 2.5rem;
+                    box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
+                }
 
     @media (max-width: 600px) {
-        section{
-        width:95%;
-        margin:auto;
-        margin-bottom:1rem;
-        margin-top: 1rem;
-        padding:0rem;
-            }   
+               .button2{
+                    font-size:2rem;
+                    border-radius:10px;
+                    position: fixed;
+                    bottom:5rem;
+                    left:1rem;
+                    background-color: white;
+                    height: 2.4rem;
+                    width: 2.5rem;
+                    box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
+                }
+                .button3{
+                    font-size:2rem;
+                    border-radius:10px;
+                    position: fixed;
+                    bottom: 2rem;
+                    left:1rem;
+                    background-color: white;
+                    height: 2.4rem;
+                    width: 2.5rem;
+                    box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
+                  }
+
+                  section{
+                  width:95%;
+                  margin:auto;
+                  margin-bottom:1rem;
+                  margin-top: 1rem;
+                  padding:0rem;
+                      }   
 
             .img{
                     background-size: contain;
@@ -102,8 +124,8 @@ h1,h2,h3{
                     width: 95%;
                     {/* border: solid 1px black; */}
                   }
-    }   
-`}</style>
+      }   
+        `}</style>
 
   </>
   )

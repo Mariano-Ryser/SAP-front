@@ -25,7 +25,7 @@
     "next-env.d.tsx",
     "**/*.ts",
     "**/*.tsx"
-, "pages/ztest/test5.js", "pages/personaje.js", "components/comentarBox/BoxComentar.js", "components/Footer.js", "components/Cabezera.js", "components/Layout.js", "components/NavRespon.jsx", "components/NavRespon.tsx", "pages/ztest/test3.js"  ],
+, "pages/ztest/test5.js", "pages/personaje.js", "components/comentarBox/BoxComentar.js", "components/Footer.js", "components/Cabezera.js", "components/Layout.js", "components/NavRespon.jsx", "components/NavRespon.tsx", "pages/ztest/test3.js", "pages/testColor.js"  ],
   "exclude": [
     "node_modules"
   ]

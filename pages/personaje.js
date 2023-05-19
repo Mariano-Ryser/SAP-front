@@ -166,33 +166,54 @@ function Personaje() {
                 width:4rem
             }
             h1{
+                margin-top:0.3rem;
                 font-size:1.5rem;
+                color: ;
             }
         .container{
 }
 .form{
     color:white;
-    width: 75%;
+    width: 40rem;
     margin: auto;
     font-family:monospace;
-    font-size:1.2rem;
     padding:1rem;
-    border: solid white 2px;
+    border: solid 1px rgb(92, 92, 92);
 }
 .listBoxP{
-    font-size:1.2rem;
+    font-size:1rem;
     font-family:monospace;
-    padding:1rem;
+    padding:0.6rem;
     color:white;
-    width: 75%;
-    margin: 3rem auto 3rem auto;
-    border: solid white 2px;
+    width: 40rem;
+    margin: 0.3rem auto 0.3rem auto;
+    border: solid 1px rgb(92, 92, 92);
+    
 }
 .x{
 }
       
 @media (max-width: 600px) {
- 
+    span{
+    }
+    .form{
+    color:white;
+    width: 95%;
+    margin: auto;
+    font-family:monospace;
+    font-size:1rem;
+    padding: 0.5rem;
+    border: solid 1px rgb(92, 92, 92);
+}
+.listBoxP{
+    font-size:1rem;
+    font-family:monospace;
+    padding:0.6rem;
+    color:white;
+    width: 95%;
+    margin: 0.3rem auto 0.3rem auto;
+    border: solid 1px rgb(92, 92, 92);
+}
            
                  
 }

@@ -1,0 +1,24 @@
+.h1{
+    color: rgb(227, 227, 65);
+    font-family: monospace;
+}
+.h2{
+    color: rgb(199, 199, 199);
+    font-family: monospace;
+}
+.h3{
+    color: azure;
+    font-family: monospace;
+}
+.p{
+    color: azure;
+    font-family: monospace;
+}
+
+.box{
+    height: 10rem;
+    width: 10rem;
+    border:  solid 1px rgb(92, 92, 92);
+    box-shadow: 1px 1px 20px 1px rgba(83, 83, 83, 0.443);
+    margin: 2rem;
+}

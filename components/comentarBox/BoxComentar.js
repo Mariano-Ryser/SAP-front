@@ -84,7 +84,7 @@ function BoxComentar(){
          .then(res => res.json())
          .then( ({comentars}) =>{
           setComentars(comentars)
-             console.log('Comentarios:', comentars)
+          console.log('Comentarios:', comentars)
      })
   }
 

@@ -3,10 +3,20 @@ import React, { useState } from 'react';
 
 const Conciencia = () => {
 
+  const initialState = (1)
+  const [gross, setGross] = useState(initialState)
+
+  const grosse = ()=> {
+      setGross(gross + 0.05)
+  }
+
+  const grosseOut = ()=>{
+    setGross(gross - 0.05)
+  }
   return (
     <>
 
-    <section>
+    <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
     <h1>Conciencia</h1>
     <p>La conciencia es uno de los mayores enigmas de la ciencia 
       si miramos a nuestro alrededor comprobaremos que la mayoria de los ojetos 
@@ -299,7 +309,7 @@ vayamos irradiamos una gran paz y una enorme gentileza.
 <br></br>
 </p>
 </section>
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 <h1>Darle la vuelta a la conciencia</h1>
 <p>Cuando  leemos algún pasaje de las antiguas escrituras budistas, nos encontramos con
 el increíble suceso que describe la iluminación de Buda. Se dice que en el momento
@@ -2854,8 +2864,41 @@ perdidos y seamos libres, de una vez para siempre. Depende de nosotros.</p>
 
 <br></br>
 
+<button
+     className='button2'
+     onClick={grosse}
+     >+</button>
+      <button
+     className='button3'
+     onClick={grosseOut}
+     >-</button>
 
 <style jsx>{`
+
+                .button2{
+                    
+                    font-size:2rem;
+                    border-radius:10px;
+                    position: fixed;
+                    bottom:5rem;
+                    left:1rem;
+                    background-color: white;
+                    height: 2.4rem;
+                    width: 2.5rem;
+                    box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
+                }
+                .button3{
+                    font-size:2rem;
+                    border-radius:10px;
+                    position: fixed;
+                    bottom: 2rem;
+                    left:1rem;
+                    background-color: white;
+                    height: 2.4rem;
+                    width: 2.5rem;
+                    box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
+                }
+
  a{
   color:yellow;
  } 

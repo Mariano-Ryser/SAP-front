@@ -44,7 +44,7 @@ return (
         pantalla del celular, los textos siguientes son sin sentido, solamente para rellenar
         los <b>componentes futuros</b> futuros.
     
-        </section><br></br>
+        </section>
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         <h1>Web Errors</h1>
         <li>400 : Bad request</li>
@@ -54,7 +54,7 @@ return (
         <li><b>404 : Not Found</b></li>
         <li>405 : Method not allowed</li>
         </section>
-        <br></br>
+       
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         <h1>JavaScript Array methods</h1>
         <span>[4, 5, 6, 7].at(1)    // 5</span><br></br>
@@ -65,12 +65,12 @@ return (
 
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         <h1>JavaScript Array methods</h1>
-        <div className='img' 
+        {/* <div className='img' 
               style={{backgroundImage: `url('/img/${img}')`}}
-        ></div>
+        ></div> */}
         </section>
 
-        <br></br>
+       
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         Lorem ipsum dolor sit amet,
          conse
@@ -78,9 +78,9 @@ return (
                 dolore magna aliquyam erat, sed diam voluptua.
                  At vero eos et accusam et justo duo dolores et ea rebum.
                   Stet clita kasd gubergren, no sea takimata
-                  <div className='img' 
+                  {/* <div className='img' 
               style={{backgroundImage: `url('/img/${img1}')`}}
-        ></div>
+        ></div> */}
                    sanctus est Lorem ipsum dolor sit amet.
         </section>
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
@@ -89,9 +89,9 @@ return (
           sed diam nonumy eirmod tempor 
                 dolore magna aliquyam erat, sed diam voluptua.
                  At vero eos et accusam et justo duo dolores et ea rebum.
-                 <div className='img' 
+                 {/* <div className='img' 
               style={{backgroundImage: `url('/img/${img2}')`}}
-              ></div>
+              ></div> */}
                   Stet clita kasd gubergren, no sea takimata
                    sanctus est Lorem ipsum dolor sit amet.
         </section>
@@ -102,9 +102,9 @@ return (
     
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                sed diam nonumy eirmod tempor invidunt ut labore et
-               <div className='img' 
+               {/* <div className='img' 
               style={{backgroundImage: `url('/img/${img3}')`}}
-              ></div>
+              ></div> */}
                 dolore magna aliquyam erat, sed diam voluptua.
                  At vero eos et accusam et justo duo dolores et ea rebum.
                   Stet clita kasd gubergren, no sea takimata
@@ -121,7 +121,7 @@ return (
                   Stet clita kasd gubergren, no sea takimata
                    sanctus est Lorem ipsum dolor sit amet.
         </section>
-        <br></br>
+       
 
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
        {/* CUBO MAGICO */}
@@ -177,7 +177,6 @@ return (
         </p>
        
         </section>
-        <br></br>
         
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         <h1>TypeScript - Introduccion</h1>
@@ -208,20 +207,18 @@ return (
      >-</button>
     
      <style jsx>{`
+      h1{
+        margin:0.5rem;
+      }
                 .img{ 
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
-                    margin:auto;
+                    margin:0 auto 0 auto;
                     height:28rem;
                     width: 30rem;
-                    transform: scale(1);
-                    transition:0.2s;
                   }
 
-                .img:hover{
-                  transform: scale(1.01);
-                }
 
                 .button{
                     position: fixed;
@@ -252,6 +249,7 @@ return (
                     width:70px;
                 }
                 .box{
+                  font-family:monospace;
                     margin: auto;
                     width: 100%;
                     background-color: rgb(221, 221, 221);
@@ -277,20 +275,17 @@ return (
                     color: #000;
                     display:block;
                     margin: auto;
-                    width: 20rem;
+                    width: 95%;
                   }
                   .img{
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
-                    margin:auto;
-                    height:16rem;
-                    width: 20rem;
+                    margin:0 auto 0 auto;
+                    width: 95%;
                     {/* border: solid 1px black; */}
                   }
-                  .img:hover{
-                  transform: scale(1.1);
-                }
+                 
 }
 
                 

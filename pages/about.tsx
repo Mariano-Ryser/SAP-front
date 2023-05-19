@@ -1,7 +1,21 @@
 import Link from "next/link"
 import Image from "next/image"
 export default function Homee() {
-   
+    const icons = [
+        {img: "insta.png"},
+        {img: "css.gif"},
+        {img: "discord.png"},
+        {img: "git.png"},
+        {img: "js.png"},
+        {img: "linkedin.png"},
+        {img: "next.png"},
+        {img: "github.png"},
+        {img: "googleLogo.png"},
+        {img: "paint3d.png"},
+        {img: "html.gif"},
+        {img: "visual.gif"},
+        {img: "twiter.png"},
+      ]
   return (
     <>
     <div className="container">

@@ -99,7 +99,7 @@ return (
     <aside id='aside' className={styles.asideBar}>
     <header className={styles.header}>
           <div className={styles.boxSap}>
-              <h3  className={styles.sap}>Zap</h3>
+              <h3  className={styles.sap}>Ciencia-con</h3>
           </div>
     </header>
 
@@ -152,7 +152,7 @@ return (
 
           {/* PRODUCT CREATOR link */}
           
-              <Link href="products/create"> 
+              <Link href="/create"> 
                 <li 
                 id='li'
                 className={styles.li}

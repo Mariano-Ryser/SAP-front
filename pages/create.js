@@ -1,4 +1,4 @@
-import style from '../../styles/create.module.css'
+import style from '/styles/create.module.css'
 import { useState, useEffect } from 'react'
 function Create() {
     const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
@@ -51,9 +51,10 @@ function Create() {
     })
     }
 
+
     useEffect(()=>{
      fetchProducts();
-    },[]) //<------ [] -- aqui va 
+    },[]) //<------ 
 
   return (
     <>

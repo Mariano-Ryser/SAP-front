@@ -25,20 +25,30 @@ return (
         <div 
         onClick={click}
         className='logo'>
-
-           <Image
+          <h1>Ciencia-con</h1>
+           {/* <Image
             alt='Burger-Icon'
             src={'/img/Alienverde.gif'}
-            height={280} width={200}></Image>
+            height={280} width={200}></Image> */}
 
-    {/* <div className="lds-facebook"><div></div><div></div><div></div></div> */}
+    <div className="lds-facebook"><div></div><div></div><div></div></div> 
       </div>
 
     </div>
 
 
-
      <style jsx>{`
+      h1{
+        color:white;
+        font-family:monospace;
+        font-size:1.7rem;
+        animation:con 2s infinite alternate;
+      }
+      @keyframes con {
+        0%{ transform:scale(1)}
+        100%{transform:scale(1.2) }
+      }
+
            .pantallazo{
             z-index:2;
             position:absolute;
@@ -70,7 +80,7 @@ return (
             border-radius:4rem;
             position: absolute;
             left: 8px;
-            width: 23px;
+            width: 20px;
             background-color:rgb(122, 212, 221);
             animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
           }
@@ -89,11 +99,11 @@ return (
           @keyframes lds-facebook {
             0% {
               top: 8px;
-              height: 64px;
+              height: 30px;
             }
             50%, 100% {
               top: 24px;
-              height: 32px;
+              height: 20px;
               border-radius:4rem;
               background-color:rgb(21, 212, 21);
             }

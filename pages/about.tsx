@@ -3,17 +3,8 @@ import Image from "next/image"
 export default function Homee() {
     const icons = [
         {img: "insta.png"},
-        {img: "css.gif"},
-        {img: "discord.png"},
-        {img: "git.png"},
-        {img: "js.png"},
         {img: "linkedin.png"},
-        {img: "next.png"},
         {img: "github.png"},
-        {img: "googleLogo.png"},
-        {img: "paint3d.png"},
-        {img: "html.gif"},
-        {img: "visual.gif"},
         {img: "twiter.png"},
       ]
   return (
@@ -43,7 +34,23 @@ export default function Homee() {
 
     </div>
 
+    <div className="boxIcons"
+        //  style={{height: size}}
+         >
+         
+
+          {icons.map((item,index) => (
+            <div key={index}
+              //  onClick={()=>{topo()}}
+               className="icon"
+               style={{backgroundImage: `url('/img/${item.img}')`}}
+                >
+            </div>
+         ))}
+        </div>
+
   <style jsx>{`
+   
     .img{
         height:13rem;
         width:13rem;
@@ -71,6 +78,34 @@ export default function Homee() {
         font-size:1.3rem;
        
     }
+    .boxIcons{
+    display: none;
+    overflow: hidden;
+    gap: 0.5rem; 
+    grid-auto-rows: 8rem;
+    grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 4fr));
+    grid-template-columns: repeat(12,1fr);
+    padding-top: 1.4rem;
+    padding-bottom: 22px;
+    
+  }
+  .icon{
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 130px;
+   grid-column: span 2;
+   filter: blur(0.4px);
+   margin: auto;
+   transition:0.3s 
+  }
+  .icon:hover{
+    cursor: pointer;
+    transform: scale(105%) rotateZ(1.5deg);
+    filter: blur(0.0px); 
+  }
       
 @media (max-width: 600px) {
     .img{
@@ -89,7 +124,33 @@ export default function Homee() {
       margin: auto;
       padding:0rem;
     }
-           
+    .boxIcons{
+      display: none;
+      /* height: 240px; */
+      overflow: hidden;
+      gap: 0.4rem; 
+      grid-auto-rows: 5rem;
+      grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 5fr));
+      padding-top: 0.3rem;
+      padding-bottom: 12px;
+    }
+    .icon{
+      display: inline-block;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 70px;
+      width: 70px;
+     grid-column: span 3;
+     filter: blur(0.4px);
+     margin: auto;
+     transition:0.3s 
+    }
+    .icon:hover{
+      cursor: pointer;
+      transform: scale(105%) rotateZ(1.5deg);
+       filter: blur(0.0px); 
+    }
                  
 }
        

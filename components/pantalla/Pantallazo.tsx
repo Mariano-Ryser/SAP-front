@@ -39,6 +39,7 @@ return (
 
      <style jsx>{`
       h1{
+        margin-bottom:2.2rem;
         color:white;
         font-family:monospace;
         font-size:1.7rem;

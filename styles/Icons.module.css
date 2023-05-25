@@ -32,7 +32,7 @@
   
   @media (max-width:600px){ 
     .boxIcons{
-      background-color: rgba(7, 35, 126, 0.428);
+      background-color: rgb(21, 21, 21);
       display: grid;
       /* height: 240px; */
       overflow: hidden;

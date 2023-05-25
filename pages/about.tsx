@@ -19,8 +19,8 @@ export default function Homee() {
         </div>
         </div>    
         <p>
-    My name is Mariano, actually live in Zurich,
-    this is my humble portfolio where i can test
+    My name is Mariano, currently live in Zurich,
+    this is my humble portfolio on which i can test
     and write code every day.
         </p>
         <p>

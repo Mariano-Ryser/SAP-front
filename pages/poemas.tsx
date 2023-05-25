@@ -32,8 +32,8 @@ const [posts, setPosts] = useState([]); //useState having intial value as null a
                     <div>
                         {
                             posts.map((post) =>(
-                                <div className="posts">
-                                        <h3 className="titulo" key={post.id}>{post.title}</h3>
+                                <div  key={post.id} className="posts">
+                                        <h3 className="titulo" >{post.title}</h3>
                                         <p className="poema">{post.poem}</p>
                                         <p className="author">{post.author}</p>
                                 </div>

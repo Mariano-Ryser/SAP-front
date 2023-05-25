@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react';
 
 function Pantallazo() {
+
 function click(){
     const logo =  document.getElementById('logo')
 
@@ -15,15 +16,19 @@ function click(){
       }, 1000);
 
 }
+
+
     
 return (
   <>
+  
     <div
     id='logo'
     className='pantallazo'>
 
         <div 
         onClick={click}
+        
         className='logo'>
           <h1>Ciencia-con</h1>
            {/* <Image
@@ -35,6 +40,7 @@ return (
       </div>
 
     </div>
+   
 
 
      <style jsx>{`
@@ -127,6 +133,7 @@ return (
 
                 
          `}</style>
+         
  </>
   )
 }

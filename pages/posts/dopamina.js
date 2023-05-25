@@ -92,7 +92,7 @@ const dopamina = "dopamina.png"
             y no vas a poder comprometerte a realizar las tareas que te mantienen productivo, como seria estudiar o trabajar.
             <br></br>
             esas tareas que realmente importan para tu futuro y tu prosperidad sobre todo si constantemente tienes esas vocesitas de esos habitos toxicos,
-            "HEY ESTOY AQUI PARA APORTARTE TODO EL PLACER QUE NECESITAS".
+            HEY ESTOY AQUI PARA APORTARTE TODO EL PLACER QUE NECESITAS.
             <br></br>
             sera imposible entonces comprometerte a esas tareas arduas, dificil costosas.
             <br></br> Con la desintoxicacion dopaminica restableces a niveles naturales y regulas de nuevo estos sistemas de segregacion dopaminica.<br></br>
@@ -154,9 +154,10 @@ h1,h2,h3{
 }
 
     section{
-      font-family: monospace;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size:1.3rem;
-        color: rgb(191, 191, 191);
+      line-height: 1.74;
+      color: rgb(200, 200, 200);
         width:40rem;
         margin:auto;
         margin-bottom:1rem;

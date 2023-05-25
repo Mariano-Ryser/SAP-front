@@ -189,6 +189,38 @@ return (
                 </li> 
               </Link>
 
+              {/* API */}
+              <Link href="/apitest"> 
+                <li 
+                id='li'
+                className={styles.li}
+                  >
+                  
+                <div
+                onClick={padlook}
+                id='padlock'
+                className={styles.padlock}></div>
+
+                  <a className={styles.a}> Api coments lorem! </a>
+                </li> 
+              </Link>
+
+              {/* API POEMAS*/}
+              <Link href="/poemas"> 
+                <li 
+                id='li'
+                className={styles.li}
+                  >
+
+                <div
+                onClick={padlook}
+                id='padlock'
+                className={styles.padlock}></div>
+
+                  <a className={styles.a}>Api Poems XD! </a>
+                </li> 
+              </Link>
+
                  {/* Lectura*/}
                  <Link href="/lectura/lectura">
               

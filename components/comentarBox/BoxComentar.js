@@ -79,15 +79,15 @@ function BoxComentar(){
     e.preventDefault()
 }
 
-  const fetchComentars= () =>{
-      fetch(`${baseURL}/comentars`)
-         .then(res => res.json())
-         .then( ({comentars}) =>{
-          setComentars(comentars)
-          console.log('Comentarios:', comentars)
-     })
-  }
 
+const fetchComentars= () =>{
+    fetch(`${baseURL}/comentars`)
+       .then(res => res.json())
+       .then( ({comentars}) =>{
+        setComentars(comentars)
+        console.log('Comentarios:', comentars)
+   })
+}
     useEffect(()=>{
       fetchComentars();
      },[])
@@ -189,11 +189,15 @@ function BoxComentar(){
                                 .then((data) => {
                                 fetchComentars();
                                 setDeleted("Deleted!") 
+
                                 setTimeout(()=> {
                                   setDeleted(null)}
                                   , 2000)
+
                                  setError(null);
+
                                 console.log({data})})}}
+                                
                       >X</span>
 
                     </div>

@@ -3,23 +3,12 @@ import Link from "next/link"
 export default function Homee() {
   return (
     <>
- 
-  <ul>
-  <Link href="/posts/cinderella"><li>An Emancipated Cinderella</li></Link>
+<ul>
   <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link>
   <Link href="/posts/pnl"><li>Principios de la PNL</li></Link>
   <Link href="/posts/conciencia"><li>La magia de la Conciencia</li></Link>
-  <Link href="/posts/inteligencia"><li>Die Intelligenz</li></Link>
-  <Link href="/posts/pagination"><li>No todo es tan facil</li></Link>
-  <Link href="/posts/pagination"><li>Si tu supieras!</li></Link>
-  <Link href="/posts/pagination"><li>Conjugaciones Astronomicas</li></Link>
-  <Link href="/posts/pagination"><li>Einfach lectura</li></Link>
-  <Link href="/posts/pagination"><li>Worterbuch</li></Link>
-  <Link href="/posts/pagination"><li>YaTuSabes</li></Link>
-  
-
-  
-  </ul> 
+  <Link href="/posts/cinderella"><li>An Emancipated Cinderella</li></Link>
+</ul> 
 
   <style jsx>{`
     .link{
@@ -39,11 +28,21 @@ export default function Homee() {
       border-bottom:solid gray 1px;
     }
     li:hover{
+      background-color:green;
       cursor:pointer;
       font-family: 'Courier New', Courier, monospace;
       line-height: 1.7rem;
       list-style:none;
       color:white;
+      animation:6s lis infinite alternate;
+    }
+    @keyframes lis{
+      0%{
+      background-color:green;
+      }
+      100%{
+      background-color:black;
+      }
     }
       
 @media (max-width: 600px) {

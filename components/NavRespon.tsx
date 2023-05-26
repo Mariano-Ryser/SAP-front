@@ -222,7 +222,7 @@ return (
               </Link>
 
                  {/* Lectura*/}
-                 <Link href="/lectura/lectura">
+              <Link href="/lectura/lectura">
               
               <li className={styles.li}
               // onClick={padlook}
@@ -230,7 +230,18 @@ return (
                 <a className={styles.a}>Fonts-test
                 </a>
               </li>
-            </Link>
+              </Link>
+
+                  {/* LOGO COLORINCHE*/}
+                  <Link href="/logazo/logazo">
+              
+              <li className={styles.li}
+              // onClick={padlook}
+              >
+                <a className={styles.a}>Logazo colorete
+                </a>
+              </li>
+              </Link>
               
             {/* INSERT PASSWORD FORM */}
             {/* ASI PODEMOS MAPEAR ELEMENTOS CON UN BUEN TEMPLET*/}

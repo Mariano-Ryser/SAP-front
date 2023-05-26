@@ -17,8 +17,6 @@ function click(){
 
 }
 
-
-    
 return (
   <>
   
@@ -28,8 +26,8 @@ return (
 
         <div 
         onClick={click}
-        
         className='logo'>
+          
           <h1>Ciencia-con</h1>
            {/* <Image
             alt='Burger-Icon'

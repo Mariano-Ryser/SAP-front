@@ -1,13 +1,13 @@
 
 import React, {useEffect, useState} from "react";
-
-export default function Poemas() {
+import Link from "next/link";
+export default function Ciencia() {
 
 const [posts, setPosts] = useState([]); //useState having intial value as null array.
  const fetchData = ()=> {
 
     //fetch is used to fetch data from external source like url etc.
-    fetch("/api/poemas").then((response)=> {
+    fetch("/api/ciencia").then((response)=> {
 // https://jsonplaceholder.typicode.com/posts
 
 
@@ -28,14 +28,16 @@ const [posts, setPosts] = useState([]); //useState having intial value as null a
         <h1 className="h1">Poems</h1>
         {
             posts.length > 0 && (
-            <div>
-                    <div className="grid-container">
+            <div className="p">
+                    <div>
                         {
                             posts.map((post) =>(
+
                                 <div  key={post.id} className="posts">
+                                    <Link href={`${post.link}`}> 
                                         <h3 className="titulo" >{post.title}</h3>
-                                        <p className="poema">{post.poem}</p>
-                                        <p className="author">{post.author}</p>
+                                    
+                                    </Link> 
                                 </div>
                             ))
                         }
@@ -47,37 +49,32 @@ const [posts, setPosts] = useState([]); //useState having intial value as null a
 
 
   <style jsx>{`
-  .grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-gap: 0.1rem;
-}
-    .box{color:white}
-    .h1{
-        text-align:center;
-        color:pink;
-        font-family:monospace;
+        .box{color:white}
+
+        .h1{
+            text-align:center;
+            color:pink;
          }
-    .posts{
-        overflow: auto;
-        display:inline-block;
-        border:solid 2px green;
-        padding:1rem;
-        margin: 0.5rem;
-        height:auto;
+        .posts{
+            border:solid 2px pink;
+            padding:1rem;
+            margin: 1rem;
+            transition:0.2s;
+        }
+        .posts:hover{
+            background-color:red;
+            border:solid 2px pink;
+            padding:1rem;
+            margin: 1rem;
         }
         .titulo{
-            color:white;
-            font-family:monospace;
-
-        }
+            color:Pink
+            }
         .poema{
-            font-family:monospace;
-            color:Pink;
+            color:Pink
             }
         .author{
-            font-family:monospace;
-            color:Pink;
+            color:Pink
             }
     
    

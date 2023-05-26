@@ -19,6 +19,19 @@ const Cabezera = () => {
                   <Date/>
                 </span>
         </header>
+        {/* <aside className="aside">
+       
+     
+        </aside> */}
+        <style jsx>{`
+                .aside{
+                  position:absolute;
+                  top:0px;
+                  width:20rem;
+                  height:25rem;
+                  border:solid red 1px;
+                }
+                       `}</style>
   </>
   )
 }

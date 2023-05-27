@@ -6,7 +6,6 @@ import styles from "../styles/Icons.module.css";
 
 const Icons = () => {
 
-
 const icons = [
   {img: "insta.png"},
   {img: "Alienverde.gif"},

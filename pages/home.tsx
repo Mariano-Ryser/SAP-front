@@ -4,7 +4,7 @@ export default function Homee() {
   return (
     <>
 <ul>
-  <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link>
+  {/* <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link> */}
   <Link href="/posts/pnl"><li>Principios de la PNL</li></Link>
   <Link href="/posts/conciencia"><li>La magia de la Conciencia</li></Link>
   <Link href="/posts/cinderella"><li>An Emancipated Cinderella</li></Link>

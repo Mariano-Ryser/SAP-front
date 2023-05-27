@@ -25,7 +25,7 @@ const [posts, setPosts] = useState([]); //useState having intial value as null a
   return (
     <>
     <div className="box">
-        <h1 className="h1">Poems</h1>
+        <h1 className="h1">Poe</h1>
         {
             posts.length > 0 && (
             <div>
@@ -55,7 +55,7 @@ const [posts, setPosts] = useState([]); //useState having intial value as null a
     .box{color:white}
     .h1{
         text-align:center;
-        color:pink;
+        color:white;
         font-family:monospace;
          }
     .posts{
@@ -73,7 +73,7 @@ const [posts, setPosts] = useState([]); //useState having intial value as null a
         }
         .poema{
             font-family:monospace;
-            color:Pink;
+            color:green;
             }
         .author{
             font-family:monospace;

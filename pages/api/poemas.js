@@ -1,7 +1,5 @@
 export default function handler(req, res) {
     res.status(200).json(
-      
-        
              [
               { 
                 "title": "Sonnet 18",
@@ -63,10 +61,7 @@ export default function handler(req, res) {
                 "poem": "In the moonlit room, shadows dance,\nA phantom presence, a second chance.\nGlimpses of a ghostly figure, cold and gray,\nHaunting memories that never fade away.",
                 "author": "Edgar A. Guest"
               }
-
             ]
-         
-      
       )
   }
   

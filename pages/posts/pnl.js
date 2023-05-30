@@ -7,18 +7,27 @@ const hemisferios = "hemisferios.png"
 const hemi2 = "hemi2.png"
 
 
+const initialState = (1.3)
+const [gross, setGross] = useState(initialState)
 
+const grosse = ()=> {
+    setGross(gross + 0.05)
+}
+
+const grosseOut = ()=>{
+  setGross(gross - 0.05)
+}
   return (
     <>
 
-    <section>
+    <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
     <h1>PNL</h1>
     <p>
     La Programación Neurolingüística es una disciplina que trata de explicar cómo funciona nuestro cerebro y definir sus patrones mentales, facilitándonos el conocimiento de nosotros mismos y permitiéndonos cambiarlos utilizando determinadas técnicas con el objetivo de optimizar nuestra capacidad de comunicación. 
     </p>  
     </section>
 
-    <section>
+    <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
     La PNL es un sistema —o mejor dicho— un modelo, que
 basado en la comunicación, nos permite saber cómo
 construimos nuestros pensamientos, y de ese modo, de forma
@@ -70,7 +79,7 @@ realizar con mucho más esfuerzo y dedicación y aprovechar
 mejor los propios recursos, etc.
    </section>
 
-    <section>
+    <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
     Estas habilidades se consiguen principalmente a través de la
 observación y la utilización práctica de los datos sensoriales.
 Las personas tomamos información e incorporamos
@@ -117,14 +126,14 @@ procesos de selección y evaluación real de candidatos, etc.
 </section>
 
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 La Programación Neurolingüística incorpora diferentes áreas
 de estudio y aplicación, tales como la cibernética, la lingüística,
 la neurología, el modelado, la sociología, lo Sistémico, la terapia
 Gestalt, lo Conductual, la hipnosis Ericksoniana, etc.
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 Gracias al modelado (técnica de identificación de patrones o
 modelos operativos), los desarrolladores iniciales de la PNL;
 Richard Bandler y John Grinder, en un principio; y
@@ -138,7 +147,7 @@ patrones específicos accesibles para otras personas, para que al
 reproducirlas enriquezcan su capacidad de respuestas.
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 La PNL opera en el proceso y la forma (estructura
 profunda) y no sólo en los contenidos (estructura de superficie).
 El conocimiento y uso de una información sensorial precisa es
@@ -147,7 +156,7 @@ mensaje; y esto es lo que permite al profesional producir
 cambios rápidos y efectivos.
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 La conducta, desde el punto de vista (mapa) de la PNL, es
 una manifestación externa de nuestros estados internos y éstos
 a su vez están provocados por nuestras representaciones
@@ -161,7 +170,7 @@ creando imágenes, sonidos, sensaciones y olores internamente,
 podría experimentar de nuevo el valor de la conducta inicial.
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 Necesitamos comprender cómo este modelo neurológico se
 secuencia y representa mediante el lenguaje. También es
 importante conocer cómo esa secuencia puede programarse y
@@ -175,7 +184,7 @@ modelo que es la PNL, está libre de contenido, describiendo sin
 más, cómo algo trabaja y funciona.
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 La PNL utiliza en múltiples ocasiones cuentos y metáforas; y
 no podría ser de otra forma, teniendo en cuenta que los
 genios, muy especialmente Milton H. Erickson, de donde
@@ -184,7 +193,7 @@ el fin de introducir al alumno y al lector en esta habilidad
 lingüística que tanto ayuda a la generación de cambios.
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 En los primeros años de la década de los setenta, el
 estudiante de Psicología de la Universidad de Santa Cruz en
 California, Richard Bandler, y un profesor ayudante de lengua de
@@ -203,7 +212,7 @@ maestro de la época en el campo de la hipnoterapia y terapias
 no convencionales, Milton H. Erickson.
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 En un principio ninguno de los dos jóvenes investigadores
 pensaba en la creación de un nuevo método terapéutico, sino
 tan sólo en el estudio sistemático de las técnicas que utilizaban
@@ -240,7 +249,7 @@ Publications.
 <br></br>
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 El segundo volumen de este trabajo saldría un año después
 en la misma editorial.
 <br></br>
@@ -300,7 +309,7 @@ Lebeau, W. Mac Donald, G.Z. Laborde, T. James, W.Woodsmall,
 S. Jacobson y un largo etc.
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 Todos los anteriormente citados han ido aportando, desde su
 incorporación al campo de la PNL, nuevos modelos y nuevos
 enfoques de resolución y cambio. El número de publicaciones
@@ -317,7 +326,7 @@ modelo del mundo.
 
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 Hay cuatro postura o categorías de comunicación, según
 Virginia Satir, que las personas adoptan a causa del estrés. Es lo
 que podríamos, aunque no es así, considerar como los tipos de
@@ -354,7 +363,7 @@ siguientes: Apaciguador, Acusador, Computador y Distraedor.
 
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
   <h2>El apaciguador</h2>
  <h3> Utiliza palabras conciliadoras de acuerdo.</h3>
   <li>Lo que tu decidas está bien.</li>
@@ -368,7 +377,8 @@ Interiormente se dice:
   <li>Sin él/ella estoy muerto/a.</li>
   <li>No sirvo para nada.</li>
 </section>
-<section>
+
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 
 Su forma de hablar denota habitualmente la intención de
 congraciarse, agradar o disculparse. Nunca está en desacuerdo,
@@ -394,7 +404,7 @@ Comete violaciones de lectura mental.
 
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
   <h2>El acusador</h2>
  <h3> Usa palabras que expresan desacuerdo.</h3>
   <li>Nunca haces nada bien.</li>
@@ -430,7 +440,7 @@ Violaciones causa-efecto.
 </p>
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 <h1>EL COMPUTADOR - Súper- razonable</h1>
 <p>Usa palabras ultrarazonables</p>
 <p>Si uno lo observa cuidadosamente, se daría cuenta de que
@@ -468,7 +478,7 @@ diría “Juan me está molestando”</li>
 gente... Y nominalizaciones: Frustración, tensión, sospecha...</li>
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
   <h1>El distraedor</h1>
   <p>Utiliza palabras irrelevantes, carentes de sentido.</p>
   <p>Cuerpo angular y evasivo, como si estuviese en otra parte.</p>
@@ -506,7 +516,7 @@ respuestas.
 </p>
 
 </section>
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
   <p>
 Dice Virginia Satir: - En mi trabajo de investigación y terapia,
 he podido observar, y lo apunto aquí como una sugerencia
@@ -583,7 +593,7 @@ polaridad tienen relación, y deben coincidir.</p>
 
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 <h1>EJERCICIO I. CATEGORÍAS DE V. SATIR</h1>
 <h2>En grupos de 4 participantes.</h2>
 <p> Pautas:</p>
@@ -643,7 +653,7 @@ observar en cada uno.</p>
 </section>
 
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
   <h1>1.4 Fritz Perls</h1>
   <p>Friedrich Salomón Perls nació en Berlín el 8 de julio de 1893.
 su padre, Nathan, era un vendedor de vino que no sentía gran
@@ -731,7 +741,7 @@ en Chicago el 14 de marzo de 1970.</p>
 
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
   <h1>1.5 Milton Erickson</h1>
   <p>Lo que realmente llama la atención en la vida de Milton H.
 Erickson es la adecuada utilización del sufrimiento. Puede darse
@@ -859,7 +869,7 @@ es “el aquí y ahora”.
         ></div>
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
   <h1>1.6 Hemisferios cerebrales</h1>
 <p>El Dr. Paul MacLean hace referencia al cerebro humano como
 el “cerebro triuno”, ya que tiene tres partes básicas, cada una
@@ -953,7 +963,7 @@ resto se procesa simultáneamente fuera de nuestra conciencia.
 </p>
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
   <p>
   Los métodos de aprendizaje acelerado o de enseñanza 
 holística pretenden que el alumno utilice ambos lados del 
@@ -1008,7 +1018,7 @@ embargo, podrían florecer si se las abona adecuadamente.</p>
 
 </section>
 
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
   <h1>1.7 Consciente – incosciente</h1>
   <p>En Programación Neurolingüística se asume que tu calidad de 
 vida está determinada por la calidad de comunicación.</p>
@@ -1063,7 +1073,7 @@ ilimitado que regula el mayor porcentaje de mí mismo? La
 respuesta es simple: a través del lenguaje y del pensamiento
 </p>
 </section>
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 Cuando se menciona que es similar utilizar el lenguaje a 
 utilizar el pensamiento o viceversa, es debido a que no se puede 
 dar el uno sin el otro. De manera tal que cuando pienso, este 
@@ -1121,7 +1131,7 @@ triunfan, es que estos últimos saben ponerse en comunicación
 afirmativa y positiva con su computador interno y habitualmente 
 consiguen un estado fisiológico que contribuye a sus logros
 </section>
-<section>
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 Las representaciones internas y la fisiología, no pueden ser 
 separadas. Aspectos como la tensión muscular, lo que comemos, 
 como respiramos, nuestras posturas, la eficacia general de 
@@ -1179,7 +1189,7 @@ positivos.
 <br></br>
 <br></br>
 </section>
-<section><p>La mayoría de las personas hemos obtenido resultados 
+<section className='section' style={{ fontSize: `${gross}` + "rem"}}><p>La mayoría de las personas hemos obtenido resultados 
 satisfactorios en algún momento de nuestra vida, de lo contrario 
 no estaríamos donde estamos, ni seríamos lo que somos.
 El poder en que radica la diferencia, consiste en establecer 
@@ -1189,16 +1199,52 @@ manera positiva y fructífera.</p></section>
 <br></br>
 <br></br>
 <br></br>
+<br></br>
 
+<button
+     className='button2'
+     onClick={grosse}
+     >+</button>
+      <button
+     className='button3'
+     onClick={grosseOut}
+     >-</button>
 
 <style jsx>{`
+.button2{
+                    
+                    font-size:2rem;
+                    border-radius:10px;
+                    position: fixed;
+                    bottom:5rem;
+                    left:1rem;
+                    background-color: white;
+                    height: 2.4rem;
+                    width: 2.5rem;
+                    box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
+                }
+                .button3{
+                    font-size:2rem;
+                    border-radius:10px;
+                    position: fixed;
+                    bottom: 2rem;
+                    left:1rem;
+                    background-color: white;
+                    height: 2.4rem;
+                    width: 2.5rem;
+                    box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
+                }
+
+ a{
+  color:yellow;
+ } 
 h1,h2,h3{
   color:white;
 }
-
     section{
-      font-family: monospace;
-      font-size:1rem;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size:1.3rem;
+      line-height: 1.70;
         color: rgb(191, 191, 191);
         width:40rem;
         margin:auto;
@@ -1206,7 +1252,7 @@ h1,h2,h3{
         margin-top: 1rem;
         padding:0rem;
     }
-           .img{ 
+              .img{ 
                    background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;

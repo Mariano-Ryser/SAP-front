@@ -98,7 +98,9 @@ return (
 
       <div id='burger' className={styles.burger} onClick={openList}>
     
-         <Image onMouseOver={overed} alt='Burger-Icon' src={'/img/Alienverde.gif'}
+         <Image
+          onMouseOver={overed}
+           alt='Burger-Icon' src={'/img/Alienverde.gif'}
           height={100} width={70}></Image>
         </div> 
 </nav>

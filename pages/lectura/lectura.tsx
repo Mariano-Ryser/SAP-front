@@ -33,11 +33,7 @@ function Lectura() {
 
 return (
   <>
- 
-    
     <div className="box">
-
-    
 
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         Ahora escribimos un texto cualquiera para ver como se ve a la hora de leer en la 
@@ -187,9 +183,7 @@ return (
         </p>
         </section>
        
-      
     </div>
-
 
     {/* BOTONES GROSSE BUCHSTABE*/}
     {/* <button
@@ -285,10 +279,8 @@ return (
                     width: 95%;
                     {/* border: solid 1px black; */}
                   }
-                 
 }
 
-                
          `}</style>
    
  </>

@@ -1,13 +1,15 @@
 
 import React, {useEffect, useState} from "react";
 import Link from "next/link";
+
+
 export default function Ciencia() {
 
 const [posts, setPosts] = useState([]); //useState having intial value as null array.
  const fetchData = ()=> {
 
     //fetch is used to fetch data from external source like url etc.
-    fetch("/api/ciencia").then((response)=> {
+    fetch("/api/asteroides").then((response)=> {
 // https://jsonplaceholder.typicode.com/posts
 
 
@@ -32,13 +34,20 @@ const [posts, setPosts] = useState([]); //useState having intial value as null a
                     <div>
                         {
                             posts.map((post) =>(
+                            
+                              
+                            <div  key={post.id} className="posts">
+                                        <h3 className="nombre" >{post.nombre}</h3>
+                                        <h3 className="descripcion" >{post.descripcion}</h3>
+                                        <h3 className="distancia" >{post.distancia_tierra}</h3>
+                                        <h3 className="descubridor" >{post.descubridor}</h3>
 
-                                <div  key={post.id} className="posts">
-                                    <Link href={`${post.link}`}> 
-                                        <h3 className="titulo" >{post.title}</h3>
-                                    
-                                    </Link> 
+                             <Link href={`${post.link}`}> 
+                                 <h2>Link</h2>
+                            </Link>  
+
                                 </div>
+                            
                             ))
                         }
                     </div>

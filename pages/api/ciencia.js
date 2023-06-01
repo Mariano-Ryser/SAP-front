@@ -7,7 +7,7 @@ export default function handler(req, res) {
       "userId": 1,
       "id": 1,
       "title": "Testing",
-      "link": "/home",
+      "link": "/",
       "titulo":"titulaso 2",
       "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
     },
@@ -23,7 +23,7 @@ export default function handler(req, res) {
       "userId": 1,
       "id": 1,
       "title": "Testing",
-      "link": "/home",
+      "link": "/",
       "titulo":"titulaso 2",
       "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
     },

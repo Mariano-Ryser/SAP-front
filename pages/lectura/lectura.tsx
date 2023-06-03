@@ -175,11 +175,15 @@ return (
         </section>
         
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
-        <h1>TypeScript - Introduccion</h1>
-        <p>En este módulo se presenta el lenguaje TypeScript, 
-          se explica por qué se creó y se muestra en qué puede beneficiarle su uso para el 
-          desarrollo en JavaScript. Además, aquí configurará un entorno de desarrollo de TypeScript con vistas 
-          a prepararse para ejercicios futuros.
+        <h1>Nodeee</h1>
+        <p>
+          over the yearss i hav found that node.js is kind of strange in
+          the world of back-end development let s  say you wrote some code
+          for a backend API server and you deploy that code to a machine with four gigs of memory and 
+          two CPUs then you start reciving traffic to your server over the internet now
+          this is a node.js server which means welll... whatts does that mean???
+          <br></br>
+         
         </p>
         </section>
        

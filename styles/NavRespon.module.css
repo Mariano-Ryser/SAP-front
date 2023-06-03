@@ -74,7 +74,7 @@
     position: relative;
     align-items: center;
     align-content: center;
-    background-color: #232323d5;
+    background-color: #2d9e31a7;
     border: solid 1px #1b5809d5;
     margin-top: 0.1rem;
     margin-bottom: 0.7rem;
@@ -87,27 +87,33 @@
   .li:hover{
     cursor: pointer;
     border: solid 1px rgb(93, 93, 93);
-    background-color: #0d8813c1;
+    background-color: #58bf5dc1;
   }
   .liBloqued{
-    /* visibility: hidden; */
-      width: 65%;
-      margin: auto;
-      position: relative;
-      align-items: center;
-      align-content: center;
+    border-radius: 0.2rem;
+    width: 45%;
+    margin: auto;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    background-color: #232323d5;
+    border: solid 1px #1b5809d5;
+    margin-top: 0.1rem;
+    margin-bottom: 0.7rem;
+    padding: 0.26rem;
+    height: 2.5rem;
+    text-align: center;
+    color: rgb(235, 11, 11);
+    transition: 0.2s;
+    
       background-color: #09090fd5;
-      margin-top: 0.2rem;
-      margin-bottom: 2rem;
-      padding-top: 0.9rem;
-      height: 4rem;
-      text-align: center;
-      color: rgb(99, 15, 15);
-      transition: 0.2s;
+      
+     
+    
   }
 .liBloqued:hover{
   cursor: pointer;
-  background-color: #ae391998;
+  background-color: #df3b0eab;
 }
 .padlock{
  /* pointer-events: fill; */
@@ -136,7 +142,6 @@
   100%{
     transform: rotateZ(-5deg);
   }
-  
 }
 .bildBloque{
   position: absolute;
@@ -169,8 +174,6 @@
     cursor: pointer;
   }
 
-
-  
   @media (max-width: 600px) {
   .nav{
     position: fixed;
@@ -232,8 +235,6 @@
     height: 2.5rem;
   }
 
- 
-
     .liBloqued{
       display: block;
       width: 90%;
@@ -251,10 +252,6 @@
       transition: 0.2s;
       transform: rotateZ(0deg);  /* las medidas del transform se miden en "deg" */ 
       animation: pad infinite 0.5s alternate ease-in-out;
-      
     }
-   
-
-  
   }
 

@@ -6,12 +6,11 @@ import Link from "next/link";
 export default function Ciencia() {
 
 const [posts, setPosts] = useState([]); //useState having intial value as null array.
- const fetchData = ()=> {
+ 
 
-    //fetch is used to fetch data from external source like url etc.
-    fetch("/api/asteroides").then((response)=> {
-// https://jsonplaceholder.typicode.com/posts
+async function fetchData(){
 
+   fetch("/api/asteroides").then((response)=> {
 
         return response.json();//after fetch data from url it return data as json format
     }).then((data) => {
@@ -27,7 +26,7 @@ const [posts, setPosts] = useState([]); //useState having intial value as null a
   return (
     <>
     <div className="box">
-        <h1 className="h1">Poems</h1>
+        <h1 className="h1">Asteroides</h1>
         {
             posts.length > 0 && (
             <div className="p">
@@ -62,19 +61,20 @@ const [posts, setPosts] = useState([]); //useState having intial value as null a
 
         .h1{
             text-align:center;
-            color:pink;
+            color:white;
          }
         .posts{
-            border:solid 2px pink;
+            font-family:monospace;
+            width:40rem;
+            border:solid 2px green;
             padding:1rem;
-            margin: 1rem;
+            margin: auto;
+            margin-bottom:1rem;
             transition:0.2s;
         }
         .posts:hover{
-            background-color:red;
-            border:solid 2px pink;
-            padding:1rem;
-            margin: 1rem;
+            background-color:black;
+            border:solid 2px green;
         }
         .titulo{
             color:Pink
@@ -88,7 +88,20 @@ const [posts, setPosts] = useState([]); //useState having intial value as null a
     
    
 @media (max-width: 600px){
-    
+    .h1{
+            text-align:center;
+            color:white;
+            font-family:monospace;
+         }
+    .posts{
+        font-family:monospace;
+            width:95%;
+            border:solid 2px green;
+            padding:1rem;
+            margin: auto;
+            margin-bottom:1rem;
+            transition:0.2s;
+        }
 }
          `}</style>
     </>

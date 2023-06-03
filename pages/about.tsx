@@ -23,12 +23,17 @@ export default function Homee() {
     this is my humble portfolio on which i can test
     and write code every day.
         </p>
+        <p>totally grateful and happy for the opportunities and daily learning.
+I amm not going to stop for a second, it just takes a bit of order with the times. Well, 
+you can t do everything.
+</p>
         <p>
         This portfolio is built on Next.JS where my
          frontend runs, and the backend is deployed
           on Azure, the database interaction is
            created with NodeJs and Mongo DB.
         </p>
+
   
     </div>
 

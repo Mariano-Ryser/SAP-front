@@ -7,10 +7,39 @@ export default function Homee() {
   {/* <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link> */}
   <Link href="/posts/pnl"><li>Principios de la PNL</li></Link>
   <Link href="/posts/conciencia"><li>La magia de la Conciencia</li></Link>
-  <Link href="/posts/cinderella"><li>An Emancipated Cinderella</li></Link>
+  <li className="bloqued">An Emancipated Cinderella</li>
+  <li className="bloqued">Desintoxicacion Dopaminica</li>
+  <li className="bloqued">Sedentary condition</li>
+  <li className="bloqued">List - Fetch - Apis</li>
+  <li className="bloqued">Great events</li>
+  <li className="bloqued">NLP Professional guide</li>
+  <li className="bloqued">Create the time</li>
+  <li className="bloqued">Lie to yourself.</li>
+  
 </ul> 
+{/* <div className="working">
+</div>
+<div className="working">
+</div>
+<div className="working">
+</div> */}
 
   <style jsx>{`
+    .bloqued{
+      color: red;
+    }
+    .bloqued:hover{
+      color: red;
+    }
+    .working{
+
+      color:white;
+      width:40rem;
+      height:14rem;
+      margin:auto;
+      border:solid 1px green;
+      margin-bottom:2rem;
+    }
     .link{
       color:red;
     }
@@ -46,6 +75,15 @@ export default function Homee() {
     }
       
 @media (max-width: 600px) {
+  .working{
+
+color:white;
+width:90%;
+height:14rem;
+margin:auto;
+margin-top:1rem;
+margin-bottom:1rem;
+}
     ul{
       width:95%;
       margin: auto;

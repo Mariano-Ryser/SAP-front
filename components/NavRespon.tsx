@@ -147,10 +147,10 @@ return (
               </Link>
         
           {/* CHAR CREATOR */}
-              <Link href="/personaje">  
+             
                 <li
                   id='li'
-                  className={styles.li}
+                  className={styles.liBloqued}
                   >
                    <div
                        onClick={padlook}
@@ -158,14 +158,14 @@ return (
                       className={styles.padlock}></div>
                   <a className={styles.a}>Chars Creator</a>
                 </li>
-              </Link>
+          
 
           {/* PRODUCT CREATOR link */}
           
-              <Link href="/create"> 
+             
                 <li 
                 id='li'
-                className={styles.li}
+                className={styles.liBloqued}
                  >
                 <div
                 onClick={padlook}
@@ -173,13 +173,13 @@ return (
                 className={styles.padlock}></div>
                   <a className={styles.a}>Product Creator</a>
                 </li>
-              </Link>
+             
             
           {/* 3D link */}
-              <Link href="/ztest/test"> 
+           
                 <li 
                 id='li'
-                className={styles.li}
+                className={styles.liBloqued}
                   >
                   
                 <div
@@ -189,13 +189,13 @@ return (
 
                   <a className={styles.a}>Numeros Test </a>
                 </li> 
-              </Link>
+              
 
               {/* API */}
-              <Link href="/apitest"> 
+              
                 <li 
                 id='li'
-                className={styles.li}
+                className={styles.liBloqued}
                   >
                   
                 <div
@@ -205,15 +205,14 @@ return (
 
                   <a className={styles.a}> Api coments lorem! </a>
                 </li> 
-              </Link>
+             
 
               {/* API POEMAS*/}
-              <Link href="/poemas"> 
+             
                 <li 
                 id='li'
-                className={styles.li}
+                className={styles.liBloqued}
                   >
-
                 <div
                 onClick={padlook}
                 id='padlock'
@@ -221,7 +220,7 @@ return (
 
                   <a className={styles.a}>Api Poems XD! </a>
                 </li> 
-              </Link>
+             
 
                  {/* Lectura*/}
               <Link href="/lectura/lectura">

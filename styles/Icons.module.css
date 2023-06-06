@@ -1,6 +1,6 @@
 
   .boxIcons{
-    background-color: rgb(26, 22, 22);
+    background-color: rgb(30, 30, 30);
     display: grid;
     /* height: 240px; */
     overflow: hidden;
@@ -32,7 +32,7 @@
   
   @media (max-width:600px){ 
     .boxIcons{
-      background-color: rgb(21, 21, 21);
+      background-color: rgb(30, 30, 30);
       display: grid;
       /* height: 240px; */
       overflow: hidden;
@@ -54,6 +54,7 @@
      margin: auto;
      transition:0.3s 
     }
+
     .icon:hover{
       cursor: pointer;
       transform: scale(105%) rotateZ(1.5deg);

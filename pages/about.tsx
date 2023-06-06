@@ -9,6 +9,7 @@ export default function Homee() {
       ]
   return (
     <>
+
     <div className="container">
     <div>
         <div className="img-container">
@@ -39,23 +40,8 @@ you can t do everything.
 
     </div>
 
-    <div className="boxIcons"
-        //  style={{height: size}}
-         >
-         
-
-          {icons.map((item,index) => (
-            <div key={index}
-              //  onClick={()=>{topo()}}
-               className="icon"
-               style={{backgroundImage: `url('/img/${item.img}')`}}
-                >
-            </div>
-         ))}
-        </div>
-
   <style jsx>{`
-   
+  
     .img{
         height:13rem;
         width:13rem;

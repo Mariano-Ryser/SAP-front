@@ -147,10 +147,10 @@ return (
               </Link>
         
           {/* CHAR CREATOR */}
-             
+          <Link href="/personaje">
                 <li
                   id='li'
-                  className={styles.liBloqued}
+                  className={styles.li}
                   >
                    <div
                        onClick={padlook}
@@ -158,7 +158,7 @@ return (
                       className={styles.padlock}></div>
                   <a className={styles.a}>Chars Creator</a>
                 </li>
-          
+                </Link>
 
           {/* PRODUCT CREATOR link */}
           

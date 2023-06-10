@@ -16,27 +16,32 @@ const TestPagination = () => {
     <>
   <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
     
-    <h1>Bloqueo en programacion?</h1>
+    <h1 className='titulo'>Bloqueo en programacion?</h1>
      
     
     <p> Si te sientes bloqueado y no encuentras avances.. puedes leer los siguientes consejos.</p>
-    <p>1 - Explora proyectos de código abierto: Busca en plataformas como GitHub proyectos de código abierto que te interesen. Puedes contribuir a estos proyectos o tomar ideas y adaptarlas a tus propias necesidades.</p>
+    <p>1 - Explora proyectos de código abierto y no seas
+       ponsonia: Busca en plataformas como GitHub 
+       proyectos de código abierto que te interesen.
+        Puedes contribuir a estos proyectos o tomar ideas
+       y adaptarlas a tus propias necesidades.</p>
+       <p>...Poco a poco, curiosidad y sumerjete en el npm </p>
     
    
     
-    <p>2 - Participa en comunidades de programación: Únete a foros, grupos de discusión o comunidades en línea donde los programadores comparten ideas y proyectos. Puedes obtener inspiración y recibir sugerencias de otras personas.</p>
+    <p>2 - Participa en comunidades de programación y no critiques!: Únete a foros, grupos de discusión o comunidades en línea donde los programadores comparten ideas y proyectos. Puedes obtener inspiración y recibir sugerencias de otras personas.</p>
 
  
     
-    <p>3 - Realiza pequeños desafíos de programación: Hay muchos sitios web que ofrecen desafíos de programación, como Codewars o LeetCode. Resuelve problemas de programación en diferentes lenguajes para ejercitar tu mente y estimular la creatividad.</p>
+    <p>3 - Realiza pequeños desafíos de programación y aporta!: Hay muchos sitios web que ofrecen desafíos de programación, como Codewars o LeetCode. Resuelve problemas de programación en diferentes lenguajes para ejercitar tu mente y estimular la creatividad.</p>
 
     
    
-    <p>4 - Aprende una nueva tecnología o lenguaje de programación: Ampliar tus habilidades en una nueva tecnología o lenguaje de programación puede abrirte nuevas posibilidades. Investiga sobre tendencias actuales y aprende algo nuevo que te interese.</p>
+    <p>4 - Aprende una nueva tecnología o lenguaje de programación: Acostumbrate a debatir, Ampliar tus habilidades en una nueva tecnología o lenguaje de programación puede abrirte nuevas posibilidades. Investiga sobre tendencias actuales y aprende algo nuevo que te interese.</p>
 
    
     
-    <p>5 - Automatiza tareas: Observa tu vida diaria y busca tareas repetitivas o tediosas que puedas automatizar mediante la programación. Puede ser desde una herramienta personalizada para organizar tus archivos hasta un script que realice tareas de mantenimiento en tu sistema.</p>
+    <p>5 - Automatiza tareas : Observa tu vida diaria y busca tareas repetitivas o tediosas que puedas automatizar mediante la programación. Puede ser desde una herramienta personalizada para organizar tus archivos hasta un script que realice tareas de mantenimiento en tu sistema.</p>
 
     
     
@@ -48,11 +53,13 @@ const TestPagination = () => {
 
    
     
-    <p>8 - Mantén un registro de ideas: Lleva contigo un cuaderno o utiliza una aplicación en tu dispositivo para anotar cualquier idea que surja, incluso si en ese momento no parece viable o relevante. Puede que más adelante encuentres una forma de desarrollarla.</p>
+    <p>8 - Mantén un registro de ideas y deja de frustrarte!: Lleva contigo un cuaderno o utiliza una aplicación en tu dispositivo para anotar cualquier idea que surja, incluso si en ese momento no parece viable o relevante. Puede que más adelante encuentres una forma de desarrollarla.</p>
 
-   
+    <p> haha ... pobre nobato ... </p>
     
-    <p>Recuerda que el bloqueo de programación es algo común y le ocurre a todos los programadores en algún momento. No te desanimes y prueba diferentes enfoques hasta que encuentres la inspiración. ¡Buena suerte en tus proyectos!</p>
+    <p>Recuerda que el bloqueo de programación es algo común y le ocurre a todos los programadores en algún momento. No te desanimes y prueba diferentes enfoques hasta que encuentres la inspiración. 
+      ¡Buena suerte en tus proyectos!</p>
+     
 
   </section>
 
@@ -73,7 +80,7 @@ const TestPagination = () => {
   color:yellow;
  } 
 h1,h2,h3{
-  color:white;
+  color:rgb(252, 65, 255);
 }
 
 section{
@@ -93,7 +100,7 @@ section{
                     position: fixed;
                     bottom:5rem;
                     left:1rem;
-                    background-color: white;
+                    background-color: rgb(243, 112, 255);
                     height: 2.4rem;
                     width: 2.5rem;
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
@@ -104,7 +111,7 @@ section{
                     position: fixed;
                     bottom: 2rem;
                     left:1rem;
-                    background-color: white;
+                    background-color: rgb(0, 212, 205);
                     height: 2.4rem;
                     width: 2.5rem;
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
@@ -117,7 +124,7 @@ section{
                     position: fixed;
                     bottom:5rem;
                     left:1rem;
-                    background-color: white;
+                    background-color: rgba(44, 182, 26, 0.507);
                     height: 2.4rem;
                     width: 2.5rem;
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
@@ -128,7 +135,7 @@ section{
                     position: fixed;
                     bottom: 2rem;
                     left:1rem;
-                    background-color: white;
+                    background-color: rgba(4, 183, 210, 0.499);
                     height: 2.4rem;
                     width: 2.5rem;
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);

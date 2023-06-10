@@ -2882,7 +2882,7 @@ perdidos y seamos libres, de una vez para siempre. Depende de nosotros.</p>
                     position: fixed;
                     bottom:5rem;
                     left:1rem;
-                    background-color: white;
+                    background-color: rgba(255, 255, 255, 0.413);
                     height: 2.4rem;
                     width: 2.5rem;
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
@@ -2893,7 +2893,7 @@ perdidos y seamos libres, de una vez para siempre. Depende de nosotros.</p>
                     position: fixed;
                     bottom: 2rem;
                     left:1rem;
-                    background-color: white;
+                    background-color: rgba(255, 255, 255, 0.413);
                     height: 2.4rem;
                     width: 2.5rem;
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);

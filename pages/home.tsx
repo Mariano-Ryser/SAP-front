@@ -7,10 +7,10 @@ export default function Homee() {
   {/* <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link> */}
 
   <Link href="/posts/lieyourself"><li>Lie to yourself.</li></Link>
-  <Link href="/posts/trabajaenti"><li>Invierte en ti mismo - Equilibrate</li></Link>
   <Link href="/posts/bloqueoprogramacion"><li>Bloqueado en la programacion?</li></Link>
   <Link href="/posts/pnl"><li>Principios de la PNL</li></Link>
   <Link href="/posts/conciencia"><li>La magia de la Conciencia</li></Link>
+  <li className="bloqued">Invierte en ti mismo - Equilibrate</li>
   <li className="bloqued">An Emancipated Cinderella</li>
   <li className="bloqued">Desintoxicacion Dopaminica</li>
   <li className="bloqued">Sedentary condition</li>
@@ -20,6 +20,7 @@ export default function Homee() {
   <li className="bloqued">Create the time</li>
   
 </ul> 
+
 {/* <div className="working">
 </div>
 <div className="working">

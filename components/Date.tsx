@@ -3,13 +3,31 @@ import { useEffect, useState } from 'react';
 
 function Datee(){
   const current = new Date();
-  const datee = `${current.getDate()} / ${current.getMonth()+1} / ${current.getFullYear()}`;
+  // const datee = `${current.getDate()} / ${current.getMonth()+1} / ${current.getFullYear()}`;
+  const timee = `${current.getHours()}:${current.getMinutes()}`;
+
 
 
   return (
     <>
-      <p> {datee}</p>
+    <p className='time'> {timee}</p>
+    
+
+
+
+    <style jsx>{`
+
+.time{
+  color:rgb(20, 210, 207);
+}
+
+@media (max-width: 600px) {
+    
+}
+       
+         `}</style>
   </>
+  
   )
 }
 

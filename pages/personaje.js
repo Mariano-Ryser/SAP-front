@@ -69,9 +69,8 @@ function Personaje() {
     <div className='container'>
         <form className="form">
             <h1>Cree su personaje </h1>
-                <span>Name</span>
+                <span className='name'>Name</span>
                 <input
-                    
                     type='text'
                     name='name'
                     value={personaje.name}
@@ -80,7 +79,7 @@ function Personaje() {
 
                     <br></br>
 
-                    <span>Surname</span><input               
+                    <span className='surname'>Surname</span><input               
                         type='text'
                         name='surname'
                         value={personaje.surname}
@@ -88,7 +87,7 @@ function Personaje() {
                   ></input>
 
                 <br></br>                       
-                <span>Number</span>
+                <span className='age'>Number</span>
                 <input
                     
                     type='number'
@@ -98,7 +97,7 @@ function Personaje() {
                  ></input>     
 
                 <br></br>
-                <span>Email</span><input
+                <span className='email'>Email</span><input
                     
                     type='text'
                     name='email'
@@ -107,7 +106,7 @@ function Personaje() {
                   ></input>
 
                     <br></br>
-                    <span>City</span>
+                    <span className='city'>City</span>
                 <input
                         type='text'
                         name='city'
@@ -127,11 +126,11 @@ function Personaje() {
              {personajes.map(({_id, name, surname, age, email, city,}) => (
                 <div key={_id} className="listBoxP">
                     <div >
-                        <span>Name:</span> <span>{name}</span> <br></br>
-                        <span>Surname:</span> <span>{surname}</span><br></br>
-                        <span>Age:</span> <span>{age}</span><br></br>
-                        <span>Email:</span> <span>{email}</span><br></br>
-                        <span>City:</span> <span>{city}</span><br></br>
+                        <span className='name'>Name:</span> <span>{name}</span> <br></br>
+                        <span className='surname'>Surname:</span> <span>{surname}</span><br></br>
+                        <span className='age'>Tel:</span> <span>{age}</span><br></br>
+                        <span className='email'>Email:</span> <span>{email}</span><br></br>
+                        <span className='city'>City:</span> <span>{city}</span><br></br>
                         <br></br>
                         {/* <div className='img'></div> */}
 
@@ -147,7 +146,7 @@ function Personaje() {
                                 fetchPersonajes();
                             })
                         }}
-                        >Eliminar
+                        >Deletear
                     </button>
                     </div>
                 </div>
@@ -156,7 +155,15 @@ function Personaje() {
         </div> 
          
         <style jsx>{`
-            span{
+            .listBoxP{
+                font-size:1rem;
+                font-family:monospace;
+                padding:0.6rem;
+                color:white;
+                width: 40rem;
+                margin: 0.3rem auto 0.3rem auto;
+                border: solid 1px rgb(92, 92, 92);
+                
             }
             .img{
                 background-image:url('/img/me.jpg');
@@ -180,22 +187,33 @@ function Personaje() {
     padding:1rem;
     border: solid 1px rgb(92, 92, 92);
 }
-.listBoxP{
-    font-size:1rem;
+button{
     font-family:monospace;
-    padding:0.6rem;
-    color:white;
-    width: 40rem;
-    margin: 0.3rem auto 0.3rem auto;
-    border: solid 1px rgb(92, 92, 92);
-    
 }
-.x{
+
+.name{
+    color: rgb(7, 218, 162);
 }
+.surname{
+    color: rgb(213, 209, 6);
+}
+.age{color: rgb(238, 133, 21);}
+.email{color: rgb(238, 68, 21);}
+.city{color: rgb(21, 180, 238);}
+
+
       
 @media (max-width: 600px) {
-    span{
-    }
+    
+.listBoxP{
+    font-size:1.03rem;
+    font-family:monospace;
+    padding:0.6rem;
+    color:rgb(255, 116, 248);
+    width: 95%;
+    margin: 0.3rem auto 0.3rem auto;
+    border: solid 1px rgb(92, 92, 92);
+}
     .form{
     color:white;
     width: 95%;
@@ -203,15 +221,6 @@ function Personaje() {
     font-family:monospace;
     font-size:1rem;
     padding: 0.5rem;
-    border: solid 1px rgb(92, 92, 92);
-}
-.listBoxP{
-    font-size:1rem;
-    font-family:monospace;
-    padding:0.6rem;
-    color:white;
-    width: 95%;
-    margin: 0.3rem auto 0.3rem auto;
     border: solid 1px rgb(92, 92, 92);
 }
            
@@ -223,10 +232,8 @@ function Personaje() {
         
 
             
-        </div>
-       
-
-       
+    </div>
+        
     </>
   )
 }

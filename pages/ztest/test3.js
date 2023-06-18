@@ -61,12 +61,34 @@ return (
                             rgba(11,11,11,1) 68%,
                             rgba(0,0,0,1) 100%);
                 transform: translateZ(50px);
+                animation: face1  5s linear  alternate infinite;
+                
               }
+              @keyframes face1 {
+                    from {
+                      transform: translateZ(50px) rotateX(40deg) scale(1);
+                      
+                    }
+                    to {
+                      transform: translateZ(150px) rotateX(340deg)scale(4);
+                    }
+                  }
               .face2{
                 background: rgb(148,157,48);
                 background: radial-gradient(circle, rgba(148,157,48,1) 17%, rgba(11,11,11,1) 68%, rgba(0,0,0,1) 100%);
-                transform: translateZ(-50px) rotateY(180deg);
+                transform: translateZ(50px) rotateY(180deg);
+                animation: face2  6s ease-in  alternate infinite;
+                
               }
+              @keyframes face2 {
+                    from {
+                      transform: translateZ(50px) rotateY(20deg) scale(0.4);
+                      
+                    }
+                    to {
+                      transform: translateZ(450px) rotateY(140deg)scale(2);
+                    }
+                  }
               .face3{
                 background: rgb(48,157,130);
                 background: radial-gradient(circle, rgba(48,157,130,1) 17%, rgba(11,11,11,1) 68%, rgba(0,0,0,1) 100%);

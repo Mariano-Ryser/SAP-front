@@ -19,21 +19,33 @@ const TestPagination = () => {
     <h1 className='titulo'>Bloqueo en programacion?</h1>
      
     
-    <p> Si te sientes bloqueado y no encuentras avances.. puedes leer los siguientes consejos.</p>
-    <p>1 - Explora proyectos de código abierto y no seas
+    <p> Si te sientes bloqueado y no encuentras avances...</p>
+    <p>1 - Exploraa proyectos de código abierto y no seas
        ponsonia: Busca en plataformas como GitHub 
        proyectos de código abierto que te interesen.
         Puedes contribuir a estos proyectos o tomar ideas
        y adaptarlas a tus propias necesidades.</p>
-       <p>...Poco a poco, curiosidad y sumerjete en el npm </p>
+       <p>...Poco a poco, curiosidad y sumerjete en el npm !</p>
     
    
     
-    <p>2 - Participa en comunidades de programación y no critiques!: Únete a foros, grupos de discusión o comunidades en línea donde los programadores comparten ideas y proyectos. Puedes obtener inspiración y recibir sugerencias de otras personas.</p>
+    <p>2 - Participa en comunidades de programación y no critiques!:
+       Únete a foros, grupos de discusión o
+        comunidades en línea donde los programadores 
+        comparten ideas y proyectos.
+         Puedes obtener inspiración y recibir 
+         sugerencias de otras personas.
+         hay mucha gente alli afuera que esta queriendo ayudar.
+         </p>
 
  
     
-    <p>3 - Realiza pequeños desafíos de programación y aporta!: Hay muchos sitios web que ofrecen desafíos de programación, como Codewars o LeetCode. Resuelve problemas de programación en diferentes lenguajes para ejercitar tu mente y estimular la creatividad.</p>
+    <p>3 - Realiza pequeños desafíos de programación
+       y aporta!: Hay muchos sitios web que ofrecen
+        desafíos de programación, como Codewars o 
+        LeetCode. Resuelve problemas de programación
+         en diferentes lenguajes para ejercitar tu
+          mente y estimular la creatividad.</p>
 
     
    
@@ -55,10 +67,11 @@ const TestPagination = () => {
     
     <p>8 - Mantén un registro de ideas y deja de frustrarte!: Lleva contigo un cuaderno o utiliza una aplicación en tu dispositivo para anotar cualquier idea que surja, incluso si en ese momento no parece viable o relevante. Puede que más adelante encuentres una forma de desarrollarla.</p>
 
-    <p> haha ... pobre nobato ... </p>
+    <p>9 - Siempre te puede ayudar compartir tus conocimientos a los demas.</p>
     
+    <p> Planea, tomate tus tiempos, no te frustres, haz migraciones, mudate de framework, adapta nuevas tecnologias, pero manten tu dominio! </p>
     <p>Recuerda que el bloqueo de programación es algo común y le ocurre a todos los programadores en algún momento. No te desanimes y prueba diferentes enfoques hasta que encuentres la inspiración. 
-      ¡Buena suerte en tus proyectos!</p>
+     Buena Suuelte</p>
      
 
   </section>

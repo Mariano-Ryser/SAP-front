@@ -9,6 +9,7 @@ function Personaje() {
         edad: 0,
         email:'',
         city:'',
+        description:'',
     }
 
     const [personaje, setPersonaje] = useState(initialState)
@@ -76,7 +77,6 @@ function Personaje() {
                     value={personaje.name}
                     onChange={handleChange}
                   ></input>
-
                     <br></br>
 
                     <span className='surname'>Surname</span><input               
@@ -89,7 +89,6 @@ function Personaje() {
                 <br></br>                       
                 <span className='age'>Number</span>
                 <input
-                    
                     type='number'
                     name='age'
                     value={personaje.age}
@@ -98,7 +97,6 @@ function Personaje() {
 
                 <br></br>
                 <span className='email'>Email</span><input
-                    
                     type='text'
                     name='email'
                     value={personaje.email}
@@ -113,6 +111,18 @@ function Personaje() {
                         value={personaje.city}
                         onChange={handleChange}
                   ></input>
+                  <br></br>
+                  <br></br>
+                  <span className='city'>Description</span>
+                  <br></br>
+                  <textarea
+                        className='textarea'
+                        type='text'
+                        name='description'
+                        value={personaje.description}
+                        onChange={handleChange}
+                  ></textarea>
+                <br></br>
                 <br></br>
                 {/* CREATE CHAR BUTTON */}
                 <button
@@ -123,7 +133,7 @@ function Personaje() {
 
         <div> 
             <div>  
-             {personajes.map(({_id, name, surname, age, email, city,}) => (
+             {personajes.map(({_id, name, surname, age, email, city,description}) => (
                 <div key={_id} className="listBoxP">
                     <div >
                         <span className='name'>Name:</span> <span>{name}</span> <br></br>
@@ -131,6 +141,7 @@ function Personaje() {
                         <span className='age'>Tel:</span> <span>{age}</span><br></br>
                         <span className='email'>Email:</span> <span>{email}</span><br></br>
                         <span className='city'>City:</span> <span>{city}</span><br></br>
+                        <span className='description'>Description:</span> <span>{description}</span><br></br>
                         <br></br>
                         {/* <div className='img'></div> */}
 
@@ -190,16 +201,21 @@ function Personaje() {
 button{
     font-family:monospace;
 }
+.textarea{
+    width: 15rem;
+    height: 5rem;
+}
 
 .name{
     color: rgb(7, 218, 162);
 }
 .surname{
-    color: rgb(213, 209, 6);
+    color: rgb(34, 213, 6);
 }
 .age{color: rgb(238, 133, 21);}
 .email{color: rgb(238, 68, 21);}
 .city{color: rgb(21, 180, 238);}
+.description{color: rgb(235, 232, 12);}
 
 
       

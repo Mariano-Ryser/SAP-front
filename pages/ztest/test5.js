@@ -47,14 +47,17 @@ return (
                 position: absolute;
                 opacity: 0.75;  
               }
+           
+             
               .face1{
-                background: rgb(86,157,48);
+                background: rgb(7, 5, 151);
                 background: radial-gradient(circle,
                             rgba(86,157,48,1) 17%, 
                             rgba(11,11,11,1) 68%,
                             rgba(0,0,0,1) 100%);
                 transform: translateZ(10px);
               }
+          
               .face2{
                 background: rgb(148,157,48);
                 background: radial-gradient(circle, rgba(148,157,48,1) 17%, rgba(11,11,11,1) 68%, rgba(0,0,0,1) 100%);

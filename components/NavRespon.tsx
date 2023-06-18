@@ -203,13 +203,15 @@ return (
                 id='padlock'
                 className={styles.padlock}></div>
 
-                  <a className={styles.a}> Api coments lorem! </a>
+                  <a className={styles.a}> APIS </a>
                 </li> 
              
 
-              {/* API POEMAS*/}
+       
              
-                <li 
+               {/* MARKET!*/}
+             
+               <li 
                 id='li'
                 className={styles.liBloqued}
                   >
@@ -218,9 +220,8 @@ return (
                 id='padlock'
                 className={styles.padlock}></div>
 
-                  <a className={styles.a}>Api Poems XD! </a>
+                  <a className={styles.a}>MARKET! </a>
                 </li> 
-             
 
                  {/* Lectura*/}
               <Link href="/lectura/lectura">

@@ -90,6 +90,5 @@ export default function handler(req, res) {
       "descubridor": "Albert George Wilson"
     }
   ]
-
   )
 }

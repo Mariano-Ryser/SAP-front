@@ -200,16 +200,30 @@ const fetchComentars= () =>{
                                 
                       >X</span>
 
+
                     </div>
-                               
+                        
                 </div>
-                
+               
             ))}
          </div> 
        
+      <div className='msjCarga'>
+                  La carga de mensajeria puede tardar unos segundos..
+ 
+      </div>
 
     </form>
+   
     <style jsx>{`
+      .msjCarga{
+        color: #e7e7e7;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+      }
+
+     
         
 .date{
   color: #84ba64;
@@ -290,7 +304,7 @@ font-family:monospace;
   width:100%;
   color: rgb(240, 240, 240);
   border-radius:0.2rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.1rem;
   height: 6rem;
  font-size:1.1rem;
  font-family:monospace; 
@@ -299,7 +313,7 @@ font-family:monospace;
   .textArea::placeholder {
     color: #e7e7e7;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.1rem;
     border: #383838 ;
     padding: 0.4rem;
     font-size:1.1rem;
@@ -310,8 +324,8 @@ font-family:monospace;
     background-color: rgb(87, 87, 87);
     color: #e7e7e7;
     display: block;
-    margin-bottom: 1rem;
-    margin-top:0.2rem;
+    margin-bottom: 0.3rem;
+    margin-top:0rem;
     border: #383838 ;
     padding: 0.4rem;
     font-size:1.1rem;
@@ -329,7 +343,7 @@ font-family:monospace;
 .button{
   height: 2rem;
   width: 5rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
   color: aliceblue;
   background-color: rgb(65, 62, 60);
   border-radius: 0.2rem;
@@ -339,9 +353,10 @@ font-family:monospace;
 
 /* TTITULO EN TEXTO */
 .titulo{
-  color: yellow;
+  color: rgb(32, 186, 58);
   font-family:monospace;
   line-height: 0.3rem;
+  font-size: 1.2rem;
 }
 
 .comentarBox{
@@ -350,9 +365,9 @@ font-family:monospace;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   padding-bottom: 2rem;
-  border: solid rgb(56, 56, 56) 1px;
+  border: solid rgb(50, 50, 50) 1px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family:monospace;
   color: white;
 }
@@ -374,6 +389,8 @@ font-family:monospace;
 /* MOBIL - STYLE */
 
 @media (max-width: 600px) {
+
+  
   .form{
     position: relative;
     width: 95%;
@@ -408,7 +425,8 @@ font-family:monospace;
     border-radius: 0.2rem;
   }
 .comentarBox{
-  font-family:monospace;
+  font-family:monospace, Arial, Helvetica, sans-serif;
+
 }
 }
 

@@ -209,7 +209,7 @@ const fetchComentars= () =>{
          </div> 
        
       <div className='msjCarga'>
-                  La carga de mensajeria puede tardar unos segundos..
+                  Das Laden der Nachricht kann ein paar Sekunden dauern...
  
       </div>
 

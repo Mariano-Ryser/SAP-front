@@ -5,7 +5,7 @@ export default function handler(req, res) {
 [
     {
       "id":"1",
-      "nombre": "Apophis",
+      "nombre": "Apophisss",
       "link": "https://de.wikipedia.org/wiki/(99942)_Apophis",
       "descripcion": "Apophis es un asteroide potencialmente peligroso de unos 370 metros de diámetro. Su órbita pasa cerca de la Tierra, pero las probabilidades de impacto son bajas.",
       "distancia_tierra": "15 millones de kilómetros",

@@ -88,7 +88,14 @@ export default function handler(req, res) {
       "descripcion": "Geographos es un asteroide cercano a la Tierra y es parte de la familia de asteroides Apolo. Fue descubierto en 1951 y tiene un diámetro aproximado de 5 kilómetros.",
       "distancia_tierra": "17 millones de kilómetros",
       "descubridor": "Albert George Wilson"
-    }
+    },
+    {"id":"13", 
+       "nombre": "pe", 
+       "link": "me", 
+       "descripcion": "sa", 
+       "distancia_tierra": "2", 
+       "descubridor": "to" 
+     }
   ]
   )
 }

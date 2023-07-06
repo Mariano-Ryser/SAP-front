@@ -49,7 +49,7 @@ function BoxComentar(){
       }
        setTimeout(()=> {
            setSuccessMessage(null)}
-           , 2000)
+           , 2100)
       setError(null);
         
         fetch(`${baseURL}/comentars`,{
@@ -63,7 +63,7 @@ function BoxComentar(){
 
         .then((data) =>{
             setComentar(initialState)
-            console.log("Comentario creado con exito!")
+            console.log("Comentario creado con exito ! !")
             const newComentars = [data.comentar, ...comentars]
             setComentars(newComentars)
             // fetchComentars();
@@ -209,7 +209,7 @@ const fetchComentars= () =>{
          </div> 
        
       <div className='msjCarga'>
-                  La carga de mensajeria puede tardar unos segundos..
+                  Das Laden der Nachricht kann ein paar Sekunden dauern...
  
       </div>
 

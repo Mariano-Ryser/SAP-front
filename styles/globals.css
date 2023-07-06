@@ -8,7 +8,12 @@ body {
   box-sizing: border-box;
 }
 
+.tl{color: white; font-family: monospace;}
+.link{color: rgb(56, 185, 10); font-family: monospace;}
+
+
 @media (max-width: 600px) {
  
   
 }
+

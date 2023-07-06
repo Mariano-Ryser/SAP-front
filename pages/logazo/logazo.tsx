@@ -14,6 +14,7 @@ export default function Homee() {
         <div className="caja3"></div>
         <div className="caja4"></div> */}
         <Image
+            className="alien"
             alt='Burger-Icon'
             src={'/img/Alienverde.gif'}
             height={280} width={200}>
@@ -23,6 +24,7 @@ export default function Homee() {
 </div>
 
   <style jsx>{`
+    
     .caja1{
         position:absolute;
         height:40px;
@@ -53,8 +55,8 @@ export default function Homee() {
             top:50%;
             left:50%;
             transform:translate(-50%, -50%);
-    
     }
+
 .box{
     height:100vh;
     width:100%;
@@ -62,6 +64,7 @@ export default function Homee() {
     transition:0.4s;
     animation: logazo 2.5s infinite;
 }
+
 @keyframes logazo{
     0%{
         background-color:rgb(0, 0, 0);

@@ -7,12 +7,14 @@ export default function Homee() {
   {/* <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link> */}
 
   <Link href="/posts/lieyourself"><li>Lie to yourself.</li></Link>
+  <Link href="/posts/elmagomartin"><li>El mago Martincito.</li></Link>
   <Link href="/posts/bloqueoprogramacion"><li>Bloqueado en la programacion?</li></Link>
   <Link href="/posts/pnl"><li>Principios de la PNL</li></Link>
   <Link href="/posts/conciencia"><li>La magia de la Conciencia</li></Link>
   <li className="bloqued">Invierte en ti mismo - Equilibrate</li>
   <li className="bloqued">An Emancipated Cinderella</li>
-  <li className="bloqued">Desintoxicacion Dopaminica</li>
+  <Link href="/posts/dopamina"><li>Desintoxicate Dopaminicamente</li></Link>
+
   <li className="bloqued">Sedentary condition</li>
   <li className="bloqued">List - Fetch - Apis</li>
   <li className="bloqued">Great events</li>
@@ -80,7 +82,6 @@ export default function Homee() {
       
 @media (max-width: 600px) {
   .working{
-
 color:white;
 width:90%;
 height:14rem;

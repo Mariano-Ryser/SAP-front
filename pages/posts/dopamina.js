@@ -73,7 +73,7 @@ const dopamina = "dopamina.png"
             <h1>Que nos dice la ciencia al respecto?</h1>
             <h3>que tipo de validacion cientifica tiene este metodo..</h3>
 
-            <p>La dopamina es un neurotrasmisor que segrega nuestro cerebro cada vez que anticipa la recompensa que
+            <p>La dopamina es un neurotransmisor que segrega nuestro cerebro cada vez que anticipa la recompensa que
               le dara una actividad, no es infinito, es renovable, es decir recuperamos la cantidad de dopamina que hemos segregado a lo largo del dia.
               En efecto el cerebro va segregar mas dopamina si calcula, si prevee que una actividad le va a dar muchisimo placer, antes por ejemeplo cuando defendiamos a un familiar de un depredador
               saliamos a cazar y corriamos muchos quilimetros, cosiamos un vestido con nuestro puño y dedos para cobijarnos del frio intempestivo siberiano de condiciones pasadas,
@@ -103,7 +103,7 @@ const dopamina = "dopamina.png"
 
              <h1>Como aplico la desintoxicacion dopaminica?</h1>
 
-             en mi caso, el domingo es el dia mas importante de la semana, es cuanado tienes que hacer tu desintoxicacion,
+             en mi caso, yo no lo practico pero el domingo es el dia mas importante de la semana, es cuanado tienes que hacer tu desintoxicacion,
              te permite recuperar el control de tu vida, no dejar que eventos o personas externas condicionen lo que
             seria el rumbo en el que va direccionada tu vida.
 

@@ -14,7 +14,7 @@ export default function Homee() {
     <div>
         <div className="img-container">
         <div className="img" 
-            style={{backgroundImage: `url('/img/me.jpg')`}}
+            style={{backgroundImage: `url('/img/me2.jpg')`}}
             >
             
         </div>

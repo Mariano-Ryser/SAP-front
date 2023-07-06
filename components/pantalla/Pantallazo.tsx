@@ -46,12 +46,12 @@ return (
         margin-bottom:2.2rem;
         color:white;
         font-family:monospace;
-        font-size:1.7rem;
+        font-size:1.4rem;
         animation:con 2s infinite alternate;
       }
       @keyframes con {
         0%{ transform:scale(1)}
-        100%{transform:scale(1.2) }
+        100%{transform:scale(1.1) }
       }
 
            .pantallazo{

@@ -56,6 +56,8 @@ const NavRespon = () => {
   function leaveA(){
     setClose(null)
   }
+
+
   const correct = (e) =>{
     const lock = document.querySelectorAll<HTMLElement>("#padlock")
     const inputValue = e.target.value
@@ -72,11 +74,9 @@ const NavRespon = () => {
        setClose(null)
       //  for (let e = 0; e < li.length; e++) {
       //   padlock[e].display = "none"
-      //  }
-       
+      //  }   
       // return;
   }
-
 }
 
 function overed(){
@@ -207,8 +207,6 @@ return (
                 </li> 
              
 
-       
-             
                {/* MARKET!*/}
              
                <li 
@@ -262,7 +260,7 @@ return (
                       ></input>
 
                       <style jsx>{`
-                      
+
                        .kleinForm{
                           border-radius:5px;
                           height:4rem;
@@ -300,7 +298,6 @@ return (
                                 transition: 0.2s;
                               }
                               
-        
                         `}</style>
 
                     </div>   

@@ -88,7 +88,50 @@ export default function handler(req, res) {
       "descripcion": "Geographos es un asteroide cercano a la Tierra y es parte de la familia de asteroides Apolo. Fue descubierto en 1951 y tiene un diámetro aproximado de 5 kilómetros.",
       "distancia_tierra": "17 millones de kilómetros",
       "descubridor": "Albert George Wilson"
-    }
+    },
+    {"id":"13",
+      "nombre": " 351797 (1999 KW4) ",
+      "link": "https://earthsky.org/space/double-asteroid-1999-kw4-closest-may-25-2019/",
+      "descripcion": "En cuanto a las características del asteroide 351797 (1999 KW4), se trata de un asteroide binario, lo que significa que está compuesto por dos cuerpos principales que orbitan alrededor de un centro de masa común. El componente principal, conocido como el asteroide primario, tiene un diámetro estimado de alrededor de 1,3 kilómetros, mientras que el componente secundario, o satélite, tiene un diámetro estimado de aproximadamente 0,5 kilómetros.",
+      "distancia_tierra": " 5,2 millones de kilómetros de nuestro planeta. Esto es aproximadamente 13 veces la distancia promedio entre la Tierra y la Luna.",
+      "descubridor": "(NEAT) en el Observatorio de Haleakala, Hawái."
+    },
+    {"id":"14",
+      "nombre": " 4179 Toutatis) ",
+      "link": "https://echo.jpl.nasa.gov/asteroids/4179_Toutatis/toutatis.html",
+      "descripcion": "Su nombre proviene de la deidad celta Toutatis, el dios del cielo y la guerra. Este asteroide es especialmente interesante debido a su forma inusual y su trayectoria cercana a la Tierra. Toutatis tiene una forma alargada y se cree que está compuesto por dos lóbulos conectados por un cuello estrecho. Sus dimensiones son aproximadamente de 4.6 kilómetros de longitud y 2.4 kilómetros de ancho. Este objeto gira lentamente sobre su eje de rotación en un período de tiempo de aproximadamente 5.4 días.",
+      "distancia_tierra": " 1.5 millones de kilómetros de la Tierra, lo cual es aproximadamente cuatro veces la distancia entre la Tierra y la Luna.",
+      "descubridor": "Christian Pollas."
+    },
+    {"id":"15",
+    "nombre": "",
+    "link": "",
+    "descripcion": "",
+    "distancia_tierra": "",
+    "descubridor": ""
+   },
+    {"id":"16",
+    "nombre": "",
+    "link": "",
+    "descripcion": "",
+    "distancia_tierra": "",
+    "descubridor": ""
+    },
+    {"id":"17",
+    "nombre": "",
+    "link": "",
+    "descripcion": "",
+    "distancia_tierra": "",
+    "descubridor": ""
+    },
+    {"id":"18",
+    "nombre": "",
+    "link": "",
+    "descripcion": "",
+    "distancia_tierra": "",
+    "descubridor": ""
+    },
+
   ]
   )
 }

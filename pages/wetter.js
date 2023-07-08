@@ -1,13 +1,13 @@
 import Head from "next/head"
 import Image from "next/image"
 
-export default function Cienciados({asteroide}){
+export default function Wetter({asteroide}){
     return(
     <>
     <div className="tl">https://echo.jpl.nasa.gov/asteroids/</div>
     <div className="tl">
         {
-            asteroide.map(as =>(
+            wetter.map(as =>(
                 <div className="box" key={as.id}>
                     <h4>{as.nombre}</h4>
                     <p>{as.descripcion}</p>
@@ -23,12 +23,12 @@ export default function Cienciados({asteroide}){
 }
 
 export const getServerSideProps = async (context) =>{
-   const res = await fetch("https://zap-front.vercel.app/api/asteroides")
-//    const res = await fetch("https://tecdottir.herokuapp.com/stations")
-   const asteroides = await res.json()
+   const res = await fetch("")
+   const wetters = await res.json()
+   console.log(wetters)
    return{
     props:{
-        asteroide: asteroides
+        wetter: wetters
     }
    }
 }

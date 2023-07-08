@@ -3,18 +3,18 @@ import Link from "next/link"
 export default function Homee() {
   return (
     <>
-<ul>
+   <ul>
   {/* <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link> */}
 
-  <Link href="/posts/lieyourself"><li>Lie to yourself.</li></Link>
+  <Link href="/posts/nodejs"><li>A bit of Node js and File systems please.</li></Link>
   <Link href="/posts/elmagomartin"><li>El mago Martincito.</li></Link>
+  <Link href="/posts/lieyourself"><li>Lie to yourself.</li></Link>
   <Link href="/posts/bloqueoprogramacion"><li>Bloqueado en la programacion?</li></Link>
   <Link href="/posts/pnl"><li>Principios de la PNL</li></Link>
   <Link href="/posts/conciencia"><li>La magia de la Conciencia</li></Link>
   <li className="bloqued">Invierte en ti mismo - Equilibrate</li>
   <li className="bloqued">An Emancipated Cinderella</li>
-  <Link href="/posts/dopamina"><li>Desintoxicate Dopaminicamente</li></Link>
-
+  <li className="bloqued">Desintoxicacion Dopaminica</li>
   <li className="bloqued">Sedentary condition</li>
   <li className="bloqued">List - Fetch - Apis</li>
   <li className="bloqued">Great events</li>

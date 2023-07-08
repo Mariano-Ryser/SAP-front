@@ -103,43 +103,7 @@ export default function handler(req, res) {
       "distancia_tierra": " 1.5 millones de kilómetros de la Tierra, lo cual es aproximadamente cuatro veces la distancia entre la Tierra y la Luna.",
       "descubridor": "Christian Pollas."
     },
-    {"id":"15",
-    "nombre": "",
-    "link": "",
-    "descripcion": "",
-    "distancia_tierra": "",
-    "descubridor": ""
-   },
-    {"id":"16",
-    "nombre": "",
-    "link": "",
-    "descripcion": "",
-    "distancia_tierra": "",
-    "descubridor": ""
-    },
-    {"id":"17",
-    "nombre": "",
-    "link": "",
-    "descripcion": "",
-    "distancia_tierra": "",
-    "descubridor": ""
-    },
-    {"id":"18",
-    "nombre": "",
-    "link": "",
-    "descripcion": "",
-    "distancia_tierra": "",
-    "descubridor": ""
-    },
 
-
-    {"id":"13", 
-       "nombre": "pe", 
-       "link": "me", 
-       "descripcion": "sa", 
-       "distancia_tierra": "2", 
-       "descubridor": "to" 
-     }
   ]
   )
 }

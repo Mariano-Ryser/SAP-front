@@ -57,7 +57,7 @@ you can t do everything.
     .container{
         width:40rem;
       margin: auto;
-      padding:0rem;
+      padding-bottom:10rem;
         display:flex;
         justify-content:center;
         color: rgb(210, 210, 210);

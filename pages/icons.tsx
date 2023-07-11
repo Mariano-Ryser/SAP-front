@@ -46,12 +46,12 @@ const icons = [
 
   return (
     <>
-        <div className={styles.boxIcons}
+        <div className="boxIcons"
         //  style={{height: size}}
          >
           <div
             // onClick={()=>{topo()}}
-            className={styles.icon}
+            className="icon"
             style={{backgroundImage: `url('/img/node.png')`}}
             >
           </div>
@@ -59,13 +59,88 @@ const icons = [
           {icons.map((item,index) => (
             <div key={index}
               //  onClick={()=>{topo()}}
-               className={styles.icon}
+               className="icon"
                style={{backgroundImage: `url('/img/${item.img}')`}}
                 >
             </div>
          ))}
         </div>
 
+        <style jsx>{`
+  
+  
+        .boxIcons{
+          width: 40rem;
+          margin: auto;
+    background-color: rgb(30, 30, 30);
+    display: grid;
+    /* height: 240px; */
+    overflow: hidden;
+    gap: 0.5rem; 
+    grid-auto-rows: 5rem;
+    grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 4fr));
+    grid-template-columns: repeat(12,1fr);
+    padding-top: 1.4rem;
+    padding-bottom: 22px;
+    
+  }
+  
+  .icon{
+      display: inline-block;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 70px;
+      width: 70px;
+     grid-column: span 2;
+     filter: blur(0.4px);
+     margin: auto;
+     transition:0.3s 
+    }
+  .icon:hover{
+    cursor: pointer;
+    transform: scale(105%) rotateZ(1.5deg);
+    filter: blur(0.0px); 
+  }
+  
+  @media (max-width:600px){ 
+    .boxIcons{
+      width: 25rem;
+          margin: auto;
+      background-color: rgb(30, 30, 30);
+      display: grid;
+      /* height: 240px; */
+      overflow: hidden;
+      gap: 0.4rem; 
+      grid-auto-rows: 3.2rem;
+      grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 5fr));
+      padding-top: 0.3rem;
+      padding-bottom: 12px;
+    }
+    .icon{
+      display: inline-block;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 50px;
+      width: 50px;
+     grid-column: span 2;
+     filter: blur(0.4px);
+     margin: auto;
+     transition:0.3s 
+    }
+
+    .icon:hover{
+      cursor: pointer;
+      transform: scale(105%) rotateZ(1.5deg);
+       filter: blur(0.0px); 
+    }
+  }
+  
+  
+  
+         
+           `}</style>
         
   </>
   )

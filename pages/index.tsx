@@ -16,10 +16,10 @@ export default function Home() {
 
 
 
-  {/* <D2/> */}
+  <D2/>
   <D1/>
   
-  <Pantallazo/>
+  {/* <Pantallazo/> */}
 
   <style jsx>{`
   

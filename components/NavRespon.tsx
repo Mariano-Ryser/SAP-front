@@ -107,15 +107,10 @@ return (
 
               
     <aside id='aside' className={styles.asideBar}>
-    <header className={styles.header}>
-          <div className={styles.boxSap}>
-              <h3  className={styles.sap}>Ciencia-con</h3>
-          </div>
-    </header>
-
+  
           <ul className={styles.ul}>
             {/* HOME*/}
-              <Link href="/home">
+              <Link href="/">
               
                 <li className={styles.li}
                 // onClick={padlook}

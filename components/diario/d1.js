@@ -16,14 +16,20 @@ const D1 = () => {
         <p className='apilink'>https://zap-front.vercel.app/api/asteroides</p>
         <p>solo tienes que hacer el FETCH a tu manera, te aconsejos que hagas un console log para poder chequar el json.</p>
         <p>Actualmente hay mas de 1000 Asteroides detectados en el sistema solar, con sus nombres y descripciones del mismo, si se te ocurre agregar algun otro estaremos encantados! </p>
-
+          <div className='luna'></div>
       </article>
     </section>
 
           <style jsx>{`
+            .luna{
+              height: 3rem;
+              width: 3rem;
+              background-image: url("/img/mooon.gif");
+              background-size: cover;
+            }
             h1{
               text-align: center;
-              color: rgb(234, 0, 255)
+              color: rgb(38, 167, 9)
             }
             .datenews{
               color: rgb(28, 181, 11);
@@ -34,11 +40,11 @@ const D1 = () => {
             }
 
 section{
-  border: rgb(21, 136, 15) solid 2px;
+  border: rgb(87, 87, 87) solid 2px;
   border-radius: 5px;
       font-family: monospace;
-      font-size:1.2rem;
-      line-height: 1.74;
+      font-size:1rem;
+      line-height: 1.2;
         color: rgb(191, 191, 191);
         width:40rem;
         margin:auto;
@@ -50,7 +56,7 @@ section{
     @media (max-width: 600px) {
            h1{
               text-align: center;
-              color: rgb(234, 0, 255)
+              color: rgb(52, 179, 6)
             }
             .datenews{
               color: rgb(28, 181, 11);

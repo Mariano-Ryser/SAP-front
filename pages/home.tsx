@@ -20,6 +20,23 @@ export default function Homee() {
   <li className="bloqued">Great events</li>
   <li className="bloqued">NLP Professional guide</li>
   <li className="bloqued">Create the time</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
   
 </ul> 
 

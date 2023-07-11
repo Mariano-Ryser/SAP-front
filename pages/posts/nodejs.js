@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import Link from 'next/link';
 
 const TestPagination = () => {
   const initialState = (1.3)
@@ -27,6 +27,8 @@ const TestPagination = () => {
 
   <h2>File Systems Node Js</h2>
 
+
+
   <p>En el contexto de Node.js, el módulo fs (file system) proporciona una API para interactuar con el sistema de archivos del sistema operativo. Este módulo permite realizar operaciones de lectura, escritura, manipulación y gestión de archivos y directorios.</p>
   <p>El módulo fs de Node.js ofrece una amplia gama de funciones para trabajar con archivos y directorios. Algunas de las operaciones más comunes que se pueden realizar son:</p>
   <ul>
@@ -47,7 +49,7 @@ const TestPagination = () => {
   <p>En resumen, el módulo fs de Node.js proporciona una API para interactuar con el sistema de archivos del sistema operativo, permitiendo realizar operaciones de lectura, escritura y manipulación de archivos y directorios. Esta funcionalidad es fundamental para muchas aplicaciones Node.js que necesitan acceder y gestionar archivos en el sistema.</p>
   
 
-
+<p>En la pagina oficial de Node JS encontraras mas informacion acerca de <Link href="https://nodejs.org/dist/latest-v20.x/docs/api/fs.html">File Systems</Link> </p>
   
   
   </section>

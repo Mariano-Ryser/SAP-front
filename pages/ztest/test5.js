@@ -90,7 +90,6 @@ return (
                                 
 @media (max-width: 600px) {
                  .box{
-                    background-color: rgb(221, 221, 221);
                   }
                 
 }

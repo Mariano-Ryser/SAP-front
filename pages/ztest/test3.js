@@ -118,7 +118,6 @@ return (
                  .box{
                     margin: auto;
                     width: 100%;
-                    background-color: rgb(221, 221, 221);
                   }
                 
 }

@@ -108,7 +108,8 @@ return (
         </section>
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
        {/* CUBO MAGICO */}
-       <Test5/> <h3>With background-color</h3>
+       <Test5/>
+        <h3>With background-color</h3>
         <Test3/>
        <h3>With out background-color</h3>
         <Test4/>
@@ -232,7 +233,7 @@ return (
                     position: fixed;
                     top: 5rem;
                     left:0.4rem;
-                    background-color: white;
+                    background-color: rgba(60, 192, 37, 0.616);
                     height:40px;
                     width:70px;
                 }
@@ -242,7 +243,7 @@ return (
                     position: fixed;
                     top: 8rem;
                     left:0.4rem;
-                    background-color: white;
+                    background-color: rgba(144, 55, 55, 0.495);
                     height:40px;
                     width:70px;
                 }
@@ -250,12 +251,12 @@ return (
                   font-family:monospace;
                     margin: auto;
                     width: 100%;
-                    background-color: rgb(221, 221, 221);
+                    background-color: rgb(31, 31, 31);
                   }
                   .section{
                     font-family: monospace;
                     font-size: 1.2em;
-                    color: #000;
+                    color: #ffffff;
                     display:block;
                     margin:auto;
                     width: 31rem;
@@ -266,11 +267,11 @@ return (
                  .box{
                     margin: auto;
                     width: 100%;
-                    background-color: rgb(221, 221, 221);
+                    background-color: rgb(55, 55, 55);
                   }
                   .section{
                     font-size: 1.1em;
-                    color: #000;
+                    color: #bcbcbc;
                     display:block;
                     margin: auto;
                     width: 95%;

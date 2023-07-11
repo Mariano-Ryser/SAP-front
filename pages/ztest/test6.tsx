@@ -26,7 +26,7 @@ return (
    
    <style jsx>{`
                   .box{
-                    background-color:pink;
+                    background-color:rgb(54, 54, 54);
                     margin: auto;
                     width: 100%;
                     height: 30rem;

@@ -54,6 +54,11 @@ section{
         margin-bottom:1rem;
         margin-top: 1rem;
         padding:1rem;
+        transition: 0.05s;
+    }
+    section:hover{
+      background-color: rgb(42, 42, 42);
+      cursor: pointer;
     }
             
     @media (max-width: 600px) {

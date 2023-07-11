@@ -64,7 +64,7 @@ return (
                 .box{
                     height: 100vh;
                     width: 100%;
-                    background-color: rgb(221, 221, 221);
+                    background-color: rgb(0, 0, 0);
                   }
                 
          `}</style>

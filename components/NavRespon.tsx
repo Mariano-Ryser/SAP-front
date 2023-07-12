@@ -238,10 +238,25 @@ return (
               <li className={styles.li}
               // onClick={padlook}
               >
-                <a className={styles.a}>Logazo colorete
+                <a className={styles.a}>Logo Colorido
                 </a>
               </li>
               </Link>
+
+               {/* LOGO COLORINCHE*/}
+               <Link href="/fotos/fotos">
+              
+              <li className={styles.li}
+              // onClick={padlook}
+              >
+                <a className={styles.a}>Fotos
+                </a>
+              </li>
+              </Link>
+  <br></br>
+  <br></br>
+  <br></br>
+              <Test5/>
               
             {/* INSERT PASSWORD FORM */}
             {/* ASI PODEMOS MAPEAR ELEMENTOS CON UN BUEN TEMPLET*/}

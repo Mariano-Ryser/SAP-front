@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import Test8 from "../pages/ztest/test8"
 export default function Homee() {
     const icons = [
         {img: "insta.png"},
@@ -37,9 +38,14 @@ you can t do everything.
 
   
     </div>
-
+    
     </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    
 
+    
   <style jsx>{`
   
     .img{
@@ -57,7 +63,6 @@ you can t do everything.
     .container{
         width:40rem;
       margin: auto;
-      padding-bottom:10rem;
         display:flex;
         justify-content:center;
         color: rgb(210, 210, 210);

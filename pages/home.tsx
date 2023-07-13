@@ -1,15 +1,30 @@
 import Link from "next/link"
 import Test5 from "../pages/ztest/test5"
 export default function Homee() {
+
+
+  if(typeof document !== 'undefined') {
+
+    const circle = document.getElementById('circulo-mouse')
+    document.addEventListener('mousemove', e =>{
+      const mouseX = e.pageX -120;
+      const mouseY = e.pageY -30;
+  
+      circle.style.transform = `translate3d(${mouseX}px, ${mouseY}px,0)`
+    })
+}
+
+  
   return (
     <>
+     <span id="circulo-mouse"></span>
    <ul>
   {/* <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link> */}
 
+  <Link href="/posts/bloqueoprogramacion"><li>Bloqueado en la programacion?</li></Link>
   <Link href="/posts/nodejs"><li>A bit of Node js and File systems please.</li></Link>
   <Link href="/posts/elmagomartin"><li>El mago Martincito.</li></Link>
   <Link href="/posts/lieyourself"><li>Lie to yourself.</li></Link>
-  <Link href="/posts/bloqueoprogramacion"><li>Bloqueado en la programacion?</li></Link>
   <Link href="/posts/pnl"><li>Principios de la PNL</li></Link>
   <Link href="/posts/conciencia"><li>La magia de la Conciencia</li></Link>
   <li className="bloqued">Invierte en ti mismo - Equilibrate</li>
@@ -22,21 +37,7 @@ export default function Homee() {
   <li className="bloqued">Create the time</li>
   <li className="bloqued">------</li>
   <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
+
   
 </ul> 
 
@@ -48,6 +49,19 @@ export default function Homee() {
 </div> */}
 
   <style jsx>{`
+  #circulo-mouse{
+      background: radial-gradient(circle, rgba(26, 221, 39, 0.16) 0.01%, rgba(255, 255, 255, 0) 68%, rgba(255, 255, 255, 0) 100%);
+    background-image: url("/img/Alienverde.gif");
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.10;
+        position: absolute;
+        height: 96px;
+        width: 96px;
+        border-radius: 50%;
+        transition: all .01s ease-in-out;
+      }  
     .bloqued{
       color: red;
     }
@@ -96,7 +110,7 @@ export default function Homee() {
       background-color:black;
       }
     }
-      
+   
 @media (max-width: 600px) {
   .working{
 color:white;
@@ -127,10 +141,12 @@ margin-bottom:1rem;
       color:white;
     }
            
-                 
+      
 }
        
          `}</style>
+
+        
     </>
   )
 }

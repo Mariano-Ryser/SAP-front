@@ -1,6 +1,8 @@
 import style from '/styles/create.module.css'
 import { useState, useEffect } from 'react'
+
 function Create() {
+
     const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
     const initialState = {name:'',price:0}
     const [product, setProduct] = useState(initialState)

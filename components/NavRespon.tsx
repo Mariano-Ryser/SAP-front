@@ -111,9 +111,7 @@ return (
     
           <ul className={styles.ul}>
           <Test5/>
-          <br></br>
-          <br></br>
-          <br></br>
+          
             {/* HOME*/}
               <Link href="/">
               
@@ -212,9 +210,9 @@ return (
                <li 
                 id='li'
                 className={styles.liBloqued}
+                    onClick={padlook}
                   >
                 <div
-                onClick={padlook}
                 id='padlock'
                 className={styles.padlock}></div>
 
@@ -253,10 +251,9 @@ return (
                 </a>
               </li>
               </Link>
-  <br></br>
-  <br></br>
-  <br></br>
+  
               <Test5/>
+          </ul>
               
             {/* INSERT PASSWORD FORM */}
             {/* ASI PODEMOS MAPEAR ELEMENTOS CON UN BUEN TEMPLET*/}
@@ -320,7 +317,6 @@ return (
 
     
            
-          </ul>
         
         
    </aside>

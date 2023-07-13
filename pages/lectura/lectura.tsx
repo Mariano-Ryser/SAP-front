@@ -6,6 +6,7 @@ import Test3 from '../ztest/test3'
 import Test4 from '../ztest/test4'
 import Test5 from '../ztest/test5'
 import Test6 from '../ztest/test6'
+import Test8 from '../ztest/test8'
 
 function Lectura() {
     const initialState = (1)
@@ -174,7 +175,7 @@ return (
         </p>
        
         </section>
-        
+        <Test8/>
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         <h1>Nodeee</h1>
         <p>

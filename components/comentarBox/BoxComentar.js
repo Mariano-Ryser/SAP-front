@@ -218,6 +218,7 @@ const fetchComentars= () =>{
     <style jsx>{`
       .msjCarga{
         color: #e7e7e7;
+        font-family: monospace;
         font-size: 1.2rem;
         display: flex;
         justify-content: center;
@@ -353,10 +354,10 @@ font-family:monospace;
 
 /* TTITULO EN TEXTO */
 .titulo{
-  color: rgb(32, 186, 58);
+  color: rgb(234, 222, 0);
   font-family:monospace;
-  line-height: 0.3rem;
-  font-size: 1.2rem;
+  line-height: 0rem;
+  font-size: 1rem;
 }
 
 .comentarBox{
@@ -365,11 +366,17 @@ font-family:monospace;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   padding-bottom: 2rem;
-  border: solid rgb(50, 50, 50) 1px;
+  border: dashed rgb(53, 53, 53) 1px;
+  border-radius: 0.5rem;
   font-weight: bold;
   font-size: 1rem;
   font-family:monospace;
-  color: white;
+  color: rgb(219, 219, 219);
+  transition: 0.1s;
+}
+.comentarBox:hover{
+  background-color: #3c3c3c;
+  border: dashed rgb(50, 50, 50) 1px;
 }
 .author{
   font-size: 0.9rem;
@@ -380,8 +387,9 @@ font-family:monospace;
 
 .x{
   position: absolute;
+  font-size: 0.9rem;
   right: 1rem;
-  color: rgb(251, 251, 251);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   font-family: sans-serif;
 }
@@ -429,8 +437,7 @@ font-family:monospace;
 
 }
 }
-
-         `}</style>
+    `}</style>
     
   </>
   )

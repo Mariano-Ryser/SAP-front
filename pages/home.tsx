@@ -3,21 +3,8 @@ import Test5 from "../pages/ztest/test5"
 export default function Homee() {
 
 
-  if(typeof document !== 'undefined') {
-
-    const circle = document.getElementById('circulo-mouse')
-    document.addEventListener('mousemove', e =>{
-      const mouseX = e.pageX -120;
-      const mouseY = e.pageY -30;
-  
-      circle.style.transform = `translate3d(${mouseX}px, ${mouseY}px,0)`
-    })
-}
-
-  
   return (
     <>
-     <span id="circulo-mouse"></span>
    <ul>
   {/* <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link> */}
 
@@ -49,19 +36,7 @@ export default function Homee() {
 </div> */}
 
   <style jsx>{`
-  #circulo-mouse{
-      background: radial-gradient(circle, rgba(26, 221, 39, 0.16) 0.01%, rgba(255, 255, 255, 0) 68%, rgba(255, 255, 255, 0) 100%);
-    background-image: url("/img/Alienverde.gif");
-    background-size: 70px;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.10;
-        position: absolute;
-        height: 96px;
-        width: 96px;
-        border-radius: 50%;
-        transition: all .01s ease-in-out;
-      }  
+ 
     .bloqued{
       color: red;
     }

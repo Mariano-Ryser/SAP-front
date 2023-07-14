@@ -35,6 +35,7 @@ export default function Fotos() {
         background-position: center;
         background-size:cover;
         margin: auto;
+        margin-bottom: 1rem;
     }
    
     .container{

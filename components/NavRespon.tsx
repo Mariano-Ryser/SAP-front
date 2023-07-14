@@ -11,37 +11,37 @@ const NavRespon = () => {
 
    function openList(){
 
-    // const burger = document.getElementById('burger')
+    const burger = document.getElementById('burger')
 
-    //con desplazamiento
+  
+    const aside = document.getElementById('aside')
+    if(
+      aside.style.transform == 'translateY(0%)'){
+      aside.style.transform = 'translateY(-100%)';
+      setTimeout(()=>{
+        aside.style.display="none"
+      },200);
+    }else{
+      aside.style.display = 'block'
+      setTimeout(()=>{
+        aside.style.transform = 'translateY(0%)'
+      },0);
+    }
+
+    //con aparicion but, menos flujo de datos cuanticos XD
     // const aside = document.getElementById('aside')
     // if(
-    //   aside.style.transform == 'translateY(0%)'){
-    //   aside.style.transform = 'translateY(-100%)';
+    //   aside.style.display == 'block'){
+    //   aside.style.display = 'none';
     //   setTimeout(()=>{
-    //     aside.style.display="none"
+    
     //   },200);
     // }else{
     //   aside.style.display = 'block'
     //   setTimeout(()=>{
-    //     aside.style.transform = 'translateY(0%)'
+     
     //   },0);
     // }
-
-    //con aparicion but, menos flujo de datos cuanticos XD
-    const aside = document.getElementById('aside')
-    if(
-      aside.style.display == 'block'){
-      aside.style.display = 'none';
-      // setTimeout(()=>{
-    
-      // },200);
-    }else{
-      aside.style.display = 'block'
-      // setTimeout(()=>{
-     
-      // },0);
-    }
 
 
     // if(burger.style.transform == 'rotateZ(90deg)'){

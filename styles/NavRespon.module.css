@@ -59,7 +59,7 @@
     align-items: center;
     align-content: center;
     background-color: #232323d5;
-    border: solid 1px #404040d5;
+    border: dashed 1px #4f4f4fd5;
     margin-top: 0.1rem;
     margin-bottom: 0.7rem;
     padding: 0.26rem;
@@ -80,7 +80,7 @@
     position: relative;
     align-items: center;
     align-content: center;
-    border: solid 1px #646e61d5;
+    border: dashed 1px #646e61d5;
     margin-top: 0.1rem;
     margin-bottom: 0.7rem;
     padding: 0.26rem;
@@ -210,7 +210,6 @@
     align-items: center;
     align-content: center;
     background-color: #232323d5;
-    border: solid 1px #404040d5;
     margin-top: 0.1rem;
     margin-bottom: 0.7rem;
     padding: 0.26rem;

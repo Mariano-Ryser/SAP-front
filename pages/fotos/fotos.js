@@ -6,6 +6,15 @@ export default function Fotos() {
     <>
 
     <div className="container">
+
+    <div className="img" 
+            style={{backgroundImage: `url('/img/me14.jpeg')`}}
+            >
+        </div> 
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me13.jpeg')`}}
+            >
+        </div> 
     
        
         <div className="img" 
@@ -21,7 +30,44 @@ export default function Fotos() {
             style={{backgroundImage: `url('/img/me4.jpg')`}}
             >
         </div>  
-       
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me5.jpeg')`}}
+            >
+        </div> 
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me6.jpeg')`}}
+            >
+        </div> 
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me7.jpeg')`}}
+            >
+        </div> 
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me8.jpeg')`}}
+            >
+        </div> 
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me9.jpeg')`}}
+            >
+        </div> 
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me10.jpeg')`}}
+            >
+        </div> 
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me11.jpeg')`}}
+            >
+        </div> 
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me12.jpeg')`}}
+            >
+        </div> 
+        
+        
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me15.jpeg')`}}
+            >
+        </div> 
    
     </div>
 

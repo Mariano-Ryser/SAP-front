@@ -10,7 +10,7 @@ const D1 = () => {
       <article>
 
         <h1>API ASTEROIDES READY</h1>
-         <span className='datenews'>6/8/2023</span>
+         <span className='datenews'>6/7/2023</span>
         <p>Ya esta disponible API-ASTEROIDES!</p>
         <p>Actualmente tenemos 14 Asteroides con su respectivo nombre, link donde puedes encontrar informacion del mismo, una leve descripcion, la distancia_tierra y su o sus descubridores. </p>
         <p>Aqui te dejo el link donde puedes utilizarla y 100% gratuita</p>

@@ -1,23 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const D2 = () => {
+const D3 = () => {
 
   return (
     <>
-    <Link href="/posts/nodejs">
+    <Link href="/fotos/fotos">
     <section>
       <article>
 
-        <h1>Node Js y sus file systems</h1>
-         <span className='datenews'>11/7/2023</span>
-        <p>Empeze a implementar file systems, y pienso que es muy interesante el saber utilizarlos.</p>
-    <ul>
-      <li>fs.readFile()</li>
-      <li>fs.readFileSync()</li>
-      <li>fs.writeFile()</li>
-      <li>fs.writeFileSync()</li>
-    </ul>
+        <h1>Auch Fotos!</h1>
+         <span className='datenews'>20/8/2023</span>
+        <p>He agregado una seccion donde empezare a subir mis fotos</p>
+    
         <div className='node'></div>
       </article>
     </section>
@@ -27,15 +22,37 @@ const D2 = () => {
           .node{
               height: 4rem;
               width:4rem;
-              background-image: url("/img/node.png");
+              background-image: url("/img/insta.png");
               background-size: cover;
             }
             h1{
               text-align: center;
-              color: rgb(38, 167, 9)
+              font-size: 2rem;
+              margin: 0;
+              color: rgb(236, 236, 1);
+              transform: scale(1);
+              animation: h1 1s infinite alternate;
             }
+            @keyframes h1 {
+                    from {
+                      transform: scale(1);
+                      color: rgb(236, 236, 1);
+                    }
+                    to {
+                      transform: scale(1.1);
+                      color: rgb(135, 17, 135);
+                    }
+                  }
+              p{
+                font-weight: 900;
+                font-size: 2rem;
+                font-family: 'Courier New', Courier, monospace;
+                color: aqua;
+              }
+
+            
             .datenews{
-              color: rgb(28, 181, 11);
+              color: rgb(228, 63, 228);
             }
             .apilink{
               color: rgb(225, 225, 7);
@@ -90,4 +107,4 @@ section{
   )
 }
 
-export default D2
+export default D3

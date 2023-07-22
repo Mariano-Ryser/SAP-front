@@ -23,7 +23,21 @@ const TestPagination = () => {
    <p>ha ganado popularidad rápidamente y se ha convertido en una opción popular para el desarrollo de servidores y aplicaciones web en JavaScript. Su ecosistema incluye un administrador de paquetes llamado npm, que es una de las mayores colecciones de módulos y bibliotecas de código abierto disponibles.</p>
   <p>En resumen, Node.js es un entorno de tiempo de ejecución de JavaScript en el lado del servidor que fue creado para permitir el desarrollo de aplicaciones web eficientes y escalables fuera del entorno del navegador. Su arquitectura orientada a eventos y sin bloqueo lo hace adecuado para manejar grandes cantidades de solicitudes simultáneas de manera eficiente.</p>
   
+  <p>Sabias que la Nintendo Switch ejecuta Node JS?</p>
   <br></br>
+
+  <h2>te dare 5 razones de porque deberiamos aprenderlo !!</h2>
+   
+   <ul>
+    <li>Popularidad y demanda en el mercado laboral: Node.js es una tecnología extremadamente popular y ampliamente adoptada, especialmente en el desarrollo web. Aprender Node.js te abrirá puertas en el mercado laboral, ya que muchas empresas buscan desarrolladores con experiencia en esta tecnología para construir aplicaciones rápidas y escalables.</li>
+    <li>JavaScript en ambos lados: Node.js utiliza el mismo lenguaje de programación, JavaScript, tanto en el lado del cliente como en el del servidor. Esto facilita la transición de los desarrolladores que ya conocen JavaScript para construir aplicaciones de lado del servidor y aprovechar sus habilidades en ambos lados de la pila tecnológica.</li>
+    <li>Alta velocidad y rendimiento: Node.js está diseñado para ser extremadamente rápido y eficiente. Utiliza el motor V8 de Google Chrome, que compila el código JavaScript en código de máquina altamente optimizado. Además, su modelo de operaciones no bloqueantes (event-loop) permite manejar múltiples solicitudes de manera eficiente, lo que lo convierte en una excelente opción para aplicaciones en tiempo real y de alto rendimiento.</li>
+    <li>NPM (Node Package Manager): Node.js viene con NPM, que es el gestor de paquetes más grande y activo del mundo. Con NPM, puedes acceder a miles de módulos y bibliotecas gratuitas para agilizar tu desarrollo, lo que te permite construir aplicaciones complejas y robustas de manera más rápida y sencilla.</li>
+    <li>Versatilidad y escalabilidad: Node.js es adecuado para una variedad de casos de uso, desde aplicaciones web y API hasta aplicaciones de tiempo real y servicios en la nube. Además, gracias a su enfoque en la asincronía y su capacidad para manejar grandes cantidades de solicitudes concurrentes, es una excelente opción para aplicaciones escalables que necesitan manejar un alto volumen de tráfico.</li>
+   </ul>
+
+  <p>Netflix, la Nasa, Trello, Paypal, Uber , etc cualquier compania que conozcas utiliza Node Js... </p>
+    
 
   <h2>File Systems Node Js</h2>
 

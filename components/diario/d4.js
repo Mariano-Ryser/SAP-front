@@ -1,39 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const D3 = () => {
+const D4 = () => {
 
   return (
     <>
-    <Link href="/fotos/fotos">
+    <Link href="/posts/jzz">
     <section>
       <article>
 
-        <h1>Auch Fotos!</h1>
-         <span className='datenews'>20/8/2023</span>
-        <p>He agregado una seccion donde empezare a subir mis fotos</p>
+        <h1> te hago una pregunta...</h1>
+        <p> tu que piensas ? Quienes son los mejores interpretes de jazz de la historia?</p>
     
-        <div className='node'></div>
+        <div className='jzz'></div>
       </article>
     </section>
     </Link>
 
           <style jsx>{`
-          .node{
+          .jzz{
               height: 4rem;
               width:4rem;
-              background-image: url("/img/insta.png");
+              background-image: url("/img/trumpet.png");
               background-size: cover;
+              width: 12rem;
             }
             h1{
               text-align: center;
               font-size: 2rem;
               margin: 0;
-              color: rgb(182, 182, 71);
+              color: rgb(232, 19, 193);
               transform: scale(1);
-              animation: h1 10s infinite alternate;
+              animation:  10s infinite alternate;
             }
-            @keyframes h1 {
+            {/* @keyframes h1 {
                     from {
                       transform: scale(1);
                       color: rgb(236, 236, 1);
@@ -42,12 +42,12 @@ const D3 = () => {
                       transform: scale(1.1);
                       color: rgb(15, 170, 9);
                     }
-                  }
+                  } */}
               p{
                 font-weight: 900;
                 font-size: 1rem;
                 font-family: 'Courier New', Courier, monospace;
-                color: aqua;
+                color: rgb(64, 252, 252);
               }
 
             
@@ -107,4 +107,4 @@ section{
   )
 }
 
-export default D3
+export default D4

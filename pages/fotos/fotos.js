@@ -7,20 +7,17 @@ export default function Fotos() {
 
     <div className="container">
 
-    <div className="img" 
-            style={{backgroundImage: `url('/img/me14.jpeg')`}}
-            >
-        </div> 
-        <div className="img" 
-            style={{backgroundImage: `url('/img/me13.jpeg')`}}
-            >
-        </div> 
+
     
        
         <div className="img" 
             style={{backgroundImage: `url('/img/me.jpg')`}}
             >
         </div>    
+        <div className="img" 
+            style={{backgroundImage: `url('/img/me13.jpeg')`}}
+            >
+        </div> 
 
         <div className="img" 
             style={{backgroundImage: `url('/img/me2.jpg')`}}
@@ -75,14 +72,24 @@ export default function Fotos() {
   
     .img{
         display: block;
-        height:40rem;
+        height:35rem;
         width:90%;
         border-radius:0.3rem;
         background-position: center;
         background-size:cover;
         margin: auto;
         margin-bottom: 1rem;
+        transition: 0.2s;
+
     }
+    .img:hover{
+       transform: rotateZ(1deg)scale(1.04) translateX(-0.1rem) translateY(-0.2rem);
+       
+       cursor: pointer;
+       box-shadow: 0px 0px 10px 0px rgb(71, 71, 71);
+       border-radius:2rem;
+    }
+    
    
     .container{
         padding-top: 2rem;
@@ -98,8 +105,8 @@ export default function Fotos() {
 @media (max-width: 600px) {
     .img{
         display: block;
-        height:15rem;
-        width:90%;
+        height:20rem;
+        width:100%;
         border-radius:0.3rem;
         background-position: center;
         background-size:cover;

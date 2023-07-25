@@ -171,6 +171,8 @@ return (
                 className={styles.padlock}></div>
                   <a className={styles.a}>Product Creator</a>
                 </li>
+
+               
              
             
           {/* 3D link */}
@@ -240,8 +242,19 @@ return (
                 </a>
               </li>
               </Link>
+                  {/* MUSIC TESTING*/}
+                  <Link href="/posts/music">
+              
+              <li className={styles.li}
+              // onClick={padlook}
+              >
+                <a className={styles.a}>Music Test - Birds
+                </a>
+              </li>
+              </Link>
 
-               {/* LOGO COLORINCHE*/}
+
+               {/* FOTOS*/}
                <Link href="/fotos/fotos">
               
               <li className={styles.li}

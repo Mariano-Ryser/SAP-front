@@ -10,9 +10,8 @@ const D4 = () => {
       <article>
       <div className='absolute'></div>
 
-        <h1>Mezcla...  quieres saber mas ?...</h1>
-        <p>aporta e invetiga, con migo... ayudame.. </p>
-    
+
+        <h1>Sonido...  </h1>
         <div className='jzz'></div>
       </article>
     </section>

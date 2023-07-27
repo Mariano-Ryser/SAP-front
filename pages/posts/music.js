@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useRef } from 'react';
 
 const Music = () => {
   const initialState = (1.3)
@@ -21,34 +20,101 @@ const Music = () => {
     const audio = new Audio(`/sounds/${soundFileName}`);
     audio.play();
   };
+  // REPRODUCIR Y PAUSAR 
+
+
+
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  const handlePlayPause = () => {
+    const audioElement = audioRef.current;
+    if (isPlaying) {
+      audioElement.pause();
+    } else {
+      audioElement.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+  
+
+ const handleTimeUpdate = () => {
+    const audioElement = audioRef.current;
+    setCurrentTime(audioElement.currentTime);
+  };
+
+  const handleLoadedData = () => {
+    const audioElement = audioRef.current;
+    setDuration(audioElement.duration);
+  };
+
+ 
+  function formatTime(time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
   return (
     <>
   <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
+    <div>
+      <h1>Music</h1>
+    </div>
+<h1>pajaros</h1>
+    <div>
+      <button className='button5 ' onClick={() => playSound('mirlo.mp3')}>Mirlo</button>
+    </div>
+    <div>
+      <button className='button6 ' onClick={() => playSound2('Cuervo.mp3')}>Cuervo</button>
+    </div>
+    <div>
+      <h1>insectos</h1>
+      <button className='button7 ' onClick={() => playSound2('MOSCA.mp3')}>MOSCA</button>
+    </div>
+    <div>
+      <button className='button8 ' onClick={() => playSound2('mosquito.mp3')}>MOSQUITO</button>
+    </div>
+    <div>
+      <h1>terror ambiental</h1>
+      <button className='button9 ' onClick={() => playSound2('sonidoDeTruenos.mp3')}>TRUENOS</button>
+    </div>
+    <div>
+      <button className='button10 ' onClick={() => playSound2('terror.mp3')}>TERROR</button>
+    </div>
 
     <div>
-      <button className='button5 ' onClick={() => playSound('mirlo.mp3')}></button>
+      <button className='button11 ' onClick={() => playSound2('vikings.mp3')}>VIKINGS</button>
     </div>
+
+    <div> 
+      <button className='button11 ' onClick={() => playSound2('Ambulancia.mp3')}>Ambulancia</button>
+    </div>
+  
+
+    Test.. reproducir y pausar toggle
+
     <div>
-      <button className='button6 ' onClick={() => playSound2('mirlo.mp3')}></button>
-    </div>
+      <audio 
+        ref={audioRef}
+       src="/sounds/mirlo.mp3"
+        onTimeUpdate={handleTimeUpdate}
+        onLoadedData={handleLoadedData}
+      >
+      </audio>
+      <button onClick={handlePlayPause}>{isPlaying ? 'Pausar' : 'Reproducir'}</button>
+    
+
+     
+
+
     <div>
-      <button className='button5 ' onClick={() => playSound('mirlo.mp3')}></button>
+        {formatTime(currentTime)} / {formatTime(duration)}
+      </div>
+   
     </div>
-    <div>
-      <button className='button6 ' onClick={() => playSound2('mirlo.mp3')}></button>
-    </div>
-    <div>
-      <button className='button5 ' onClick={() => playSound('mirlo.mp3')}></button>
-    </div>
-    <div>
-      <button className='button6 ' onClick={() => playSound2('mirlo.mp3')}></button>
-    </div>
-    <div>
-      <button className='button5 ' onClick={() => playSound('mirlo.mp3')}></button>
-    </div>
-    <div>
-      <button className='button6 ' onClick={() => playSound2('mirlo.mp3')}></button>
-    </div>
+  
    
   </section>
 
@@ -62,16 +128,40 @@ const Music = () => {
      >-</button>
           <style jsx>{`
 
-
-      .button5{
+      button{
+        width: 7rem;
         height: 3rem;
-        width: 3rem;
+      }
+      .button5{
+        display: inline-block;
+        
+        
         background-color: rgb(19, 63, 140);
       }.button6{
-        height: 3rem;
-        width: 3rem;
+        
         background-color: rgb(67, 138, 22);
       }
+      .button7{
+      
+        background-color: rgb(19, 140, 29);
+      }.button8{
+     
+        background-color: rgb(114, 207, 56);
+      }
+      .button9{
+       
+        background-color: rgb(167, 13, 8);
+      }.button10{
+      
+        background-color: rgb(188, 197, 27);
+      }
+      .button11{
+       
+        background-color: rgb(150, 7, 140);
+      }.button12{
+      
+        background-color: rgb(170, 6, 159);
+      }rgb(130, 6, 121)
           a{
   color:yellow;
  } 
@@ -82,8 +172,7 @@ h1,h2,h3{
 section{
       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size:1.3rem;
-      line-height: 1.74;
-        color: rgb(191, 191, 191);
+        color: rgb(60, 144, 125);
         width:40rem;
         margin:auto;
         margin-bottom:1rem;

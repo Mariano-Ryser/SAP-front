@@ -1,15 +1,16 @@
 import Head from "next/head"
 import Image from "next/image"
+const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
 
 export default function Cienciados({asteroide}){
     return(
     <>
-    <div className="tl">https://echo.jpl.nasa.gov/asteroids/</div>
+
     <div className="tl">
         {
             asteroide.map(as =>(
                 <div className="box" key={as.id}>
-                    <h4>{as.nombre}</h4>
+                    <h4>{as.name}</h4>
                     <p>{as.descripcion}</p>
                     <p>{as.distancia_tierra}</p>
                     <p>{as.descubridor}</p>
@@ -17,19 +18,19 @@ export default function Cienciados({asteroide}){
                 </div>
             ))   
         }   
-    </div>
+    </div> 
     </>
     )
 }
 
 export const getServerSideProps = async (context) =>{
-   const res = await fetch("https://zap-front.vercel.app/api/asteroides")
-//    const res = await fetch("https://tecdottir.herokuapp.com/stations")
+   const res = await fetch(`${baseURL}/ditto`)
    const asteroides = await res.json()
+   console.log(asteroides)
    return{
     props:{
         asteroide: asteroides
+        }
     }
-   }
 }
 

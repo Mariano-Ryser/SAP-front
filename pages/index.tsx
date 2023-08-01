@@ -11,12 +11,13 @@ import D5 from '../components/diario/d5'
 
 
 
+
 export default function Home() {
   return (
     <>
 
    
-
+{/* <Tweet id="1683920951807971329" /> */}
 
   <D5/>
   <D1/>

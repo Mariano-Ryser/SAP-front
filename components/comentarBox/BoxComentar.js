@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 // import Image from "next/image"
 
 function BoxComentar(){
+
   const current = new Date();
   const datee = `${current.getDate()} / ${current.getMonth()+1} / ${current.getFullYear()}`;
-  const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
+  const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL // .env ()=>("api/v1") 
 
   const initialState = {
     titulo:'',
@@ -98,7 +99,7 @@ const fetchComentars= () =>{
       <p className="date"> {datee}</p>
 
       {/* Input Titulo */}
-      <input
+      {/* <input
     placeholder='Titulo'
     className="authorInput"
      maxLength="20"
@@ -106,7 +107,7 @@ const fetchComentars= () =>{
      name='titulo'
      value={comentar.titulo}
      onChange={handleChange}
-    ></input>
+    ></input> */}
 
     {/* Input Text area */}
       <textarea
@@ -122,7 +123,7 @@ const fetchComentars= () =>{
     </textarea>
 
     {/* Input Autor */}
-    <input
+    {/* <input
     placeholder='Author..'
     className="authorInput"
      maxLength="9999999"
@@ -130,7 +131,7 @@ const fetchComentars= () =>{
      name='author'
      value={comentar.author}
      onChange={handleChange}
-    ></input>
+    ></input> */}
 
       {/* Send Button */}
         <button 

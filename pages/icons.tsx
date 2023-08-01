@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import Link from 'next/link';
-import styles from "../styles/Icons.module.css";
+import styles from "../styles/Iconsss.module.css";
 // import Image from "next/image"
 
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 
 const TestPagination = () => {
+ 
   const initialState = (1.3)
   const [gross, setGross] = useState(initialState)
 
@@ -15,6 +16,11 @@ const TestPagination = () => {
   return (
     <>
   <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
+  <div>
+      The current theme is: {theme}
+      <button onClick={() => setTheme('light')}>Light Mode</button>
+      <button onClick={() => setTheme('dark')}>Dark Mode</button>
+    </div>
     
     <h1 className='titulo'>Bloqueo en programacion?</h1>
      
@@ -89,12 +95,13 @@ const TestPagination = () => {
      onClick={grosseOut}
      >-</button>
           <style jsx>{`
+
+
+
           a{
   color:yellow;
  } 
-h1,h2,h3{
-  color:rgb(252, 65, 255);
-}
+
 
 section{
       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;

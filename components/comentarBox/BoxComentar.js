@@ -12,6 +12,7 @@ function BoxComentar(){
     text:'',
     author:'',
   };
+  
   const [comentar, setComentar] = useState(initialState)
   const [comentars, setComentars] = useState([])
 

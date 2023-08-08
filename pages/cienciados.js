@@ -24,9 +24,9 @@ export default function Cienciados({asteroide}){
 }
 
 export const getServerSideProps = async (context) =>{
-   const res = await fetch(`${baseURL}/ditto`)
+   const res = await fetch(`${baseURL}/meteoros`)
    const asteroides = await res.json()
-   console.log(asteroides)
+//    console.log(asteroides)
    return{
     props:{
         asteroide: asteroides

@@ -8,7 +8,7 @@ export default function Homee() {
    <ul>
   {/* <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link> */}
 
-  <Link href="/posts/bloqueoprogramacion"><li>Bloqueado en la programacion?</li></Link>
+  {/* <Link href="/posts/bloqueoprogramacion"><li>Bloqueado en la programacion?</li></Link>
   <Link href="/posts/nodejs"><li>A bit of Node js and File systems please.</li></Link>
   <Link href="/posts/elmagomartin"><li>El mago Martincito.</li></Link>
   <Link href="/posts/lieyourself"><li>Lie to yourself.</li></Link>
@@ -21,7 +21,7 @@ export default function Homee() {
   <li className="bloqued">List - Fetch - Apis</li>
   <li className="bloqued">Great events</li>
   <li className="bloqued">NLP Professional guide</li>
-  <li className="bloqued">Create the time</li>
+  <li className="bloqued">Create the time</li> */}
   <li className="bloqued">------</li>
   <li className="bloqued">------</li>
 

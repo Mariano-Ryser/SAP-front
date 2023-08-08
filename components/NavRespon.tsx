@@ -123,7 +123,7 @@ return (
               </Link>
 
                 {/* Icons */}
-                <Link href="/icons">  
+                {/* <Link href="/icons">  
                 <li
                   id='li'
                   className={styles.li}
@@ -134,7 +134,7 @@ return (
                       className={styles.padlock}></div>
                   <a className={styles.a}>Icons</a>
                 </li>
-              </Link>
+              </Link> */}
 
          
           {/* Mensajeria Link */}
@@ -244,8 +244,8 @@ return (
               </Link> */}
 
                   {/* MUSIC TESTING*/}
-                  
-                  <Link href="/posts/music">
+
+                  {/* <Link href="/posts/music">
               
               <li className={styles.li}
               // onClick={padlook}
@@ -253,11 +253,11 @@ return (
                 <a className={styles.a}>Music Test - Birds
                 </a>
               </li>
-              </Link>
+              </Link> */}
 
 
                {/* FOTOS*/}
-               <Link href="/fotos/fotos">
+               {/* <Link href="/fotos/fotos">
               
               <li className={styles.li}
               // onClick={padlook}
@@ -265,9 +265,8 @@ return (
                 <a className={styles.a}>Fotos
                 </a>
               </li>
-              </Link>
+              </Link> */}
   
-              <Test5/>
           </ul>
               
             {/* INSERT PASSWORD FORM */}

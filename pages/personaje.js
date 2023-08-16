@@ -1,8 +1,11 @@
 
 import { useState, useEffect } from 'react'
+// CREAMOS LA FUNCION
 function Personaje() {
-    
+    //CONEXION VARIABLE EN .env
     const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
+
+    // ESTADO INICIAL PARA CREAR PERSONAJE
     const initialState = {
         name:'',
         surname:'',
@@ -11,8 +14,10 @@ function Personaje() {
         city:'',
         description:'',
     }
-
+    // Almacenamos en la variable "personaje" las propiedades al guardar 
     const [personaje, setPersonaje] = useState(initialState)
+    // Aqui se setean los personajes traidos de la base de datos...
+    // que podemos en contrar mas abajo en el useEffect
     const [personajes, setPersonajes] = useState([])
 
 
@@ -55,7 +60,7 @@ function Personaje() {
         .then(res => res.json())
         .then( ({ personajes }) =>{
             console.log(personajes);
-            console.log("error aqui");
+// se setean aqui los personajes traidos de la base de datos
             setPersonajes(personajes);
     })
     }

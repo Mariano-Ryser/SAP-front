@@ -123,7 +123,7 @@ return (
               </Link>
 
                 {/* Icons */}
-                {/* <Link href="/icons">  
+                <Link href="/icons">  
                 <li
                   id='li'
                   className={styles.li}
@@ -134,18 +134,18 @@ return (
                       className={styles.padlock}></div>
                   <a className={styles.a}>Icons</a>
                 </li>
-              </Link> */}
+              </Link>
 
          
           {/* Mensajeria Link */}
-              {/* <Link href="/msj">
+              <Link href="/msj">
                 <li className={styles.li}>
                   <a className={styles.a}>Mensajeria</a>
                 </li>
-              </Link> */}
+              </Link>
         
           {/* CHAR CREATOR */}
-          {/* <Link href="/personaje">
+          <Link href="/personaje">
                 <li
                   id='li'
                   className={styles.li}
@@ -156,11 +156,11 @@ return (
                       className={styles.padlock}></div>
                   <a className={styles.a}>Chars Creator</a>
                 </li>
-                </Link> */}
+                </Link>
 
           {/* PRODUCT CREATOR link */}
           
-{/*              
+             
                 <li 
                 id='li'
                 className={styles.liBloqued}
@@ -170,14 +170,14 @@ return (
                 id='padlock'
                 className={styles.padlock}></div>
                   <a className={styles.a}>Product Creator</a>
-                </li> */}
+                </li>
 
                
              
             
           {/* 3D link */}
            
-                {/* <li 
+                <li 
                 id='li'
                 className={styles.liBloqued}
                   >
@@ -188,12 +188,12 @@ return (
                 className={styles.padlock}></div>
 
                   <a className={styles.a}>Numeros Test </a>
-                </li>  */}
+                </li> 
               
 
               {/* API */}
               
-                {/* <li 
+                <li 
                 id='li'
                 className={styles.liBloqued}
                   >
@@ -204,12 +204,12 @@ return (
                 className={styles.padlock}></div>
 
                   <a className={styles.a}> APIS </a>
-                </li>  */}
+                </li> 
              
 
                {/* MARKET!*/}
              
-               {/* <li 
+               <li 
                 id='li'
                 className={styles.liBloqued}
                     onClick={padlook}
@@ -219,10 +219,10 @@ return (
                 className={styles.padlock}></div>
 
                   <a className={styles.a}>MARKET! </a>
-                </li>  */}
+                </li> 
 
                  {/* Lectura*/}
-              {/* <Link href="/lectura/lectura">
+              <Link href="/lectura/lectura">
               
               <li className={styles.li}
               // onClick={padlook}
@@ -230,10 +230,10 @@ return (
                 <a className={styles.a}>Fonts-test
                 </a>
               </li>
-              </Link> */}
+              </Link>
 
                   {/* LOGO COLORINCHE*/}
-                  {/* <Link href="/logazo/logazo">
+                  <Link href="/logazo/logazo">
               
               <li className={styles.li}
               // onClick={padlook}
@@ -241,11 +241,11 @@ return (
                 <a className={styles.a}>Logo Colorido
                 </a>
               </li>
-              </Link> */}
+              </Link>
 
                   {/* MUSIC TESTING*/}
 
-                  {/* <Link href="/posts/music">
+                  <Link href="/posts/music">
               
               <li className={styles.li}
               // onClick={padlook}
@@ -253,11 +253,11 @@ return (
                 <a className={styles.a}>Music Test - Birds
                 </a>
               </li>
-              </Link> */}
+              </Link>
 
 
                {/* FOTOS*/}
-               {/* <Link href="/fotos/fotos">
+               <Link href="/fotos/fotos">
               
               <li className={styles.li}
               // onClick={padlook}
@@ -265,7 +265,7 @@ return (
                 <a className={styles.a}>Fotos
                 </a>
               </li>
-              </Link> */}
+              </Link>
   
           </ul>
               

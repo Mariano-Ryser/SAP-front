@@ -17,15 +17,15 @@ export default function Home() {
     <>
 
    
-{/* <Tweet id="1683920951807971329" /> */}
 
-  {/* <D5/>
+
+  <D5/>
   <D1/>
   <D3/>
   <D2/>
-  <D4/> */}
+  <D4/>
   
-  {/* <Pantallazo/> */}
+  <Pantallazo/>
 
   <style jsx>{`
   

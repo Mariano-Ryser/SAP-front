@@ -226,15 +226,13 @@ const fetchComentars= () =>{
         justify-content: center;
       }
 
-     
-        
 .date{
   color: #84ba64;
   font-size: 2rem;
-font-weight: 900;
-margin: 0rem;
-padding: 0.7rem;
-font-family:monospace;
+  font-weight: 900;
+  margin: 0rem;
+  padding: 0.7rem;
+  font-family:monospace;
 }
 
 /* FORMULARIO A COMPLETAR */
@@ -303,9 +301,9 @@ font-family:monospace;
 
 .textArea{
   position: relative;
-  background-color: rgb(87, 87, 87);
+  background-color: rgb(7, 174, 15);
   width:100%;
-  color: rgb(240, 240, 240);
+  color: rgb(0, 0, 0);
   border-radius:0.2rem;
   margin-bottom: 0.1rem;
   height: 6rem;
@@ -324,7 +322,7 @@ font-family:monospace;
   }
 
   .authorInput{
-    background-color: rgb(87, 87, 87);
+    background-color: rgb(154, 14, 14);
     color: #e7e7e7;
     display: block;
     margin-bottom: 0.3rem;
@@ -348,7 +346,7 @@ font-family:monospace;
   width: 5rem;
   margin-bottom: 0.2rem;
   color: aliceblue;
-  background-color: rgb(65, 62, 60);
+  background-color: rgb(192, 82, 9);
   border-radius: 0.2rem;
 }
 
@@ -356,7 +354,7 @@ font-family:monospace;
 
 /* TTITULO EN TEXTO */
 .titulo{
-  color: rgb(234, 222, 0);
+  color: rgb(31, 172, 102);
   font-family:monospace;
   line-height: 0rem;
   font-size: 1rem;
@@ -368,7 +366,7 @@ font-family:monospace;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   padding-bottom: 2rem;
-  border: dashed rgb(53, 53, 53) 1px;
+  border: dashed rgb(196, 16, 16) 1px;
   border-radius: 0.5rem;
   font-weight: bold;
   font-size: 1rem;
@@ -377,7 +375,7 @@ font-family:monospace;
   transition: 0.1s;
 }
 .comentarBox:hover{
-  background-color: #3c3c3c;
+  background-color: #d27c0b;
   border: dashed rgb(50, 50, 50) 1px;
 }
 .author{

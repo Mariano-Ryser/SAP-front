@@ -20,7 +20,7 @@ export default function Homee() {
             
         </div>
         </div>    
-        <p>My name is Mariano
+        {/* <p>My name is Mariano
     ,
      currently live in Zurich,
     this is my humble portfolio on which i can test
@@ -35,7 +35,7 @@ you can t do everything.
          frontend runs, and the backend is deployed
           on Azure, the database interaction is
            created with NodeJs and Mongo DB.
-        </p>
+        </p> */}
 
   
     </div>

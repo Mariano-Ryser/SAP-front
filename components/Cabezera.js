@@ -29,7 +29,7 @@ const Cabezera = () => {
                   top:0px;
                   width:20rem;
                   height:25rem;
-                  border:solid red 1px;
+                  border:solid rgb(89, 195, 40) 1px;
                 }
                        `}</style>
   </>

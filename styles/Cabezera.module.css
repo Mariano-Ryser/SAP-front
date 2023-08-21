@@ -11,7 +11,7 @@
 }
 
 .name{
-    color: rgb(191, 191, 191);
+    color: rgb(39, 7, 220);
     letter-spacing: 0.05rem;
     margin: 1.3em;
     margin-left: 2rem;
@@ -28,7 +28,7 @@
     position: relative;
     margin-right: 1rem;
     text-align: end;
-    color: #dedede;
+    color: #2c9980;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     font-size: 1rem;

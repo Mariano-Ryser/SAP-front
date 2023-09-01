@@ -1,13 +1,19 @@
 import { useEffect, useState } from 'react';
+import {dateDay} from '../date'
 // import Image from "next/image"
 
 function BoxComentar(){
 
-  const current = new Date();
-  const datee = `${current.getDate()} / ${current.getMonth()+1} / ${current.getFullYear()}`;
+  const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(null);
+  const [deletedMessage, setDeleted] = useState(null);
+  
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL // .env ()=>("api/v1") 
 
-  const initialState = {
+
+
+
+const initialState = {
     titulo:'',
     text:'',
     author:'',
@@ -15,81 +21,79 @@ function BoxComentar(){
   
   const [comentar, setComentar] = useState(initialState)
   const [comentars, setComentars] = useState([])
+  
+  const handleChange = (e) =>{
 
-  const [error, setError] = useState(null);
-  const [successMessage, setSuccessMessage] = useState(null);
-  const [deletedMessage, setDeleted] = useState(null);
+    
+    const inputValue = e.target.value
+    const inputName = e.target.name
+
+  setComentar({
+    ...comentar, 
+    [inputName]: inputValue,
+  });
+}
+const handleClick = (e)=> {
+  e.preventDefault()
+
+if(comentar.titulo.trim() === "") {  //.trim() significa toma como error los espacios en blanco
+    setError("Debes indicar un titulo")
+    return;
+}
+if(comentar.text.trim() === "") {
+    setError("Debes indicar una descripcion")
+    return;
+}
+if(comentar.author.trim() === "") {
+  setError("Debes indicar un Author")
+  return;
+}    
+else{
+  setSuccessMessage("Agregado con Exito!!")
+}
+ setTimeout(()=> {
+     setSuccessMessage(null)}
+     , 2100)
+setError(null);
+  
+  fetch(`${baseURL}/comentars`,{
+      method:'POST',
+      headers:{
+          'Content-Type': 'application/json'
+      },
+      body:JSON.stringify(comentar)
+  })
+  .then(res => res.json())
+
+  .then((data) =>{
+      setComentar(initialState)
+      const newComentars = [data.comentar, ...comentars]
+      setComentars(newComentars)
+      // fetchComentars();
+      console.log("Comentario creado con exito!")
+  })
+
+  .catch( err=> {
+      console.log("Aqui algo anda mal")
+      console.log({err})
+  })
+}
+
+ const fetchComentars= () =>{
+  fetch(`${baseURL}/comentars`)
+     .then(res => res.json())
+     .then( ({comentars}) =>{
+      setComentars(comentars)
+      console.log('Comentarios:', comentars)
+ })
+}
 
   //  ALERTAS DE COMPLETADO DE CASILLERO 
-  const handleChange = (e) =>{
-        const inputValue = e.target.value
-        const inputName = e.target.name
 
-      setComentar({
-        ...comentar, 
-        [inputName]: inputValue,
-      });
-  }
-
-  const handleClick = (e)=> {
-        e.preventDefault()
-
-      if(comentar.titulo.trim() === "") {  //.trim() significa toma como error los espacios en blanco
-          setError("Debes indicar un titulo")
-          return;
-      }
-      if(comentar.text.trim() === "") {
-          setError("Debes indicar una descripcion")
-          return;
-      }
-      if(comentar.author.trim() === "") {
-        setError("Debes indicar un Author")
-        return;
-    }    
-      else{
-        setSuccessMessage("Agregado con Exito!!")
-      }
-       setTimeout(()=> {
-           setSuccessMessage(null)}
-           , 2100)
-      setError(null);
-        
-        fetch(`${baseURL}/comentars`,{
-            method:'POST',
-            headers:{
-                'Content-Type': 'application/json'
-            },
-            body:JSON.stringify(comentar)
-        })
-        .then(res => res.json())
-
-        .then((data) =>{
-            setComentar(initialState)
-            console.log("Comentario creado con exito ! !")
-            const newComentars = [data.comentar, ...comentars]
-            setComentars(newComentars)
-            // fetchComentars();
-            console.log("Comentario creado con exito!")
-        })
-
-        .catch( err=> {
-            console.log("Aqui algo anda mal")
-            console.log({err})
-        })
-  }
   const handleDeleted = (e)=> {
     e.preventDefault()
 }
 
-
-const fetchComentars= () =>{
-    fetch(`${baseURL}/comentars`)
-       .then(res => res.json())
-       .then( ({comentars}) =>{
-        setComentars(comentars)
-        console.log('Comentarios:', comentars)
-   })
-}
     useEffect(()=>{
       fetchComentars();
      },[])
@@ -97,7 +101,7 @@ const fetchComentars= () =>{
   return (
     <>
     <form className="form">
-      <p className="date"> {datee}</p>
+      <p className="date"> {dateDay()}</p>
 
       {/* Input Titulo */}
       <input
@@ -140,32 +144,11 @@ const fetchComentars= () =>{
         onClick={handleClick}
         >Send
         </button>
-        {
-                error && 
-                (
-                    <div className="error">
-                        { error }
-                    </div>
-                ) 
-                
-            }
-            {
-                successMessage && 
-                (
-                    <div className="success">
-                        { successMessage }
-                    </div>
-                ) 
-            }
 
-          {
-                deletedMessage && 
-                (
-                    <div className="deleted">
-                        { deletedMessage }
-                    </div>
-                ) 
-            }
+        </form>
+        {error && (<div className="error">{ error } </div> ) }
+        {successMessage && ( <div className="success">{ successMessage } </div> )  }
+        {deletedMessage && (<div className="deleted">{ deletedMessage } </div> )   }
 
             
 
@@ -198,7 +181,9 @@ const fetchComentars= () =>{
 
                                  setError(null);
 
-                                console.log({data})})}}
+                                console.log({data})})
+                                
+                                }}
                                 
                       >X</span>
 
@@ -215,7 +200,7 @@ const fetchComentars= () =>{
  
       </div>
 
-    </form>
+   
    
     <style jsx>{`
       .msjCarga{
@@ -227,7 +212,7 @@ const fetchComentars= () =>{
       }
 
 .date{
-  color: #84ba64;
+  color: #000000;
   font-size: 2rem;
   font-weight: 900;
   margin: 0rem;
@@ -279,7 +264,7 @@ const fetchComentars= () =>{
   padding: 0.5rem;
   margin: 0rem 1rem 0rem 1rem;
   color: white;
-  background-color: black;
+  background-color: rgb(198, 171, 71);
   transform: rotateZ(360deg);
   scale: 2;
   transition: 0.2s;
@@ -301,9 +286,9 @@ const fetchComentars= () =>{
 
 .textArea{
   position: relative;
-  background-color: rgb(7, 174, 15);
+  background-color: rgb(0, 0, 0);
   width:100%;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border-radius:0.2rem;
   margin-bottom: 0.1rem;
   height: 6rem;
@@ -312,30 +297,30 @@ const fetchComentars= () =>{
   }
 
   .textArea::placeholder {
-    color: #e7e7e7;
+    color: #8a8a8a;
     display: block;
     margin-bottom: 0.1rem;
     border: #383838 ;
-    padding: 0.4rem;
+    padding: 0.1rem;
     font-size:1.1rem;
   font-family:monospace; 
   }
 
   .authorInput{
-    background-color: rgb(154, 14, 14);
+    background-color: rgb(10, 8, 8);
     color: #e7e7e7;
     display: block;
     margin-bottom: 0.3rem;
     margin-top:0rem;
-    border: #383838 ;
+    border: 1px solid #383838 ;
     padding: 0.4rem;
     font-size:1.1rem;
    font-family:monospace; 
   }
 
   .authorInput::placeholder{
-    background-color: rgb(87, 87, 87);
-    color: #e7e7e7;
+    background-color: rgb(0, 0, 0);
+    color: #b9b9b9;
     font-size:1.1rem;
   font-family:monospace; 
   }
@@ -346,7 +331,7 @@ const fetchComentars= () =>{
   width: 5rem;
   margin-bottom: 0.2rem;
   color: aliceblue;
-  background-color: rgb(192, 82, 9);
+  background-color: rgb(71, 103, 191);
   border-radius: 0.2rem;
 }
 
@@ -354,7 +339,7 @@ const fetchComentars= () =>{
 
 /* TTITULO EN TEXTO */
 .titulo{
-  color: rgb(31, 172, 102);
+  color: rgb(8, 8, 8);
   font-family:monospace;
   line-height: 0rem;
   font-size: 1rem;
@@ -366,7 +351,7 @@ const fetchComentars= () =>{
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   padding-bottom: 2rem;
-  border: dashed rgb(196, 16, 16) 1px;
+  border: dashed rgb(0, 0, 0) 1px;
   border-radius: 0.5rem;
   font-weight: bold;
   font-size: 1rem;
@@ -381,7 +366,7 @@ const fetchComentars= () =>{
 .author{
   font-size: 0.9rem;
   display: block;
-  color: white;
+  color: rgb(1, 227, 8);
   text-align: start;
 }
 

@@ -2,14 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: rgb(231, 53, 255);
+  background-color: rgb(42, 122, 111);
 }
 * {
   box-sizing: border-box;
 }
-
-.tl{color: rgb(228, 6, 6); font-family: monospace;}
-.link{color: rgb(51, 176, 182); font-family: monospace;}
 
 
 @media (max-width: 600px) {

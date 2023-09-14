@@ -2,7 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: rgb(42, 122, 111);
+  background-color: hsl(60, 100%, 50%);
+
+  
 }
 * {
   box-sizing: border-box;
@@ -10,6 +12,7 @@ body {
 
 
 @media (max-width: 600px) {
+
  
   
 }

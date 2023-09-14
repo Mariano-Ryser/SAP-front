@@ -11,8 +11,6 @@ function BoxComentar(){
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL // .env ()=>("api/v1") 
 
 
-
-
 const initialState = {
     titulo:'',
     text:'',
@@ -23,8 +21,7 @@ const initialState = {
   const [comentars, setComentars] = useState([])
   
   const handleChange = (e) =>{
-
-    
+  
     const inputValue = e.target.value
     const inputName = e.target.name
 
@@ -33,7 +30,9 @@ const initialState = {
     [inputName]: inputValue,
   });
 }
+
 const handleClick = (e)=> {
+  
   e.preventDefault()
 
 if(comentar.titulo.trim() === "") {  //.trim() significa toma como error los espacios en blanco
@@ -51,6 +50,7 @@ if(comentar.author.trim() === "") {
 else{
   setSuccessMessage("Agregado con Exito!!")
 }
+
  setTimeout(()=> {
      setSuccessMessage(null)}
      , 2100)
@@ -69,7 +69,7 @@ setError(null);
       setComentar(initialState)
       const newComentars = [data.comentar, ...comentars]
       setComentars(newComentars)
-      // fetchComentars();
+      fetchComentars();
       console.log("Comentario creado con exito!")
   })
 
@@ -89,10 +89,9 @@ setError(null);
 }
 
   //  ALERTAS DE COMPLETADO DE CASILLERO 
-
   const handleDeleted = (e)=> {
     e.preventDefault()
-}
+  }
 
     useEffect(()=>{
       fetchComentars();
@@ -145,52 +144,49 @@ setError(null);
         >Send
         </button>
 
-        </form>
+    </form>
+
         {error && (<div className="error">{ error } </div> ) }
         {successMessage && ( <div className="success">{ successMessage } </div> )  }
         {deletedMessage && (<div className="deleted">{ deletedMessage } </div> )   }
 
-            
-
-
         {/* MAPEO DE ELEMENTOS */}
         <div>
-             {comentars.map(({_id, titulo, text, author}) => (
-                <div key={_id} className="comentarBox">
-                    <h1 className="titulo">{titulo}</h1>
-                    <span className="text">-{text}...</span> 
-                    <br></br>
-                    <br></br>
-                    <span className="author">-{author}...</span> 
-                    
-                <div >
-              {/* Button Deleted */}
-              <span
-                        className="x"
-                          onClick={
-                              ()=>{
-                                fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
-                                .then((res) => res.json())
-                                .then((data) => {
-                                fetchComentars();
-                                setDeleted("Deleted!") 
-
-                                setTimeout(()=> {
-                                  setDeleted(null)}
-                                  , 2000)
-
-                                 setError(null);
-
-                                console.log({data})})
-                                
-                                }}
-                                
-                      >X</span>
-
-
-                    </div>
+                {comentars.map(({_id, titulo, text, author}) => (
+                    <div key={_id} className="comentarBox">
+                        <h1 className="titulo">{titulo}</h1>
+                        <span className="text">-{text}...</span> 
+                        <br></br>
+                        <br></br>
+                        <span className="author">-{author}...</span> 
                         
+                  {/* Button Deleted */}
+                <div >
+                  <span
+                            className="x"
+                              onClick={
+                                  ()=>{
+                                    fetch(`${baseURL}/comentars/${_id}`, {method:'DELETE'})
+                                    .then((res) => res.json())
+                                    .then((data) => {
+                                    fetchComentars();
+                                    setDeleted("Deleted!") 
+
+                                    setTimeout(()=> {
+                                      setDeleted(null)}
+                                      , 2000)
+
+                                    setError(null);
+
+                                    console.log({data})})
+                                    
+                                    }}
+                                    >
+                X
+                </span>
                 </div>
+                            
+                  </div>
                
             ))}
          </div> 

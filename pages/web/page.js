@@ -32,12 +32,9 @@ export default function Page() {
   </div>
 
 
-
-
-
   <h1>Wala</h1>
   {dateDay()}
-  <BoxComentar/> 
+
 
   <style jsx>{`
      .art{

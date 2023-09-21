@@ -1,21 +1,15 @@
-import Link from 'next/link'
-import Page from './web/page'
-import BoxComentar from '../components/comentarBox/BoxComentar'
-import Segmento from './web/segmentos'
-// import Image from 'next/image' 
-// import Link from 'next/link';
+
+
+import S1 from "./secciones/S1"
 
 export default function Home() {
   return (
     <>
- 
+  <S1/>
+       
 
-        <div className='body'>
-           {/* <Page/> */}
-           {/* <BoxComentar/> */}
-           <Segmento/> 
-           
-           </div>
+
+
 
   <style jsx>{`
     

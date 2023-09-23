@@ -5,6 +5,8 @@ body {
   /* background-color: hsl(60, 100%, 97%); */
 
   background-color: rgb(241, 239, 237);
+  font-family: "HelveticaNeueLTW01_55Roman","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 1em;
   
 }
 * {

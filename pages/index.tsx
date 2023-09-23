@@ -1,14 +1,11 @@
-
-
-import S1 from "./secciones/S1"
+import FormCreateAccount from "../components/formCreateAccount"
+import FormCreateChar from "../components/formCreateChar"
 
 export default function Home() {
   return (
     <>
-  <S1/>
-       
-
-
+    <FormCreateAccount/>
+    <FormCreateChar/>
 
 
   <style jsx>{`

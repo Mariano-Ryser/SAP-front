@@ -11,65 +11,56 @@
 }
 .nav{
   position: fixed;
-   bottom: 4rem; 
-   /* top: 2rem; */
-  right: 1rem; 
-  width: 8rem;
-  display: flex;
-  align-items: center;
-  color: black;
-  z-index: 2;
+    /* top: 2rem;  */
+    bottom: 2.9rem;
+     right: 0.1rem; 
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    z-index: 2;
 }
 
 .asideBar{
   display: none;
-   /* filter: blur(1px); */
-   position: fixed;
-   height: 100%;
-   overflow: hidden;
-   overflow-y: scroll;
-   /* transform: translateY(-100%);  */
-   width: 100%;
-   transition: 0.2s;
-   z-index: 1;
-   text-align: center;
-   padding-top: 4.1rem;
-   top:56px;
+  background-color: rgb(241, 239, 237);
+    /* filter: blur(1px); */
+    border-bottom: solid rgb(221, 221, 221) 1px;
+    box-shadow: rgba(139, 139, 139, 0.196) 0px 5px 15px;
+    right: 0px;
+    position: fixed;
+    /* background-color: rgb(255, 255, 255);
+    opacity: 50%; */
+    height: 20rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    /* transform: translateY(-100%);  */
+    width: 21rem;
+    padding-top: 0.3rem;
+    transition: 0.2s;
+    animation: blur 5s infinite alternate ;
+    top:3.5rem;
+    z-index: 0;
 }
 .ul{
   /* border:solid red 1px; */
   margin-top: 0px;
   padding: 0;
-  list-style-type: none;
+}
 
-}
-.a{
-  /* border:solid red 1px; */
-  font: 400 20px/1.5 monospace;
-  text-decoration: none;
-  /* color: rgb(255, 255, 255); */
-  font-size: 1.2rem;
-}
 .li{ 
-  /* border:solid red 1px; */
-    border-radius: 0.2rem;
-    width: 38rem;
-    margin: auto;
-    position: relative;
-    align-items: center;
-    align-content: center;
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
-    padding: 0.2rem;
-    height: 2.5rem;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    transition: 0.2s;
+  color: rgb(137, 137, 137);
+  width: 100%;
+  position: relative;
+  align-items: center;
+  align-content: center;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding: 0.26rem;
+  transition: 0.2s;
   }
   .li:hover{
     cursor: pointer;
-    border: solid 1px rgb(93, 93, 93);
-    background-color: #58bf5dc1;
+    background-color: #dadadac1;
   }
   .liBloqued{
     border-radius: 0.2rem;
@@ -171,7 +162,6 @@
     background-color: rgb(241, 239, 237);
     /* filter: blur(1px); */
     border-bottom: solid rgb(221, 221, 221) 1px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     right: 0px;
     position: fixed;
     /* background-color: rgb(255, 255, 255);
@@ -180,17 +170,15 @@
     overflow: hidden;
     overflow-y: scroll;
     /* transform: translateY(-100%);  */
-    width: 60%;
-    padding-top: 1.5rem;
+    width: 40%;
+    padding-top: 0.5rem;
     transition: 0.2s;
     animation: blur 5s infinite alternate ;
     top:5.7rem;
     z-index: 0;
   }
 
-  .a{
-    font-size: 1.1rem;
-  }
+  
   .asideBar::-webkit-scrollbar {
     width: 0rem;
   }
@@ -201,8 +189,6 @@
     background: transparent;
   }
   .li{
-    box-shadow: 1px 1px 1px 1px black;
-    width: 90%;
     position: relative;
     align-items: center;
     align-content: center;
@@ -211,23 +197,6 @@
     padding: 0.26rem;
   }
 
-    .liBloqued{
-      display: block;
-      width: 90%;
-    }
-    .padlock{
-      display: none;
-      position: absolute;
-      bottom: -1rem;
-      right: 1.5rem;
-      opacity: 50%;
-      background-image: url('/img/padlook.png');
-      background-size: cover;
-      height: 3rem;
-      width: 2.41rem;
-      transition: 0.2s;
-      transform: rotateZ(0deg);  /* las medidas del transform se miden en "deg" */ 
-      animation: pad infinite 0.5s alternate ease-in-out;
-    }
+
   }
 

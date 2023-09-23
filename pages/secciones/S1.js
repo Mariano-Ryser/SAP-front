@@ -15,6 +15,10 @@ const TestPagination = () => {
   return (
     <>
   <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
+  <h1>Observa, sonrie, calla. </h1>
+  <p>estilando con jsx en next! alto potencial, podes animar valores absolutos 0.002s  , px, rem , em </p>
+  <p>En esta sociedad tan agresiva, tan ruidosa, hay que aprender a observar a sonreir y callar.</p>
+  
   <p>Diariamente el mismo dia, la misma energia, mantener el mismo nivel de conciencia.
 nos entendemoos cada dia mas, nos liberamos de momentos comprometedores y volvemos a ser dueños de nuestras vidas.
 <br></br>
@@ -2888,6 +2892,8 @@ perdidos y seamos libres, de una vez para siempre. Depende de nosotros.</p>
      className='button3'
      onClick={grosseOut}
      >-</button>
+
+     
           <style jsx>{`
           a{
   color:rgb(12, 186, 189);

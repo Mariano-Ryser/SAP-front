@@ -78,7 +78,7 @@ const Music = () => {
     </div>
     <div>
       <h1>terror ambiental</h1>
-      <button className='button9 ' onClick={() => playSound2('sonidoDeTruenos.mp3')}>TRUENOS</button>
+      <button className='button9 ' onClick={() => playSound2('sonidosDeTruenos.mp3')}>TRUENOS</button>
     </div>
     <div>
       <button className='button10 ' onClick={() => playSound2('terror.mp3')}>TERROR</button>
@@ -91,6 +91,10 @@ const Music = () => {
     <div> 
       <button className='button11 ' onClick={() => playSound2('Ambulancia.mp3')}>Ambulancia</button>
     </div>
+
+    <div> 
+      <button className='button11 ' onClick={() => playSound2('originalJuan.mp3')}>Original Juan</button>
+    </div>
   
 
     Test.. reproducir y pausar toggle
@@ -98,23 +102,19 @@ const Music = () => {
     <div>
       <audio 
         ref={audioRef}
-       src="/sounds/mirlo.mp3"
+       src="/sounds/sonidosDeTruenos.mp3"
         onTimeUpdate={handleTimeUpdate}
         onLoadedData={handleLoadedData}
       >
       </audio>
       <button onClick={handlePlayPause}>{isPlaying ? 'Pausar' : 'Reproducir'}</button>
-    
-
-     
-
-
+   
     <div>
         {formatTime(currentTime)} / {formatTime(duration)}
       </div>
-   
     </div>
   
+   
    
   </section>
 

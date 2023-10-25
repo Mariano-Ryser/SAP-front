@@ -66,6 +66,17 @@ const TestPagination = () => {
 <p>En la pagina oficial de Node JS encontraras mas informacion acerca de <Link href="https://nodejs.org/dist/latest-v20.x/docs/api/fs.html">File Systems</Link> </p>
   
   
+  <h1>CORS!</h1>
+  <p> que son los cors?? y para que sirven? </p>
+  <h2>Hablemus de security </h2>
+  <p>CORS o Cross-Origin Resource Sharing... es un mecanismo de seguridad implementado en los navegadores web para controlar las solicitudes de recursos, como datos, scripts, estilos, etc. realizadas desde un dominio u o Origen hacia otro dominio diferente. Esto es relevante cuando estás trabajando con aplicaciones web que se ejecutan en un dominio y necesitan acceder a recursos alojados en otro dominio o destino.
+
+En el contexto de Node.js, CORS se vuelve importante cuando estás construyendo APIs o servicios web que pueden ser consumidos por aplicaciones front-end alojadas en dominios diferentes. Sin CORS, los navegadores bloquearían automáticamente las solicitudes realizadas desde un origen diferente por razones de seguridad.
+
+Para permitir solicitudes entre orígenes diferentes de manera controlada, puedes configurar CORS en tu servidor Node.js. Aquí hay un ejemplo de cómo podrías hacerlo usando el paquete cors:</p>
+  <p>se utiliza como un middleware de Express para habilitar CORS en todas las rutas de tu aplicación. Puedes configurar opciones más avanzadas para restringir los dominios permitidos, los métodos HTTP, las cabeceras, etc., según tus necesidades.</p>
+  
+  <p>En resumen, CORS es una parte importante cuando se trabaja con aplicaciones web que requieren que distintos dominios se comuniquen entre sí de manera segura. Node.js proporciona herramientas, como el paquete cors, para gestionar estas restricciones y permitir que las solicitudes entre orígenes sean manejadas adecuadamente.</p>
   </section>
 
   <button

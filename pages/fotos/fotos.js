@@ -1,15 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
+
 export default function Fotos() {
-   
   return (
     <>
 
     <div className="container">
-
-
     
-       
         <div className="img" 
             style={{backgroundImage: `url('/img/me.jpg')`}}
             >

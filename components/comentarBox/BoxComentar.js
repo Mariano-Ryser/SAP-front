@@ -2,17 +2,17 @@ import { useEffect, useState } from 'react';
 // import Image from "next/image"
 
 function BoxComentar(){
+
   const current = new Date();
   const datee = `${current.getDate()} / ${current.getMonth()+1} / ${current.getFullYear()}`;
-  const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
+  const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL // .env ()=>("api/v1") 
 
   const initialState = {
     titulo:'',
     text:'',
     author:'',
-    mesCreacion: new Date().toLocaleString('default', { day: '2-digit', month: 'long' }),
   };
-
+  
   const [comentar, setComentar] = useState(initialState)
   const [comentars, setComentars] = useState([])
 
@@ -124,7 +124,7 @@ const fetchComentars= () =>{
     </textarea>
 
     {/* Input Autor */}
-    <input
+     <input
     placeholder='Author..'
     className="authorInput"
      maxLength="9999999"
@@ -132,7 +132,7 @@ const fetchComentars= () =>{
      name='author'
      value={comentar.author}
      onChange={handleChange}
-    ></input>
+    ></input> 
 
       {/* Send Button */}
         <button 
@@ -172,15 +172,13 @@ const fetchComentars= () =>{
 
         {/* MAPEO DE ELEMENTOS */}
         <div>
-             {comentars.map(({_id, titulo, text, author, createdAt,mesCreacion,fechaCreacion}) => (
+             {comentars.map(({_id, titulo, text, author}) => (
                 <div key={_id} className="comentarBox">
                     <h1 className="titulo">{titulo}</h1>
                     <span className="text">-{text}...</span> 
                     <br></br>
                     <br></br>
                     <span className="author">-{author}...</span> 
-                    <br></br>
-                      <span className="author">{mesCreacion}</span><br></br> 
                     
                 <div >
               {/* Button Deleted */}
@@ -221,7 +219,7 @@ const fetchComentars= () =>{
    
     <style jsx>{`
       .msjCarga{
-        color: #1d1d1d;
+        color: #e7e7e7;
         font-family: monospace;
         font-size: 1.2rem;
         display: flex;
@@ -231,7 +229,7 @@ const fetchComentars= () =>{
      
         
 .date{
-  color: #000000;
+  color: #84ba64;
   font-size: 2rem;
 font-weight: 900;
 margin: 0rem;
@@ -253,7 +251,7 @@ font-family:monospace;
   display: inline-block;
   padding: 0.4rem;
   margin: 0rem 1rem 0rem 1rem;
-  color: rgb(0, 0, 0);
+  color: rgb(226, 226, 226);
   background-color: #f40808ca;
   transition: 0.2s;
   animation: alert 0.2s 1 ease-in;
@@ -305,9 +303,9 @@ font-family:monospace;
 
 .textArea{
   position: relative;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(87, 87, 87);
   width:100%;
-  color: rgb(0, 0, 0);
+  color: rgb(240, 240, 240);
   border-radius:0.2rem;
   margin-bottom: 0.1rem;
   height: 6rem;
@@ -316,7 +314,7 @@ font-family:monospace;
   }
 
   .textArea::placeholder {
-    color: #7d7d7d;
+    color: #e7e7e7;
     display: block;
     margin-bottom: 0.1rem;
     border: #383838 ;
@@ -326,8 +324,8 @@ font-family:monospace;
   }
 
   .authorInput{
-    background-color: rgb(255, 255, 255);
-    color: #000000;
+    background-color: rgb(87, 87, 87);
+    color: #e7e7e7;
     display: block;
     margin-bottom: 0.3rem;
     margin-top:0rem;
@@ -338,8 +336,8 @@ font-family:monospace;
   }
 
   .authorInput::placeholder{
-    background-color: rgb(255, 255, 255);
-    color: #484848;
+    background-color: rgb(87, 87, 87);
+    color: #e7e7e7;
     font-size:1.1rem;
   font-family:monospace; 
   }
@@ -358,7 +356,7 @@ font-family:monospace;
 
 /* TTITULO EN TEXTO */
 .titulo{
-  color: rgb(0, 0, 0);
+  color: rgb(234, 222, 0);
   font-family:monospace;
   line-height: 0rem;
   font-size: 1rem;
@@ -375,17 +373,17 @@ font-family:monospace;
   font-weight: bold;
   font-size: 1rem;
   font-family:monospace;
-  color: rgb(26, 26, 26);
+  color: rgb(219, 219, 219);
   transition: 0.1s;
 }
 .comentarBox:hover{
-  background-color: #b1b1b1;
+  background-color: #3c3c3c;
   border: dashed rgb(50, 50, 50) 1px;
 }
 .author{
   font-size: 0.9rem;
   display: block;
-  color: rgb(0, 0, 0);
+  color: white;
   text-align: start;
 }
 
@@ -393,7 +391,7 @@ font-family:monospace;
   position: absolute;
   font-size: 0.9rem;
   right: 1rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   font-family: sans-serif;
 }

@@ -17,7 +17,27 @@ const Conciencia = () => {
     <>
 
     <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
+
+    <p>Diariamente el mismo dia, la misma energia, mantener el mismo nivel de conciencia.
+nos entendemoos cada dia mas, nos liberamos de momentos comprometedores y volvemos a ser dueños de nuestras vidas.
+<br></br>
+somos dueño de nuestro corazon y cabeza, ya nadie podra dominarnos al conocer nuestros derechos como seres humanos en esta tierra.
+<br></br>
+
+nadie conocera la salud y el bienestar mas que nosotros mismos. que es lo que nos atormenta... que es lo que nos encierra, hacernos respetar como entes espirituales en esta tierra.
+<br></br>
+
+disfruta el camino, y deja de pensar. 
+busca relajarte tomate descansos.
+ 
+Construyete. 
+
+
+</p>
+
     <h1>Conciencia</h1>
+
+
     <p>La conciencia es uno de los mayores enigmas de la ciencia 
       si miramos a nuestro alrededor comprobaremos que la mayoria de los ojetos 
       que nos rodean son inanimados, sin embargo existen muchas otras formas de vidas como las plantas y las bacterias,

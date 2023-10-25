@@ -1,8 +1,11 @@
 
 import { useState, useEffect } from 'react'
+// CREAMOS LA FUNCION
 function Personaje() {
-    
+    //CONEXION VARIABLE EN .env
     const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
+
+    // ESTADO INICIAL PARA CREAR PERSONAJE
     const initialState = {
         name:'',
         surname:'',
@@ -11,8 +14,10 @@ function Personaje() {
         city:'',
         description:'',
     }
-
+    // Almacenamos en la variable "personaje" las propiedades al guardar 
     const [personaje, setPersonaje] = useState(initialState)
+    // Aqui se setean los personajes traidos de la base de datos...
+    // que podemos en contrar mas abajo en el useEffect
     const [personajes, setPersonajes] = useState([])
 
 
@@ -55,7 +60,7 @@ function Personaje() {
         .then(res => res.json())
         .then( ({ personajes }) =>{
             console.log(personajes);
-            console.log("error aqui");
+// se setean aqui los personajes traidos de la base de datos
             setPersonajes(personajes);
     })
     }
@@ -170,7 +175,7 @@ function Personaje() {
                 font-size:1rem;
                 font-family:monospace;
                 padding:0.6rem;
-                color:rgb(0, 0, 0);
+                color:white;
                 width: 40rem;
                 margin: 0.3rem auto 0.3rem auto;
                 border: solid 1px rgb(92, 92, 92);
@@ -207,15 +212,15 @@ button{
 }
 
 .name{
-    color: rgb(0, 158, 116);
+    color: rgb(7, 218, 162);
 }
 .surname{
     color: rgb(34, 213, 6);
 }
-.age{color: rgb(210, 108, 0);}
-.email{color: rgb(0, 105, 154);}
+.age{color: rgb(238, 133, 21);}
+.email{color: rgb(238, 68, 21);}
 .city{color: rgb(21, 180, 238);}
-.description{color: rgb(0, 151, 0);}
+.description{color: rgb(235, 232, 12);}
 
 
       

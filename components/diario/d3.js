@@ -9,22 +9,16 @@ const D3 = () => {
     <section>
       <article>
 
-        <h1>Auch Fotos!</h1>
+        <h1>bilder</h1>
          <span className='datenews'>20/8/2023</span>
         <p>He agregado una seccion donde empezare a subir mis fotos</p>
     
-        <div className='node'></div>
       </article>
     </section>
     </Link>
 
           <style jsx>{`
-          .node{
-              height: 4rem;
-              width:4rem;
-              background-image: url("/img/insta.png");
-              background-size: cover;
-            }
+         
             h1{
               text-align: center;
               font-size: 2rem;

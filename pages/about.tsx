@@ -20,8 +20,9 @@ export default function Homee() {
             
         </div>
         </div>    
-        <p>
-    My name is Mariano, currently live in Zurich,
+        <p>My name is Mariano
+    ,
+     currently live in Zurich,
     this is my humble portfolio on which i can test
     and write code every day.
         </p>
@@ -29,7 +30,7 @@ export default function Homee() {
 I amm not going to stop for a second, it just takes a bit of order with the times. Well, 
 you can t do everything.
 </p>
-        <p>
+       <p>
         This portfolio is built on Next.JS where my
          frontend runs, and the backend is deployed
           on Azure, the database interaction is

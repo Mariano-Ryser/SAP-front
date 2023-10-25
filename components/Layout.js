@@ -1,17 +1,18 @@
-
-
-import Nav from "../components/navbar"
-import NavBar from "../components/NavRespon"
-import Footer from "../components/footer"
-
+import NavRespon from "./NavRespon"
+import Nav from "./navbar"
+import Cabezera from "./Cabezera";
+import Footer from "./Footer"
+import Aside from "./aside/Aside"
 const Layout = ({ children}) => {
     return (
         <div className="content">
-            <Nav/>
-            <NavBar/>
+
+             <Nav/> 
+              <NavRespon />   
              { children }
-             
-            {/* <Footer/> */}
+
+            {/* <Footer />*/}
+            
         </div>
     );
 }

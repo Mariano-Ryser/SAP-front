@@ -4,20 +4,23 @@ import Image from "next/image"
 const FormCreateChar = () => {
   return (
     <>
-    <form className='form'>
-    <h1>Create item</h1>
-    <div className='imgBox'>
-    <Image
-           alt='Burger-Icon' src={'/img/Alienverde.gif'}
-          height={100} width={70}></Image>
+    <form className='form br'>
+    <h1 className='br'>Create item</h1>
 
+    <div className='br db'>
+
+        <div className='imgBox '>
+        <Image
+            alt='Burger-Icon' src={'/Alienverde.gif'}
+            height={100} width={70}></Image>
+        </div>
     </div>
     
 
 
-        <button>Create</button>
+        <button className='b'>Create</button>
 
-        <div className='alert'><b>Referenz-Nummer:</b>Bitte einen Wert eingeben.</div>
+        {/* <div className='alert'><b>Referenz-Nummer:</b>Bitte einen Wert eingeben.</div> */}
         
     </form>
 
@@ -27,6 +30,14 @@ const FormCreateChar = () => {
 
 
 <style jsx>{`
+
+.br{
+    border: solid red 1px;
+}
+.db{
+    display: inline-block;
+}
+
 .imgBox{
     background-color: #1d2225;
     border-radius: 4px;

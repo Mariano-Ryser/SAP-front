@@ -44,7 +44,6 @@ export default function Homee() {
       color: red;
     }
     .working{
-
       color:white;
       width:40rem;
       height:14rem;
@@ -57,12 +56,14 @@ export default function Homee() {
     }
     ul{
       width:40rem;
+      height: 100vh;
       margin: auto;
       padding:0rem;
     }
     li{
+      font-size: 1.6rem;
       font-family: 'Courier New', Courier, monospace;
-      line-height: 1.7rem;
+      line-height: 1.9rem;
       list-style:none;
       color: yellow;
       margin: 0.5rem 0.5rem 0.5rem 0.5rem;
@@ -72,7 +73,7 @@ export default function Homee() {
       background-color:green;
       cursor:pointer;
       font-family: 'Courier New', Courier, monospace;
-      line-height: 1.7rem;
+      line-height: 1.9rem;
       list-style:none;
       color:white;
       animation:6s lis infinite alternate;

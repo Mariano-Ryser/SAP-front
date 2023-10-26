@@ -67,22 +67,18 @@ const icons = [
         </div>
 
         <style jsx>{`
-  
-  
         .boxIcons{
           width: 40rem;
+          height: 100vh;
           margin: auto;
-    background-color: rgb(30, 30, 30);
-    display: grid;
-    /* height: 240px; */
-    overflow: hidden;
-    gap: 0.5rem; 
-    grid-auto-rows: 5rem;
-    grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 4fr));
-    grid-template-columns: repeat(12,1fr);
-    padding-top: 1.4rem;
-    padding-bottom: 22px;
-    
+          display: grid;
+          overflow: hidden;
+          gap: 0.5rem; 
+          grid-auto-rows: 5rem;
+          grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 4fr));
+          grid-template-columns: repeat(12,1fr);
+          padding-top: 1.4rem;
+          padding-bottom: 22px;
   }
   
   .icon{
@@ -90,8 +86,8 @@ const icons = [
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      height: 70px;
-      width: 70px;
+      height: 90px;
+      width: 90px;
      grid-column: span 2;
      filter: blur(0.4px);
      margin: auto;
@@ -105,14 +101,12 @@ const icons = [
   
   @media (max-width:600px){ 
     .boxIcons{
-      width: 25rem;
-          margin: auto;
-      background-color: rgb(30, 30, 30);
+      width: 27rem;
+      margin: auto;
       display: grid;
-      /* height: 240px; */
       overflow: hidden;
-      gap: 0.4rem; 
-      grid-auto-rows: 3.2rem;
+      gap: 1rem; 
+      grid-auto-rows: 4.2rem;
       grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 5fr));
       padding-top: 0.3rem;
       padding-bottom: 12px;
@@ -122,9 +116,9 @@ const icons = [
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      height: 50px;
-      width: 50px;
-     grid-column: span 2;
+      height: 70px;
+      width: 70px;
+     grid-column: span 3;
      filter: blur(0.4px);
      margin: auto;
      transition:0.3s 

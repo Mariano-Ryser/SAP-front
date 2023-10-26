@@ -9,8 +9,8 @@ const D4 = () => {
     <section>
       <article>
 
-        <h1> te hago una pregunta...</h1>
-        <p> tu que piensas ? Quienes son los mejores interpretes de jazz de la historia?</p>
+        <h1> Ich frage dir etwas</h1>
+        <p> Was denkst du? Who are the best interpretes of Jazz de la history?</p>
     
         <div className='jzz'></div>
       </article>
@@ -20,7 +20,7 @@ const D4 = () => {
           <style jsx>{`
           .jzz{
               height: 4rem;
-              width:4rem;
+              width:2rem;
               background-image: url("/img/trumpet.png");
               background-size: cover;
               width: 12rem;
@@ -29,7 +29,7 @@ const D4 = () => {
               text-align: center;
               font-size: 2rem;
               margin: 0;
-              color: rgb(232, 19, 193);
+              color: rgb(20, 151, 0);
               transform: scale(1);
               animation:  10s infinite alternate;
             }
@@ -73,8 +73,7 @@ section{
         padding:1rem;
         transition: 0.05s;
     }
-    section:hover{
-      background-color: rgb(42, 42, 42);
+    section:hover{background-color: rgba(28, 107, 102, 0.355);
       cursor: pointer;
     }
             

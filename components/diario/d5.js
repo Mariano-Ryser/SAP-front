@@ -19,26 +19,23 @@ const D4 = () => {
 
           <style jsx>{`
             .absolute{
-              height: 10px;
-              width: 10px;
+              height: 20px;
+              width: 20px;
               border: solid rgb(255, 255, 255) 1px;
               position: absolute;
               animation: absolute infinite alternate 1.5s;
             }
             @keyframes absolute {
                     0% {
-                      transform: scale(1);
                       transform: translateX(0px);
-                      border: solid rgb(255, 255, 255) 1px;
+                      border: solid rgb(203, 3, 3) 1px;
                     }
                     90%{
-                      transform: scale(1.3);
                       transform: translateX(10px) rotateZ(90deg);
-                      border: solid rgb(223, 3, 3) 1px;
+                      border: solid rgb(255, 255, 255) 1px;
                       background-color: rgba(0, 0, 0, 0);
                     }
                     100%{
-                      transform: scale(1.3);
                       transform: translateX(10px) rotateZ(130deg);
                       border: solid rgb(223, 3, 3) 1px;
                       background-color: greenyellow;
@@ -57,9 +54,10 @@ const D4 = () => {
 
             h1{
               text-align: center;
-              font-size: 1rem;
+              font-size: 2rem;
+              font-family: monospace;
               margin: 0;
-              color: rgb(254, 54, 54);
+              color: rgb(54, 91, 254);
               transform: scale(1);
               animation:  10s infinite alternate;
             }
@@ -104,7 +102,7 @@ section{
         transition: 0.05s;
     }
     section:hover{
-      background-color: rgb(42, 42, 42);
+      background-color: rgba(28, 107, 102, 0.355);
       cursor: pointer;
     }
             

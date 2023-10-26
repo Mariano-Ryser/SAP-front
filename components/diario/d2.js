@@ -56,8 +56,7 @@ section{
         padding:1rem;
         transition: 0.05s;
     }
-    section:hover{
-      background-color: rgb(42, 42, 42);
+    section:hover{background-color: rgba(28, 107, 102, 0.355);
       cursor: pointer;
     }
             

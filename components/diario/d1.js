@@ -56,8 +56,8 @@ section{
         transition: 0.05s;
     }
     section:hover{
-      background-color: rgb(42, 42, 42);
-      cursor: pointer;
+      background-color: rgba(28, 107, 102, 0.355);
+      cursor: pointer;rgb(36, 187, 184)rgb(44, 121, 120)
     }
             
     @media (max-width: 600px) {

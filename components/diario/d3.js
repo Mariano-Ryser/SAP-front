@@ -9,9 +9,9 @@ const D3 = () => {
     <section>
       <article>
 
-        <h1>bilder</h1>
+        <h1>Bilder</h1>
          <span className='datenews'>20/8/2023</span>
-        <p>He agregado una seccion donde empezare a subir mis fotos</p>
+        <p>He agregado una seccion donde empezare a subir fotos</p>
     
       </article>
     </section>
@@ -39,9 +39,9 @@ const D3 = () => {
                   }
               p{
                 font-weight: 900;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 font-family: 'Courier New', Courier, monospace;
-                color: aqua;
+                color: rgb(181, 181, 199);
               }
 
             
@@ -67,8 +67,7 @@ section{
         padding:1rem;
         transition: 0.05s;
     }
-    section:hover{
-      background-color: rgb(42, 42, 42);
+    section:hover{background-color: rgba(28, 107, 102, 0.355);
       cursor: pointer;
     }
             

@@ -42,7 +42,7 @@ Construyete.
       si miramos a nuestro alrededor comprobaremos que la mayoria de los ojetos 
       que nos rodean son inanimados, sin embargo existen muchas otras formas de vidas como las plantas y las bacterias,
       pero solo el ser humano y algunos animales han desarrollado conciencia, pero que es la conciencia?
-      Se define como la capacidad de una forma de vida, de reconocerce asi misma, tener conocimiento y una percepcion de su misma existencia y todo lo que lo rodea,
+      Se define como la ... capacidad de una forma energetica, de reconocerce asi misma... tener conocimiento y una percepcion de su misma existencia y todo lo que lo rodea... 
       tambien se define como la conciencia en el mundo mismo, resulta algo increible que de unas cuantas particulas elementales y unas leyes fisicas, la materia evolucione y adquiera una
       complejidad suficiente para generar vida y organismos concientes como nosotros mismos, no hay una maravilla semejante en el universo, mires donde mires en el cosmos veras estrellas,
       gigantescas estrellas de plasmas generadas por fusion nuclear, enormes planetas de gas y rocosos, nebulosas, atomos de hidrogenos y otros elementos,

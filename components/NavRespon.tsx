@@ -79,12 +79,12 @@ const NavRespon = () => {
   }
 }
 
-function overed(){
-  // alert("Wasa")
-  document.addEventListener("contextmenu",(e)=>{
-    e.preventDefault();
-  })
-}
+// function overed(){
+//   // alert("Wasa")
+//   document.addEventListener("contextmenu",(e)=>{
+//     e.preventDefault();
+//   })
+// }
 
 
 return (
@@ -100,7 +100,7 @@ return (
       <div id='burger' className={styles.burger} onClick={openList}>
     
          <Image
-          onMouseOver={overed}
+          // onMouseOver={overed}
            alt='Burger-Icon' src={'/img/Alienverde.gif'}
           height={100} width={70}></Image>
         </div> 
@@ -112,7 +112,7 @@ return (
           <ul className={styles.ul}>
           <Test5/>
           
-            {/* HOME*/}
+            {/* Index*/}
               <Link href="/">
               
                 <li className={styles.li}
@@ -122,7 +122,9 @@ return (
                 </li>
               </Link>
 
-                {/* Icons */}
+                    
+
+              {/* Icons */}
                 <Link href="/icons">  
                 <li
                   id='li'
@@ -172,9 +174,6 @@ return (
                   <a className={styles.a}>Product Creator</a>
                 </li>
 
-               
-             
-            
           {/* 3D link */}
            
                 <li 

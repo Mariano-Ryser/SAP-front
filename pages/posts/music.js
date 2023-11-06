@@ -127,11 +127,16 @@ const Music = () => {
      onClick={grosseOut}
      >-</button>
           <style jsx>{`
-
+          h1{font-size: 1rem;
+          font-family: monospace;
+      }
       button{
         width: 7rem;
-        height: 3rem;
+        height: 2rem;
+        margin: 0.2rem;
+        cursor: pointer;
       }
+      
       .button5{
         display: inline-block;
         
@@ -167,11 +172,11 @@ const Music = () => {
  } 
 h1,h2,h3{
   color:white;
+
 }
 
 section{
       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-      font-size:1.3rem;
         color: rgb(60, 144, 125);
         width:40rem;
         margin:auto;
@@ -204,7 +209,6 @@ section{
 
     @media (max-width: 600px) {
                .button2{
-                    font-size:2rem;
                     border-radius:10px;
                     position: fixed;
                     bottom:5rem;
@@ -215,7 +219,6 @@ section{
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
                 }
                 .button3{
-                    font-size:2rem;
                     border-radius:10px;
                     position: fixed;
                     bottom: 2rem;

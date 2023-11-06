@@ -25,7 +25,6 @@ export default function Homee() {
   <li className="bloqued">------</li>
   <li className="bloqued">------</li>
 
-  
 </ul> 
 
 {/* <div className="working">
@@ -55,7 +54,7 @@ export default function Homee() {
       color:red;
     }
     ul{
-      width:40rem;
+      width:50rem;
       height: 100vh;
       margin: auto;
       padding:0rem;
@@ -87,7 +86,7 @@ export default function Homee() {
       }
     }
    
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .working{
 color:white;
 width:90%;

@@ -4,6 +4,8 @@ import Footer from "./Footer"
 import Aside from "./aside/Aside"
 const Layout = ({ children}) => {
     return (
+
+
         <div className="content">
             {/* <Aside/> */}
               <NavRespon />   
@@ -12,6 +14,8 @@ const Layout = ({ children}) => {
              
                {/* <Footer />       */}
         </div>
+    
+    
     );
 }
 export default Layout;

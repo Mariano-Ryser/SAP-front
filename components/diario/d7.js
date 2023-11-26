@@ -5,17 +5,17 @@ const D4 = () => {
 
   return (
     <>
-    <Link href="/posts/music">
+    <Link href="/posts/erasAstrologicas">
     <section>
       <article>
       <div className='absolute'></div>
 
 
-        <h1>sehen in Ägypten</h1>
-        <p>Hace un año, los investigadores del proyecto Scan Pyramids confirmaron la existencia de dos anomalías en la Gran Pirámide: una cavidad desconocida en la esquina noreste y un vacío desconocido detrás de los chevrones que hay sobre el acceso del pasadizo descendente. En esta ocasión se trata de un gran vacío de un mínimo de 30 metros de longitud y cuyo plano podría ser horizontal o inclinado como el de la Gran Galería. La anomalía ha sido detectada mediante una técnica no invasiva, sin tener que taladrar los milenarios bloques de piedra. Los muones son unas partículas ínfimas procedentes del espacio exterior que llegan a la superficie terrestre a través de los rayos cósmicos y que pueden penetrar materiales sólidos como las rocas o los bloques de piedra caliza. Las placas sensibles a los muones, estratégicamente colocadas en el interior de una pirámide, pueden revelar espacios vacíos.
-
-El Ministerio de Antigüedades de Egipto no ha tardado en emitir un comunicado expresando su descontento por el artículo publicado en Nature. Las autoridades egipcias consideran que los investigadores del proyecto Scan Pyramids se han precipitado al anunciar públicamente un supuesto hallazgo sin haberlo discutido previamente con el comité científico de dicho ministerio. "Creo que deberíamos de ser muy cuidadosos con el uso de la palabra 'vacío', pues la Gran Pirámide está llena de vacíos", expresa el egiptólogo Zahi Hawass en Ahram Online. Para Kate Spence, una arqueóloga de la Universidad de Cambridge, el vacío podría ser una rampa interna usada para mover los enormes bloques del techo hasta su lugar y, al continuar la construcción, la rampa pudo quedar vacía o ligeramente rellenada, según explica un artículo sobre el tema en la edición internacional de National Geographic. "A pesar de ser uno de los más antiguos y grandes monumentos de la Tierra, no hay consenso sobre cómo fue construido", dicen acertadamente los investigadores de Scan Pyramids en Nature.</p>
+        <h1>Astrologische Epochen</h1>
+        <p>Considerando que son 27000 años dividido 12 signos, tenemos que cada era dura un promedio de algo más de 2000 años..</p>
+      
         {/* <div className='jzz'></div> */}
+
       </article>
     </section>
     </Link>
@@ -26,15 +26,24 @@ El Ministerio de Antigüedades de Egipto no ha tardado en emitir un comunicado e
               width: 20px;
               border: solid rgb(255, 255, 255) 1px;
               position: absolute;
-              animation: absolute infinite alternate 1.5s;
+              animation: absolutee infinite alternate 4s;
             }
-            @keyframes absolute {
+            @keyframes absolutee {
                     0% {
+                      background-color: rgba(32, 131, 31, 10);
                       transform: translateX(0px);
                       border: solid rgb(203, 3, 3) 1px;
                     }
+                    40% {
+                      transform: translateX(50px)rotateZ(220deg);
+                      border: solid rgb(203, 3, 3) 1px;
+                    }
+                    60% {
+                      transform: translateX(50px);
+                      border: solid rgb(80, 85, 64) 1px;
+                    }
                     90%{
-                      transform: translateX(10px) rotateZ(90deg);
+                      transform: translateX(15px) rotateZ(120deg);
                       border: solid rgb(255, 255, 255) 1px;
                       background-color: rgba(0, 0, 0, 0);
                     }

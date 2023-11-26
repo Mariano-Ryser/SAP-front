@@ -12,7 +12,9 @@ const D4 = () => {
 
 
         <h1>sehen in Ägypten</h1>
-        <p>In recent years, groundbreaking advancements in archaeological technology have offered a fresh perspective on Egypt's iconic pyramids. Among these advancements, the use of ground-penetrating radar (GPR) has enabled researchers to unearth a trove of invaluable information hidden beneath the pyramid's timeless façades.</p>
+        <p>In recent years, groundbreaking advancements in archaeological technology have offered a fresh perspective on Egypt s iconic pyramids
+        . Among these advancements, the use of ground-penetrating radar GPR has enabled researchers to unearth a trove of invaluable information 
+        hidden beneath the pyramid s timeless façades.</p>
       
         {/* <div className='jzz'></div> */}
 

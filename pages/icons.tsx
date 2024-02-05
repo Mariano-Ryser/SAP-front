@@ -101,7 +101,7 @@ const icons = [
   
   @media (max-width:600px){ 
     .boxIcons{
-      width: 27rem;
+      width: 22rem;
       margin: auto;
       display: grid;
       overflow: hidden;

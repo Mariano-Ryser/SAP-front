@@ -28,7 +28,8 @@ const fetchData = ()=> {
             posts.length > 0 && (
             <div className="grid-container">
                         {
-                            posts.map((post) =>(
+                            posts.map((post) =>
+                            (
                                 <div key={post.id} className="posts">
                                         <h3 >{post.title}</h3>
                                         <p>{post.titulo}</p>

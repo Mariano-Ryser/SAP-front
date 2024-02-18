@@ -13,17 +13,36 @@ export default function Homee() {
         <div className="caja2"></div>
         <div className="caja3"></div>
         <div className="caja4"></div> */}
+       <div className="s">
         <Image
             className="alien"
             alt='Burger-Icon'
             src={'/img/Alienverde.gif'}
             height={280} width={200}>
         </Image> 
+        </div> 
     </div>    
 
 </div>
 
   <style jsx>{`
+
+    .s{
+        transform: rotateZ(0deg);
+        animation: caralogo 10s linear infinite;
+       
+    }
+
+    @keyframes caralogo{
+        0%{
+            transform: rotateZ(0deg);
+        }
+       
+        100%{
+            transform: rotateZ(360deg);
+
+        }
+}
     
     .caja1{
         position:absolute;

@@ -9,7 +9,8 @@ const Layout = ({ children}) => {
         <div className="content">
             {/* <Aside/> */}
               <NavRespon />   
-                   <Cabezera />  
+                   {/* <Cabezera />  
+                    */}
              { children }
              
                {/* <Footer />       */}

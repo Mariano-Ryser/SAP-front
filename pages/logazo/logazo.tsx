@@ -13,7 +13,7 @@ export default function Homee() {
         <div className="caja2"></div>
         <div className="caja3"></div>
         <div className="caja4"></div> */}
-       <div className="s">
+       <div >
         <Image
             className="alien"
             alt='Burger-Icon'
@@ -27,7 +27,7 @@ export default function Homee() {
 
   <style jsx>{`
 
-    .s{
+    {/* .s{
         transform: rotateZ(0deg);
         animation: caralogo 10s linear infinite;
        
@@ -42,7 +42,7 @@ export default function Homee() {
             transform: rotateZ(360deg);
 
         }
-}
+} */}
     
     .caja1{
         position:absolute;
@@ -79,10 +79,11 @@ export default function Homee() {
 .box{
     height:100vh;
     width:100%;
-    background-color:red;
     transition:0.4s;
-    animation: logazo 2.5s infinite;
+    animation: logazo 5.5s infinite;
 }
+
+{/* entre foto y foto crear desaparicion de imagen y aparicion */}
 
 @keyframes logazo{
     0%{
@@ -92,27 +93,18 @@ export default function Homee() {
         background-image: url('/img/qr.png');
     background-size:cover;
     }
-    30%{
-        background: rgb(149,29,245);
-background: radial-gradient(circle, rgb(54, 17, 84) 17%, rgba(11,11,11,1) 68%, rgba(0,0,0,1) 100%);
-    }
+ 
     55%{
         background-image: url('/img/code.jpg');
     background-size:cover;
     }
-    75%{
-        background: rgb(204,55,42);
-background: radial-gradient(circle, rgb(94, 40, 35) 36%, rgb(48, 34, 131) 52%, rgb(10, 125, 29) 70%, rgb(47, 107, 15) 81%);
-    }
+
     85%{
         background-image: url('/img/barriles.jpg');
     background-size:cover;
     }
 
-    100%{
-        background: rgb(166, 74, 74);
-background: radial-gradient(circle, rgb(85, 33, 33) 0%, rgba(41,177,70,1) 85%, rgba(11,11,11,1) 96%);
-    }
+
 }
 @media (max-width: 600px) {
          

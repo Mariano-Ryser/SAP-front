@@ -14,7 +14,7 @@ const D1 = () => {
         <p>Ya esta disponible API-ASTEROIDES!</p>
         <p>Actualmente tenemos 14 Asteroides con su respectivo nombre, link donde puedes encontrar informacion del mismo, una leve descripcion, la distancia_tierra y su o sus descubridores. </p>
         <p>Aqui te dejo el link donde puedes utilizarla y 100% gratuita</p>
-        <p className='apilink'>https://zap-front.vercel.app/api/asteroides</p>
+        <p className='apilink'>https://zeep-front.vercel.app/api/asteroides</p>
         <p>solo tienes que hacer el FETCH a tu manera, te aconsejos que hagas un console log para poder chequar el json.</p>
         <p>Actualmente hay mas de 1000 Asteroides detectados en el sistema solar, con sus nombres y descripciones del mismo, si se te ocurre agregar algun otro estaremos encantados! </p>
           <div className='luna'></div>

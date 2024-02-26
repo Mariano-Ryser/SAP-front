@@ -52,13 +52,13 @@
 }
 .li{ 
   /* border:solid red 1px; */
-    border-radius: 0.2rem;
+    border-radius: 1rem;
     width: 38rem;
     margin: auto;
     position: relative;
     align-items: center;
     align-content: center;
-    background-color: #232323d5;
+    background-color: #151515d5;
     border: dashed 1px #4f4f4fd5;
     margin-top: 0.1rem;
     margin-bottom: 0.7rem;
@@ -71,7 +71,7 @@
   .li:hover{
     cursor: pointer;
     border: solid 1px rgb(93, 93, 93);
-    background-color: #58bf5dc1;
+    background-color: #08940fc1;
   }
   .liBloqued{
     border-radius: 0.2rem;
@@ -86,16 +86,16 @@
     padding: 0.26rem;
     height: 2.5rem;
     text-align: center;
-    color: rgb(151, 12, 12);
+    color: rgb(255, 5, 5);
     transition: 0.2s;
-      background-color: #230606d5;
+      background-color: #5c0909d5;
       
      
     
   }
 .liBloqued:hover{
   cursor: pointer;
-  background-color: #df3b0eab;
+  background-color: #800780ab;
 }
 .padlock{
  /* pointer-events: fill; */
@@ -209,7 +209,6 @@
     position: relative;
     align-items: center;
     align-content: center;
-    background-color: #232323d5;
     margin-top: 0.1rem;
     margin-bottom: 0.7rem;
     padding: 0.26rem;

@@ -1,13 +1,53 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-background-image: linear-gradient(to right top, #186e00, #000000, #000000, #000000, #046c00);
-
-}
+/* EXELENTE FONDO  */
 * {
   box-sizing: border-box;
 }
+html,
+
+
+body {
+  padding: 0;
+  margin: 0;
+ 
+  
+  /* --s: 400px; 
+  --c1: #1d1d1d;
+  --c2: #585858;
+  --c3: #2f2f2f;
+  
+  background:
+    repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg) 
+     calc(.5*var(--s)) calc(.5*var(--s)*0.577),
+    repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
+  background-size: var(--s) calc(var(--s)*0.577); */
+
+/* ESPACIO */
+   /* background-color:black;
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; */
+
+  background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+ 
+
+
+
+
+
+}
+
 
 .tl{color: white; font-family: monospace;}
 .link{color: rgb(56, 185, 10); font-family: monospace;}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import Link from 'next/link';
+import Link from 'next/link';
 import styles from "../styles/Iconsss.module.css";
 // import Image from "next/image"
 
@@ -8,73 +8,81 @@ const Icons = () => {
 
 const icons = [
   {img: "insta.png", link:"/"},
-  {img: "Alienverde.gif"},
-  {img: "alien.png"},
-  {img: "bootstrap.gif"},
-  {img: "bichoWhite.png"},
-  {img: "champi.png"},
-  {img: "css.gif"},
-  {img: "discord.png"},
-  {img: "docker.png"},
-  {img: "drag2.png"},
-  {img: "email.png"},
-  {img: "earth.gif"},
-  {img: "git.png"},
-  {img: "js.png"},
-  {img: "linkedin.png"},
-  {img: "next.png"},
-  {img: "github.png"},
-  {img: "googleLogo.png"},
-  {img: "paint3d.png"},
-  {img: "html.gif"},
-  {img: "linux.png"},
-  {img: "window.png"},
-  {img: "watsap.png"},
-  {img: "visual.gif"},
-  {img: "php.png"},
-  {img: "twiter.png"},
-  {img: "terminal.png"},
-  {img: "snake.png"},
-  {img: "tic1.png"},
-  {img: "phone.png"},
-  {img: "pizza.png"},
-  {img: "obs.png"},
-  {img: "PacYellow.png"},
-  {img: "vue.png"},
-  {img: "mooon.gif"},
+  {img: "Alienverde.gif", link:"/tarjetas"},
+  {img: "alien.png", link:""},
+  {img: "bootstrap.gif", link:""},
+  {img: "bichoWhite.png", link:""},
+   {img: "champi.png", link:""},
+   {img: "css.gif", link:""},
+   {img: "discord.png", link:""},
+   {img: "docker.png", link:""},
+   {img: "drag2.png", link:""},
+   {img: "email.png", link:""},
+   {img: "earth.gif", link:""},
+   {img: "git.png", link:""},
+   {img: "js.png", link:""},
+   {img: "linkedin.png", link:""},
+   {img: "next.png", link:""},
+   {img: "github.png", link:""},
+   {img: "googleLogo.png", link:""},
+   {img: "paint3d.png", link:""},
+   {img: "html.gif", link:""},
+   {img: "linux.png", link:""},
+   {img: "window.png", link:""},
+   {img: "watsap.png", link:""},
+   {img: "visual.gif", link:""},
+   {img: "php.png", link:""},
+   {img: "twiter.png", link:""},
+   {img: "terminal.png", link:""},
+   {img: "snake.png", link:""},
+   {img: "tic1.png", link:""},
+   {img: "phone.png", link:""},
+   {img: "pizza.png", link:""},
+   {img: "obs.png", link:""},
+   {img: "PacYellow.png", link:""},
+   {img: "vue.png", link:""},
+   {img: "mooon.gif", link:""},
 ]
 
   return (
     <>
-        <div className="boxIcons"
-        //  style={{height: size}}
+   
+        <div className="boxIcons"//  style={{height: size}}
          >
-          <div
+
+<Link href="/posts/nodejs">
+    <div
             // onClick={()=>{topo()}}
             className="icon"
             style={{backgroundImage: `url('/img/node.png')`}}
             >
           </div>
-
+    </Link>
+        
           {icons.map((item,index) => (
+        <Link href={item.link}>
             <div key={index}
               //  onClick={()=>{topo()}}
                className="icon"
                style={{backgroundImage: `url('/img/${item.img}')`}}
                 >
             </div>
+          </Link>
+
          ))}
         </div>
 
         <style jsx>{`
         .boxIcons{
-          width: 40rem;
+          border-radius: 4px;
+          background-color: rgba(0, 0, 0, 0.556);
+          width: 85%;
           height: 100vh;
           margin: auto;
           display: grid;
           overflow: hidden;
           gap: 0.5rem; 
-          grid-auto-rows: 5rem;
+          grid-auto-rows: 6rem;
           grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 4fr));
           grid-template-columns: repeat(12,1fr);
           padding-top: 1.4rem;
@@ -101,14 +109,15 @@ const icons = [
   
   @media (max-width:600px){ 
     .boxIcons{
-      width: 22rem;
+      width: 95%;
       margin: auto;
+      margin-top: 0.7rem;
       display: grid;
       overflow: hidden;
       gap: 1rem; 
       grid-auto-rows: 4.2rem;
       grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 5fr));
-      padding-top: 0.3rem;
+      padding-top: 0.5rem;
       padding-bottom: 12px;
     }
     .icon{

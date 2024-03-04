@@ -14,7 +14,8 @@ const TestPagination = () => {
   }
   return (
     <>
-  <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
+    <div className='container'>
+    <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
     <h1>Hablemos de Node Js</h1>
     <p>Node.js es un entorno de tiempo de ejecución de JavaScript de código abierto que se basa en el motor V8 de Google Chrome. Fue creado por Ryan Dahl en 2009 con el objetivo de permitir la ejecución de JavaScript fuera del navegador, en el servidor. </p>
    <p>Antes de Node.js, JavaScript era principalmente utilizado en el lado del cliente para interactuar con páginas web en el navegador. Sin embargo, Dahl vio la necesidad de utilizar JavaScript en el servidor para manejar la lógica del lado del servidor y construir aplicaciones web más eficientes y escalables.</p>
@@ -24,7 +25,7 @@ const TestPagination = () => {
   <p>En resumen, Node.js es un entorno de tiempo de ejecución de JavaScript en el lado del servidor que fue creado para permitir el desarrollo de aplicaciones web eficientes y escalables fuera del entorno del navegador. Su arquitectura orientada a eventos y sin bloqueo lo hace adecuado para manejar grandes cantidades de solicitudes simultáneas de manera eficiente.</p>
   
   <p>Sabias que la Nintendo Switch ejecuta Node JS?</p>
-  <br></br>
+  
 
   <h2>te dare 5 razones de porque deberiamos aprenderlo !!</h2>
    
@@ -79,6 +80,9 @@ Para permitir solicitudes entre orígenes diferentes de manera controlada, puede
   <p>En resumen, CORS es una parte importante cuando se trabaja con aplicaciones web que requieren que distintos dominios se comuniquen entre sí de manera segura. Node.js proporciona herramientas, como el paquete cors, para gestionar estas restricciones y permitir que las solicitudes entre orígenes sean manejadas adecuadamente.</p>
   </section>
 
+    </div>
+ 
+
   <button
      className='button2'
      onClick={grosse}
@@ -87,40 +91,65 @@ Para permitir solicitudes entre orígenes diferentes de manera controlada, puede
      className='button3'
      onClick={grosseOut}
      >-</button>
+
+
           <style jsx>{`
+li{
+
+}
+ul{
+  padding: 0px 0px 0px 20px;
+}
+
+.container{
+  display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+          width: 90%;
+          margin: auto;
+}
+
           a{
   color:yellow;
  } 
 h1,h2,h3{
-  color:rgb(1, 179, 1);
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  color:rgb(89, 200, 89);
 }
 
 section{
+  
+      border-radius: 10px;
+      background-color: rgba(24, 24, 24, 0.89);
       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size:1.3rem;
       line-height: 1.74;
-        color: rgb(191, 191, 191);
-        width:40rem;
+        color: rgba(254, 254, 254, 0.884);
+        width:85%;
         margin:auto;
         margin-bottom:1rem;
-        margin-top: 1rem;
-        padding:0rem;
+        margin-top: 0.4rem;
+        padding:0rem 1rem 0rem 1rem;
     }
                   .button2{    
                     cursor: pointer;
                     font-size:2rem;
                     border-radius:10px;
+                    border: none;
                     position: fixed;
                     bottom:5rem;
                     left:1rem;
-                    background-color: #2ada0cb9;
+                    background-color: #f8f8f8bf;
                     height: 2.4rem;
                     width: 2.5rem;
                     transition: 0.1s;
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
                 }
                 .button2:hover{
-                    background-color: rgba(140, 250, 81, 0.873);
+                    background-color: rgba(140, 250, 81, 0.678);
                 }
                 .button3{
                     cursor: all-scroll;
@@ -129,24 +158,32 @@ section{
                     position: fixed;
                     bottom: 2rem;
                     left:1rem;
-                    background-color: rgba(162, 131, 9, 0.717);
+                    background-color: rgba(219, 219, 219, 0.717);
                     height: 2.4rem;
                     width: 2.5rem;
+                    border: none;
                     transition: 0.1s;
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
                 }
                 .button3:hover{
-                    background-color: rgba(231, 209, 123, 0.873);
+                  background-color: rgba(140, 250, 81, 0.733);
                 }
 
     @media (max-width: 600px) {
+
+      .container{
+    display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+            width: 100%;
+            margin: auto;
+}
                .button2{
                     font-size:2rem;
                     border-radius:10px;
                     position: fixed;
                     bottom:5rem;
                     left:1rem;
-                    background-color: white;
                     height: 2.4rem;
                     width: 2.5rem;
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
@@ -157,7 +194,6 @@ section{
                     position: fixed;
                     bottom: 2rem;
                     left:1rem;
-                    background-color: white;
                     height: 2.4rem;
                     width: 2.5rem;
                     box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
@@ -167,8 +203,8 @@ section{
                   width:95%;
                   margin:auto;
                   margin-bottom:1rem;
-                  margin-top: 1rem;
-                  padding:0rem;
+                  margin-top: 0.3rem;
+                  padding:0px 10px 0px 10px;
                       }   
 
             .img{

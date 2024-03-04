@@ -255,16 +255,17 @@ return (
               </Link>
 
 
-               {/* FOTOS*/}
+               {/* FOTOS
+              
                <Link href="/fotos/fotos">
               
               <li className={styles.li}
-              // onClick={padlook}
+              onClick={padlook}
               >
                 <a className={styles.a}>Fotos
                 </a>
               </li>
-              </Link>
+              </Link> */}
   
           </ul>
               

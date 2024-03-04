@@ -20,14 +20,14 @@ export default function Home() {
 
    
 
-
+{/* 
   <D7/>
   <D5/>
   <D1/>
   <D6/>
   <D3/>
   <D2/>
-  <D4/>
+  <D4/> */}
   
   {/* <Pantallazo/> */}
 

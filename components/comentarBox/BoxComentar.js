@@ -5,7 +5,7 @@ function BoxComentar(){
 
   const current = new Date();
   const datee = `${current.getDate()} / ${current.getMonth()+1} / ${current.getFullYear()}`;
-  const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL // .env ()=>("api/v1") 
+  const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL // .env ()=>("api/v1") ( se encuentra en backend app.js enrutador)
 
   const initialState = {
     titulo:'',
@@ -180,7 +180,7 @@ const fetchComentars= () =>{
                     <br></br>
                     <span className="author">-{author}...</span> 
                     
-                <div >
+        <div >
               {/* Button Deleted */}
               <span
                         className="x"
@@ -218,8 +218,8 @@ const fetchComentars= () =>{
     </form>
    
     <style jsx>{`
-      .msjCarga{
-        color: #e7e7e7;
+    .msjCarga{
+        color: #f5f5f5ad;
         font-family: monospace;
         font-size: 1.2rem;
         display: flex;
@@ -229,7 +229,7 @@ const fetchComentars= () =>{
      
         
 .date{
-  color: #84ba64;
+  color: #dddddda8;
   font-size: 2rem;
 font-weight: 900;
 margin: 0rem;
@@ -252,7 +252,7 @@ font-family:monospace;
   padding: 0.4rem;
   margin: 0rem 1rem 0rem 1rem;
   color: rgb(226, 226, 226);
-  background-color: #f40808ca;
+  background-color: #ac0b0b96;
   transition: 0.2s;
   animation: alert 0.2s 1 ease-in;
 }
@@ -267,7 +267,7 @@ font-family:monospace;
   padding: 0.4rem;
   margin: 0rem 1rem 0rem 1rem;
   color: white;
-  background-color: #15c31bdf;
+  background-color: #17b11cbd;
   transition: 0.2s;
   animation: alert 0.2s 1 ease-in;
 }
@@ -303,11 +303,12 @@ font-family:monospace;
 
 .textArea{
   position: relative;
-  background-color: rgb(87, 87, 87);
+  background-color: rgba(27, 27, 27, 0.74);
   width:100%;
   color: rgb(240, 240, 240);
   border-radius:0.2rem;
   margin-bottom: 0.1rem;
+  border: #383838 solid 1px ;
   height: 6rem;
  font-size:1.1rem;
  font-family:monospace; 
@@ -317,26 +318,26 @@ font-family:monospace;
     color: #e7e7e7;
     display: block;
     margin-bottom: 0.1rem;
-    border: #383838 ;
+   
     padding: 0.4rem;
     font-size:1.1rem;
   font-family:monospace; 
   }
 
   .authorInput{
-    background-color: rgb(87, 87, 87);
+    background-color: rgba(27, 27, 27, 0.74);
     color: #e7e7e7;
     display: block;
     margin-bottom: 0.3rem;
     margin-top:0rem;
-    border: #383838 ;
+    border: #383838 solid 1px;
     padding: 0.4rem;
     font-size:1.1rem;
    font-family:monospace; 
   }
 
   .authorInput::placeholder{
-    background-color: rgb(87, 87, 87);
+    background-color: rgba(27, 27, 27, 0.74);
     color: #e7e7e7;
     font-size:1.1rem;
   font-family:monospace; 
@@ -348,27 +349,30 @@ font-family:monospace;
   width: 5rem;
   margin-bottom: 0.2rem;
   color: aliceblue;
-  background-color: rgb(65, 62, 60);
+  background-color: rgba(20, 20, 20, 0.692);
   border-radius: 0.2rem;
+  border: solid 1px #383838 ;
 }
+
 
 /* NOTA */
 
 /* TTITULO EN TEXTO */
 .titulo{
-  color: rgb(234, 222, 0);
+  color: rgb(133, 133, 133);
   font-family:monospace;
   line-height: 0rem;
   font-size: 1rem;
 }
 
 .comentarBox{
+  background-color: #383838;
+  background-color: rgba(24, 24, 24, 0.671);
   display: block;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   padding-bottom: 2rem;
-  border: dashed rgb(53, 53, 53) 1px;
   border-radius: 0.5rem;
   font-weight: bold;
   font-size: 1rem;
@@ -376,10 +380,10 @@ font-family:monospace;
   color: rgb(219, 219, 219);
   transition: 0.1s;
 }
-.comentarBox:hover{
+{/* .comentarBox:hover{
   background-color: #3c3c3c;
   border: dashed rgb(50, 50, 50) 1px;
-}
+} */}
 .author{
   font-size: 0.9rem;
   display: block;
@@ -399,8 +403,6 @@ font-family:monospace;
 /* MOBIL - STYLE */
 
 @media (max-width: 600px) {
-
-  
   .form{
     position: relative;
     width: 95%;
@@ -411,11 +413,11 @@ font-family:monospace;
   .date{
     display:flex;
     justify-content:end;
-    color: #ced721c6;
+    color: #f5f5f5ad;
     font-family:monospace;
     font-size: 0.8rem;
     font-weight: 900;
-    margin: 1rem 0rem 1rem 0rem;
+    margin: 0.2rem 0.2rem 0.2rem 0rem;
     padding: 0rem;
   }
 
@@ -430,8 +432,6 @@ font-family:monospace;
     height: 2rem;
     width: 5rem;
     margin-top: 0rem;
-    color: aliceblue;
-    background-color: rgb(65, 62, 60);
     border-radius: 0.2rem;
   }
 .comentarBox{

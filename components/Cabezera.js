@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Date from './Date';
+import Image from 'next/image' 
 
 //C:\Users\MR22\stock-app\frontend\public
 const Cabezera = () => {
@@ -8,59 +8,81 @@ const Cabezera = () => {
   return (
     <>
      {/* CABEZERA 1 */}
+       <div className='cabezerafondo'></div>
         <header className="cabezera">
-       
-          <Link href="/home"><span className="name"> Book </span></Link>
+          <Link href="/home"><div className='book'><Image src="/gitbook-color.svg" height={40} width={40} /></div></Link>
           <Link href="/about"><span className="name"> About </span></Link>
           
               {/* FECHA */}
-                <span className="Date">
+                {/* <span className="Date">
                   <Date/>
-                </span>
+gitbook
+
+                </span> */}
         </header>
 
         <style jsx>{`
         
-         
+        .cabezerafondo{
+    position: absolute;
+    margin: auto;
+    height: 6.5rem;
+    margin-bottom: 0px;
+    transition: 0.2s;
+} 
 .cabezera{
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
+  border-radius: 0px 0px 5px 5px;
+  width: 85%;
     position: relative;
     margin: auto;
-    width:40rem;
-    height: 4rem;
-    border-bottom: 1px solid rgba(173, 172, 172, 0.282);
+    height: 6rem;
+    margin-bottom: 13px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.772);
+    
+    transition: 0.2s;
+}
+.book{
+    cursor: pointer;
+    margin: auto 20px;
+    margin-left: 2rem;
 }
 
 .name{
-    color: rgb(191, 191, 191);
+  color: #ffffffe9;
     letter-spacing: 0.05rem;
-    margin: 1.4em;
+    margin: auto 20px;
     margin-left: 2rem;
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     font-weight: 800;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 .name:hover, .name2:hover, .name3:hover{
-    color: rgb(255, 255, 255);
+  color: #ffffff;
     cursor: pointer;
 }
 .Date{
     position: relative;
     margin-right: 1rem;
     text-align: end;
-    color: #dedede;
+    color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     font-size: 1rem;
 }
 
 @media (max-width:600px){ 
-
+  .cabezerafondo{
+    width: 80%;
+    height: 4rem;
+} 
 .cabezera{
-    width: 90%;
+   width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,13 +95,15 @@ const Cabezera = () => {
 }
 
 .name{
-    /* border:solid red 1px; */
+    color: rgb(255, 255, 255);
     letter-spacing: 0.05rem;
-    margin: 1.7em;
-    margin-left: 0.5rem;
+    margin: auto 20px;
+    margin-left: 2rem;
+    font-size: 1.4rem;
     font-weight: 800;
     font-family: 'Josefin Sans', sans-serif;
 }
+ 
   }
                        `}</style>
   </>

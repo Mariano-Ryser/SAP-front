@@ -1,46 +1,35 @@
 import Link from "next/link"
 import Image from "next/image"
-import Test8 from "../pages/ztest/test8"
-export default function Homee() {
-    const icons = [
-        {img: "insta.png"},
-        {img: "linkedin.png"},
-        {img: "github.png"},
-        {img: "twiter.png"},
-      ]
+export default function About() {
+   
   return (
     <>
 
     <div className="container">
-    <div>
-        <div className="img-container">
-        <div className="img" 
-            style={{backgroundImage: `url('/img/me2.jpg')`}}
-            >
-            
-        </div>
-        </div>    
-        <p>My name is Mariano
-    ,
-     currently live in Zurich,
-    this is my humble portfolio on which i can test
-    and write code every day.
-        </p>
-        <p>totally grateful and happy for the opportunities and daily learning.
-I amm not going to stop for a second, it just takes a bit of order with the times. Well, 
-you can t do everything.
-</p>
-       <p>
-        This portfolio is built on Next.JS where my
-         frontend runs, and the backend is deployed
-          on Azure, the database interaction is
-           created with NodeJs and Mongo DB.
-        </p>
+      <div>
+          <div className="img-container">
+          <div className="img" 
+              style={{backgroundImage: `url('/gitbook-color.svg')`}}
+              >
+              
+          </div>
+          </div>    
+          <p>Hello, my name is Mariano Ryser, this is my Portfolio or resume, where you can see a little about me and my development.</p>
 
-  
-    </div>
+          <p>It started as a virtual curriculum which later transformed into a blog, and then a complete server in which I continue testing and working hard to expand my knowledge on the subject.</p>
+          <p>This portfolio is built on Next.JS where my
+            frontend runs, and the backend is deployed
+            on Azure, the database interaction is
+            created with NodeJs and Mongo DB.
+          </p>
+
+          <p>If you have any good comments or constructive criticism, they are always helpful to me. so I await your return!</p>
+
     
+      </div>
     </div>
+
+
     <br></br>
     <br></br>
     <br></br>
@@ -48,6 +37,20 @@ you can t do everything.
 
     
   <style jsx>{`
+    .container{
+      padding: 5px 3rem 0px 3rem;
+      background-color: rgba(0, 0, 0, 0.556);
+      border-radius: 10px;
+        width:85%;
+        height: 100vh;
+       margin: auto;
+       margin-top: 20px;
+        display:flex;
+        justify-content:center;
+        color: rgb(239, 239, 239);
+        text-align:center;
+       
+    }
   
     .img{
         height:13rem;
@@ -61,31 +64,13 @@ you can t do everything.
         display:flex;
         justify-content:center;
     }
-    .container{
-        width:40rem;
-        height: 100vh;
-      margin: auto;
-        display:flex;
-        justify-content:center;
-        color: rgb(210, 210, 210);
-        text-align:center;
-        font-family:monospace;
-    }
   
     p{
+      font-family:monospace;
         font-size:1.6rem;
        
     }
-    .boxIcons{
-    display: none;
-    overflow: hidden;
-    gap: 0.5rem; 
-    grid-auto-rows: 8rem;
-    grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 4fr));
-    grid-template-columns: repeat(12,1fr);
-    padding-top: 1.4rem;
-    padding-bottom: 22px;
-  }
+ 
 
 @media (max-width: 600px) {
     .img{
@@ -100,9 +85,11 @@ you can t do everything.
        
     }
     .container{
+      padding: 5px 15px 0px 15px;
         width:95%;
+       height: 60rem;
       margin: auto;
-      padding:0rem;
+      margin-top: 20px;
     }
     
   

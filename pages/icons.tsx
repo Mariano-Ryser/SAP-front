@@ -8,40 +8,40 @@ const Icons = () => {
 
 const icons = [
   {img: "insta.png", link:"/"},
-  {img: "Alienverde.gif", link:"/tarjetas"},
-  {img: "alien.png", link:""},
-  {img: "bootstrap.gif", link:""},
-  {img: "bichoWhite.png", link:""},
-   {img: "champi.png", link:""},
-   {img: "css.gif", link:""},
-   {img: "discord.png", link:""},
-   {img: "docker.png", link:""},
-   {img: "drag2.png", link:""},
-   {img: "email.png", link:""},
-   {img: "earth.gif", link:""},
-   {img: "git.png", link:""},
-   {img: "js.png", link:""},
-   {img: "linkedin.png", link:""},
-   {img: "next.png", link:""},
-   {img: "github.png", link:""},
-   {img: "googleLogo.png", link:""},
-   {img: "paint3d.png", link:""},
-   {img: "html.gif", link:""},
-   {img: "linux.png", link:""},
-   {img: "window.png", link:""},
-   {img: "watsap.png", link:""},
-   {img: "visual.gif", link:""},
-   {img: "php.png", link:""},
-   {img: "twiter.png", link:""},
-   {img: "terminal.png", link:""},
-   {img: "snake.png", link:""},
-   {img: "tic1.png", link:""},
-   {img: "phone.png", link:""},
-   {img: "pizza.png", link:""},
-   {img: "obs.png", link:""},
-   {img: "PacYellow.png", link:""},
-   {img: "vue.png", link:""},
-   {img: "mooon.gif", link:""},
+  {img: "Alienverde.gif", link:"/"},
+  // {img: "alien.png", link:""},
+  // {img: "bootstrap.gif", link:""},
+  // {img: "bichoWhite.png", link:""},
+  //  {img: "champi.png", link:""},
+  //  {img: "css.gif", link:""},
+  //  {img: "discord.png", link:""},
+  //  {img: "docker.png", link:""},
+  //  {img: "drag2.png", link:""},
+  //  {img: "email.png", link:""},
+  //  {img: "earth.gif", link:""},
+  //  {img: "git.png", link:""},
+  //  {img: "js.png", link:""},
+  //  {img: "linkedin.png", link:""},
+  //  {img: "next.png", link:""},
+  //  {img: "github.png", link:""},
+  //  {img: "googleLogo.png", link:""},
+  //  {img: "paint3d.png", link:""},
+  //  {img: "html.gif", link:""},
+  //  {img: "linux.png", link:""},
+  //  {img: "window.png", link:""},
+  //  {img: "watsap.png", link:""},
+  //  {img: "visual.gif", link:""},
+  //  {img: "php.png", link:""},
+  //  {img: "twiter.png", link:""},
+  //  {img: "terminal.png", link:""},
+  //  {img: "snake.png", link:""},
+  //  {img: "tic1.png", link:""},
+  //  {img: "phone.png", link:""},
+  //  {img: "pizza.png", link:""},
+  //  {img: "obs.png", link:""},
+  //  {img: "PacYellow.png", link:""},
+  //  {img: "vue.png", link:""},
+  //  {img: "mooon.gif", link:""},
 ]
 
   return (
@@ -60,14 +60,16 @@ const icons = [
     </Link>
         
           {icons.map((item,index) => (
-        <Link href={item.link}>
             <div key={index}
               //  onClick={()=>{topo()}}
                className="icon"
                style={{backgroundImage: `url('/img/${item.img}')`}}
                 >
+          <Link href={item.link}>
+
+
+                </Link>
             </div>
-          </Link>
 
          ))}
         </div>
@@ -77,7 +79,6 @@ const icons = [
           border-radius: 4px;
           background-color: rgba(0, 0, 0, 0.556);
           width: 85%;
-          height: 100vh;
           margin: auto;
           display: grid;
           overflow: hidden;

@@ -10,7 +10,7 @@ const Cabezera = () => {
      {/* CABEZERA 1 */}
        <div className='cabezerafondo'></div>
         <header className="cabezera">
-          <Link href="/home"><div className='book'><Image src="/gitbook-color.svg" height={40} width={40} /></div></Link>
+          <Link href="/home"><div className='book'><Image src="/gitbook-color.svg"  alt="Picture of the author" height={40} width={40} /></div></Link>
           <Link href="/about"><span className="name"> About </span></Link>
           
               {/* FECHA */}

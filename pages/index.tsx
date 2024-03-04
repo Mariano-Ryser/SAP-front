@@ -7,6 +7,8 @@ import D4 from '../components/diario/d4'
 import D5 from '../components/diario/d5'
 import D6 from '../components/diario/d6'
 import D7 from '../components/diario/d7'
+
+import Icons from "../pages/icons"
 // import Image from 'next/image' 
 // import Link from 'next/link';
 
@@ -18,7 +20,7 @@ export default function Home() {
   return (
     <>
 
-   
+   <Icons/>
 
 {/* 
   <D7/>

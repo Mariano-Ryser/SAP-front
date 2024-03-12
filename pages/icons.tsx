@@ -7,7 +7,10 @@ import styles from "../styles/Iconsss.module.css";
 const Icons = () => {
 
 const icons = [
-  {img: "insta.png", link:"/"},
+  {img: "insta.png",
+   link:"/",
+   descripcion:"",
+  },
   {img: "Alienverde.gif", link:"/tarjetas"},
   {img: "alien.png", link:""},
   {img: "bootstrap.gif", link:""},

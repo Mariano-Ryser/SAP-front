@@ -14,8 +14,112 @@ const TestPagination = () => {
   }
   return (
     <>
+
+
     <div className='container'>
     <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
+    
+    <h2>Los Dinosaurios</h2>
+    <h3>Charly Garcia</h3>
+
+    <h4>Intro: C9 - Gm7 - Bb9 - C9</h4>
+
+    {/* <span>E</span><span>C#m</span> */}
+    <b>C</b>          -                    <b>Gm7</b>
+  <p>Los amigos del barrio pueden desaparecer,</p>
+          <b>Bb9</b>    -                    <b>C9</b>
+       <p>los cantores de radio pueden desaparecer.</p>
+          <b>C9</b>           -                    <b>Gm7</b>
+           <p>Los que están en los diarios pueden desaparecer,</p>
+      <b>Bb9</b>   -                      <b>C9</b>
+      <p>la persona que amas puede desaparecer.</p>
+          <b>Bb9</b>
+          <p>Los que están en el aire</p>
+             <b>Am</b>
+             <p>pueden desaparecer en el aire.</p>
+         <b>Abmaj7</b>
+         <p>Los que están en la calle</p>
+              <b>G7sus4</b>            <b>G7</b>
+              <p>pueden desaparecer en la calle.</p>
+
+<br></br>
+
+<b>C9</b>                              <b>Gm7</b>
+<p>Los amigos del barrio pueden desaparecer,</p>
+  Bb9                           C9
+<p>pero los dinosaurios van a desaparecer.</p>
+
+Eb/F         Ab/Bb  Bb
+<p>No estoy tranquilo, mi amor,</p>
+                         Dm  Gm
+<p>hoy es sábado a la noche un amigo está en cana.</p>
+Am      Em           Fmaj7
+<p>Oh, mi amor, desaparece el mundo.</p>
+
+F/G       C
+<p>Si los pesados, mi amor, </p>
+ C9                 C
+ <p>llevan todo ese montón</p>
+Em     Am
+<p>de equipaje en la mano.</p>
+Bm      F#m             Gmaj7
+<p>Oh, mi amor, yo quiero estar liviano.</p>
+          Gmaj7            D/A   A
+          <p>Cuando el mundo tira para abajo</p>
+    F#7/A#                A#º/B  Bm
+    <p>es mejor no estar atado a nada,</p>
+   Gmaj7           D/A
+   <p>imaginen a los dinosaurios</p>
+A#º   A#º/B  Bm
+<p>en la cama.</p>
+
+<p>Cuando el mundo tira para abajo...</p>
+
+<p>Inter: con acordes de la 1ª estrofa.</p>
+
+<p>Los amigos del barrio...</p>
+
+<p>Los amigos del barrio...</p>
+                  A
+        <p>...van a desaparecer.</p>
+
+<h2>Agregado ... bearbeiten</h2>
+  </section>
+
+
+  <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
+
+
+<br></br>
+
+<b>Em</b>                              
+<p>Teniendo todo para hacerte sonreir</p>
+<b>Em</b>                           
+<p>teniendo todo para hacerte avos feliz.</p>
+
+<b>Bm</b> 
+<p>y no puedooo....</p>
+
+<br></br>
+
+<b>Em</b>                              
+<p>Sabia que contigo no podias seguir</p>
+<b>Em</b>                           
+<p>Sabia que conmigo no serias feliz</p>
+
+<b>Bm</b> 
+<p>y lo entiendoo....</p>
+
+  </section>
+
+  <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
+
+<b></b> 
+<p></p>
+
+  </section>
+
+    {/* <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
     <h1>Hablemos de Node Js</h1>
     <p>Node.js es un entorno de tiempo de ejecución de JavaScript de código abierto que se basa en el motor V8 de Google Chrome. Fue creado por Ryan Dahl en 2009 con el objetivo de permitir la ejecución de JavaScript fuera del navegador, en el servidor. </p>
    <p>Antes de Node.js, JavaScript era principalmente utilizado en el lado del cliente para interactuar con páginas web en el navegador. Sin embargo, Dahl vio la necesidad de utilizar JavaScript en el servidor para manejar la lógica del lado del servidor y construir aplicaciones web más eficientes y escalables.</p>
@@ -78,7 +182,7 @@ Para permitir solicitudes entre orígenes diferentes de manera controlada, puede
   <p>se utiliza como un middleware de Express para habilitar CORS en todas las rutas de tu aplicación. Puedes configurar opciones más avanzadas para restringir los dominios permitidos, los métodos HTTP, las cabeceras, etc., según tus necesidades.</p>
   
   <p>En resumen, CORS es una parte importante cuando se trabaja con aplicaciones web que requieren que distintos dominios se comuniquen entre sí de manera segura. Node.js proporciona herramientas, como el paquete cors, para gestionar estas restricciones y permitir que las solicitudes entre orígenes sean manejadas adecuadamente.</p>
-  </section>
+  </section> */}
 
     </div>
  
@@ -94,6 +198,13 @@ Para permitir solicitudes entre orígenes diferentes de manera controlada, puede
 
 
           <style jsx>{`
+          b{
+            color: greenyellow;
+          }
+          p{
+            margin-bottom: -3px;
+            margin-top: -3px;
+          }
 li{
 
 }
@@ -113,7 +224,6 @@ ul{
   color:yellow;
  } 
 h1,h2,h3{
-  padding-top: 1rem;
   padding-bottom: 0rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
@@ -123,7 +233,6 @@ h1,h2,h3{
 section{
   
       border-radius: 10px;
-      background-color: rgba(24, 24, 24, 0.89);
       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size:1.3rem;
       line-height: 1.74;

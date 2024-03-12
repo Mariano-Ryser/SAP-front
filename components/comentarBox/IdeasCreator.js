@@ -20,7 +20,7 @@ function IdeasCreator(){
   const [successMessage, setSuccessMessage] = useState(null);
   const [deletedMessage, setDeleted] = useState(null);
 
-  //  ALERTAS DE COMPLETADO DE CASILLERO 
+  //  ALERTAS DE COMPLETADO DE CASILLERO  - que hacer- 
   const handleChange = (e) =>{
         const inputValue = e.target.value
         const inputName = e.target.name

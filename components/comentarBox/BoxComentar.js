@@ -5,7 +5,10 @@ function BoxComentar(){
 
   const current = new Date();
   const datee = `${current.getDate()} / ${current.getMonth()+1} / ${current.getFullYear()}`;
-  const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL // .env ()=>("api/v1") ( se encuentra en backend app.js enrutador)
+
+  // .ENV VARIABLE DE ENTORNOOOOO!!!!!!!!!!
+  // ()=>("api/v1") ( se encuentra en backend app.js enrutador)
+  const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL 
 
   const initialState = {
     titulo:'',

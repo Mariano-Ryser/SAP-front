@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "node": "node server.js"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
@@ -19,6 +20,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
     "styled-jsx": "^5.0.2"
   },
   "devDependencies": {

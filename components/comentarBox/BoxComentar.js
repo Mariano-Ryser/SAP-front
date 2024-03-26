@@ -83,8 +83,6 @@ function BoxComentar(){
   const handleDeleted = (e)=> {
     e.preventDefault()
 }
-
-
 const fetchComentars= () =>{
     fetch(`${baseURL}/comentars`)
        .then(res => res.json())
@@ -96,7 +94,6 @@ const fetchComentars= () =>{
     useEffect(()=>{
       fetchComentars();
      },[])
-
   return (
     <>
     <form className="form">
@@ -169,12 +166,10 @@ const fetchComentars= () =>{
                     </div>
                 ) 
             }
+    </form>
 
-            
-
-
-        {/* MAPEO DE ELEMENTOS */}
-        <div>
+     {/* MAPEO DE ELEMENTOS */}
+     <div>
              {comentars.map(({_id, titulo, text, author}) => (
                 <div key={_id} className="comentarBox">
                     <h1 className="titulo">{titulo}</h1>
@@ -204,21 +199,16 @@ const fetchComentars= () =>{
                                 console.log({data})})}}
                                 
                       >X</span>
-
-
                     </div>
                         
                 </div>
                
             ))}
-         </div> 
+    </div> 
        
       <div className='msjCarga'>
                   Das Laden der Nachricht kann ein paar Sekunden dauern...
- 
       </div>
-
-    </form>
    
     <style jsx>{`
     .msjCarga{

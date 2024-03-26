@@ -7,7 +7,6 @@ import Test5 from '../pages/ztest/test5';
 //C:\Users\MR22\stock-app\frontend\public
 const NavRespon = () => {
   const [close, setClose] = useState(null);
-  const categori = "/lectura/lectura"
 
    function openList(){
 
@@ -113,19 +112,19 @@ return (
           <Test5/>
           
             {/* Index*/}
-              <Link href="/">
+              <Link href="/proyectos/posts/books">
               
                 <li className={styles.li}
                 // onClick={padlook}
                 >
-                  <a className={styles.a}>Home</a>
+                  <a className={styles.a}>To read</a>
                 </li>
               </Link>
 
                     
 
               {/* Icons */}
-                <Link href="/icons">  
+                <Link href="/proyectos/icons/icons">  
                 <li
                   id='li'
                   className={styles.li}
@@ -140,14 +139,21 @@ return (
 
          
           {/* Mensajeria Link */}
-              <Link href="/msj">
+              <Link href="/proyectos/boxComentar/msj">
                 <li className={styles.li}>
-                  <a className={styles.a}>Mensajeria</a>
+                  <a className={styles.a}>Box Comentar</a>
+                </li>
+              </Link>
+
+                 {/* Mensajeria Link */}
+                 <Link href="/proyectos/productCreator/create">
+                <li className={styles.li}>
+                  <a className={styles.a}>Product Creator</a>
                 </li>
               </Link>
         
           {/* CHAR CREATOR */}
-          <Link href="/personaje">
+          <Link href="/proyectos/charCreator/personaje">
                 <li
                   id='li'
                   className={styles.li}
@@ -160,68 +166,9 @@ return (
                 </li>
                 </Link>
 
-          {/* PRODUCT CREATOR link */}
-          
-             
-                <li 
-                id='li'
-                className={styles.liBloqued}
-                 >
-                <div
-                onClick={padlook}
-                id='padlock'
-                className={styles.padlock}></div>
-                  <a className={styles.a}>Product Creator</a>
-                </li>
-
-          {/* 3D link */}
-           
-                <li 
-                id='li'
-                className={styles.liBloqued}
-                  >
-                  
-                <div
-                onClick={padlook}
-                id='padlock'
-                className={styles.padlock}></div>
-
-                  <a className={styles.a}>Numeros Test </a>
-                </li> 
-              
-
-              {/* API */}
-              
-                <li 
-                id='li'
-                className={styles.liBloqued}
-                  >
-                  
-                <div
-                onClick={padlook}
-                id='padlock'
-                className={styles.padlock}></div>
-
-                  <a className={styles.a}> APIS </a>
-                </li> 
-             
-
-               {/* MARKET!*/}
-             
-               <li 
-                id='li'
-                className={styles.liBloqued}
-                    onClick={padlook}
-                  >
-                <div
-                id='padlock'
-                className={styles.padlock}></div>
-
-                  <a className={styles.a}>MARKET! </a>
-                </li> 
-
+  
                  {/* Lectura*/}
-              <Link href="/lectura/lectura">
+              <Link href="/proyectos/lectura/lectura">
               
               <li className={styles.li}
               // onClick={padlook}
@@ -232,24 +179,24 @@ return (
               </Link>
 
                   {/* LOGO COLORINCHE*/}
-                  <Link href="/logazo/logazo">
+                  <Link href="/proyectos/logazo/logazo">
               
               <li className={styles.li}
               // onClick={padlook}
               >
-                <a className={styles.a}>Logo Colorido
+                <a className={styles.a}>Logo
                 </a>
               </li>
               </Link>
 
                   {/* MUSIC TESTING*/}
 
-                  <Link href="/posts/music">
+                  <Link href="/proyectos/sounds/music">
               
               <li className={styles.li}
               // onClick={padlook}
               >
-                <a className={styles.a}>Music Test - Birds
+                <a className={styles.a}>Game Sounds 
                 </a>
               </li>
               </Link>

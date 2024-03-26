@@ -1,5 +1,10 @@
 // next.config.js
 
+/** @type {import('rehype-pretty-code').Options} */
+const options = {
+  // See Options section below.
+};
+
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {

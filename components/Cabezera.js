@@ -8,31 +8,27 @@ const Cabezera = () => {
   return (
     <>
      {/* CABEZERA 1 */}
-       <div className='cabezerafondo'></div>
+
         <header className="cabezera">
-          <Link href="/home"><div className='book'><Image src="/gitbook-color.svg"  alt="Picture of the author" height={40} width={40} /></div></Link>
-          <Link href="/about"><span className="name"> About </span></Link>
+        
+            <Link href="/">
+                 <h3>HOME</h3>
+            </Link>
+
+          {/* <Link href="/about"><span className="name"> About </span></Link> */}
           
               {/* FECHA */}
                 {/* <span className="Date">
                   <Date/>
-gitbook
+
 
                 </span> */}
         </header>
 
         <style jsx>{`
         
-        .cabezerafondo{
-    position: absolute;
-    margin: auto;
-    height: 6.5rem;
-    margin-bottom: 0px;
-    transition: 0.2s;
-} 
+      
 .cabezera{
-  border-radius: 0px 0px 5px 5px;
-  width: 85%;
     position: relative;
     margin: auto;
     height: 6rem;
@@ -42,30 +38,24 @@ gitbook
     align-items: center;
     -webkit-box-pack: justify;
     justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.772);
+    background-color: rgba(46, 45, 45, 0.772);
     
     transition: 0.2s;
 }
-.book{
+h3{
     cursor: pointer;
-    margin: auto 20px;
-    margin-left: 2rem;
+    margin: auto;
+    margin-left: 0.6rem;
 }
+h3:hover{
+  cursor: default;
+    color: rgb(18, 221, 228);
 
-.name{
-  color: #ffffffe9;
-    letter-spacing: 0.05rem;
-    margin: auto 20px;
-    margin-left: 2rem;
-    font-size: 2.4rem;
-    font-weight: 800;
-    font-family: 'Josefin Sans', sans-serif;
-}
+  }
 
-.name:hover, .name2:hover, .name3:hover{
-  color: #ffffff;
-    cursor: pointer;
-}
+
+
+
 .Date{
     position: relative;
     margin-right: 1rem;
@@ -82,7 +72,6 @@ gitbook
     height: 4rem;
 } 
 .cabezera{
-   width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,15 +83,7 @@ gitbook
     user-select: none;
 }
 
-.name{
-    color: rgb(255, 255, 255);
-    letter-spacing: 0.05rem;
-    margin: auto 20px;
-    margin-left: 2rem;
-    font-size: 1.4rem;
-    font-weight: 800;
-    font-family: 'Josefin Sans', sans-serif;
-}
+
  
   }
                        `}</style>

@@ -78,3 +78,11 @@ const nextConfig = {
 
 // Merge MDX config with Next.js config
 module.exports = withMDX(nextConfig)
+
+
+Tirate una recetita con...
+Ingredientes:
+ pollo , zana la horia,
+  pimiento, crema, bugio,
+   salsa tomate, sal, agua,
+    tomates, aceite,  

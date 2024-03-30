@@ -4,9 +4,10 @@ export default function Hb() {
   return (
     <>
 
-  <Link href="/proyectos/proyects"><h3>cd ..</h3></Link>
+  <Link href="/proyectos/proyects"><h3>/proyects ..</h3></Link>
   <Link href="items/items"><h3>/hb/items</h3></Link>
   <Link href="monsters/monsters"><h3>/hb/monsters</h3></Link>
+  <Link href="sounds/music"><h3>/hb/sounds</h3></Link>
 
   <style jsx>{`
   

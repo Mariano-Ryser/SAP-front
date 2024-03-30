@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import Link from 'next/link';
 
 const Music = () => {
   const initialState = (1.3)
@@ -52,8 +53,9 @@ const Music = () => {
   }
   return (
     <>
+  <Link href="/proyectos/hb/hb"><h3>cd ..</h3></Link>
   <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
-
+     
     <div>
       <h1>Helbreath Sounds</h1>
     </div>
@@ -96,6 +98,12 @@ const Music = () => {
         {formatTime(currentTime)} / {formatTime(duration)}
       </div>
     </div>
+
+    <p>Volver a comenzar, grab and drop. JS
+    </p>
+
+    <div>Prototipo Volumen App Web. </div>
+
   
    
    

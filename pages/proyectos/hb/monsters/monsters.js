@@ -10,7 +10,7 @@ const images = [
   {
   img: "tigerworm.gif",
   categori:"rare",
-  link:"/",
+  
   name:"Tiger Worm",
   element:"Neutral"
 
@@ -23,6 +23,7 @@ const images = [
   return (
     <>
      <Link href="/proyectos/hb/hb"><h3>cd ..</h3></Link>
+     
       <div className="gallery"//  style={{height: size}}
          >
           {images.map((image,index) => (

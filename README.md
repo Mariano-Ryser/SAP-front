@@ -44,45 +44,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 
+conciencia = awareness
+
+I feel like a toad from another well.
+
+No matter what happens, I feel that it is boring to always speak in Spanish.
+
+and I'm trying a little to forget my native language.
+
+I have a goal, but I'm going very slowly,
 
 
-// next.config.js
-
-/** @type {import('rehype-pretty-code').Options} */
-const options = {
-  // See Options section below.
-};
-
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-  options: {
-    // If you use remark-gfm, you'll need to use next.config.mjs
-    // as the package is ESM only
-    // https://github.com/remarkjs/remark-gfm#install
-    remarkPlugins: [],
-    rehypePlugins: [],
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
-  },
-})
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Configure pageExtensions to include md and mdx
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  // Optionally, add any other Next.js config below
-  reactStrictMode: true,
-}
-
-
-
-// Merge MDX config with Next.js config
-module.exports = withMDX(nextConfig)
-
-
-Tirate una recetita con...
-Ingredientes:
- pollo , zana la horia,
-  pimiento, crema, bugio,
-   salsa tomate, sal, agua,
-    tomates, aceite,  
+Be nice to everyone you pass on your way up, because you may have to pass them again on your way down.

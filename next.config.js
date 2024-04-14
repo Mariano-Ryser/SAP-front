@@ -1,4 +1,6 @@
+
 // next.config.js
+
 
 /** @type {import('rehype-pretty-code').Options} */
 const options = {
@@ -25,7 +27,6 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
   reactStrictMode: true,
 }
-
 
 
 // Merge MDX config with Next.js config

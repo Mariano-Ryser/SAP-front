@@ -1,21 +1,24 @@
 import Link from 'next/link'
 
-export default function Home() {
+
+export default function Test() {
   return (
     <>
 
-  <Link href="/"><h3>/home</h3></Link>
-  <Link href="/proyectos/proyects"><h3>/home/proyects</h3></Link>
-  <Link href="/test/test"><h3>/home/test</h3></Link>
+
+  
+  {/* <Pantallazo/> */}
+  <Link href="/"><h3>/home ..</h3></Link>
+  <Link href="/test/1"><h3>/1 ..</h3></Link>
 
 
   <style jsx>{`
-  
   h3:hover{
     cursor: default;
     color: rgb(18, 221, 228);
 
   }
+  
       
 @media (max-width: 600px) {
  

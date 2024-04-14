@@ -17,6 +17,8 @@
     "@types/react": "^18.0.30",
     "mdx-bundler": "^9.2.1",
     "next": "12.2.0",
+    "nextra": "^2.13.4",
+    "nextra-theme-docs": "^2.13.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",

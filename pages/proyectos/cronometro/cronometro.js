@@ -30,17 +30,17 @@ const Cronometro = () => {
     <div className='cronometro'>
       <h1>CR0N0</h1>
       <div >
-        <span >{Math.floor(segundos / 3600).toString().padStart(2, '0')}:</span>
+         {/* <span>{Math.floor(segundos / 3600).toString().padStart(2, '0')}:</span>  */}
         <span>{Math.floor((segundos % 3600) / 60).toString().padStart(2, '0')}:</span>
         <span>{(segundos % 60).toString().padStart(2, '0')}</span>
       </div>
       <div>
         {!activo ? (
-          <button onClick={iniciarCronometro}>Iniciar</button>
+          <button onClick={iniciarCronometro}>Start</button>
         ) : (
-          <button onClick={pausarCronometro}>Pausar</button>
+          <button onClick={pausarCronometro}>Pause</button>
         )}
-        <button onClick={reiniciarCronometro}>Reiniciar</button>
+        <button onClick={reiniciarCronometro}>Reset</button>
       </div>
     </div>
 
@@ -59,7 +59,7 @@ const Cronometro = () => {
  
         span{
           font-family:monospace;
-          font-size:6rem;
+          font-size:5.5rem;
         }
         button{
           color: white;
@@ -67,7 +67,7 @@ const Cronometro = () => {
           font-family:monospace;
           font-size:1.2rem;
           height:3rem;
-          width:8rem;
+          width:5rem;
           background-color:black;
           margin-left:1rem;
         }

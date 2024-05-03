@@ -5,6 +5,7 @@ export default function Books() {
 
   return (
     <>
+    <Link href="/proyectos/proyects"><h3>/proyects..</h3></Link>
    <ul>
   {/* <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link> */}
 
@@ -41,22 +42,13 @@ export default function Books() {
     .bloqued:hover{
       color: red;
     }
-    .working{
-      color:white;
-      width:40rem;
-      height:14rem;
-      margin:auto;
-      border:solid 1px green;
-      margin-bottom:2rem;
-    }
     .link{
       color:red;
     }
     ul{
-      width:50rem;
-      height: 100vh;
       margin: auto;
       padding:0rem;
+      
     }
     li{
       font-size: 1.6rem;
@@ -86,16 +78,8 @@ export default function Books() {
     }
    
 @media (max-width: 900px) {
-  .working{
-color:white;
-width:90%;
-height:14rem;
-margin:auto;
-margin-top:1rem;
-margin-bottom:1rem;
-}
+  
     ul{
-      width:95%;
       margin: auto;
       padding:0rem;
     }

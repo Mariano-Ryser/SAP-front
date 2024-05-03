@@ -26,18 +26,21 @@ h1{
 }
 h3{
   margin: 0.2rem 0.5rem ;
-  color: rgb(199, 199, 199);
+  color: rgb(189, 189, 189);
 }
 h3:hover{
   cursor: default;
-  color: rgb(18, 221, 228);
+  color: rgb(19, 206, 190);
 }
 .tl{color: white; font-family: monospace;}
 .link{color: rgb(56, 185, 10); font-family: monospace;}
 
-
 @media (max-width: 600px) {
- 
+  h3{
+    margin: 0.2rem 0.5rem ;
+    color: rgb(189, 189, 189);
+    font-size: 1.3rem;
+  }
   
 }
 

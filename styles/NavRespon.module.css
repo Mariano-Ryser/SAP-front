@@ -59,7 +59,7 @@
     align-items: center;
     align-content: center;
     background-color: #151515d5;
-    border: dashed 1px #4f4f4fd5;
+    border: dashed 1px rgba(30, 138, 73, 0.897);
     margin-top: 0.1rem;
     margin-bottom: 0.7rem;
     padding: 0.26rem;
@@ -70,8 +70,8 @@
   }
   .li:hover{
     cursor: pointer;
-    border: solid 1px rgb(93, 93, 93);
-    background-color: #08940fc1;
+    border: inset 1px rgb(62, 232, 130);
+    background-color: #153d17c1;
   }
   .liBloqued{
     border-radius: 0.2rem;

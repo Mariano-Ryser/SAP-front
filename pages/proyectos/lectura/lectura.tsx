@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 // import Image from "next/image"
 import { useEffect, useState } from 'react';
 
@@ -34,8 +35,8 @@ function Lectura() {
 
 return (
   <>
+    <Link href="/proyectos/proyects"><h3>/proyects..</h3></Link>
     <div className="box">
-
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         Ahora escribimos un texto cualquiera para ver como se ve a la hora de leer en la 
         pantalla del celular, los textos siguientes son sin sentido, solamente para rellenar

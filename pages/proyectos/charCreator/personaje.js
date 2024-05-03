@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 // CREAMOS LA FUNCION
 function Personaje() {
     //CONEXION VARIABLE EN .env
@@ -71,7 +72,7 @@ function Personaje() {
 
   return (
     <>
-
+<Link href="/proyectos/proyects"><h3>/proyects..</h3></Link>
     <div className='container'>
         <form className="form">
             <h1>Cree su personaje </h1>
@@ -172,12 +173,13 @@ function Personaje() {
          
         <style jsx>{`
             .listBoxP{
+                background-color:rgba(10, 118, 73, 0.397);
                 font-size:1rem;
                 font-family:monospace;
                 padding:0.6rem;
                 color:white;
                 margin: 0.3rem auto 0.3rem auto;
-                border: solid 1px rgb(92, 92, 92);
+                border: solid 1px rgba(30, 138, 73, 0.897);
                 
             }
             .img{
@@ -195,6 +197,7 @@ function Personaje() {
         .container{
 }
 .form{
+    background-color:rgba(10, 138, 123, 0.397);
     color:white;
     margin: auto;
     font-family:monospace;
@@ -215,10 +218,10 @@ button{
 .surname{
     color: rgb(34, 213, 6);
 }
-.age{color: rgb(238, 133, 21);}
-.email{color: rgb(238, 68, 21);}
+.age{color: rgb(238, 133, 21, 0.897);}
+.email{color: rgb(238, 68, 21, 0.997);}
 .city{color: rgb(21, 180, 238);}
-.description{color: rgb(235, 232, 12);}
+.description{color: rgb(235, 232, 12, 0.897);}
 
 
       

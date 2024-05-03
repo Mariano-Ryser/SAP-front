@@ -111,12 +111,14 @@ const Music = () => {
 
 
           <style jsx>{`
+          section{
+      }
           h1{font-size: 1rem;
           font-family: monospace;
       }
       button{
-        width: 7rem;
-        height: 2rem;
+        width: 6rem;
+        height: 2.3rem;
         margin: 0.2rem;
         cursor: pointer;
       }
@@ -127,13 +129,6 @@ const Music = () => {
 
     @media (max-width: 600px) {
             
-                  section{
-                  width: 90%;
-                  margin:auto;
-                  margin-bottom:1rem;
-                  margin-top: 1rem;
-                  padding:0rem;
-                      }   
 
         
       }   

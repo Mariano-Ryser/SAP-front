@@ -83,6 +83,7 @@ function BoxComentar(){
   const handleDeleted = (e)=> {
     e.preventDefault()
 }
+
 const fetchComentars= () =>{
     fetch(`${baseURL}/comentars`)
        .then(res => res.json())
@@ -352,6 +353,7 @@ font-family:monospace;
 
 /* TTITULO EN TEXTO */
 .titulo{
+  
   color: rgb(133, 133, 133);
   font-family:monospace;
   line-height: 0rem;

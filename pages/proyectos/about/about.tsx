@@ -14,9 +14,9 @@ export default function About() {
               
           </div>
           </div>    
-          <p>Hello, my name is Mariano Ryser, this is my Portfolio or resume, where you can see a little about me and my development.</p>
 
-          <p>It started as a virtual curriculum which later transformed into a blog, and then a complete server in which I continue testing and working hard to expand my knowledge on the subject.</p>
+          <p>It started as a virtual curriculum which later transformed into a blog, and then a complete
+             server in which I continue testing and working hard to expand my knowledge on the subject.</p>
           <p>This portfolio is built on Next.JS where my
             frontend runs, and the backend is deployed
             on Azure, the database interaction is
@@ -39,7 +39,7 @@ export default function About() {
   <style jsx>{`
     .container{
       padding: 5px 3rem 0px 3rem;
-      background-color: rgba(0, 0, 0, 0.556);
+      background-color: rgb(25, 102, 56, 0.397);
       border-radius: 10px;
        margin: auto;
        margin-top: 20px;

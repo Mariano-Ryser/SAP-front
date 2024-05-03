@@ -11,17 +11,9 @@ export default function Home() {
 
   <style jsx>{`
   
-  h3:hover{
-    cursor: default;
-    color: rgb(18, 221, 228);
 
-  }
       
-@media (max-width: 600px) {
- 
-                 
-}
-       
+   
          `}</style>
     </>
   )

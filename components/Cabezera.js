@@ -29,6 +29,7 @@ const Cabezera = () => {
         
       
 .cabezera{
+    border: inset rgb(62, 232, 130) 7px;
     position: relative;
     margin: auto;
     height: 6rem;

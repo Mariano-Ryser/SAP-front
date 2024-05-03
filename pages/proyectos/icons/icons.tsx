@@ -9,7 +9,6 @@ const Icons = () => {
 const icons = [
   {img: "Alienverde.gif", link:"/"},
   {img: "alien.png", link:""},
-  {img: "thedevastator.gif", link:""},
   {img: "bichoWhite.png", link:""},
    {img: "champi.png", link:""},
    {img: "css.gif", link:""},
@@ -43,11 +42,11 @@ const icons = [
 
   return (
     <>
-   
+   <Link href="/proyectos/proyects"><h3>/proyects..</h3></Link>
         <div className="boxIcons"//  style={{height: size}}
          >
 
-<Link href="/posts/nodejs">
+<Link href="/proyectos/posts/books">
     <div
             // onClick={()=>{topo()}}
             className="icon"

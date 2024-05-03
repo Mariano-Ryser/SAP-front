@@ -10,7 +10,7 @@ export default function Markdown() {
   {/* <Pantallazo/> */}
   <Link href="/"><h3>/proyects ..</h3></Link>
   <Link href="example"><h3>/markdown/testMarkD =D </h3></Link>
-  <Link href="text"><h3>/markdown/text</h3></Link>
+  <Link href="english/english"><h3>/markdown/english/</h3></Link>
 
 
 

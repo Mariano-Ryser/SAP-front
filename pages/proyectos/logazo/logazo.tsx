@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Homee() {
   return (
     <>
-    
+   <Link href="/proyectos/proyects"><h3>/proyects..</h3></Link> 
 <div className="box">
 
     <div className="boxlogo">

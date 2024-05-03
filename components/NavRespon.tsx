@@ -121,8 +121,6 @@ return (
                 </li>
               </Link>
 
-                    
-
               {/* Icons */}
                 <Link href="/proyectos/icons/icons">  
                 <li
@@ -136,7 +134,6 @@ return (
                   <a className={styles.a}>Icons</a>
                 </li>
               </Link>
-
          
           {/* Mensajeria Link */}
               <Link href="/proyectos/boxComentar/msj">
@@ -200,6 +197,9 @@ return (
                 </a>
               </li>
               </Link>
+
+
+              
 
 
                {/* FOTOS

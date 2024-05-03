@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
 
-export default function Test1() {
+export default function Test3() {
 
 
   return (
     <>
 <Link href="test"><h3>/test ..</h3></Link>
-<h1>Test 1</h1>
+<h1>Test 3</h1>
 
 
   <style jsx>{`

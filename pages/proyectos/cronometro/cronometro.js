@@ -53,8 +53,8 @@ const Cronometro = () => {
       .cronometro{
         background-color:black;
         border: inset rgb(62, 232, 130) 7px;
-        margin:1rem;
         padding-bottom:1rem;
+        margin-top:1rem;
       }
  
         span{

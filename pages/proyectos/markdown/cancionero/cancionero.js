@@ -9,9 +9,9 @@ export default function Markdown() {
   
   {/* <Pantallazo/> */}
   <Link href="/"><h3>/proyects ..</h3></Link>
-  <Link href="cancionero/cancionero"><h3>/markdown/cancionero </h3></Link>
-  <Link href="example"><h3>/markdown/testMarkD =D </h3></Link>
-  <Link href="english/english"><h3>/markdown/english/</h3></Link> 
+  <Link href="eltesoro"><h3>/cancionero/Eltesoro </h3></Link>
+  <Link href="viernes3am"><h3>/cancionero/Viernes3am </h3></Link>
+  
 
 
 

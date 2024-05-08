@@ -11,6 +11,7 @@ export default function Markdown() {
   <Link href="/"><h3>/proyects ..</h3></Link>
   <Link href="eltesoro"><h3>/cancionero/Eltesoro </h3></Link>
   <Link href="viernes3am"><h3>/cancionero/Viernes3am </h3></Link>
+  <Link href="maure"><h3>/cancionero/maure </h3></Link>
   
 
 

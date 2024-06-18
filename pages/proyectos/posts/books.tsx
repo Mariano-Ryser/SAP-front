@@ -5,11 +5,12 @@ export default function Books() {
 
   return (
     <>
-    <Link href="/proyectos/proyects"><h3>/proyects..</h3></Link>
+    {/* <Link href="/proyectos/proyects"><h3>/proyects..</h3></Link> */}
    <ul>
+    
   {/* <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link> */}
 
-  <Link href="posts/nodejs"><li>A bit of Node js and File systems please.</li></Link>
+  {/* <Link href="posts/nodejs"><li>A bit of Node js and File systems please.</li></Link>
   <Link href="posts/lieyourself"><li>Lie to yourself.</li></Link>
   <Link href="posts/pnl"><li>Principios de la PNL</li></Link>
   <Link href="posts/conciencia"><li>La magia de la Conciencia</li></Link>
@@ -20,7 +21,20 @@ export default function Books() {
   <li className="bloqued">List - Fetch - Apis</li>
   <li className="bloqued">Great events</li>
   <li className="bloqued">NLP Professional guide</li>
-  <li className="bloqued">Create the time</li> 
+  <li className="bloqued">Create the time</li>  */}
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
+  <li className="bloqued">------</li>
   <li className="bloqued">------</li>
   <li className="bloqued">------</li>
   <li className="bloqued">------</li>

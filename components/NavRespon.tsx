@@ -102,6 +102,8 @@ return (
           // onMouseOver={overed}
            alt='Burger-Icon' src={'/img/Alienverde.gif'}
           height={100} width={70}></Image>
+
+          
         </div> 
 </nav>
 
@@ -111,17 +113,15 @@ return (
           <ul className={styles.ul}>
           <Test5/>
           
-            {/* Index*/}
               <Link href="/proyectos/posts/books">
               
                 <li className={styles.li}
                 // onClick={padlook}
                 >
-                  <a className={styles.a}>To read</a>
+                  <a className={styles.a}>Learning...</a>
                 </li>
               </Link>
-
-              {/* Icons */}
+{/* 
                 <Link href="/proyectos/icons/icons">  
                 <li
                   id='li'
@@ -135,21 +135,18 @@ return (
                 </li>
               </Link>
          
-          {/* Mensajeria Link */}
               <Link href="/proyectos/boxComentar/msj">
                 <li className={styles.li}>
                   <a className={styles.a}>Box Comentar</a>
                 </li>
               </Link>
 
-                 {/* Mensajeria Link */}
                  <Link href="/proyectos/productCreator/create">
                 <li className={styles.li}>
                   <a className={styles.a}>Product Creator</a>
                 </li>
               </Link>
         
-          {/* CHAR CREATOR */}
           <Link href="/proyectos/charCreator/personaje">
                 <li
                   id='li'
@@ -164,39 +161,33 @@ return (
                 </Link>
 
   
-                 {/* Lectura*/}
               <Link href="/proyectos/lectura/lectura">
               
               <li className={styles.li}
-              // onClick={padlook}
               >
                 <a className={styles.a}>Fonts-test
                 </a>
               </li>
               </Link>
 
-                  {/* LOGO COLORINCHE*/}
                   <Link href="/proyectos/logazo/logazo">
               
               <li className={styles.li}
-              // onClick={padlook}
               >
                 <a className={styles.a}>Logo
                 </a>
               </li>
               </Link>
 
-                  {/* MUSIC TESTING*/}
 
                   <Link href="/proyectos/hb/sounds/music">
               
               <li className={styles.li}
-              // onClick={padlook}
               >
                 <a className={styles.a}>Game Sounds 
                 </a>
               </li>
-              </Link>
+              </Link> */}
 
 
               

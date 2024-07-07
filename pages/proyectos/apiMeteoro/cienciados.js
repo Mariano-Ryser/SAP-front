@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Image from "next/image"
+
 const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
 
 export default function Cienciados({asteroide}){

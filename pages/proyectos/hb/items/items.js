@@ -140,7 +140,7 @@ const images = [
   return (
     <>
 
-    <Link href="/proyectos/hb/hb"><h3>/hb ..</h3></Link>
+    <Link href="/proyectos/hb/hb"><li>/hb ..</li></Link>
       <div className="gallery"//  style={{height: size}}
          >
           {images.map((image,index) => (

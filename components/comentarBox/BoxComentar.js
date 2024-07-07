@@ -23,6 +23,8 @@ function BoxComentar(){
   const [successMessage, setSuccessMessage] = useState(null);
   const [deletedMessage, setDeleted] = useState(null);
 
+  const [likes, setLikes] = useState(comentar.likes);
+
   //  ALERTAS DE COMPLETADO DE CASILLERO 
   const handleChange = (e) =>{
         const inputValue = e.target.value
@@ -34,6 +36,25 @@ function BoxComentar(){
       });
   }
 
+  const handleLike = async () => {
+    try {
+      const response = await fetch(`${baseURL}/comentars/${_id}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setLikes(likes + 1);
+      } else {
+        console.error('Error al agregar like:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error al agregar like:', error);
+    }
+  };
+  
   const handleClick = (e)=> {
         e.preventDefault()
 
@@ -87,14 +108,16 @@ function BoxComentar(){
 const fetchComentars= () =>{
     fetch(`${baseURL}/comentars`)
        .then(res => res.json())
-       .then( ({comentars}) =>{
+       .then(({comentars}) =>{
         setComentars(comentars)
         console.log('Comentarios:', comentars)
    })
 }
-    useEffect(()=>{
-      fetchComentars();
-     },[])
+
+
+useEffect(()=>{
+  fetchComentars();
+},[])
   return (
     <>
     <form className="form">
@@ -169,16 +192,18 @@ const fetchComentars= () =>{
             }
     </form>
 
-     {/* MAPEO DE ELEMENTOS */}
+     {/* MAPEO DE Comentars */}
      <div>
-             {comentars.map(({_id, titulo, text, author}) => (
+             {comentars.map(({_id, titulo, text, author, likes}) => (
                 <div key={_id} className="comentarBox">
                     <h1 className="titulo">{titulo}</h1>
                     <span className="text">-{text}...</span> 
                     <br></br>
                     <br></br>
                     <span className="author">-{author}...</span> 
-                    
+                    <br></br>
+                    <p>Likes: {likes}</p>
+                    <button onClick={handleLike}>👍 Like</button>
         <div >
               {/* Button Deleted */}
               <span
@@ -213,8 +238,6 @@ const fetchComentars= () =>{
    
     <style jsx>{`
     .msjCarga{
-        color: #f5f5f5ad;
-        font-family: monospace;
         font-size: 1.2rem;
         display: flex;
         justify-content: center;
@@ -223,8 +246,6 @@ const fetchComentars= () =>{
      
         
 .date{
-  color: #dddddda8;
-  font-size: 2rem;
 font-weight: 900;
 margin: 0rem;
 padding: 0.7rem;
@@ -297,42 +318,31 @@ font-family:monospace;
 
 .textArea{
   position: relative;
-  background-color: rgba(27, 27, 27, 0.74);
   width:100%;
-  color: rgb(240, 240, 240);
   border-radius:0.2rem;
   margin-bottom: 0.1rem;
-  border: #383838 solid 1px ;
+  margin-top: 0.1rem;
   height: 6rem;
  font-size:1.1rem;
  font-family:monospace; 
   }
 
   .textArea::placeholder {
-    color: #e7e7e7;
     display: block;
-    margin-bottom: 0.1rem;
    
-    padding: 0.4rem;
     font-size:1.1rem;
-  font-family:monospace; 
   }
 
   .authorInput{
-    background-color: rgba(27, 27, 27, 0.74);
-    color: #e7e7e7;
     display: block;
     margin-bottom: 0.3rem;
     margin-top:0rem;
-    border: #383838 solid 1px;
     padding: 0.4rem;
     font-size:1.1rem;
    font-family:monospace; 
   }
 
   .authorInput::placeholder{
-    background-color: rgba(27, 27, 27, 0.74);
-    color: #e7e7e7;
     font-size:1.1rem;
   font-family:monospace; 
   }
@@ -342,8 +352,6 @@ font-family:monospace;
   height: 2rem;
   width: 5rem;
   margin-bottom: 0.2rem;
-  color: aliceblue;
-  background-color: rgba(20, 20, 20, 0.692);
   border-radius: 0.2rem;
   border: solid 1px #383838 ;
 }
@@ -353,7 +361,6 @@ font-family:monospace;
 
 /* TTITULO EN TEXTO */
 .titulo{
-  
   color: rgb(133, 133, 133);
   font-family:monospace;
   line-height: 0rem;
@@ -361,8 +368,7 @@ font-family:monospace;
 }
 
 .comentarBox{
-  background-color: #383838;
-  background-color: rgba(24, 24, 24, 0.671);
+  border:solid 1px black;
   display: block;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -420,7 +426,7 @@ font-family:monospace;
     font-family:monospace;
     position: relative;
     width:100%;
-    padding: 0rem;
+    padding: 0.4rem;
     height: 6rem;
    }
   .button{
@@ -428,11 +434,8 @@ font-family:monospace;
     width: 5rem;
     margin-top: 0rem;
     border-radius: 0.2rem;
+    
   }
-.comentarBox{
-  font-family:monospace, Arial, Helvetica, sans-serif;
-
-}
 }
     `}</style>
     

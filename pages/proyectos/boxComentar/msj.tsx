@@ -6,7 +6,7 @@ import BoxComentar from '../../../components/comentarBox/BoxComentar'
 function msj() {
   return (
     <>
-    <Link href="/proyectos/proyects"><h3>/proyects..</h3></Link>
+    <Link href="/proyectos/proyects"><li>/proyects..</li></Link>
     <BoxComentar/>
     </>
  

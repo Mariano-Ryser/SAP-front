@@ -38,11 +38,13 @@ const icons = [
    {img: "PacYellow.png", link:""},
    {img: "vue.png", link:""},
    {img: "mooon.gif", link:""},
+   {img: "g.gif", link:""},
+   {img: "robot.gif", link:""},
 ]
 
   return (
     <>
-   <Link href="/proyectos/proyects"><h3>/proyects..</h3></Link>
+   <Link href="/proyectos/proyects"><li>/proyects..</li></Link>
         <div className="boxIcons"//  style={{height: size}}
          >
 
@@ -75,74 +77,7 @@ const icons = [
         </div>
 
         <style jsx>{`
-        .boxIcons{
-          border-radius: 4px;
-          width: 85%;
-          height: 100vh;
-          margin: auto;
-          display: grid;
-          overflow: hidden;
-          gap: 0.5rem; 
-          grid-auto-rows: 6rem;
-          grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 4fr));
-          grid-template-columns: repeat(12,1fr);
-          padding-top: 1.4rem;
-          padding-bottom: 22px;
-  }
-  
-  .icon{
-      display: inline-block;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 90px;
-      width: 90px;
-     grid-column: span 2;
-     filter: blur(0.4px);
-     margin: auto;
-     transition:0.3s 
-    }
-  .icon:hover{
-    cursor: pointer;
-    transform: scale(105%) rotateZ(1.5deg);
-    filter: blur(0.0px); 
-  }
-  
-  @media (max-width:600px){ 
-    .boxIcons{
-      width: 95%;
-      margin: auto;
-      margin-top: 0.7rem;
-      display: grid;
-      overflow: hidden;
-      gap: 1rem; 
-      grid-auto-rows: 4.2rem;
-      grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 5fr));
-      padding-top: 0.5rem;
-      padding-bottom: 12px;
-    }
-    .icon{
-      display: inline-block;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 70px;
-      width: 70px;
-     grid-column: span 3;
-     filter: blur(0.4px);
-     margin: auto;
-     transition:0.3s 
-    }
-
-    .icon:hover{
-      cursor: pointer;
-      transform: scale(105%) rotateZ(1.5deg);
-       filter: blur(0.0px); 
-    }
-  }
-  
-  
-  
+       
          
            `}</style>
         

@@ -149,7 +149,7 @@ A#º   A#º/B  Bm
 
   <p>En el contexto de Node.js, el módulo fs (file system) proporciona una API para interactuar con el sistema de archivos del sistema operativo. Este módulo permite realizar operaciones de lectura, escritura, manipulación y gestión de archivos y directorios.</p>
   <p>El módulo fs de Node.js ofrece una amplia gama de funciones para trabajar con archivos y directorios. Algunas de las operaciones más comunes que se pueden realizar son:</p>
-  <ul>
+  {/* <ul>
     <li>Lectura y escritura de archivos: Puedes leer el contenido de un archivo o escribir datos en él utilizando funciones como fs.readFile(), fs.readFileSync(), fs.writeFile(), fs.writeFileSync(), entre otras.</li>
    <br></br>
     <li>Manipulación de directorios: Puedes crear, renombrar o eliminar directorios utilizando funciones como fs.mkdir(), fs.rename(), fs.rmdir(), fs.readdir(), entre otras.</li>
@@ -161,7 +161,7 @@ A#º   A#º/B  Bm
     <li>Flujo de archivos: Node.js también proporciona la capacidad de trabajar con flujos de archivos, lo que permite una manipulación eficiente de grandes archivos. Puedes utilizar flujos para leer y escribir datos de manera incremental en lugar de cargar todo el contenido en memoria.</li>
    <br></br>
   
-  </ul>
+  </ul> */}
 
   <p>Es importante destacar que las operaciones de archivo y directorio en Node.js son asíncronas de forma predeterminada, lo que significa que no bloquean la ejecución del programa mientras se realizan. Esto permite un mejor rendimiento y la capacidad de manejar múltiples solicitudes o tareas de manera eficiente. Sin embargo, también existen versiones sincrónicas de las funciones disponibles si se requiere una ejecución bloqueante.</p>
   <p>En resumen, el módulo fs de Node.js proporciona una API para interactuar con el sistema de archivos del sistema operativo, permitiendo realizar operaciones de lectura, escritura y manipulación de archivos y directorios. Esta funcionalidad es fundamental para muchas aplicaciones Node.js que necesitan acceder y gestionar archivos en el sistema.</p>
@@ -226,17 +226,14 @@ h1,h2,h3{
   padding-bottom: 0rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
-  color:rgb(89, 200, 89);
 }
 
 section{
   
       border-radius: 10px;
-      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size:1.3rem;
       line-height: 1.74;
-        color: rgba(254, 254, 254, 0.884);
-        width:85%;
+        width:95%;
         margin:auto;
         margin-bottom:1rem;
         margin-top: 0.4rem;
@@ -304,11 +301,10 @@ section{
                     left:1rem;
                     height: 2.4rem;
                     width: 2.5rem;
-                    box-shadow: inset 0px 0px 5px 2px rgba(83, 83, 83, 0.443);
                   }
 
                   section{
-                  width:95%;
+                  width:96%;
                   margin:auto;
                   margin-bottom:1rem;
                   margin-top: 0.3rem;

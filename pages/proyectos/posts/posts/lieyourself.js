@@ -41,11 +41,9 @@ const Lie = () => {
   color:yellow;
  } 
 h1,h2,h3{
-  color:white;
 }
 
 section{
-      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size:1.3rem;
       line-height: 1.74;
         color: rgb(191, 191, 191);

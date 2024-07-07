@@ -5,19 +5,19 @@ export default function Test5() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL 
 
 
-  const [comentars, setComentars] = useState([])
+//   const [comentars, setComentars] = useState([])
 
-  const fetchComentars= () =>{
-    fetch(`${baseURL}/comentars`)
-       .then(res => res.json())
-       .then( ({comentars}) =>{
-        setComentars(comentars)
-        console.log('Comentarios:', comentars)
-   })
-}
-    useEffect(()=>{
-      fetchComentars();
-     },[])
+//   const fetchComentars= () =>{
+//     fetch(`${baseURL}/comentars`)
+//        .then(res => res.json())
+//        .then( ({comentars}) =>{
+//         setComentars(comentars)
+//         console.log('Comentarios:', comentars)
+//    })
+// }
+//     useEffect(()=>{
+//       fetchComentars();
+//      },[])
      
   return (
     <>
@@ -31,7 +31,7 @@ export default function Test5() {
 </div>
 
   {/* MAPEO DE ELEMENTOS */}
-  <div>
+  {/* <div>
              {comentars.map(({_id, titulo, text, author}) => (
                 <div key={_id} className="comentarBox">
                     <h1 className="titulo">{titulo}</h1>
@@ -44,7 +44,7 @@ export default function Test5() {
                 </div>
                
             ))}
-    </div> 
+    </div>  */}
 
 
   <style jsx>{`

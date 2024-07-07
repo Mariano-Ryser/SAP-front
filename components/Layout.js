@@ -8,13 +8,14 @@ const Layout = ({ children}) => {
 
               <NavRespon />   
         <div className="content">
+              
                     <Cabezera />  
-                    
-             { children }
-             
-              {/* <Footer />       */}
 
-             
+             { children }
+
+             {/* <Footer />       */}
+
+      
         </div>
         <style jsx>{`
         

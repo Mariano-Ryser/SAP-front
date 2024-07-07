@@ -100,10 +100,10 @@ return (
     
          <Image
           // onMouseOver={overed}
-           alt='Burger-Icon' src={'/img/Alienverde.gif'}
-          height={100} width={70}></Image>
-
-          
+          //  alt='Burger-Icon' src={'/img/Alienverde.gif'}
+          // height={100} width={70}></Image>
+           alt='Burger-Icon' src={'/img/robote.gif'}
+          height={120} width={105}></Image>
         </div> 
 </nav>
 
@@ -113,15 +113,17 @@ return (
           <ul className={styles.ul}>
           <Test5/>
           
+            {/* Index*/}
               <Link href="/proyectos/posts/books">
               
                 <li className={styles.li}
                 // onClick={padlook}
                 >
-                  <a className={styles.a}>Learning...</a>
+                  <a className={styles.a}>To read</a>
                 </li>
               </Link>
-{/* 
+
+              {/* Icons */}
                 <Link href="/proyectos/icons/icons">  
                 <li
                   id='li'
@@ -135,18 +137,21 @@ return (
                 </li>
               </Link>
          
-              <Link href="/proyectos/boxComentar/msj">
+          {/* Mensajeria Link */}
+              {/* <Link href="/proyectos/boxComentar/msj">
                 <li className={styles.li}>
                   <a className={styles.a}>Box Comentar</a>
                 </li>
-              </Link>
+              </Link> */}
 
+                 {/* Mensajeria Link */}
                  <Link href="/proyectos/productCreator/create">
                 <li className={styles.li}>
                   <a className={styles.a}>Product Creator</a>
                 </li>
               </Link>
         
+          {/* CHAR CREATOR */}
           <Link href="/proyectos/charCreator/personaje">
                 <li
                   id='li'
@@ -161,33 +166,39 @@ return (
                 </Link>
 
   
+                 {/* Lectura*/}
               <Link href="/proyectos/lectura/lectura">
               
               <li className={styles.li}
+              // onClick={padlook}
               >
                 <a className={styles.a}>Fonts-test
                 </a>
               </li>
               </Link>
 
-                  <Link href="/proyectos/logazo/logazo">
+                  {/* LOGO COLORINCHE*/}
+                  {/* <Link href="/proyectos/logazo/logazo">
               
               <li className={styles.li}
+              // onClick={padlook}
               >
                 <a className={styles.a}>Logo
                 </a>
               </li>
-              </Link>
+              </Link> */}
 
+                  {/* MUSIC TESTING*/}
 
                   <Link href="/proyectos/hb/sounds/music">
               
               <li className={styles.li}
+              // onClick={padlook}
               >
                 <a className={styles.a}>Game Sounds 
                 </a>
               </li>
-              </Link> */}
+              </Link>
 
 
               
@@ -225,42 +236,10 @@ return (
 
                       <style jsx>{`
 
-                       .kleinForm{
-                          border-radius:5px;
-                          height:4rem;
-                          width:14rem;
-                          position:absolute;
-                          top:20rem;
-                          right:35%;
-                          background: #6c679dd5;
-                          transition: 0.2s;
-                          box-shadow: 2px 4px 6px 2px rgba(93, 87, 87, 0.287),  -2px -4px 20px 1px rgba(93, 87, 87, 0.187);
-                        }  
-                        .kleinForm:hover{
-                          background: #6c679dd8;;
-                        }  
-                        .parraf{
-                          color:white;
-                          line-height:0rem;
-                        }
-                        .pass{
-                          width: 8rem;
-                        }
-                          .li{
-                              width: 65%;
-                              margin: auto;
-                                position: relative;
-                                align-items: center;
-                                align-content: center;
-                                background-color: #5c579dd5;
-                                margin-top: 0.2rem;
-                                margin-bottom: 2rem;
-                                padding-top: 0.9rem;
-                                height: 4rem;
-                                text-align: center;
-                                color: rgb(255, 255, 255);
-                                transition: 0.2s;
-                              }
+                  
+                       
+                  
+                         
                               
                         `}</style>
 

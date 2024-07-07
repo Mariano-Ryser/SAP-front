@@ -17,7 +17,6 @@
   width: 8rem;
   display: flex;
   align-items: center;
-  color: black;
   z-index: 2;
 }
 
@@ -41,81 +40,14 @@
   margin-top: 0px;
   padding: 0;
   list-style-type: none;
-
 }
 .a{
-  /* border:solid red 1px; */
-  font: 400 20px/1.5 monospace;
+  /* border:solid rgba(172, 20, 20, 0.158) 1px;  */
   text-decoration: none;
   /* color: rgb(255, 255, 255); */
   font-size: 1.2rem;
 }
-.li{ 
-  /* border:solid red 1px; */
-    border-radius: 1rem;
-    width: 38rem;
-    margin: auto;
-    position: relative;
-    align-items: center;
-    align-content: center;
-    background-color: #151515d5;
-    border: dashed 1px rgba(30, 138, 73, 0.897);
-    margin-top: 0.1rem;
-    margin-bottom: 0.7rem;
-    padding: 0.26rem;
-    height: 2.5rem;
-    text-align: center;
-    color: rgb(214, 214, 214);
-    transition: 0.2s;
-  }
-  .li:hover{
-    cursor: pointer;
-    border: inset 1px rgb(62, 232, 130);
-    background-color: #153d17c1;
-  }
-  .liBloqued{
-    border-radius: 0.2rem;
-    width: 38rem;
-    margin: auto;
-    position: relative;
-    align-items: center;
-    align-content: center;
-    border: dashed 1px #646e61d5;
-    margin-top: 0.1rem;
-    margin-bottom: 0.7rem;
-    padding: 0.26rem;
-    height: 2.5rem;
-    text-align: center;
-    color: rgb(255, 5, 5);
-    transition: 0.2s;
-      background-color: #5c0909d5;
-      
-     
-    
-  }
-.liBloqued:hover{
-  cursor: pointer;
-  background-color: #800780ab;
-}
-.padlock{
- /* pointer-events: fill; */
-  display: none;
-  position: absolute;
-  bottom: -1rem;
-  right: 15%;
-  opacity: 50%;
-  background-image: url('/img/padlook.png');
-  background-size: cover;
-  height: 3rem;
-  width: 2.41rem;
-  transition: 0.2s;
-  transform: rotateZ(0deg);  /* las medidas del transform se miden en "deg" */ 
-  animation: pad infinite 0.5s alternate ease-in-out;
-  
-}
-.padlock:hover{
-  opacity: 100%;
-}
+
 
 @keyframes pad {
   0%{
@@ -125,22 +57,49 @@
     transform: rotateZ(-5deg);
   }
 }
-.bildBloque{
-  position: absolute;
-  height: 5rem;
-  border: solid 4px red;
-  background-color: red;
-}
 
   .burger{
     position: absolute;
     transform: rotateZ(0deg);
     border-radius: 5px;
     bottom: 5rem;
-    top: 0rem;
+    top: -3rem;
     transition: 0.05s;
     cursor: pointer;
+    /* animation: alien alternate 11s infinite; */
   }
+  @keyframes alien {
+    1% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 7.2;
+    }
+    20% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1.2;
+    }
+    50% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    78% {
+      opacity: 4;
+    }
+    
+    90% {
+      opacity: 6.2;
+    }
+  
+    100% {
+      opacity: 11.5;
+    }
+  }
+   
 
   .asideBar::-webkit-scrollbar {
     width: 0.4rem;
@@ -155,6 +114,15 @@
     margin: 1.2rem;
     cursor: pointer;
   }
+  .li{
+    width: 40%;
+    margin: auto;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    padding: 0.26rem;
+    height: 2.5rem;
+  }
 
   @media (max-width: 600px) {
   .nav{
@@ -165,14 +133,13 @@
     width: 10rem;
     display: flex;
     align-items: center;
-    color: black;
     z-index: 2;
   }
   .burger{
     position: absolute;
     transform: rotateZ(0deg);
-    right: 2rem;
-    top: -1rem;
+    right: 1.3rem;
+    top: -2.2rem;
     transition: 0.05s;
   }
   .asideBar{
@@ -209,29 +176,10 @@
     position: relative;
     align-items: center;
     align-content: center;
-    margin-top: 0.1rem;
-    margin-bottom: 0.7rem;
     padding: 0.26rem;
     height: 2.5rem;
   }
 
-    .liBloqued{
-      display: block;
-      width: 90%;
-    }
-    .padlock{
-      display: none;
-      position: absolute;
-      bottom: -1rem;
-      right: 1.5rem;
-      opacity: 50%;
-      background-image: url('/img/padlook.png');
-      background-size: cover;
-      height: 3rem;
-      width: 2.41rem;
-      transition: 0.2s;
-      transform: rotateZ(0deg);  /* las medidas del transform se miden en "deg" */ 
-      animation: pad infinite 0.5s alternate ease-in-out;
-    }
+   
   }
 

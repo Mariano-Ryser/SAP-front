@@ -53,11 +53,11 @@ const Music = () => {
   }
   return (
     <>
-  <Link href="/proyectos/hb/hb"><h3>cd ..</h3></Link>
+  <Link href="/proyectos/hb/hb"><li>cd ..</li></Link>
   <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
      
     <div>
-      <h1>Helbreath Sounds</h1>
+      <h2>Helbreath Sounds</h2>
     </div>
     <div>
       <button className='button5 ' onClick={() => playSound('C1.WAV')}>Dagger</button>
@@ -80,7 +80,7 @@ const Music = () => {
  
   
 
-   <h1> Test.. reproducir y pausar toggle</h1>
+   <h2> Test.. reproducir y pausar toggle</h2>
 
     <div>
       <audio 
@@ -114,7 +114,6 @@ const Music = () => {
           section{
       }
           h1{font-size: 1rem;
-          font-family: monospace;
       }
       button{
         width: 6rem;

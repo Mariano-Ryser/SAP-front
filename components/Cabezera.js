@@ -12,24 +12,18 @@ const Cabezera = () => {
         <header className="cabezera">
         
             <Link href="/">
-                 <h3>HOME</h3>
+                 <li>HOME</li>
             </Link>
 
-          {/* <Link href="/about"><span className="name"> About </span></Link> */}
           
-              {/* FECHA */}
-                {/* <span className="Date">
-                  <Date/>
-
-
-                </span> */}
+          
+                 {/* <span className="Date"><Date/></span>  */}
         </header>
 
         <style jsx>{`
         
       
 .cabezera{
-    border: inset rgb(62, 232, 130) 7px;
     position: relative;
     margin: auto;
     height: 6rem;
@@ -39,23 +33,10 @@ const Cabezera = () => {
     align-items: center;
     -webkit-box-pack: justify;
     justify-content: space-around;
-    background-color: rgba(46, 45, 45, 0.772);
+    backdrop-filter: blur(10px);
     
     transition: 0.2s;
 }
-h3{
-    cursor: pointer;
-    margin: auto;
-    margin-left: 0.6rem;
-}
-h3:hover{
-  cursor: default;
-    color: rgb(18, 221, 228);
-
-  }
-
-
-
 
 .Date{
     position: relative;
@@ -85,7 +66,6 @@ h3:hover{
 }
 
 
- 
   }
                        `}</style>
   </>

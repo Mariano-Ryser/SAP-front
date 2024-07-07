@@ -9,7 +9,7 @@ export default function About() {
       <div>
           <div className="img-container">
           <div className="img" 
-              style={{backgroundImage: `url('/gitbook-color.svg')`}}
+              style={{backgroundImage: `url('/img/robote.gif'`}}
               >
               
           </div>
@@ -25,6 +25,7 @@ export default function About() {
 
           <p>If you have any good comments or constructive criticism, they are always helpful to me. so I await your return!</p>
 
+          
     
       </div>
     </div>
@@ -39,21 +40,18 @@ export default function About() {
   <style jsx>{`
     .container{
       padding: 5px 3rem 0px 3rem;
-      background-color: rgb(25, 102, 56, 0.397);
       border-radius: 10px;
        margin: auto;
        margin-top: 20px;
         display:flex;
         justify-content:center;
-        color: rgb(239, 239, 239);
         text-align:center;
        
     }
   
     .img{
-        height:13rem;
+        height:15rem;
         width:13rem;
-        border-radius:50%;
         background-position: center;
         background-size:cover;
     }
@@ -63,7 +61,7 @@ export default function About() {
         justify-content:center;
     }
   
-    p{
+    p{color:black;
       font-family:monospace;
         font-size:1.6rem;
        
@@ -72,11 +70,9 @@ export default function About() {
 
 @media (max-width: 600px) {
     .img{
-        height:11rem;
+        height:12.5rem;
         width:11rem;
-        border-radius:50%;
         background-position: center;
-        background-size:cover;
     }
     p{
         font-size:1.4rem;

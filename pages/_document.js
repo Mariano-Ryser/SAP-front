@@ -5,7 +5,7 @@ export default function Document() {
     <Html>
       <Head>
        
-      <meta charset="UTF-8"></meta>
+      <meta charSet="UTF-8"></meta>
 
 
    </Head>

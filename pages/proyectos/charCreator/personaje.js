@@ -72,10 +72,10 @@ function Personaje() {
 
   return (
     <>
-<Link href="/proyectos/proyects"><h3>/proyects..</h3></Link>
+<Link href="/proyectos/proyects"><li>/proyects..</li></Link>
     <div className='container'>
         <form className="form">
-            <h1>Cree su personaje </h1>
+            <p>Cree su personaje </p>
                 <span className='name'>Name</span>
                 <input
                     type='text'
@@ -93,7 +93,7 @@ function Personaje() {
                   ></input>
 
                 <br></br>                       
-                <span className='age'>Number</span>
+                {/* <span className='age'>Number</span>
                 <input
                     type='number'
                     name='age'
@@ -101,7 +101,7 @@ function Personaje() {
                     onChange={handleChange}
                  ></input>     
 
-                <br></br>
+                <br></br> */}
                 <span className='email'>Email</span><input
                     type='text'
                     name='email'
@@ -144,7 +144,7 @@ function Personaje() {
                     <div >
                         <span className='name'>Name:</span> <span>{name}</span> <br></br>
                         <span className='surname'>Surname:</span> <span>{surname}</span><br></br>
-                        <span className='age'>Tel:</span> <span>{age}</span><br></br>
+                        {/* <span className='age'>Tel:</span> <span>{age}</span><br></br> */}
                         <span className='email'>Email:</span> <span>{email}</span><br></br>
                         <span className='city'>City:</span> <span>{city}</span><br></br>
                         <span className='description'>Description:</span> <span>{description}</span><br></br>
@@ -172,6 +172,9 @@ function Personaje() {
         </div> 
          
         <style jsx>{`
+           
+
+            
             .listBoxP{
                 background-color:rgba(10, 118, 73, 0.397);
                 font-size:1rem;
@@ -189,11 +192,7 @@ function Personaje() {
                 height:6rem;
                 width:4rem
             }
-            h1{
-                margin-top:0.3rem;
-                font-size:1.5rem;
-                color: ;
-            }
+           
         .container{
 }
 .form{
@@ -212,16 +211,7 @@ button{
     height: 5rem;
 }
 
-.name{
-    color: rgb(7, 218, 162);
-}
-.surname{
-    color: rgb(34, 213, 6);
-}
-.age{color: rgb(238, 133, 21, 0.897);}
-.email{color: rgb(238, 68, 21, 0.997);}
-.city{color: rgb(21, 180, 238);}
-.description{color: rgb(235, 232, 12, 0.897);}
+
 
 
       

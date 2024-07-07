@@ -22,7 +22,7 @@ const images = [
 
   return (
     <>
-     <Link href="/proyectos/hb/hb"><h3>cd ..</h3></Link>
+     <Link href="/proyectos/hb/hb"><li>cd ..</li></Link>
      
       <div className="gallery"//  style={{height: size}}
          >

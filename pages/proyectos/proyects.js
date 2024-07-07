@@ -8,34 +8,27 @@ export default function Proyects() {
 
   
   {/* <Pantallazo/> */}
-  <Link href="/"><h3>/home ..</h3></Link>
-  <Link href="/proyectos/about/about"><h3>/proyects/about</h3></Link>
-  {/* <Link href="/proyectos/apiMeteoro/cienciados"><h3>/proyects/asteroides</h3></Link> */}
-  <Link href="/proyectos/boxComentar/msj"><h3>/proyects/boxComentar</h3></Link>
-  <Link href="/proyectos/charCreator/personaje"><h3>/proyects/charCreator</h3></Link>
-  <Link href="/proyectos/cronometro/cronometro"><h3>/proyects/cronometro</h3></Link>
-  <Link href="/proyectos/hb/hb"><h3>/proyects/hb</h3></Link>
-  <Link href="/proyectos/icons/icons"><h3>/proyects/icons</h3></Link>
-  <Link href="/proyectos/lectura/lectura"><h3>/proyects/lectura</h3></Link>
-  {/* <Link href="/proyectos/logazo/logazo"><h3>/proyects/logo</h3></Link> */}
-  <Link href="/proyectos/markdown/markdown"><h3>/proyects/markdown</h3></Link>
-  {/* <Link href="/proyectos/poemas/poemas"><h3>/proyects/poemas</h3></Link> */}
-  <Link href="/proyectos/posts/books"><h3>/proyects/books</h3></Link>
-  {/* <Link href="/proyectos/productCreator/create"><h3>/proyects/productCreator</h3></Link> */}
+  <Link href="/"><li>/home</li></Link>
+  <Link href="/proyectos/about/about"><li>/proyects/about</li></Link>
+  {/* <Link href="/proyectos/apiMeteoro/cienciados"><li>/proyects/asteroides</li></Link> */}
+  {/* <Link href="/proyectos/boxComentar/msj"><li>/proyects/boxComentar</li></Link> */}
+  {/* <Link href="/proyectos/charCreator/personaje"><li>/proyects/charCreator</li></Link> */}
+  {/* <Link href="/proyectos/cronometro/cronometro"><li>/proyects/cronometro</li></Link> */}
+  <Link href="/proyectos/hb/hb"><li>/proyects/hb</li></Link>
+  <Link href="/proyectos/icons/icons"><li>/proyects/icons</li></Link>
+  <Link href="/proyectos/lectura/lectura"><li>/proyects/lectura</li></Link>
+  {/* <Link href="/proyectos/logazo/logazo"><li>/proyects/logo</li></Link> */}
+  {/* <Link href="/proyectos/markdown/markdown"><li>/proyects/markdown</li></Link> */}
+  {/* <Link href="/proyectos/poemas/poemas"><li>/proyects/poemas</li></Link> */}
+  <Link href="/proyectos/posts/books"><li>/proyects/books</li></Link>
+  {/* <Link href="/proyectos/productCreator/create"><li>/proyects/productCreator</li></Link> */}
 
 
   <style jsx>{`
-  h3:hover{
-    cursor: default;
-    color: rgb(18, 221, 228);
-
-  }
-  
-      
-@media (max-width: 600px) {
  
-                 
-}
+  
+    
+
        
          `}</style>
     </>

@@ -1,131 +1,64 @@
-import React from 'react'
-import { useEffect, useState } from 'react';
-// import BoxComentar from '../components/comentarBox/BoxComentar'
+// pages/index.js
+import { useEffect, useRef } from 'react';
 
-function Test3() {
+export default function Home() {
+  const cylinderRef = useRef(null);
 
-  function over(){
-    alert("wala")
-  }
+  useEffect(() => {
+    let angle = 0;
+    const animationId = setInterval(() => {
+      angle += 1;
+      cylinderRef.current.style.transform = `rotateX(10deg) rotateY(${angle}deg)`;
+    }, 30);
 
-return (
-  <>
-  <div onClick={over}
-  className='box'>
-      <div id="cube"className='cube'
-     
-      >
-        <div className='face face1'></div>
-        <div className='face face2'></div>
-        <div className='face face3'></div>
-        <div className='face face4'></div>
-        <div className='face face5'></div>
-        <div className='face face6'></div>
+    return () => clearInterval(animationId);
+  }, []);
+
+  return (
+    <div className="container">
+      <div ref={cylinderRef} className="cylinder">
+        <div className="top" />
+        <div className="bottom" />
+        <div className="side" />
       </div>
-  </div>
-   
-   
-   <style jsx>{`
-               .box{
-                height:12rem;
-                width:31rem;
-                padding-top:3rem;
-               }
-              .cube{
-                width: 50px;
-                height: 50px;
-                transform-style: preserve-3d;
-                margin: auto;
-                animation: turn 7s linear infinite;
-                border:solid 1px black;
-               }
-               @keyframes turn {
-                    from {
-                    transform: rotate3d(0, 0, 0, 0);
-                    }
-                    to {
-                    transform: rotate3d(4, 4, 1.5, 360deg);
-                    }
-                  }
-              .face{
-                width:50px;
-                height:50px;
-                border:solid black 1px;
-                position: absolute;
-                opacity: 0.75;  
-              }
-              .face1{
-                background: rgb(86,157,48);
-                background: radial-gradient(circle,
-                            rgba(86,157,48,1) 17%, 
-                            rgba(11,11,11,1) 68%,
-                            rgba(0,0,0,1) 100%);
-                transform: translateZ(50px);
-                animation: face1  5s linear  alternate infinite;
-                
-              }
-              @keyframes face1 {
-                    from {
-                      transform: translateZ(50px) rotateX(40deg) scale(1);
-                      
-                    }
-                    to {
-                      transform: translateZ(150px) rotateX(340deg)scale(4);
-                    }
-                  }
-              .face2{
-                background: rgb(148,157,48);
-                background: radial-gradient(circle, rgba(148,157,48,1) 17%, rgba(11,11,11,1) 68%, rgba(0,0,0,1) 100%);
-                transform: translateZ(50px) rotateY(180deg);
-                animation: face2  6s ease-in  alternate infinite;
-                
-              }
-              @keyframes face2 {
-                    from {
-                      transform: translateZ(50px) rotateY(20deg) scale(0.4);
-                      
-                    }
-                    to {
-                      transform: translateZ(450px) rotateY(140deg)scale(2);
-                    }
-                  }
-              .face3{
-                background: rgb(48,157,130);
-                background: radial-gradient(circle, rgba(48,157,130,1) 17%, rgba(11,11,11,1) 68%, rgba(0,0,0,1) 100%);
-                transform: translateX(-50px) rotateY(-90deg);
-              }
-              .face4{
-                background: rgb(149,29,245);
-                background: radial-gradient(circle, rgba(149,29,245,1) 17%, rgba(11,11,11,1) 68%, rgba(0,0,0,1) 100%);
-                transform: translateX(50px) rotateY(90deg);
-              }
-              .face5{
-                background: rgb(148,157,48);
-                background: rgb(221,26,141);
-                background: radial-gradient(circle, rgba(221,26,141,1) 17%, rgba(11,11,11,1) 68%, rgba(0,0,0,1) 100%);
-                transform: translateY(-50px) rotateX(90deg);
-
-              }
-              .face6{
-                background: rgb(193,34,34);
-                background: radial-gradient(circle, rgba(193,34,34,1) 17%, rgba(11,11,11,1) 68%, rgba(0,0,0,1) 100%);
-                transform: translateY(50px) rotateX(-90deg);
-
-              }
-
-                                
-@media (max-width: 600px) {
-                 .box{
-                    margin: auto;
-                    width: 100%;
-                  }
-                
+      <style jsx>{`
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f0f0f0;
+        }
+        .cylinder {
+          position: relative;
+          width: 200px;
+          height: 300px;
+          transform-style: preserve-3d;
+          transform: rotateX(0deg) rotateY(0deg);
+        }
+        .top, .bottom {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-color: rgba(0, 150, 0, 0.7);
+        }
+        .top {
+          transform: rotateX(90deg) translateZ(150px);
+        }
+        .bottom {
+          background-color: rgba(0, 100, 0, 0.7);
+          transform: rotateX(90deg) translateZ(-150px);
+        }
+        .side {
+          position: absolute;
+          width: 200px;
+          height: 300px;
+          background-color: rgba(0, 200, 0, 0.5);
+          transform: rotateY(0deg) translateZ(100px);
+          border-radius: 100px;
+        }
+      `}</style>
+    </div>
+  );
 }
-         `}</style>
-   
- </>
-  )
-}
-
-export default Test3
-

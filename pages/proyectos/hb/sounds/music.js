@@ -60,6 +60,7 @@ const Music = () => {
       <h2>Helbreath Sounds</h2>
     </div>
     <div>
+      <button className='button5 ' onClick={() => playSound('powerUp.wav')}>Rayo</button>
       <button className='button5 ' onClick={() => playSound('C1.WAV')}>Dagger</button>
       <button className='button5 ' onClick={() => playSound('C2.WAV')}>Sword</button>
       <button className='button5 ' onClick={() => playSound('C3.WAV')}>Bow</button>
@@ -80,7 +81,9 @@ const Music = () => {
  
   
 
-   <h2> Test.. reproducir y pausar toggle</h2>
+   <h2>Si quieres crear sonidos al estilo Retro, puedo recomendarte una pagina.. en los cuales podras crearlo y descargar el archivo .WAV</h2>
+ 
+   <Link href="https://sfxr.me/"><li>SFXR SOUND CREATOR</li></Link>
 
     <div>
       <audio 

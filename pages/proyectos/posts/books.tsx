@@ -1,16 +1,13 @@
 import Link from "next/link"
-import Test5 from "../../ztest/test5"
 export default function Books() {
 
 
   return (
     <>
    <ul>
-  <Link href="/posts/dopamina"><li>Desintoxicacion Dopaminica</li></Link>
     <Link href="/proyectos/proyects"><li>/proyects..</li></Link>
-
-  <Link href="posts/nodejs"><li>A bit of Node js and File systems please.</li></Link>
-  <Link href="posts/lieyourself"><li>Lie to yourself.</li></Link>
+  <Link href="posts/cerebro"><li>Cerebro</li></Link>
+ <Link href="posts/lieyourself"><li>Lie to yourself.</li></Link>
   <Link href="posts/pnl"><li>Principios de la PNL</li></Link>
   <Link href="posts/conciencia"><li>La magia de la Conciencia</li></Link>
   <li className="bloqued">Equilibrate</li>
@@ -31,17 +28,7 @@ export default function Books() {
   <li className="bloqued">------</li>
   <li className="bloqued">------</li>
   <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
-  <li className="bloqued">------</li>
+
 
 
 </ul> 

@@ -12,7 +12,7 @@ const NavRespon = () => {
 
   const changeColor = () => {
     // Puedes alternar entre diferentes colores
-    const newColor = bgColor === '#dbda79' ? 'lightblue' : '#f0ee8b';
+    const newColor = bgColor === '#dbda79' ? 'lightblue' : '#dbda79';
     setBgColor(newColor);
     document.documentElement.style.setProperty('--bg-color', newColor);
   };

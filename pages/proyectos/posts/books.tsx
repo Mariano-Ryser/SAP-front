@@ -7,9 +7,9 @@ export default function Books() {
    <ul>
     <Link href="/proyectos/proyects"><li>/proyects..</li></Link>
   <Link href="posts/cerebro"><li>Cerebro</li></Link>
- <Link href="posts/lieyourself"><li>Lie to yourself.</li></Link>
-  <Link href="posts/pnl"><li>Principios de la PNL</li></Link>
-  <Link href="posts/conciencia"><li>La magia de la Conciencia</li></Link>
+ {/* <Link href="posts/lieyourself"><li>Lie to yourself.</li></Link> */}
+  {/* <Link href="posts/pnl"><li>Principios de la PNL</li></Link> */}
+  <Link href="posts/conciencia"><li>Conciencia</li></Link>
   <li className="bloqued">Equilibrate</li>
   <li className="bloqued">An Emancipated Cinderella</li>
   <li className="bloqued">Desintoxicacion Dopaminica</li>

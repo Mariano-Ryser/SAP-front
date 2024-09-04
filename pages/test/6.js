@@ -21,7 +21,7 @@ export default function Test5() {
      
   return (
     <>
-<Link href="test"><h3>/test ..</h3></Link>
+<Link href="test"><li>/test ..</li></Link>
 
 <div className='component'>
     <h2>Ejemplo</h2>
@@ -48,12 +48,7 @@ export default function Test5() {
 
 
   <style jsx>{`
-    .component{
-      padding:1rem;
-      margin:auto;
-      width:27rem;
-      border:solid red 1px;
-    }
+
 
 @media (max-width: 600px) {
  

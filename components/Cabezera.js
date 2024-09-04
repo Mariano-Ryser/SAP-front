@@ -14,6 +14,9 @@ const Cabezera = () => {
             <Link href="/">
                  <li>HOME</li>
             </Link>
+            <Link href="/proyectos/about/about">
+                 <li>ABOUT</li>
+            </Link>
 
           
           

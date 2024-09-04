@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-
+import Link from 'next/link';
 const Cronometro = () => {
   const [segundos, setSegundos] = useState(0);
   const [activo, setActivo] = useState(false);
@@ -27,6 +27,7 @@ const Cronometro = () => {
 
   return (
     <>
+    <Link href="/proyectos/proyects"><li>/proyects..</li></Link> 
     <div className='cronometro'>
       <h1>CR0N0</h1>
       <div >

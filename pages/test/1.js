@@ -6,7 +6,7 @@ export default function Test1() {
 
   return (
     <>
-<Link href="test"><h3>/test ..</h3></Link>
+<Link href="test"><li>/test ..</li></Link>
 <h1>Test 1</h1>
 
 

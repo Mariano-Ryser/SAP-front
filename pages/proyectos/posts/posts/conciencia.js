@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Link from "next/link"
 
 const Conciencia = () => {
 
@@ -15,7 +15,7 @@ const Conciencia = () => {
   }
   return (
     <>
-
+<Link href="/proyectos/posts/books"><li>/books..</li></Link>
     <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
 
     <p>Diariamente el mismo dia, la misma energia, mantener el mismo nivel de conciencia.
@@ -2922,9 +2922,7 @@ perdidos y seamos libres, de una vez para siempre. Depende de nosotros.</p>
  a{
   color:yellow;
  } 
-h1,h2,h3{
-  color:white;
-}
+
 
     section{
       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;

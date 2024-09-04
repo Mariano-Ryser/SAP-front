@@ -8,6 +8,15 @@ import Test5 from '../pages/ztest/test5';
 const NavRespon = () => {
   const [close, setClose] = useState(null);
 
+  const [bgColor, setBgColor] = useState('yellow');
+
+  const changeColor = () => {
+    // Puedes alternar entre diferentes colores
+    const newColor = bgColor === '#f0ee8b' ? 'lightblue' : '#f0ee8b';
+    setBgColor(newColor);
+    document.documentElement.style.setProperty('--bg-color', newColor);
+  };
+
    function openList(){
 
     const burger = document.getElementById('burger')
@@ -199,7 +208,11 @@ return (
                 </a>
               </li>
               </Link>
-
+              <li className={styles.li}
+              // onClick={padlook}
+              >
+              <button onClick={changeColor}>Cambiar color de fondo</button>
+              </li>
 
               
 

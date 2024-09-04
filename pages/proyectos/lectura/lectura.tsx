@@ -35,7 +35,7 @@ function Lectura() {
 
 return (
   <>
-    <Link href="/proyectos/proyects"><h3>/proyects..</h3></Link>
+    <Link href="/proyectos/proyects"><li>/proyects..</li></Link>
     <div className="box">
         <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
         Ahora escribimos un texto cualquiera para ver como se ve a la hora de leer en la 

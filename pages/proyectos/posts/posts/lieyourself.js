@@ -37,15 +37,9 @@ const Lie = () => {
      onClick={grosseOut}
      >-</button>
           <style jsx>{`
-          a{
-  color:yellow;
- } 
-h1,h2,h3{
-}
+
 
 section{
-      font-size:1.3rem;
-      line-height: 1.74;
         color: rgb(191, 191, 191);
         width:40rem;
         margin:auto;

@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Homee() {
   return (
     <>
-   <Link href="/proyectos/proyects"><h3>/proyects..</h3></Link> 
+   <Link href="/proyectos/proyects"><li>/proyects..</li></Link> 
 <div className="box">
 
     <div className="boxlogo">
@@ -80,7 +80,7 @@ export default function Homee() {
     height:100vh;
     width:100%;
     transition:0.4s;
-    animation: logazo 5.5s infinite;
+    /* animation: logazo 5.5s infinite; */
 }
 
 {/* entre foto y foto crear desaparicion de imagen y aparicion */}

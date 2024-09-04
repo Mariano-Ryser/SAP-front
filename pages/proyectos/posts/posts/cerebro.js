@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from "next/link"
 
+
 const Conciencia = () => {
 
   const initialState = (1.3)
@@ -16,9 +17,9 @@ const Conciencia = () => {
   return (
     <>
     <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
-<Link href="/proyectos/posts/books"><li>/proyects..</li></Link>
+<Link href="/proyectos/posts/books"><li>/books..</li></Link>
 
-<h1> El Organismo Electromagnético Colectivo: Una Teoría de la Conexión entre Cerebros</h1>
+<h1>Una Teoría de la Conexión entre Cerebros</h1>
 
 <p>En la neurociencia moderna, entendemos que el cerebro humano opera principalmente
    a través de señales eléctricas y químicas que permiten la comunicación entre neuronas.
@@ -136,7 +137,10 @@ la intuición colectiva, donde grupos de personas toman decisiones similares sin
     
 
     <h2></h2>
-    <p></p>
+    <p>Asi como hay una red de iteracciones interneuronales, podemos suponer,
+       la exitencia de una red interacciones intercerebrales.
+       
+    </p>
 
     <h2></h2>
     <p></p>
@@ -185,7 +189,6 @@ la intuición colectiva, donde grupos de personas toman decisiones similares sin
  } 
 
     section{
-      font-size:1.3rem;
       line-height: 1.74;
         width:40rem;
         margin:auto;

@@ -6,6 +6,7 @@
 html,
 
 body {
+  background-color: var(--bg-color);
   padding: 0;
   margin: 0;
   /* background:
@@ -16,24 +17,22 @@ linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
 linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
 linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
 background-size: 20px 20px; */
-background-color: #bbcccf;
+/* background-color: #f0ee8b; */
 }
 h1{
-  margin:0.5rem;
+  font-family: Helvetica;
+}
+h2{
+  font-family: Helvetica;
 }
 h3{
-  margin: 0.2rem 0.5rem ;
-  color: rgb(0, 0, 0);
+  font-family: Helvetica;
 }
 
-.tl{color: white; font-family: monospace;}
+
 
 @media (max-width: 600px) {
-  h3{
-    margin: 0.2rem 0.5rem ;
-    color: rgb(36, 36, 36);
-    font-size: 1.3rem;
-  }
+
   
 }
 
@@ -50,6 +49,10 @@ ul{
   margin: auto;
   padding:0rem;
 }
+p{
+  font-family: Helvetica;
+}
+
 li{
   font-size: 1.6rem;
   font-family: 'Courier New', Courier, monospace;
@@ -102,10 +105,10 @@ li:hover{
 
 /* CAJA DE ICONOS */
 .boxIcons{
-  background-color: rgba(100, 100, 100, 0.616);
+  background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(7px);
   border-radius: 10px;
-  width: 85%;
+  width: 100%;
   margin: auto;
   display: grid;
   overflow: hidden;
@@ -137,7 +140,7 @@ filter: blur(0.0px);
 
 @media (max-width:600px){ 
 .boxIcons{
-width: 95%;
+width: 100%;
 margin: auto;
 margin-top: 0.7rem;
 display: grid;

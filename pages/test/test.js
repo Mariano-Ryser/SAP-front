@@ -8,22 +8,17 @@ export default function Test() {
 
   
   {/* <Pantallazo/> */}
-  <Link href="/"><h3>/home ..</h3></Link>
-  
-  <Link href="/test/1"><h3>/tests/1 ..</h3></Link>
-  <Link href="/test/2"><h3>/tests/2 ..</h3></Link>
-  <Link href="/test/3"><h3>/tests/3 ..</h3></Link>
-  <Link href="/test/4"><h3>/tests/4 ..</h3></Link>
-  <Link href="/test/5"><h3>/tests/5 ..</h3></Link>
-  <Link href="/test/6"><h3>/tests/6 ..</h3></Link>
+  <Link href="/"><li>/home ..</li></Link>
+  <Link href="/test/1"><li>/tests/1 ..</li></Link>
+  <Link href="/test/2"><li>/tests/2 ..</li></Link>
+  <Link href="/test/3"><li>/tests/3 ..</li></Link>
+  <Link href="/test/4"><li>/tests/4 ..</li></Link>
+  <Link href="/test/5"><li>/tests/5 ..</li></Link>
+  <Link href="/test/6"><li>/tests/6 ..</li></Link>
 
 
   <style jsx>{`
-  h3:hover{
-    cursor: default;
-    color: rgb(18, 221, 228);
 
-  }
   
       
 @media (max-width: 600px) {

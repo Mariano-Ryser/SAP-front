@@ -29,7 +29,7 @@ const Cronometro = () => {
     <>
     <Link href="/proyectos/proyects"><li>/proyects..</li></Link> 
     <div className='cronometro'>
-      <h1>CR0N0</h1>
+      <h1>Cronometro</h1>
       <div >
          {/* <span>{Math.floor(segundos / 3600).toString().padStart(2, '0')}:</span>  */}
         <span>{Math.floor((segundos % 3600) / 60).toString().padStart(2, '0')}:</span>
@@ -52,9 +52,8 @@ const Cronometro = () => {
     <style jsx>{`
       
       .cronometro{
-        background-color:black;
         border: inset rgb(62, 232, 130) 7px;
-        padding-bottom:1rem;
+        padding:1rem;
         margin-top:1rem;
       }
  

@@ -5,14 +5,11 @@ export default function About() {
   return (
     <>
 
-    <div className="container">
-      <div>
+    <div className="container"><div>
+
+
           <div className="img-container">
-          <div className="img" 
-              style={{backgroundImage: `url('/img/robote.gif'`}}
-              >
-              
-          </div>
+            <div className="img" style={{backgroundImage: `url('/img/robote.gif'`}}></div>
           </div>    
 
           <p>It started as a virtual curriculum which later transformed into a blog, and then a complete
@@ -22,13 +19,12 @@ export default function About() {
             on Azure, the database interaction is
             created with NodeJs and Mongo DB.
           </p>
-
           <p>If you have any good comments or constructive criticism, they are always helpful to me. so I await your return!</p>
-
-          
-    
-      </div>
-    </div>
+       
+        {/* <div className="divo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quo, voluptas saepe tempora accusamus veritatis ab perspiciatis, quia repellendus ullam harum nobis facere optio! Recusandae quis, dignissimos pariatur rem maiores, placeat, sed vel hic explicabo consequatur doloremque. Quasi ducimus dolores adipisci impedit ipsa consequatur nisi id! Hic mollitia velit iusto.</div> */}
+   
+   
+  </div></div>
 
 
     <br></br>
@@ -36,8 +32,12 @@ export default function About() {
     <br></br>
     
 
-    
-  <style jsx>{`
+
+<style jsx>{`
+  .divo{
+    padding:1rem;
+    border: solid 1px black ;
+  }
     .container{
       padding: 5px 3rem 0px 3rem;
       border-radius: 10px;
@@ -46,9 +46,7 @@ export default function About() {
         display:flex;
         justify-content:center;
         text-align:center;
-       
     }
-  
     .img{
         height:15rem;
         width:13rem;
@@ -60,11 +58,9 @@ export default function About() {
         display:flex;
         justify-content:center;
     }
-  
     p{color:black;
       font-family:monospace;
         font-size:1.6rem;
-       
     }
  
 
@@ -76,16 +72,12 @@ export default function About() {
     }
     p{
         font-size:1.4rem;
-       
     }
     .container{
       padding: 5px 15px 0px 15px;
       margin: auto;
       margin-top: 20px;
     }
-    
-  
-                 
 }
        
          `}</style>

@@ -8,11 +8,15 @@ import Test5 from '../pages/ztest/test5';
 const NavRespon = () => {
   const [close, setClose] = useState(null);
 
-  const [bgColor, setBgColor] = useState('yellow');
+  const colors = ['rgb(218, 226, 100)', 'lightblue', 'lightgreen', 'lightcoral', 'lightpink', 'rgb(178, 148, 248)'];
+  const [bgColor, setBgColor] = useState(colors[0]); // Empieza con el primer color
 
   const changeColor = () => {
-    // Puedes alternar entre diferentes colores
-    const newColor = bgColor === '#dbda79' ? 'lightblue' : '#dbda79';
+    // Encuentra el índice actual del color
+    const currentIndex = colors.indexOf(bgColor);
+    // Obtiene el siguiente color en la lista, o vuelve al primero si llega al final
+    const nextIndex = (currentIndex + 1) % colors.length;
+    const newColor = colors[nextIndex];
     setBgColor(newColor);
     document.documentElement.style.setProperty('--bg-color', newColor);
   };
@@ -98,6 +102,7 @@ const NavRespon = () => {
 return (
     <>    
    
+        <button className={styles.buttonColor} onClick={changeColor}></button>
 <nav className={styles.nav}>
 
 
@@ -211,7 +216,7 @@ return (
               <li className={styles.li}
               // onClick={padlook}
               >
-              <button onClick={changeColor}>Cambiar color de fondo</button>
+              
               </li>
 
               

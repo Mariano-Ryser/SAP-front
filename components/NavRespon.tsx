@@ -8,10 +8,20 @@ import Test5 from '../pages/ztest/test5';
 const NavRespon = () => {
   const [close, setClose] = useState(null);
 
+
   const colors = ['rgb(218, 226, 100)', 'lightblue', 'lightgreen', 'lightcoral', 'lightpink', 'rgb(178, 148, 248)'];
   const [bgColor, setBgColor] = useState(colors[0]); // Empieza con el primer color
 
   const changeColor = () => {
+    // Encuentra el índice actual del color
+    const currentIndex = colors.indexOf(bgColor);
+    // Obtiene el siguiente color en la lista, o vuelve al primero si llega al final
+    const nextIndex = (currentIndex + 1) % colors.length;
+    const newColor = colors[nextIndex];
+    setBgColor(newColor);
+    document.documentElement.style.setProperty('--bg-color', newColor);
+  };
+  const changeFontColor = () => {
     // Encuentra el índice actual del color
     const currentIndex = colors.indexOf(bgColor);
     // Obtiene el siguiente color en la lista, o vuelve al primero si llega al final
@@ -62,6 +72,9 @@ const NavRespon = () => {
     //   burger.style.transform = 'rotateZ(90deg)'
     // }
   }
+
+
+
   function padlook(){
     setClose("Close")
   }
@@ -102,26 +115,30 @@ const NavRespon = () => {
 return (
     <>    
    
-        <button className={styles.buttonColor} onClick={changeColor}></button>
+{/* <button className={styles.buttonColor} onClick={changeFontColor}></button> */}
+<button className={styles.buttonColor} onClick={changeColor}></button>
+
 <nav className={styles.nav}>
-
-
         <div className={styles.img}>
          <Link href="/home"><h1 className={styles.logo}></h1></Link> 
         </div>
 
       <div id='burger' className={styles.burger} onClick={openList}>
-    
+{/*     
          <Image
           // onMouseOver={overed}
           //  alt='Burger-Icon' src={'/img/Alienverde.gif'}
-          // height={100} width={70}></Image>
+          // height={100} width={70}></Image> */}
+          <Image
            alt='Burger-Icon' src={'/img/robote.gif'}
-          height={120} width={105}></Image>
+          height={120} width={105}></Image> 
         </div> 
 </nav>
 
               
+
+
+
     <aside id='aside' className={styles.asideBar}>
     
           <ul className={styles.ul}>

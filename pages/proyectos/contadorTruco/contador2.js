@@ -109,9 +109,11 @@ export default function TrucoCounter() {
         </div>
       </div>
 
-      {winner && <h2 className="winner"> <Image
-           alt='Burger-Icon' src={'/img/zulma.png'}
-          height={200} width={230}></Image></h2>}
+      {winner && <h2 className="winner">
+      {/* <Image alt='Burger-Icon' src={'/img/zulma.png'} height={200} width={230}></Image>  */}
+      <p>Ganaste rey</p>
+      <p>buena suerte</p>
+          </h2>}
 
       <style jsx>{`
       p{margin:5px}

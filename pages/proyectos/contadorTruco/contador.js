@@ -26,7 +26,7 @@ export default function TrucoCounter() {
   };
 
   // Función para renderizar los puntos en bloques de 3 palitos o un triángulo
-  const renderPoints = (points) => {
+    const renderPoints = (points) => {
     const fullRowsBeforeBuenas = Math.min(3, Math.floor(points / 3)); // Cantidad de filas completas antes de las Buenas (3 palitos por fila)
     const remainingPointsBeforeBuenas = points < 9 ? points % 3 : 0; // Palitos sobrantes en las "Malas"
     const pointsInBuenas = points > 9 ? points - 9 : 0; // Puntos en las Buenas
@@ -97,9 +97,10 @@ export default function TrucoCounter() {
 
       {winner && 
       <div>
-         <h2 className="winner"> <Image
-           alt='Burger-Icon' src={'/img/zulma.png'}
-          height={200} width={230}></Image></h2>
+         <h2 className="winner"> 
+          {/* <Image alt='Burger-Icon' src={'/img/zulma.png'} height={200} width={230}></Image>  */}
+          <p>Ganaste rey</p>
+          </h2>
         </div>
       }
 
@@ -111,7 +112,6 @@ export default function TrucoCounter() {
           align-items: center;
           height: 110vh;
         }
-
         .players {
           display: flex;
           justify-content: space-around;
@@ -123,32 +123,27 @@ export default function TrucoCounter() {
           flex-direction: column;
           align-items: center;
         }
-
         .row {
           font-size: 1px;
           margin-bottom:5rem;
           padding: 10rem;
         }
-
         .divider {
           font-size: 20px;
           color: #ff5722;
           margin-top: 0px;
           margin-bottom: 0px;
         }
-
         .winner {
           font-size: 30px;
           color: black;
           margin-top: 20px;
         }
-
         .buttons {
           display: flex;
           gap: 10px;
           margin-top: 0px;
         }
-
         button {
           background-color: green;
           color: white;
@@ -159,11 +154,9 @@ export default function TrucoCounter() {
           cursor: pointer;
           transition: background-color 0.1s ease;
         }
-
         button:hover {
           background-color: #45a049;
         }
-
         button:active {
           transform: scale(1.1);
         }

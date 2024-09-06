@@ -58,6 +58,7 @@ export default function Calculadora() {
         color: white;
       }
         .container {
+          margin-bottom:9rem;
           display: flex;
           flex-direction: column;
           align-items: center;

@@ -10,7 +10,7 @@ export default function Proyects() {
   {/* <Pantallazo/> */}
   <Link href="/"><li>/home</li></Link>
   {/* <Link href="/proyectos/about/about"><li>/proyects/about</li></Link> */}
-  {/* <Link href="/proyectos/apiMeteoro/cienciados"><li>/proyects/asteroides</li></Link> */}
+  <Link href="/proyectos/apiMeteoro/cienciados"><li>/proyects/asteroides</li></Link>
   <Link href="/proyectos/boxComentar/msj"><li>/p/boxComentar</li></Link>
   <Link href="/proyectos/calculadora/calculadora"><li>/pro/calculadora</li></Link>
   <Link href="/proyectos/charCreator/personaje"><li>/pro/charCreator</li></Link>
@@ -25,6 +25,7 @@ export default function Proyects() {
   <Link href="/proyectos/noti/noti"><li>/pro/noti</li></Link>
   {/* <Link href="/proyectos/poemas/poemas"><li>/proyects/poemas</li></Link> */}
   <Link href="/proyectos/posts/books"><li>/pro/books</li></Link>
+  <Link href="/proyectos/nasa/nasa"><li>/pro/nasa</li></Link>
   {/* <Link href="/proyectos/productCreator/create"><li>/proyects/product</li></Link> */}
   <Link href="https://lebenslauf-gamma.vercel.app/"><li>/pr/Lebenslauf</li></Link>
 

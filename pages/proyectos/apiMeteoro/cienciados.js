@@ -12,7 +12,7 @@ export default function Cienciados({asteroide}){
         {
             asteroide.map(as =>(
                 <div className="box" key={as.id}>
-                    <h4>{as.name}</h4>
+                    <h4>{as.nombre}</h4>
                     <p>{as.descripcion}</p>
                     <p>{as.distancia_tierra}</p>
                     <p>{as.descubridor}</p>
@@ -28,8 +28,9 @@ export default function Cienciados({asteroide}){
 .link{
     padding: 0.2rem;
    border: 1px solid rgba(131, 6, 6, 0.737);
-   font-size: 0.8rem;
+   font-size: 1rem;
    transition: 0.2s;
+   color: black;
 }
 
 .box{
@@ -37,6 +38,7 @@ export default function Cienciados({asteroide}){
    padding: 0.4rem;
    padding-bottom: 1.4rem;
    transition: 0.5s;
+   word-wrap: break-word;
 }
 
 

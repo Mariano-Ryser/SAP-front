@@ -105,6 +105,7 @@ function BoxComentar(){
     e.preventDefault()
 }
 
+
 const fetchComentars= () =>{
     fetch(`${baseURL}/comentars`)
        .then(res => res.json())

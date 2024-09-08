@@ -11,6 +11,7 @@
   height: 40px;
   width: 40px;
   border-color: rgba(250, 235, 215, 0.308);
+  background-color: rgba(255, 255, 255, 0);
 }
 @media (max-width: 768px) {
   /* #nav {

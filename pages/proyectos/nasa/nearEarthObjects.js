@@ -1,4 +1,6 @@
 // pages/neo.js
+
+import Link from "next/link";
 export async function getStaticProps() {
   const key = "8xLVJeFKs"
   const res = await fetch(
@@ -18,6 +20,7 @@ export default function Neo({ neoData }) {
 
   return (
     <div>
+       <Link href="/proyectos/nasa/nasa"><li>/nasa</li></Link>
       <h1>Near Earth Objects from Sep 1, 2024 to sep 2, 2024</h1>
       {dates.map((date) => (
         <div key={date}>

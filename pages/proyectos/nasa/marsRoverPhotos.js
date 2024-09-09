@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-
+import Link from 'next/link';
 export async function getStaticProps() {
+  const key = "8xLVJeFKsDEvavrzfS7Zq"
     const res = await fetch(
       // `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=4205&api_key=8xLVJeFKsDEvavrzfS7ZqSdw0A17F3E7JhFnnHHc`
-      `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=4102&api_key=8xLVJeFKsDEvavrzfS7ZqSdw0A17F3E7JhFnnHHc`
+      `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=4102&api_key=${key}Sdw0A17F3E7JhFnnHHc`
       // `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2023-12-01&api_key=8xLVJeFKsDEvavrzfS7ZqSdw0A17F3E7JhFnnHHc`
      
 
@@ -33,7 +34,8 @@ export async function getStaticProps() {
   
     return (
       <div>
-        <h1>Mars Rover Photos - Sol 1000</h1>
+        <Link href="/proyectos/nasa/nasa"><li>/nasa</li></Link>
+        <h1>Mars Rover Photos </h1>
         <div className="photos-grid">
           {marsPhotos.map((photo) => (
             <div key={photo.id} className="photo-card">
@@ -64,6 +66,13 @@ export async function getStaticProps() {
   
         {/* Estilos CSS */}
         <style jsx>{`
+        h1{
+          font-size:2rem;
+        }
+        p{
+            color: white;
+            margin: 0;
+          }
           .photos-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
@@ -71,7 +80,7 @@ export async function getStaticProps() {
           }
   
           .photo-card {
-            background: #f8f9f5;
+            background: black;
             padding: 10px;
             border-radius: 10px;
             text-align: center;
@@ -83,7 +92,7 @@ export async function getStaticProps() {
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -127,8 +136,9 @@ export async function getStaticProps() {
             .modal-content {
               max-width: 95vw;
               max-height: 80vh;
-              background-color: white;
+              background-color: black;
               color: white;
+              box-shadow: black 0px 0px 5px 4px;
             }
   
             .modal-image {

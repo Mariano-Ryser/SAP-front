@@ -1,16 +1,16 @@
 /* EXELENTE FONDO  */
 * {
   box-sizing: border-box;
-  color: rgb(35, 36, 35);
+  color:  var(--p-color);
 }
 html,
  /* Color de fondo por defecto */
 :root {
   /* --bg-color: rgb(143, 255, 133); */
   --bg-color: rgb(155, 233, 103); 
+  --p-color: rgb(28, 28, 28); 
 }
 body {
-  color: rgb(35, 36, 35);
   background-color: var(--bg-color);
   transition: 2s;
   padding: 0;

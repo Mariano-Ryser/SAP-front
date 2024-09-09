@@ -40,17 +40,9 @@ export default function Cienciados({asteroide}){
    transition: 0.5s;
    word-wrap: break-word;
 }
-
-
-
-
-            
+     
     @media (max-width: 600px) {
-         
-            
-
-          
-      }   
+    }   
         `}</style>
     </>
     )

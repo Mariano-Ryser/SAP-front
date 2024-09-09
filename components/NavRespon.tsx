@@ -9,7 +9,7 @@ const NavRespon = () => {
   const [close, setClose] = useState(null);
 
 
-  const colors = ['rgb(218, 226, 100)', 'lightblue', 'lightgreen', 'lightcoral', 'lightpink', 'rgb(178, 148, 248)'];
+  const colors = ['rgb(170, 178, 68)', 'rgb(68, 167, 178)', 'lightgreen', 'lightcoral', 'lightpink', 'rgb(178, 148, 248)'];
   const [bgColor, setBgColor] = useState(colors[0]); // Empieza con el primer color
 
   const changeColor = () => {
@@ -21,15 +21,7 @@ const NavRespon = () => {
     setBgColor(newColor);
     document.documentElement.style.setProperty('--bg-color', newColor);
   };
-  const changeFontColor = () => {
-    // Encuentra el índice actual del color
-    const currentIndex = colors.indexOf(bgColor);
-    // Obtiene el siguiente color en la lista, o vuelve al primero si llega al final
-    const nextIndex = (currentIndex + 1) % colors.length;
-    const newColor = colors[nextIndex];
-    setBgColor(newColor);
-    document.documentElement.style.setProperty('--bg-color', newColor);
-  };
+
 
    function openList(){
 

@@ -1,12 +1,15 @@
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/link";
 import { useEffect, useState } from 'react';
 
 export async function getStaticProps() {
   const key = "8xLVJeFKsDEvavrzfS7Zq"
+  const key2 = "Sdw0A17F3E7JhFnnHHc"
+  
   
     const res = await fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${key}Sdw0A17F3E7JhFnnHHc`
+      `https://api.nasa.gov/planetary/apod?api_key=${key}${key2}`
     );
     const data = await res.json();
   
@@ -17,9 +20,9 @@ export async function getStaticProps() {
     };
   }
   
-
   
   export default function Home({ apod }) {
+    // console.log(apod)
     const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Función para abrir y cerrar el modal
@@ -28,6 +31,7 @@ export async function getStaticProps() {
   };
     return (
        <div>
+         <Link href="/proyectos/nasa/nasa"><li>/nasa</li></Link>
       <h1>Astronomy Picture of the Day</h1>
       <h2>{apod.title}</h2>
 
@@ -40,6 +44,16 @@ export async function getStaticProps() {
       />
       <p>{apod.explanation}</p>
       <p>Date: {apod.date}</p>
+
+      <p>
+      <a href="https://apod.nasa.gov/apod/archivepix.html">Here</a>, 
+       you will find all the photos of the day, from January 1, 2015 to the present.</p>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
 
       {/* Modal */}
       {isModalOpen && (

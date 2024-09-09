@@ -8,7 +8,7 @@ export default function Nasa() {
 
   
   {/* <Pantallazo/> */}
-  <Link href="/"><li>/home</li></Link>
+  <Link href="/proyectos/proyects"><li>/proyects</li></Link>
   <Link href="marsRoverPhotos"><li>/mars</li></Link>
   <Link href="nearEarthObjects"><li>/nearObjects</li></Link>
   <Link href="pictureOfTheDay"><li>/pictureOfTheDay</li></Link>

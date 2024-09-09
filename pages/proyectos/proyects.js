@@ -10,7 +10,7 @@ export default function Proyects() {
   {/* <Pantallazo/> */}
   <Link href="/"><li>/home</li></Link>
   {/* <Link href="/proyectos/about/about"><li>/proyects/about</li></Link> */}
-  <Link href="/proyectos/apiMeteoro/cienciados"><li>/proyects/asteroides</li></Link>
+  {/* <Link href="/proyectos/apiMeteoro/cienciados"><li>/proyects/asteroides</li></Link> */}
   <Link href="/proyectos/boxComentar/msj"><li>/p/boxComentar</li></Link>
   <Link href="/proyectos/calculadora/calculadora"><li>/pro/calculadora</li></Link>
   <Link href="/proyectos/charCreator/personaje"><li>/pro/charCreator</li></Link>

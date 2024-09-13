@@ -9,7 +9,7 @@ const NavRespon = () => {
   const [close, setClose] = useState(null);
 
 
-  const colors = ['rgb(170, 178, 68)', 'rgb(68, 167, 178)', 'lightgreen', 'lightcoral', 'lightpink', 'rgb(178, 148, 248)'];
+  const colors = ['rgb(170, 178, 68)', 'rgb(66, 29, 24)', 'rgb(61, 24, 66)', 'rgb(66, 58, 24)', 'rgb(25, 66, 24)', 'rgb(0, 0, 0)'];
   const [bgColor, setBgColor] = useState(colors[0]); // Empieza con el primer color
 
   const changeColor = () => {
@@ -122,8 +122,8 @@ return (
           //  alt='Burger-Icon' src={'/img/Alienverde.gif'}
           // height={100} width={70}></Image> */}
           <Image
-           alt='Burger-Icon' src={'/img/robote.gif'}
-          height={120} width={105}></Image> 
+           alt='Burger-Icon' src={'/img/Alienverde.gif'}
+          height={140} width={105}></Image> 
         </div> 
 </nav>
 

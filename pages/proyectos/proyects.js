@@ -5,9 +5,7 @@ export default function Proyects() {
   return (
     <>
 
-
-  
-  {/* <Pantallazo/> */}
+{/* <Pantallazo/> */}
   <Link href="/"><li>/home</li></Link>
   {/* <Link href="/proyectos/about/about"><li>/proyects/about</li></Link> */}
   {/* <Link href="/proyectos/apiMeteoro/cienciados"><li>/proyects/asteroides</li></Link> */}

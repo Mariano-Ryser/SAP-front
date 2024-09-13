@@ -58,7 +58,8 @@ export default function About() {
         display:flex;
         justify-content:center;
     }
-    p{color:black;
+    p{
+      color:green;
       font-family:monospace;
         font-size:1.6rem;
     }

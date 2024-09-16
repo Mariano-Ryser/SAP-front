@@ -9,25 +9,38 @@ const NavRespon = () => {
   const [close, setClose] = useState(null);
 
 
-  const colors = ['rgb(170, 178, 68)', 'rgb(66, 29, 24)', 'rgb(61, 24, 66)', 'rgb(66, 58, 24)', 'rgb(25, 66, 24)', 'rgb(0, 0, 0)'];
-  const [bgColor, setBgColor] = useState(colors[0]); // Empieza con el primer color
+  const bgColors = ['rgb(255, 255, 255)', 'rgb(7, 7, 7)', 'rgb(61, 24, 66)', 'rgb(66, 58, 24)', 'rgb(25, 66, 24)', 'rgb(0, 0, 0)'];
+  const letterColors = ['rgb(0, 0, 0)', 'rgb(50, 204, 36)', 'rgb(255, 255, 255)', 'rgb(251, 255, 34)', 'rgb(35, 231, 28)'];
+  const aliens = ['Alienverde.gif','']
 
-  const changeColor = () => {
+  const [bgColor, setBgColor] = useState(bgColors[0]); // Empieza con el primer color
+  const [letterColor, setLetterColor] = useState(letterColors[0]); // Empieza con el primer color
+
+
+  const changeBgColor = () => {
     // Encuentra el índice actual del color
-    const currentIndex = colors.indexOf(bgColor);
+    const currentIndex = bgColors.indexOf(bgColor);
     // Obtiene el siguiente color en la lista, o vuelve al primero si llega al final
-    const nextIndex = (currentIndex + 1) % colors.length;
-    const newColor = colors[nextIndex];
+    const nextIndex = (currentIndex + 1) % bgColors.length;
+    const newColor = bgColors[nextIndex];
     setBgColor(newColor);
     document.documentElement.style.setProperty('--bg-color', newColor);
   };
 
+  const changeLetterColor = () => {
+    // Encuentra el índice actual del color
+    const currentIndex = letterColors.indexOf(letterColor);
+    // Obtiene el siguiente color en la lista, o vuelve al primero si llega al final
+    const nextIndex = (currentIndex + 1) % letterColors.length;
+    const newColor = letterColors[nextIndex];
+    setLetterColor(newColor);
+    document.documentElement.style.setProperty('--letter-color', newColor);
+  };
+
+
 
    function openList(){
-
     const burger = document.getElementById('burger')
-
-  
     const aside = document.getElementById('aside')
     if(
       aside.style.transform == 'translateY(0%)'){
@@ -108,7 +121,9 @@ return (
     <>    
    
 {/* <button className={styles.buttonColor} onClick={changeFontColor}></button> */}
-<button className={styles.buttonColor} onClick={changeColor}></button>
+<button className={styles.buttonColor} onClick={changeBgColor}></button>
+
+<button className={styles.buttonLetterColor} onClick={changeLetterColor}></button>
 
 <nav className={styles.nav}>
         <div className={styles.img}>
@@ -123,13 +138,12 @@ return (
           // height={100} width={70}></Image> */}
           <Image
            alt='Burger-Icon' src={'/img/Alienverde.gif'}
-          height={140} width={105}></Image> 
+          //  alt='Burger-Icon' src={'/img/robote.gif'}
+          height={145} width={105}></Image> 
         </div> 
 </nav>
 
               
-
-
 
     <aside id='aside' className={styles.asideBar}>
     
@@ -137,14 +151,7 @@ return (
           <Test5/>
           
             {/* Index*/}
-              <Link href="/proyectos/posts/books">
               
-                <li className={styles.li}
-                // onClick={padlook}
-                >
-                  <a className={styles.a}>To read</a>
-                </li>
-              </Link>
 
               {/* Icons */}
                 <Link href="/proyectos/icons/icons">  
@@ -213,20 +220,60 @@ return (
 
                   {/* MUSIC TESTING*/}
 
-                  <Link href="/proyectos/hb/sounds/music">
-              
-              <li className={styles.li}
-              // onClick={padlook}
-              >
-                <a className={styles.a}>Game Sounds 
-                </a>
+                          <Link href="/proyectos/hb/sounds/music">
+                      
+                      <li className={styles.li}
+                      // onClick={padlook}
+                      >
+                        <a className={styles.a}>Game Sounds 
+                        </a>
+
+                      </li>
+                      </Link>
+
+               <li className={styles.li}
+                      // onClick={padlook}
+                      >
+                      
               </li>
+              <li className={styles.li}
+                      // onClick={padlook}
+                      >
+                      
+              </li>
+              <li className={styles.li}
+                      // onClick={padlook}
+                      >
+                      
+              </li>
+              <li className={styles.li}
+                      // onClick={padlook}
+                      >
+                      
+              </li>
+              <li className={styles.li}
+                      // onClick={padlook}
+                      >
+                      
+              </li>
+              <li className={styles.li}
+                      // onClick={padlook}
+                      >
+                      
+              </li>
+              <li className={styles.li}
+                      // onClick={padlook}
+                      >
+                      
+              </li>
+              <Link href="/proyectos/posts/books">
+              
+                <li className={styles.li}
+                // onClick={padlook}
+                >
+                  <a className={styles.a}></a>
+                </li>
               </Link>
-              <li className={styles.li}
-              // onClick={padlook}
-              >
-              
-              </li>
 
               
 

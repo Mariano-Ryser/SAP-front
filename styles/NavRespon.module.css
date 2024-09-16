@@ -5,14 +5,25 @@
   position: fixed;
   left: 15px;
   bottom: 125px;
-  background-color: rgba(94, 92, 92, 0.062);
+  background-color: rgba(8, 8, 8, 0.158);
   /* background-color: rgba(94, 92, 92, 0.096); */
   border-radius: 50%;
   height: 40px;
   width: 40px;
   border-color: rgba(250, 235, 215, 0.308);
-  background-color: rgba(255, 255, 255, 0);
 }
+.buttonLetterColor{
+  position: fixed;
+  left: 15px;
+  bottom: 175px;
+  background-color: rgba(8, 8, 8, 0.158);
+  /* background-color: rgba(94, 92, 92, 0.096); */
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border-color: rgba(250, 235, 215, 0.308);
+}
+
 @media (max-width: 768px) {
   /* #nav {
     display: none;
@@ -78,39 +89,7 @@
     top: -3rem;
     transition: 0.05s;
     cursor: pointer;
-    /* animation: alien alternate 11s infinite; */
-  }
-  @keyframes alien {
-    1% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 7.2;
-    }
-    20% {
-      opacity: 0;
-    }
-    40% {
-      opacity: 1.2;
-    }
-    50% {
-      opacity: 0;
-    }
-    75% {
-      opacity: 0;
-    }
-    78% {
-      opacity: 4;
-    }
-    
-    90% {
-      opacity: 6.2;
-    }
-  
-    100% {
-      opacity: 11.5;
-    }
-  }
+      }
    
 
   .asideBar::-webkit-scrollbar {
@@ -150,9 +129,15 @@
   .burger{
     position: absolute;
     transform: rotateZ(0deg);
-    right: 1.3rem;
-    top: -2.2rem;
+    right: 1.7rem;
+    top: -3.2rem;
     transition: 0.05s;
+    animation: alien alternate 1s 1;
+    
+  }
+  @keyframes alien {
+  1%{ right: -10.3rem;}
+  100%{right: 1.7rem;}
   }
   .asideBar{
     /* filter: blur(1px); */

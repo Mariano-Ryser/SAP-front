@@ -30,18 +30,16 @@ export default function Cienciados({noticia}){
   {/* Estilos CSS */}
   <style jsx>{`
     .section {
-      background-color: #f8f9fa;
     }
 
     .tl {
     }
 
     .box {
-      background: white;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 13px 8px 6px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
+      margin-bottom:3rem;
     }
 
     .news-title {
@@ -51,12 +49,10 @@ export default function Cienciados({noticia}){
     }
 
     .news-description {
-      color: #555;
       margin-bottom: 10px;
     }
 
     .news-content {
-      color: #666;
       font-size: 14px;
       margin-bottom: 10px;
       overflow: hidden;
@@ -85,7 +81,6 @@ export default function Cienciados({noticia}){
     }
 
     .news-author {
-      color: #555;
       font-size: 12px;
     }
 
@@ -113,7 +108,7 @@ export const getServerSideProps = async (context) =>{
    const res = await fetch(`${URL}top-headlines?country=us&apiKey=87aa57ca5${URLqiz}b0784b4ab31`)
    const noticias = await res.json()
 
-// console.log(noticias)
+console.log(noticias)
 
 const filteredNoticias = noticias.articles.filter(article => article.title !== '[Removed]');
 

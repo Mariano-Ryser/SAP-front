@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from "../styles/NavRespon.module.css"
 import Image from "next/image"
 import Test5 from '../pages/ztest/test5';
+import DayColorSquare from '../components/dayBox/DayBox';
 
 //C:\Users\MR22\stock-app\frontend\public
 const NavRespon = () => {
@@ -26,7 +27,6 @@ const NavRespon = () => {
     setBgColor(newColor);
     document.documentElement.style.setProperty('--bg-color', newColor);
   };
-
   const changeLetterColor = () => {
     // Encuentra el índice actual del color
     const currentIndex = letterColors.indexOf(letterColor);
@@ -36,9 +36,6 @@ const NavRespon = () => {
     setLetterColor(newColor);
     document.documentElement.style.setProperty('--letter-color', newColor);
   };
-
-
-
    function openList(){
     const burger = document.getElementById('burger')
     const aside = document.getElementById('aside')
@@ -77,17 +74,12 @@ const NavRespon = () => {
     //   burger.style.transform = 'rotateZ(90deg)'
     // }
   }
-
-
-
   function padlook(){
     setClose("Close")
   }
   function leaveA(){
     setClose(null)
   }
-
-
   const correct = (e) =>{
     const lock = document.querySelectorAll<HTMLElement>("#padlock")
     const inputValue = e.target.value
@@ -110,21 +102,19 @@ const NavRespon = () => {
 }
 
 // function overed(){
-//   // alert("Wasa")
+//   // alert("Se desactivo el click izquierdo")
 //   document.addEventListener("contextmenu",(e)=>{
 //     e.preventDefault();
 //   })
 // }
-
 
 return (
     <>    
    
 {/* <button className={styles.buttonColor} onClick={changeFontColor}></button> */}
 <button className={styles.buttonColor} onClick={changeBgColor}></button>
-
 <button className={styles.buttonLetterColor} onClick={changeLetterColor}></button>
-
+<DayColorSquare />
 <nav className={styles.nav}>
         <div className={styles.img}>
          <Link href="/home"><h1 className={styles.logo}></h1></Link> 
@@ -133,9 +123,9 @@ return (
       <div id='burger' className={styles.burger} onClick={openList}>
 {/*     
          <Image
-          // onMouseOver={overed}
-          //  alt='Burger-Icon' src={'/img/Alienverde.gif'}
-          // height={100} width={70}></Image> */}
+         // onMouseOver={overed}
+         //  alt='Burger-Icon' src={'/img/Alienverde.gif'}
+         // height={100} width={70}></Image> */}
           <Image
            alt='Burger-Icon' src={'/img/Alienverde.gif'}
           //  alt='Burger-Icon' src={'/img/robote.gif'}
@@ -148,6 +138,7 @@ return (
     <aside id='aside' className={styles.asideBar}>
     
           <ul className={styles.ul}>
+         
           <Test5/>
           
             {/* Index*/}

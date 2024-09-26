@@ -62,6 +62,7 @@ export default function About() {
       color:green;
       font-family:monospace;
         font-size:1.6rem;
+        
     }
  
 

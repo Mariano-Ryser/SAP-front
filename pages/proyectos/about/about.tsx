@@ -59,9 +59,9 @@ export default function About() {
         justify-content:center;
     }
     p{
-      color:green;
       font-family:monospace;
-        font-size:1.6rem;
+        font-size:1.8rem;
+        
         
     }
  
@@ -71,9 +71,6 @@ export default function About() {
         height:12.5rem;
         width:11rem;
         background-position: center;
-    }
-    p{
-        font-size:1.4rem;
     }
     .container{
       padding: 5px 15px 0px 15px;

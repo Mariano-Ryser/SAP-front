@@ -9,6 +9,7 @@ export default function Proyects() {
   {/* <Link href="/proyectos/about/about"><li>/proyects/about</li></Link> */}
   {/* <Link href="/proyectos/apiMeteoro/cienciados"><li>/proyects/asteroides</li></Link> */}
   <Link href="/proyectos/boxComentar/msj"><li>/p/boxComentar</li></Link>
+  <Link href="/proyectos/musica/musica"><li>/p/Musik</li></Link>
   <Link href="/proyectos/calculadora/calculadora"><li>/pro/calculadora</li></Link>
   <Link href="/proyectos/charCreator/personaje"><li>/pro/charCreator</li></Link>
   <Link href="/proyectos/contadorTruco/contador"><li>/pro/TrucoCounter</li></Link>

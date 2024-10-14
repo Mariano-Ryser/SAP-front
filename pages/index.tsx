@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import DayCard from "../components/dayBox/DayCard"
 export default function Home() {
   return (
     <>
@@ -8,6 +9,8 @@ export default function Home() {
   {/* <Link href="/proyectos/noti/noticias"><li>/home/noticias</li></Link> */}
   {/* <Link href="/proyectos/nasa/pictureOfTheDay"><li>/AstronomyInfoDay</li></Link> */}
   {/* <Link href="/test/test"><li>/home/test</li></Link> */}
+<DayCard/>
+
 
   <style jsx>{`
     

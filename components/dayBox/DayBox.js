@@ -24,7 +24,9 @@ const DayColorSquare = () => {
 
   return (
     <div>
-      <div className="square"></div>
+      <div className="square">
+        
+      </div>
       <style jsx>{`
         .square {
          display:none;

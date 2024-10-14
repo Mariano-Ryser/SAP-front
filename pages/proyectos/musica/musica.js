@@ -140,31 +140,36 @@ console.log(rearranged);
 
   return (
     <>
+    {/* ////////////////////// */}
  <div className="container">
-    <div>
-  
-      <p>GmSharpScale = {GSharpMinScale}</p>
-      <p>Progrecion = {rearranged}</p>
+        <div>
+                <p>GmSharpScale = {GSharpMinScale}</p>
+                <p>Progrecion = {rearranged}</p>
 
-      <p>Dm= E-F-A-C-E</p>
-      <p>G= </p>
-      
-    </div>
-    
-    <br></br>
+                <p>Dm= E-F-A-C-E</p>
+                <p>G= </p>
+                
+                  <p>GmSharpScale = {GSharpMinScale}</p>
+        </div>
   </div>
 
-<div>
-
-</div>
-
-
-
-  
- <div className="container">
+    {/* ////////////////////// */}
+    
+  <div className="container">
       <div className="img" style={{backgroundImage: `url('/img/circuloQuintas.jpg`}}></div>
   </div> 
 
+    {/* ////////////////////// */}
+
+    <div className="container">
+        <div>
+                <p>{GSharpMinScale}</p>
+                
+        </div>
+  </div>
+
+  
+ 
 
 
 

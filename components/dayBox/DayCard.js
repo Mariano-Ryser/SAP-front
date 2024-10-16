@@ -14,7 +14,7 @@ const palabras = [
     palabra: "Schwierigkeit",
     significado: "Dificultad, problema",
     frases: [
-      "Die Schwierigkeit des Tests war überraschend. (La dificultad del examen fue sorprendente)",
+     "Die Schwierigkeit des Tests war überraschend. (La dificultad del examen fue sorprendente)",
       "Wir müssen eine Lösung für dieses Problem finden, egal wie groß die Schwierigkeit ist. (Debemos encontrar una solución para este problema, sin importar cuán grande sea la dificultad)",
       "Manchmal ist die Schwierigkeit eine Gelegenheit, zu lernen. (A veces, la dificultad es una oportunidad para aprender)"
     ]
@@ -198,6 +198,15 @@ const palabras = [
       "Die Betreuung der Kinder ist gut organisiert. (El cuidado de los niños está bien organizado)",
       "Er braucht rund um die Uhr Betreuung. (Necesita atención las 24 horas)",
       "Die Patienten erhalten hier gute Betreuung. (Los pacientes reciben buena atención aquí)"
+    ]
+  },
+  {
+    palabra: "hartnäckig",
+    significado: "persistente",
+    frases: [
+      "Sie ist hartnäckig bei der Verfolgung ihrer Ziele. (Ella es persistente en la consecución de sus metas.)",
+      "Hartnäckige Menschen geben nicht so leicht auf. (Las personas persistentes no se rinden fácilmente.)",
+      "Er war hartnäckig, bis er eine Antwort bekam. (Él fue persistente hasta obtener una respuesta.)"
     ]
   },
   {
@@ -1647,6 +1656,24 @@ const palabras = [
   ]
 },
 {
+  palabra: "unabhängig",
+  significado: "independiente",
+  frases: [
+    "Sie ist eine unabhängige Frau. (Ella es una mujer independiente.)",
+    "Ich möchte finanziell unabhängig sein. (Quiero ser financieramente independiente.)",
+    "Unabhängige Entscheidungen zu treffen ist wichtig. (Tomar decisiones independientes es importante.)"
+  ]
+},
+{
+  palabra: "anspruchsvoll",
+  significado: "exigente",
+  frases: [
+    "Der Lehrer ist sehr anspruchsvoll. (El maestro es muy exigente.)",
+    "Das Projekt war anspruchsvoll und herausfordernd. (El proyecto fue exigente y desafiante.)",
+    "Anspruchsvolle Kunden sind schwer zufriedenzustellen. (Los clientes exigentes son difíciles de satisfacer.)"
+  ]
+},
+{
   palabra: "vorsichtig",
   significado: "cuidadoso",
   frases: [
@@ -1890,8 +1917,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "arrogant",
-    significado: "arrogante",
+    palabra: "Arrogant",
+    significado: "Arrogante",
     frases: [
       "Er verhält sich oft arrogant. (Él a menudo se comporta de manera arrogante.)",
       "Seine arrogante Art hat viele Leute verärgert. (Su manera arrogante molestó a muchas personas.)",
@@ -1899,8 +1926,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "bescheiden",
-    significado: "modesto",
+    palabra: "Bescheiden",
+    significado: "Modesto",
     frases: [
       "Sie ist trotz ihres Erfolgs sehr bescheiden. (A pesar de su éxito, ella es muy modesta.)",
       "Er lebt ein bescheidenes Leben. (Él lleva una vida modesta.)",
@@ -1908,8 +1935,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "neugierig",
-    significado: "curioso",
+    palabra: "Neugierig",
+    significado: "Curioso",
     frases: [
       "Das Kind ist sehr neugierig und stellt viele Fragen. (El niño es muy curioso y hace muchas preguntas.)",
       "Neugierige Menschen lernen oft mehr. (Las personas curiosas a menudo aprenden más.)",
@@ -1926,8 +1953,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "anstrengend",
-    significado: "agotador",
+    palabra: "Anstrengend",
+    significado: "Agotador",
     frases: [
       "Die Wanderung war sehr anstrengend. (La caminata fue muy agotadora.)",
       "Die Arbeit heute war anstrengend. (El trabajo de hoy fue agotador.)",
@@ -1935,18 +1962,29 @@ const palabras = [
     ]
   },
   {
-    palabra: "tapfer",
-    significado: "valeroso",
+    palabra: "Tapfer",
+    significado: "Valeroso",
     frases: [
       "Der Hund war tapfer, als er sein Herrchen beschützte. (El perro fue valeroso cuando protegió a su dueño.)",
       "Sie ist eine tapfere Frau. (Ella es una mujer valiente.)",
       "Tapfere Menschen haben keine Angst vor Gefahren. (Las personas valerosas no tienen miedo a los peligros.)"
     ]
-  }
+  },
+  {
+    palabra: "Schüchtern",
+    significado: "Tímido",
+    frases: [
+      "Er ist zu schüchtern, um mit Fremden zu sprechen. (Él es demasiado tímido para hablar con extraños.)",
+      "Das Kind war anfangs schüchtern, aber dann öffnete es sich. (El niño era tímido al principio, pero luego se soltó.)",
+      "Ich war früher sehr schüchtern. (Solía ser muy tímido.)"
+    ]
+  },
 
 ];
 
 const DayCard = () => {
+  const [cantidadPalabras, setCantidadPalabras] = useState(0); // Estado para contar las palabras
+
   const [currentIndex, setCurrentIndex] = useState(0); // índice de la palabra actual
   const [flipped, setFlipped] = useState(false); // estado para controlar si la carta está volteada
   const [searchTerm, setSearchTerm] = useState(""); // Estado para el término de búsqueda
@@ -1956,11 +1994,15 @@ const DayCard = () => {
     return Math.floor(Math.random() * palabras.length); // Índice aleatorio
   };
 
-  // Efecto para cambiar la palabra diaria
+  //useEffect para que se cambie la palabra diaria =D
   useEffect(() => {
+     // contar la cantidad de palabras
+     setCantidadPalabras(palabras.length);
+
     const today = new Date().toLocaleDateString(); // Obtener la fecha de hoy como string
     const savedDate = localStorage.getItem('date'); // Verificar si hay una fecha guardada
     const savedIndex = localStorage.getItem('wordIndex'); // Verificar si hay un índice guardado
+
 
     if (savedDate === today && savedIndex !== null) {
       setCurrentIndex(parseInt(savedIndex)); // Si es el mismo día, usar el índice guardado
@@ -1985,11 +2027,15 @@ const DayCard = () => {
 
     setCurrentIndex(randomIndex); // Cambiar al índice aleatorio
   };
- // Filtrar las palabras según el término de búsqueda
- const filteredPalabras = palabras.filter(palabra => 
-  palabra.palabra.toLowerCase().includes(searchTerm.toLowerCase()) || 
-  palabra.significado.toLowerCase().includes(searchTerm.toLowerCase())
-);
+// Filtrar las palabras según el término de búsqueda
+const normalizedSearchTerm = searchTerm.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Normaliza el término de búsqueda
+const filteredPalabras = palabras.filter(palabra => {
+  const normalizedPalabra = palabra.palabra.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const normalizedSignificado = palabra.significado.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  
+  return normalizedPalabra.toLowerCase().includes(normalizedSearchTerm.toLowerCase()) || 
+         normalizedSignificado.toLowerCase().includes(normalizedSearchTerm.toLowerCase());
+});
   // Mantener currentIndex dentro del rango de filteredPalabras
   const validIndex = filteredPalabras.length > 0 ? Math.min(currentIndex, filteredPalabras.length - 1) : 0;
   const { palabra, significado, frases } = filteredPalabras[validIndex] || { palabra: '', significado: '', frases: [] };
@@ -1997,7 +2043,22 @@ const DayCard = () => {
 
   return (
     <>
-
+ {/* ESCRIBIR PALABRA PARA BUSCAR */}
+ <input 
+        type="text"
+        placeholder="Buscar palabra o significado..."
+        value={searchTerm}
+        onChange={(e) => {
+          setSearchTerm(e.target.value); // Actualizar el término de búsqueda
+          // Reiniciar el índice si no hay coincidencias
+          if (filteredPalabras.length === 0) {
+            setCurrentIndex(0);
+          } else if (validIndex !== currentIndex) {
+            setCurrentIndex(validIndex); // Actualizar el índice si es necesario
+          }
+        }}
+        style={{color:"black", margin: '20px auto', display: 'block', width: '300px', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
+      />
     <div className="card" onClick={handleCardClick}>
     <div className={`card-inner ${flipped ? "flipped" : ""}`}>
       <div className="card-front">
@@ -2015,19 +2076,30 @@ const DayCard = () => {
 
         </ul>
         <button className="change-word-button" onClick={handleChangeWord}>
-            Cambiar Palabra
+          Wort wechseln
           </button>
+          {/* Anp */}
       </div>
     </div>
+
+      <div>
+      
+      {/* Aquí puedes seguir mostrando el resto de tu contenido */}
+    </div>
+      <p>Anzahl der Wörter: {cantidadPalabras}</p>
 
 
    
     <style jsx>{`  
+
+
       .card {
+
         width: 450px;
         height: 550px;
         perspective: 1000px;
         margin: 20px auto;
+        margin-bottom:5rem;
       }
       .card-inner {
         position: relative;
@@ -2051,20 +2123,30 @@ const DayCard = () => {
         flex-direction: column;
         border: 2px solid #ddd;
         border-radius: 10px;
-        overflow: hidden; /* Evita que el texto se salga del contenedor */
+        overflow: hidden; 
       }
       .card-front {
+        height:15rem;
       }
       .card-back {
-        transform: rotateY(180deg);
-      }
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 10px; 
+  box-sizing: border-box; 
+  overflow: auto; 
+  height: auto; 
+  max-height: 150%; 
+}
       h2 {
         margin: 0;
-        font-size: 1.5em; /* Tamaño de la fuente */
-        padding: 10px; /* Espaciado interno para el título */
+        font-size: 1.5em; 
+        padding: 10px; 
       }
       ul {
-        padding: 0;
         list-style: none;
         overflow: hidden; /* Evita que el texto de la lista se salga */
         text-align: center; /* Centra el texto */
@@ -2081,33 +2163,24 @@ const DayCard = () => {
           transition: background-color 0.3s;
         }
         .change-word-button:hover {
-          background-color: #08daff; /* Color del botón al pasar el ratón */
+          background-color: #08daff; 
         }
 
       @media (max-width: 600px) {
         .card {
           width: 100%;
-          height: 650px;
+          height: 550px;
         }
+        ul {
+          margin-top:0.5rem;
+        list-style: none;
+        overflow: hidden; 
+        text-align: center; 
+      }
       }
     `}</style>
   </div>
-   {/* ESCRIBIR PALABRA PARA BUSCAR */}
-   <input
-        type="text"
-        placeholder="Buscar palabra o significado..."
-        value={searchTerm}
-        onChange={(e) => {
-          setSearchTerm(e.target.value); // Actualizar el término de búsqueda
-          // Reiniciar el índice si no hay coincidencias
-          if (filteredPalabras.length === 0) {
-            setCurrentIndex(0);
-          } else if (validIndex !== currentIndex) {
-            setCurrentIndex(validIndex); // Actualizar el índice si es necesario
-          }
-        }}
-        style={{ margin: '20px auto', display: 'block', width: '300px', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
-      />
+  
   </>
   );
 };

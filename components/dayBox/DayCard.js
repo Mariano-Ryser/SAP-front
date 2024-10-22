@@ -2086,15 +2086,18 @@ const filteredPalabras = palabras.filter(palabra => {
       
       {/* Aquí puedes seguir mostrando el resto de tu contenido */}
     </div>
-      <p>Anzahl der Wörter: {cantidadPalabras}</p>
+      <p className='anzahlWorter'> Anzahl der Wörter: {cantidadPalabras}</p>
 
 
    
     <style jsx>{`  
-
+      .anzahlWorter{
+        position:absolute;
+        bottom:-102px;
+        font-size:10px;
+      }
 
       .card {
-
         width: 450px;
         height: 550px;
         perspective: 1000px;

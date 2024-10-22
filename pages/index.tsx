@@ -6,6 +6,9 @@ export default function Home() {
 
   <Link href="/"><li>/home</li></Link>
   <Link href="/proyectos/proyects"><li>/home/proyects</li></Link>
+  <Link href="/stapler"><li>/home/StaplerBasis</li></Link>
+  {/* <Link href="/stapler1"><li>/home/StaplerR1</li></Link>
+  <Link href="/stapler2"><li>/home/StaplerR2</li></Link> */}
   {/* <Link href="/proyectos/noti/noticias"><li>/home/noticias</li></Link> */}
   {/* <Link href="/proyectos/nasa/pictureOfTheDay"><li>/AstronomyInfoDay</li></Link> */}
   {/* <Link href="/test/test"><li>/home/test</li></Link> */}

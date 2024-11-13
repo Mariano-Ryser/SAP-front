@@ -11,14 +11,14 @@ export default function Proyects() {
   <Link href="/proyectos/boxComentar/msj"><li>/p/boxComentar</li></Link>
   <Link href="/proyectos/musica/musica"><li>/p/Musik</li></Link>
   <Link href="/proyectos/calculadora/calculadora"><li>/pro/calculadora</li></Link>
-  <Link href="/proyectos/charCreator/personaje"><li>/pro/charCreator</li></Link>
+  {/* <Link href="/proyectos/charCreator/personaje"><li>/pro/charCreator</li></Link> */}
   <Link href="/proyectos/contadorTruco/contador"><li>/pro/TrucoCounter</li></Link>
   <Link href="/proyectos/cronometro/cronometro"><li>/pro/cronometro</li></Link>
   <Link href="/proyectos/hb/hb"><li>/proyets/hb</li></Link>
   <Link href="/proyectos/icons/icons"><li>/pr/icons</li></Link>
   {/* <Link href="/proyectos/lectura/lectura"><li>/proyects/lectura</li></Link> */}
   <Link href="/proyectos/logazo/logazo"><li>/pr/logo</li></Link>
-  <Link href="/proyectos/luz/luz"><li>/pr/luz</li></Link>
+  {/* <Link href="/proyectos/luz/luz"><li>/pr/luz</li></Link> */}
   {/* <Link href="/proyectos/markdown/markdown"><li>/proyects/markdown</li></Link> */}
   <Link href="/proyectos/noti/noti"><li>/pro/noti</li></Link>
   {/* <Link href="/proyectos/poemas/poemas"><li>/proyects/poemas</li></Link> */}

@@ -10,8 +10,8 @@ const NavRespon = () => {
   const [close, setClose] = useState(null);
 
 
-  const bgColors = ['rgb(255, 255, 255)', 'rgb(7, 7, 7)', 'rgb(61, 24, 66)', 'rgb(66, 58, 24)', 'rgb(25, 66, 24)', 'rgb(0, 0, 0)'];
-  const letterColors = ['rgb(0, 0, 0)', 'rgb(50, 204, 36)', 'rgb(255, 255, 255)', 'rgb(251, 255, 34)', 'rgb(35, 231, 28)'];
+  const bgColors = ['rgb(255, 255, 255)', 'rgb(7, 7, 7)',  'rgb(66, 58, 24)', 'rgb(25, 66, 24)', 'rgb(0, 0, 0)'];
+  const letterColors = [ 'rgb(255, 255, 255)', 'rgb(251, 255, 34)', 'rgb(35, 231, 28)'];
   const aliens = ['Alienverde.gif','']
 
   const [bgColor, setBgColor] = useState(bgColors[0]); // Empieza con el primer color
@@ -114,7 +114,7 @@ return (
 {/* <button className={styles.buttonColor} onClick={changeFontColor}></button> */}
 <button className={styles.buttonColor} onClick={changeBgColor}></button>
 <button className={styles.buttonLetterColor} onClick={changeLetterColor}></button>
-<DayColorSquare />
+{/* <DayColorSquare /> */}
 <nav className={styles.nav}>
         <div className={styles.img}>
          <Link href="/home"><h1 className={styles.logo}></h1></Link> 

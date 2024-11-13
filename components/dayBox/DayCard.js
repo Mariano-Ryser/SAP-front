@@ -1763,6 +1763,7 @@ const palabras = [
     "Ich bin flexibel mit meinen Plänen. (Soy flexible con mis planes.)"
   ]
 },
+
   {
     palabra: "unhöflich",
     significado: "maleducado",
@@ -2091,7 +2092,12 @@ const filteredPalabras = palabras.filter(palabra => {
 
    
     <style jsx>{`  
+      p{
+        font-family:  cursive;
+      }
+      
       .anzahlWorter{
+        font-family:  cursive;
         position:absolute;
         bottom:-102px;
         font-size:10px;
@@ -2115,6 +2121,7 @@ const filteredPalabras = palabras.filter(palabra => {
         transform: rotateY(180deg);
       }
       .card-front, .card-back {
+        backdrop-filter: blur(10px);
         padding:10px;
         position: absolute;
         width: 100%;
@@ -2145,6 +2152,7 @@ const filteredPalabras = palabras.filter(palabra => {
   max-height: 150%; 
 }
       h2 {
+        font-family:  cursive;
         margin: 0;
         font-size: 1.5em; 
         padding: 10px; 
@@ -2175,6 +2183,7 @@ const filteredPalabras = palabras.filter(palabra => {
           height: 550px;
         }
         ul {
+        font-family:  cursive;
           margin-top:0.5rem;
         list-style: none;
         overflow: hidden; 

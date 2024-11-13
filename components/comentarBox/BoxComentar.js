@@ -182,6 +182,7 @@ function BoxComentar() {
         }
 
         .inputField {
+          color:black;
           width: 100%;
           margin-bottom: 1rem;
           padding: 0.5rem;
@@ -191,6 +192,7 @@ function BoxComentar() {
         }
 
         .textArea {
+          color:black;
           width: 100%;
           height: 100px;
           padding: 0.5rem;
@@ -242,7 +244,7 @@ function BoxComentar() {
         }
 
         .comentarBox {
-          background-color: #f9f9f9;
+          backdrop-filter: blur(10px);
           border-radius: 8px;
           padding: 1rem;
           margin-bottom: 1rem;
@@ -250,30 +252,37 @@ function BoxComentar() {
         }
 
         .titulo {
+          font-family:cursive;
           font-size: 1.2rem;
-          color: #333;
+          margin:0;
+          padding:0;
         }
 
         .text {
+          font-family:cursive;
           font-size: 1rem;
-          color: #555;
-          margin: 0.5rem 0;
+          margin:0;
+          padding:0;
         }
 
         .author {
-          font-style: italic;
-          color: #777;
+          font-family:cursive;
+          font-size:0.8rem;
+          margin:0;
+          padding:0;
         }
 
         .likes {
-          font-size: 0.9rem;
-          color: #666;
+          font-family:cursive;
+          font-size:0.8rem;
+          margin:0;
+          padding:0;
         }
 
         .likeButton {
           background-color: #0070f3;
           color: white;
-          padding: 0.3rem 0.6rem;
+          padding: 0.3rem 0.9rem;
           border: none;
           border-radius: 5px;
           cursor: pointer;
@@ -289,11 +298,15 @@ function BoxComentar() {
           cursor: pointer;
           font-weight: bold;
           font-size: 1.1rem;
+          position:absolute;
+          right:1.3rem;
+          bottom:1rem;
         }
 
         /* Responsivo */
         @media (max-width: 768px) {
           .comentariosContainer {
+            
           width: 90%;
           margin: auto;
           margin-top: 2rem;

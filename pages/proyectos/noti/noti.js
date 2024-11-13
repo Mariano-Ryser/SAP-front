@@ -282,6 +282,7 @@ font-family:monospace;
 }
 
 .textArea{
+  color:black;
   position: relative;
   width:100%;
   border-radius:0.2rem;
@@ -294,7 +295,6 @@ font-family:monospace;
 
   .textArea::placeholder {
     display: block;
-   
     font-size:1.1rem;
   }
 
@@ -326,13 +326,15 @@ font-family:monospace;
 
 /* TTITULO EN TEXTO */
 .titulo{
-  color: rgb(133, 133, 133);
-  font-family:monospace;
+  
+  font-family:cursive;
   line-height: 0rem;
   font-size: 1rem;
+  margin-bottom:1rem;
 }
 
 .notiBox{
+  backdrop-filter: blur(10px);
   border:solid 1px black;
   display: block;
   margin-top: 0.5rem;
@@ -361,14 +363,44 @@ font-family:monospace;
   position: absolute;
   font-size: 0.9rem;
   right: 1rem;
-  color: rgb(255, 255, 255);
+  color: red;
   cursor: pointer;
-  font-family: sans-serif;
+  font-family: cursive;
+  
 }
 
 /* MOBIL - STYLE */
 
 @media (max-width: 600px) {
+  .textArea{
+    font-family:cursive;
+    color: black;
+    position: relative;
+    width:100%;
+    padding: 0.4rem;
+    height: 6rem;
+   }
+
+  .textArea::placeholder {
+    display: block;
+    font-size:1.1rem;
+    font-family: cursive; 
+  }
+
+  .authorInput{
+    color: black;
+    display: block;
+    margin-bottom: 0.3rem;
+    margin-top:0rem;
+    padding: 0.4rem;
+    font-size:1.1rem;
+   font-family: cursive; 
+  }
+
+  .authorInput::placeholder{
+    font-size:1.1rem;
+  font-family:cursive; 
+  }
   .form{
     position: relative;
     width: 95%;
@@ -387,18 +419,13 @@ font-family:monospace;
     padding: 0rem;
   }
 
-  .textArea{
-    font-family:monospace;
-    position: relative;
-    width:100%;
-    padding: 0.4rem;
-    height: 6rem;
-   }
+ 
   .button{
     height: 2rem;
     width: 5rem;
     margin-top: 0rem;
     border-radius: 0.2rem;
+    color: black;
     
   }
 }

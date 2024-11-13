@@ -161,6 +161,9 @@ la intuición colectiva, donde grupos de personas toman decisiones similares sin
      >-</button>
 
 <style jsx>{`
+              p, h1, h2, h3{
+                  font-family:cursive;
+                }
                 .button2{
                     font-size:2rem;
                     border-radius:10px;

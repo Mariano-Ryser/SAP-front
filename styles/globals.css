@@ -2,23 +2,25 @@
 * {
   box-sizing: border-box;
   color:  var(--letter-color);
+  transition: 0.5s;
+  font-family:  cursive;
 }
 html,
- /* Color de fondo por defecto */
-
-
-
-
 :root {
   /* --bg-color: rgb(143, 255, 133); */
   --bg-color: rgb(255, 255, 255); 
-  --letter-color: rgb(5, 5, 5); 
+  --letter-color: rgb(0, 0, 0); 
 }
+ /* Color de fondo por defecto */
+
 body {
-  background-color: var(--bg-color);
+   background-color: var(--bg-color); 
   transition: 2s;
   padding: 0;
   margin: 0;
+  
+
+
   /* background:
 linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
 linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -42,6 +44,24 @@ h3{
 
 
 @media (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+    color:  var(--letter-color);
+    transition: 0.5s;
+    font-family:  cursive;
+  }
+  html,
+  :root {
+    /* --bg-color: rgb(143, 255, 133); */
+    --bg-color: rgb(255, 255, 255); 
+    --letter-color: rgb(255, 255, 255); 
+  }
+
+  body {
+  
+   background-image: url(/img/bBack.jpg);
+
+ }
 
   
 }

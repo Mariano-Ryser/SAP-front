@@ -5,17 +5,11 @@ const Layout = ({ children}) => {
 
 <>
 
-
               <NavRespon />   
-        <div className="content">
-              
+        <div className="content">    
                     <Cabezera />  
-
              { children }
-
              {/* <Footer />       */}
-
-      
         </div>
         <style jsx>{`
         

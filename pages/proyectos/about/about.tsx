@@ -9,7 +9,7 @@ export default function About() {
 
 
           <div className="img-container">
-            <div className="img" style={{backgroundImage: `url('/img/robote.gif'`}}></div>
+            <div className="img" style={{backgroundImage: `url('/img/g.gif'`}}></div>
           </div>    
 
           <p>It started as a virtual curriculum which later transformed into a blog, and then a complete
@@ -51,7 +51,10 @@ export default function About() {
         height:15rem;
         width:13rem;
         background-position: center;
-        background-size:cover;
+        background-size:contain;
+        background-repeat: no-repeat;
+        margin:0;
+        padding:0;
     }
     .img-container{
         margin-top:1rem;
@@ -59,10 +62,9 @@ export default function About() {
         justify-content:center;
     }
     p{
-      font-family:monospace;
         font-size:1.8rem;
-        
-        
+        font-family:  cursive;
+
     }
  
 

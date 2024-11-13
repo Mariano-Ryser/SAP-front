@@ -8,9 +8,7 @@ const Cabezera = () => {
   return (
     <>
      {/* CABEZERA 1 */}
-
         <header className="cabezera">
-        
             <Link href="/">
                  <li>HOME</li>
             </Link>
@@ -23,7 +21,7 @@ const Cabezera = () => {
                  {/* <span className="Date"><Date/></span>  */}
         </header>
 
-        <style jsx>{`
+  <style jsx>{`
         
       
 .cabezera{
@@ -36,8 +34,6 @@ const Cabezera = () => {
     align-items: center;
     -webkit-box-pack: justify;
     justify-content: space-around;
-    backdrop-filter: blur(10px);
-    
     transition: 0.2s;
 }
 

@@ -1,7 +1,8 @@
 /* EXELENTE FONDO  */
 * {
   box-sizing: border-box;
-  color:  var(--letter-color);
+  color: white;
+  /* color:  var(--letter-color); */
   transition: 0.5s;
   font-family:  cursive;
 }
@@ -14,12 +15,12 @@ html,
  /* Color de fondo por defecto */
 
 body {
-   background-color: var(--bg-color); 
+   /* background-color: var(--bg-color); 
   transition: 2s;
   padding: 0;
-  margin: 0;
+  margin: 0; */
   
-
+  background-image: url(/img/bBack.jpg);
 
   /* background:
 linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
@@ -31,15 +32,7 @@ linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transpar
 background-size: 20px 20px; */
 /* background-color: #f0ee8b; */
 }
-h1{
-  font-family: Helvetica;
-}
-h2{
-  font-family: Helvetica;
-}
-h3{
-  font-family: Helvetica;
-}
+
 
 
 
@@ -58,7 +51,6 @@ h3{
   }
 
   body {
-  
    background-image: url(/img/bBack.jpg);
 
  }
@@ -79,9 +71,7 @@ ul{
   margin: auto;
   padding:0rem;
 }
-p{
-  font-family: Helvetica;
-}
+
 
 li{
   

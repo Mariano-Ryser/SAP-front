@@ -7,6 +7,7 @@ const Items = () => {
 
 const images = [
  
+
   {
   img: "thedevastator.gif",
   categori:"rare",
@@ -238,8 +239,7 @@ const images = [
           overflow: hidden;
           border-radius: 8px;
           transition: transform 0.3s ease;
-         background-color: rgb(112, 74, 27);
-         box-shadow: inset 0px 0px 8px 2px rgb(64, 42, 15);
+          backdrop-filter: blur(10px);
          
 
         }

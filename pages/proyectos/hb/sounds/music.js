@@ -116,13 +116,15 @@ const Music = () => {
           <style jsx>{`
           section{
       }
-          h1{font-size: 1rem;
+          h1{
+            font-size: 1rem;
       }
       button{
         width: 6rem;
         height: 2.3rem;
         margin: 0.2rem;
         cursor: pointer;
+        color:black;
       }
       
 

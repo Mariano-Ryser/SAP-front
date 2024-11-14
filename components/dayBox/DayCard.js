@@ -201,8 +201,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "hartnäckig",
-    significado: "persistente",
+    palabra: "Hartnäckig",
+    significado: "Persistente",
     frases: [
       "Sie ist hartnäckig bei der Verfolgung ihrer Ziele. (Ella es persistente en la consecución de sus metas.)",
       "Hartnäckige Menschen geben nicht so leicht auf. (Las personas persistentes no se rinden fácilmente.)",
@@ -393,7 +393,7 @@ const palabras = [
   },
   {
     palabra: "Berechtigung",
-    significado: "Autorización, derecho",
+    significado: "Autorización, Derecho",
     frases: [
       "Hast du die Berechtigung, dieses Dokument zu bearbeiten? (¿Tienes la autorización para editar este documento?)",
       "Ohne Berechtigung darfst du hier nicht rein. (No puedes entrar aquí sin autorización)",
@@ -420,7 +420,7 @@ const palabras = [
   },
   {
     palabra: "Aufrichtigkeit",
-    significado: "Sinceridad, honestidad",
+    significado: "Sinceridad, Honestidad",
     frases: [
       "Ich schätze seine Aufrichtigkeit sehr. (Valoro mucho su sinceridad)",
       "Aufrichtigkeit ist eine wichtige Tugend. (La sinceridad es una virtud importante)",
@@ -429,7 +429,7 @@ const palabras = [
   },
   {
     palabra: "Verlässlichkeit",
-    significado: "Fiabilidad, confiabilidad",
+    significado: "Fiabilidad, Confiabilidad",
     frases: [
       "Verlässlichkeit ist eine der wichtigsten Eigenschaften. (La fiabilidad es una de las características más importantes)",
       "In unserer Freundschaft zählt Verlässlichkeit. (En nuestra amistad, la confiabilidad cuenta mucho)",
@@ -573,7 +573,7 @@ const palabras = [
   },
   {
     palabra: "Bedeutungslos",
-    significado: "Sin importancia, insignificante",
+    significado: "Sin importancia, Insignificante",
     frases: [
       "Das Problem war letztendlich bedeutungslos. (El problema fue finalmente insignificante)",
       "Seine Worte sind für mich bedeutungslos. (Sus palabras no tienen importancia para mí)",
@@ -600,7 +600,7 @@ const palabras = [
   },
   {
     palabra: "Auffällig",
-    significado: "Llamativo, notable",
+    significado: "Llamativo, Notable",
     frases: [
       "Ihr Kleid war sehr auffällig. (Su vestido era muy llamativo)",
       "Es ist auffällig, wie oft er das tut. (Es notable con qué frecuencia lo hace)",
@@ -609,7 +609,7 @@ const palabras = [
   },
   {
     palabra: "Gewissenhaft",
-    significado: "Concienzudo, cuidadoso",
+    significado: "Concienzudo, Cuidadoso",
     frases: [
       "Er arbeitet sehr gewissenhaft. (Trabaja de manera muy concienzuda)",
       "Gewissenhafte Menschen machen weniger Fehler. (Las personas concienzudas cometen menos errores)",
@@ -618,7 +618,7 @@ const palabras = [
   },
   {
     palabra: "Vernünftig",
-    significado: "Razonable, sensato",
+    significado: "Razonable, Sensato",
     frases: [
       "Seine Entscheidung war vernünftig. (Su decisión fue razonable)",
       "Es ist vernünftig, das Geld zu sparen. (Es sensato ahorrar el dinero)",
@@ -664,7 +664,7 @@ const palabras = [
   },
   {
     palabra: "Anerkennung",
-    significado: "Reconocimiento, aprecio",
+    significado: "Reconocimiento, Aprecio",
     frases: [
       "Er hat viel Anerkennung für seine Arbeit erhalten. (Recibió mucho reconocimiento por su trabajo)",
       "Anerkennung ist wichtig für die Motivation. (El reconocimiento es importante para la motivación)",
@@ -673,7 +673,7 @@ const palabras = [
   },
   {
     palabra: "Hinterlistig",
-    significado: "Engañoso, astuto",
+    significado: "Engañoso, Astuto",
     frases: [
       "Er hat auf eine hinterlistige Weise gehandelt. (Actuó de manera engañosa)",
       "Die Falle war hinterlistig. (La trampa fue astuta)",
@@ -682,7 +682,7 @@ const palabras = [
   },
   {
     palabra: "Rücksichtslos",
-    significado: "Desconsiderado, imprudente",
+    significado: "Desconsiderado, Imprudente",
     frases: [
       "Sein Verhalten war sehr rücksichtslos. (Su comportamiento fue muy desconsiderado)",
       "Rücksichtsloses Fahren kann Unfälle verursachen. (Conducir imprudentemente puede causar accidentes)",
@@ -691,7 +691,7 @@ const palabras = [
   },
   {
     palabra: "Wertschätzen",
-    significado: "Apreciar, valorar",
+    significado: "Apreciar, Valorar",
     frases: [
       "Ich weiß es zu wertschätzen, wenn jemand ehrlich ist. (Aprecio cuando alguien es honesto)",
       "Man sollte kleine Gesten wertschätzen. (Deberíamos valorar los pequeños gestos)",
@@ -746,7 +746,7 @@ const palabras = [
   },
   {
     palabra: "Voraussetzung",
-    significado: "Requisito, condición previa",
+    significado: "Requisito, Condición previa",
     frases: [
       "Eine gute Ausbildung ist die Voraussetzung für diesen Job. (Una buena educación es el requisito para este trabajo)",
       "Was sind die Voraussetzungen für das Stipendium? (¿Cuáles son los requisitos para la beca?)",
@@ -783,7 +783,7 @@ const palabras = [
  
   {
     palabra: "Vorsichtig",
-    significado: "Cauteloso, cuidadoso",
+    significado: "Cauteloso, Cuidadoso",
     frases: [
       "Sei vorsichtig beim Überqueren der Straße. (Ten cuidado al cruzar la calle)",
       "Ich bin vorsichtig mit sensiblen Informationen. (Soy cuidadoso con la información sensible)",
@@ -918,7 +918,7 @@ const palabras = [
   },
   {
     palabra: "Verknüpfung",
-    significado: "Conexión, enlace",
+    significado: "Conexión, Enlace",
     frases: [
       "Die Verknüpfung zwischen den Daten ist wichtig. (La conexión entre los datos es importante)",
       "Es gab eine interessante Verknüpfung zwischen den beiden Themen. (Hubo una conexión interesante entre los dos temas)",
@@ -936,7 +936,7 @@ const palabras = [
   },
   {
     palabra: "Veränderung",
-    significado: "Cambio, transformación",
+    significado: "Cambio, Transformación",
     frases: [
       "Die Veränderung der Meinung war deutlich. (El cambio de opinión fue evidente)",
       "Wir müssen uns auf Veränderungen im Markt einstellen. (Debemos adaptarnos a los cambios en el mercado)",
@@ -945,7 +945,7 @@ const palabras = [
   },
   {
     palabra: "Ermutigung",
-    significado: "Ánimo, aliento",
+    significado: "Ánimo, Aliento",
     frases: [
       "Die Ermutigung seiner Freunde half ihm sehr. (El aliento de sus amigos le ayudó mucho)",
       "Es braucht viel Ermutigung, um neue Wege zu gehen. (Se necesita mucho ánimo para tomar nuevos caminos)",
@@ -954,7 +954,7 @@ const palabras = [
   },
   {
     palabra: "Widerspruch",
-    significado: "Contradicción, objeción",
+    significado: "Contradicción, Objeción",
     frases: [
       "Es gab einen Widerspruch zwischen seinen Worten und Taten. (Hubo una contradicción entre sus palabras y acciones)",
       "Der Widerspruch in seinen Argumenten ist offensichtlich. (La contradicción en sus argumentos es evidente)",
@@ -963,7 +963,7 @@ const palabras = [
   },
   {
     palabra: "Zusammenhang",
-    significado: "Contexto, relación",
+    significado: "Contexto, Relación",
     frases: [
       "Der Zusammenhang zwischen diesen zwei Themen ist wichtig. (La relación entre estos dos temas es importante)",
       "Im Zusammenhang mit der Diskussion haben wir neue Ideen entwickelt. (En el contexto de la discusión, desarrollamos nuevas ideas)",
@@ -972,7 +972,7 @@ const palabras = [
   },
   {
     palabra: "Anerkennung",
-    significado: "Reconocimiento, aprobación",
+    significado: "Reconocimiento, Aprobación",
     frases: [
       "Die Anerkennung ihrer Leistungen war sehr wichtig für sie. (El reconocimiento de sus logros fue muy importante para ella)",
       "Er erhielt die Anerkennung für seine hervorragende Arbeit. (Recibió reconocimiento por su excelente trabajo)",
@@ -981,7 +981,7 @@ const palabras = [
   },
   {
     palabra: "Erklärung",
-    significado: "Declaración, explicación",
+    significado: "Declaración, Explicación",
     frases: [
       "Die Erklärung des Problems war hilfreich. (La explicación del problema fue útil)",
       "Wir warten auf eine Erklärung von der Firma. (Estamos esperando una declaración de la empresa)",
@@ -1008,7 +1008,7 @@ const palabras = [
   },
   {
     palabra: "Veranlassung",
-    significado: "Motivo, causa",
+    significado: "Motivo, Causa",
     frases: [
       "Die Veranlassung für die Versammlung war die Dringlichkeit der Situation. (El motivo para la reunión fue la urgencia de la situación)",
       "Ich sehe keinen guten Grund oder Veranlassung dafür. (No veo una buena razón o motivo para ello)",
@@ -1017,7 +1017,7 @@ const palabras = [
   },
   {
     palabra: "Einstellung",
-    significado: "Actitud, enfoque",
+    significado: "Actitud, Enfoque",
     frases: [
       "Ihre Einstellung zur Arbeit ist sehr positiv. (Su actitud hacia el trabajo es muy positiva)",
       "Eine offene Einstellung kann neue Möglichkeiten schaffen. (Una actitud abierta puede crear nuevas oportunidades)",
@@ -1059,7 +1059,7 @@ const palabras = [
   },
   {
     palabra: "Erleichtern",
-    significado: "Facilitar, aligerar",
+    significado: "Facilitar, Aligerar",
     frases: [
       "Die neuen Systeme erleichtern die Arbeit. (Los nuevos sistemas facilitan el trabajo)",
       "Eine gute Planung erleichtert den Prozess. (Una buena planificación facilita el proceso)",
@@ -1068,7 +1068,7 @@ const palabras = [
   },
   {
     palabra: "Missbrauchen",
-    significado: "Abusar, maltratar",
+    significado: "Abusar, Maltratar",
     frases: [
       "Er hat seine Macht missbraucht. (Abusó de su poder)",
       "Missbrauch von Vertrauen ist unverzeihlich. (El abuso de la confianza es imperdonable)",
@@ -1094,8 +1094,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "beschreiben",
-    significado: "describir",
+    palabra: "Beschreiben",
+    significado: "Describir",
     frases: [
       "Kannst du den Mann beschreiben? (¿Puedes describir al hombre?)",
       "Sie beschreibt die Situation sehr genau. (Ella describe la situación con mucho detalle.)",
@@ -1103,8 +1103,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "entstehen",
-    significado: "surgir, originarse",
+    palabra: "Entstehen",
+    significado: "Surgir, Originarse",
     frases: [
       "Ein neues Problem ist entstanden. (Ha surgido un nuevo problema.)",
       "Wie ist die Idee entstanden? (¿Cómo surgió la idea?)",
@@ -1112,8 +1112,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "entscheiden",
-    significado: "decidir",
+    palabra: "Entscheiden",
+    significado: "Decidir",
     frases: [
       "Hast du schon entschieden, was du machen wirst? (¿Ya decidiste qué vas a hacer?)",
       "Wir müssen uns bald entscheiden. (Tenemos que decidir pronto.)",
@@ -1121,8 +1121,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "erkennen",
-    significado: "reconocer, darse cuenta",
+    palabra: "Erkennen",
+    significado: "Reconocer, Darse cuenta",
     frases: [
       "Ich habe ihn sofort erkannt. (Lo reconocí de inmediato.)",
       "Sie erkennt ihren Fehler. (Ella reconoce su error.)",
@@ -1130,8 +1130,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "erklären",
-    significado: "explicar",
+    palabra: "Erklären",
+    significado: "Explicar",
     frases: [
       "Kannst du mir das bitte erklären? (¿Puedes explicarme eso, por favor?)",
       "Der Lehrer erklärt die Aufgabe. (El profesor explica la tarea.)",
@@ -1139,8 +1139,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "erwarten",
-    significado: "esperar (algo de alguien o algo)",
+    palabra: "Erwarten",
+    significado: "Esperar (algo de alguien o algo)",
     frases: [
       "Ich erwarte gute Ergebnisse. (Espero buenos resultados.)",
       "Erwartest du Gäste? (¿Estás esperando invitados?)",
@@ -1148,8 +1148,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "genießen",
-    significado: "disfrutar",
+    palabra: "Genießen",
+    significado: "Disfrutar",
     frases: [
       "Ich genieße das gute Wetter. (Disfruto del buen clima.)",
       "Hast du den Urlaub genossen? (¿Disfrutaste de las vacaciones?)",
@@ -1157,26 +1157,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "gelingen",
-    significado: "lograr, salir bien",
-    frases: [
-      "Es ist mir gelungen, den Test zu bestehen. (He logrado aprobar el examen.)",
-      "Das Projekt ist ihm gut gelungen. (El proyecto le salió bien.)",
-      "Wird es uns gelingen, rechtzeitig fertig zu werden? (¿Lograremos terminar a tiempo?)"
-    ]
-  },
-  {
-    palabra: "glauben",
-    significado: "creer",
-    frases: [
-      "Ich glaube, dass es morgen regnen wird. (Creo que mañana lloverá.)",
-      "Er glaubt an sich selbst. (Él cree en sí mismo.)",
-      "Glaubst du an Wunder? (¿Crees en los milagros?)"
-    ]
-  },
-  {
-    palabra: "hoffen",
-    significado: "esperar, tener esperanza",
+    palabra: "Hoffen",
+    significado: "Esperar, Tener esperanza",
     frases: [
       "Ich hoffe, dass alles gut wird. (Espero que todo salga bien.)",
       "Wir hoffen auf besseres Wetter. (Esperamos tener mejor clima.)",
@@ -1184,8 +1166,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "klingen",
-    significado: "sonar",
+    palabra: "Klingen",
+    significado: "Sonar",
     frases: [
       "Das klingt nach einer guten Idee. (Eso suena a una buena idea.)",
       "Ihr Lachen klingt fröhlich. (Su risa suena alegre.)",
@@ -1193,8 +1175,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "leiden",
-    significado: "sufrir, padecer",
+    palabra: "Leiden",
+    significado: "Sufrir, Padecer",
     frases: [
       "Er leidet an einer Erkältung. (Él sufre de un resfriado.)",
       "Sie leidet unter Stress bei der Arbeit. (Ella padece de estrés en el trabajo.)",
@@ -1202,8 +1184,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "missverstehen",
-    significado: "malinterpretar",
+    palabra: "Missverstehen",
+    significado: "Malinterpretar",
     frases: [
       "Ich glaube, du hast mich missverstanden. (Creo que me malinterpretaste.)",
       "Es ist leicht, diese Regel zu missverstehen. (Es fácil malinterpretar esta regla.)",
@@ -1211,8 +1193,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "sich bemühen",
-    significado: "esforzarse",
+    palabra: "Sich bemühen",
+    significado: "Esforzarse",
     frases: [
       "Ich bemühe mich, Deutsch zu lernen. (Me esfuerzo por aprender alemán.)",
       "Er bemüht sich, pünktlich zu sein. (Él se esfuerza por ser puntual.)",
@@ -1220,8 +1202,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "sich erinnern",
-    significado: "recordar",
+    palabra: "Sich erinnern",
+    significado: "Recordar",
     frases: [
       "Ich erinnere mich an meinen ersten Schultag. (Recuerdo mi primer día de escuela.)",
       "Kannst du dich an sie erinnern? (¿Puedes recordarla?)",
@@ -1229,8 +1211,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "sich irren",
-    significado: "equivocarse",
+    palabra: "Sich irren",
+    significado: "Equivocarse",
     frases: [
       "Ich habe mich geirrt, das war die falsche Tür. (Me equivoqué, era la puerta equivocada.)",
       "Wenn du denkst, dass er lügt, irrst du dich. (Si crees que él está mintiendo, te equivocas.)",
@@ -1238,17 +1220,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "stehlen",
-    significado: "robar",
-    frases: [
-      "Jemand hat mein Fahrrad gestohlen. (Alguien robó mi bicicleta.)",
-      "Er wurde beim Stehlen erwischt. (Fue atrapado robando.)",
-      "Sie stiehlt immer die besten Ideen. (Ella siempre roba las mejores ideas.)"
-    ]
-  },
-  {
-    palabra: "unterscheiden",
-    significado: "distinguir",
+    palabra: "Unterscheiden",
+    significado: "Distinguir",
     frases: [
       "Kannst du die beiden Bilder unterscheiden? (¿Puedes distinguir las dos imágenes?)",
       "Er kann nicht zwischen richtig und falsch unterscheiden. (Él no puede distinguir entre lo correcto y lo incorrecto.)",
@@ -1256,8 +1229,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "vergessen",
-    significado: "olvidar",
+    palabra: "Vergessen",
+    significado: "Olvidar",
     frases: [
       "Ich habe meinen Schlüssel vergessen. (Olvidé mi llave.)",
       "Vergiss nicht, das Licht auszumachen. (No olvides apagar la luz.)",
@@ -1265,8 +1238,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "verhindern",
-    significado: "evitar, impedir",
+    palabra: "Verhindern",
+    significado: "Evitar, Impedir",
     frases: [
       "Der Unfall konnte nicht verhindert werden. (El accidente no pudo ser evitado.)",
       "Er versucht, das Schlimmste zu verhindern. (Él intenta evitar lo peor.)",
@@ -1274,8 +1247,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "verschwinden",
-    significado: "desaparecer",
+    palabra: "Verschwinden",
+    significado: "Desaparecer",
     frases: [
       "Mein Geldbeutel ist verschwunden. (Mi billetera ha desaparecido.)",
       "Er verschwindet immer, wenn es Arbeit gibt. (Él siempre desaparece cuando hay trabajo.)",
@@ -1283,8 +1256,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "verzeihen",
-    significado: "perdonar",
+    palabra: "Verzeihen",
+    significado: "Perdonar",
     frases: [
       "Kannst du mir bitte verzeihen? (¿Puedes perdonarme, por favor?)",
       "Sie hat ihm seinen Fehler verziehen. (Ella le perdonó su error.)",
@@ -1292,8 +1265,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "widersprechen",
-    significado: "contradecir",
+    palabra: "Widersprechen",
+    significado: "Contradecir",
     frases: [
       "Er widerspricht mir ständig. (Él me contradice todo el tiempo.)",
       "Du solltest nicht immer widersprechen. (No deberías contradecir siempre.)",
@@ -1301,8 +1274,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "zerstören",
-    significado: "destruir",
+    palabra: "Zerstören",
+    significado: "Destruir",
     frases: [
       "Der Sturm hat viele Häuser zerstört. (La tormenta destruyó muchas casas.)",
       "Er hat alle Beweise zerstört. (Él destruyó todas las pruebas.)",
@@ -1310,8 +1283,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "zwingen",
-    significado: "obligar",
+    palabra: "Zwingen",
+    significado: "Obligar",
     frases: [
       "Niemand kann dich dazu zwingen. (Nadie puede obligarte a hacer eso.)",
       "Er zwang mich, die Wahrheit zu sagen. (Él me obligó a decir la verdad.)",
@@ -1319,8 +1292,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "befehlen",
-    significado: "ordenar, mandar",
+    palabra: "Befehlen",
+    significado: "Ordenar, Mandar",
     frases: [
       "Der König befiehlt seinem Heer zu marschieren. (El rey ordena a su ejército marchar.)",
       "Ich kann dir nichts befehlen, du bist frei. (No puedo ordenarte, eres libre.)",
@@ -1328,8 +1301,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "beurteilen",
-    significado: "juzgar, evaluar",
+    palabra: "Beurteilen",
+    significado: "Juzgar, Evaluar",
     frases: [
       "Man sollte Menschen nicht nach ihrem Aussehen beurteilen. (No se debería juzgar a las personas por su apariencia.)",
       "Der Lehrer beurteilt die Leistung der Schüler. (El profesor evalúa el rendimiento de los alumnos.)",
@@ -1337,8 +1310,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "bewältigen",
-    significado: "superar, manejar",
+    palabra: "Bewältigen",
+    significado: "Superar, Manejar",
     frases: [
       "Er muss viele Aufgaben gleichzeitig bewältigen. (Él tiene que manejar muchas tareas al mismo tiempo.)",
       "Wir haben es geschafft, das Problem zu bewältigen. (Logramos superar el problema.)",
@@ -1346,8 +1319,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "drucken",
-    significado: "imprimir",
+    palabra: "Drucken",
+    significado: "Imprimir",
     frases: [
       "Kannst du das Dokument für mich drucken? (¿Puedes imprimir el documento para mí?)",
       "Die Zeitung wird täglich neu gedruckt. (El periódico se imprime diariamente.)",
@@ -1355,8 +1328,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "durchführen",
-    significado: "realizar, llevar a cabo",
+    palabra: "Durchführen",
+    significado: "Realizar, llevar a cabo",
     frases: [
       "Die Firma führt das neue Projekt durch. (La empresa está llevando a cabo el nuevo proyecto.)",
       "Wir werden den Plan wie geplant durchführen. (Vamos a realizar el plan según lo previsto.)",
@@ -1364,8 +1337,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "empfehlen",
-    significado: "recomendar",
+    palabra: "Empfehlen",
+    significado: "Recomendar",
     frases: [
       "Kannst du mir ein gutes Restaurant empfehlen? (¿Puedes recomendarme un buen restaurante?)",
       "Der Arzt empfiehlt, mehr Wasser zu trinken. (El médico recomienda beber más agua.)",
@@ -1373,8 +1346,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "erfordern",
-    significado: "requerir",
+    palabra: "Erfordern",
+    significado: "Requerir",
     frases: [
       "Diese Aufgabe erfordert viel Geduld. (Esta tarea requiere mucha paciencia.)",
       "Das Projekt erfordert spezielle Kenntnisse. (El proyecto requiere conocimientos especiales.)",
@@ -1382,8 +1355,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "erscheinen",
-    significado: "aparecer, publicarse",
+    palabra: "Erscheinen",
+    significado: "Aparecer, publicarse",
     frases: [
       "Das Buch wird nächste Woche erscheinen. (El libro se publicará la próxima semana.)",
       "Er erschien plötzlich auf der Party. (Él apareció de repente en la fiesta.)",
@@ -1391,8 +1364,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "feststellen",
-    significado: "determinar, notar",
+    palabra: "Feststellen",
+    significado: "Determinar, Notar",
     frases: [
       "Der Arzt stellte fest, dass er gesund ist. (El médico determinó que él está sano.)",
       "Sie stellte fest, dass ihr Schlüssel fehlte. (Ella notó que le faltaba la llave.)",
@@ -1400,8 +1373,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "gelten",
-    significado: "ser válido, aplicar",
+    palabra: "Gelten",
+    significado: "Ser válido, Aplicar",
     frases: [
       "Das Angebot gilt nur bis morgen. (La oferta solo es válida hasta mañana.)",
       "Die Regeln gelten für alle. (Las reglas aplican a todos.)",
@@ -1409,8 +1382,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "herstellen",
-    significado: "producir, fabricar",
+    palabra: "Herstellen",
+    significado: "Producir, Fabricar",
     frases: [
       "Diese Firma stellt Autos her. (Esta empresa fabrica autos.)",
       "Die Medikamente werden im Labor hergestellt. (Los medicamentos se producen en el laboratorio.)",
@@ -1418,8 +1391,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "hinzufügen",
-    significado: "añadir, agregar",
+    palabra: "Hinzufügen",
+    significado: "Añadir, Agregar",
     frases: [
       "Möchtest du noch etwas hinzufügen? (¿Quieres añadir algo más?)",
       "Er hat seiner Rede nichts mehr hinzuzufügen. (No tiene nada más que agregar a su discurso.)",
@@ -1427,8 +1400,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "nachdenken",
-    significado: "reflexionar, pensar",
+    palabra: "Nachdenken",
+    significado: "Reflexionar, Pensar",
     frases: [
       "Ich muss über deinen Vorschlag nachdenken. (Tengo que reflexionar sobre tu propuesta.)",
       "Er denkt oft über seine Zukunft nach. (Él piensa mucho en su futuro.)",
@@ -1436,8 +1409,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "realisieren",
-    significado: "darse cuenta, realizar",
+    palabra: "Realisieren",
+    significado: "Darse cuenta, Realizar",
     frases: [
       "Sie hat nicht realisiert, dass sie zu spät ist. (Ella no se dio cuenta de que llegaba tarde.)",
       "Er realisiert seinen Traum, Musiker zu werden. (Él está cumpliendo su sueño de ser músico.)",
@@ -1445,8 +1418,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "scheinen",
-    significado: "parecer, brillar",
+    palabra: "Scheinen",
+    significado: "Parecer, Brillar",
     frases: [
       "Es scheint, als ob er die Wahrheit sagt. (Parece que él está diciendo la verdad.)",
       "Die Sonne scheint heute sehr hell. (El sol brilla muy fuerte hoy.)",
@@ -1454,8 +1427,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "schließen",
-    significado: "cerrar, concluir",
+    palabra: "Schließen",
+    significado: "Cerrar, Concluir",
     frases: [
       "Die Geschäfte schließen um 20 Uhr. (Las tiendas cierran a las 20 horas.)",
       "Wir schließen das Thema für heute ab. (Concluimos el tema por hoy.)",
@@ -1463,8 +1436,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "überprüfen",
-    significado: "verificar, comprobar",
+    palabra: "Überprüfen",
+    significado: "Verificar, Comprobar",
     frases: [
       "Kannst du die Rechnung noch einmal überprüfen? (¿Puedes verificar la factura una vez más?)",
       "Der Mechaniker überprüft das Auto. (El mecánico está revisando el auto.)",
@@ -1472,8 +1445,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "unterbrechen",
-    significado: "interrumpir",
+    palabra: "Unterbrechen",
+    significado: "Interrumpir",
     frases: [
       "Entschuldigung, dass ich dich unterbreche. (Perdón por interrumpirte.)",
       "Der Strom wurde plötzlich unterbrochen. (La electricidad se interrumpió de repente.)",
@@ -1481,8 +1454,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "verbergen",
-    significado: "esconder, ocultar",
+    palabra: "Verbergen",
+    significado: "Esconder, Ocultar",
     frases: [
       "Er hat nichts zu verbergen. (Él no tiene nada que esconder.)",
       "Sie versucht, ihre Gefühle zu verbergen. (Ella intenta ocultar sus sentimientos.)",
@@ -1490,8 +1463,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "verbessern",
-    significado: "mejorar, corregir",
+    palabra: "Verbessern",
+    significado: "Mejorar, Corregir",
     frases: [
       "Ich möchte mein Deutsch verbessern. (Quiero mejorar mi alemán.)",
       "Wir müssen das System verbessern. (Debemos mejorar el sistema.)",
@@ -1499,17 +1472,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "vergiften",
-    significado: "envenenar",
-    frases: [
-      "Das Wasser wurde vergiftet. (El agua fue envenenada.)",
-      "Sie vergiftete das Essen ihres Feindes. (Ella envenenó la comida de su enemigo.)",
-      "Die Umwelt wird durch Chemikalien vergiftet. (El medio ambiente está siendo envenenado por químicos.)"
-    ]
-  },
-  {
-    palabra: "verlangen",
-    significado: "exigir, pedir",
+    palabra: "Verlangen",
+    significado: "Exigir, Pedir",
     frases: [
       "Der Chef verlangt absolute Pünktlichkeit. (El jefe exige absoluta puntualidad.)",
       "Sie verlangt, dass wir pünktlich sind. (Ella exige que seamos puntuales.)",
@@ -1517,8 +1481,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "versichern",
-    significado: "asegurar",
+    palabra: "Versichern",
+    significado: "Asegurar",
     frases: [
       "Er versichert mir, dass alles in Ordnung ist. (Él me asegura que todo está bien.)",
       "Wir müssen das Haus gegen Feuer versichern. (Debemos asegurar la casa contra incendios.)",
@@ -1530,8 +1494,8 @@ const palabras = [
 /// ADJETIVOSS////////////////////
 /// ADJETIVOSS////////////////////
 {
-  palabra: "langweilig",
-  significado: "aburrido",
+  palabra: "Langweilig",
+  significado: "Aburrido",
   frases: [
     "Die Vorlesung war sehr langweilig. (La conferencia fue muy aburrida.)",
     "Ich fand den Film langweilig. (Encontré la película aburrida.)",
@@ -1539,17 +1503,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "dumm",
-  significado: "tonto",
-  frases: [
-    "Das war eine dumme Entscheidung. (Esa fue una decisión tonta.)",
-    "Sei nicht dumm, das macht keinen Sinn. (No seas tonto, eso no tiene sentido.)",
-    "Manchmal kann ich wirklich dumm sein. (A veces realmente puedo ser tonto.)"
-  ]
-},
-{
-  palabra: "fröhlich",
-  significado: "alegre",
+  palabra: "Fröhlich",
+  significado: "Alegre",
   frases: [
     "Sie ist immer fröhlich und lächelt. (Ella siempre está alegre y sonriente.)",
     "Die fröhliche Musik bringt gute Laune. (La música alegre trae buen humor.)",
@@ -1557,8 +1512,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "verdächtig",
-  significado: "sospechoso",
+  palabra: "Verdächtig",
+  significado: "Sospechoso",
   frases: [
     "Sein Verhalten war sehr verdächtig. (Su comportamiento era muy sospechoso.)",
     "Die Nachbarn fanden ihn verdächtig. (Los vecinos lo encontraron sospechoso.)",
@@ -1566,8 +1521,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "einfühlsam",
-  significado: "empático",
+  palabra: "Einfühlsam",
+  significado: "Empático",
   frases: [
     "Er ist ein einfühlsamer Freund. (Él es un amigo empático.)",
     "Empathie ist wichtig in Beziehungen. (La empatía es importante en las relaciones.)",
@@ -1575,8 +1530,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "aggressiv",
-  significado: "agresivo",
+  palabra: "Aggressiv",
+  significado: "Agresivo",
   frases: [
     "Sein aggressives Verhalten ist nicht akzeptabel. (Su comportamiento agresivo no es aceptable.)",
     "Manchmal kann er sehr aggressiv sein. (A veces puede ser muy agresivo.)",
@@ -1584,8 +1539,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "freundlich",
-  significado: "amable",
+  palabra: "Freundlich",
+  significado: "Amable",
   frases: [
     "Sie ist immer freundlich zu allen. (Ella siempre es amable con todos.)",
     "Ein freundliches Lächeln kann viel bewirken. (Una sonrisa amable puede hacer mucho.)",
@@ -1593,8 +1548,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "ehrlich",
-  significado: "honesto",
+  palabra: "Ehrlich",
+  significado: "Honesto",
   frases: [
     "Es ist wichtig, ehrlich zu sein. (Es importante ser honesto.)",
     "Er gab eine ehrliche Antwort. (Él dio una respuesta honesta.)",
@@ -1602,8 +1557,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "sympathisch",
-  significado: "simpático",
+  palabra: "Sympathisch",
+  significado: "Simpático",
   frases: [
     "Er ist ein sehr sympathischer Mensch. (Él es una persona muy simpática.)",
     "Ich fand die neue Kollegin sehr sympathisch. (Encontré a la nueva colega muy simpática.)",
@@ -1611,8 +1566,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "intelligent",
-  significado: "inteligente",
+  palabra: "Intelligent",
+  significado: "Inteligente",
   frases: [
     "Sie ist sehr intelligent und talentiert. (Ella es muy inteligente y talentosa.)",
     "Intelligente Menschen finden oft kreative Lösungen. (Las personas inteligentes a menudo encuentran soluciones creativas.)",
@@ -1620,8 +1575,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "zärtlich",
-  significado: "tierno",
+  palabra: "Zärtlich",
+  significado: "Tierno",
   frases: [
     "Das Kind ist sehr zärtlich zu seinen Freunden. (El niño es muy tierno con sus amigos.)",
     "Zärtliche Gesten können viel bedeuten. (Los gestos tiernos pueden significar mucho.)",
@@ -1629,8 +1584,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "ehrgeizig",
-  significado: "ambicioso",
+  palabra: "Ehrgeizig",
+  significado: "Ambicioso",
   frases: [
     "Sie ist eine ehrgeizige Studentin. (Ella es una estudiante ambiciosa.)",
     "Ehrgeizige Menschen setzen sich hohe Ziele. (Las personas ambiciosas se establecen altas metas.)",
@@ -1638,8 +1593,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "neugierig",
-  significado: "curioso",
+  palabra: "Neugierig",
+  significado: "Curioso",
   frases: [
     "Das Kind ist sehr neugierig auf die Welt. (El niño es muy curioso sobre el mundo.)",
     "Neugierige Menschen lernen schneller. (Las personas curiosas aprenden más rápido.)",
@@ -1647,8 +1602,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "geduldig",
-  significado: "paciente",
+  palabra: "Geduldig",
+  significado: "Paciente",
   frases: [
     "Sie ist sehr geduldig mit ihren Schülern. (Ella es muy paciente con sus alumnos.)",
     "Geduld ist eine wichtige Tugend. (La paciencia es una virtud importante.)",
@@ -1656,8 +1611,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "unabhängig",
-  significado: "independiente",
+  palabra: "Unabhängig",
+  significado: "Independiente",
   frases: [
     "Sie ist eine unabhängige Frau. (Ella es una mujer independiente.)",
     "Ich möchte finanziell unabhängig sein. (Quiero ser financieramente independiente.)",
@@ -1665,8 +1620,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "anspruchsvoll",
-  significado: "exigente",
+  palabra: "Anspruchsvoll",
+  significado: "Exigente",
   frases: [
     "Der Lehrer ist sehr anspruchsvoll. (El maestro es muy exigente.)",
     "Das Projekt war anspruchsvoll und herausfordernd. (El proyecto fue exigente y desafiante.)",
@@ -1674,8 +1629,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "vorsichtig",
-  significado: "cuidadoso",
+  palabra: "Vorsichtig",
+  significado: "Cuidadoso",
   frases: [
     "Sei vorsichtig mit dem Feuer. (Ten cuidado con el fuego.)",
     "Er fährt vorsichtig in der Stadt. (Él conduce con cuidado en la ciudad.)",
@@ -1683,8 +1638,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "kreativ",
-  significado: "creativo",
+  palabra: "Kreativ",
+  significado: "Creativo",
   frases: [
     "Kreative Menschen finden oft neue Ideen. (Las personas creativas a menudo encuentran nuevas ideas.)",
     "Ich mag kreative Lösungen für Probleme. (Me gustan las soluciones creativas para los problemas.)",
@@ -1692,8 +1647,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "verantwortlich",
-  significado: "responsable",
+  palabra: "Verantwortlich",
+  significado: "Responsable",
   frases: [
     "Sie ist verantwortlich für das Projekt. (Ella es responsable del proyecto.)",
     "Verantwortliche Menschen nehmen ihre Pflichten ernst. (Las personas responsables se toman en serio sus responsabilidades.)",
@@ -1701,8 +1656,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "optimistisch",
-  significado: "optimista",
+  palabra: "Optimistisch",
+  significado: "Optimista",
   frases: [
     "Er ist sehr optimistisch über die Zukunft. (Él es muy optimista sobre el futuro.)",
     "Optimistische Menschen sehen das Positive. (Las personas optimistas ven lo positivo.)",
@@ -1710,8 +1665,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "traurig",
-  significado: "triste",
+  palabra: "Traurig",
+  significado: "Triste",
   frases: [
     "Sie sieht traurig aus. (Ella parece triste.)",
     "Traurige Musik kann berühren. (La música triste puede tocar el corazón.)",
@@ -1719,8 +1674,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "ehrfurchtgebietend",
-  significado: "impresionante",
+  palabra: "Ehrfurchtgebietend",
+  significado: "Impresionante",
   frases: [
     "Die Natur kann ehrfurchtgebietend sein. (La naturaleza puede ser impresionante.)",
     "Sein Talent ist wirklich ehrfurchtgebietend. (Su talento es realmente impresionante.)",
@@ -1728,8 +1683,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "dynamisch",
-  significado: "dinámico",
+  palabra: "Dynamisch",
+  significado: "Dinámico",
   frases: [
     "Sie hat einen dynamischen Lebensstil. (Ella tiene un estilo de vida dinámico.)",
     "Dynamische Unternehmen passen sich schnell an. (Las empresas dinámicas se adaptan rápidamente.)",
@@ -1737,8 +1692,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "unabhängig",
-  significado: "independiente",
+  palabra: "Unabhängig",
+  significado: "Independiente",
   frases: [
     "Ich möchte unabhängig sein. (Quiero ser independiente.)",
     "Unabhängige Menschen treffen ihre eigenen Entscheidungen. (Las personas independientes toman sus propias decisiones.)",
@@ -1746,8 +1701,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "motiviert",
-  significado: "motivado",
+  palabra: "Motiviert",
+  significado: "Motivado",
   frases: [
     "Er ist motiviert, seine Ziele zu erreichen. (Él está motivado para alcanzar sus metas.)",
     "Motivierte Mitarbeiter sind produktiver. (Los empleados motivados son más productivos.)",
@@ -1755,8 +1710,8 @@ const palabras = [
   ]
 },
 {
-  palabra: "flexibel",
-  significado: "flexible",
+  palabra: "Flexibel",
+  significado: "Flexible",
   frases: [
     "Sie hat einen flexiblen Arbeitszeitplan. (Ella tiene un horario de trabajo flexible.)",
     "Flexibles Denken ist wichtig in schwierigen Situationen. (El pensamiento flexible es importante en situaciones difíciles.)",
@@ -1765,7 +1720,7 @@ const palabras = [
 },
 
   {
-    palabra: "unhöflich",
+    palabra: "Unhöflich",
     significado: "maleducado",
     frases: [
       "Es ist unhöflich, jemanden zu unterbrechen. (Es maleducado interrumpir a alguien.)",
@@ -1774,8 +1729,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "unordentlich",
-    significado: "desordenado",
+    palabra: "Unordentlich",
+    significado: "Desordenado",
     frases: [
       "Sein Zimmer ist immer unordentlich. (Su habitación siempre está desordenada.)",
       "Sie ist eine sehr unordentliche Person. (Ella es una persona muy desordenada.)",
@@ -1783,8 +1738,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "klug",
-    significado: "inteligente",
+    palabra: "Klug",
+    significado: "Inteligente",
     frases: [
       "Er ist ein sehr kluger Junge. (Él es un chico muy inteligente.)",
       "Sie hat eine kluge Entscheidung getroffen. (Ella tomó una decisión inteligente.)",
@@ -1792,8 +1747,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "mutig",
-    significado: "valiente",
+    palabra: "Mutig",
+    significado: "Valiente",
     frases: [
       "Der Soldat war sehr mutig im Kampf. (El soldado fue muy valiente en la batalla.)",
       "Es war mutig von ihr, die Wahrheit zu sagen. (Fue valiente por su parte decir la verdad.)",
@@ -1801,8 +1756,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "ehrlich",
-    significado: "honesto",
+    palabra: "Ehrlich",
+    significado: "Honesto",
     frases: [
       "Er ist immer ehrlich, auch wenn es schwer ist. (Él siempre es honesto, aunque sea difícil.)",
       "Sei ehrlich, hast du das wirklich gemacht? (Sé honesto, ¿realmente lo hiciste?)",
@@ -1810,8 +1765,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "faul",
-    significado: "perezoso",
+    palabra: "Faul",
+    significado: "Perezoso",
     frases: [
       "Er ist zu faul, um seine Hausaufgaben zu machen. (Él es demasiado perezoso para hacer sus deberes.)",
       "An einem regnerischen Tag werde ich oft faul. (En un día lluvioso a menudo me vuelvo perezoso.)",
@@ -1819,8 +1774,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "laut",
-    significado: "ruidoso",
+    palabra: "Laut",
+    significado: "Ruidoso",
     frases: [
       "Das Restaurant ist sehr laut. (El restaurante es muy ruidoso.)",
       "Die Musik war zu laut. (La música estaba demasiado alta.)",
@@ -1828,8 +1783,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "ruhig",
-    significado: "tranquilo",
+    palabra: "Ruhig",
+    significado: "Tranquilo",
     frases: [
       "Das Meer war heute sehr ruhig. (El mar estaba muy tranquilo hoy.)",
       "Er ist eine ruhige Person, die selten wütend wird. (Él es una persona tranquila, que rara vez se enoja.)",
@@ -1837,8 +1792,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "großzügig",
-    significado: "generoso",
+    palabra: "Großzügig",
+    significado: "Generoso",
     frases: [
       "Sie war immer sehr großzügig zu uns. (Ella siempre fue muy generosa con nosotros.)",
       "Es war großzügig von dir, uns zu helfen. (Fue generoso de tu parte ayudarnos.)",
@@ -1846,8 +1801,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "gierig",
-    significado: "avaro, codicioso",
+    palabra: "Gierig",
+    significado: "Avaro, Codicioso",
     frases: [
       "Er ist gierig nach Macht. (Él es codicioso de poder.)",
       "Gierige Menschen sind oft unglücklich. (Las personas codiciosas a menudo son infelices.)",
@@ -1855,8 +1810,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "ehrgeizig",
-    significado: "ambicioso",
+    palabra: "Ehrgeizig",
+    significado: "Ambicioso",
     frases: [
       "Sie ist eine ehrgeizige Schülerin. (Ella es una estudiante ambiciosa.)",
       "Sein Ehrgeiz treibt ihn immer weiter. (Su ambición lo impulsa siempre hacia adelante.)",
@@ -1864,8 +1819,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "geduldig",
-    significado: "paciente",
+    palabra: "Geduldig",
+    significado: "Paciente",
     frases: [
       "Man muss geduldig sein, um ein gutes Ergebnis zu erzielen. (Hay que ser paciente para obtener un buen resultado.)",
       "Sie war sehr geduldig mit den Kindern. (Ella fue muy paciente con los niños.)",
@@ -1873,8 +1828,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "ungeduldig",
-    significado: "impaciente",
+    palabra: "Ungeduldig",
+    significado: "Impaciente",
     frases: [
       "Er ist immer ungeduldig, wenn er warten muss. (Siempre está impaciente cuando tiene que esperar.)",
       "Sie wurde ungeduldig, als das Gespräch länger dauerte. (Se volvió impaciente cuando la conversación se alargó.)",
@@ -1882,8 +1837,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "zufrieden",
-    significado: "satisfecho",
+    palabra: "Zufrieden",
+    significado: "Satisfecho",
     frases: [
       "Ich bin mit dem Ergebnis sehr zufrieden. (Estoy muy satisfecho con el resultado.)",
       "Bist du mit deinem Leben zufrieden? (¿Estás satisfecho con tu vida?)",
@@ -1891,8 +1846,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "wütend",
-    significado: "furioso",
+    palabra: "Wütend",
+    significado: "Furioso",
     frases: [
       "Er war wütend, weil sie zu spät kam. (Él estaba furioso porque ella llegó tarde.)",
       "Sie wurde wütend, als sie die Nachricht hörte. (Se enfureció cuando escuchó la noticia.)",
@@ -1900,8 +1855,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "stolz",
-    significado: "orgulloso",
+    palabra: "Stolz",
+    significado: "Orgulloso",
     frases: [
       "Er ist stolz auf seinen Erfolg. (Él está orgulloso de su éxito.)",
       "Sie war stolz auf ihre Kinder. (Ella estaba orgullosa de sus hijos.)",
@@ -1909,8 +1864,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "schüchtern",
-    significado: "tímido",
+    palabra: "Schüchtern",
+    significado: "Tímido",
     frases: [
       "Sie ist zu schüchtern, um mit Fremden zu sprechen. (Ella es demasiado tímida para hablar con extraños.)",
       "Er wird oft schüchtern in großen Gruppen. (Él a menudo se pone tímido en grandes grupos.)",
@@ -1945,8 +1900,8 @@ const palabras = [
     ]
   },
   {
-    palabra: "entspannt",
-    significado: "relajado",
+    palabra: "Entspannt",
+    significado: "Relajado",
     frases: [
       "Er fühlt sich nach dem Urlaub sehr entspannt. (Se siente muy relajado después de las vacaciones.)",
       "Das Wochenende war sehr entspannt. (El fin de semana fue muy relajado.)",
@@ -2066,9 +2021,9 @@ const filteredPalabras = palabras.filter(palabra => {
         <h2>{palabra}</h2>
       </div>
       <div className="card-back">
-        <h2>{significado}</h2>
           
         <ul>
+        <h2 className='h2'>{significado}</h2>
         {frases && frases.map((frase, index) => (
             
             <p key={index}>{frase}</p>
@@ -2089,13 +2044,28 @@ const filteredPalabras = palabras.filter(palabra => {
     </div>
       <p className='anzahlWorter'> Anzahl der Wörter: {cantidadPalabras}</p>
 
-
-   
     <style jsx>{`  
       p{
         font-family:  cursive;
+        font-family:  Lato;
+        line-height:1.9rem;
+        font-size: 1.4rem;
+        margin-bottom:-0.4rem;
       }
-      
+      h2 {
+        
+        font-family: Playfair Display;
+        margin: 0;
+        font-size: 2.5em; 
+        
+      }
+      .h2 {
+        font-family: Playfair Display;
+        line-height:3.2rem;
+        margin: 0;
+        font-size: 2em; 
+        margin-bottom: -1rem; 
+      }
       .anzahlWorter{
         font-family:  cursive;
         position:absolute;
@@ -2122,7 +2092,7 @@ const filteredPalabras = palabras.filter(palabra => {
       }
       .card-front, .card-back {
         backdrop-filter: blur(10px);
-        padding:10px;
+        padding:00px;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -2131,12 +2101,11 @@ const filteredPalabras = palabras.filter(palabra => {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        border: 2px solid #ddd;
         border-radius: 10px;
         overflow: hidden; 
       }
       .card-front {
-        height:15rem;
+        height:17rem;
       }
       .card-back {
   color: white;
@@ -2151,12 +2120,7 @@ const filteredPalabras = palabras.filter(palabra => {
   height: auto; 
   max-height: 150%; 
 }
-      h2 {
-        font-family:  cursive;
-        margin: 0;
-        font-size: 1.5em; 
-        padding: 10px; 
-      }
+      
       ul {
         list-style: none;
         overflow: hidden; /* Evita que el texto de la lista se salga */
@@ -2164,7 +2128,9 @@ const filteredPalabras = palabras.filter(palabra => {
       }
 
       .change-word-button {
-          margin-top: 10px;
+
+          margin-top: 2.3rem;
+          margin-bottom: 1.6rem;
           padding: 10px 20px;
           border: none;
           border-radius: 5px;

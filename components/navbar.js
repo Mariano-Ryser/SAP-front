@@ -39,9 +39,9 @@ const Navbar = () => {
   background-color: rgb(215, 215, 215);
  }
     .navbar{
-      z-index: 1;
-      position: fixed;
-      top: -1px;
+        z-index: 1;
+        position: fixed;
+        top: -1px;
         width: 100%; 
         height: 56px;
         background-color: rgb(241, 239, 237);

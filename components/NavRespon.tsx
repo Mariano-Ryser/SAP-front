@@ -111,10 +111,15 @@ const NavRespon = () => {
 return (
     <>    
    
+{/* BOTONES PARA CAMBIAR COLOR DE FUENTE */}
 {/* <button className={styles.buttonColor} onClick={changeFontColor}></button> */}
-<button className={styles.buttonColor} onClick={changeBgColor}></button>
-<button className={styles.buttonLetterColor} onClick={changeLetterColor}></button>
+{/* <button className={styles.buttonColor} onClick={changeBgColor}></button>
+<button className={styles.buttonLetterColor} onClick={changeLetterColor}></button> */}
+
+{/* CAJA DE COLORES POR DIA  */}
 {/* <DayColorSquare /> */}
+
+
 <nav className={styles.nav}>
         <div className={styles.img}>
          <Link href="/home"><h1 className={styles.logo}></h1></Link> 
@@ -173,7 +178,7 @@ return (
               </Link>
         
           {/* CHAR CREATOR */}
-          <Link href="/proyectos/charCreator/personaje">
+          {/* <Link href="/proyectos/charCreator/personaje">
                 <li
                   id='li'
                   className={styles.li}
@@ -184,9 +189,8 @@ return (
                       className={styles.padlock}></div>
                   <a className={styles.a}>Chars Creator</a>
                 </li>
-                </Link>
+                </Link> */}
 
-  
                  {/* Lectura*/}
               <Link href="/proyectos/lectura/lectura">
               

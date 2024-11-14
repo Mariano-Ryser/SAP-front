@@ -32,7 +32,7 @@ export default function TrucoCounter() {
     const pointsInBuenas = points > 9 ? points - 9 : 0; // Puntos en las Buenas
     const fullRowsInBuenas = Math.floor(pointsInBuenas / 3); // Filas completas en Buenas
     const remainingPointsInBuenas = pointsInBuenas % 3; // Palitos sobrantes en las Buenas
-
+      
     const renderRow = (fullRows, remainingPoints) => (
       <>
         {[...Array(fullRows)].map((_, index) => (
@@ -41,9 +41,9 @@ export default function TrucoCounter() {
           </div>
         ))}
         {remainingPoints > 0 && (
-          <div className="row">
+          <p className="row">
             {'| '.repeat(remainingPoints)}
-          </div>
+          </p>
         )}
       </>
     );
@@ -124,7 +124,6 @@ export default function TrucoCounter() {
           align-items: center;
         }
         .row {
-          font-size: 1px;
           margin-bottom:5rem;
           padding: 10rem;
         }

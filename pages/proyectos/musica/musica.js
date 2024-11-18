@@ -120,31 +120,42 @@ function rearrangeChords(chords) {
   // Crear un nuevo arreglo con las posiciones cambiadas
   const newChords = [];
   // 
-  // newChords[0] = chords[3]; // El acorde en la posición 3 pasa a la posición 0
-  // newChords[1] = chords[6]; // El acorde en la posición 6 pasa a la posición 1
-  // newChords[2] = chords[2]; // El acorde en la posición 2 queda en la posición 2
-  // newChords[3] = chords[5]; // El acorde en la posición 5 pasa a la posición 3
-  // newChords[4] = chords[1]; // El acorde en la posición 1 pasa a la posición 4
-  // newChords[5] = chords[4]; // El acorde en la posición 4 pasa a la posición 5
-  // newChords[6] = chords[0]; // El acorde en la posición 0 pasa a la posición 6
-
-  newChords[0] = chords[1]; // El acorde en la posición 3 pasa a la posición 0
-  newChords[1] = chords[4]; // El acorde en la posición 6 pasa a la posición 1
-  newChords[2] = chords[0]; // El acorde en la posición 2 queda en la posición 2
+  newChords[0] = chords[3]; // El acorde en la posición 3 pasa a la posición 0
+  newChords[1] = chords[6]; // El acorde en la posición 6 pasa a la posición 1
+  newChords[2] = chords[2]; // El acorde en la posición 2 queda en la posición 2
   newChords[3] = chords[5]; // El acorde en la posición 5 pasa a la posición 3
+  newChords[4] = chords[1]; // El acorde en la posición 1 pasa a la posición 4
+  newChords[5] = chords[4]; // El acorde en la posición 4 pasa a la posición 5
+  newChords[6] = chords[0]; // El acorde en la posición 0 pasa a la posición 6
+
+  // newChords[0] = chords[1]; // El acorde en la posición 3 pasa a la posición 0
+  // newChords[1] = chords[4]; // El acorde en la posición 6 pasa a la posición 1
+  // newChords[2] = chords[0]; // El acorde en la posición 2 queda en la posición 2
+  // newChords[3] = chords[5]; // El acorde en la posición 5 pasa a la posición 3
   return newChords;
 }
-const rearranged = rearrangeChords(C);
+const rearrangedC = rearrangeChords(C);
+const rearrangedD = rearrangeChords(D);
+const rearrangedE = rearrangeChords(E);
+const rearrangedF = rearrangeChords(F);
+const rearrangedG = rearrangeChords(G);
+const rearrangedA = rearrangeChords(A);
 
-console.log(rearranged);
+console.log(rearrangedC);
 
   return (
     <>
     {/* ////////////////////// */}
+    <Link href="/proyectos/musica/musicaList"><li>/volver</li></Link>
  <div className="container">
         <div>
                 <p>GmSharpScale = {GSharpMinScale}</p>
-                <p>Progrecion = {rearranged}</p>
+                <p>Progrecion = {rearrangedC}</p>
+                <p>Progrecion = {rearrangedD}</p>
+                <p>Progrecion = {rearrangedE}</p>
+                <p>Progrecion = {rearrangedF}</p>
+                <p>Progrecion = {rearrangedG}</p>
+                <p>Progrecion = {rearrangedA}</p>
 
                 <p>Dm= E-F-A-C-E</p>
                 <p>G= </p>

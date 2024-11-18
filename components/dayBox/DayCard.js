@@ -5,25 +5,25 @@ const palabras = [
     palabra: "Bewusstsein",
     significado: "Conciencia, conocimiento",
     frases: [
-      "Das Bewusstsein für Umweltthemen wächst. (La conciencia sobre los temas medioambientales está creciendo)",
-      "Sein Bewusstsein für die Probleme der Gesellschaft ist bemerkenswert. (Su conciencia sobre los problemas de la sociedad es notable)",
-      "Bewusstsein ist der erste Schritt zur Veränderung. (La conciencia es el primer paso hacia el cambio)"
+      "Das Bewusstsein für Umweltthemen wächst. (Awareness of environmental issues is growing)",
+      "Sein Bewusstsein für die Probleme der Gesellschaft ist bemerkenswert. (His awareness of society's problems is remarkable)",,
+      "Bewusstsein ist der erste Schritt zur Veränderung. (Awareness is the first step towards change)"
     ]
   },
   {
     palabra: "Schwierigkeit",
     significado: "Dificultad, problema",
     frases: [
-     "Die Schwierigkeit des Tests war überraschend. (La dificultad del examen fue sorprendente)",
-      "Wir müssen eine Lösung für dieses Problem finden, egal wie groß die Schwierigkeit ist. (Debemos encontrar una solución para este problema, sin importar cuán grande sea la dificultad)",
-      "Manchmal ist die Schwierigkeit eine Gelegenheit, zu lernen. (A veces, la dificultad es una oportunidad para aprender)"
+     "Die Schwierigkeit des Tests war überraschend. (The difficulty of the exam was surprising)",
+      "Wir müssen eine Lösung für dieses Problem finden, egal wie groß die Schwierigkeit ist. (We must find a solution to this problem, no matter how great the difficulty is.)",
+      "Manchmal ist die Schwierigkeit eine Gelegenheit, zu lernen. (Sometimes difficulty is an opportunity to learn)"
     ]
   },
   {
     palabra: "Verantwortung",
     significado: "Responsabilidad",
     frases: [
-      "Jeder hat die Verantwortung für seine Handlungen. (Cada uno tiene la responsabilidad por sus acciones)",
+      "Jeder hat die Verantwortung für seine Handlungen. (Everyone has responsibility for their actions)",
       "Die Verantwortung für das Projekt liegt bei mir. (La responsabilidad del proyecto recae en mí)",
       "Verantwortung zu übernehmen ist ein Zeichen von Reife. (Asumir la responsabilidad es un signo de madurez)"
     ]
@@ -1874,7 +1874,7 @@ const palabras = [
   },
   {
     palabra: "Arrogant",
-    significado: "Arrogante",
+    significado: "arrogante",
     frases: [
       "Er verhält sich oft arrogant. (Él a menudo se comporta de manera arrogante.)",
       "Seine arrogante Art hat viele Leute verärgert. (Su manera arrogante molestó a muchas personas.)",
@@ -1883,7 +1883,7 @@ const palabras = [
   },
   {
     palabra: "Bescheiden",
-    significado: "Modesto",
+    significado: "aodesto",
     frases: [
       "Sie ist trotz ihres Erfolgs sehr bescheiden. (A pesar de su éxito, ella es muy modesta.)",
       "Er lebt ein bescheidenes Leben. (Él lleva una vida modesta.)",
@@ -2013,7 +2013,7 @@ const filteredPalabras = palabras.filter(palabra => {
             setCurrentIndex(validIndex); // Actualizar el índice si es necesario
           }
         }}
-        style={{color:"black", margin: '20px auto', display: 'block', width: '300px', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
+        style={{fontFamily:"Lato", color:"black", margin: '20px auto', display: 'block', width: '300px', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
       />
     <div className="card" onClick={handleCardClick}>
     <div className={`card-inner ${flipped ? "flipped" : ""}`}>
@@ -2046,28 +2046,27 @@ const filteredPalabras = palabras.filter(palabra => {
 
     <style jsx>{`  
       p{
-        font-family:  cursive;
         font-family:  Lato;
         line-height:1.9rem;
         font-size: 1.4rem;
-        margin-bottom:-0.4rem;
+        margin-bottom:-0.2rem;
+        
       }
       h2 {
         
         font-family: Playfair Display;
         margin: 0;
-        font-size: 2.5em; 
+        font-size: 1.7em; 
         
       }
       .h2 {
         font-family: Playfair Display;
-        line-height:3.2rem;
+        line-height:2.9rem;
         margin: 0;
         font-size: 2em; 
-        margin-bottom: -1rem; 
+        margin-bottom: -0.6rem; 
       }
       .anzahlWorter{
-        font-family:  cursive;
         position:absolute;
         bottom:-102px;
         font-size:10px;
@@ -2128,7 +2127,6 @@ const filteredPalabras = palabras.filter(palabra => {
       }
 
       .change-word-button {
-
           margin-top: 2.3rem;
           margin-bottom: 1.6rem;
           padding: 10px 20px;
@@ -2149,7 +2147,6 @@ const filteredPalabras = palabras.filter(palabra => {
           height: 550px;
         }
         ul {
-        font-family:  cursive;
           margin-top:0.5rem;
         list-style: none;
         overflow: hidden; 

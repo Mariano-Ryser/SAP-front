@@ -100,6 +100,7 @@ useEffect(()=>{
   return (
     <>
     <form className="form">
+      <h3>Neues Wort hinzufügen</h3>
       <p className="date"> {datee}</p>
 
       {/* Input Titulo */}
@@ -113,8 +114,8 @@ useEffect(()=>{
      onChange={handleChange}
     ></input>
 
-    {/* Input Text area */}
-      <textarea
+    {/*Input Text area */}
+       <textarea
       className="textArea"
       placeholder='Añade un notiio..'
       maxLength="9999999"
@@ -203,30 +204,27 @@ useEffect(()=>{
    
     <style jsx>{`
     .msjCarga{
+      font-family:  Lato;
         font-size: 1.2rem;
         display: flex;
         justify-content: center;
-      }
-
-     
-        
+      }  
 .date{
+  font-family:  Lato;
 font-weight: 900;
 margin: 0rem;
 padding: 0.7rem;
-font-family:monospace;
 }
-
 /* FORMULARIO A COMPLETAR */
 .form{
+  font-family:  Lato;
   position: relative;
   width: 40rem;
   margin: auto;
   padding-top: 0.7rem;
 }
-
 .error{
-  font-family:monospace;
+  font-family:  Lato;
   border-radius: 3px;
   display: inline-block;
   padding: 0.4rem;
@@ -239,10 +237,9 @@ font-family:monospace;
 @keyframes alert {
   0%{ opacity: 0%;}
   100%{opacity: 100%;}
-  
 }
 .success{
-  font-family:monospace;
+  font-family:  Lato;
   display: inline-block;
   padding: 0.4rem;
   margin: 0rem 1rem 0rem 1rem;
@@ -251,8 +248,8 @@ font-family:monospace;
   transition: 0.2s;
   animation: alert 0.2s 1 ease-in;
 }
-
 .deleted{
+  font-family:  Lato;
   position: fixed;
   top: 33%;
   left: 43%;
@@ -266,7 +263,6 @@ font-family:monospace;
   scale: 2;
   transition: 0.2s;
   animation:deleted 1s 1 ease-in;
-  font-family:monospace;
 }
 @keyframes deleted {
   
@@ -280,7 +276,6 @@ font-family:monospace;
     scale:2;
     transform: rotateZ(360deg)}
 }
-
 .textArea{
   color:black;
   position: relative;
@@ -290,49 +285,42 @@ font-family:monospace;
   margin-top: 0.1rem;
   height: 6rem;
  font-size:1.1rem;
- font-family:monospace; 
+ font-family:  Lato;
   }
-
   .textArea::placeholder {
     display: block;
     font-size:1.1rem;
+    font-family:  Lato;
   }
-
   .authorInput{
     display: block;
     margin-bottom: 0.3rem;
     margin-top:0rem;
     padding: 0.4rem;
     font-size:1.1rem;
-   font-family:monospace; 
+    font-family:  Lato;
   }
-
   .authorInput::placeholder{
     font-size:1.1rem;
-  font-family:monospace; 
+    font-family:  Lato;
   }
-
 /* SEND BUTTON */
 .button{
+  font-family:  Lato;
   height: 2rem;
   width: 5rem;
   margin-bottom: 0.2rem;
   border-radius: 0.2rem;
   border: solid 1px #383838 ;
 }
-
-
 /* NOTA */
-
 /* TTITULO EN TEXTO */
 .titulo{
-  
-  font-family:cursive;
+  font-family:  Lato;
   line-height: 0rem;
   font-size: 1rem;
   margin-bottom:1rem;
 }
-
 .notiBox{
   backdrop-filter: blur(10px);
   border:solid 1px black;
@@ -344,7 +332,7 @@ font-family:monospace;
   border-radius: 0.5rem;
   font-weight: bold;
   font-size: 1rem;
-  font-family:monospace;
+  font-family:  Lato;
   color: rgb(219, 219, 219);
   transition: 0.1s;
 }
@@ -357,36 +345,31 @@ font-family:monospace;
   display: block;
   color: white;
   text-align: start;
+  font-family:  Lato;
 }
-
 .x{
   position: absolute;
   font-size: 0.9rem;
   right: 1rem;
   color: red;
   cursor: pointer;
-  font-family: cursive;
-  
+  font-family:  Lato;
 }
-
 /* MOBIL - STYLE */
-
 @media (max-width: 600px) {
   .textArea{
-    font-family:cursive;
+    font-family:  Lato;
     color: black;
     position: relative;
     width:100%;
     padding: 0.4rem;
     height: 6rem;
    }
-
   .textArea::placeholder {
     display: block;
     font-size:1.1rem;
-    font-family: cursive; 
+    font-family:  Lato;
   }
-
   .authorInput{
     color: black;
     display: block;
@@ -394,14 +377,14 @@ font-family:monospace;
     margin-top:0rem;
     padding: 0.4rem;
     font-size:1.1rem;
-   font-family: cursive; 
+    font-family:  Lato;
   }
-
   .authorInput::placeholder{
     font-size:1.1rem;
-  font-family:cursive; 
+    font-family:  Lato;
   }
   .form{
+    font-family:  Lato;
     position: relative;
     width: 95%;
     overflow: hidden;
@@ -412,21 +395,19 @@ font-family:monospace;
     display:flex;
     justify-content:end;
     color: #f5f5f5ad;
-    font-family:monospace;
+    font-family:  Lato;
     font-size: 0.8rem;
     font-weight: 900;
     margin: 0.2rem 0.2rem 0.2rem 0rem;
     padding: 0rem;
   }
-
- 
   .button{
+    font-family:  Lato;
     height: 2rem;
     width: 5rem;
     margin-top: 0rem;
     border-radius: 0.2rem;
     color: black;
-    
   }
 }
     `}</style>

@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <>
 
-  {/* <Link href="/"><li>/home</li></Link>
-  <Link href="/proyectos/proyects"><li>/home/proyects</li></Link> */}
+  <Link href="/"><li>/home</li></Link> 
+  <Link href="/proyectos/proyects"><li>/home/proyects</li></Link> 
   {/* <Link href="/stapler"><li>/home/StaplerBasis</li></Link> */}
   {/* <Link href="/stapler1"><li>/home/StaplerR1</li></Link>
   <Link href="/stapler2"><li>/home/StaplerR2</li></Link> */}

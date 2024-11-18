@@ -8,7 +8,8 @@ import DayColorSquare from '../components/dayBox/DayBox';
 //C:\Users\MR22\stock-app\frontend\public
 const NavRespon = () => {
   const [close, setClose] = useState(null);
-
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); 
 
   const bgColors = ['rgb(255, 255, 255)', 'rgb(7, 7, 7)',  'rgb(66, 58, 24)', 'rgb(25, 66, 24)', 'rgb(0, 0, 0)'];
   const letterColors = [ 'rgb(255, 255, 255)', 'rgb(251, 255, 34)', 'rgb(35, 231, 28)'];
@@ -36,44 +37,61 @@ const NavRespon = () => {
     setLetterColor(newColor);
     document.documentElement.style.setProperty('--letter-color', newColor);
   };
-   function openList(){
-    const burger = document.getElementById('burger')
-    const aside = document.getElementById('aside')
-    if(
-      aside.style.transform == 'translateY(0%)'){
-      aside.style.transform = 'translateY(-100%)';
-      setTimeout(()=>{
-        aside.style.display="none"
-      },200);
-    }else{
-      aside.style.display = 'block'
-      setTimeout(()=>{
-        aside.style.transform = 'translateY(0%)'
-      },0);
-    }
+//    function openList(){
+//     const burger = document.getElementById('burger')
+//     const aside = document.getElementById('aside')
+   
 
-    //con aparicion but, menos flujo de datos cuanticos XD
-    // const aside = document.getElementById('aside')
-    // if(
-    //   aside.style.display == 'block'){
-    //   aside.style.display = 'none';
-    //   setTimeout(()=>{
+//     if(
+//       aside.style.transform == 'translateY(0%)'){
+//       aside.style.transform = 'translateY(-100%)';
+//       setTimeout(()=>{
+//         aside.style.display="none"
+//       },200);
+//     }else{
+//       aside.style.display = 'block'
+//       setTimeout(()=>{
+//         aside.style.transform = 'translateY(0%)'
+//       },0);
+//     }
+//   // Función para cerrar el aside cuando se hace clic en un enlace
+// // Función para cerrar el aside cuando se hace clic en un enlace
+// function closeAsideOnLinkClick(e) {
+//   const aside = document.getElementById('aside');
+//   // Cierra el aside antes de navegar
+//   aside.style.transform = 'translateY(-100%)';
+//   setTimeout(() => {
+//     aside.style.display = 'none';
+//   }, 200);
+// }
+//     //con aparicion but, menos flujo de datos cuanticos XD
+//     // const aside = document.getElementById('aside')
+//     // if(
+//     //   aside.style.display == 'block'){
+//     //   aside.style.display = 'none';
+//     //   setTimeout(()=>{
     
-    //   },200);
-    // }else{
-    //   aside.style.display = 'block'
-    //   setTimeout(()=>{
+//     //   },200);
+//     // }else{
+//     //   aside.style.display = 'block'
+//     //   setTimeout(()=>{
      
-    //   },0);
-    // }
+//     //   },0);
+//     // }
 
 
-    // if(burger.style.transform == 'rotateZ(90deg)'){
-    //   burger.style.transform = 'rotateZ(0deg)'
-    // } else {
-    //   burger.style.transform = 'rotateZ(90deg)'
-    // }
-  }
+//     // if(burger.style.transform == 'rotateZ(90deg)'){
+//     //   burger.style.transform = 'rotateZ(0deg)'
+//     // } else {
+//     //   burger.style.transform = 'rotateZ(90deg)'
+//     // }
+//   }
+function openList() {
+  setIsOpen(!isOpen); // Cambiar el estado al hacer clic en el botón de menú
+}
+function closeAsideOnLinkClick() {
+  setIsOpen(false); // Cambiar el estado para cerrar el menú cuando se hace clic en un enlace
+}
   function padlook(){
     setClose("Close")
   }
@@ -120,7 +138,7 @@ return (
 {/* <DayColorSquare /> */}
 
 
-<nav className={styles.nav}>
+<nav  className={styles.nav}>
         <div className={styles.img}>
          <Link href="/home"><h1 className={styles.logo}></h1></Link> 
         </div>
@@ -140,7 +158,10 @@ return (
 
               
 
-    <aside id='aside' className={styles.asideBar}>
+    <aside  style={{
+          transform: isOpen ? 'translateY(0%)' : 'translateY(-100%)',
+          display: isOpen ? 'block' : 'none',
+        }}  id='aside' className={styles.asideBar}>
     
           <ul className={styles.ul}>
          
@@ -148,10 +169,10 @@ return (
           
             {/* Index*/}
               
-
+           
               {/* Icons */}
                 <Link href="/proyectos/icons/icons">  
-                <li
+                <li onClick={closeAsideOnLinkClick}
                   id='li'
                   className={styles.li}
                   >
@@ -164,18 +185,25 @@ return (
               </Link>
          
           {/* Mensajeria Link */}
-              {/* <Link href="/proyectos/boxComentar/msj">
-                <li className={styles.li}>
-                  <a className={styles.a}>Box Comentar</a>
+               <Link href="/proyectos/boxComentar/msj">
+                <li onClick={closeAsideOnLinkClick} className={styles.li}>
+                  <a  className={styles.a}>Box Comentar</a>
                 </li>
-              </Link> */}
+              </Link>
+
+                {/* Noti Worter Link */}
+                <Link href="/proyectos/noti/noti">
+                <li onClick={closeAsideOnLinkClick}  className={styles.li}>
+                  <a className={styles.a}>Neues Wort?</a>
+                </li>
+              </Link>
 
                  {/* Mensajeria Link */}
-                 <Link href="/proyectos/productCreator/create">
+                 {/* <Link href="/proyectos/productCreator/create">
                 <li className={styles.li}>
                   <a className={styles.a}>Product Creator</a>
                 </li>
-              </Link>
+              </Link> */}
         
           {/* CHAR CREATOR */}
           {/* <Link href="/proyectos/charCreator/personaje">
@@ -192,15 +220,14 @@ return (
                 </Link> */}
 
                  {/* Lectura*/}
-              <Link href="/proyectos/lectura/lectura">
-              
+              {/* <Link href="/proyectos/lectura/lectura">
               <li className={styles.li}
               // onClick={padlook}
               >
                 <a className={styles.a}>Fonts-test
                 </a>
               </li>
-              </Link>
+              </Link> */}
 
                   {/* LOGO COLORINCHE*/}
                   {/* <Link href="/proyectos/logazo/logazo">
@@ -217,7 +244,7 @@ return (
 
                           <Link href="/proyectos/hb/sounds/music">
                       
-                      <li className={styles.li}
+                      <li onClick={closeAsideOnLinkClick}  className={styles.li}
                       // onClick={padlook}
                       >
                         <a className={styles.a}>Game Sounds 
@@ -225,6 +252,22 @@ return (
 
                       </li>
                       </Link>
+
+                      
+                  {/* MUSIC TESTING*/}
+
+                  <Link  href="/proyectos/musica/musicaList">
+                      
+                      <li  onClick={closeAsideOnLinkClick} className={styles.li}
+                      // onClick={padlook}
+                      >
+                        <a   className={styles.a}>Musica 
+                        </a>
+
+                      </li>
+                      </Link>
+
+
 
                <li className={styles.li}
                       // onClick={padlook}
@@ -236,6 +279,7 @@ return (
                       >
                       
               </li>
+              
               <li className={styles.li}
                       // onClick={padlook}
                       >
@@ -246,16 +290,7 @@ return (
                       >
                       
               </li>
-              <li className={styles.li}
-                      // onClick={padlook}
-                      >
-                      
-              </li>
-              <li className={styles.li}
-                      // onClick={padlook}
-                      >
-                      
-              </li>
+            
               <li className={styles.li}
                       // onClick={padlook}
                       >
@@ -305,8 +340,33 @@ return (
 
                       <style jsx>{`
 
-                  
-                       
+                        #aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+  display: none;
+  padding: 20px;
+}
+
+#aside nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+#aside nav ul li {
+  margin: 20px 0;
+}
+
+#aside nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
                   
                          
                               

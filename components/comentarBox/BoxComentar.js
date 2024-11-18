@@ -171,7 +171,7 @@ function BoxComentar() {
           width: 40rem;
           margin: auto;
           padding-top: 1rem;
-          font-family: 'Arial', sans-serif;
+          font-family:  Lato;
         }
 
         .date {
@@ -182,6 +182,7 @@ function BoxComentar() {
         }
 
         .inputField {
+          font-family:  Lato;
           color:black;
           width: 100%;
           margin-bottom: 1rem;
@@ -192,6 +193,7 @@ function BoxComentar() {
         }
 
         .textArea {
+          font-family:  Lato;
           color:black;
           width: 100%;
           height: 100px;
@@ -202,6 +204,7 @@ function BoxComentar() {
         }
 
         .button {
+          font-family:  Lato;
           padding: 0.5rem 1rem;
           background-color: #0070f3;
           color: white;
@@ -216,6 +219,7 @@ function BoxComentar() {
         }
 
         .alert {
+          font-family:  Lato;
           margin-top: 1rem;
           padding: 0.5rem;
           border-radius: 5px;
@@ -223,27 +227,32 @@ function BoxComentar() {
         }
 
         .error {
+          font-family:  Lato;
           background-color: #f8d7da;
           color: #721c24;
         }
 
         .success {
+          font-family:  Lato;
           background-color: #d4edda;
           color: #155724;
         }
 
         .deleted {
+          font-family:  Lato;
           background-color: #cce5ff;
           color: #004085;
         }
 
         .comentariosContainer {
+          font-family:  Lato;
           width: 80%;
           margin: auto;
           margin-top: 2rem;
         }
 
         .comentarBox {
+          font-family:  Lato;
           backdrop-filter: blur(10px);
           border-radius: 8px;
           padding: 1rem;
@@ -252,34 +261,35 @@ function BoxComentar() {
         }
 
         .titulo {
-          font-family:cursive;
+          font-family:  Lato;
           font-size: 1.2rem;
           margin:0;
           padding:0;
         }
 
         .text {
-          font-family:cursive;
+          font-family:  Lato;
           font-size: 1rem;
           margin:0;
           padding:0;
         }
 
         .author {
-          font-family:cursive;
+          font-family:  Lato;
           font-size:0.8rem;
           margin:0;
           padding:0;
         }
 
         .likes {
-          font-family:cursive;
+          font-family:  Lato;
           font-size:0.8rem;
           margin:0;
           padding:0;
         }
 
         .likeButton {
+          font-family:  Lato;
           background-color: #0070f3;
           color: white;
           padding: 0.3rem 0.9rem;

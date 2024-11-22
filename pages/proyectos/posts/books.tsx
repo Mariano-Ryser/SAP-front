@@ -10,6 +10,8 @@ export default function Books() {
  {/* <Link href="posts/lieyourself"><li>Lie to yourself.</li></Link> */}
   {/* <Link href="posts/pnl"><li>Principios de la PNL</li></Link> */}
   <Link href="posts/conciencia"><li>Conciencia</li></Link>
+  <Link href="posts/concienciaColectiva"><li>Conciencia Colectiva</li></Link>
+  <Link href="posts/erasAstrologicas"><li>Eras Astrologicas</li></Link>
   <li className="bloqued">Equilibrate</li>
   <li className="bloqued">An Emancipated Cinderella</li>
   <li className="bloqued">Desintoxicacion Dopaminica</li>

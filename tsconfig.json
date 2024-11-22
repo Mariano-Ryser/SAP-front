@@ -26,7 +26,7 @@
     "**/*.ts",
     "**/*.tsx"
 , "pages/ztest/test5.js",
- "pages/proyectos/charCreator/personaje.js",
+ "pages/proyectos/personaje.js",
   "components/comentarBox/BoxComentar.js",
    "components/Footer.js",
     "components/Cabezera.js",

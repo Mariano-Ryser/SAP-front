@@ -2000,7 +2000,7 @@ const filteredPalabras = palabras.filter(palabra => {
   return (
     <>
  {/* ESCRIBIR PALABRA PARA BUSCAR */}
- <input 
+ {/* <input 
         type="text"
         placeholder="Buscar palabra o significado..."
         value={searchTerm}
@@ -2014,7 +2014,7 @@ const filteredPalabras = palabras.filter(palabra => {
           }
         }}
         style={{fontFamily:"Lato", color:"black", margin: '20px auto', display: 'block', width: '300px', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
-      />
+      /> */}
     <div className="card" onClick={handleCardClick}>
     <div className={`card-inner ${flipped ? "flipped" : ""}`}>
       <div className="card-front">
@@ -2076,7 +2076,8 @@ const filteredPalabras = palabras.filter(palabra => {
         width: 450px;
         height: 550px;
         perspective: 1000px;
-        margin: 20px auto;
+        margin: 5rem auto;
+        
         margin-bottom:5rem;
       }
       .card-inner {

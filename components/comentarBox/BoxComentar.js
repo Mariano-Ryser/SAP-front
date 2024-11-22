@@ -132,7 +132,7 @@ function BoxComentar() {
         <button className="button" onClick={handleClick}>
           Enviar
         </button>
-
+        
         {error && <div className="alert error">{error}</div>}
         {successMessage && <div className="alert success">{successMessage}</div>}
         {deletedMessage && <div className="alert deleted">{deletedMessage}</div>}
@@ -213,11 +213,9 @@ function BoxComentar() {
           cursor: pointer;
           transition: background-color 0.3s ease;
         }
-
         .button:hover {
           background-color: #005bb5;
         }
-
         .alert {
           font-family:  Lato;
           margin-top: 1rem;
@@ -227,18 +225,24 @@ function BoxComentar() {
         }
 
         .error {
+           position:absolute;
+          z-index:999;
           font-family:  Lato;
           background-color: #f8d7da;
           color: #721c24;
         }
 
         .success {
+          position:absolute;
+          z-index:999;
           font-family:  Lato;
           background-color: #d4edda;
           color: #155724;
         }
 
         .deleted {
+          position:absolute;
+          z-index:999;
           font-family:  Lato;
           background-color: #cce5ff;
           color: #004085;

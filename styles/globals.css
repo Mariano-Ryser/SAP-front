@@ -1,27 +1,26 @@
 /* EXELENTE FONDO  */
 * {
-  
   box-sizing: border-box;
-  color: white;
+  color: rgb(252, 252, 252);
   /* color:  var(--letter-color); */
   transition: 0.5s;
   font-family:  Lato;
 }
 html,
 :root {
-  /* --bg-color: rgb(143, 255, 133); */
-  --bg-color: rgb(255, 255, 255); 
+  --bg-color: url(/img/bBack.jpg); 
   --letter-color: rgb(0, 0, 0); 
 }
  /* Color de fondo por defecto */
 
 body {
-   /* background-color: var(--bg-color); 
-  transition: 2s;
+    /* background-color: var(--bg-color);  */
+  
+ /*  transition: 2s;
   padding: 0;
   margin: 0; */
   
-  background-image: url(/img/aBack.jpg);
+  background-image: var(--bg-color);
 
   /* background:
 linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
@@ -46,8 +45,7 @@ background-size: 20px 20px; */
   }
   html,
   :root {
-    /* --bg-color: rgb(143, 255, 133); */
-    --bg-color: rgb(255, 255, 255); 
+    --bg-color: url(/img/aBack.jpg); 
     --letter-color: rgb(255, 255, 255); 
   }
 

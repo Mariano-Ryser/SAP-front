@@ -11,8 +11,33 @@ const NavRespon = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false); 
 
-  const bgColors = ['rgb(255, 255, 255)', 'rgb(7, 7, 7)',  'rgb(66, 58, 24)', 'rgb(25, 66, 24)', 'rgb(0, 0, 0)'];
-  const letterColors = [ 'rgb(255, 255, 255)', 'rgb(251, 255, 34)', 'rgb(35, 231, 28)'];
+// BACKGROUND IMGS
+const bgColors = [
+  'url(/img/spaceBack.png)',
+  'url(/img/bBack.jpg)',
+  'url(/img/c2.jpg)',
+  'url(/img/x3.jpg)',
+  'url(/img/x1.jpg)',
+  'url(/img/x7.jpg)',
+  'url(/img/y5.jpg)',
+  'url(/img/y2.jpg)',
+];
+
+//  COLORES PARA BACKGROUND COLOR
+  // const bgColors = ['rgb(7, 7, 7)','rgb(255, 255, 255)', 'rgb(66, 58, 24)', 'rgb(25, 66, 24)', 'rgb(0, 0, 0)'];
+ 
+  const letterColors = [
+    // 'rgb(0, 0, 0)',         
+    'rgb(251, 255, 34)',  
+    'rgb(255, 255, 255)',   
+    'rgb(255, 165, 0)',     
+    'rgb(0, 255, 255)',      
+    'rgb(255, 223, 186)',     
+    'rgb(252, 252, 252)',   
+    'rgb(124, 252, 0)',      
+    'rgb(238, 130, 238)',   
+  ];
+  
   const aliens = ['Alienverde.gif','']
 
   const [bgColor, setBgColor] = useState(bgColors[0]); // Empieza con el primer color
@@ -130,9 +155,9 @@ return (
     <>    
    
 {/* BOTONES PARA CAMBIAR COLOR DE FUENTE */}
-{/* <button className={styles.buttonColor} onClick={changeFontColor}></button> */}
-{/* <button className={styles.buttonColor} onClick={changeBgColor}></button>
-<button className={styles.buttonLetterColor} onClick={changeLetterColor}></button> */}
+{/* <button className={styles.buttonColor} onClick={changeFontColor}></button>  */}
+<button className={styles.buttonColor} onClick={changeBgColor}></button>
+<button className={styles.buttonLetterColor} onClick={changeLetterColor}></button> 
 
 {/* CAJA DE COLORES POR DIA  */}
 {/* <DayColorSquare /> */}
@@ -149,19 +174,66 @@ return (
          // onMouseOver={overed}
          //  alt='Burger-Icon' src={'/img/Alienverde.gif'}
          // height={100} width={70}></Image> */}
+          <div className='augen'></div>  
+          <div className='augen2'></div>  
           <Image
-           alt='Burger-Icon' src={'/img/Alienverde.gif'}
+           alt='Burger-Icon' src={'/img/alienChill.png'}
           //  alt='Burger-Icon' src={'/img/robote.gif'}
           height={145} width={105}></Image> 
         </div> 
+
+         <style jsx>{`
+                      .augen{
+                        position:absolute;
+                          top:2rem;
+                          left:0.8rem;
+                          height:42px;
+                          width:42px;
+                          background-color:transparent;
+                          border-radius:50%;
+                          animation:linsen 1s alternate 2 ease-in;
+                        
+                        }
+                        .augen2{
+                          top:2rem;
+                          left:3rem;
+                          position:absolute;
+                          border-radius:50%;
+                          height:42px;
+                          width:42px;
+                          background-color:transparent;
+                          animation:linsen 2.2s alternate 2 ease-in;
+                        }
+                        @keyframes linsen {
+  1% {
+    background-color:transparent;
+  }
+  30% {
+    background-color:#ff0000;
+  }
+ 
+  80% {
+    background-color:transparent;
+  }
+ 
+  95% {
+    background-color:#5ae016;
+  }
+
+  100% {
+    background-color:#FF0000;
+  }
+}
+
+           `}</style>
 </nav>
 
               
 
     <aside  style={{
-          transform: isOpen ? 'translateY(0%)' : 'translateY(-100%)',
-          display: isOpen ? 'block' : 'none',
-        }}  id='aside' className={styles.asideBar}>
+      transform: isOpen ? 'translateY(0%)' : 'translateY(-100%)',
+      display: isOpen ? 'block' : 'none',
+    }}  id='aside' className={styles.asideBar}>
     
           <ul className={styles.ul}>
          
@@ -171,7 +243,7 @@ return (
               
            
               {/* Icons */}
-                <Link href="/proyectos/icons/icons">  
+                <Link href="/proyectos/icons">  
                 <li onClick={closeAsideOnLinkClick}
                   id='li'
                   className={styles.li}
@@ -185,14 +257,14 @@ return (
               </Link>
          
           {/* Mensajeria Link */}
-               <Link href="/proyectos/boxComentar/msj">
+               <Link href="/proyectos/msj">
                 <li onClick={closeAsideOnLinkClick} className={styles.li}>
                   <a  className={styles.a}>Box Comentar</a>
                 </li>
               </Link>
 
                 {/* Noti Worter Link */}
-                <Link href="/proyectos/noti/noti">
+                <Link href="/proyectos/noti">
                 <li onClick={closeAsideOnLinkClick}  className={styles.li}>
                   <a className={styles.a}>Neues Wort?</a>
                 </li>
@@ -256,7 +328,7 @@ return (
                       
                   {/* MUSIC TESTING*/}
 
-                  <Link  href="/proyectos/musica/musicaList">
+                  <Link  href="/proyectos/musica">
                       
                       <li  onClick={closeAsideOnLinkClick} className={styles.li}
                       // onClick={padlook}
@@ -339,7 +411,8 @@ return (
                       ></input>
 
                       <style jsx>{`
-
+                        
+                       
                         #aside {
   position: fixed;
   top: 0;

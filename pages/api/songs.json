@@ -1,0 +1,75 @@
+[
+  {
+    "id": "1",
+    "title": "Fantasma de Canterville",
+    "file": "/songs/fantasmaCanterville.txt",
+    "fontSize": "1.12rem",
+    "previewFontSize": "1.03rem"
+  },
+  {
+    "id": "2",
+    "title": "Oh mami",
+    "file": "/songs/ohMami.txt",
+    "fontSize": "0.94rem",
+    "previewFontSize": "0.86rem"
+  },
+  {
+    "id": "3",
+    "title": "Soy Cordobes",
+    "file": "/songs/soyCordobes.txt",  
+    "fontSize": "0.87rem",
+    "previewFontSize": "0.79rem"
+  },
+  {
+    "id": "4",
+    "title": "Viernes 3am",
+    "file": "/songs/viernes3am.txt",
+    "fontSize": "0.86rem",
+    "previewFontSize": "0.78rem"
+  },
+  {
+    "id": "5",
+    "title": "Sapo de otro pozo",
+    "file": "/songs/sapoDeOtroPozo.txt",
+    "fontSize": "1.04rem",
+    "previewFontSize": "1rem"
+  },
+  {
+    "id": "6",
+    "title": "Soy - Ulises",
+    "file": "/songs/soy.txt",
+    "fontSize": "0.86rem",
+    "previewFontSize": "0.8rem"
+  }
+  ,
+  {
+    "id": "7",
+    "title": "Disfruto - Qlokura",
+    "file": "/songs/disfruto.txt",
+    "fontSize": "1.3rem",
+    "previewFontSize": "1.2rem"
+  },
+  {
+    "id": "8",
+    "title": "Todo sigue igual",
+    "file": "/songs/todoSigueIgual.txt",
+    "fontSize": "1.06rem",
+    "previewFontSize": "0.99rem"
+  },
+  {
+    "id": "9",
+    "title": "Bailando en el Inf",
+    "file": "/songs/bailandoEnElInfierno.txt",
+    "fontSize": "0.85rem",
+    "previewFontSize": "0.77rem"
+  },
+  {
+    "id": "10",
+    "title": "Let it Be",
+    "file": "/songs/letItBe.txt",
+    "fontSize": "0.85rem",
+    "previewFontSize": "0.82rem"
+  }
+  
+  ]
+

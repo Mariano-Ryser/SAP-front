@@ -15,68 +15,54 @@ const Piramide = () => {
   return (
     <>
   <section className='section' style={{ fontSize: `${gross}` + "rem"}}>
-    <h1>ERAS ASTROLÓGICAS Y EVOLUCIÓN DE LA CONSCIENCIA I</h1>
-   <p>Por la acción de las fuerzas gravitacionales del Sol y la Luna sobre la Tierra, el eje polar se balancea hacia atrás a través de los signos del zodíaco. Este fenómeno conocido técnicamente como Precesión de los equinoccios, es responsable del así llamado Gran año o año sideral, cuya duración es de unos 27000 años, tiempo que tarda el eje en realizar una rotación completa sobre si mismo. En astrología se denomina era al período durante el cual el eje magnético está orientado hacia un determinado signo. Considerando que son 27000 años dividido 12 signos, tenemos que cada era dura un promedio de algo más de 2000 años.</p>
-   <p>El signo hacia el cual el eje polar está orientado, determina un influjo que caracteriza a la humanidad arquetípica y energéticamente con las cualidades de este signo.
-
-Se considera que en realidad existen sólo seis signos del zodíaco, y los seis restantes son su polo complementario. Como las dos caras de la misma moneda.
-
-El propósito de la evolución humana, o como diría Jung, de la individuación es la integración consciente de los diferentes aspectos del ser. Es decir, el reconocimiento, aceptación e integración de las dos polaridades como un todo. Esto produce un sentimiento de unidad, el estar completo, la plenitud.
-
-Por el contrario la separación, negación o proyección de las características de la polaridad opuesta es lo que una y otra vez nos lleva a estados de distorsión y sufrimiento. La parte negada o separada siempre busca su reivindicación, pero lo hace de manera compulsiva, destructiva, inconsciente. Toma revancha.</p>
-   <p>Si bien no existe registro histórico, es de suponer que en la Era de Libra puede haber existido una humanidad con Consciencia de la Belleza, Justicia, Armonía y Ecuanimidad. Un total refinamiento. Aunque la historia no lo recuerda, esto si ha quedado registrado a nivel etérico en los denominados registros akhásicos y en el cuerpo de la humanidad como la memoria de la Raza. El libro “Orígenes de la Civilización Adámica” y otros hacen referencia a toda la organización social, justa y humanitaria aplicada por culturas de esta época –como la de los Kobdas-, y que luego pasó a los Dáctilos en Gracia. Según Vicente Beltrán Anglada, Libra es el Signo del Centro, refleja la Justicia, la Verdad y el Amor como real Sabiduría; características propias del cuarto chacra. Puede haber sido la época de gloria en la que han encarnado los Maestros Ascendidos como Sanat Kumara, donde ha existido la mítica ciudad de Shambala, etc..
-
-En el común de la gente debe haber faltado la integración de la polaridad energética de Aries, que implica el uso y la administración correctas del impulso, la energía y la vitalidad. Esto llevó a un estado de inercia e indulgencia típicamente libriano, provocando la densificación de la humanidad y la materia y el olvido de esos ideales trascendentes.
-
-Así la conciencia se transformó y pasó a la cualidad energética de Virgo.
-
-Sin embargo las enseñanzas tan preciosas de esta época no han desaparecido del todo y se han mantenido hasta nuestros días clausuradas en escuelas y grupos herméticos aislados, apareciendo e inspirando a la humanidad a lo largo de las historia, incluso hasta el presente.
+    <h1>ERAS ASTROLÓGICAS Y EVOLUCIÓN DE LA CONSCIENCIA </h1>
+    <h2>El Ciclo Cósmico y la Influencia de las Eras </h2>
+   <p>La interacción entre las fuerzas gravitacionales del Sol y la Luna sobre la Tierra produce un movimiento oscilante en el eje polar terrestre. Este fenómeno, conocido como Precesión de los Equinoccios, marca el paso del eje a través de los signos del zodíaco a lo largo de un ciclo de aproximadamente 27,000 años, conocido como el Gran Año Sideral. Cada uno de los 12 signos zodiacales domina un periodo de poco más de 2,000 años, conocido como Era Astrológica, y determina las características energéticas que moldean la consciencia colectiva y arquetípica de la humanidad.</p>
+   <p>En astrología, los signos opuestos en el zodíaco forman un sistema de polaridades complementarias, dos caras de una misma moneda que representan fuerzas opuestas pero integradoras. La evolución humana, según esta perspectiva, implica un proceso de integración consciente de estas polaridades. Carl Jung lo describiría como individuación, el camino hacia la plenitud a través del reconocimiento, aceptación e integración de los opuestos internos. Por el contrario, la negación o separación de estas polaridades genera distorsión, sufrimiento y un ciclo compulsivo de reivindicación inconsciente que afecta a la humanidad.</p>
+   <p>Si bien no existe registro histórico, es de suponer que en la Era de Libra puede haber existido una humanidad con Consciencia de la Belleza, Justicia, Armonía y Ecuanimidad. Un total refinamiento. Aunque la historia no lo recuerda, esto si ha quedado registrado a nivel etérico en los denominados registros akhásicos y en el cuerpo de la humanidad como la memoria de la Raza. El libro “Orígenes de la Civilización Adámica” y otros hacen referencia a toda la organización social, justa y humanitaria aplicada por culturas de esta época –como la de los Kobdas-, y que luego pasó a los Dáctilos en Gracia. Según Vicente Beltrán Anglada, Libra es el Signo del Centro, refleja la Justicia, la Verdad y el Amor como real Sabiduría; características propias del cuarto chacra. Puede haber sido la época de gloria en la que han encarnado los Maestros Ascendidos como Sanat Kumara, donde ha existido la mítica ciudad de Shambala, etc..</p>
 <br></br>
-<br></br>
-12.000 al 10000 a.c.: Era de Virgo: Atlántida. Lemuria: Período de perfeccionamiento tecnológico. Virgo es un signo de tierra, pragmático, eficiente, perfeccionista. Pero la polarización en esta cualidad implicó la separación del aspecto pisciano espiritual. Desde un punto de vista energético, Virgo está preso dentro de las formas. Para salir de allí debe transformarse en otra cosa. Y de hecho para convertirse en otra cosa esa forma debe morir. Esta fue la experiencia de la humanidad que en este período llegó a la autodestrucción.
-<br></br>
-<br></br>
+<p>A continuación, exploraremos cómo cada Era Astrológica ha influido en el desarrollo de la humanidad y las lecciones que nos ha dejado este ciclo cósmico.</p>
 
-10000 a 8000 a.c.: Era de Leo: Hombre primitivo. Leo es el estadio energético del niño que con dos o tres años se está descubriendo. Está explorando sus posibilidades, su identidad. Conociendo el nuevo mundo más allá de su madre y lo inmediato. Comienza a desarrollar su fuerza y su voluntad. La humanidad leonina fue egocéntrica, infantil. Período nómade en el que sobrevivir era el único objetivo. Desconectado del sentido de Humanidad, propio de su polaridad acuariana, lentamente fue despertando hacia Cáncer.
+ <h2>Eras Pasadas y el Camino de la Consciencia </h2>
+  <h3>Era de Virgo (12,000 - 10,000 a.C.): Perfección y Ruptura</h3>
+<p>En esta era, asociada con la Atlántida y Lemuria, la humanidad alcanzó un alto grado de perfección tecnológica y pragmatismo. Virgo, un signo de tierra, simboliza eficiencia, perfección y estructura. Sin embargo, la desconexión de su polaridad espiritual, Piscis, llevó a una humanidad atrapada en las formas y el materialismo. Este desequilibrio culminó en la autodestrucción de civilizaciones avanzadas, marcando el fin de un ciclo y la necesidad de renacimiento.
 
-<br></br>
-<br></br>
-8000 al 6000 a.c., Era de Cáncer: Primeros asentamientos sedentarios. Cáncer proporcionó el sentido de familia, clan, protección. Aparecen los primeros pueblos y núcleos con identificación grupal. Faltó en cambio la consciencia social y sentido de propósito ulterior, ambición y responsabilidad humanitaria propio de capricornio, su polaridad.
-<br></br>
-<br></br>
+</p>
 
-6000 al 4000 a.c.: Era de Géminis: Máximo desarrollo de grandes conocimientos arquitectónicos, astrológicos y culturales en general que surgen en Mesopotamia, Egipto y Oriente. Géminis es la comunicación y también el conocimiento de “la otra parte”, de las sombras. Egipto despliega toda su tecnología y cosmogonía esotérica. Lenguas. Escritura. Contacto con el “más allá”. Y de nuevo podemos ver la separación de la polaridad sagitariana: amplitud y Visión filosófica integradora, que condujo a guerras y más separación.
+<h3>Era de Leo (10,000 - 8,000 a.C.): Descubrimiento del Yo</h3>
+<p>Leo representa la exploración del ego y la identidad, similar al despertar de un niño pequeño que descubre su individualidad. Durante esta era, la humanidad vivió un período egocéntrico y nómada, centrado en la supervivencia. La desconexión de la polaridad de Acuario, que representa la colectividad y la consciencia grupal, mantuvo a la humanidad aislada en su individualismo.</p>
 
-<br></br>
-<br></br>
-4000 al 2000 a.c.: Era de Tauro: Amor por la madre Tierra. Tauro conoce las formas dentro de la materia. Su lugar es la Tierra, la ama, la disfruta, la posee. Conoce sus misterios y sus recursos y le rinde honor. En Egipto se rinde culto al becerro de oro. Creta y el Minotauro. En América, Africa y Oriente surgen cultos a la tierra, a lo femenino. Opulencia y materialidad de las cortes y formas de vida. Pero falta la profundidad, compromiso, pasión y búsqueda de la verdad propia de Escorpio en su polaridad.
-<br></br>
-<br></br>
+<h3>Era de Cáncer (8,000 - 6,000 a.C.): El Nacimiento de la Comunidad</h3>
+<p>Cáncer, signo del hogar y la familia, trajo consigo los primeros asentamientos sedentarios y un sentido de pertenencia al clan o tribu. Sin embargo, la falta de integración de Capricornio, su polaridad complementaria, impidió el desarrollo de la ambición colectiva y la responsabilidad social, limitando el progreso hacia estructuras más amplias y organizadas.</p>
 
-2000 a.c. al nac. de Cristo: Era de Aries: Guerra, conquistas, invasiones, desarrollo de instrumentos de guerra. Aries es el arquetipo del guerrero. Es la energía que se expresa y se aplica en la acción. En este período aparece la deidad masculina: Jehovah del judaísmo. Dios creador el Universo. Se ofrenda el carnero del sacrificio. Aquí el principio masculino quedó nuevamente separado del aspecto femenino suave e integrador de Libra, el signo opuesto.
-<br></br>
-<br></br>
+<h3>Era de Géminis (6,000 - 4,000 a.C.): Comunicación y Conocimiento</h3>
+<p>Bajo la influencia de Géminis, la humanidad experimentó un florecimiento cultural y tecnológico, con avances en escritura, lenguas y astronomía. Las grandes civilizaciones de Mesopotamia y Egipto encarnaron esta energía. Sin embargo, la desconexión de Sagitario, su opuesto, llevó a un enfoque fragmentado, incapaz de integrar una visión filosófica más amplia que evitara conflictos y separaciones.</p>
 
-0 al 2000: Era de Piscis: Signo del sacrificio nos trae a Jesús el pescador. Se vive el sufrimiento por estar encarnado y el ansia por volver al estado urobórico, al paraíso perdido. Existe una separación de los aspectos materiales y prácticos de Virgo. Se escapa, hay repugnancia por la materia y su pecado y surge el deseo de Redención.
-<br></br>
-<br></br>
 
-Del 2000 al 4000: Entramos en la Era de Acuario. El aguatero es el único signo representado por un humano adulto. Aquí la humanidad se reconoce como tal. Existe el sentido unión, integración, igualdad de todos los seres, la experiencia de la verdadera amistad y el uso de las facultades humanas superiores. El planeta regente de Acuario es Urano, que dentro de la mitología griega es el Dios del Cielo. Está representado por un rayo que surca el firmamento e ilumina. Esta es la facultad del Cuerpo Mental Superior, la Inspiración, el conocimiento que viene directamente de las dimensiones superiores de la Consciencia. Acuario sabe lo que es real. Su visión es clara e incuestionable. Y sus ideales de perfección traen el sello inequívoco de su percepción de esas esferas. Pero su gran desafío es la implantación de esas ideas en el mundo de la materia. La cuadratura del círculo: cómo encajar la perfección dentro de las limitaciones materiales de la encarnación. En su afán de materializar estos ideales, acuario puede convertirse en terrorista, perverso y devastador. El fin justifica los medios. Y este es el paisaje que tenemos ahora que la humanidad está ingresando en este período.</p>
-<br></br>
-<br></br>
-   <p>Como se ha visto, el gran obstáculo vivido en la historia ha sido la separación de “la otra parte”. Olvidamos demasiadas veces que somos un todo. Y que lo opuesto es la otra cara de nuestra misma moneda. Ocurrió en la historia. Ocurre a diario en nuestra vida personal. E incluso se ve en el comportamiento de muchos de los que se consideran de la nueva era, que suelen sentirse “especiales” por haber crecido, un grupo de elite que ve a los otros como primitivos a los que hay que evangelizar o dejar pasar.
+<h3>Era de Tauro (4,000 - 2,000 a.C.): Veneración de la Tierra</h3>
+<p>Tauro, el signo de la materia y la estabilidad, marcó un período de conexión profunda con la naturaleza. Culturas como la egipcia y las minoicas veneraron la fertilidad y los recursos terrestres, pero la falta de la intensidad transformadora de Escorpio, su polaridad, generó un estancamiento en la búsqueda de verdades más profundas.</p>
 
-Acuario ve la humanidad como un todo. Valora los grupos, funciona en comunidades, la globalización. El gran peligro es olvidar que dentro de ese grupo existen individuos que deben brillar para no ser tragados por el sistema. La polaridad de Acuario es Leo. Leo y su individualismo debe ser vivido dentro del sentido de unión y fraternidad.
+<h3>Era de Aries (2,000 - 0 a.C.): El Guerrero y la Acción</h3>
+<p>La humanidad, bajo el arquetipo del guerrero de Aries, vivió un período de conquista y guerra. Aquí emergieron deidades masculinas y una cultura orientada a la acción y la dominación. La separación de Libra, su opuesto, llevó a un descuido de la armonía y la justicia, desequilibrando las dinámicas sociales.</p>
 
-El corazón es el órgano regido por Leo, que ahora deberá brillar con genuina luz propia. La gran búsqueda de este signo es descubrir su verdadera identidad divina. Ese “yo” egocéntrico propio del niño caprichoso, habrá de convertirse en el “YO SOY” Pura Consciencia y Pura Luz, propia del hombre que se ha visto y ha visto a sus hermanos en su verdadera dimensión espiritual.
+<h3>Era de Piscis (0 - 2,000): Sacrificio y Redención</h3>
+<p>Piscis introdujo un periodo marcado por el sacrificio, el sufrimiento y la espiritualidad, simbolizado por Jesús y la búsqueda de redención. No obstante, esta era estuvo acompañada de una desconexión de las cualidades terrenales de Virgo, como el pragmatismo y la integración de la materia con el espíritu, fomentando una repulsión hacia el plano físico y el mundo material.</p>
 
-Pero que además asume su función y su trabajo siendo el aguatero que lleva el agua en su comunidad para regar los ríos de la Vida, nutrir, ayudar y colaborar, como dice la Gran Invocación, con el plan Divino para la raza humana sobre el planeta.
 
-No es sólo meditando o cantando que cambiaremos el mundo. Limpiando, en una oficina, arreglando zapatos o haciendo política, cortando carne o en wall street, se honra lo que cada uno es y se transforma el todo.
+<h3>La Era de Acuario (2,000 - 4,000): Hacia la Consciencia Global</h3>
+<p>Acuario representa el despertar de la humanidad hacia la colectividad, la integración y la fraternidad universal. Este signo está regido por Urano, asociado con la iluminación y el conocimiento superior. En esta era, la humanidad busca manifestar ideales elevados como la igualdad y la libertad. Sin embargo, el desafío acuariano radica en equilibrar la colectividad con la individualidad de su opuesto, Leo.</p>
 
-Este es el gran desafío.
+<p>Si la humanidad olvida que cada individuo es una chispa única dentro del colectivo, corre el riesgo de ser absorbida por sistemas homogéneos y despersonalizados. La verdadera evolución consiste en integrar la consciencia grupal con el reconocimiento de la luz interna que brilla en cada ser, transformando la comunidad en un espacio de crecimiento mutuo y realización.</p>
 
-Continúa….</p>
+<h2>La Gran Integración: Reconocer la Otra Parte</h2>
+<p>A lo largo de las eras, el mayor obstáculo ha sido la separación de las polaridades. En cada época, la humanidad ha oscilado entre aspectos opuestos, olvidando que ambos son esenciales para alcanzar la unidad. El desafío de nuestra era es recordar que somos un todo integrado, un puente entre lo material y lo espiritual, lo individual y lo colectivo.
+
+El camino hacia la plenitud no es escapar al mundo espiritual, ni perderse en la materialidad, sino vivir plenamente en ambos. Desde la oficina hasta el templo, cada acción humana es una contribución al Plan Divino, una oportunidad para crear un mundo donde la luz de cada individuo brille en armonía con el todo.
+
+La gran búsqueda de Acuario no es sólo globalización, sino humanización: vernos a nosotros mismos y a los demás como seres completos, divinos y profundamente interconectados.
+
+Continúa...</p>
+
   </section>
 
   <button

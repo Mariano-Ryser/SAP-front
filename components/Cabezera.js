@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image' 
+import Date from "./Date"
 
 //C:\Users\MR22\stock-app\frontend\public
 const Cabezera = () => {
@@ -12,9 +13,10 @@ const Cabezera = () => {
             <Link href="/">
                  <li>HOME</li>
             </Link>
-            <Link href="/proyectos/about/about">
+            <Link href="/about">
                  <li>ABOUT</li>
-            </Link>
+            </Link> 
+            {/* <Date></Date> */}
 
           
           

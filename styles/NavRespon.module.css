@@ -133,8 +133,8 @@
   .burger{
     position: absolute;
     transform: rotateZ(0deg);
-    right: 1.7rem;
-    top: -3.2rem;
+    right: 1.5rem;
+    top: -2.2rem;
     transition: 0.05s;
     animation: alien alternate 1s 1;
     

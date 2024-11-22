@@ -5,7 +5,7 @@ export default function Home() {
     <>
 
   <Link href="/"><li>/home</li></Link> 
-  <Link href="/proyectos/about"><li>/about</li></Link> 
+  <Link href="about"><li>/about</li></Link> 
   <Link href="/proyectos/proyects"><li>/proyects</li></Link> 
   <Link href="songs"><li>/songs</li></Link> 
   {/* <Link href="/stapler"><li>/home/StaplerBasis</li></Link> */}

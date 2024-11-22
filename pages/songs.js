@@ -5,7 +5,6 @@ export default function SongList() {
   return (
     <div className="container">
       <Link href="/"><li>/home</li></Link> 
-      <h2>Cancionero</h2>
 
         {songs.map((song) => (
             <Link href={`/songs/${song.id}`}>

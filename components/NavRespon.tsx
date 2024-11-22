@@ -169,63 +169,17 @@ return (
         </div>
 
       <div id='burger' className={styles.burger} onClick={openList}>
-{/*     
+   
          <Image
-         // onMouseOver={overed}
-         //  alt='Burger-Icon' src={'/img/Alienverde.gif'}
-         // height={100} width={70}></Image> */}
-          <div className='augen'></div>  
-          <div className='augen2'></div>  
-          <Image
-           alt='Burger-Icon' src={'/img/alienChill.png'}
-          //  alt='Burger-Icon' src={'/img/robote.gif'}
-          height={145} width={105}></Image> 
-        </div> 
+        //  onMouseOver={overed}
+           alt='Burger-Icon' src={'/img/Alienverde.gif'}
+          height={130} width={95}></Image> 
 
-         <style jsx>{`
-                      .augen{
-                        position:absolute;
-                          top:2rem;
-                          left:0.8rem;
-                          height:42px;
-                          width:42px;
-                          background-color:transparent;
-                          border-radius:50%;
-                          animation:linsen 1s alternate 2 ease-in;
-                        
-                        }
-                        .augen2{
-                          top:2rem;
-                          left:3rem;
-                          position:absolute;
-                          border-radius:50%;
-                          height:42px;
-                          width:42px;
-                          background-color:transparent;
-                          animation:linsen 2.2s alternate 2 ease-in;
-                        }
-                        @keyframes linsen {
-  1% {
-    background-color:transparent;
-  }
-  30% {
-    background-color:#ff0000;
-  }
- 
-  80% {
-    background-color:transparent;
-  }
- 
-  95% {
-    background-color:#5ae016;
-  }
+   
+        
+   </div> 
 
-  100% {
-    background-color:#FF0000;
-  }
-}
-
-           `}</style>
+     
 </nav>
 
               

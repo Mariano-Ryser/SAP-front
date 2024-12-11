@@ -8,7 +8,6 @@ const Icons = () => {
 
 const icons = [
   {img: "js.png", link:""},
-  {img: "nextLogo.png", link:""},
   {img: "alien.png", link:""},
   {img: "visual.gif", link:""},
   {img: "html.gif", link:""},
@@ -35,14 +34,20 @@ const icons = [
   {img: "champi.png", link:""},
   {img: "tic1.png", link:""},
   {img: "phone.png", link:""},
-  {img: "tagesWort2.png", link:""},
+  {img: "goldFish.png", link:""},
   {img: "pizza.png", link:""},
   {img: "next.png", link:""},
-   {img: "obs.png", link:""},
-   {img: "PacYellow.png", link:""},
-   {img: "vue.png", link:""},
-   {img: "g.gif", link:""},
-   {img: "robot.gif", link:""},
+  {img: "obs.png", link:""},
+  {img: "PacYellow.png", link:""},
+  {img: "vue.png", link:""},
+  {img: "g.gif", link:""},
+  {img: "robot.gif", link:""},
+  {img: "tagesWort1.png", link:""},
+  {img: "/partners/easyChords.png", link:""},
+  {img: "/partners/goldFish2.png", link:""},
+  {img: "/partners/zeppSolutions1.png", link:""},
+  {img: "/partners/swissSpace2.png", link:""},
+  {img: "/partners/swissSpace4.png", link:""},
 ]
 
   return (

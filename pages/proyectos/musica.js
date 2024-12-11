@@ -120,18 +120,18 @@ function rearrangeChords(chords) {
   // Crear un nuevo arreglo con las posiciones cambiadas
   const newChords = [];
   // 
-  newChords[0] = chords[3]; // El acorde en la posición 3 pasa a la posición 0
-  newChords[1] = chords[6]; // El acorde en la posición 6 pasa a la posición 1
-  newChords[2] = chords[2]; // El acorde en la posición 2 queda en la posición 2
-  newChords[3] = chords[5]; // El acorde en la posición 5 pasa a la posición 3
-  newChords[4] = chords[1]; // El acorde en la posición 1 pasa a la posición 4
-  newChords[5] = chords[4]; // El acorde en la posición 4 pasa a la posición 5
-  newChords[6] = chords[0]; // El acorde en la posición 0 pasa a la posición 6
+  newChords[0] = chords[3]; // Posición 3 pasa a la posición 0
+  newChords[1] = chords[6]; // Posición 6 pasa a la posición 1
+  newChords[2] = chords[2]; // Posición 2 queda en la posición 2
+  newChords[3] = chords[5]; // Posición 5 pasa a la posición 3
+  newChords[4] = chords[1]; // Posición 1 pasa a la posición 4
+  newChords[5] = chords[4]; // Posición 4 pasa a la posición 5
+  newChords[6] = chords[0]; // Posición 0 pasa a la posición 6
 
-  // newChords[0] = chords[1]; // El acorde en la posición 3 pasa a la posición 0
-  // newChords[1] = chords[4]; // El acorde en la posición 6 pasa a la posición 1
-  // newChords[2] = chords[0]; // El acorde en la posición 2 queda en la posición 2
-  // newChords[3] = chords[5]; // El acorde en la posición 5 pasa a la posición 3
+  // newChords[0] = chords[1]; // Posición 3 pasa a la posición 0
+  // newChords[1] = chords[4]; // Posición 6 pasa a la posición 1
+  // newChords[2] = chords[0]; // Posición 2 queda en la posición 2
+  // newChords[3] = chords[5]; // Posición 5 pasa a la posición 3
   return newChords;
 }
 const rearrangedC = rearrangeChords(C);
@@ -179,12 +179,9 @@ console.log(rearrangedC);
         </div>
   </div>
 
-  
- 
-
-
 
       <style jsx>{`
+  
   .divo{
     padding:1rem;
     border: solid 1px black ;

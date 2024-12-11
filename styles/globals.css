@@ -1,15 +1,15 @@
 /* EXELENTE FONDO  */
 * {
   box-sizing: border-box;
-  color: rgb(252, 252, 252);
-  /* color:  var(--letter-color); */
+  /* color: rgb(252, 252, 252); */
+  color:  var(--letter-color);
   transition: 0.5s;
   font-family:  Lato;
 }
 html,
 :root {
   --bg-color: url(/img/bBack.jpg); 
-  --letter-color: rgb(0, 0, 0); 
+  --letter-color: rgb(255, 255, 255); 
 }
  /* Color de fondo por defecto */
 
@@ -35,23 +35,6 @@ background-size: 20px 20px; */
 
 
 
-
-@media (max-width: 600px) {
-  * {
-    box-sizing: border-box;
-    color:  var(--letter-color);
-    transition: 0.5s;
-    font-family:  Lato;
-  }
-  html,
-  :root {
-    --bg-color: url(/img/aBack.jpg); 
-    --letter-color: rgb(255, 255, 255); 
-  }
-
-
-  
-}
 
 .bloqued{
   color: red;

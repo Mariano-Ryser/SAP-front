@@ -33,12 +33,13 @@ export default function About() {
 
   return (
     <>
-{generateRandomDivs()}
+{/* {generateRandomDivs()} */}
 
     <div className="container"><div>
 
           <div className="img-container">
-            <div className="img" style={{backgroundImage: `url('/img/g.gif'`}}></div>
+            {/* <div className="img" style={{backgroundImage: `url('/img/g.gif'`}}></div> */}
+            <Image src="/img/goldFish.svg" alt="Icon" width={250} height={250} />
           </div>    
 
           <p>It started as a virtual curriculum which later transformed into a blog, and then a complete

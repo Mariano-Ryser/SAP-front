@@ -13,29 +13,30 @@ const NavRespon = () => {
 
 // BACKGROUND IMGS
 const bgColors = [
-  'url(/img/spaceBack.png)',
   'url(/img/bBack.jpg)',
+  'url(/img/a8.jpg)',
+  'url(/img/a1.png)',
   'url(/img/c2.jpg)',
-  'url(/img/x3.jpg)',
-  'url(/img/x1.jpg)',
-  'url(/img/x7.jpg)',
-  'url(/img/y5.jpg)',
   'url(/img/y2.jpg)',
+  'url(/img/a4.png)',
+  'url(/img/a5.png)',
+
 ];
 
 //  COLORES PARA BACKGROUND COLOR
   // const bgColors = ['rgb(7, 7, 7)','rgb(255, 255, 255)', 'rgb(66, 58, 24)', 'rgb(25, 66, 24)', 'rgb(0, 0, 0)'];
  
   const letterColors = [
-    // 'rgb(0, 0, 0)',         
     'rgb(251, 255, 34)',  
     'rgb(255, 255, 255)',   
     'rgb(255, 165, 0)',     
     'rgb(0, 255, 255)',      
+    'rgb(0, 0, 0)',         
     'rgb(255, 223, 186)',     
     'rgb(252, 252, 252)',   
     'rgb(124, 252, 0)',      
     'rgb(238, 130, 238)',   
+    'red',   
   ];
   
   const aliens = ['Alienverde.gif','']
@@ -164,6 +165,7 @@ return (
 
 
 <nav  className={styles.nav}>
+
         <div className={styles.img}>
          <Link href="/home"><h1 className={styles.logo}></h1></Link> 
         </div>

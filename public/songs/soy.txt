@@ -1,12 +1,12 @@
-Gm
+        Gm
 Soy un hijo de mi sangre, soy mi propia 
 ideología
-D#
+     D#
 Mi templo, mi maestro, mi verdad y mi 
 mentira
-A#                             Cm        
-Resucito cuando siento que se vuelan mis 
-  D
+    A#                         Cm   
+Resucito cuando siento, que se vuelan mis 
+   D
 cenizas.
 
 Gm
@@ -14,6 +14,7 @@ Soy el sicario que me perdonó la vida
 D#
 Soy derecho, retorcido, mal amante, buen 
 artista
+
 A#                             Cm     
 Un compuesto inestable, descompuesto de 
   D
@@ -48,7 +49,7 @@ amuleto
 Soy así y adónde voy soy... Siempre lo que 
 yo quiero
 
-(INTRO)Gm - D# - A# - Cm - D 
+(INTRO) Gm - D# - A# - Cm - D 
 Gm
 Tengo rabia, esperanza tengo envidia tengo 
 celos

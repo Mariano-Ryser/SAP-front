@@ -6,6 +6,8 @@ export default function Fotos() {
     <>
  <Link href="proyects"><li>/proyects..</li></Link>
     <div className="container">
+
+ 
        
         <div className="img" 
             style={{backgroundImage: `url('/img/me8.jpeg')`}}
@@ -15,6 +17,7 @@ export default function Fotos() {
             style={{backgroundImage: `url('/img/me9.jpeg')`}}
             >
         </div> 
+
 
     </div>
 
@@ -37,14 +40,14 @@ export default function Fotos() {
         margin: auto;
         margin-bottom: 1rem;
         transition: 0.2s;
+        border-radius:2px;
 
     }
     .img:hover{
-       transform: rotateZ(1deg)scale(1.04) translateX(-0.1rem) translateY(-0.2rem);
+       transform: rotateZ(1deg)scale(1.1) translateX(-0.1rem) translateY(-0.2rem);
        
-       cursor: pointer;
        box-shadow: 0px 0px 10px 0px rgb(71, 71, 71);
-       border-radius:2rem;
+       border-radius:2px;
     }
     
    
@@ -55,8 +58,8 @@ export default function Fotos() {
 @media (max-width: 600px) {
     .img{
         display: block;
-        height:20rem;
-        width:100%;
+        height:25rem;
+        width:90%;
         border-radius:0.3rem;
         background-position: center;
         background-size:cover;
@@ -66,7 +69,7 @@ export default function Fotos() {
    
     .container{
         padding-top: 2rem;
-        width:90%;
+        width:100%;
       margin: auto;
       padding-bottom:3rem;
         color: rgb(210, 210, 210);

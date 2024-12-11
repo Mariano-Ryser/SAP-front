@@ -11,6 +11,15 @@ const palabras = [
     ]
   },
   {
+    palabra: "plausibel",
+    significado: "Plausible",
+    frases: [
+      "Sein Plan klingt sehr plausibel und gut durchdacht. (His plan sounds very plausible and well thought out.)",
+      "Die Erklärung, die er gegeben hat, war plausibel, aber wir müssen mehr Beweise haben. (The explanation he gave was plausible, but we need more evidence.)",
+      "Es war nicht plausibel, dass sie die ganze Zeit nichts bemerkt hat. (It was not plausible that she hadn't noticed anything the whole time.)"
+    ]
+  },
+  {
     palabra: "Schwierigkeit",
     significado: "Dificultad, problema",
     frases: [
@@ -1970,8 +1979,9 @@ const DayCard = () => {
     }
   }, []);
 
+  // voltear la carta al hacer clic
   const handleCardClick = () => {
-    setFlipped(!flipped); // voltear la carta al hacer clic
+    setFlipped(!flipped); 
   };
 
   // Función para cambiar a una palabra aleatoria con el botón
@@ -2035,6 +2045,7 @@ const filteredPalabras = palabras.filter(palabra => {
           Wort wechseln
           </button>
           {/* Anp */}
+      <p className='anzahlWorter'> Wörter: {cantidadPalabras}</p>
       </div>
     </div>
 
@@ -2042,7 +2053,6 @@ const filteredPalabras = palabras.filter(palabra => {
       
       {/* Aquí puedes seguir mostrando el resto de tu contenido */}
     </div>
-      <p className='anzahlWorter'> Anzahl der Wörter: {cantidadPalabras}</p>
 
     <style jsx>{`  
       p{
@@ -2068,7 +2078,8 @@ const filteredPalabras = palabras.filter(palabra => {
       }
       .anzahlWorter{
         position:absolute;
-        bottom:-102px;
+        bottom:0.4rem;
+        left:1rem;
         font-size:10px;
       }
 

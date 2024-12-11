@@ -43,12 +43,7 @@ const Cronometro = () => {
         )}
         <button onClick={reiniciarCronometro}>Reset</button>
       </div>
-    </div>
-
-
-
-   
-    
+    </div> 
     <style jsx>{`
       
       .cronometro{

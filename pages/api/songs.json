@@ -70,6 +70,107 @@
     "fontSize": "0.85rem",
     "previewFontSize": "0.82rem"
   }
-  
-  ]
+  ,
+  {
+    "id": "11",
+    "title": "Llueve sobre mojado",
+    "file": "/songs/llueveSobreMojado.txt",
+    "fontSize": "0.9rem",
+    "previewFontSize": "0.83rem"
+  },
+  {
+    "id": "12",
+    "title": "Yo soy tu amigo fiel",
+    "file": "/songs/YoSoyTuAmigoFiel.txt",
+    "fontSize": "0.93rem",
+    "previewFontSize": "0.87rem"
+  }
+  ,
+  {
+    "id": "13",
+    "title": "El federal",
+    "file": "/songs/ElFederal.txt",
+    "fontSize": "0.85rem",
+    "previewFontSize": "0.8rem"
+  },
+  {
+    "id": "14",
+    "title": "El Leon",
+    "file": "/songs/elLeon.txt",
+    "fontSize": "1rem",
+    "previewFontSize": "1rem"
+  },
+  {
+    "id": "15",
+    "title": "Luis",
+    "file": "/songs/luis.txt",
+    "fontSize": "1.03rem",
+    "previewFontSize": "1rem"
+  },
+   {
+    "id": "16",
+    "title": "Adrenalina",
+    "file": "/songs/adrenalina.txt",
+    "fontSize": ".8rem",
+    "previewFontSize": "0.76rem"
+  },
+  {
+   "id": "17",
+   "title": "Alguien en el Mundo piensa en mi",
+   "file": "/songs/alguienEnElMundo.txt",
+   "fontSize": ".97rem",
+   "previewFontSize": "0.91rem"
+ },
+ {
+  "id": "18",
+  "title": "Seminare",
+  "file": "/songs/seminare.txt",
+  "fontSize": "1.1rem",
+  "previewFontSize": "1.1rem"
+},
+{
+ "id": "19",
+ "title": "Ya no vuelvas - Lukra",
+ "file": "/songs/yaNoVuelvas.txt",
+ "fontSize": ".84rem",
+ "previewFontSize": "0.77rem"
+},
+{
+ "id": "20",
+ "title": "Simbolo de Paz",
+ "file": "/songs/simboloDePaz.txt",
+ "fontSize": "0.89rem",
+ "previewFontSize": "0.84rem"
+},
+{
+ "id": "21",
+ "title": "Seguir viviendo Sin tu Amor",
+ "file": "/songs/seguirViviendoSinTuAmor.txt",
+ "fontSize": "1.09rem",
+ "previewFontSize": "1.04rem"
+}
+,
+{
+ "id": "22",
+ "title": "Qien Se tomo todo el vinacho",
+ "file": "/songs/quienSeHaTomadoTodoElVino.txt",
+ "fontSize": "0.96rem",
+ "previewFontSize": "0.9rem"
+},
+{
+ "id": "23",
+ "title": "Ay Corazon La mona",
+ "file": "/songs/ayCorazon.txt",
+ "fontSize": "1rem",
+ "previewFontSize": "0.95rem"
+},
+{
+  "id": "24",
+  "title": "Bon que Bon",
+  "file": "/songs/bonQueBon.txt",
+  "fontSize": "0.767rem",
+  "previewFontSize": "0.7rem"
+ }
+]
+
 

@@ -128,7 +128,7 @@ export default function ModalComponent({
           font-family: "Roboto Mono", monospace;
           font-size: ${fontSize};
           line-height: 1.5;
-          color: black;
+          color: black ;
           width: 96%;
           height: 100%;
           overflow-y: auto;

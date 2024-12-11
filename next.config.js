@@ -1,33 +1,26 @@
-
-// next.config.js
-
-
-/** @type {import('rehype-pretty-code').Options} */
-const options = {
-  // See Options section below.
-};
-
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
-    // If you use remark-gfm, you'll need to use next.config.mjs
-    // as the package is ESM only
-    // https://github.com/remarkjs/remark-gfm#install
     remarkPlugins: [],
     rehypePlugins: [],
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
+    // providerImportSource: "@mdx-js/react", // Descomentar si usas MDXProvider
   },
-})
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure pageExtensions to include md and mdx
+  // Extensiones de página
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  // Optionally, add any other Next.js config below
   reactStrictMode: true,
-}
+  webpack(config) {
+    // Agregar la configuración para @svgr/webpack
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
+};
 
-
-// Merge MDX config with Next.js config
-module.exports = withMDX(nextConfig)
+// Exportar la configuración combinada
+module.exports = withMDX(nextConfig);

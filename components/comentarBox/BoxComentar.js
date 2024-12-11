@@ -256,6 +256,7 @@ function BoxComentar() {
         }
 
         .comentarBox {
+          
           font-family:  Lato;
           backdrop-filter: blur(10px);
           border-radius: 8px;
@@ -272,6 +273,7 @@ function BoxComentar() {
         }
 
         .text {
+          white-space: "pre-wrap";
           font-family:  Lato;
           font-size: 1rem;
           margin:0;

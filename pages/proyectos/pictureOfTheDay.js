@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 export async function getStaticProps() {
   const key = process.env.PUBLIC_NAS_API;
   
-  
     const res = await fetch(
       `https://api.nasa.gov/planetary/apod?api_key=${key}`
     );
@@ -30,7 +29,7 @@ export async function getStaticProps() {
   };
     return (
        <div>
-         <Link href="/proyectos/nasa/nasa"><li>/nasa</li></Link>
+         <Link href="/proyectos/proyects"><li>/proyects..</li></Link>
       <h2>Astronomy Picture of the Day</h2>
       <h2>{apod.title}</h2>
 

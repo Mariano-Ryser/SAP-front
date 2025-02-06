@@ -39,7 +39,7 @@ export default function About() {
 
           <div className="img-container">
             {/* <div className="img" style={{backgroundImage: `url('/img/g.gif'`}}></div> */}
-            <Image src="/img/goldFish.svg" alt="Icon" width={250} height={250} />
+            <Image src="/img/bichoWhite.png" alt="Icon" width={240} height={190} />
           </div>    
 
           <p>It started as a virtual curriculum which later transformed into a blog, and then a complete
@@ -49,10 +49,15 @@ export default function About() {
             on Azure, the database interaction is
             created with NodeJs and Mongo DB.
           </p>
-          <p>If you have any good comments or constructive criticism, they are always helpful to me. so I await your return!</p>
-       
+    
         {/* <div className="divo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quo, voluptas saepe tempora accusamus veritatis ab perspiciatis, quia repellendus ullam harum nobis facere optio! Recusandae quis, dignissimos pariatur rem maiores, placeat, sed vel hic explicabo consequatur doloremque. Quasi ducimus dolores adipisci impedit ipsa consequatur nisi id! Hic mollitia velit iusto.</div> */}
-   
+        <p>
+        Confident, due to the lack of current development and the scarcity of information available to everyone. Monitoring, updates, careful development. Consistent with my progress. Grateful despite the constant hostility to new ideas and contagious collective impatience.
+I know I'm crazy, but nothing will change my destiny, only death.</p>
+       
+          <p>If you have any good comments or constructive criticism, they are always helpful to me. so I await your return!</p>
+  
+  
   </div>
   </div>
 

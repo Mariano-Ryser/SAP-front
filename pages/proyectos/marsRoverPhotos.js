@@ -36,7 +36,7 @@ export async function getStaticProps() {
   
     return (
       <div>
-        <Link href="proyects"><li>/proyects</li></Link>
+        <Link href="/proyectos/proyects"><li>/proyects..</li></Link>
         <h1>Mars Rover Photos </h1>
         <div className="photos-grid">
           {marsPhotos.map((photo) => (

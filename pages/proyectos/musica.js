@@ -134,12 +134,15 @@ function rearrangeChords(chords) {
   // newChords[3] = chords[5]; // Posición 5 pasa a la posición 3
   return newChords;
 }
+
 const rearrangedC = rearrangeChords(C);
 const rearrangedD = rearrangeChords(D);
 const rearrangedE = rearrangeChords(E);
 const rearrangedF = rearrangeChords(F);
 const rearrangedG = rearrangeChords(G);
 const rearrangedA = rearrangeChords(A);
+
+
 
 console.log(rearrangedC);
 
@@ -148,14 +151,16 @@ console.log(rearrangedC);
     {/* ////////////////////// */}
     <Link href="proyects"><li>/volver</li></Link>
  <div className="container">
-        <div>
+        <div>   
+                <p>A Scale = {AScale}   </p>
+
+
+                <p>Bb = {ASharpMin}   </p>
+
+          
                 <p>GmSharpScale = {GSharpMinScale}</p>
+                <p>C={C}</p>
                 <p>Progrecion = {rearrangedC}</p>
-                <p>Progrecion = {rearrangedD}</p>
-                <p>Progrecion = {rearrangedE}</p>
-                <p>Progrecion = {rearrangedF}</p>
-                <p>Progrecion = {rearrangedG}</p>
-                <p>Progrecion = {rearrangedA}</p>
 
                 <p>Dm= E-F-A-C-E</p>
                 <p>G= </p>

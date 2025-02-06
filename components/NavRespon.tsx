@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+
 import Link from 'next/link';
 import styles from "../styles/NavRespon.module.css"
 import Image from "next/image"
 import Test5 from '../pages/ztest/test5';
+import { useEffect, useState } from 'react';
 import DayColorSquare from '../components/dayBox/DayBox';
-
 //C:\Users\MR22\stock-app\frontend\public
-const NavRespon = () => {
+
+export default function NavRespon(){
+  
   const [close, setClose] = useState(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false); 
-
 // BACKGROUND IMGS
 const bgColors = [
   'url(/img/bBack.jpg)',
   'url(/img/a8.jpg)',
+  'url(/img/luneta.png)',
   'url(/img/a1.png)',
   'url(/img/c2.jpg)',
   'url(/img/y2.jpg)',
@@ -415,4 +417,3 @@ return (
   )
 }
 
-export default NavRespon

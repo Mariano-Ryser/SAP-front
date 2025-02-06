@@ -8,7 +8,7 @@
   },
   {
     "id": "2",
-    "title": "Oh mami",
+    "title": "La mona Oh madre",
     "file": "/songs/ohMami.txt",
     "fontSize": "0.94rem",
     "previewFontSize": "0.86rem"
@@ -171,6 +171,52 @@
   "fontSize": "0.767rem",
   "previewFontSize": "0.7rem"
  }
+ ,
+{
+  "id": "25",
+  "title": "Yo soy usted",
+  "file": "/songs/yoSoyUsted.txt",
+  "fontSize": "0.74rem",
+  "previewFontSize": "0.7rem"
+ }
+ ,
+ {
+   "id": "26",
+   "title": "Muchachos",
+   "file": "/songs/muchachos.txt",
+   "fontSize": "0.86rem",
+   "previewFontSize": "0.8rem"
+  }
+  ,
+ {
+   "id": "27",
+   "title": "La Carta",
+   "file": "/songs/laCartaLaBarra.txt",
+   "fontSize": "0.88rem",
+   "previewFontSize": "0.8rem"
+  }
+  ,
+  {
+    "id": "28",
+    "title": "La Carta",
+    "file": "/songs/laCartaLaBarra.txt",
+    "fontSize": "0.88rem",
+   "previewFontSize": "0.8rem"
+   },
+   {
+    "id": "29",
+    "title": "Knocking on Heavens Door",
+    "file": "/songs/knockingOnHeavens.txt",
+    "fontSize": "0.82rem",
+    "previewFontSize": "0.76rem"
+   },
+   {
+    "id": "30",
+    "title": "Cancion para mi muerte",
+    "file": "/songs/cancionParaMiMuerte.txt",
+    "fontSize": "1.2rem",
+    "previewFontSize": "1rem"
+   }
 ]
 
 

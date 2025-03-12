@@ -15,6 +15,7 @@ export default function NavRespon(){
 // BACKGROUND IMGS
 const bgColors = [
   'url(/img/bBack.jpg)',
+  'url(/img/a0.jpg)',
   'url(/img/a8.jpg)',
   'url(/img/luneta.png)',
   'url(/img/a1.png)',
@@ -30,10 +31,10 @@ const bgColors = [
  
   const letterColors = [
     'rgb(251, 255, 34)',  
+    'rgb(0, 0, 0)', 
     'rgb(255, 255, 255)',   
     'rgb(255, 165, 0)',     
-    'rgb(0, 255, 255)',      
-    'rgb(0, 0, 0)',         
+    'rgb(0, 255, 255)',       
     'rgb(255, 223, 186)',     
     'rgb(252, 252, 252)',   
     'rgb(124, 252, 0)',      
@@ -198,157 +199,25 @@ return (
           <Test5/>
           
             {/* Index*/}
-              
+            <Link href="/"><li onClick={closeAsideOnLinkClick}>/Home</li></Link> 
+            <Link href="/proyectos/noti"><li onClick={closeAsideOnLinkClick}>/Nota</li></Link> 
+  <Link href="../about"><li onClick={closeAsideOnLinkClick}>/About</li></Link> 
+  <Link href="/proyectos/proyects"><li onClick={closeAsideOnLinkClick}>/Proyects</li></Link> 
+  <Link href="/proyectos/icons"><li onClick={closeAsideOnLinkClick}>/Icons</li></Link> 
+  <Link href="../songs"><li onClick={closeAsideOnLinkClick}>/Songs</li></Link> 
+  <Link href="../idiomas/DayCard"><li onClick={closeAsideOnLinkClick}>/Deutsch</li></Link> 
+  <Link href="../idiomas/EnglishCard"><li onClick={closeAsideOnLinkClick}>/English</li></Link> 
+  <Link href="/proyectos/msj"><li onClick={closeAsideOnLinkClick}>/ComentarBox</li></Link> 
+  <Link href="/proyectos/personaje"><li onClick={closeAsideOnLinkClick}>/CreateChar</li></Link> 
+  <Link href="/proyectos/productCreator"><li onClick={closeAsideOnLinkClick}>/ProductCreator</li></Link> 
+  <Link href="/proyectos/logazo"><li onClick={closeAsideOnLinkClick}>/Logo</li></Link> 
+  <Link href="/proyectos/musica"><li onClick={closeAsideOnLinkClick}>/MusicaProyect</li></Link> 
+  <Link href="/proyectos/hb/sound/music"><li onClick={closeAsideOnLinkClick}>/GameSound</li></Link> 
+  <Link href="/proyectos/posts/books"><li onClick={closeAsideOnLinkClick}>/BooksProyect</li></Link> 
+  <Link href="../partners"><li onClick={closeAsideOnLinkClick}>/Partners</li></Link> 
            
-              {/* Icons */}
-                <Link href="/proyectos/icons">  
-                <li onClick={closeAsideOnLinkClick}
-                  id='li'
-                  className={styles.li}
-                  >
-                   <div
-                       onClick={padlook}
-                       id='padlock'
-                      className={styles.padlock}></div>
-                  <a className={styles.a}>Icons</a>
-                </li>
-              </Link>
-         
-          {/* Mensajeria Link */}
-               <Link href="/proyectos/msj">
-                <li onClick={closeAsideOnLinkClick} className={styles.li}>
-                  <a  className={styles.a}>Box Comentar</a>
-                </li>
-              </Link>
 
-                {/* Noti Worter Link */}
-                <Link href="/proyectos/noti">
-                <li onClick={closeAsideOnLinkClick}  className={styles.li}>
-                  <a className={styles.a}>Neues Wort?</a>
-                </li>
-              </Link>
-
-                 {/* Mensajeria Link */}
-                 {/* <Link href="/proyectos/productCreator/create">
-                <li className={styles.li}>
-                  <a className={styles.a}>Product Creator</a>
-                </li>
-              </Link> */}
-        
-          {/* CHAR CREATOR */}
-          {/* <Link href="/proyectos/charCreator/personaje">
-                <li
-                  id='li'
-                  className={styles.li}
-                  >
-                   <div
-                       onClick={padlook}
-                       id='padlock'
-                      className={styles.padlock}></div>
-                  <a className={styles.a}>Chars Creator</a>
-                </li>
-                </Link> */}
-
-                 {/* Lectura*/}
-              {/* <Link href="/proyectos/lectura/lectura">
-              <li className={styles.li}
-              // onClick={padlook}
-              >
-                <a className={styles.a}>Fonts-test
-                </a>
-              </li>
-              </Link> */}
-
-                  {/* LOGO COLORINCHE*/}
-                  {/* <Link href="/proyectos/logazo/logazo">
-              
-              <li className={styles.li}
-              // onClick={padlook}
-              >
-                <a className={styles.a}>Logo
-                </a>
-              </li>
-              </Link> */}
-
-                  {/* MUSIC TESTING*/}
-
-                          <Link href="/proyectos/hb/sounds/music">
-                      
-                      <li onClick={closeAsideOnLinkClick}  className={styles.li}
-                      // onClick={padlook}
-                      >
-                        <a className={styles.a}>Game Sounds 
-                        </a>
-
-                      </li>
-                      </Link>
-
-                      
-                  {/* MUSIC TESTING*/}
-
-                  <Link  href="/proyectos/musica">
-                      
-                      <li  onClick={closeAsideOnLinkClick} className={styles.li}
-                      // onClick={padlook}
-                      >
-                        <a   className={styles.a}>Musica 
-                        </a>
-
-                      </li>
-                      </Link>
-
-
-
-               <li className={styles.li}
-                      // onClick={padlook}
-                      >
-                      
-              </li>
-              <li className={styles.li}
-                      // onClick={padlook}
-                      >
-                      
-              </li>
-              
-              <li className={styles.li}
-                      // onClick={padlook}
-                      >
-                      
-              </li>
-              <li className={styles.li}
-                      // onClick={padlook}
-                      >
-                      
-              </li>
-            
-              <li className={styles.li}
-                      // onClick={padlook}
-                      >
-                      
-              </li>
-              <Link href="/proyectos/posts/books">
-              
-                <li className={styles.li}
-                // onClick={padlook}
-                >
-                  <a className={styles.a}></a>
-                </li>
-              </Link>
-
-              
-
-
-               {/* FOTOS
-              
-               <Link href="/fotos/fotos">
-              
-              <li className={styles.li}
-              onClick={padlook}
-              >
-                <a className={styles.a}>Fotos
-                </a>
-              </li>
-              </Link> */}
+  
   
           </ul>
               

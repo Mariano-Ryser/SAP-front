@@ -1,7 +1,7 @@
 import style from '/styles/create.module.css'
 import { useState, useEffect } from 'react'
 
-function Create() {
+export function ProductCreator() {
 
     const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
     const initialState = {name:'',price:0}
@@ -128,4 +128,4 @@ function Create() {
   )
 }
 
-export default Create
+export default ProductCreator

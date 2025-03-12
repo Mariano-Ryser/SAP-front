@@ -205,6 +205,10 @@ useEffect(()=>{
       </div>
    
     <style jsx>{`
+      .text{
+        white-space: pre-line;
+      }
+
     .msjCarga{
       font-family:  Lato;
         font-size: 1.2rem;
@@ -295,6 +299,7 @@ padding: 0.7rem;
     font-family:  Lato;
   }
   .authorInput{
+    color: black;
     display: block;
     margin-bottom: 0.3rem;
     margin-top:0rem;
@@ -308,6 +313,7 @@ padding: 0.7rem;
   }
 /* SEND BUTTON */
 .button{
+  color: black;
   font-family:  Lato;
   height: 2rem;
   width: 5rem;

@@ -37,10 +37,9 @@ export default function About() {
 
     <div className="container"><div>
 
-          <div className="img-container">
-            {/* <div className="img" style={{backgroundImage: `url('/img/g.gif'`}}></div> */}
+          {/* <div className="img-container">
             <Image src="/img/bichoWhite.png" alt="Icon" width={240} height={190} />
-          </div>    
+          </div>     */}
 
           <p>It started as a virtual curriculum which later transformed into a blog, and then a complete
              server in which I continue testing and working hard to expand my knowledge on the subject.</p>

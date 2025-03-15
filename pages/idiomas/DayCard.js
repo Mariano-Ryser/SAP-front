@@ -133,10 +133,13 @@ const handleClick = (e) => {
     <style jsx>{`
        input{
         color: black;
+        height: 2.5rem;
+        
        }
 
         /* Fondo oscurecido */
         .overlay {
+          backdrop-filter: blur(19px);
           position: fixed;
           z-index: 1;
           top: 0;
@@ -144,22 +147,19 @@ const handleClick = (e) => {
           width: 100%;
           height: 100%;
           background: rgba(0, 0, 0, 0.5);
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          
         }
         
         /* Contenedor del formulario */
         .form-container {
+          margin:5rem auto;
           
-          margin-top: -15rem;
-          backdrop-filter: blur(29px);
-          padding: 20px;
+          padding: 1.5rem;
           border-radius: 10px;
-          width: 30rem;
+          width: 26rem;
           height: 34rem;
           text-align: center;
-          box-shadow: 0px 6px 20px 1px rgba(238, 238, 238, 0.6);
+          border: 1px solid #ccc;
         }
         .form-container h2 {
           margin-bottom: 3rem;
@@ -175,7 +175,7 @@ const handleClick = (e) => {
         /* Botón de cerrar */
         .buttons {
           margin-top: 10px;
-          display: flex;
+          display: inline-block;
           align-items: space-between;
           justify-content: center;
         }
@@ -200,8 +200,10 @@ const handleClick = (e) => {
         }
 
         .error {
-          bottom: 3.4rem;
+          height: 4.9rem;
+          width: 15rem;
            position:absolute;
+           
           z-index:999;
           font-family:  Lato;
           background-color:rgba(238, 43, 43, 0.94);
@@ -234,7 +236,7 @@ const handleClick = (e) => {
       <div className="card-container">
         <div className={`card ${flipped ? "flipped" : ""}`} onClick={() => setFlipped(!flipped)}>
           <div className="card-face card-front">
-            <h2>{currentWord.palabra}</h2>
+            <h3>{currentWord.palabra}</h3>
 
 
           </div>
@@ -251,17 +253,21 @@ const handleClick = (e) => {
 
       <style jsx>{`
         .container {
+          
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding-top: 5rem;
+          padding-top: 2rem;
         }
         .card-container {
           perspective: 1000px;
+          width: 100%;
+          
         }
         .card {
-          width: 30rem;
+          margin:auto ;
+          width: 27rem;
           min-height: 36rem;
           position: relative;
           transform-style: preserve-3d;

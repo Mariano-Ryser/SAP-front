@@ -2,13 +2,11 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const initialState = {
-    titulo:'',
-    text:'',
-  };
-  const [noti, setNoti] = useState(initialState)
-  const [notis, setNotis] = useState([])
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL 
+
+  const [notis, setNotis] = useState([])
+
+
   const fetchNotis= () =>{
     fetch(`${baseURL}/notis`)
        .then(res => res.json())
@@ -17,37 +15,44 @@ export default function Home() {
         console.log('notis:', notis)
    })
 }
+  const handleLike = async (_id) => {
+  try {
+    const response = await fetch(`${baseURL}/notis/${_id}/like`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      const updatedNoti = await response.json();
+      // Actualizamos el estado con el noti actualizado
+      setNotis((prevNotis) =>
+        prevNotis.map((noti) =>
+          noti._id === _id ? updatedNoti.noti : noti
+        )
+      );
+    } else {
+      console.error('Error al agregar like:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Error al agregar like:', error);
+  }
+};
   useEffect(()=>{
     fetchNotis();
   },[])
 
   return (
     <>
-
-  {/* <Link href="/"><li>/home</li></Link> 
-  <Link href="about"><li>/about</li></Link> 
-  <Link href="/proyectos/proyects"><li>/proyects</li></Link> 
-  <Link href="songs"><li>/songs</li></Link> 
-  <Link href="partners"><li>/partners</li></Link> 
-  <Link href="idiomas/DayCard"><li>/Deutsch</li></Link> 
-  <Link href="/idiomas/EnglishCard"><li>/English</li></Link> 
-  <Link href="test"><li>/test</li></Link>  */}
-  {/* <Link href="/stapler"><li>/home/StaplerBasis</li></Link> */}
-  {/* <Link href="/stapler1"><li>/home/StaplerR1</li></Link>
-  <Link href="/stapler2"><li>/home/StaplerR2</li></Link> */}
-  {/* <Link href="/proyectos/noti/noticias"><li>/home/noticias</li></Link> */}
-  {/* <Link href="/proyectos/nasa/pictureOfTheDay"><li>/AstronomyInfoDay</li></Link> */}
-  {/* <Link href="/test/test"><li>/home/test</li></Link> */}
-
   {/* MAPEO DE notis */}
   
   <div>
-         {notis.map(({_id, titulo, text}) => (
-
+         {notis.map(({_id, titulo, text, likes}) => (
             <div key={_id} className="notiBox">
                 <h1 className="titulo">{titulo}</h1>
-                <span className="text">{text}...</span> 
-                <br></br>    
+                <p className="text">{text}</p>
+              <button className="likeButton" onClick={() => handleLike(_id)}>
+                ❤️{likes}
+              </button>
             </div>
              
           ))}
@@ -56,21 +61,44 @@ export default function Home() {
 
 
   <style jsx>{`
+    .likeButton {
+      border: 0;
+      cursor: pointer;
+      transform: scale(1.8);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      background: none;
+      position: relative;
+      bottom: 0px;
+      left: 85%;
+      transition: transform 0.1s;
+    }
+    .likeButton:hover {
+      transform: scale(2);
+    }
+    .likeButton:active {
+      transform: scale(1.7);
+    }
     .titulo{
       font-family: "Montserrat" ;
-      margin:0.2rem;
+      margin-top:0.7rem;
+      margin-bottom:1rem;
+      line-height: 1; 
     }  
     .notiBox{
-      padding:0.2rem;
+      margin-top:1rem;
+      margin-bottom:1rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }  
     .text{
       font-family: "Montserrat" ;
+      
       white-space: pre-line;
-      line-height: 1.6; /* Espaciado entre líneas */
-  font-size: 16px; /* Tamaño recomendado para móviles */
-      width: 90vw;  /* El texto ocupa el 90% del ancho de la pantalla */
-  max-width: 600px; /* Máximo ancho para que no se vuelva difícil de leer */
-  margin: auto; /* Centrar el texto */
+      line-height: 1.44; /* Espaciado entre líneas */
+      font-size: 19px; /* Tamaño recomendado para móviles */
+      margin: auto; /* Centrar el texto */
     }  
     
          `}</style>

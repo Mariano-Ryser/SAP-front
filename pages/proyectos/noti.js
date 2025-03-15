@@ -35,7 +35,28 @@ function Noti(){
         [inputName]: inputValue,
       });
   }
-
+  const handleLike = async (_id) => {
+    try {
+      const response = await fetch(`${baseURL}/notis/${_id}/like`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        const updatedNoti = await response.json();
+        // Actualizamos el estado con el noti actualizado
+        setNotis((prevNotis) =>
+          prevNotis.map((noti) =>
+            noti._id === _id ? updatedNoti.noti : noti
+          )
+        );
+      } else {
+        console.error('Error al agregar like:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error al agregar like:', error);
+    }
+  };
 
   
   const handleClick = (e)=> {
@@ -102,14 +123,13 @@ useEffect(()=>{
     <>
      <Link href="proyects"><li>/proyects..</li></Link>
     <form className="form">
-      <h3>Neues Wort hinzufügen</h3>
       <p className="date"> {datee}</p>
 
       {/* Input Titulo */}
       <input
     placeholder='Titulo'
     className="authorInput"
-     maxLength="20"
+     maxLength="40"
      type='text'
      name='titulo'
      value={noti.titulo}
@@ -125,54 +145,27 @@ useEffect(()=>{
       name='text'
       value={noti.text}
       onChange={handleChange}
-      >
-        
+      >  
     </textarea>
 
- 
-
-      {/* Send Button */}
-        <button 
-        className="button"
-        onClick={handleClick}
-        >Send
-        </button>
-        {
-                error && 
-                (
-                    <div className="error">
-                        { error }
-                    </div>
-                ) 
-                
-            }
-            {
-                successMessage && 
-                (
-                    <div className="success">
-                        { successMessage }
-                    </div>
-                ) 
-            }
-
-          {
-                deletedMessage && 
-                (
-                    <div className="deleted">
-                        { deletedMessage }
-                    </div>
-                ) 
-            }
-    </form>
+  {/* Send Button */}
+        <button className="button" onClick={handleClick}>Send</button>
+        {error && ( <div className="error">{ error }</div>) }
+        {successMessage && (<div className="success">{ successMessage }</div>)}
+       {deletedMessage && (<div className="deleted">{ deletedMessage }</div>)}
+   </form>
 
      {/* MAPEO DE notis */}
      <div>
-             {notis.map(({_id, titulo, text}) => (
+             {notis.map(({_id, titulo, text, likes}) => (
                 <div key={_id} className="notiBox">
                     <h1 className="titulo">{titulo}</h1>
-                    <span className="text">-{text}...</span> 
+                    <span className="text">{text}</span> 
                     <br></br>
         <div >
+        <button className="likeButton" onClick={() => handleLike(_id)}>
+                ❤️{likes}
+              </button>
               {/* Button Deleted */}
               <span
                         className="x"
@@ -192,7 +185,7 @@ useEffect(()=>{
 
                                 console.log({data})})}}
                                 
-                      >X</span>
+                      >❌</span>
                     </div>
                         
                 </div>
@@ -205,6 +198,17 @@ useEffect(()=>{
       </div>
    
     <style jsx>{`
+      .likeButton {
+      border: 0;
+      cursor: pointer;
+      transform: scale(1.8);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      background: none;
+      position: relative;
+      bottom: 0px;
+      left: 85%;
+    }
       .text{
         white-space: pre-line;
       }
@@ -325,8 +329,8 @@ padding: 0.7rem;
 /* TTITULO EN TEXTO */
 .titulo{
   font-family:  Lato;
-  line-height: 0rem;
-  font-size: 1rem;
+  line-height: 0.6rem;
+  font-size: 1.4rem;
   margin-bottom:1rem;
 }
 .notiBox{
@@ -358,10 +362,11 @@ padding: 0.7rem;
 .x{
   position: absolute;
   font-size: 0.9rem;
-  right: 1rem;
-  color: red;
+  bottom: 0.5rem;
+  left: 1rem;  
+   color: black;
   cursor: pointer;
-  font-family:  Lato;
+
 }
 /* MOBIL - STYLE */
 @media (max-width: 600px) {
@@ -402,11 +407,10 @@ padding: 0.7rem;
   .date{
     display:flex;
     justify-content:end;
-    color: #f5f5f5ad;
     font-family:  Lato;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 900;
-    margin: 0.2rem 0.2rem 0.2rem 0rem;
+    margin: 0rem 0rem 0.2rem 0rem;
     padding: 0rem;
   }
   .button{

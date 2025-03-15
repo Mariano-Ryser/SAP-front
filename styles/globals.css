@@ -4,12 +4,12 @@
   /* color: rgb(252, 252, 252); */
   color:  var(--letter-color);
   transition: 0.5s;
-  font-family:  Lato;
+  font-family: "Montserrat" ;
 }
 html,
 :root {
-  --bg-color: url(/img/bBack.jpg); 
-  --letter-color: rgb(255, 255, 255); 
+  --bg-color: url(/img/a0.jpg); 
+  --letter-color: rgb(24, 24, 24); 
 }
  /* Color de fondo por defecto */
 

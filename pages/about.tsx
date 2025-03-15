@@ -37,9 +37,9 @@ export default function About() {
 
     <div className="container"><div>
 
-          {/* <div className="img-container">
-            <Image src="/img/bichoWhite.png" alt="Icon" width={240} height={190} />
-          </div>     */}
+          <div className="img-container">
+            <Image src="/img/oja.png" alt="Icon" width={240} height={190} />
+          </div>    
 
           <p>It started as a virtual curriculum which later transformed into a blog, and then a complete
              server in which I continue testing and working hard to expand my knowledge on the subject.</p>
@@ -102,7 +102,6 @@ I know I'm crazy, but nothing will change my destiny, only death.</p>
     }
     p{
         font-size:1.8rem;
-        font-family:  cursive;
 
     }
  

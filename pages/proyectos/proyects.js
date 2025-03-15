@@ -18,8 +18,6 @@ export default function Proyects() {
   <Link href="/proyectos/contadorTruco/contador"><li>/TrucoCounter</li></Link>
   <Link href="/proyectos/hb/hb"><li>/hb</li></Link>
  <Link href="noti"><li>/noti</li></Link>
- <Link href="marsRoverPhotos"><li>/mars-Nasa</li></Link>
- <Link href="pictureOfTheDay"><li>/dayPicture</li></Link>
   {/* <Link href="/proyectos/poemas/poemas"><li>/proyects/poemas</li></Link> */}
   {/* <Link href="/proyectos/posts/books"><li>/pro/books</li></Link> */}
   {/* <Link href="/proyectos/nasa/nasa"><li>/pro/nasa</li></Link> */}

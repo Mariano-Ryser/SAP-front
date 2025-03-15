@@ -15,14 +15,8 @@ export default function NavRespon(){
 // BACKGROUND IMGS
 const bgColors = [
   'url(/img/bBack.jpg)',
-  'url(/img/a0.jpg)',
-  'url(/img/a8.jpg)',
-  'url(/img/luneta.png)',
   'url(/img/a1.png)',
-  'url(/img/c2.jpg)',
-  'url(/img/y2.jpg)',
-  'url(/img/a4.png)',
-  'url(/img/a5.png)',
+  'url(/img/a0.jpg)',
 
 ];
 
@@ -31,15 +25,11 @@ const bgColors = [
  
   const letterColors = [
     'rgb(251, 255, 34)',  
-    'rgb(0, 0, 0)', 
     'rgb(255, 255, 255)',   
-    'rgb(255, 165, 0)',     
-    'rgb(0, 255, 255)',       
-    'rgb(255, 223, 186)',     
-    'rgb(252, 252, 252)',   
     'rgb(124, 252, 0)',      
-    'rgb(238, 130, 238)',   
-    'red',   
+    'rgb(255, 165, 0)',     
+    'rgb(0, 255, 255)',      
+    'rgb(0, 0, 0)', 
   ];
   
   const aliens = ['Alienverde.gif','']
@@ -174,11 +164,14 @@ return (
         </div>
 
       <div id='burger' className={styles.burger} onClick={openList}>
-   
+      {/* 🍄 */}
          <Image
         //  onMouseOver={overed}
-           alt='Burger-Icon' src={'/img/Alienverde.gif'}
-          height={130} width={95}></Image> 
+          //  alt='Burger-Icon' src={'/img/Alienverde.gif'
+           alt='Burger-Icon' src={'/img/oja.png'
+
+           }
+          height={90} width={95}></Image> 
 
    
         

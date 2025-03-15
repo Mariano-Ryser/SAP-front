@@ -16,7 +16,6 @@ function BoxComentar() {
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
   const [deletedMessage, setDeleted] = useState(null);
-  const [likes, setLikes] = useState(comentar.likes);
 
   const handleChange = (e) => {
     const inputValue = e.target.value;
@@ -88,7 +87,12 @@ function BoxComentar() {
       .then(({ comentars }) => {
         setComentars(comentars);
       });
-  };
+    };
+
+      console.log(comentars)
+      
+
+
 
   useEffect(() => {
     fetchComentars();
@@ -140,14 +144,14 @@ function BoxComentar() {
 
       <div className="comentariosContainer">
         {comentars.map(({ _id, titulo, text, author, likes }) => (
+          
           <div key={_id} className="comentarBox">
             <h1 className="titulo">{titulo}</h1>
             <p className="text">{text}</p>
             <span className="author">Por: {author}</span>
-            <p className="likes">Likes: {likes}</p>
             <button className="likeButton" onClick={() => handleLike(_id)}>
-              👍 Like
-            </button>
+                ❤️{likes}
+              </button>
             <span
               className="deleteButton"
               onClick={() => {
@@ -156,12 +160,7 @@ function BoxComentar() {
                   .then(() => {
                     fetchComentars();
                     setDeleted('¡Comentario eliminado!');
-                    setTimeout(() => setDeleted(null), 2000);
-                  });
-              }}
-            >
-              X
-            </span>
+                    setTimeout(() => setDeleted(null), 2000);});}}>X</span>
           </div>
         ))}
       </div>
@@ -173,7 +172,6 @@ function BoxComentar() {
           padding-top: 1rem;
           font-family:  Lato;
         }
-
         .date {
           font-size: 0.9rem;
           text-align: right;
@@ -256,7 +254,6 @@ function BoxComentar() {
         }
 
         .comentarBox {
-          
           font-family:  Lato;
           backdrop-filter: blur(10px);
           border-radius: 8px;
@@ -264,7 +261,6 @@ function BoxComentar() {
           margin-bottom: 1rem;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         .titulo {
           font-family:  Lato;
           font-size: 1.2rem;
@@ -287,36 +283,30 @@ function BoxComentar() {
           padding:0;
         }
 
-        .likes {
-          font-family:  Lato;
-          font-size:0.8rem;
-          margin:0;
-          padding:0;
-        }
-
         .likeButton {
-          font-family:  Lato;
-          background-color: #0070f3;
-          color: white;
-          padding: 0.3rem 0.9rem;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          margin-right: 0.5rem;
-        }
-
-        .likeButton:hover {
-          background-color: #005bb5;
-        }
-
+      border: 0;
+      cursor: pointer;
+      transform: scale(1.3);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      background: none;
+      position: relative;
+      bottom: 0px;
+      left: 75%;
+    }
+    .likeButton:hover {
+      transform: scale(1.5);
+    }
+    .likeButton:active {
+      transform: scale(1.1);
+    }
         .deleteButton {
-          color: red;
-          cursor: pointer;
-          font-weight: bold;
-          font-size: 1.1rem;
-          position:absolute;
-          right:1.3rem;
-          bottom:1rem;
+          position: absolute;
+  font-size: 0.9rem;
+  bottom: 0.5rem;
+  left: 1rem;  
+   color: black;
+  cursor: pointer;
         }
 
         /* Responsivo */

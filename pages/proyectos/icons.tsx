@@ -41,13 +41,6 @@ const icons = [
   {img: "PacYellow.png", link:""},
   {img: "vue.png", link:""},
   {img: "g.gif", link:""},
-  {img: "robot.gif", link:""},
-  {img: "tagesWort1.png", link:""},
-  {img: "/partners/easyChords.png", link:""},
-  {img: "/partners/goldFish2.png", link:""},
-  {img: "/partners/zeppSolutions1.png", link:""},
-  {img: "/partners/swissSpace2.png", link:""},
-  {img: "/partners/swissSpace4.png", link:""},
 ]
 
   return (

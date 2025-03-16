@@ -15,12 +15,11 @@ function BoxComentar() {
   const [comentars, setComentars] = useState([]);
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
-  const [deletedMessage, setDeleted] = useState(null);
+  const [deletedMessage, setDeletedMessage] = useState(null);
 
   const handleChange = (e) => {
-    const inputValue = e.target.value;
-    const inputName = e.target.name;
-    setComentar({ ...comentar, [inputName]: inputValue });
+    const { name, value } = e.target;
+    setComentar({ ...comentar, [name]: value });
   };
 
   const handleLike = async (_id) => {
@@ -29,10 +28,9 @@ function BoxComentar() {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
       });
-  
+
       if (response.ok) {
         const updatedComentar = await response.json();
-        // Actualizamos el estado con el comentario actualizado
         setComentars((prevComentars) =>
           prevComentars.map((comentar) =>
             comentar._id === _id ? updatedComentar.comentario : comentar
@@ -46,61 +44,79 @@ function BoxComentar() {
     }
   };
 
-  const handleClick = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (comentar.titulo.trim() === '') {
+
+    if (!comentar.titulo.trim()) {
       setError('Debes indicar un título');
       return;
     }
-    if (comentar.text.trim() === '') {
+    if (!comentar.text.trim()) {
       setError('Debes indicar una descripción');
       return;
     }
-    if (comentar.author.trim() === '') {
+    if (!comentar.author.trim()) {
       setError('Debes indicar un autor');
       return;
     }
 
-    setSuccessMessage('Comentario agregado con éxito!');
-    setTimeout(() => setSuccessMessage(null), 2100);
-    setError(null);
-
-    fetch(`${baseURL}/comentars`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(comentar),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setComentar(initialState);
-        const newComentars = [data.comentar, ...comentars];
-        setComentars(newComentars);
-      })
-      .catch((err) => {
-        console.log('Error:', err);
+    try {
+      const response = await fetch(`${baseURL}/comentars`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(comentar),
       });
+
+      if (response.ok) {
+        const data = await response.json();
+        setComentar(initialState);
+        setComentars([data.comentar, ...comentars]);
+        setSuccessMessage('Comentario agregado con éxito!');
+        setTimeout(() => setSuccessMessage(null), 2100);
+        setError(null);
+      } else {
+        console.error('Error al agregar comentario:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error al agregar comentario:', error);
+    }
   };
 
-  const fetchComentars = () => {
-    fetch(`${baseURL}/comentars`)
-      .then((res) => res.json())
-      .then(({ comentars }) => {
-        setComentars(comentars);
+  const handleDelete = async (_id) => {
+    try {
+      const response = await fetch(`${baseURL}/comentars/${_id}`, {
+        method: 'DELETE',
       });
-    };
 
-      console.log(comentars)
-      
-
-
+      if (response.ok) {
+        setComentars((prevComentars) => prevComentars.filter((comentar) => comentar._id !== _id));
+        setDeletedMessage('¡Comentario eliminado!');
+        setTimeout(() => setDeletedMessage(null), 2000);
+      } else {
+        console.error('Error al eliminar comentario:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error al eliminar comentario:', error);
+    }
+  };
 
   useEffect(() => {
+    const fetchComentars = async () => {
+      try {
+        const response = await fetch(`${baseURL}/comentars`);
+        const { comentars } = await response.json();
+        setComentars(comentars);
+      } catch (error) {
+        console.error('Error al obtener comentarios:', error);
+      }
+    };
+
     fetchComentars();
   }, []);
 
   return (
     <>
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <p className="date">{datee}</p>
 
         <input
@@ -117,7 +133,6 @@ function BoxComentar() {
           className="textArea"
           placeholder="Añade un comentario..."
           maxLength="1000"
-          type="text"
           name="text"
           value={comentar.text}
           onChange={handleChange}
@@ -133,10 +148,10 @@ function BoxComentar() {
           onChange={handleChange}
         />
 
-        <button className="button" onClick={handleClick}>
+        <button type="submit" className="button">
           Enviar
         </button>
-        
+
         {error && <div className="alert error">{error}</div>}
         {successMessage && <div className="alert success">{successMessage}</div>}
         {deletedMessage && <div className="alert deleted">{deletedMessage}</div>}
@@ -144,34 +159,29 @@ function BoxComentar() {
 
       <div className="comentariosContainer">
         {comentars.map(({ _id, titulo, text, author, likes }) => (
-          
           <div key={_id} className="comentarBox">
             <h1 className="titulo">{titulo}</h1>
             <p className="text">{text}</p>
             <span className="author">Por: {author}</span>
             <button className="likeButton" onClick={() => handleLike(_id)}>
-                ❤️{likes}
-              </button>
-            <span
-              className="deleteButton"
-              onClick={() => {
-                fetch(`${baseURL}/comentars/${_id}`, { method: 'DELETE' })
-                  .then((res) => res.json())
-                  .then(() => {
-                    fetchComentars();
-                    setDeleted('¡Comentario eliminado!');
-                    setTimeout(() => setDeleted(null), 2000);});}}>X</span>
+              ❤️ {likes}
+            </button>
+            <button className="deleteButton" onClick={() => handleDelete(_id)}>
+              X
+            </button>
           </div>
         ))}
       </div>
 
       <style jsx>{`
         .form {
-          width: 40rem;
-          margin: auto;
-          padding-top: 1rem;
-          font-family:  Lato;
+          width: 100%;
+          max-width: 40rem;
+          margin: 0 auto;
+          padding: 1rem;
+          font-family: Lato, sans-serif;
         }
+
         .date {
           font-size: 0.9rem;
           text-align: right;
@@ -179,151 +189,130 @@ function BoxComentar() {
           color: #888;
         }
 
-        .inputField {
-          font-family:  Lato;
-          color:black;
+        .inputField,
+        .textArea {
           width: 100%;
           margin-bottom: 1rem;
           padding: 0.5rem;
           border-radius: 5px;
           border: 1px solid #ddd;
           font-size: 1rem;
+          font-family: Lato, sans-serif;
+          color: black;
         }
 
         .textArea {
-          font-family:  Lato;
-          color:black;
-          width: 100%;
           height: 100px;
-          padding: 0.5rem;
-          border-radius: 5px;
-          border: 1px solid #ddd;
-          font-size: 1rem;
+          resize: vertical;
         }
 
         .button {
-          font-family:  Lato;
+          width: 100%;
           padding: 0.5rem 1rem;
           background-color: #0070f3;
           color: white;
           border: none;
           border-radius: 5px;
           cursor: pointer;
+          font-family: Lato, sans-serif;
+          font-size: 1rem;
           transition: background-color 0.3s ease;
         }
+
         .button:hover {
           background-color: #005bb5;
         }
+
         .alert {
-          font-family:  Lato;
           margin-top: 1rem;
           padding: 0.5rem;
           border-radius: 5px;
           text-align: center;
+          font-family: Lato, sans-serif;
         }
 
         .error {
-           position:absolute;
-          z-index:999;
-          font-family:  Lato;
           background-color: #f8d7da;
           color: #721c24;
         }
 
         .success {
-          position:absolute;
-          z-index:999;
-          font-family:  Lato;
           background-color: #d4edda;
           color: #155724;
         }
 
         .deleted {
-          position:absolute;
-          z-index:999;
-          font-family:  Lato;
           background-color: #cce5ff;
           color: #004085;
         }
 
         .comentariosContainer {
-          font-family:  Lato;
-          width: 80%;
-          margin: auto;
-          margin-top: 2rem;
+          width: 100%;
+          max-width: 40rem;
+          margin: 2rem auto;
+          font-family: Lato, sans-serif;
         }
 
         .comentarBox {
-          font-family:  Lato;
-          backdrop-filter: blur(10px);
+          background: rgba(255, 255, 255, 0.2);
           border-radius: 8px;
           padding: 1rem;
           margin-bottom: 1rem;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          position: relative;
         }
+
         .titulo {
-          font-family:  Lato;
           font-size: 1.2rem;
-          margin:0;
-          padding:0;
+          margin: 0;
+          padding: 0;
         }
 
         .text {
-          white-space: "pre-wrap";
-          font-family:  Lato;
+          white-space: pre-wrap;
           font-size: 1rem;
-          margin:0;
-          padding:0;
+          margin: 0.5rem 0;
         }
 
         .author {
-          font-family:  Lato;
-          font-size:0.8rem;
-          margin:0;
-          padding:0;
+          font-size: 0.8rem;
+          color: #555;
         }
 
         .likeButton {
-      border: 0;
-      cursor: pointer;
-      transform: scale(1.3);
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      background: none;
-      position: relative;
-      bottom: 0px;
-      left: 75%;
-    }
-    .likeButton:hover {
-      transform: scale(1.5);
-    }
-    .likeButton:active {
-      transform: scale(1.1);
-    }
+          position: absolute;
+          bottom: 0.5rem;
+          right: 0.5rem;
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 1.2rem;
+          transition: transform 0.2s ease;
+        }
+
+        .likeButton:hover {
+          transform: scale(1.2);
+        }
+
         .deleteButton {
           position: absolute;
-  font-size: 0.9rem;
-  bottom: 0.5rem;
-  left: 1rem;  
-   color: black;
-  cursor: pointer;
+          top: 0.5rem;
+          right: 0.5rem;
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 1rem;
+          color:rgba(255, 77, 77, 0.12);
         }
 
-        /* Responsivo */
         @media (max-width: 768px) {
-          .comentariosContainer {
-            
-          width: 90%;
-          margin: auto;
-          margin-top: 2rem;
-        }
           .form {
-            width: 90%;
+            padding: 0.5rem;
           }
 
-          .inputField,
-          .textArea {
-            font-size: 0.9rem;
+          .comentarBox {
+            padding: 0.8rem;
+            
           }
 
           .titulo {

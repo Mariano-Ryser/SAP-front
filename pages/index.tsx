@@ -61,10 +61,10 @@ export default function Home() {
         </p>
         <div className="botones">
 
-          <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Mariano-Ryser" target="_blank" rel="noopener noreferrer">
             <button className="boton">GitHub</button>
           </a>
-          <a href="https://github.com/Mariano-Ryser" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/mariano-ryser-073731221/" target="_blank" rel="noopener noreferrer">
             <button className="boton">LinkedIn</button>
           </a>
          
@@ -102,7 +102,7 @@ export default function Home() {
           margin: 0 auto 1rem;
           border-radius: 50%;
           overflow: hidden;
-          border: 4px solid white;
+          border: 2px solid rgba(255, 255, 255, 0.22);
         }
         .foto {
           width: 100%;

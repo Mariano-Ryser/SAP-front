@@ -6,6 +6,7 @@ export default function Proyects() {
     <>
   {/* <Link href="/proyectos/about/about"><li>/proyects/about</li></Link> */}
   {/* <Link href="/proyectos/about/about"><li>/proyects/about</li></Link> */}
+  <Link href="cloudFotos"><li>/fotos</li></Link>
   <Link href="calculadora"><li>/calculadora</li></Link>
   <Link href="quizGame"><li>/quizGame</li></Link>
   <Link href="cronometro"><li>/cronometro</li></Link>

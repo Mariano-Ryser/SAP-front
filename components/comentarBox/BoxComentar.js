@@ -156,7 +156,7 @@ function BoxComentar() {
         {successMessage && <div className="alert success">{successMessage}</div>}
         {deletedMessage && <div className="alert deleted">{deletedMessage}</div>}
       </form>
-
+        {/* COMENTARIOS FETCHEADOS */}
       <div className="comentariosContainer">
         {comentars.map(({ _id, titulo, text, author, likes }) => (
           <div key={_id} className="comentarBox">

@@ -16,6 +16,7 @@ export default function ImageUploader({ onUpload }) {
       return;
     }
 
+    
     setLoading(true);
     const formData = new FormData();
     formData.append('image', file);

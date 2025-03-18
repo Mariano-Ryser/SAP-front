@@ -30,6 +30,7 @@ export default function ImageUploader({ onUpload }) {
 
       const data = await response.json();
       onUpload(data.image.imageUrl); // Notificar al padre con la nueva imagen
+
       setModalOpen(false); // Cerrar el modal después de subir la imagen
 
     } catch (error) {
@@ -38,6 +39,9 @@ export default function ImageUploader({ onUpload }) {
     } finally {
       setLoading(false);
       setFile(null);
+      document.querySelector('.file-input').value = null;
+      // ✅ Limpiar el input para que no quede "pegado"
+      // document.querySelector('.file-input').value = null;
     }
   };
 

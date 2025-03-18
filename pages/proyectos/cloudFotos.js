@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ImageUploader from '../../components/ImageUploader';
-import Image from "next/image";
+
 
 export default function Home() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -24,13 +24,25 @@ export default function Home() {
   return (
     <div className="container">
       <h1>Galería de Imágenes</h1>
-      <ImageUploader onUpload={(newImage) => setImages([newImage, ...images])} /> 
+
+
+      <ImageUploader
+       onUpload={(uploadedImageUrl) => {
+      const newImage = { imageUrl: uploadedImageUrl };
+      setImages(prev => [newImage, ...prev]);
+      }} />
+
+
 
       <div className="image-grid">
   {images && images.length > 0 ? (
     images.map((image, index) => (
       <div key={index} className="image-container">
-        <img src={image.imageUrl} alt={`Imagen ${index}`} className="image" />
+         <img
+                src={`${image.imageUrl.replace('/upload/', '/upload/c_fill,w_500,h_600/')}`}
+                alt={`Imagen ${index}`}
+                className="image"
+              />
       </div>
     ))
   ) : (

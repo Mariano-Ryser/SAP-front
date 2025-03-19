@@ -20,6 +20,7 @@ export function ProductCreator() {
         console.log(inputValue)
     }
     
+    
     const handleClick = async(e)=> {
         e.preventDefault()
         try {

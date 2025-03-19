@@ -4,6 +4,14 @@ export default function ImageUploader({ onUpload }) {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [showUploadForm, setShowUploadForm] = useState(false); // Estado para mostrar el formulario de subida
+  const [keyInput, setKeyInput] = useState(''); // Estado para la clave ingresada
+
+  //AGREGAREMOS OTRO DIA CLAVE CON .ENV
+  // NEXT_PUBLIC_UPLOAD_KEY=clave123
+  // const correctKey = process.env.NEXT_PUBLIC_UPLOAD_KEY; 
+
+  const correctKey = "321"; // Clave simple escrita en el código
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -16,7 +24,6 @@ export default function ImageUploader({ onUpload }) {
       return;
     }
 
-    
     setLoading(true);
     const formData = new FormData();
     formData.append('image', file);
@@ -31,9 +38,7 @@ export default function ImageUploader({ onUpload }) {
 
       const data = await response.json();
       onUpload(data.image.imageUrl); // Notificar al padre con la nueva imagen
-
       setModalOpen(false); // Cerrar el modal después de subir la imagen
-
     } catch (error) {
       console.error(error);
       alert('Error al subir imagen.');
@@ -41,17 +46,27 @@ export default function ImageUploader({ onUpload }) {
       setLoading(false);
       setFile(null);
       document.querySelector('.file-input').value = null;
-      // ✅ Limpiar el input para que no quede "pegado"
-      // document.querySelector('.file-input').value = null;
+    }
+  };
+
+  // Función para verificar la clave
+  const verifyKey = () => {
+    if (keyInput === correctKey) {
+      setShowUploadForm(true); // Mostrar el formulario de subida si la clave es correcta
+    } else {
+      alert('Clave incorrecta');
     }
   };
 
   const openModal = () => {
     setModalOpen(true);
+    setShowUploadForm(false); // Resetear el estado del formulario de subida
+    setKeyInput(''); // Limpiar el input de la clave
   };
 
   const closeModal = () => {
     setModalOpen(false);
+    setShowUploadForm(false); // Ocultar el formulario de subida al cerrar el modal
   };
 
   return (
@@ -66,24 +81,39 @@ export default function ImageUploader({ onUpload }) {
         <div className="modal-overlay">
           <div className="modal-content">
             <div className="modal-header">
-               {/* Botón de cierre en el modal */}
+              {/* Botón de cierre en el modal */}
               <button onClick={closeModal} className="close-button">
                 &times;
               </button>
             </div>
-            <div className="upload-container">
 
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleFileChange}
-                className="file-input"
-              /> 
-              <button onClick={handleUpload} disabled={loading} className="upload-button">
-                {loading ? 'Subiendo...' : 'Subir Imagen'}
-              </button>
-
-            </div>
+            {/* Mostrar el formulario de subida solo si la clave es correcta */}
+            {showUploadForm ? (
+              <div className="upload-container">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  className="file-input"
+                />
+                <button onClick={handleUpload} disabled={loading} className="upload-button">
+                  {loading ? 'Subiendo...' : 'Subir Imagen'}
+                </button>
+              </div>
+            ) : (
+              <div className="key-form">
+                <input
+                  type="password"
+                  placeholder="Ingresa la clave"
+                  value={keyInput}
+                  onChange={(e) => setKeyInput(e.target.value)}
+                  className="key-input"
+                />
+                <button onClick={verifyKey} className="verify-button">
+                  Verificar
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -96,9 +126,8 @@ export default function ImageUploader({ onUpload }) {
           left: 30px;
           width: 30px;
           height: 30px;
-         
-          background: linear-gradient(135deg, rgba(47, 167, 36, 0.81),rgb(55, 209, 17));
-          color: rgb(255, 255, 255) ;
+          background: linear-gradient(135deg, rgba(47, 167, 36, 0), rgba(35, 139, 9, 0.11));
+          color: rgba(255, 255, 255, 0.07);
           font-size: 36px;
           border-radius: 50%;
           display: flex;
@@ -153,7 +182,6 @@ export default function ImageUploader({ onUpload }) {
 
         /* Estilos del contenedor de la subida */
         .upload-container {
-          
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -169,15 +197,10 @@ export default function ImageUploader({ onUpload }) {
           border-radius: 10px;
           font-size: 16px;
           cursor: pointer;
-          transition:0.2s;
-        }
-        .file-input:hover{
-          border: 2px solid rgba(236, 236, 236, 0.65);
-          border-radius: 15px;
+          transition: 0.2s;
         }
 
-        .file-input:focus {
-          outline: none;
+        .file-input:hover {
           border: 2px solid rgba(236, 236, 236, 0.65);
           border-radius: 15px;
         }
@@ -194,14 +217,51 @@ export default function ImageUploader({ onUpload }) {
         }
 
         .upload-button:hover {
-          background: #3498db;
+          background: #2980b9;
         }
 
         .upload-button:disabled {
-          background-color:rgb(166, 149, 149);
+          background-color: rgb(166, 149, 149);
           cursor: not-allowed;
         }
 
+        /* Estilos para el formulario de clave */
+        .key-form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .key-input {
+          padding: 10px;
+          border: 2px solid rgba(143, 143, 143, 0.65);
+          border-radius: 10px;
+          font-size: 16px;
+          width: 100%;
+          color: white;
+          background: transparent;
+        }
+
+        .key-input:focus {
+          outline: none;
+          border: 2px solid rgba(236, 236, 236, 0.65);
+        }
+
+        .verify-button {
+          padding: 10px 20px;
+          background: #3498db;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        .verify-button:hover {
+          background: #2980b9;
+        }
       `}</style>
     </div>
   );

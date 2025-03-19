@@ -1,9 +1,6 @@
-import 'prismjs/themes/prism.css'; // Tema Claro
-import 'prismjs/themes/prism-okaidia.css'; // Tema oscuro
 import '../styles/globals.css'
 import Head from 'next/head'
 import Layout from '../components/Layout'
-
 
 function MyApp({ Component, pageProps }) {
   return (

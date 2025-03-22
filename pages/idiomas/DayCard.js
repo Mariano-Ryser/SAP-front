@@ -96,17 +96,21 @@ const WortesCard = () => {
 
   return (
     <>
-      <div>
+      <div >
         <button className="add-button" onClick={() => setShowForm(true)}>+</button>
         <style jsx>{`
           .add-button {
+            position: relative;
+            top: 1rem;
+            left: 3.1rem;
+            
             width: 50px;
             height: 2rem;
             width: 2rem;
             border-radius: 10%;
             border: none;
-            background-color: rgba(29, 105, 18, 0.75);
-            color: white;
+            background-color: rgba(30, 105, 18, 0);
+            color: rgba(165, 165, 165, 0.06);
             font-size: 24px;
             cursor: pointer;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);

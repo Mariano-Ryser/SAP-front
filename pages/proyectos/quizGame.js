@@ -112,12 +112,14 @@ const QuizGame = () => {
 
   if (!preguntaActual) return <p>No hay preguntas disponibles con los filtros seleccionados.</p>;
 
-  return (
+  return (<>
+
     <div className="quiz-container">
-      {/* Botón para abrir el modal */}
+      <h3>Quiz Game</h3>
       <button className="add-button" onClick={() => setShowModal(true)}>
         +
       </button>
+      {/* Botón para abrir el modal */}
 
       {/* Modal para crear preguntas */}
       {showModal && (
@@ -251,23 +253,23 @@ const QuizGame = () => {
           
         }
         .add-button {
-          position: fixed;
+          position: absolute;
           bottom: 1rem;
-          left: 1rem;
-          background: linear-gradient(135deg,rgba(10, 219, 38, 0.86),rgba(18, 190, 32, 0.57));
-          color: black;
+          right: 2rem;
+          background: linear-gradient(135deg,rgba(10, 219, 38, 0.02),rgba(41, 167, 52, 0.01));
+          color: rgba(0, 0, 0, 0.03);
           border: none;
           border-radius: 50%;
           width: 50px;
           height: 50px;
           font-size: 24px;
           cursor: pointer;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
           transform: scale(1);
         }
           .add-button:hover {
               transform: scale(1.1);
-          background-color:rgb(0, 181, 75); /* Verde */
+          background-color:rgba(0, 181, 75, 0.07); /* Verde */
         }     
         .modal-overlay {
           z-index: 1;
@@ -384,6 +386,7 @@ const QuizGame = () => {
         }
       `}</style>
     </div>
+    </>
   );
 };
 

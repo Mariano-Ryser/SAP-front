@@ -10,7 +10,6 @@ export default function Proyects() {
   <Link href="calculadora"><li>/calculadora</li></Link>
   <Link href="quizGame"><li>/quizGame</li></Link>
   <Link href="cronometro"><li>/cronometro</li></Link>
-  <Link href="fotos"><li>/fotos</li></Link>
   <Link href="icons"><li>/icons</li></Link>
   {/* <Link href="lectura"><li>/proyects/lectura</li></Link> */}
   {/* <Link href="logazo"><li>/logo</li></Link> */}

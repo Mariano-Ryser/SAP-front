@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import ImageUploader from '../../components/ImageUploader';
+import ImageUploader from '../../components/image/ImageUploader';
 
 export default function Home() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -76,10 +76,7 @@ export default function Home() {
     if (modalOpen && modalContentRef.current) {
       const targetImage = modalContentRef.current.querySelectorAll('.image-post')[selectedImageIndex];
       if (targetImage) {
-        targetImage.scrollIntoView({
-           block: 'center'
-          // ,behavior: 'smooth'   // Descomentar para scroll suave
-           });  
+        targetImage.scrollIntoView({ block: 'center' }); // Eliminado el behavior: 'smooth'
       }
     }
   }, [modalOpen, selectedImageIndex]);
@@ -87,7 +84,7 @@ export default function Home() {
   // Renderizado de la página
   return (
     <div className="container">
-      <h3>Galería de Imágenes</h3>
+      <h1>Galería de Imágenes</h1>
 
       <ImageUploader
         onUpload={(uploadedImageUrl) => {
@@ -125,10 +122,13 @@ export default function Home() {
         <div className="modal-overlay" onClick={() => setModalOpen(false)}>
           <div className="modal-content" ref={modalContentRef} onClick={(e) => e.stopPropagation()}>
             {/* 🔥 FLECHA PARA VOLVER */}
-            <div className="close-arrow" onClick={() => setModalOpen(false)}>
+             {/* 🔥 FLECHA PARA VOLVER */}
+
+          <div className='footer-modal'>
+             <div className="close-arrow" onClick={() => setModalOpen(false)}>
                ⬅️
             </div>
-
+        </div>
             {/* MAPEO DE IMAGENES */}
             {images.map((image, idx) => (
               <div key={idx} className="image-post">
@@ -223,20 +223,26 @@ export default function Home() {
           from { opacity: 0; transform: translateY(-20px) translateX(-100%); }
           to { opacity: 1; transform: translateY(0)translateX(0%);; }
         }
-        .close-arrow {
-          height: 40px;
+        .footer-modal {
           position: fixed;
-          bottom: 30px;
-          right: 30px;
+          bottom: 0;
+          width: 100%;
+          height:4rem;
+          padding: 0.47rem;
+          background:rgba(0, 0, 0, 0.7);
+        }
+        .close-arrow {
+          position: absolute;
+          right: 10px;
           font-size: 2rem;
           cursor: pointer;
           color: #ccc;
-          transition: background 0.3s;
+          transition: 0.3s;
           z-index: 3000;
-          
         }
         .close-arrow:hover {
           color: white;
+          transform: scale(1.1);
         }
         .image-post {
           margin-bottom: 20px;

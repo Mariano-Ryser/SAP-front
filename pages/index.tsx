@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import GalleriaFotos from '../pages/proyectos/cloudFotos';
+import Deutsch from '../pages/idiomas/DayCard';
+import QuizGame from '../pages/proyectos/QuizGame';
+
 
 export default function Home() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -48,7 +52,7 @@ export default function Home() {
             src="/img/me2.jpg" // Cambia esto por la ruta de tu foto
             alt="Tu nombre"
             className="foto"
-          />
+            />
         </div>
         <h1 className="nombre">Mariano Ryser</h1>
         <h2 className="profesion">Softwareentwickler</h2>
@@ -83,6 +87,17 @@ export default function Home() {
           </div>
         ))}
       </div>
+
+
+
+       {/* <div className="presentacion">
+        <GalleriaFotos></GalleriaFotos>
+      </div>
+      <div className="presentacion">
+        <QuizGame></QuizGame>
+      </div>
+        <Deutsch></Deutsch> */}
+      
 
       {/* Estilos */}
       <style jsx>{`

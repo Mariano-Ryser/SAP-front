@@ -180,6 +180,10 @@ function BoxComentar() {
           margin: 0 auto;
           padding: 1rem;
           font-family: Lato, sans-serif;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          backdrop-filter: blur(10px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .date {
@@ -194,11 +198,12 @@ function BoxComentar() {
           width: 100%;
           margin-bottom: 1rem;
           padding: 0.5rem;
-          border-radius: 5px;
-          border: 1px solid #ddd;
+          border-radius: 8px;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          background: rgba(255, 255, 255, 0.1);
+          color: white;
           font-size: 1rem;
           font-family: Lato, sans-serif;
-          color: black;
         }
 
         .textArea {
@@ -209,41 +214,41 @@ function BoxComentar() {
         .button {
           width: 100%;
           padding: 0.5rem 1rem;
-          background-color: #0070f3;
+          background: linear-gradient(135deg, #0070f3, #005bb5);
           color: white;
           border: none;
-          border-radius: 5px;
+          border-radius: 8px;
           cursor: pointer;
           font-family: Lato, sans-serif;
           font-size: 1rem;
-          transition: background-color 0.3s ease;
+          transition: background 0.3s ease;
         }
 
         .button:hover {
-          background-color: #005bb5;
+          background: linear-gradient(135deg, #005bb5, #0070f3);
         }
 
         .alert {
           margin-top: 1rem;
           padding: 0.5rem;
-          border-radius: 5px;
+          border-radius: 8px;
           text-align: center;
           font-family: Lato, sans-serif;
         }
 
         .error {
-          background-color: #f8d7da;
-          color: #721c24;
+          background: rgba(255, 77, 77, 0.2);
+          color: #ff4d4d;
         }
 
         .success {
-          background-color: #d4edda;
-          color: #155724;
+          background: rgba(77, 255, 77, 0.2);
+          color: #4dff4d;
         }
 
         .deleted {
-          background-color: #cce5ff;
-          color: #004085;
+          background: rgba(77, 77, 255, 0.2);
+          color: #4d4dff;
         }
 
         .comentariosContainer {
@@ -254,11 +259,12 @@ function BoxComentar() {
         }
 
         .comentarBox {
-          background: rgba(255, 255, 255, 0.2);
-          border-radius: 8px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
           padding: 1rem;
           margin-bottom: 1rem;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           position: relative;
         }
 
@@ -266,17 +272,19 @@ function BoxComentar() {
           font-size: 1.2rem;
           margin: 0;
           padding: 0;
+          color: white;
         }
 
         .text {
           white-space: pre-wrap;
           font-size: 1rem;
           margin: 0.5rem 0;
+          color: #ddd;
         }
 
         .author {
           font-size: 0.8rem;
-          color: #555;
+          color: #888;
         }
 
         .likeButton {
@@ -287,6 +295,7 @@ function BoxComentar() {
           border: none;
           cursor: pointer;
           font-size: 1.2rem;
+          color: #ff4d4d;
           transition: transform 0.2s ease;
         }
 
@@ -302,7 +311,12 @@ function BoxComentar() {
           border: none;
           cursor: pointer;
           font-size: 1rem;
-          color:rgba(255, 77, 77, 0.12);
+          color: rgba(255, 77, 77, 0.5);
+          transition: color 0.2s ease;
+        }
+
+        .deleteButton:hover {
+          color: #ff4d4d;
         }
 
         @media (max-width: 768px) {
@@ -312,7 +326,6 @@ function BoxComentar() {
 
           .comentarBox {
             padding: 0.8rem;
-            
           }
 
           .titulo {

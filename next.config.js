@@ -1,26 +1,37 @@
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-    // providerImportSource: "@mdx-js/react", // Descomentar si usas MDXProvider
-  },
-});
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Extensiones de página
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  reactStrictMode: true,
-  webpack(config) {
-    // Agregar la configuración para @svgr/webpack
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    });
-    return config;
+  async headers() {
+    return [
+      {
+        source: '/(.*)', // Aplica a todas las rutas
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+        ],
+      },
+    ];
   },
+
+  // Configuración de compresión (opcional)
+  compress: true,
+
+  // Configuración de internacionalización (i18n) (opcional)
+  // i18n: {
+  //   locales: ['en', 'es','de'], // Idiomas soportados
+  //   defaultLocale: 'en', // Idioma por defecto
+  // },
+  reactStrictMode: true,
 };
 
-// Exportar la configuración combinada
-module.exports = withMDX(nextConfig);
+
+module.exports = nextConfig;

@@ -14,13 +14,13 @@ html,
  /* Color de fondo por defecto */
 
 body {
-    /* background-color: var(--bg-color);  */
+   /* background-color: rgba(3, 3, 3, 0.898);   */
   
  /*  transition: 2s;
   padding: 0;
   margin: 0; */
   
-  background-image: var(--bg-color);
+ background-image: var(--bg-color); 
 
   /* background:
 linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
@@ -41,12 +41,14 @@ li{
   list-style:none;
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
   border-bottom:solid gray 1px;
+  text-decoration: none; /* Elimina el subrayado */
 }
 li:hover{
   background-color:rgb(255, 251, 0);
   cursor:pointer;
   color:rgb(0, 0, 0);
   animation:6s lis infinite alternate;
+  text-decoration: none; /* Elimina el subrayado */
 }
 /* @keyframes lis{
   0%{
@@ -64,16 +66,11 @@ ul{
   padding:0rem;
 }
 li{
-  
-  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none; /* Elimina el subrayado */
   line-height: 1.7rem;
-  list-style:none;
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-  border-bottom:solid gray 1px;
 }
 
-       
-  
 }
 
 /* CAJA DE ICONOS */

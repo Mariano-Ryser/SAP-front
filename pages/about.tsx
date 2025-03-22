@@ -35,7 +35,11 @@ export default function About() {
     <>
 {/* {generateRandomDivs()} */}
 
-    <div className="container"><div>
+
+
+    <div className="container">
+      <div>
+
 
           <div className="img-container">
             <Image src="/img/oja.png" alt="Icon" width={240} height={190} />

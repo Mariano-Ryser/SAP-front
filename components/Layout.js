@@ -1,5 +1,5 @@
-import NavRespon from "./NavRespon"
-import Cabezera from "./Cabezera";
+import NavRespon from "./navigation/NavRespon"
+import Cabezera from "./header/Cabezera"
 
 const Layout = ({ children}) => {
     return (
@@ -10,7 +10,6 @@ const Layout = ({ children}) => {
         <div className="content">    
                     <Cabezera />  
              { children }
-             {/* <Footer />       */}
         </div>
         <style jsx>{`
         

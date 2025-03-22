@@ -1,7 +1,8 @@
 // pages/adminDash.js
 import { useState } from 'react';
-import useAdminData from '../hooks/useAdminData';
-import AdminSection from '../components/admin/AdminSection';
+import ComentarSection from '../components/admin/ComentarSection';
+import NotiSection from '../components/admin/NotiSection';
+import ImageSection from '../components/admin/ImageSection';
 
 export default function AdminDash() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -9,16 +10,6 @@ export default function AdminDash() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState('');
 
-  const {
-    comentars,
-    loading,
-    error: dataError,
-    fetchAdminData,
-    deleteComentar,
-    likeComentar,
-  } = useAdminData(baseURL);
-
-  
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -32,7 +23,6 @@ export default function AdminDash() {
       if (data.success) {
         setIsAuthenticated(true);
         setError('');
-        fetchAdminData(data.token); // Pasa el token recibido del backend
       } else {
         setError('Clave de acceso incorrecta');
       }
@@ -41,6 +31,7 @@ export default function AdminDash() {
       setError('Error al conectar con el servidor');
     }
   };
+
   if (!isAuthenticated) {
     return (
       <div className="container">
@@ -139,42 +130,31 @@ export default function AdminDash() {
   }
 
   return (
-    <div className="container">
-    <h1 className="title">Bienvenido al Panel de Administración</h1>
-    <p className="subtitle">Aquí puedes gestionar todo tu contenido.</p>
+    <div className="admin-container">
+      <h1 className="title">Bienvenido al Panel de Administración</h1>
 
-      {loading && <p>Cargando datos...</p>}
-      {dataError && <p className="error">{dataError}</p>}
-
-    {/* Sección de Comentarios */}
-    <AdminSection
-        title="Comentarios"
-        data={comentars}
-        columns={[
-          { header: 'ID', accessor: '_id' },
-          { header: 'Título', accessor: 'titulo' },
-          { header: 'Texto', accessor: 'text' },
-          { header: 'Autor', accessor: 'author' },
-          { header: 'Likes', accessor: 'likes' },
-        ]}
-        loading={loading}
-        onDelete={deleteComentar}
-        onLike={likeComentar}
-      />
-
+      {/* Integrar el componente AdminSection */}
+      <ComentarSection/>
+      {/* Integrar el componente NotiSection */}
+      <NotiSection />
+      {/* Integrar el componente ImageSection */}
+      <ImageSection />
 
       <style jsx>{`
-        .container {
+        .admin-container {
           padding: 20px;
           background-color: #1a1a1a;
           color: #ffffff;
           font-family: Arial, sans-serif;
+          max-width: 1200px;
+          margin: 0 auto;
         }
 
         .title {
           font-size: 2rem;
           font-weight: bold;
           margin-bottom: 20px;
+          color: #ffffff;
         }
 
         .subtitle {
@@ -190,9 +170,14 @@ export default function AdminDash() {
 
         /* Estilos responsivos */
         @media (max-width: 768px) {
+          .admin-container {
+            padding: 10px;
+          }
+
           .title {
             font-size: 1.5rem;
           }
+
           .subtitle {
             font-size: 1rem;
           }

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import ImageUploader from '../../components/image/ImageUploader';
 
+
 export default function Home() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
   const [images, setImages] = useState([]);
@@ -84,7 +85,7 @@ export default function Home() {
   // Renderizado de la página
   return (
     <div className="container">
-      <h1>Galería de Imágenes</h1>
+      <h3>Galería de Imágenes</h3>
 
       <ImageUploader
         onUpload={(uploadedImageUrl) => {
@@ -224,6 +225,8 @@ export default function Home() {
           to { opacity: 1; transform: translateY(0)translateX(0%);; }
         }
         .footer-modal {
+          width: 100%;
+          max-width: 56rem;
           position: fixed;
           bottom: 0;
           width: 100%;
@@ -233,7 +236,7 @@ export default function Home() {
         }
         .close-arrow {
           position: absolute;
-          right: 10px;
+          right: 1.3rem;
           font-size: 2rem;
           cursor: pointer;
           color: #ccc;

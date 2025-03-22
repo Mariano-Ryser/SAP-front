@@ -81,25 +81,6 @@ function BoxComentar() {
       console.error('Error al agregar comentario:', error);
     }
   };
-
-  const handleDelete = async (_id) => {
-    try {
-      const response = await fetch(`${baseURL}/comentars/${_id}`, {
-        method: 'DELETE',
-      });
-
-      if (response.ok) {
-        setComentars((prevComentars) => prevComentars.filter((comentar) => comentar._id !== _id));
-        setDeletedMessage('¡Comentario eliminado!');
-        setTimeout(() => setDeletedMessage(null), 2000);
-      } else {
-        console.error('Error al eliminar comentario:', response.statusText);
-      }
-    } catch (error) {
-      console.error('Error al eliminar comentario:', error);
-    }
-  };
-
   useEffect(() => {
     const fetchComentars = async () => {
       try {
@@ -156,6 +137,7 @@ function BoxComentar() {
         {successMessage && <div className="alert success">{successMessage}</div>}
         {deletedMessage && <div className="alert deleted">{deletedMessage}</div>}
       </form>
+      
         {/* COMENTARIOS FETCHEADOS */}
       <div className="comentariosContainer">
         {comentars.map(({ _id, titulo, text, author, likes }) => (
@@ -166,9 +148,7 @@ function BoxComentar() {
             <button className="likeButton" onClick={() => handleLike(_id)}>
               ❤️ {likes}
             </button>
-            <button className="deleteButton" onClick={() => handleDelete(_id)}>
-              X
-            </button>
+           
           </div>
         ))}
       </div>

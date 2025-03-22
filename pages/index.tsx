@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import GalleriaFotos from '../pages/proyectos/cloudFotos';
 import Deutsch from '../pages/idiomas/DayCard';
 import QuizGame from '../pages/proyectos/QuizGame';
-
+import { BsGithub } from "react-icons/bs";
 
 export default function Home() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -18,7 +17,6 @@ export default function Home() {
         console.log('notis:', notis);
       });
   };
-
   const handleLike = async (_id) => {
     try {
       const response = await fetch(`${baseURL}/notis/${_id}/like`, {
@@ -38,46 +36,18 @@ export default function Home() {
       console.error('Error al agregar like:', error);
     }
   };
-
   useEffect(() => {
     fetchNotis();
   }, []);
 
   return (
     <>
-      {/* Presentación */}
-      <div className="presentacion">
-        <div className="foto-container">
-          <img
-            src="/img/me2.jpg" // Cambia esto por la ruta de tu foto
-            alt="Tu nombre"
-            className="foto"
-            />
-        </div>
-        <h1 className="nombre">Mariano Ryser</h1>
-        <h2 className="profesion">Softwareentwickler</h2>
-        <p className="descripcion">
-        Ich bin ein leidenschaftlicher Softwareentwickler mit Erfahrung
-         in der Erstellung moderner und skalierbarer Webanwendungen.
-          Ich bin spezialisiert auf Technologien wie Next.js, Node.js und MongoDB.
-           Ich liebe es, Probleme zu lösen und neue Technologien zu lernen,
-            um meine Fähigkeiten zu verbessern.
-        </p>
-        <div className="botones">
-
-          <a href="https://github.com/Mariano-Ryser" target="_blank" rel="noopener noreferrer">
-            <button className="boton">GitHub</button>
-          </a>
-          <a href="https://www.linkedin.com/in/mariano-ryser-073731221/" target="_blank" rel="noopener noreferrer">
-            <button className="boton">LinkedIn</button>
-          </a>
-         
-        </div>
-      </div>
-
       {/* Mapeo de notis */}
       <div className="notis-container">
-        {notis.map(({ _id, titulo, text, likes }) => (
+        {notis.map(({ _id,
+                      titulo,
+                      text,
+                      likes }) => (
           <div key={_id} className="notiBox">
             <h1 className="titulo">{titulo}</h1>
             <p className="text">{text}</p>
@@ -88,15 +58,10 @@ export default function Home() {
         ))}
       </div>
 
-
-
-       {/* <div className="presentacion">
-        <GalleriaFotos></GalleriaFotos>
-      </div>
-      <div className="presentacion">
+      {/* <div className="presentacion">
         <QuizGame></QuizGame>
-      </div>
-        <Deutsch></Deutsch> */}
+      </div> */}
+        {/* <Deutsch></Deutsch>  */}
       
 
       {/* Estilos */}
@@ -148,12 +113,12 @@ export default function Home() {
           gap: 1rem;
           margin-top: 1.5rem;
         }
+        
         .boton {
           padding: 0.75rem 1.5rem;
           border: none;
           border-radius: 5px;
           background: linear-gradient(135deg,rgba(243, 239, 20, 0.88),rgba(255, 251, 38, 0.57));
-          
           color: #1e3c72;
           font-size: 1rem;
           cursor: pointer;
@@ -161,7 +126,7 @@ export default function Home() {
         }
         .boton:hover {
           background-color: #ffc107;
-        }
+        } 
         .notis-container {
           margin: 2rem auto;
           max-width: 800px;

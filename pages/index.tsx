@@ -1,9 +1,5 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Deutsch from '../pages/idiomas/DayCard';
-import QuizGame from '../pages/proyectos/QuizGame';
-import { BsGithub } from "react-icons/bs";
 
 export default function Home() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -57,13 +53,7 @@ export default function Home() {
           </div>
         ))}
       </div>
-
-      {/* <div className="presentacion">
-        <QuizGame></QuizGame>
-      </div> */}
-        {/* <Deutsch></Deutsch>  */}
       
-
       {/* Estilos */}
       <style jsx>{`
         .presentacion {

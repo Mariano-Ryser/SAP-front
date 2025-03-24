@@ -43,9 +43,9 @@ export default function Home({ limit = 5 }) {
         ))}
         
         {loading && (
-          Array.from({ length: 3 }).map((_, index) => (
+          Array.from({ length: 6 }).map((_, index) => (
             <div key={`skeleton-${index}`} className="notiBox">
-              <Skeleton width="100%" height="35rem" />
+              <Skeleton width="100%" height="10rem" />
             </div>
           ))
         )}

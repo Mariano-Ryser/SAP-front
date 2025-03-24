@@ -103,7 +103,12 @@ export default function Home() {
 <div className="image-grid">
   {loading ? (
     Array.from({ length: 20 }).map((_, index) => (
-      <Skeleton key={index} width="14rem" height="17rem" />
+      
+      <Skeleton
+       key={index}
+        className="custom-skeleton"
+         width="100%"
+          height="16.5rem" />
     ))
   ) : (
     images.map((image, index) => (
@@ -126,14 +131,13 @@ export default function Home() {
       {modalOpen && (
         <div className="modal-overlay" onClick={() => setModalOpen(false)}>
           <div className="modal-content" ref={modalContentRef} onClick={(e) => e.stopPropagation()}>
-            <div className="footer-modal">
-              <div className="close-arrow" onClick={() => setModalOpen(false)}>
-                ⬅️
-              </div>
-            </div>
             {/* MAPEO DE IMAGENES */}
+       
             {images.map((image, idx) => (
               <div key={idx} className="image-post">
+                 <div className='container-foto-name'>
+                   <div className='perfilFotoCircular'></div><p className='name'>Mariano Ryser</p> 
+                 </div>
                 <img
                   src={`${image.imageUrl.replace('/upload/', '/upload/c_fill,w_500,h_600/')}`}
                   className="modal-image"
@@ -165,11 +169,37 @@ export default function Home() {
                 </div>
               </div>
             ))}
+
           </div>
+          <div className="footer-modal">
+              <div className="close-arrow" onClick={() => setModalOpen(false)}>
+                ⬅️
+              </div>
+            </div>
         </div>
       )}
 
       <style jsx>{`
+        .container-foto-name{
+          display: flex;
+           align-items: center;  /* Alinea los elementos verticalmente al centro */
+           gap: 10px;  /* Espacio entre la foto de perfil y el nombre */
+        }
+        .perfilFotoCircular{
+           width: 2rem;  /* Ancho de la imagen */
+           height: 2rem;  /* Alto de la imagen */
+           border-radius: 50%;  /* Hace que sea circular */
+           background-image: url('/img/me2.jpg'); /* O puedes usar una imagen aquí */
+           background-size: cover;
+           background-position: center;
+           margin-left:0.8rem;
+        }
+        .name {
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0;  /* Elimina márgenes predeterminados */
+         }
+       
         .like-button-img {
           padding-left: 1rem;
           background: none;
@@ -194,7 +224,7 @@ export default function Home() {
         }
         .modal-content {
           background: #1e1e1e;
-          padding: 0px;
+          padding-top: 2rem;
           max-height: 100vh;
           overflow-y: auto;
           width: 100%;
@@ -243,10 +273,11 @@ export default function Home() {
           transform: scale(1.1);
         }
         .image-post {
-          margin-bottom: 20px;
+          margin-bottom: 1.5rem;
         }
         .modal-image {
           width: 100%;
+          margin-top:0.6rem;
         }
         .like-button {
           background: none;

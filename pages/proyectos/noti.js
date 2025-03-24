@@ -6,7 +6,7 @@ function Noti() {
   const current = new Date();
   const datee = `${current.getDate()} / ${current.getMonth() + 1} / ${current.getFullYear()}`;
 
-  const { data: notis, loading, error, createItem, fetchData} = useNotiData('notis');
+  const { data: notis, loading, error, createItem, fetchData,likeItem} = useNotiData('notis');
   const [noti, setNoti] = useState({ titulo: '', text: '' });
   const [successMessage, setSuccessMessage] = useState(null);
 
@@ -75,7 +75,7 @@ function Noti() {
               <h2 className="noti-title">{titulo}</h2>
               <p className="noti-text">{text}</p>
               <div className="actions">
-                <button className="like-button" onClick={() => likeItem(_id)}>
+               <button className="likeButton" onClick={() => likeItem(_id)}>
                   ❤️ {likes}
                 </button>
               
@@ -179,10 +179,10 @@ function Noti() {
           gap: 10px;
         }
 
-        .like-button, .delete-button {
+        .likeButton, .delete-button {
           background: none;
           border: none;
-          color: #ff4d4d;
+          color:rgb(255, 255, 255);
           cursor: pointer;
           font-size: 1.2rem;
         }

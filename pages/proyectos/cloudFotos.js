@@ -1,22 +1,28 @@
 import { useEffect, useRef, useState } from 'react';
 import ImageUploader from '../../components/image/ImageUploader';
-
+import Skeleton from '../../components/Skeleton';
 
 export default function Home() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
   const [images, setImages] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [loading, setLoading] = useState(true); // Estado para controlar la carga
   const modalContentRef = useRef(null);
 
   // Obtener imágenes desde el backend
   const fetchImages = async () => {
     try {
+      // Simular un retraso de 3 segundos (3000 ms)
+      // await new Promise((resolve) => setTimeout(resolve, 3000));
+  
       const response = await fetch(`${baseURL}/images`);
       const data = await response.json();
       setImages(data.images);
     } catch (error) {
       console.error('Error al obtener imágenes:', error);
+    } finally {
+      setLoading(false); // Finaliza la carga
     }
   };
 
@@ -25,7 +31,6 @@ export default function Home() {
     await fetch(`${baseURL}/images/${id}/like`, { method: 'POST' });
     fetchImages(); // Refresca la galería con el nuevo conteo de likes
   };
-
   // Función para agregar comentarios a las imágenes
   const handleComment = async (e, id) => {
     e.preventDefault();
@@ -94,42 +99,38 @@ export default function Home() {
         }}
       />
 
-      {/* GALERIA DE IMAGENES */}
-      <div className="image-grid">
-        {images && images.length > 0 ? (
-          images.map((image, index) => (
-            <div
-              key={index}
-              className="image-container"
-              onClick={() => {
-                setSelectedImageIndex(index);
-                setModalOpen(true);
-              }}
-            >
-              <img
-                src={`${image.imageUrl.replace('/upload/', '/upload/c_fill,w_500,h_600/')}`}
-                alt={`Imagen ${index}`}
-                className="image"
-              />
-            </div>
-          ))
-        ) : (
-          <p>No hay imágenes disponibles</p>
-        )}
+   {/* GALERIA DE IMAGENES */}
+<div className="image-grid">
+  {loading ? (
+    Array.from({ length: 20 }).map((_, index) => (
+      <Skeleton key={index} width="14rem" height="17rem" />
+    ))
+  ) : (
+    images.map((image, index) => (
+      <div key={index} className="image-container">
+        <img
+          src={`${image.imageUrl.replace('/upload/', '/upload/c_fill,w_500,h_600/')}`}
+          alt={`Imagen ${index}`}
+          className="image"
+          onClick={() => {
+            setSelectedImageIndex(index);
+            setModalOpen(true);
+          }}
+        />
       </div>
+    ))
+  )}
+</div>
 
       {/* MODAL DE IMAGENES */}
       {modalOpen && (
         <div className="modal-overlay" onClick={() => setModalOpen(false)}>
           <div className="modal-content" ref={modalContentRef} onClick={(e) => e.stopPropagation()}>
-            {/* 🔥 FLECHA PARA VOLVER */}
-             {/* 🔥 FLECHA PARA VOLVER */}
-
-          <div className='footer-modal'>
-             <div className="close-arrow" onClick={() => setModalOpen(false)}>
-               ⬅️
+            <div className="footer-modal">
+              <div className="close-arrow" onClick={() => setModalOpen(false)}>
+                ⬅️
+              </div>
             </div>
-        </div>
             {/* MAPEO DE IMAGENES */}
             {images.map((image, idx) => (
               <div key={idx} className="image-post">
@@ -138,25 +139,19 @@ export default function Home() {
                   className="modal-image"
                 />
                 <div className="caja-like-coments">
-                  {/* Botón de like para la imagen */}
                   <button onClick={() => handleLike(image._id)} className="like-button-img">
                     👍 {image.likes || 0}
                   </button>
-
-                  {/* Formulario de comentarios */}
                   <form onSubmit={(e) => handleComment(e, image._id)} className="comment-form">
                     <input type="text" name="comment" placeholder="Agrega un comentario..." />
                     <button type="submit">Comentar</button>
                   </form>
-
-                  {/* Mostrar solo los últimos 3 comentarios de la imagen */}
                   <div className="comments">
                     {image.comments &&
                       image.comments.slice(-3).map((c, i) => (
                         <div key={i} className="comment">
                           <div className="comment-content">
                             <p>- {c.text}</p>
-                            {/* Botón de like para cada comentario */}
                             <button
                               className="like-button"
                               onClick={() => handleLikeComment(image._id, c._id)}
@@ -373,4 +368,7 @@ export default function Home() {
       `}</style>
     </div>
   );
-}
+}    
+
+
+//Aqui FINAL!

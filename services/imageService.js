@@ -13,7 +13,9 @@ export const fetchImages = async () => {
   }
 };
 
-// Dar like a una imagen
+
+
+// Dar like a una imagen START!
 export const likeImage = async (id) => {
   try {
     const response = await fetch(`${baseURL}/images/${id}/like`, {

@@ -2,8 +2,8 @@
 import useNotiData from '../../hooks/useNotiData';
 import { useState } from 'react';
 
-const NotiSection = () => {
-  const { data, loading, error, deleteItem, likeItem } = useNotiData('notis');
+const NotiSection = ({ limit = 100 }) => {
+  const { data, loading, error, deleteItem, likeItem } = useNotiData('notis', limit);
   const [isCollapsed, setIsCollapsed] = useState(true); // Estado para colapsar/expandir
 
   if (loading) return <p>Cargando notas...</p>;
@@ -28,7 +28,8 @@ const NotiSection = () => {
             </thead>
             <tbody>
               {data.map((noti) => (
-                <tr key={noti._id}>
+                <tr key={noti._id}
+                >
                   <td className="ellipsis">{noti.titulo}</td>
                   <td className="ellipsis">{noti.text}</td>
                   <td>{noti.likes}</td>

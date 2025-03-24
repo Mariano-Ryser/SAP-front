@@ -1,8 +1,10 @@
 // pages/adminDash.js
+import Link from 'next/link';
 import { useState } from 'react';
 import ComentarSection from '../components/admin/ComentarSection';
 import NotiSection from '../components/admin/NotiSection';
 import ImageSection from '../components/admin/ImageSection';
+
 
 export default function AdminDash() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -140,7 +142,16 @@ export default function AdminDash() {
       {/* Integrar el componente ImageSection */}
       <ImageSection />
 
+    <Link href="/proyectos/ruleta"><li className='admin-list'>ruleta</li></Link>
+         
       <style jsx>{`
+        .admin-list{
+          background-color:rgb(41, 105, 80);
+         }
+         .admin-list:hover{
+           color:white;
+           background-color:rgba(37, 223, 0, 0.9);
+         }
         .admin-container {
           padding: 20px;
           background-color: #1a1a1a;
@@ -149,35 +160,29 @@ export default function AdminDash() {
           max-width: 1200px;
           margin: 0 auto;
         }
-
         .title {
           font-size: 2rem;
           font-weight: bold;
           margin-bottom: 20px;
           color: #ffffff;
         }
-
         .subtitle {
           font-size: 1.2rem;
           margin-bottom: 30px;
           color: #cccccc;
         }
-
         .error {
           color: #ff4d4d;
           margin-top: 10px;
         }
-
         /* Estilos responsivos */
         @media (max-width: 768px) {
           .admin-container {
             padding: 10px;
           }
-
           .title {
             font-size: 1.5rem;
           }
-
           .subtitle {
             font-size: 1rem;
           }

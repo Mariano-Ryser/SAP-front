@@ -8,6 +8,8 @@ import {
   deleteImage as deleteImageService,
 } from '../services/imageService';
 
+//FIN 
+
 export const useImages = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -15,6 +17,7 @@ export const useImages = () => {
 
 // Obtener todas las imágenes
   const loadImages = useCallback(async () => {
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
     setLoading(true);
     setError(null);
     try {

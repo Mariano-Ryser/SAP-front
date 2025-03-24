@@ -14,26 +14,8 @@ html,
  /* Color de fondo por defecto */
 
 body {
-   /* background-color: rgba(3, 3, 3, 0.898);   */
-  
- /*  transition: 2s;
-  padding: 0;
-  margin: 0; */
-  
- background-image: var(--bg-color); 
-
-  /* background:
-linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-background-size: 20px 20px; */
-/* background-color: #f0ee8b; */
+   background-color: rgba(3, 3, 3, 0.898);  
 }
-
-
 
 li{
   font-size: 1.6rem;
@@ -73,72 +55,5 @@ li{
 
 }
 
-/* CAJA DE ICONOS */
-.boxIcons{
-  background-color: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(7px);
-  border-radius: 10px;
-  width: 100%;
-  margin: auto;
-  display: grid;
-  overflow: hidden;
-  gap: 0.5rem; 
-  grid-auto-rows: 6rem;
-  grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 4fr));
-  grid-template-columns: repeat(12,1fr);
-  padding-top: 1.4rem;
-  padding-bottom: 22px;
-}
-
-.icon{
-display: inline-block;
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
-height: 90px;
-width: 90px;
-grid-column: span 2;
-filter: blur(0.4px);
-margin: auto;
-transition:0.3s 
-}
-.icon:hover{
-cursor: pointer;
-transform: scale(105%) rotateZ(1.5deg);
-filter: blur(0.0px); 
-}
-
-@media (max-width:600px){ 
-.boxIcons{
-width: 100%;
-margin: auto;
-margin-top: 0.7rem;
-display: grid;
-overflow: hidden;
-gap: 1rem; 
-grid-auto-rows: 4.2rem;
-grid-auto-columns: repeat(auto-fill, minmax(0.2rem, 5fr));
-padding-top: 0.5rem;
-padding-bottom: 12px;
-}
-.icon{
-display: inline-block;
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
-height: 70px;
-width: 70px;
-grid-column: span 3;
-filter: blur(0.4px);
-margin: auto;
-transition:0.3s 
-}
-
-.icon:hover{
-cursor: pointer;
-transform: scale(105%) rotateZ(1.5deg);
-filter: blur(0.0px); 
-}
-}
 
 

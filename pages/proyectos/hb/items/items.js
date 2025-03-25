@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from "next/image"
-import Espadas from "./components/espadas/espadas"
 
 const Items = () => {
 
@@ -140,7 +139,6 @@ const images = [
 
   return (
     <>
-<Espadas></Espadas>
     <Link href="/proyectos/hb/hb"><li>/hb ..</li></Link>
       <div className="gallery"//  style={{height: size}}
          >

@@ -28,7 +28,6 @@ const Cabezera = () => {
         
       
 .cabezera{
-    position: relative;
     margin: auto;
     height: 6rem;
     margin-bottom: 13px;
@@ -53,7 +52,7 @@ const Cabezera = () => {
 
 @media (max-width:600px){ 
   .cabezerafondo{
-    width: 80%;
+    width: 100%;
     height: 4rem;
 } 
 .cabezera{

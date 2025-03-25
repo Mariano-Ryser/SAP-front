@@ -127,6 +127,11 @@ export default function NavRespon() {
           </Link>
           <Link 
           className='link'
+          href="/proyectos/ruleta">
+            <li onClick={closeAsideOnLinkClick}>Ruleta</li>
+          </Link>
+          <Link 
+          className='link'
           href="/adminDash">
             <li onClick={closeAsideOnLinkClick}>ADMIN</li>
           </Link>

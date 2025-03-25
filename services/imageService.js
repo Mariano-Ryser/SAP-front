@@ -2,6 +2,7 @@
 const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 // Obtener todas las imágenes
+
 export const fetchImages = async () => {
   try {
     const response = await fetch(`${baseURL}/images`);
@@ -14,6 +15,19 @@ export const fetchImages = async () => {
 };
 
 
+// con Auth
+// export const getImages = async () => {
+//   const token = sessionStorage.getItem('adminToken');
+  
+//   const response = await fetch(`${baseURL}/images`, {
+//     headers: {
+//       'Authorization': `Bearer ${token}`
+//     }
+//   });
+  
+//   if (!response.ok) throw new Error('No autorizado');
+//   return await response.json();
+// };
 
 // Dar like a una imagen START!
 export const likeImage = async (id) => {

@@ -1,6 +1,7 @@
 // pages/adminDash.js
 import Link from 'next/link';
-import { useState } from 'react';
+import { AuthContext } from '../components/admin/AuthProvider';
+import { useState, useContext } from 'react';
 import ComentarSection from '../components/admin/ComentarSection';
 import NotiSection from '../components/admin/NotiSection';
 import ImageSection from '../components/admin/ImageSection';
@@ -8,8 +9,9 @@ import ImageSection from '../components/admin/ImageSection';
 
 export default function AdminDash() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
+
   const [accessKey, setAccessKey] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const { isAuthenticated, login, logout } = useContext(AuthContext);
   const [error, setError] = useState('');
 
   const handleLogin = async (e) => {
@@ -23,14 +25,12 @@ export default function AdminDash() {
       const data = await response.json();
 
       if (data.success) {
-        setIsAuthenticated(true);
-        setError('');
+        login(data.token);
       } else {
-        setError('Clave de acceso incorrecta');
+        setError('Clave incorrecta');
       }
     } catch (error) {
-      console.error('Error al verificar la clave:', error);
-      setError('Error al conectar con el servidor');
+      setError('Error de conexión');
     }
   };
 
@@ -45,6 +45,7 @@ export default function AdminDash() {
             value={accessKey}
             onChange={(e) => setAccessKey(e.target.value)}
             className="input"
+            required
           />
           <button type="submit" className="button">
             Acceder
@@ -133,6 +134,7 @@ export default function AdminDash() {
 
   return (
     <div className="admin-container">
+      <button onClick={logout}>Cerrar sesión</button>
       <h1 className="title">Bienvenido al Panel de Administración</h1>
 
       {/* Integrar el componente AdminSection */}

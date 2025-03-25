@@ -9,7 +9,17 @@ const useNotiData = (endpoint, limit) => {
 
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
-  
+// Agrega esta función al inicio del hook
+const getAuthHeaders = () => {
+  const token = localStorage.getItem('adminToken');
+  return {
+    'Content-Type': 'application/json',
+    'x-auth-token': token || '' // Asegúrate que coincide con lo que espera el middleware
+  };
+};
+
+
+   
   // Función para obtener Notis con paginación
 const fetchData = useCallback(async (pageToFetch = 1) => {
   // await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -48,35 +58,50 @@ const fetchData = useCallback(async (pageToFetch = 1) => {
     await fetchData(1);
   }, [fetchData]);
 
-  // Función para crear una notificación
-  const createItem = async (noti) => {
-    try {
-      const response = await fetch(`${baseURL}/${endpoint}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(noti),
-      });
-      if (!response.ok) throw new Error('Error al crear la notificación');
-      const newNoti = await response.json();
-      setData((prevData) => [newNoti.noti, ...prevData]); // Actualizar el estado local
-      await resetPagination(); // Resetear paginación después de crear
-      return newNoti;
-    } catch (err) {
-      setError(err.message);
+  // Función para crear una notificación (protegida)
+const createItem = async (noti) => {
+  try {
+    const response = await fetch(`${baseURL}/${endpoint}`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(noti),
+    });
+    
+    if (response.status === 401) {
+      throw new Error('Debes iniciar sesión como administrador');
     }
-  };
-
-  // Función para eliminar una notificación
+    
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || 'Error al crear la notificación');
+    }
+    fetchData()
+    const newNoti = await response.json();
+    setData(prev => [newNoti.noti, ...prev]);
+    return newNoti;
+  } catch (err) {
+    setError(err.message);
+    throw err; // Re-lanzar para manejar en el componente
+  }
+};
+  // Función para eliminar una notificación (protegida)
   const deleteItem = async (id) => {
     try {
       const response = await fetch(`${baseURL}/${endpoint}/${id}`, {
         method: 'DELETE',
+        headers: getAuthHeaders(),
       });
+      
+      if (response.status === 401) throw new Error('No autorizado');
       if (!response.ok) throw new Error('Error al eliminar la notificación');
-      setData((prevData) => prevData.filter((noti) => noti._id !== id));
-      await resetPagination(); // Resetear paginación después de eliminar
+      fetchData()
+      // ... resto del código existente
     } catch (err) {
       setError(err.message);
+      if (err.message === 'No autorizado') {
+        // Redirigir a login o mostrar mensaje
+        window.location.href = './adminDash';
+      }
     }
   };
 

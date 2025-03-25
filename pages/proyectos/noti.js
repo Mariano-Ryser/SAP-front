@@ -2,40 +2,42 @@ import { useState , useEffect} from 'react';
 import Link from 'next/link';
 import useNotiData from '../../hooks/useNotiData';
 
-function Noti() {
+function Noti({ limit = 100 }) {
   const current = new Date();
   const datee = `${current.getDate()} / ${current.getMonth() + 1} / ${current.getFullYear()}`;
 
-  const { data: notis, loading, error, createItem, fetchData,likeItem} = useNotiData('notis');
+  const { data: notis, loading, error, createItem, fetchData,likeItem} = useNotiData('notis', limit);
   const [noti, setNoti] = useState({ titulo: '', text: '' });
   const [successMessage, setSuccessMessage] = useState(null);
+  const [errorM, setError] = useState(null);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setNoti((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+// Modifica handleSubmit para mejor feedback
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (!noti.titulo.trim() || !noti.text.trim()) {
-      alert('Por favor, completa todos los campos.');
-      return;
-    }
+  if (!noti.titulo.trim() || !noti.text.trim()) {
+    setError('Por favor, completa todos los campos.');
+    return;
+  }
 
-    try {
-      await createItem(noti); // Crear la notificación
-      setNoti({ titulo: '', text: '' }); // Limpiar el formulario
-      setSuccessMessage('Noti creado con éxito!'); // Mostrar mensaje de éxito
-      setTimeout(() => setSuccessMessage(null), 2100);
-    } catch (err) {
-      console.error('Error al crear noti:', err);
-    }
-  };
+  try {
+    await createItem(noti);
+    setNoti({ titulo: '', text: '' });
+    setSuccessMessage('Noti creado con éxito!');
+    setError(null);
+    setTimeout(() => setSuccessMessage(null), 2100);
+  } catch (err) {
+   setError(err.message);
+    setSuccessMessage(null);
+  }
+};
 
-  useEffect(() => {
-    fetchData(notis);
-  }, []);
 
   return (
     <div className="container">
@@ -64,6 +66,7 @@ function Noti() {
           Enviar
         </button>
         {successMessage && <div className="success">{successMessage}</div>}
+        {errorM && <div className="error">{errorM}</div>}
       </form>
 
       <div className="notis-container">

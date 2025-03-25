@@ -124,4 +124,4 @@ const NotiSection = ({ limit = 100 }) => {
   );
 };
 
-export default NotiSection; 
+export default NotiSection;  

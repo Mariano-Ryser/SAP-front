@@ -1,6 +1,6 @@
 import { useEffect, useCallback, useRef } from 'react';
 import Skeleton from '../components/Skeleton';
-import useNotiData from './notis/useNoti';
+import useNotiData from '../services/useNoti';
 
 export default function Home({ limit = 5 }) {
   const { data: notis, loading, likeItem, loadMore, hasMore } = useNotiData('notis', limit);

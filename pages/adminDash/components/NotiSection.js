@@ -1,8 +1,9 @@
 // components/admin/NotiSection.js
-import useNotiData from '../../notis/useNoti';
+import useNotiData from '../../../services/useNoti';
 import { useState } from 'react';
 
-const NotiSection = ({ limit = 100 }) => {
+
+export default function NotiSection({ limit = 100 }){
   const { data, loading, error, deleteItem, likeItem } = useNotiData('notis', limit);
   const [isCollapsed, setIsCollapsed] = useState(true); // Estado para colapsar/expandir
 
@@ -124,4 +125,3 @@ const NotiSection = ({ limit = 100 }) => {
   );
 };
 
-export default NotiSection;  

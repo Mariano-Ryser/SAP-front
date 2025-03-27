@@ -1,4 +1,4 @@
-import { useProduct } from './useProducts';
+import { useProduct } from '../../services/useProducts';
 
 export function ProductCreator() {
   const {

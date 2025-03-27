@@ -1,6 +1,6 @@
 // components/admin/ImageSection.js
 import { useState } from 'react';
-import { useImages } from '../../images/useImages';
+import { useImages } from '../../../services/useImages';
 
 const ImageSection = () => {
   const { images, loading, error, deleteImage, likeImage } = useImages();

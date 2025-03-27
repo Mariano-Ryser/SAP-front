@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import useNotiData from './useNoti';
+import useNotiData from '../../services/useNoti';
 
 function Noti({ limit = 100 }) {
   const current = new Date();

@@ -1,5 +1,5 @@
 // components/NotiItem.js
-import { handleLike, handleDelete } from '../notiService';
+import { handleLike, handleDelete } from '../../../services/notiService';
 
 const NotiItem = ({ noti, baseURL, onDelete, onLike }) => {
   const { _id, titulo, text, likes } = noti;

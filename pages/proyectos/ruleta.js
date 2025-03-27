@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import withAdminAuth from '../../components/admin/withAdminAuth';
+import withAdminAuth from "../../components/auth/withAdminAuth"
 
 
 function Ruleta() {

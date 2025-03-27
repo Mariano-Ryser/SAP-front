@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import { AuthProvider } from '../components/admin/AuthProvider';
+import { AuthProvider } from '../components/auth/AuthProvider';
 
 function MyApp({ Component, pageProps }) {
   return (

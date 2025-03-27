@@ -4,7 +4,6 @@ export default function Hb() {
   return (
     <>
 
-  <Link href="/proyectos/proyects"><li>/proyects ..</li></Link>
   <Link href="items/items"><li>/hb/items</li></Link>
   <Link href="monsters/monsters"><li>/hb/monsters</li></Link>
   <Link href="sounds/music"><li>/hb/sounds</li></Link>

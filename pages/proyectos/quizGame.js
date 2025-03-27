@@ -110,7 +110,51 @@ const QuizGame = () => {
     }
   };
 
-  if (!preguntaActual) return <p>No hay preguntas disponibles con los filtros seleccionados.</p>;
+  if (!preguntaActual) return(
+  <> 
+  <p>No hay preguntas disponibles con los filtros seleccionados.</p>
+        {/* Menú de filtrado */}
+        <div className="filtros">
+        <select
+          value={categoriaFiltro}
+          onChange={(e) => setCategoriaFiltro(e.target.value)}
+        >
+          <option value="Todas">Todas las categorías</option>
+          <option value="Ciencia">Ciencia</option>
+          <option value="Historia">Historia</option>
+          <option value="Geografía">Geografía</option>
+          <option value="Arte">Arte</option>
+          <option value="Deporte">Deporte</option>
+          <option value="Literatura">Literatura</option>
+          <option value="Entretenimiento">Entretenimiento</option>
+        </select>
+
+        <select
+          value={dificultadFiltro}
+          onChange={(e) => setDificultadFiltro(e.target.value)}
+        >
+          <option value="Todas">Todas las dificultades</option>
+          <option value="fácil">Fácil</option>
+          <option value="medio">Medio</option>
+          <option value="difícil">Difícil</option>
+        </select>
+      </div>
+  <style jsx>{`
+      .filtros {
+          margin-bottom: 1rem;
+          display: flex;
+          gap: 1rem;
+          color: black;
+        }
+        .filtros select {
+          padding: 0.5rem;
+          border-radius: 5px;
+          border: 1px solid #ddd;
+          color: black;
+        }
+        `}</style>
+  </>
+  )
 
   return (<>
 

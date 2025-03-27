@@ -1,14 +1,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import Test5 from '../cubo3D/cubo3d';
+import { AuthContext } from '../auth/AuthProvider';
+import Noti from "../../pages/notis"
 
 export default function NavRespon() {
-  const [isOpen, setIsOpen] = useState(false); // Estado para abrir/cerrar el menú
-  const [bgColor, setBgColor] = useState('url(/img/a0.jpg)'); // Estado para el fondo
-  const [letterColor, setLetterColor] = useState('rgb(24, 24, 24)'); // Estado para el color de texto
+  const [isOpen, setIsOpen] = useState(false);
+  const [bgColor, setBgColor] = useState('url(/img/a0.jpg)');
+  const [letterColor, setLetterColor] = useState('rgb(24, 24, 24)');
+  const [hoverItem, setHoverItem] = useState(null);
+  const { isAuthenticated, login, logout } = useContext(AuthContext);
 
-  // Colores de fondo y texto
   const bgColors = ['url(/img/bBack.jpg)', 'url(/img/a1.png)', 'url(/img/a0.jpg)'];
   const letterColors = [
     'rgb(251, 255, 34)', // Amarillo
@@ -17,7 +20,6 @@ export default function NavRespon() {
     'rgb(0, 0, 0)', // Negro
   ];
 
-  // Cambiar el color de fondo
   const changeBgColor = () => {
     const currentIndex = bgColors.indexOf(bgColor);
     const nextIndex = (currentIndex + 1) % bgColors.length;
@@ -26,7 +28,6 @@ export default function NavRespon() {
     document.documentElement.style.setProperty('--bg-color', newColor);
   };
 
-  // Cambiar el color de texto
   const changeLetterColor = () => {
     const currentIndex = letterColors.indexOf(letterColor);
     const nextIndex = (currentIndex + 1) % letterColors.length;
@@ -35,19 +36,22 @@ export default function NavRespon() {
     document.documentElement.style.setProperty('--letter-color', newColor);
   };
 
-  // Abrir/cerrar el menú
-  const openList = () => setIsOpen(!isOpen);
+  const openList = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }; 
 
-  // Cerrar el menú al hacer clic en un enlace
-  const closeAsideOnLinkClick = () => setIsOpen(false);
+  const closeAsideOnLinkClick = () => {
+    setIsOpen(false);
+    document.body.style.overflow = 'auto';
+  };
 
   return (
     <>
-      {/* Botones para cambiar colores */}
-      {/* <button className="buttonColor" onClick={changeBgColor}></button>
-      <button className="buttonLetterColor" onClick={changeLetterColor}></button> */}
-
-      {/* Barra de navegación */}
       <nav className="nav">
         <div className="img">
           <Link href="/home">
@@ -55,113 +59,107 @@ export default function NavRespon() {
           </Link>
         </div>
 
-        {/* Botón de menú (hoja) */}
-        <div id="burger" className="burger" onClick={openList}>
+        <div id="burger" className={`burger ${isOpen ? 'active' : ''}`} onClick={openList}>
           <Image
             alt="Burger-Icon"
             src="/img/oja.png"
             height={90}
             width={95}
+            className="burger-icon"
           />
+          <div className="holographic-effect"></div>
         </div>
       </nav>
 
-      {/* Menú desplegable */}
       <aside
         style={{
           transform: isOpen ? 'translateY(0%)' : 'translateY(-100%)',
-          display: isOpen ? 'block' : 'none',
+          opacity: isOpen ? 1 : 0,
+          pointerEvents: isOpen ? 'all' : 'none',
         }}
         id="aside"
         className="asideBar"
-      >
+      > 
+        <div className="holographic-grid"></div>
+        <div className="scanlines"></div>
+        
         <ul className="ul">
           <Test5 />
-          <Link href="/">
-            <li onClick={closeAsideOnLinkClick}>Home</li>
-          </Link>
-          <Link href="/proyectos/noti">
-            <li onClick={closeAsideOnLinkClick}>Nota</li>
-          </Link>
-          <Link href="../about">
-            <li onClick={closeAsideOnLinkClick}>About</li>
-          </Link>
-          <Link href="/proyectos/proyects">
-            <li onClick={closeAsideOnLinkClick}>Proyects</li>
-          </Link>
-          <Link href="/proyectos/icons">
-            <li onClick={closeAsideOnLinkClick}>Icons</li>
-          </Link>
-          <Link href="../songs">
-            <li onClick={closeAsideOnLinkClick}>Songs</li>
-          </Link>
-          <Link href="../idiomas/DayCard">
-            <li onClick={closeAsideOnLinkClick}>Deutsch</li>
-          </Link>
-          <Link href="../idiomas/EnglishCard">
-            <li onClick={closeAsideOnLinkClick}>English</li>
-          </Link>
-          <Link href="/proyectos/msj">
-            <li onClick={closeAsideOnLinkClick}>ComentarBox</li>
-          </Link>
-          <Link href="/proyectos/personaje">
-            <li onClick={closeAsideOnLinkClick}>CreateChar</li>
-          </Link>
-          <Link href="/proyectos/productCreator">
-            <li onClick={closeAsideOnLinkClick}>ProductCreator</li>
-          </Link>
-          <Link href="/proyectos/logazo">
-            <li onClick={closeAsideOnLinkClick}>Logo</li>
-          </Link>
-          <Link href="/proyectos/musica">
-            <li onClick={closeAsideOnLinkClick}>MusicaProyect</li>
-          </Link>
-          <Link href="/proyectos/hb/hb">
-            <li onClick={closeAsideOnLinkClick}>GameSound</li>
-          </Link>
-          <Link href="/proyectos/posts/books">
-            <li onClick={closeAsideOnLinkClick}>BooksProyect</li>
-          </Link>
-          <Link href="/proyectos/partners">
-            <li onClick={closeAsideOnLinkClick}>Partners</li>
-          </Link>
-          <Link 
-          className='link'
-          href="/proyectos/ruleta">
-            <li onClick={closeAsideOnLinkClick}>Ruleta</li>
-          </Link>
-          <Link 
-          className='link'
-          href="/adminDash">
-            <li onClick={closeAsideOnLinkClick}>ADMIN</li>
-          </Link>
+          
+          {[
+            { href: "/comentarBox", text: "ComentarBox" },
+            { href: "/images", text: "Images" },
+            { href: "/notis", text: "Notas" },
+            { href: "/products", text: "Products" },
+            { href: "/proyectos/icons", text: "Icons" },
+            { href: "/proyectos/DayCard", text: "Deutsch" },
+            { href: "/proyectos/personaje", text: "CreateChar" },
+            { href: "/proyectos/hb/hb", text: "HB" },
+            { href: "/proyectos/ruleta", text: "Ruleta" },
+            { href: "/adminDash", text: "ADMIN" },
+          ].map((item, index) => (
+            <Link href={item.href} key={index}>
+              <li 
+                onClick={closeAsideOnLinkClick}
+                onMouseEnter={() => setHoverItem(index)}
+                onMouseLeave={() => setHoverItem(null)}
+                className={hoverItem === index ? 'hovered' : ''}
+              >
+                <span className="link-text">{item.text}</span>
+                <span className="link-arrow">➔</span>
+              </li>
+            </Link>
+          ))}
+          <br></br>
         </ul>
-
-    
       </aside>
 
-      {/* Estilos */}
+      <button 
+        className='buttonLoggout'
+        onClick={logout}
+      >
+        <span className="logout-icon">⏻</span>
+      </button>
+
       <style jsx>{`
-        /* Botones de cambio de color */
-        .buttonColor,
-        .buttonLetterColor {
+        :root {
+          --neon-primary: #0af;
+          --neon-secondary: #f0a;
+          --hologram-opacity: 0.7;
+          --transition-speed: 0.3s;
+        }
+        
+        .buttonLoggout {
+          font-size: 1.5rem;
+          bottom: 35px;
           z-index: 2;
           position: fixed;
-          left: 15px;
-          background-color: rgba(8, 8, 8, 0.123);
+          left: 20px;
+          background-color: rgba(24, 201, 142, 0.37);
           border-radius: 50%;
+          box-shadow: 0 0 10px 2px #0af,
+                      0 0 20px 5px rgba(77, 201, 24, 0.6);
           height: 40px;
           width: 40px;
-          border: 1px solid rgba(250, 235, 215, 0.308);
+          border: 1px solid rgba(250, 235, 215, 0);
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
         }
-        .buttonColor {
-          bottom: 125px;
+        
+        .buttonLoggout:hover {
+          transform: scale(1.1);
+          box-shadow: 0 0 10px 2px #0af,
+                      0 0 30px 5px rgba(77, 201, 24, 0.6);
+                    
         }
-        .buttonLetterColor {
-          bottom: 175px;
+        
+        .logout-icon {
+          transform: translateY(-1px);
         }
 
-        /* Barra de navegación */
         .nav {
           position: fixed;
           bottom: 4rem;
@@ -172,76 +170,207 @@ export default function NavRespon() {
           z-index: 2;
         }
 
-        /* Botón de menú (hoja) */
         .burger {
           position: absolute;
           bottom: 5rem;
           top: -1.6rem;
           transform: scale(1);
-          transition: 0.05s;
+          transition: transform 0.2s ease;
           cursor: pointer;
+          filter: drop-shadow(0 0 5px rgba(10, 175, 255, 0.7));
+          z-index: 3;
         }
+        
+        .burger.active {
+          filter: drop-shadow(0 0 10px rgba(255, 10, 175, 0.9));
+        }
+        
+        .burger-icon {
+          transition: all var(--transition-speed) ease;
+          position: relative;
+          z-index: 2;
+        }
+        
+        .burger:hover .burger-icon {
+          filter: brightness(1.2);
+        }
+        
         .burger:active {
           transform: scale(0.95);
         }
+        
+        .holographic-effect {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            45deg,
+            rgba(10, 175, 255, 0.3) 0%,
+            rgba(255, 10, 175, 0.3) 50%,
+            rgba(10, 175, 255, 0.3) 100%
+          );
+          border-radius: 50%;
+          opacity: 0;
+          animation: hologram-pulse 3s infinite;
+          z-index: 1;
+        }
+        
+        .burger:hover .holographic-effect {
+          opacity: 0.7;
+        }
 
-        /* Menú desplegable */
         .asideBar {
           position: fixed;
           top: 0;
           left: 0;
           right: 0;
           height: 100%;
-          backdrop-filter: blur(7px);
+          backdrop-filter: blur(12px) brightness(0.8);
+          background: rgba(10, 20, 30, 0.85);
           overflow-y: scroll;
           transform: translateY(-100%);
-          transition: transform 0.3s ease-in-out;
+          opacity: 0;
+          transition: 
+            transform var(--transition-speed) ease-in-out,
+            opacity var(--transition-speed) ease;
           z-index: 1;
           padding-top: 4.1rem;
           text-align: center;
+          pointer-events: none;
         }
+        
         .asideBar::-webkit-scrollbar {
           width: 0.4rem;
+          background: transparent;
         }
+        
         .asideBar::-webkit-scrollbar-thumb {
-          background: rgb(0, 0, 0);
+          background: linear-gradient(var(--neon-primary), var(--neon-secondary));
+          border-radius: 10px;
+        }
+        
+        .holographic-grid {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: 
+            linear-gradient(rgba(10, 175, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(10, 175, 255, 0.1) 1px, transparent 1px);
+          background-size: 20px 20px;
+          pointer-events: none;
+          z-index: -1;
+        }
+        
+        .scanlines {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            to bottom,
+            transparent 95%,
+            rgba(10, 175, 255, 0.05) 96%
+          );
+          background-size: 100% 4px;
+          animation: scanline 8s linear infinite;
+          pointer-events: none;
+          z-index: -1;
         }
 
-        /* Lista de enlaces */
         .ul {
           max-width: 56rem;
           margin: 0 auto;
-          padding: 0;
+          padding: 2rem 0;
           list-style-type: none;
+          position: relative;
         }
-        .ul link{
-          text-decoration: none;
-        }
+        
         li {
           font-size: 1.6rem;
           line-height: 1.9rem;
-          margin: 0.5rem 0;
-          border-bottom: 1px solid gray;
+          margin: 1.5rem auto;
+          padding: 1rem 2rem;
           cursor: pointer;
-          text-decoration: none; /* Elimina el subrayado */
-        }
-        .ul li:hover {
-          background-color: rgb(72, 199, 72);
           color: white;
+          position: relative;
+          max-width: 80%;
+          border-radius: 4px;
+          transition: all var(--transition-speed) ease;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid rgba(10, 175, 255, 0.3);
+          background: rgba(0, 20, 40, 0.5);
+          backdrop-filter: blur(5px);
+        }
+        
+        li:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(10, 175, 255, 0.2),
+            transparent
+          );
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
+        }
+        
+        li:hover {
+          background: rgba(10, 50, 80, 0.6);
+          box-shadow: 0 0 15px rgba(10, 175, 255, 0.5);
+          transform: translateX(10px);
+        }
+        
+        li.hovered {
+          background: rgba(10, 50, 80, 0.6);
+          box-shadow: 0 0 15px rgba(10, 175, 255, 0.5);
+          transform: translateX(10px);
+        }
+        
+        li:hover:before {
+          transform: translateX(100%);
+        }
+        
+        .link-text {
+          text-shadow: 0 0 5px rgba(10, 175, 255, 0.7);
+        }
+        
+        .link-arrow {
+          opacity: 0;
+          transform: translateX(-10px);
+          transition: all var(--transition-speed) ease;
+          color: var(--neon-primary);
+        }
+        
+        li:hover .link-arrow {
+          opacity: 1;
+          transform: translateX(0);
         }
 
-        /* Estilos responsivos */
         @media (max-width: 600px) {
           .nav {
             bottom: 2.9rem;
             right: 0.1rem;
             width: 10rem;
           }
+          
           .burger {
             right: 1.5rem;
             top: -2.2rem;
             animation: alien alternate 1s 1;
           }
+          
           @keyframes alien {
             1% {
               right: -10.3rem;
@@ -250,12 +379,27 @@ export default function NavRespon() {
               right: 1.7rem;
             }
           }
+          
           .asideBar {
-            backdrop-filter: blur(14px);
+            backdrop-filter: blur(20px) brightness(0.7);
           }
+          
           li {
-            width: 100%;
+            width: 90%;
+            font-size: 1.4rem;
+            padding: 0.8rem 1.5rem;
           }
+        }
+        
+        @keyframes hologram-pulse {
+          0% { opacity: 0.3; }
+          50% { opacity: 0.7; }
+          100% { opacity: 0.3; }
+        }
+        
+        @keyframes scanline {
+          0% { background-position: 0 0; }
+          100% { background-position: 0 100%; }
         }
       `}</style>
     </>

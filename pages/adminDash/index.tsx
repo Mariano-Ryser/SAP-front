@@ -1,10 +1,11 @@
-// pages/adminDash.js
+// pages/adminDash/index.js 
 import Link from 'next/link';
 import { AuthContext } from '../../components/auth/AuthProvider';
 import { useState, useContext } from 'react';
 import ComentarSection from './components/ComentarSection';
 import NotiSection from './components/NotiSection';
 import ImageSection from './components/ImageSection';
+import BlockPages from "./components/blockPages"
 
 export default function AdminDash() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -13,7 +14,6 @@ export default function AdminDash() {
   const [error, setError] = useState('');
   const [activeTab, setActiveTab] = useState('dashboard');
 
-
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -21,18 +21,42 @@ export default function AdminDash() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ key: accessKey }),
+        credentials: 'include', // 🔥 Asegura que el frontend envíe y reciba cookies
       });
-      const data = await response.json();
 
+      const data = await response.json();
       if (data.success) {
-        login(data.token);
+        login(); // Llamada al contexto para actualizar el estado de autenticación
       } else {
         setError('Clave incorrecta');
       }
     } catch (error) {
-      setError('Error de conexión');
+      console.error("Detalles del error:", error);  // Imprimir el error completo
+      setError('Error de conexión'); //error en rojo en interfaz
     }
   };
+
+
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await fetch(`${baseURL}/admin/verify-key`, {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify({ key: accessKey }),
+  //     });
+  //     const data = await response.json();
+
+  //     if (data.success) {
+  //       login(data.token);
+  //     } else {
+  //       setError('Clave incorrecta');
+  //     }
+  //   } catch (error) {
+  //     setError('Error de conexión');
+  //   }
+  // };
+
 
   if (!isAuthenticated) {
     return (
@@ -41,6 +65,7 @@ export default function AdminDash() {
           <div className="holographic-effect"></div>
           <h1 className="login-title">Acceso al Panel</h1>
           <p className="login-subtitle">Ingrese sus credenciales de administrador</p>
+             
           
           <form onSubmit={handleLogin} className="login-form">
             <div className="input-group">
@@ -52,7 +77,6 @@ export default function AdminDash() {
                 className="login-input"
                 required
               />
-              <label className="input-label">Clave de acceso</label>
               <span className="input-highlight"></span>
             </div>
             
@@ -67,7 +91,7 @@ export default function AdminDash() {
 
         <style jsx>{`
           .login-container {
-            margin-top:6rem;
+            margin-top:4rem;
             display: flex;
             justify-content: center;
             min-height: 50vh;
@@ -152,14 +176,7 @@ export default function AdminDash() {
             color: rgba(10, 218, 255, 1);
           }
           
-          .input-label {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            color: rgba(255, 255, 255, 0.7);
-            pointer-events: none;
-            transition: all 0.3s ease;
-          }
+       
           
           .input-highlight {
             position: absolute;
@@ -244,6 +261,9 @@ export default function AdminDash() {
     );
   }
 
+ //CUANDO SE ABREEEEE! //CUANDO SE ABREEEEE! //CUANDO SE ABREEEEE! //CUANDO SE ABREEEEE! //CUANDO SE ABREEEEE!
+ //CUANDO SE ABREEEEE! //CUANDO SE ABREEEEE! //CUANDO SE ABREEEEE! //CUANDO SE ABREEEEE!
+
   return (
     <div className="admin-dashboard">
       {/* Sidebar */}
@@ -255,7 +275,7 @@ export default function AdminDash() {
             <span>Administrador</span>
           </div>
         </div>
-        
+       
         <nav className="sidebar-nav">
           <button 
             className={`nav-item ${activeTab === 'dashboard' ? 'active' : ''}`}
@@ -322,19 +342,12 @@ export default function AdminDash() {
           {activeTab === 'dashboard' && (
             <div className="dashboard-grid">
 
-               <div className="grid-card">
-                <h3>Resumen</h3>
-                <p>Aqui iremos agregando informacion! =D</p>
-              </div>
 
-              {/* <div className="grid-card">
-                <h3>Actividad reciente</h3>
-                <ul className="activity-list">
-                   <li>Nuevo comentario recibido</li>
-                  <li>Imagen subida</li>
-                  <li>Notificación enviada</li> 
-                </ul>
-              </div>  */}
+<BlockPages></BlockPages>
+        
+
+
+
 
             </div>
           )}
@@ -348,16 +361,13 @@ export default function AdminDash() {
       <style jsx>{`
         .admin-dashboard {
           display: flex;
-          min-height: 100vh;
-          background: #0f0f1a;
+          min-height: 90vh;
           color: #fff;
           font-family: 'Segoe UI', Arial, sans-serif;
         }
         
         /* Sidebar Styles */
         .admin-sidebar {
-          width: 260px;
-          background: rgba(20, 20, 40, 0.9);
           backdrop-filter: blur(10px);
           border-right: 1px solid rgba(10, 218, 255, 0.1);
           display: flex;
@@ -452,8 +462,7 @@ export default function AdminDash() {
         .admin-content {
           flex: 1;
           padding: 2rem;
-          background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
-        }
+       }
         
         .content-header {
           display: flex;
@@ -479,7 +488,6 @@ export default function AdminDash() {
         
         .stat-card {
           padding: 0.8rem 1.2rem;
-          background: rgba(10, 218, 255, 0.1);
           border-radius: 8px;
           border: 1px solid rgba(10, 218, 255, 0.2);
           text-align: center;
@@ -506,45 +514,8 @@ export default function AdminDash() {
           gap: 1.5rem;
         }
         
-        .grid-card {
-          background: rgba(20, 20, 40, 0.6);
-          border-radius: 12px;
-          padding: 1.5rem;
-          border: 1px solid rgba(255, 255, 255, 0.05);
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-          transition: all 0.3s ease;
-        }
-        
-        .grid-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-          border-color: rgba(10, 218, 255, 0.3);
-        }
-        
-        .grid-card h3 {
-          font-size: 1.2rem;
-          margin-bottom: 1rem;
-          color: #0adaff;
-        }
-        
-        .activity-list {
-          list-style: none;
-          padding: 0;
-        }
-        
-        .activity-list li {
-          padding: 0.5rem 0;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-          position: relative;
-          padding-left: 1.2rem;
-        }
-        
-        .activity-list li::before {
-          content: '•';
-          position: absolute;
-          left: 0;
-          color: #0adaff;
-        }
+       
+       
         
         /* Responsive Styles */
         @media (max-width: 768px) {
@@ -556,7 +527,7 @@ export default function AdminDash() {
             width: 100%;
             flex-direction: row;
             flex-wrap: wrap;
-            padding: 1rem;
+            padding:0px;
             gap: 0.5rem;
           }
           
@@ -577,7 +548,7 @@ export default function AdminDash() {
           }
           
           .nav-item span:first-child {
-            font-size: 1rem;
+            font-size: 1.1rem;
           }
           
           .logout-button {
@@ -591,7 +562,7 @@ export default function AdminDash() {
           }
           
           .admin-content {
-            padding: 1.5rem;
+            padding: 0.4rem;
           }
           
           .content-header {

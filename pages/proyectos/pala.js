@@ -1,7 +1,6 @@
 import { useState } from "react";
-import withAdminAuth from "../../components/auth/withAdminAuth"
 
-function CyberWordFinder() {
+export default function CyberWordFinder() {
   const [input, setInput] = useState("");
   const [foundWords, setFoundWords] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -231,5 +230,3 @@ function CyberWordFinder() {
     </div>
   );
 }
-
-export default withAdminAuth(CyberWordFinder);

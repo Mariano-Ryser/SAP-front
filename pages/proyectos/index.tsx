@@ -6,49 +6,49 @@ const projects = [
     id: 1,
     title: "CALCULADORA AVANZADA",
     description: "Herramienta de cálculo con funciones científicas y diseño interactivo",
-    image: "/img/a1.png",
+    image: "/img/gengar.jpeg",
     url: "/proyectos/calculadora",
-    tags: ["React", "Algoritmos", "UI/UX"]
+    tags: ["Next Js"]
   },
   {
     id: 2,
     title: "CRONÓMETRO PRECISO",
     description: "Temporizador con lapsos, cuenta regresiva y registro de tiempos",
-    image: "/img/AlienChill.png",
+    image: "/img/crono.png",
     url: "/proyectos/cronometro",
-    tags: ["Performance", "Precision", "Web Workers"]
+    tags: ["Next Js"]
   },
   {
     id: 3,
     title: "RULETA INTERACTIVA",
-    description: "Sistema de ruleta personalizable para sorteos y decisiones",
-    image: "/img/AlienChill.png",
+    description: "Sistema de ruleta personalizable para sorteos y decisiones.",
+    image: "/img/rula.png",
     url: "/proyectos/ruleta",
-    tags: ["Animaciones", "Física", "Canvas"]
+    tags: ["Next Js"]
   },
   {
     id: 4,
     title: "COLECCIÓN DE ICONS",
-    description: "Librería de iconos vectoriales para desarrollo web",
-    image: "/img/AlienChill.png",
+    description: "Librería de iconos vectoriales para desarrollo web.",
+    image: "/img/icons1.png",
     url: "/proyectos/icons",
-    tags: ["SVG", "Design System", "React"]
+    tags: ["SVG", "Design System", "Next Js"]
   },
   {
     id: 5,
     title: "Quiz Game",
-    description: "Juego de pregunta y respuestas",
-    image: "/img/AlienChill.png",
+    description: "Juego de pregunta y respuestas.",
+    image: "/img/preguntas.png",
     url: "/proyectos/icons",
-    tags: ["SVG", "Design System", "React"]
+    tags: ["Mongo Db", "Node Js", "Next Js"]
   },
   {
     id: 6,
     title: "BUSCADOR DE PALABRAS",
-    description: "busca palabras apartir de letras",
-    image: "/img/AlienChill.png",
+    description: "Busca palabras apartir de letrasn utilizando TrieNode.",
+    image: "/img/bpalabras.jpg",
     url: "/proyectos/buscaPalabra",
-    tags: ["SVG", "Design System", "React"]
+    tags: ["Node Js", "Mongo DB", "Next Js"]
   }
 ];
 
@@ -56,9 +56,7 @@ export default function ProjectsPage() {
   return (
     <div className="cyber-container">
       <div className="cyber-header">
-        <h1 className="cyber-title">ARCHIVO DE PROYECTOS</h1>
-        <p className="cyber-subtitle">Selecciona un proyecto para acceder al sistema</p>
-        <div className="cyber-grid"></div>
+        <h1 className="cyber-title">PROYECTOS</h1>
       </div>
 
       <div className="cyber-projects-grid">
@@ -68,9 +66,11 @@ export default function ProjectsPage() {
               <Image
                 src={project.image}
                 alt={project.title}
-                width={400}
-                height={250}
-                className="cyber-project-image"
+                 sizes="(max-width: 768px) 100vw, 33vw"
+                width={715}
+                height={330}
+                style={{ objectFit: 'cover' }}
+                className="cyber-project-image"// Prioriza carga de primeras imágenes
               />
               <div className="cyber-project-overlay"></div>
             </div>
@@ -110,6 +110,10 @@ export default function ProjectsPage() {
           --cyber-glow: 0 0 15px rgba(10, 175, 255, 0.5);
         }
         
+        
+.cyber-project-image {
+  object-fit: contain;
+}
         .cyber-container {
           min-height: 100vh;
           padding: 2rem;
@@ -118,6 +122,7 @@ export default function ProjectsPage() {
         }
         
         .cyber-header {
+          
           position: relative;
           text-align: center;
           margin-bottom: 3rem;
@@ -126,6 +131,7 @@ export default function ProjectsPage() {
         }
         
         .cyber-title {
+          
           color: var(--neon-green);
           font-size: 2.5rem;
           margin-bottom: 1rem;
@@ -135,6 +141,7 @@ export default function ProjectsPage() {
         }
         
         .cyber-subtitle {
+          
           color: rgba(200, 220, 255, 0.7);
           font-size: 1.2rem;
           margin: 0;
@@ -147,7 +154,7 @@ export default function ProjectsPage() {
           right: 0;
           bottom: 0;
           background-image: 
-            linear-gradient(rgba(10, 175, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(rgba(10, 120, 175, 0.05) 1px, transparent 1px),
             linear-gradient(90deg, rgba(10, 175, 255, 0.05) 1px, transparent 1px);
           background-size: 20px 20px;
           opacity: 0.1;
@@ -157,14 +164,14 @@ export default function ProjectsPage() {
         .cyber-projects-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-          gap: 2rem;
+          gap: 1rem;
           max-width: 1400px;
           margin: 0 auto;
         }
         
         .cyber-project-card {
           position: relative;
-          background: rgba(20, 25, 35, 0.7);
+          background-color: rgba(10, 120, 175, 0.32);
           border: var(--cyber-border);
           border-radius: 5px;
           overflow: hidden;
@@ -178,28 +185,8 @@ export default function ProjectsPage() {
         
         .cyber-project-image-container {
           position: relative;
-          height: 200px;
+          height: 300px;
           overflow: hidden;
-        }
-        
-        .cyber-project-image {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s ease;
-        }
-        
-        .cyber-project-card:hover .cyber-project-image {
-          transform: scale(1.05);
-        }
-        
-        .cyber-project-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: linear-gradient(to top, rgba(10, 15, 25, 0.9), transparent);
         }
         
         .cyber-project-content {
@@ -215,7 +202,7 @@ export default function ProjectsPage() {
         }
         
         .cyber-project-description {
-          color: rgba(200, 220, 255, 0.8);
+          color: rgba(200, 255, 200, 0.8);
           margin: 0 0 1.5rem 0;
           line-height: 1.5;
           font-size: 0.95rem;

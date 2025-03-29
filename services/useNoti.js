@@ -81,6 +81,7 @@ const useNotiData = (endpoint, limit) => {
     throw err; // Re-lanzar para manejar en el componente
   }
  };
+ 
   // Función para eliminar una notificación (protegida)
   const deleteItem = async (id) => {
     try {

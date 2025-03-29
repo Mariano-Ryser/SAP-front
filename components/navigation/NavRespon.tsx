@@ -118,7 +118,7 @@ export default function NavRespon() {
         className='buttonLoggout'
         onClick={logout}
       >
-        <span className="logout-icon">⏻</span>
+        <span className="logout-icon">X</span>
       </button>
 
       <style jsx>{`
@@ -152,14 +152,11 @@ export default function NavRespon() {
         .buttonLoggout:hover {
           transform: scale(1.1);
           box-shadow: 0 0 10px 2px #0af,
-                      0 0 30px 5px rgba(77, 201, 24, 0.6);
-                    
+                      0 0 30px 5px rgba(77, 201, 24, 0.6);      
         }
-        
         .logout-icon {
           transform: translateY(-1px);
         }
-
         .nav {
           position: fixed;
           bottom: 4rem;
@@ -167,7 +164,7 @@ export default function NavRespon() {
           width: 8rem;
           display: flex;
           align-items: center;
-          z-index: 2;
+          z-index: 6;
         }
 
         .burger {
@@ -178,17 +175,18 @@ export default function NavRespon() {
           transition: transform 0.2s ease;
           cursor: pointer;
           filter: drop-shadow(0 0 5px rgba(10, 175, 255, 0.7));
-          z-index: 3;
+          z-index: 6;
         }
         
         .burger.active {
           filter: drop-shadow(0 0 10px rgba(255, 10, 175, 0.9));
+          z-index: 6;
         }
         
         .burger-icon {
           transition: all var(--transition-speed) ease;
           position: relative;
-          z-index: 2;
+          z-index: 6;
         }
         
         .burger:hover .burger-icon {
@@ -235,7 +233,7 @@ export default function NavRespon() {
           transition: 
             transform var(--transition-speed) ease-in-out,
             opacity var(--transition-speed) ease;
-          z-index: 1;
+          z-index: 5;
           padding-top: 4.1rem;
           text-align: center;
           pointer-events: none;

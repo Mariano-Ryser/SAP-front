@@ -134,11 +134,7 @@ function Noti({ limit = 100 }) {
         
         .cyber-form {
           position: relative;
-          padding: 2rem;
-          border: var(--cyber-border);
-          border-radius: 5px;
-          box-shadow: var(--cyber-glow);
-          backdrop-filter: blur(10px);
+          padding-bottom: 2rem;
         }
         
         .cyber-header {
@@ -428,19 +424,17 @@ function Noti({ limit = 100 }) {
         
         @media (max-width: 768px) {
           .cyber-container {
-            padding: 1rem;
           }
           
           .cyber-form {
-            padding: 1.5rem;
+            padding-bottom: 1.5rem;
           }
           
           .cyber-news-card {
-            padding: 1.5rem;
           }
           
           .cyber-news-title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
           }
         }
       `}</style>

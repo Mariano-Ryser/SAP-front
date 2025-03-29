@@ -77,9 +77,7 @@ export default function About() {
           position: relative;
           padding: 2rem;
           background: rgba(20, 25, 35, 0.7);
-          border: 1px solid rgba(10, 175, 255, 0.3);
           border-radius: 5px;
-          box-shadow: 0 0 20px rgba(10, 175, 255, 0.3);
           backdrop-filter: blur(10px);
         
         }

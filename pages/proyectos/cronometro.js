@@ -55,7 +55,7 @@ const Cronometro = () => {
     <>
    
       <div className="cronometro-futurista">
-        <h1>Cronómetro Futurista</h1>
+        <h1>Cronó</h1>
         <div className="tiempo">{formatTiempo(segundos)}</div>
         <div className="botones">
           {!activo || pausado ? (

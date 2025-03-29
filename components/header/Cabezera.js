@@ -8,7 +8,7 @@ const Cabezera = () => {
 
   const menuItems = [
     { href: "/proyectos", text: "Proyectos" },
-    { href: "/about", text: "About Me" },
+    { href: "/about", text: "About" },
     { href: "/notis", text: "Noticias" },
     { href: "/adminDash", text: "Admin" }
   ];
@@ -75,7 +75,8 @@ const Cabezera = () => {
           background: var(--glass-dark);
           backdrop-filter: blur(10px);
           border-bottom: 1px solid rgba(10, 175, 255, 0.2);
-          z-index: 1000;
+          z-index: 4;
+          font-size:1.5rem;
         }
 
         .header-container {
@@ -89,10 +90,6 @@ const Cabezera = () => {
         }
 
         .home-link {
-          color: white;
-          font-size: 1.3rem;
-          font-weight: 600;
-          text-decoration: none;
           text-shadow: 0 0 8px var(--neon-blue);
         }
 
@@ -102,34 +99,7 @@ const Cabezera = () => {
           gap: 1.5rem;
         }
 
-        .nav-link {
-          color: white;
-          text-decoration: none;
-          font-size: 1rem;
-          transition: var(--transition);
-          padding: 0.5rem 0;
-          position: relative;
-        }
-
-        .nav-link:hover {
-          color: var(--neon-blue);
-        }
-
-        .nav-link::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background: var(--neon-blue);
-          transition: var(--transition);
-        }
-
-        .nav-link:hover::after {
-          width: 100%;
-        }
-
+    
         /* Botón hamburguesa */
         .hamburger {
           display: flex;
@@ -176,7 +146,6 @@ const Cabezera = () => {
           z-index: 1000;
           transition: var(--transition);
         }
-
         .mobile-menu.open {
           right: 0;
         }
@@ -209,16 +178,18 @@ const Cabezera = () => {
           left: 0;
           width: 100%;
           height: 100vh;
-          background: rgba(0, 0, 0, 0.5);
+          background: rgba(0, 0, 0, 0.75);
           backdrop-filter: blur(2px);
           z-index: 999;
         }
 
         /* Responsive */
         @media (min-width: 768px) {
+          
           .hamburger {
             display: none;
           }
+          
 
           .desktop-nav {
             display: flex;

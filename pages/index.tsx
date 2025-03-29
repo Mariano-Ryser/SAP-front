@@ -56,7 +56,7 @@ export default function Home({ limit = 5 }) {
             </div>
           ))
         )}
-      </div>
+      </div> 
 
       <style jsx>{`
         :root {

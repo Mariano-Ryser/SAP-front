@@ -12,26 +12,6 @@ export const fetchNotis = async () => {
     throw error;
   }
 };
-
-// Crear una nueva notificación
-export const createNoti = async (noti) => {
-  try {
-    const response = await fetch(`${baseURL}/notis`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(noti),
-    });
-    if (!response.ok) {
-      throw new Error('Error al crear notificación');
-    }
-    const data = await response.json();
-    return data.noti;
-  } catch (error) {
-    console.error('Error al crear notificación:', error);
-    throw error;
-  }
-};
-
 // Dar like a una notificación
 export const likeNoti = async (_id) => {
   try {
@@ -50,12 +30,37 @@ export const likeNoti = async (_id) => {
   }
 };
 
+
+// Crear una nueva notificación
+export const createNoti = async (noti) => {
+  try {
+    const response = await fetch(`${baseURL}/notis`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(noti),
+      credentials: 'include', // ⬅️ Asegura que se envíen cookies de autenticación
+    });
+
+    if (!response.ok) {
+      throw new Error('Error al crear notificación');
+    }
+
+    const data = await response.json();
+    return data.noti;
+  } catch (error) {
+    console.error('Error al crear notificación:', error);
+    throw error;
+  }
+};
+
 // Eliminar una notificación
 export const deleteNoti = async (_id) => {
   try {
     const response = await fetch(`${baseURL}/notis/${_id}`, {
       method: 'DELETE',
+      credentials: 'include', // ⬅️ Asegura que se envíen cookies de autenticación
     });
+
     if (!response.ok) {
       throw new Error('Error al eliminar notificación');
     }
@@ -64,4 +69,3 @@ export const deleteNoti = async (_id) => {
     throw error;
   }
 };
-

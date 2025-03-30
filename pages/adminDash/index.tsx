@@ -37,27 +37,6 @@ export default function AdminDash() {
   };
 
 
-  // const handleLogin = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const response = await fetch(`${baseURL}/admin/verify-key`, {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify({ key: accessKey }),
-  //     });
-  //     const data = await response.json();
-
-  //     if (data.success) {
-  //       login(data.token);
-  //     } else {
-  //       setError('Clave incorrecta');
-  //     }
-  //   } catch (error) {
-  //     setError('Error de conexión');
-  //   }
-  // };
-
-
   if (!isAuthenticated) {
     return (
       <div className="login-container">
@@ -270,10 +249,6 @@ export default function AdminDash() {
       <div className="admin-sidebar">
         <div className="sidebar-header">
           <h2 className="sidebar-title">Panel Admin</h2>
-          <div className="user-badge">
-            <span className="user-icon">👤</span>
-            <span>Administrador</span>
-          </div>
         </div>
        
         <nav className="sidebar-nav">
@@ -301,6 +276,8 @@ export default function AdminDash() {
             <span>Notificaciones</span>
           </button>
           
+         
+
           <button 
             className={`nav-item ${activeTab === 'media' ? 'active' : ''}`}
             onClick={() => setActiveTab('media')}
@@ -308,13 +285,14 @@ export default function AdminDash() {
             <span className="nav-icon">🖼️</span>
             <span>Multimedia</span>
           </button>
-          
+
         </nav>
-        
+  
         <button onClick={logout} className="logout-button">
-          <span className="nav-icon">🚪</span>
-          <span>Cerrar sesión</span>
+          <span>Logout</span>
         </button>
+
+     
       </div>
       
       {/* Main Content */}
@@ -326,16 +304,6 @@ export default function AdminDash() {
             {activeTab === 'notifications' && 'Notificaciones'}
             {activeTab === 'media' && 'Multimedia'}
           </h1>
-          <div className="stats-bar">
-            <div className="stat-card">
-              <span className="stat-value">24</span>
-              <span className="stat-label">Nuevos</span>
-            </div>
-            <div className="stat-card">
-              <span className="stat-value">128</span>
-              <span className="stat-label">Totales</span>
-            </div>
-          </div>
         </div>
         
         <div className="content-body">
@@ -374,7 +342,7 @@ export default function AdminDash() {
           flex-direction: column;
           padding: 1.5rem 0;
         }
-        
+         
         .sidebar-header {
           padding: 0 1.5rem 1.5rem;
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -390,17 +358,7 @@ export default function AdminDash() {
           -webkit-text-fill-color: transparent;
         }
         
-        .user-badge {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          font-size: 0.9rem;
-          color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .user-icon {
-          font-size: 1rem;
-        }
+      
         
         .sidebar-nav {
           flex: 1;
@@ -440,10 +398,9 @@ export default function AdminDash() {
         }
         
         .logout-button {
-          display: flex;
           align-items: center;
           gap: 0.8rem;
-          padding: 0.8rem 1rem;
+          padding: 1rem 1rem;
           margin: 1rem;
           border-radius: 6px;
           background: rgba(255, 50, 50, 0.1);
@@ -552,6 +509,8 @@ export default function AdminDash() {
           }
           
           .logout-button {
+            position:absolute;
+            right:0.7rem;
             margin: 0;
             font-size: 0;
             padding: 0.5rem;

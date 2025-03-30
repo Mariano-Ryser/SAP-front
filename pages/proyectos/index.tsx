@@ -116,6 +116,8 @@ export default function ProjectsPage() {
 }
         .cyber-container {
           min-height: 100vh;
+          max-width:900px;
+          margin:auto;
           padding: 2rem;
           background: var(--cyber-dark);
           font-family: 'Courier New', monospace;

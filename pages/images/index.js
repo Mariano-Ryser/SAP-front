@@ -180,6 +180,10 @@ export default function Home() {
       )}
 
       <style jsx>{`
+        .container{
+          max-width:900px;
+          margin:auto;
+        }
         .container-foto-name{
           display: flex;
            align-items: center;  /* Alinea los elementos verticalmente al centro */

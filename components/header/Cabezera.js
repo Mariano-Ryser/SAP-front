@@ -16,7 +16,7 @@ const Cabezera = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <Link href="/" className="home-link">HOME</Link>
+        <Link href="/" className="home-link"><p className='x'>HOME</p></Link>
         
         {/* Menú desktop (solo visible en pantallas grandes) */}
         <nav className="desktop-nav">
@@ -41,7 +41,7 @@ const Cabezera = () => {
 
       {/* Menú móvil (aparece desde la derecha) */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-        <div className="mobile-menu-content">
+        <div className="mobile-menu-content ">
           {menuItems.map((item, index) => (
             <Link 
               key={index} 
@@ -67,7 +67,13 @@ const Cabezera = () => {
         }
 
         /* Header principal */
+        .x{
+          background: linear-gradient(90deg, #fff, #0adaff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
         .header {
+         
           position: fixed;
           top: 0;
           left: 0;
@@ -90,6 +96,7 @@ const Cabezera = () => {
         }
 
         .home-link {
+        
           text-shadow: 0 0 8px var(--neon-blue);
         }
 

@@ -85,37 +85,41 @@ export default function Cubo3D() {
         /* Animaciones individuales para cada cara */
         .face1 {
           background: linear-gradient(135deg, rgba(10, 175, 255, 0.8), rgba(100, 255, 255, 0.4));
-          transform: translateZ(30px);
-          animation: face1-anim 7s infinite ease-in-out;
+          transform: translateZ(70px);
+          animation: face1-anim 9s infinite ease-in-out;
         }
         
         @keyframes face1-anim {
           0%, 100% { transform: translateZ(30px) rotate(0); }
-          25% { transform: translateZ(45px) rotate(15deg); }
-          50% { transform: translateZ(30px) rotate(0); }
-          75% { transform: translateZ(15px) rotate(-15deg); }
+          25% { transform: translateZ(65px) rotate(15deg); }
+          50% { transform: translateZ(30px) rotate(820deg); }
+          75% { transform: translateZ(45px) rotate(-15deg); }
         }
         
         .face2 {
-          background: linear-gradient(135deg, rgba(255, 10, 175, 0.8), rgba(255, 100, 255, 0.4));
+          background: linear-gradient(135deg, rgba(255, 10, 173, 0.62), rgba(255, 100, 255, 0.4));
           transform: translateZ(-30px) rotateY(180deg);
-          animation: face2-anim 4s infinite ease-in-out;
+          animation: face2-anim 9s infinite ease-in-out;
         }
         
         @keyframes face2-anim {
           0%, 100% { transform: translateZ(-30px) rotateY(180deg) scale(1); }
-          33% { transform: translateZ(-45px) rotateY(180deg) scale(0.9); }
+
+
+          33% { transform: translateZ(-125px) rotateY(180deg) scale(0.9); }  
           66% { transform: translateZ(-23px) rotateY(180deg) scale(1.1); }
         }
         
         .face3 {
           background: linear-gradient(135deg, rgba(175, 255, 10, 0.8), rgba(255, 255, 100, 0.4));
           transform: translateX(-30px) rotateY(-90deg);
-          animation: face3-anim 6s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          animation: face3-anim 11s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
         
         @keyframes face3-anim {
-          0%, 100% { transform: translateX(-30px) rotateY(-90deg); }
+
+
+          0%, 100% { transform: translateX(-340px) rotateY(-90deg); }
           50% { transform: translateX(-45px) rotateY(-90deg) translateY(10px); }
         }
         
@@ -127,7 +131,7 @@ export default function Cubo3D() {
         
         @keyframes face4-anim {
           0%, 100% { transform: translateX(30px) rotateY(90deg); }
-          25% { transform: translateX(45px) rotateY(90deg) rotateZ(10deg); }
+          25% { transform: translateX(45px) rotateY(90deg) rotateZ(90deg); }
           50% { transform: translateX(90px) rotateY(90deg) rotateZ(0); }
           75% { transform: translateX(15px) rotateY(90deg) rotateZ(-10deg); }
         }
@@ -140,7 +144,7 @@ export default function Cubo3D() {
         
         @keyframes face5-anim {
           0%, 100% { transform: translateY(-30px) rotateX(90deg); }
-          50% { transform: translateY(-45px) rotateX(90deg) rotateZ(15deg); }
+          50% { transform: translateY(-95px) rotateX(90deg) rotateZ(15deg); }
         }
         
         .face6 {

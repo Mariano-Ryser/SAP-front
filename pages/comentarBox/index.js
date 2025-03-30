@@ -178,7 +178,6 @@ function BoxComentar() {
         }
         
         .cyber-container {
-          
           width: 100%;
           max-width: 45rem;
           margin: 0 auto;
@@ -187,8 +186,7 @@ function BoxComentar() {
         
         .cyber-form {
           position: relative;
-          padding: 1.5rem;
-          margin-bottom: 2rem;
+          margin-bottom: 1.8rem;
           background: var(--cyber-dark);
           border: var(--cyber-border);
           border-radius: 5px;
@@ -197,16 +195,7 @@ function BoxComentar() {
           transition: all 0.3s ease;
         }
         
-        .cyber-form.glow-effect {
-          animation: cyber-glow 1s ease-out;
-        }
-        
-        @keyframes cyber-glow {
-          0% { box-shadow: 0 0 5px rgba(10, 175, 255, 0.5); }
-          50% { box-shadow: 0 0 20px rgba(10, 175, 255, 0.9); }
-          100% { box-shadow: 0 0 10px rgba(10, 175, 255, 0.7); }
-        }
-        
+     
         .cyber-header {
           position: relative;
           margin-bottom: 1.5rem;
@@ -215,11 +204,30 @@ function BoxComentar() {
         .cyber-date {
           text-align: right;
           color: rgba(10, 175, 255, 0.7);
-          font-size: 0.8rem;
+          font-size: 1rem;
           margin: 0;
           position: relative;
           z-index: 2;
-        }
+          background: linear-gradient(
+                to right,
+                transparent 20%,
+                rgba(238, 255, 0, 0.7) 50%, 
+                transparent 80%
+              );
+          background-size: 200% 100%; 
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          animation: shine-gold 9s infinite linear;}
+
+        @keyframes shine-gold {
+              0% {
+                background-position: 100% 50%; 
+              }
+              100% {
+                background-position: -100% 50%; 
+              }
+            }
         
         .cyber-grid {
           position: absolute;
@@ -366,7 +374,7 @@ function BoxComentar() {
         
         .cyber-comment:hover {
           transform: translateY(-1px);
-          box-shadow: 0 0 20px rgba(10, 173, 255, 0.23);
+          box-shadow: 0 0 20px rgba(134, 173, 192, 0.23);
         }
         
         .cyber-comment-header {
@@ -421,7 +429,7 @@ function BoxComentar() {
           font-size: 0.8rem;
           font-style: italic;
         }
-        
+         
         .cyber-comment-grid {
           position: absolute;
           top: 0;
@@ -429,20 +437,21 @@ function BoxComentar() {
           right: 0;
           bottom: 0;
           background-image: 
-            linear-gradient(rgba(10, 175, 255, 0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(10, 175, 255, 0.05) 1px, transparent 1px);
+            linear-gradient(rgba(28, 125, 173, 0.6) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(24, 120, 168, 0.42) 1px, transparent 1px);
           background-size: 15px 15px;
           opacity: 0.2;
           pointer-events: none;
         }
         
+        
         @media (max-width: 768px) {
           .cyber-container {
-            padding: 0 1rem;
+            padding: 0 0.2rem;
           }
           
           .cyber-form {
-            padding: 1rem;
+            padding: 0rem;
           }
           
           .cyber-comment {

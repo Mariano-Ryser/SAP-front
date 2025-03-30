@@ -156,8 +156,8 @@ function Noti({ limit = 100 }) {
           right: 0;
           bottom: 0;
           background-image: 
-            linear-gradient(rgba(10, 175, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(10, 175, 255, 0.1) 1px, transparent 1px);
+            linear-gradient(rgba(26, 129, 180, 0.42) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(27, 150, 211, 0.27) 1px, transparent 1px);
           background-size: 20px 20px;
           opacity: 0.2;
           z-index: -1;
@@ -275,14 +275,17 @@ function Noti({ limit = 100 }) {
         }
         
         .cyber-news-card {
+          
           position: relative;
-          padding: 2rem;
-          background: rgba(18, 90, 112, 0.25);
+          padding: 1rem;
           border: var(--cyber-border);
           border-radius: 5px;
           box-shadow: var(--cyber-glow);
           transition: all 0.3s ease;
           overflow: hidden;
+          background-image: 
+            linear-gradient(rgba(24, 219, 233, 0.53) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(16, 92, 163, 0.95) 1px, transparent 1px);
         }
         
         .cyber-news-card:hover {

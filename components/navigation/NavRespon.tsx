@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState, useContext } from 'react';
 import Test5 from '../cubo3D/cubo3d';
-import { AuthContext } from '../auth/AuthProvider';
-import Noti from "../../pages/notis"
+
+import { AuthContext  } from '../auth/AuthProvider';
 
 export default function NavRespon() {
   const [isOpen, setIsOpen] = useState(false);
@@ -114,12 +114,14 @@ export default function NavRespon() {
         </ul>
       </aside>
 
-      <button 
-        className='buttonLoggout'
-        onClick={logout}
-      >
-        <span className="logout-icon">X</span>
-      </button>
+      {isAuthenticated && (
+  <button 
+    className='buttonLoggout'
+    onClick={logout}
+  >
+    <span className="logout-icon">X</span>
+  </button>
+)}
 
       <style jsx>{`
         :root {
@@ -166,7 +168,6 @@ export default function NavRespon() {
           align-items: center;
           z-index: 6;
         }
-
         .burger {
           position: absolute;
           bottom: 5rem;
@@ -234,7 +235,7 @@ export default function NavRespon() {
             transform var(--transition-speed) ease-in-out,
             opacity var(--transition-speed) ease;
           z-index: 5;
-          padding-top: 4.1rem;
+          padding-top: 1.1rem;
           text-align: center;
           pointer-events: none;
         }

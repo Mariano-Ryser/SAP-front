@@ -7,15 +7,16 @@ const Layout = ({ children}) => {
 <>
 
               <NavRespon />   
-                     <Cabezera />   
+                <Cabezera />   
         <div className="content">    
              { children }
         </div>
+        
         <style jsx>{`
         
          .content {
             margin: auto ;
-		width: 900px;
+		width: 100%;
 		max-width: calc(100% - 0.4rem);
 		color: white;
 		font-size: 20px;

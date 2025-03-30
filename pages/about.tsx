@@ -66,6 +66,8 @@ export default function About() {
         .cyber-about-container {
           position: relative;
           min-height: 80vh;
+          max-width:900px;
+          margin:auto;
           padding: 2rem;
           display: flex;
           justify-content: center;

@@ -108,16 +108,16 @@ export default function Home({ limit = 5 }) {
           right: 0;
           bottom: 0;
           background-image: 
-            linear-gradient(rgba(10, 175, 255, 0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(10, 175, 255, 0.05) 1px, transparent 1px);
+            linear-gradient(rgba(10, 173, 255, 0.65) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(10, 153, 86, 0.58) 1px, transparent 1px);
           background-size: 20px 20px;
           opacity: 0.15;
         }
         
         .cyber-noti.neon-pink .cyber-noti-grid {
           background-image: 
-            linear-gradient(rgba(255, 10, 175, 0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 10, 175, 0.05) 1px, transparent 1px);
+            linear-gradient(rgba(196, 207, 40, 0.8) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(12, 145, 185, 0.64) 1px, transparent 1px);
         }
         
         .cyber-noti-title {

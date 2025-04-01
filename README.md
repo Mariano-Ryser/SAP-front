@@ -16,6 +16,30 @@ This portfolio is built on Next.JS where my
 frontend runs, and the backend is deployed
 on Azure, the database interaction is
 created with NodeJs and Mongo DB.
+
+
+You can find my backend on GitHub, which is also open source,
+it now uses Couldinary to upload photos and offers a free trial service.
+
+Enjoy it!
+
+# Frontend .env example
+NEXT_PUBLIC_BACKEND_URL=http://localhost:5000/api/v1
+
+# Backend .env example
+MONGO_DB_PASS=
+MONGO_DB_USER=
+PORT=5000
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+ADMIN_ACCESS_KEY=
+JWT_SECRET=
+NODE_ENV=development
+
+
+
+
           
 
     If you have any good comments or constructive criticism,
@@ -26,3 +50,7 @@ created with NodeJs and Mongo DB.
 
 
 medida cel 380 x 755 
+
+#En caso de subir Erroneamente las carpetas ;/ just for me!
+git check-ignore -v node_modules/
+git check-ignore -v administrationDB/

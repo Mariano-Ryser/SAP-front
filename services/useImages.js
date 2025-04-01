@@ -1,4 +1,5 @@
-// hooks/useImages.js
+//se usa del componente admin
+
 import { useState, useEffect, useCallback } from 'react';
 import {
   fetchImages as fetchImagesService,

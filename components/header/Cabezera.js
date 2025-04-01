@@ -9,7 +9,7 @@ const Cabezera = () => {
   const menuItems = [
     { href: "/proyectos", text: "Proyectos" },
     { href: "/about", text: "About" },
-    { href: "/notis", text: "Noticias" },
+    { href: "/noticias", text: "Noticias" },
     { href: "/adminDash", text: "Admin" }
   ];
 

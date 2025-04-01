@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
+import { AuthContext  } from '../../components/auth/AuthProvider';
 import ImageUploader from './ImageUploader';
 import Skeleton from '../../components/Skeleton';
 
 export default function Home() {
+  const { isAuthenticated} = useContext(AuthContext);
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
   const [images, setImages] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
@@ -25,7 +27,6 @@ export default function Home() {
       setLoading(false); // Finaliza la carga
     }
   };
-
   // Función para dar like a una imagen
   const handleLike = async (id) => {
     await fetch(`${baseURL}/images/${id}/like`, { method: 'POST' });
@@ -92,12 +93,16 @@ export default function Home() {
     <div className="container">
       <h3>Galería de Imágenes</h3>
 
-      <ImageUploader
+{isAuthenticated && (
+  <ImageUploader
         onUpload={(uploadedImageUrl) => {
           const newImage = { imageUrl: uploadedImageUrl };
           setImages((prev) => [newImage, ...prev]);
         }}
       />
+)
+}
+      
 
    {/* GALERIA DE IMAGENES */}
 <div className="image-grid">

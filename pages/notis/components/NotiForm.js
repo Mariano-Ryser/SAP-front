@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 const NotiForm = ({ onSubmit, error, successMessage }) => {
   const [noti, setNoti] = useState({ titulo: '', text: '' });
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setNoti((prev) => ({ ...prev, [name]: value }));

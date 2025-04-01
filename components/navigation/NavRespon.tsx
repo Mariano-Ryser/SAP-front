@@ -85,10 +85,10 @@ export default function NavRespon() {
         
         <ul className="ul">
           <Test5 />
-          
           {[
             { href: "/comentarBox", text: "ComentarBox" },
             { href: "/images", text: "Images" },
+            { href: "/noticias", text: "Noticias" },
             { href: "/notis", text: "Notas" },
             { href: "/products", text: "Products" },
             { href: "/proyectos/icons", text: "Icons" },

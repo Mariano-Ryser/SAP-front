@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef, useState } from 'react';
 import Skeleton from '../components/Skeleton';
 import useNotiData from '../services/useNoti';
 
@@ -18,6 +18,10 @@ export default function Home({ limit = 5 }) {
     
     if (node) observer.current.observe(node);
   }, [loading, hasMore, loadMore]);
+
+
+
+
 
   return ( 
     <>

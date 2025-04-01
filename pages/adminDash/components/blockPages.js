@@ -7,13 +7,19 @@ function BlockPages() {
       id: 1,
       title: "RULETA",
       description: "Herramienta de cálculo con funciones científicas y diseño interactivo",
-      url: "/proyectos/calculadora",
+      url: "/proyectos/ruleta",
     },
     {
       id: 2,
       title: "BUSCADOR DE PALABRAS",
       description: "Ingresar conjunto de letras, y aparecerán palabras",
       url: "/proyectos/buscaPalabra",
+    },
+    {
+      id: 3,
+      title: "",
+      description: "Creando diseño de nuevas paginas Personal tools! ",
+      url: "/proyectos/test",
     },
   ];
 

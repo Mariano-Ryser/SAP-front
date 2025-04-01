@@ -34,9 +34,6 @@ export default function About() {
               hostility to new ideas and contagious collective impatience.
             </p>
             
-            <p className="cyber-text">
-              I know I'm crazy, but nothing will change my destiny, only death.
-            </p>
             
             <p className="cyber-text">
               If you have any good comments or constructive criticism, they are always helpful to me. 
@@ -44,21 +41,8 @@ export default function About() {
             </p>
           </div>
           
-          <div className="cyber-social-links">
-              <a className="cyber-social-link" target="_blank" rel="noopener noreferrer">
-            <Link href="https://github.com/Mariano-Ryser" passHref>
-                <span className="cyber-social-icon">{"</>"}</span>
-                <span className="cyber-social-text">GitHub</span>
-            </Link>
-              </a>
-            
-              <a className="cyber-social-link" target="_blank" rel="noopener noreferrer">
-            <Link href="https://www.linkedin.com/in/mariano-ryser-073731221/" passHref>
-                <span className="cyber-social-icon">{"</>"}</span>
-                <span className="cyber-social-text">LinkedIn</span>
-            </Link>
-              </a>
-          </div>
+     
+        
         </div> 
       </div>
 
@@ -78,7 +62,6 @@ export default function About() {
         .cyber-about-content {
           position: relative;
           padding: 2rem;
-          background: rgba(20, 25, 35, 0.7);
           border-radius: 5px;
           backdrop-filter: blur(10px);
         
@@ -102,7 +85,7 @@ export default function About() {
           margin: 0;
           color: rgba(200, 220, 255, 0.9);
           font-family: 'Courier New', monospace;
-          font-size: 1.1rem;
+          font-size: 1.7rem;
           line-height: 1.6;
           position: relative;
           padding-left: 1rem;
@@ -176,15 +159,15 @@ export default function About() {
         
         @media (max-width: 768px) {
           .cyber-about-container {
-            padding: 1rem;
+            padding: 0rem;
           }
           
           .cyber-about-content {
-            padding: 1.5rem;
+            padding: 0rem;
           }
           
           .cyber-text {
-            font-size: 1rem;
+            font-size: 1.3rem;
           }
           
           .cyber-social-links {

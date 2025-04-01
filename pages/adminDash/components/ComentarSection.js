@@ -1,5 +1,5 @@
 // components/admin/AdminSection.js
-import useAdminData from '../../../services/useAdminData';
+import useAdminData from '../../../services/useComentar';
 import { useState } from 'react';
 const ComentarSection = () => {
   const { data, loading, error, deleteItem, likeItem } = useAdminData('comentars');

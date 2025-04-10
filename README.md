@@ -49,7 +49,7 @@ NODE_ENV=development
                     so I await your return!
 
 
-medida cel 380 x 755 
+medida cel 380 x 700
 
 #En caso de subir Erroneamente las carpetas ;/ just for me!
 git check-ignore -v node_modules/

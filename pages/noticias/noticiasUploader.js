@@ -114,15 +114,15 @@ export default function NoticiasUploader({ onClose, onSubmit }) {
           </div>
 
           <div className={"formGroup"}>
-  <label>Imagen*</label>
-  <input
-    type="file"
-    accept="image/*"
-    onChange={handleFileChange}
-    ref={fileInputRef}
-    required
-  />
-</div>
+        <label>Imagen*</label>
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleFileChange}
+          ref={fileInputRef}
+          // required
+        />
+      </div>
 
           <div className={"formGroup"}>
             <label>Fuente*</label>
@@ -145,7 +145,7 @@ export default function NoticiasUploader({ onClose, onSubmit }) {
                   name="subtitulo"
                   value={seccion.subtitulo}
                   onChange={(e) => handleSeccionChange(index, e)}
-                  required={index === 0}
+                //no es obligatorio
                   />
               </div>
 
@@ -155,7 +155,7 @@ export default function NoticiasUploader({ onClose, onSubmit }) {
                   name="contenido"
                   value={seccion.contenido}
                   onChange={(e) => handleSeccionChange(index, e)}
-                  required={index === 0}
+                  //no es obligatorio
                   />
               </div>
 
@@ -323,3 +323,4 @@ export default function NoticiasUploader({ onClose, onSubmit }) {
             </>
   );
 }
+

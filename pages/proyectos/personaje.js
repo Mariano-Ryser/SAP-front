@@ -72,7 +72,6 @@ function Personaje() {
 
   return (
     <>
-<Link href="/proyectos/proyects"><li>/proyects..</li></Link>
     <div className='container'>
         <form className="form">
             <p>Cree su personaje </p>

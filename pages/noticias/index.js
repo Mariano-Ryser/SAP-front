@@ -1,8 +1,9 @@
 import { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../../components/auth/AuthProvider';
 import NoticiasUploader from './noticiasUploader';
+import NoticiasList from './NoticiasList';
 
-export default function Noticia() {
+export default function NoticiasPage() {
   const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
   const { isAuthenticated } = useContext(AuthContext);
   const [showModal, setShowModal] = useState(false);
@@ -10,19 +11,21 @@ export default function Noticia() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState('');
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
-  // Función para cargar noticias
-  const fetchNoticias = async () => {
+  const fetchNoticias = async (pageNum = 1) => {
     try {
       setLoading(true);
-      const response = await fetch(`${baseURL}/noticias`);
+      const response = await fetch(`${baseURL}/noticias?page=${pageNum}&limit=12`);
       const data = await response.json();
       
       if (!response.ok) {
         throw new Error(data.error || 'Error al obtener noticias');
       }
       
-      setNoticias(data.noticias || data);
+      setNoticias(data.noticias);
+      setTotalPages(data.pages);
       setLoading(false);
     } catch (err) {
       setError(err.message);
@@ -30,7 +33,6 @@ export default function Noticia() {
     }
   };
 
-  // Cargar noticias al montar el componente
   useEffect(() => {
     fetchNoticias();
   }, []);
@@ -39,7 +41,7 @@ export default function Noticia() {
     try {
       const response = await fetch(`${baseURL}/noticias`, {
         method: 'POST',
-        body: formData // FormData ya incluye todos los campos
+        body: formData
       });
   
       const data = await response.json();
@@ -72,6 +74,7 @@ export default function Noticia() {
         method: 'DELETE'
       });
       
+
       const data = await response.json();  
       
       if (!response.ok) {
@@ -79,7 +82,7 @@ export default function Noticia() {
       }
 
       setSuccessMessage('Noticia eliminada con éxito!');
-      await fetchNoticias(); // Recargar noticias
+      await fetchNoticias(page);
       setTimeout(() => setSuccessMessage(''), 3000);
     } catch (error) {
       console.error('Error:', error);
@@ -88,7 +91,12 @@ export default function Noticia() {
     }
   };
 
-  if (loading) {
+  const handlePageChange = (newPage) => {
+    setPage(newPage);
+    fetchNoticias(newPage);
+  };
+
+  if (loading && noticias.length === 0) {
     return <div className="loading">Cargando noticias...</div>;
   }
 
@@ -97,18 +105,19 @@ export default function Noticia() {
   }
 
   return (
-    <>
-     {/* Mensajes de feedback */}
-     {successMessage && (
+    <div className="noticias-page">
+      {successMessage && (
         <div className="success-message">
           {successMessage}
         </div>
       )}
+      
       {error && (
         <div className="error-message">
           {error}
         </div>
       )}
+      
       {isAuthenticated && (
         <button 
           className='uploader-noticias-button'
@@ -125,172 +134,49 @@ export default function Noticia() {
         />
       )}
 
-      <div className="container-noticias">
-        {noticias.length > 0 ? (
-          noticias.map((noticia) => (
-            <article key={noticia._id} className="noticia">
-              <header>
-              {isAuthenticated && (
-              <button 
-                className="eliminar-noticia-button"
-                onClick={() => eliminarNoticia(noticia._id)}
-              >
-                <span className="eliminar-icon">×</span>
-              </button>
-            )}
-                <h1 className="titulo">{noticia.titulo}</h1>
-                <div className="meta-info">
-                  <span className="autor">Por: {noticia.autor}</span>
-                  <span className="fecha">Publicado: {noticia.fecha}</span>
-                  <span className="hora">{noticia.hora}</span>
-                </div>
-                <p className="descripcion">{noticia.descripcion}</p>
-              </header>
-              
-              {noticia.imagen && (
-                <div className="imagen-container">
-                  <img 
-                    src={noticia.imagen} 
-                    alt={noticia.titulo}
-                    className="imagen-noticia"
-                  />
-                  <p className="pie-imagen">Fuente: {noticia.fuente}</p>
-                </div>
-              )}
-              
-              <div className="contenido-noticia">
-                {noticia.secciones?.map((seccion, index) => (
-                  <div key={index}>
-                    {seccion.subtitulo && <h2 className="subtitulo">{seccion.subtitulo}</h2>}
-                    {seccion.contenido && <p>{seccion.contenido}</p>}
-                  </div>
-                ))}
-              </div>
-
-              
-              <footer className="noticia-footer">
-                <p className="fuente">Fuente: {noticia.fuente}</p>
-                <p className="actualizacion">Última actualización: {noticia.actualizacion}</p>
-               
-              </footer>
-              
-            </article>
-          ))
-        ) : (
-          <p>No hay noticias disponibles</p>
-        )}
-      </div>
+      <h1 className="page-title">Últimas Noticias</h1>
+      
+      <NoticiasList 
+        noticias={noticias} 
+        isAuthenticated={isAuthenticated}
+        eliminarNoticia={eliminarNoticia}
+      />
+      
+      {noticias.length > 0 && (
+        <div className="pagination">
+          <button 
+            onClick={() => handlePageChange(page - 1)} 
+            disabled={page === 1}
+          >
+            Anterior
+          </button>
+          
+          <span>Página {page} de {totalPages}</span>
+          
+          <button 
+            onClick={() => handlePageChange(page + 1)} 
+            disabled={page === totalPages}
+          >
+            Siguiente
+          </button>
+        </div>
+      )}
       
       <style jsx>{`
-        .container-noticias {
-          height: auto;
-          max-width: 800px;
-          margin: 1rem auto;
-          display: grid;
-          gap: 1.5rem;
-          padding: 1rem;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          line-height: 1.6;
+        .noticias-page {
+          padding: 0rem;
+          max-width: 1200px;
+          margin: 0 auto;
+          color:white;
         }
         
-        .noticia {
-          display: grid;
-          gap: 1.2rem;
-        }
-        
-        .titulo {
-          font-size: 2.8rem;
-          margin-bottom: 0.5rem;
-        }
-        
-        .meta-info {
-          display: flex;
-          gap: 1rem;
-          font-size: 0.9rem;
-          margin-bottom: 1rem;
-        }
-        
-        .descripcion {
-          font-size: 1.1rem;
-          font-weight: 500;
-          margin-bottom: 1.5rem;
-        }
-        
-        .imagen-noticia {
-          width: 100%;
-          height: auto;
-          display: block;
-          transition: transform 0.3s;
-        }
-        
-        .pie-imagen {
-          font-size: 0.8rem;
+        .page-title {
           text-align: center;
-          margin-top: 0.5rem;
+          margin: 2rem 0;
+          font-size: 2.5rem;
+          color:white;
         }
         
-        .contenido-noticia {
-          display: grid;
-          gap: 1rem;
-        }
-        
-        .contenido-noticia p {
-          margin: 0;
-        }
-        
-        .subtitulo {
-          font-size: 1.6rem;
-          margin-top: 1.3rem;
-          margin-bottom: 0.5rem;
-        }
-        
-        .noticia-footer {
-          margin-top: 2rem;
-          padding-top: 1rem;
-          border-top: 1px solid #eee;
-          font-size: 0.85rem;
-        }
-        
-        .fuente {
-          font-style: italic;
-        }
-        .uploader-noticias-button {
-          font-size: 1.5rem;
-          z-index: 2;
-          position: fixed;
-          right: 20px;
-          background-color: rgba(17, 211, 10, 0.58);
-          border-radius: 50%;
-          height: 40px;
-          width: 40px;
-          border: 1px solid rgba(250, 235, 215, 0);
-          transition: all 0.1s ease;
-          color: white;
-        }
-        .uploader-noticias-button:hover{
-            background-color: rgb(17, 211, 10);
-        }
-        .eliminar-noticia-button {
-          position: relative;
-        
-          background-color: rgba(211, 17, 10, 0.58);
-          border-radius: 50%;
-          height: 30px;
-          width: 30px;
-          border: none;
-          color: white;
-          font-size: 1.2rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition: all 0.2s ease;
-        }
-        
-        .eliminar-noticia-button:hover {
-          background-color: rgb(211, 17, 10);
-          transform: scale(1.1);
-        }
         .success-message {
           position: fixed;
           top: 20px;
@@ -323,36 +209,69 @@ export default function Noticia() {
           90% { opacity: 1; }
           100% { opacity: 0; }
         }
-
+        
+        .uploader-noticias-button {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: rgba(17, 211, 10, 0.58);
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+          border: none;
+          color: white;
+          font-size: 1.8rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          z-index: 100;
+        }
+        
+        .uploader-noticias-button:hover {
+          background-color: rgb(17, 211, 10);
+          transform: scale(1.1);
+        }
+        
+        .pagination {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          margin: 2rem 0;
+        }
+        
+        .pagination button {
+          padding: 0.5rem 1rem;
+          background-color: #0070f3;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+        
+        .pagination button:disabled {
+          cursor: not-allowed;
+        }
+        
+        .pagination button:hover:not(:disabled) {
+          background-color: #005bb5;
+        }
+        
         @media (max-width: 768px) {
-          .container-noticias {
-            padding: 0.5rem;
-          }
-          
-          .titulo {
-            font-size: 1.5rem;
-          }
-          
-          .meta-info {
-            flex-direction: column;
-            gap: 0.3rem;
-          }
-          
-          .descripcion {
-            font-size: 1rem;
-          }
-          
-          .subtitulo {
-            font-size: 1.2rem;
+          .page-title {
+            font-size: 1.8rem;
           }
           
           .uploader-noticias-button {
-            right: 10px;
-            top: auto;
+            height: 40px;
+            width: 40px;
+            font-size: 1.5rem;
           }
         }
       `}</style>
-      </>
-      );
-    }
-
+    </div>
+  );
+}

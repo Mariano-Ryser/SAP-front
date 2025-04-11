@@ -3,25 +3,31 @@ import { useState } from 'react';
 import { useProduct } from '../../services/useProducts';
 import { formatCurrency } from '../../utils/formatters';
 import { ProductCreator } from './productCreator';
+import { ProductEditor } from './productEditor';
 
 export function ListProduct() {
   const {
-    product,  
+    product,
     products,
     total,
     loading,
     error,
+    updateProduct,
     handleChange,
     createProduct,
     deleteProduct,
     fetchProducts,
+    setProductToEdit,
     filters,
     handleFilterChange,
     applyFilters,
     resetFilters
   } = useProduct();
 
+  // Estados de modales
   const [showModal, setShowModal] = useState(false);
+  const [editingProduct, setEditingProduct] = useState(null);
+  const [showFilters, setShowFilters] = useState(false);
 
   // Opciones para los selects
   const sortOptions = [
@@ -41,7 +47,13 @@ export function ListProduct() {
   return (
     <div className="cyber-container">
       {/* Filtros compactos */}
-      <div className="cyber-filters-compact">
+              <button
+          className="cyber-small-button toggle-filters-button"
+          onClick={() => setShowFilters(!showFilters)}
+        >
+          {showFilters ? 'Ocultar Filtros' : 'Mostrar Filtros'}
+        </button>
+        <div className={`cyber-filters-compact ${showFilters ? 'show' : ''}`}>
         <select
           className="cyber-filter-select"
           name="sort"
@@ -103,7 +115,7 @@ export function ListProduct() {
         </button>
       </div>
 
-      {/* Lista tipo Excel */}
+      {/* Lista tipo tabla con estilo elegante */}
       <div className="cyber-excel-table">
         <div className="cyber-excel-header">
           <div className="cyber-excel-cell">Imagen</div>
@@ -114,15 +126,22 @@ export function ListProduct() {
           <div className="cyber-excel-cell">Acciones</div>
         </div>
 
-        {products.length === 0 ? (
+        {products.length === 0 ? ( 
           <div className="cyber-excel-row">
             <div className="cyber-excel-cell" colSpan="6">
               No se encontraron productos
             </div>
           </div>
-        ) : (
+        ) : ( 
           products.map((product) => (
-            <div key={product._id} className="cyber-excel-row">
+            <div
+             key={product._id}
+              className="cyber-excel-row"
+              onClick={() => {
+                setEditingProduct(product);
+                setProductToEdit(product); // Establecer el producto a editar
+              }}
+            >
               <div className="cyber-excel-cell">
                 {product.imagen && (
                   <img 
@@ -137,13 +156,16 @@ export function ListProduct() {
               <div className="cyber-excel-cell">{product.category}</div>
               <div className="cyber-excel-cell">{product.supplier}</div>
               <div className="cyber-excel-cell">
-                <button
-                  className="cyber-excel-delete"
-                  onClick={() => deleteProduct(product._id)}
-                  disabled={loading}
-                >
-                  Eliminar
-                </button>
+              <button
+                className="cyber-excel-delete"
+                onClick={(e) => {
+                  e.stopPropagation();  // Detener la propagación para evitar que se active el evento de la fila
+                  deleteProduct(product._id);
+                }}
+                disabled={loading}
+              >
+                Eliminar
+              </button>
               </div>
             </div>
           ))
@@ -153,6 +175,22 @@ export function ListProduct() {
       <div className="cyber-total">
         Total: {formatCurrency(total)} CRD
       </div>
+
+      {editingProduct && (
+        <ProductEditor
+          product={editingProduct}
+          handleChange={handleChange}
+          updateProduct={(e, updatedProduct) => {
+            updateProduct(e, updatedProduct).then(() => {
+              if (!error) setEditingProduct(null);
+            });
+          }}
+          deleteProduct={deleteProduct}
+          loading={loading}
+          error={error}
+          onClose={() => setEditingProduct(null)}
+        />
+      )}
 
       {showModal && (
         <ProductCreator
@@ -169,143 +207,185 @@ export function ListProduct() {
         />
       )}
 
-      <style jsx>{`
-        .cyber-container {
-          padding: 1rem;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-        
-        .cyber-filters-compact {
-          display: flex;
-          gap: 0.5rem;
-          margin-bottom: 1rem;
-          flex-wrap: wrap;
-        }
-        
-        .cyber-filter-select {
-          padding: 0.5rem;
-          background: rgba(0, 5, 15, 0.7);
-          border: var(--cyber-border);
-          border-radius: 3px;
-          color: rgba(10, 175, 255, 0.9);
-          font-family: 'Courier New', monospace;
-          font-size: 0.8rem;
-          min-width: 120px;
-        }
-        
-        .cyber-small-button {
-          padding: 0.5rem 1rem;
-          background: rgba(10, 50, 80, 0.8);
-          border: 1px solid rgba(10, 175, 255, 0.5);
-          color: white;
-          font-family: 'Courier New', monospace;
-          font-size: 0.8rem;
-          cursor: pointer;
-          border-radius: 3px;
-        }
-        
-        .cyber-small-button:hover:not(:disabled) {
-          background: rgba(10, 80, 120, 0.8);
-        }
-        
-        .cyber-small-button.reset {
-          background: rgba(80, 10, 50, 0.8);
-          border-color: rgba(255, 10, 175, 0.5);
-        }
-        
-        .cyber-small-button.reset:hover:not(:disabled) {
-          background: rgba(120, 10, 80, 0.8);
-        }
-        
-        .cyber-small-button.add {
-          background: rgba(10, 80, 50, 0.8);
-          border-color: rgba(10, 255, 175, 0.5);
-        }
-        
-        .cyber-small-button.add:hover:not(:disabled) {
-          background: rgba(10, 120, 80, 0.8);
-        }
-        
-        .cyber-excel-table {
-          width: 100%;
-          border: var(--cyber-border);
-          border-radius: 3px;
-          overflow: hidden;
-        }
-        
-        .cyber-excel-header {
-          display: grid;
-          grid-template-columns: 80px 2fr 1fr 1fr 1fr 100px;
-          background: rgba(10, 15, 25, 0.9);
-          font-weight: bold;
-          text-transform: uppercase;
-          font-size: 0.8rem;
-        }
-        
-        .cyber-excel-row {
-          display: grid;
-          grid-template-columns: 80px 2fr 1fr 1fr 1fr 100px;
-          border-bottom: var(--cyber-border);
-        }
-        
-        .cyber-excel-row:last-child {
-          border-bottom: none;
-        }
-        
-        .cyber-excel-row:hover {
-          background: rgba(10, 175, 255, 0.05);
-        }
-        
-        .cyber-excel-cell {
-          padding: 0.5rem;
-          display: flex;
-          align-items: center;
-          font-size: 0.9rem;
-        }
-        
-        .cyber-excel-image {
-          width: 50px;
-          height: 50px;
-          object-fit: cover;
-          border-radius: 3px;
-          border: var(--cyber-border);
-        }
-        
-        .cyber-excel-delete {
-          padding: 0.3rem 0.6rem;
-          background: rgba(255, 50, 50, 0.2);
-          border: 1px solid rgba(255, 50, 50, 0.5);
-          color: #ff4d4d;
-          font-family: 'Courier New', monospace;
-          font-size: 0.7rem;
-          cursor: pointer;
-          border-radius: 3px;
-        }
-        
-        .cyber-excel-delete:hover:not(:disabled) {
-          background: rgba(255, 50, 50, 0.4);
-        }
-        
-        .cyber-total {
-          margin-top: 1rem;
-          text-align: right;
-          font-weight: bold;
-          color: var(--neon-green);
-        }
-        
-        @media (max-width: 768px) {
-          .cyber-excel-header,
-          .cyber-excel-row {
-            grid-template-columns: 60px 1fr 1fr 100px;
-          }
-          
-          .cyber-excel-cell:nth-child(4),
-          .cyber-excel-cell:nth-child(5) {
-            display: none;
-          }
-        }
-      `}</style>
+<style jsx>{`
+  .cyber-container {
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #1f1f1f; /* Fondo oscuro */
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .cyber-filters-compact {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cyber-filter-select {
+    padding: 0.75rem;
+    background: #333; /* Fondo oscuro para los selects */
+    border: 1px solid #444; /* Borde gris */
+    border-radius: 8px;
+    color: #fff; /* Texto blanco */
+    font-size: 1rem;
+    min-width: 150px;
+    transition: border-color 0.3s;
+  }
+
+  .cyber-filter-select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  .cyber-small-button {
+    padding: 0.6rem 1.2rem;
+    background: #007bff; /* Botones en azul */
+    border: 1px solid #0056b3;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .cyber-small-button:hover:not(:disabled) {
+    background: #0056b3;
+  }
+
+  .cyber-excel-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #2a2a2a; /* Fondo oscuro de la tabla */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .cyber-excel-header {
+    display: grid;
+    grid-template-columns: 100px 2fr 1fr 1fr 1fr 120px;
+    background: #333; /* Fondo oscuro para los encabezados */
+    padding: 1rem;
+    font-weight: 600;
+    color: #ddd; /* Color de texto claro */
+    text-transform: uppercase;
+  }
+
+  .cyber-excel-row {
+    display: grid;
+    grid-template-columns: 100px 2fr 1fr 1fr 1fr 120px;
+    padding: 1rem;
+    border-top: 1px solid #444; /* Borde de las filas */
+    transition: background 0.3s;
+  }
+
+  .cyber-excel-row:hover {
+    background: #444; /* Fondo al hacer hover */
+  }
+
+  .cyber-excel-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    color: #fff; /* Texto blanco */
+  }
+
+  .cyber-excel-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .cyber-excel-delete {
+    padding: 0.4rem 0.8rem;
+    background: #ff5733; /* Botón de eliminar en rojo */
+    border: 1px solid #ff5733;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .cyber-excel-delete:hover:not(:disabled) {
+    background: #e04e2b; /* Color de hover para eliminar */
+  }
+
+  .cyber-total {
+    text-align: right;
+    font-weight: bold;
+    color: #28a745; /* Color verde para el total */
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .cyber-excel-header,
+    .cyber-excel-row {
+      grid-template-columns: 80px 1fr 1fr 1fr 80px;
+    }
+
+    .cyber-excel-cell:nth-child(4),
+    .cyber-excel-cell:nth-child(5) {
+      display: none;
+    }
+  }
+
+  .toggle-filters-button {
+  margin-bottom: 1rem;
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 480px) {
+  .cyber-container {
+    padding: 1rem;
+  }
+
+  .cyber-filters-compact {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cyber-filters-compact.show {
+    display: flex;
+  }
+
+  .cyber-filter-select,
+  .cyber-small-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .cyber-excel-header,
+  .cyber-excel-row {
+    grid-template-columns: 60px 2fr 1fr 80px;
+    font-size: 0.8rem;
+  }
+
+  .cyber-excel-cell {
+    font-size: 0.8rem;
+  }
+
+  .cyber-excel-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cyber-excel-delete {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .cyber-total {
+    font-size: 1rem;
+  }
+}
+`}</style>
     </div>
   );
 }

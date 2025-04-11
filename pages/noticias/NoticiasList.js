@@ -49,7 +49,7 @@ export default function NoticiasList({ noticias, isAuthenticated, eliminarNotici
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
           gap: 2rem;
-          padding: 1rem;
+          padding: 0rem;
         }
         
         .noticia-card {

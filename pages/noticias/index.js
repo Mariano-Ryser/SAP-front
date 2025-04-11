@@ -172,7 +172,7 @@ export default function NoticiasPage() {
         
         .page-title {
           text-align: center;
-          margin: 2rem 0;
+          margin: 0.6rem 0;
           font-size: 2.5rem;
           color:white;
         }

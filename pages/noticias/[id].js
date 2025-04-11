@@ -127,7 +127,7 @@ export default function NoticiaDetalle() {
         .noticia {
           display: grid;
           gap: 1.5rem;
-          padding: 2rem;
+          padding: 0rem;
           border-radius: 8px;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
@@ -135,6 +135,7 @@ export default function NoticiaDetalle() {
         .titulo {
           font-size: 2rem;
           margin-bottom: 0.6rem;
+          margin-top: 0.4rem;
           color:white;
         }
         
@@ -177,7 +178,7 @@ export default function NoticiaDetalle() {
         .contenido-noticia p {
           color:white;
           line-height: 1.6;
-          margin: 0.5rem 0;
+          margin: 0rem 0;
         }
         
         .subtitulo {
@@ -218,11 +219,11 @@ export default function NoticiaDetalle() {
         
         @media (max-width: 768px) {
           .noticia-detalle {
-            padding: 0.5rem;
+            padding: 0rem;
           }
           
           .noticia {
-            padding: 1rem;
+            padding: 0.3rem;
           }
           
           .titulo {

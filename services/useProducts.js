@@ -86,7 +86,6 @@ export const useProduct = () => {
     
     try {
       const formData = new FormData();
-      
       // Agregar todos los campos del producto al FormData
       Object.entries(product).forEach(([key, value]) => {
         if (value !== null && value !== undefined) {
@@ -147,6 +146,61 @@ export const useProduct = () => {
     }
   };
 
+  const updateProduct = async (e, updatedProduct) => { // ✅ ahora recibe updatedProduct
+    e.preventDefault();
+    setLoading(true);
+  
+    try {
+      const formData = new FormData();
+      
+      if (!updatedProduct) {
+        console.error('updatedProduct es undefined o null:', updatedProduct);
+        return;
+      }
+      Object.entries(updatedProduct).forEach(([key, value]) => {
+        if (value !== null && value !== undefined && key !== '_id') {
+          if (key === 'imagen' && value instanceof File) {
+            formData.append(key, value);
+          } else {
+            formData.append(key, value.toString());
+          }
+        }
+      });
+  
+      const res = await fetch(`${baseURL}/products/${updatedProduct._id}`, {
+        method: 'PUT',
+        body: formData,
+      });
+  
+      const data = await res.json();
+  
+      if (data.ok) {
+        setProducts(prev => prev.map(p => p._id === updatedProduct._id ? data.product : p));
+        setError(null);
+        return { success: true };
+      } else {
+        setError(data.message || 'Error al actualizar producto');
+        return { success: false, error: data.message };
+      }
+    } catch (err) {
+      setError('Error al actualizar producto');
+      console.error('Error:', err);
+      return { success: false, error: err.message };
+    } finally {
+      setLoading(false);
+      fetchProducts();
+    }
+  };
+
+
+  // Función para establecer el producto a editar, esta funcion es llamada en el componente mapeado.
+  const setProductToEdit = (productData) => {
+    setProduct({
+      ...productData,
+      _id: productData._id // Asegurarnos de mantener el ID
+    });
+  };
+
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -164,6 +218,8 @@ export const useProduct = () => {
     deleteProduct,
     fetchProducts,
     applyFilters,
-    resetFilters
+    resetFilters,
+    updateProduct,
+    setProductToEdit
   };
 };

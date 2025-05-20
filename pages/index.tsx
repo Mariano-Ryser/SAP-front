@@ -21,6 +21,10 @@ export default function Home({ limit = 5 }) {
 
 
 
+  useEffect(() => {
+    console.log("Datos obtenidos:", notis);
+  }, [notis]);
+
 
 
   return ( 
@@ -45,10 +49,7 @@ export default function Home({ limit = 5 }) {
                 <span className="cyber-pulse"></span>
               </button>
             </div>
-            <div className="cyber-corner cyber-corner-tl"></div>
-            <div className="cyber-corner cyber-corner-tr"></div>
-            <div className="cyber-corner cyber-corner-bl"></div>
-            <div className="cyber-corner cyber-corner-br"></div>
+         
           </div>
         ))}
         
@@ -206,44 +207,7 @@ export default function Home({ limit = 5 }) {
           100% { transform: scale(2); opacity: 0; }
         }
         
-        .cyber-corner {
-          position: absolute;
-          width: 15px;
-          height: 15px;
-          border-color: var(--neon-blue);
-          border-style: solid;
-          border-width: 0;
-          opacity: 0.7;
-          transition: all 0.3s ease;
-        }
-        
-        .cyber-corner-tl {
-          top: 0;
-          left: 0;
-          border-top-width: 2px;
-          border-left-width: 2px;
-        }
-        
-        .cyber-corner-tr {
-          top: 0;
-          right: 0;
-          border-top-width: 2px;
-          border-right-width: 2px;
-        }
-        
-        .cyber-corner-bl {
-          bottom: 0;
-          left: 0;
-          border-bottom-width: 2px;
-          border-left-width: 2px;
-        }
-        
-        .cyber-corner-br {
-          bottom: 0;
-          right: 0;
-          border-bottom-width: 2px;
-          border-right-width: 2px;
-        }
+  
         
         .cyber-noti.neon-pink .cyber-corner {
           border-color: var(--neon-pink);
@@ -283,20 +247,20 @@ export default function Home({ limit = 5 }) {
         
         @media (max-width: 768px) {
           .cyber-notis-container {
-            padding: 0 0.5rem;
+            padding: 0rem;
             gap: 1rem;
           }
           
           .cyber-noti {
-            padding: 1.5rem;
+            padding: 0.5rem;
           }
           
           .cyber-noti-title {
-            font-size: 1.6rem;
+            font-size: 1.2rem;
           }
           
           .cyber-noti-text {
-            font-size: 1.2rem;
+            font-size: 1rem;
           }
         }
       `}</style>

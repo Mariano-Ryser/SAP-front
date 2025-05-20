@@ -185,6 +185,14 @@ export default function Home() {
       )}
 
       <style jsx>{`
+        img{
+          filter: grayscale(100%);
+        }
+        img:hover{
+          filter: grayscale(0);
+          cursor: pointer;
+           transition: all  0.3s;
+        }
         .container{
           max-width:900px;
           margin:auto;
@@ -288,6 +296,7 @@ export default function Home() {
           margin-bottom: 1.5rem;
         }
         .modal-image {
+         
           width: 100%;
           margin-top:0.6rem;
         }

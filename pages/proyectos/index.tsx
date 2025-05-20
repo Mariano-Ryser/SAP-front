@@ -39,7 +39,7 @@ const projects = [
     title: "Quiz Game",
     description: "Juego de pregunta y respuestas.",
     image: "/img/preguntas.png",
-    url: "/proyectos/icons",
+    url: "/proyectos/quizGame",
     tags: ["Mongo Db", "Node Js", "Next Js"]
   },
   {

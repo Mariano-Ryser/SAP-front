@@ -1,5 +1,6 @@
 // components/products/listProduct.js
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { AuthContext  } from '../../components/auth/AuthProvider';
 import { useProduct } from '../../services/useProducts';
 import { formatCurrency } from '../../utils/formatters';
 import { ProductCreator } from './productCreator';
@@ -23,6 +24,8 @@ export function ListProduct() {
     applyFilters,
     resetFilters
   } = useProduct();
+
+  const { isAuthenticated} = useContext(AuthContext);
 
   // Estados de modales
   const [showModal, setShowModal] = useState(false);
@@ -106,13 +109,14 @@ export function ListProduct() {
         >
           Limpiar
         </button>
-
+      {isAuthenticated && (
         <button
           className="cyber-small-button add"
           onClick={() => setShowModal(true)}
         >
           + Nuevo
-        </button>
+        </button> )}
+
       </div>
 
       {/* Lista tipo tabla con estilo elegante */}
@@ -192,7 +196,7 @@ export function ListProduct() {
         />
       )}
 
-      {showModal && (
+      {showModal && ( 
         <ProductCreator
           product={product}
           handleChange={handleChange}

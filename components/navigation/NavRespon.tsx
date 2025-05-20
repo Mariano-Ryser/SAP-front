@@ -97,6 +97,7 @@ export default function NavRespon() {
             { href: "/proyectos/hb/hb", text: "HB" },
             { href: "/proyectos/ruleta", text: "Ruleta" },
             { href: "/adminDash", text: "ADMIN" },
+            
           ].map((item, index) => (
             <Link href={item.href} key={index}>
               <li 
@@ -384,9 +385,22 @@ export default function NavRespon() {
           }
           
           li {
-            width: 90%;
             font-size: 1.4rem;
-            padding: 0.8rem 1.5rem;
+            padding: 0.5rem 1rem;
+          line-height: 1.9rem;
+          margin: 1rem auto;
+          cursor: pointer;
+          color: white;
+          position: relative;
+          max-width: 90%;
+          border-radius: 1px;
+          transition: all var(--transition-speed) ease;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid rgba(10, 175, 255, 0.3);
+          background: rgba(0, 34, 40, 0.5);
+          backdrop-filter: blur(5px);
           }
         }
         

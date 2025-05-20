@@ -1,249 +1,395 @@
-
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-// CREAMOS LA FUNCION
+
 function Personaje() {
-    //CONEXION VARIABLE EN .env
     const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL
 
-    // ESTADO INICIAL PARA CREAR PERSONAJE
     const initialState = {
-        name:'',
-        surname:'',
+        name: '',
+        surname: '',
         edad: 0,
-        email:'',
-        city:'',
-        description:'',
+        email: '',
+        city: '',
+        description: '',
     }
-    // Almacenamos en la variable "personaje" las propiedades al guardar 
+
     const [personaje, setPersonaje] = useState(initialState)
-    // Aqui se setean los personajes traidos de la base de datos...
-    // que podemos en contrar mas abajo en el useEffect
     const [personajes, setPersonajes] = useState([])
+    const [isDeleting, setIsDeleting] = useState(false)
 
-
-    const handleChange = (e) =>{
+    const handleChange = (e) => {
         const inputValue = e.target.value
         const inputName = e.target.name
         setPersonaje({
             ...personaje,
-            [inputName]: inputValue,
+            [inputName]: inputName === 'edad' ? parseInt(inputValue) || 0 : inputValue,
         })
-        console.log(inputName)
-        console.log(inputValue)
     }
-    const handleClick = async(e)=> {
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await fetch(`${baseURL}/personajes`,{  // <----- process.env.NEXT_PUBLIC_BACKEND_URL/products
-                 method:'POST',
-                 headers:{
-                     'Content-Type': 'application/json'
-                 },
-                 body:JSON.stringify(personaje)
-                })
-                
-             const data = await res.json()
-             setPersonaje(initialState)
-                 console.log(data)
-                 console.log({data})
-                 const newPersonajes = [data.personaje, ...personajes]
-                 setPersonajes(newPersonajes) 
-                 console.log("Personaje! creado con exito!")
-                 console.log(newPersonajes)
+            const res = await fetch(`${baseURL}/personajes`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(personaje)
+            })
+            
+            if (!res.ok) throw new Error('Error al crear personaje')
+            
+            const data = await res.json()
+            setPersonaje(initialState)
+            setPersonajes([data.personaje, ...personajes])
         } catch (error) {
-            console.log("Aqui algo anda mal")
-            console.log({error})
+            console.error("Error:", error)
         }
     }
-    const fetchPersonajes = ()=>{
-        fetch(`${baseURL}/personajes`)
-        .then(res => res.json())
-        .then( ({ personajes }) =>{
-            console.log(personajes);
-// se setean aqui los personajes traidos de la base de datos
-            setPersonajes(personajes);
-    })
+
+    const handleDelete = async (id) => {
+        setIsDeleting(true)
+        try {
+            const res = await fetch(`${baseURL}/personajes/${id}`, {
+                method: 'DELETE'
+            })
+            
+            if (!res.ok) throw new Error('Error al eliminar personaje')
+            
+            setPersonajes(personajes.filter(p => p._id !== id))
+        } catch (error) {
+            console.error("Error al eliminar:", error)
+        } finally {
+            setIsDeleting(false)
+        }
     }
 
-    useEffect(()=>{
-     fetchPersonajes();
-    },[]) //<------ [] -- aqui va 
+    const fetchPersonajes = async () => {
+        try {
+            const res = await fetch(`${baseURL}/personajes`)
+            if (!res.ok) throw new Error('Error al obtener personajes')
+            
+            const data = await res.json()
+            // Asegurándonos que siempre sea un array
+            setPersonajes(data.personajes || [])
+        } catch (error) {
+            console.error("Error fetching personajes:", error)
+            setPersonajes([]) // En caso de error, establecemos un array vacío
+        }
+    }
 
-  return (
-    <>
-    <div className='container'>
-        <form className="form">
-            <p>Cree su personaje </p>
-                <span className='name'>Name</span>
-                <input
-                    type='text'
-                    name='name'
-                    value={personaje.name}
-                    onChange={handleChange}
-                  ></input>
-                    <br></br>
+    useEffect(() => {
+        fetchPersonajes()
+    }, [])
 
-                    <span className='surname'>Surname</span><input               
-                        type='text'
-                        name='surname'
-                        value={personaje.surname}
-                        onChange={handleChange}
-                  ></input>
-
-                <br></br>                       
-                {/* <span className='age'>Number</span>
-                <input
-                    type='number'
-                    name='age'
-                    value={personaje.age}
-                    onChange={handleChange}
-                 ></input>     
-
-                <br></br> */}
-                <span className='email'>Email</span><input
-                    type='text'
-                    name='email'
-                    value={personaje.email}
-                    onChange={handleChange}
-                  ></input>
-
-                    <br></br>
-                    <span className='city'>City</span>
-                <input
-                        type='text'
-                        name='city'
-                        value={personaje.city}
-                        onChange={handleChange}
-                  ></input>
-                  <br></br>
-                  <br></br>
-                  <span className='city'>Description</span>
-                  <br></br>
-                  <textarea
-                        className='textarea'
-                        type='text'
-                        name='description'
-                        value={personaje.description}
-                        onChange={handleChange}
-                  ></textarea>
-                <br></br>
-                <br></br>
-                {/* CREATE CHAR BUTTON */}
-                <button
-                    onClick={handleClick}
-                    >Crear personaje
-                </button>
-</form>
-
-        <div> 
-            <div>  
-             {personajes.map(({_id, name, surname, age, email, city,description}) => (
-                <div key={_id} className="listBoxP">
-                    <div >
-                        <span className='name'>Name:</span> <span>{name}</span> <br></br>
-                        <span className='surname'>Surname:</span> <span>{surname}</span><br></br>
-                        {/* <span className='age'>Tel:</span> <span>{age}</span><br></br> */}
-                        <span className='email'>Email:</span> <span>{email}</span><br></br>
-                        <span className='city'>City:</span> <span>{city}</span><br></br>
-                        <span className='description'>Description:</span> <span>{description}</span><br></br>
-                        <br></br>
-                        {/* <div className='img'></div> */}
-
-                    </div>
-                    
-                <div className="x">
-                    <button
-                        onClick={()=>{
-                            fetch(`${baseURL}/personajes/${_id}`, {method:'DELETE'})
-                            .then((res) => res.json())
-                            .then((data)  => {
-                                console.log({data})
-                                fetchPersonajes();
-                            })
-                        }}
-                        >Deletear
-                    </button>
-                    </div>
+    return (
+        <div className="retro-container">
+            <h1 className="retro-title">📼 Personaje Manager 1.0 📼</h1>
+            
+            <div className="retro-grid">
+                {/* Formulario */}
+                <div className="retro-form-container">
+                    <form className="retro-form" onSubmit={handleSubmit}>
+                        <h2 className="retro-form-title">➕ Nuevo Personaje</h2>
+                        
+                        <div className="retro-input-group">
+                            <label className="retro-label">Nombre</label>
+                            <input
+                                className="retro-input"
+                                type="text"
+                                name="name"
+                                value={personaje.name}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        
+                        <div className="retro-input-group">
+                            <label className="retro-label">Apellido</label>
+                            <input
+                                className="retro-input"
+                                type="text"
+                                name="surname"
+                                value={personaje.surname}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        
+                        <div className="retro-input-group">
+                            <label className="retro-label">Email</label>
+                            <input
+                                className="retro-input"
+                                type="email"
+                                name="email"
+                                value={personaje.email}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        
+                        <div className="retro-input-group">
+                            <label className="retro-label">Ciudad</label>
+                            <input
+                                className="retro-input"
+                                type="text"
+                                name="city"
+                                value={personaje.city}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        
+                        <div className="retro-input-group">
+                            <label className="retro-label">Descripción</label>
+                            <textarea
+                                className="retro-textarea"
+                                name="description"
+                                value={personaje.description}
+                                onChange={handleChange}
+                                rows="3"
+                            />
+                        </div>
+                        
+                        <button type="submit" className="retro-button create-button">
+                            Crear Personaje
+                        </button>
+                    </form>
                 </div>
-            ))}
-         </div> 
-        </div> 
-         
-        <style jsx>{`
-           
-
-            
-            .listBoxP{
-                background-color:rgba(10, 118, 73, 0.397);
-                font-size:1rem;
-                font-family:monospace;
-                padding:0.6rem;
-                color:white;
-                margin: 0.3rem auto 0.3rem auto;
-                border: solid 1px rgba(30, 138, 73, 0.897);
                 
-            }
-            .img{
-                background-image:url('/img/me.jpg');
-                background-position: center;
-                background-size:cover;
-                height:6rem;
-                width:4rem
-            }
-           
-        .container{
-}
-.form{
-    background-color:rgba(10, 138, 123, 0.397);
-    color:white;
-    margin: auto;
-    font-family:monospace;
-    padding:1rem;
-    border: solid 1px rgb(92, 92, 92);
-}
-button{
-    font-family:monospace;
-}
-.textarea{
-    width: 15rem;
-    height: 5rem;
-}
+                {/* Lista de Personajes */}
+                <div className="retro-list-container">
+                <h2 className="retro-list-title">🎯 Personajes ({(personajes || []).length})</h2>
+                    
+                    {(personajes || []).length === 0 ? (
+                        <p className="retro-empty">No hay personajes creados</p>
+                         ) : (
+                        <div className="retro-list">
+                            {personajes.map(({_id, name, surname, email, city, description}) => (
+                                <div key={_id} className="retro-card">
+                                    <div className="retro-card-header">
+                                        <h3 className="retro-card-title">{name} {surname}</h3>
+                                        <button
+                                            onClick={() => handleDelete(_id)}
+                                            disabled={isDeleting}
+                                            className="retro-button delete-button"
+                                        >
+                                            {isDeleting ? '⌛' : '🗑️'}
+                                        </button>
+                                    </div>
+                                    
+                                    <div className="retro-card-body">
+                                        <p className="retro-card-text"><span className="retro-card-label">📧 Email:</span> {email}</p>
+                                        <p className="retro-card-text"><span className="retro-card-label">🏙️ Ciudad:</span> {city}</p>
+                                        {description && (
+                                            <p className="retro-card-text">
+                                                <span className="retro-card-label">📝 Descripción:</span> {description}
+                                            </p>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </div>
 
-
-
-
-      
-@media (max-width: 600px) {
-    
-.listBoxP{
-    font-size:1.03rem;
-    font-family:monospace;
-    padding:0.6rem;
-    color:rgb(255, 116, 248);
-    margin: 0.3rem auto 0.3rem auto;
-    border: solid 1px rgb(92, 92, 92);
-}
-    .form{
-    color:white;
-    margin: auto;
-    font-family:monospace;
-    font-size:1rem;
-    padding: 0.5rem;
-    border: solid 1px rgb(92, 92, 92);
-}
-                       
-}
-       
-         `}</style>
-
-        
-
-            
-    </div>
-        
-    </>
-  )
+            <style jsx>{`
+                /* Estilo retro general */
+                :root {
+                    --retro-primary: #ff00ff;
+                    --retro-secondary: #00ffff;
+                    --retro-bg: #121212;
+                    --retro-card-bg: #1a1a1a;
+                    --retro-text: #e0e0e0;
+                    --retro-accent: #ffff00;
+                    --retro-border: 2px solid var(--retro-primary);
+                }
+                
+                body {
+                    background-color: var(--retro-bg);
+                    color: var(--retro-text);
+                    font-family: 'Courier New', monospace;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                .retro-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                
+                .retro-title {
+                    text-align: center;
+                    color: var(--retro-primary);
+                    text-shadow: 2px 2px 0 var(--retro-secondary);
+                    font-size: 2.5rem;
+                    margin-bottom: 30px;
+                    border-bottom: var(--retro-border);
+                    padding-bottom: 10px;
+                }
+                
+                .retro-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    gap: 20px;
+                }
+                
+                /* Estilo del formulario */
+                .retro-form-container {
+                    background-color: var(--retro-card-bg);
+                    border: var(--retro-border);
+                    padding: 20px;
+                    box-shadow: 5px 5px 0 var(--retro-secondary);
+                }
+                
+                .retro-form-title {
+                    color: var(--retro-primary);
+                    margin-top: 0;
+                    font-size: 1.5rem;
+                }
+                
+                .retro-input-group {
+                    margin-bottom: 15px;
+                }
+                
+                .retro-label {
+                    display: block;
+                    margin-bottom: 5px;
+                    color: var(--retro-secondary);
+                    font-weight: bold;
+                }
+                
+                .retro-input, .retro-textarea {
+                    width: 100%;
+                    padding: 8px;
+                    background-color: #2a2a2a;
+                    border: 1px solid var(--retro-primary);
+                    color: var(--retro-text);
+                    font-family: 'Courier New', monospace;
+                }
+                
+                .retro-textarea {
+                    resize: vertical;
+                    min-height: 80px;
+                }
+                
+                /* Estilo de botones */
+                .retro-button {
+                    background-color:rgb(46, 240, 7);
+                    padding: 10px 15px;
+                    border: none;
+                    cursor: pointer;
+                    font-family: 'Courier New', monospace;
+                    font-weight: bold;
+                    transition: all 0.3s;
+                    margin-top: 10px;
+                }
+                
+                .create-button {
+                    color: black;
+                }
+                
+                .create-button:hover {
+                    transform: translate(-2px, -2px);
+                    box-shadow: 3px 3px 0 var(--retro-secondary);
+                }
+                
+                .delete-button {
+                    background-color: #ff0000;
+                    color: white;
+                }
+                
+                .delete-button:hover {
+                    background-color: #ff5555;
+                }
+                
+                .delete-button:disabled {
+                    background-color: #555555;
+                    cursor: not-allowed;
+                }
+                
+                /* Estilo de la lista de personajes */
+                .retro-list-container {
+                    background-color: var(--retro-card-bg);
+                    border: var(--retro-border);
+                    padding: 20px;
+                    box-shadow: 5px 5px 0 var(--retro-secondary);
+                }
+                
+                .retro-list-title {
+                    color: var(--retro-primary);
+                    margin-top: 0;
+                    font-size: 1.5rem;
+                    border-bottom: 1px solid var(--retro-primary);
+                    padding-bottom: 10px;
+                }
+                
+                .retro-empty {
+                    text-align: center;
+                    color: var(--retro-secondary);
+                    font-style: italic;
+                }
+                
+                .retro-list {
+                    display: grid;
+                    gap: 15px;
+                }
+                
+                /* Estilo de las tarjetas de personajes */
+                .retro-card {
+                    background-color: #2a2a2a;
+                    border: 1px solid var(--retro-secondary);
+                    padding: 15px;
+                    position: relative;
+                }
+                
+                .retro-card-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid var(--retro-primary);
+                    padding-bottom: 5px;
+                }
+                
+                .retro-card-title {
+                    margin: 0;
+                    color: var(--retro-primary);
+                }
+                
+                .retro-card-body {
+                    padding: 5px 0;
+                }
+                
+                .retro-card-text {
+                    margin: 5px 0;
+                }
+                
+                .retro-card-label {
+                    color: var(--retro-secondary);
+                    font-weight: bold;
+                }
+              
+                /* Efectos hover para las tarjetas */
+                .retro-card:hover {
+                    transform: translate(-2px, -2px);
+                    box-shadow: 3px 3px 0 var(--retro-primary);
+                }
+                
+                /* Responsive */
+                @media (max-width: 768px) {
+                    .retro-grid {
+                        grid-template-columns: 1fr;
+                    }
+                    
+                    .retro-title {
+                        font-size: 1.8rem;
+                    }
+                }
+            `}</style>
+        </div>
+    )
 }
 
 export default Personaje

@@ -211,7 +211,7 @@ const WortesCard = () => {
               position: absolute;
               z-index: 999;
               font-family: Lato;
-              background-color: rgba(238, 43, 43, 0.94);
+              background-color: rgba(70, 61, 61, 0.94);
               color: rgb(255, 255, 255);
             }
 
@@ -256,6 +256,7 @@ const WortesCard = () => {
               <p>{currentWord.ejemplo1}</p>
               <p>{currentWord.ejemplo2}</p>
               <p>{currentWord.ejemplo3}</p>
+               
             </div>
           </div>
         </div>

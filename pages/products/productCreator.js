@@ -96,6 +96,7 @@ export const ProductCreator = ({
                 name="imagen" 
                 onChange={handleChange} 
                 accept="image/*"
+                capture="environment"
                 className="file-input"
               />
             </label>

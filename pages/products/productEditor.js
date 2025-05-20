@@ -164,17 +164,18 @@ export const ProductEditor = ({
                 name="imagen" 
                 onChange={handleLocalChange}
                 accept="image/*"
+                capture="environment"
                 className="file-input"
               />
  
             </label>
             {localProduct.imagen && localProduct.imagen instanceof File && (
-  <div className="mb-4">
-    <p className="text-sm text-gray-500 mb-2">Vista previa de la imagen:</p>
+  <div className="preview-container">
+    <p >Vista previa de la imagen:</p>
     <img 
       src={URL.createObjectURL(localProduct.imagen)} 
       alt="Vista previa" 
-      className="max-w-full h-auto rounded-lg shadow" 
+      className="preview-image"
     />
   </div>
 )}
@@ -235,6 +236,19 @@ export const ProductEditor = ({
       </div>
 
       <style jsx>{`
+       /* Estilos previsualizacion imagen */
+        .preview-container {
+        margin-top: 1rem;
+        text-align: center;
+      }
+      .preview-image {
+        max-width: 300px; /* Limita el ancho máximo */
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        object-fit: cover;
+      }
+
         .modal-overlay {
           position: fixed;
           top: 0;

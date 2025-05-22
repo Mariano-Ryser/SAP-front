@@ -96,6 +96,7 @@ export default function NavRespon() {
             { href: "/proyectos/personaje", text: "CreateChar" },
             { href: "/proyectos/hb/hb", text: "HB" },
             { href: "/proyectos/ruleta", text: "Ruleta" },
+            { href: "/proyectos/lager/lager", text: "Lager" },
             { href: "/adminDash", text: "ADMIN" },
             
           ].map((item, index) => (

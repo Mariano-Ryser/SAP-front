@@ -39,7 +39,7 @@ export const ProductCreator = ({
               value={product.price}
               onChange={handleChange}
               required
-              step="0.01"
+              step="0.1"
               min="0"
             />
           </div>

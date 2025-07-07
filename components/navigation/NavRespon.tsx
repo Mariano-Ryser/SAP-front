@@ -92,11 +92,12 @@ export default function NavRespon() {
             { href: "/notis", text: "Notas" },
             { href: "/products", text: "Products" },
             { href: "/proyectos/icons", text: "Icons" },
+            { href: "/proyectos/buscaPalabra", text: "Palabras" },
             { href: "/proyectos/DayCard", text: "Deutsch" },
-            { href: "/proyectos/personaje", text: "CreateChar" },
-            { href: "/proyectos/hb/hb", text: "HB" },
-            { href: "/proyectos/ruleta", text: "Ruleta" },
-            { href: "/proyectos/lager/lager", text: "Lager" },
+            // { href: "/proyectos/personaje", text: "CreateChar" },
+            // { href: "/proyectos/hb/hb", text: "HB" },
+            // { href: "/proyectos/ruleta", text: "Ruleta" },
+            // { href: "/proyectos/lager/lager", text: "Lager" },
             { href: "/adminDash", text: "ADMIN" },
             
           ].map((item, index) => (

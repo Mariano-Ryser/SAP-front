@@ -25,7 +25,7 @@ function BoxComentar() {
 
   const handleLike = async (_id) => {
     try {
-      const response = await fetch(`https://mr-app.azurewebsites.net/api/v1/web1/comentars/${_id}/like`, {
+      const response = await fetch(`${baseURL}/comentars/${_id}/like`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
       });

@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "CALCULADORA AVANZADA",
     description: "Herramienta de cálculo con funciones científicas y diseño interactivo",
-    image: "/img/gengar.jpeg",
+    image: "/img/web.png",
     url: "/proyectos/calculadora",
     tags: ["Next Js"]
   },

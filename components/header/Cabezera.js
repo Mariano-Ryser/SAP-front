@@ -7,9 +7,11 @@ const Cabezera = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const menuItems = [
-    { href: "/proyectos", text: "Proyectos" },
+    // { href: "/proyectos", text: "Proyectos" },
     { href: "/about", text: "About" },
+    { href: "/images", text: "Images" },
     { href: "/noticias", text: "Noticias" },
+    { href: "/proyectos/icons", text: "Icons" },
     { href: "/adminDash", text: "Admin" }
   ];
 

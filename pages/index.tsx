@@ -1,4 +1,6 @@
 import { useEffect, useCallback, useRef, useState } from 'react';
+import { AnimatedText, AnimatedWords, AnimatedPhrases } from "../components/animations"
+
 import Skeleton from '../components/Skeleton';
 import useNotiData from '../services/useNoti';
 
@@ -22,10 +24,40 @@ export default function Home({ limit = 5 }) {
   useEffect(() => {
     console.log("Datos obtenidos:", notis);
   }, [notis]);
+   const phrases = [
+      "Digitale Innovation",
+ "Interaktive Erlebnisse",
+ "Kreative Lösungen",
+ "Originelles Design"
+  ];
 
   return ( 
     <>
       <div className="cyber-notis-container">
+          {/* <h3>
+                <AnimatedText 
+                  text="Wilkommen" 
+                  animationType="bounce"
+                  delay={0.08}
+                  duration={0.7}
+                />
+            </h3> */}
+            {/* <div className="description">
+        <AnimatedWords
+          text="Wir entwickeln maßgeschneiderte digitale Lösungen für Ihr individuelles Unternehmen. Unser Schwerpunkt liegt auf Innovation und Benutzerfreundlichkeit."
+          animationType="swing"
+          wordDelay={0.02}
+          duration={0.8}
+        />
+      </div> */}
+      <div className="slogan">
+        <AnimatedPhrases
+          phrases={phrases}
+          animationType="zoom"
+          duration={1.2}
+          interval={4}
+        />
+      </div>
         {notis.map((noti, index) => (
           <div 
             key={noti._id} 

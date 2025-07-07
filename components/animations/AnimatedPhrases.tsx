@@ -19,7 +19,7 @@ interface AnimatedPhrasesProps {
 
 export default function AnimatedPhrases({
   phrases = [],
-  animationType = 'fade',
+  animationType = 'blur',
   delay = 0.5,
   duration = 1,
   interval = 3,
@@ -74,7 +74,7 @@ export default function AnimatedPhrases({
       case 'slideFromLeft': return { ...baseStyle, opacity: 0, transform: 'translateX(-50px)' };
       case 'slideFromRight': return { ...baseStyle, opacity: 0, transform: 'translateX(50px)' };
       case 'blur': return { ...baseStyle, opacity: 1, filter: 'blur(5px)' };
-      case 'zoom': return { ...baseStyle, opacity: 0, transform: 'scale(1.2)' };
+      case 'zoom': return { ...baseStyle, opacity: 0, transform: 'scale(1)' };
       default: return { ...baseStyle, opacity: 0 };
     }
   };

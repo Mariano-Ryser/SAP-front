@@ -185,14 +185,7 @@ export default function Home() {
       )}
 
       <style jsx>{`
-        img{
-          filter: grayscale(100%);
-        }
-        img:hover{
-          filter: grayscale(0);
-          cursor: pointer;
-           transition: all  0.3s;
-        }
+      
         .container{
           max-width:900px;
           margin:auto;
@@ -242,7 +235,6 @@ export default function Home() {
           transition: opacity 0.3s ease;
         }
         .modal-content {
-
           background: #1e1e1e;
           padding-top: 2rem;
           max-height: 100vh;
@@ -395,7 +387,7 @@ export default function Home() {
         }
         .image-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
           gap: 10px;
           margin-top: 20px;
         }

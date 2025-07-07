@@ -87,8 +87,12 @@ export default function AnimatedText({
 
       <style jsx>{`
         .animated-text {
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          width: 100%;
           display: inline-block;
-          line-height: 1.2;
+          line-height: 1.0;
           font-size: clamp(2.8rem, 4vw, 5rem);
           font-weight: 700;
           margin-bottom: 0rem;

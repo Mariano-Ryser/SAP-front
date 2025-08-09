@@ -35,7 +35,7 @@ export default function AdminDash() {
       setError('Error de conexión'); //error en rojo en interfaz
     }
   };
-
+ 
 
   if (!isAuthenticated) {
     return (

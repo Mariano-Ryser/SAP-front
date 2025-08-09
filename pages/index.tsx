@@ -18,14 +18,14 @@ export default function Home({ limit = 5 }) {
       }
     });
     
+    
     if (node) observer.current.observe(node);
   }, [loading, hasMore, loadMore]);
-
+  
   useEffect(() => {
     console.log("Datos obtenidos:", notis);
   }, [notis]);
    const phrases = [
-      "Digitale Innovation",
  "Interaktive Erlebnisse",
  "Kreative Lösungen",
  "Originelles Design"
@@ -164,7 +164,7 @@ export default function Home({ limit = 5 }) {
         }
         
         .cyber-noti.neon-pink .cyber-noti-title {
-          color: rgba(255, 10, 175, 0.9);
+          color: rgba(185, 11, 127, 0.9);
         }
         
         .cyber-noti-text {

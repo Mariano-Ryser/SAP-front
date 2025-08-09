@@ -7,9 +7,10 @@ export default function About() {
       <div className="cyber-about-container">
         <div className="cyber-about-content">
           <div className="cyber-logo-container">
+
             <Image 
               src="/img/oja.png" 
-              alt="Holographic Logo" 
+              alt="Holographic Logoo" 
               width={240} 
               height={190} 
               className="cyber-logo"
@@ -22,6 +23,7 @@ export default function About() {
               It started as a virtual curriculum which later transformed into a blog, and then a complete
               server in which I continue testing and working hard to expand my knowledge on the subject.
             </p>
+            
             
             <p className="cyber-text">
               This portfolio is built on Next.JS where my frontend runs, and the backend is deployed

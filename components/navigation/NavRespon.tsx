@@ -94,6 +94,7 @@ export default function NavRespon() {
             { href: "/proyectos/icons", text: "Icons" },
             { href: "/proyectos/buscaPalabra", text: "Palabras" },
             { href: "/proyectos/DayCard", text: "Deutsch" },
+            { href: "/proyectos/kabala", text: "KabaL" },
             // { href: "/proyectos/personaje", text: "CreateChar" },
             // { href: "/proyectos/hb/hb", text: "HB" },
             // { href: "/proyectos/ruleta", text: "Ruleta" },

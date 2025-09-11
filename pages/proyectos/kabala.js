@@ -25,7 +25,7 @@ const hebrewLetters = [
   { hebreo: "ש", nombre: "Shin", numero: 300, significado: "Fuego, transformación, lo divino manifestado" },
   { hebreo: "ת", nombre: "Tav", numero: 400, significado: "Sello, completitud, verdad final" }
 ];
-פהל
+
 
 // Dataset 2: Palabras de Dios
 const palabrasDeDios = [

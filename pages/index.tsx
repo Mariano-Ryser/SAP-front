@@ -26,9 +26,9 @@ export default function Home({ limit = 5 }) {
     console.log("Datos obtenidos:", notis);
   }, [notis]);
    const phrases = [
- "Interaktive Erlebnisse",
- "Kreative Lösungen",
- "Originelles Design"
+ "פהל",
+ "ילי",
+ "מהש",
   ];
 
   return ( 

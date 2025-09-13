@@ -27,44 +27,112 @@ const hebrewLetters = [
 ];
 
 
-// Dataset 2: Palabras de Dios
+
+// Dataset 2: Nombres de Dios
 const palabrasDeDios = [
+
   {
-    hebreo: "מהש",
-    significado: "Curación",
-    oracion:
-      "El poder de este Nombre trae la energía de la sanación a los niveles más profundos de mi ser, debido a que ahora puedo aceptar toda la responsabilidad por mi condición presente y a que he usado mi energía para concentrarme en otros que también necesitan curación."
-  },
-  {
+     // n1
     hebreo: "והו",
     significado: "Viaje en el tiempo",
     oracion:
       "Despierto la comprensión en mi corazón por anteriores malas acciones. Acepto la franca verdad espiritual de que los problemas en mi vida son el resultado de mis acciones pasadas. Concentrándome en este Nombre ahora, desentierro las semillas negativas que he plantado y, haciendo esto, transformo mi pasado, doy nueva forma a mi presente y creo un futuro lleno de alegría y realización."
   },
   {
+     // n2
     hebreo: "ילי",
     significado: "Recapturando la chispa",
     oracion:
       "Fragmentos de luz son sacados de las entidades destructivas que residen dentro de mí. Su fuerza de vida es cortada y soy reaprovisionado(a) con Energía Divina. La vida crece con más brillo todos y cada uno de los días, ¡como si billones de chispas sagradas retornasen a mi alma!"
   },
    {
+     // n3
     hebreo: "סיט",
     significado: "Haciendo milagros",
     oracion:
       "Me libero de todo egoismo, envidia, ira, y autocompasion. A través de este Nombre, me convierto en un canal puro para que la energía milagrosa de Dios fluya a través del rechazo de estas tentaciones negativas, soy libre para invocar este Nombre y encender de este modo el poder de los milagros en mi vida."
   },
+   {
+     // n4
+    hebreo: "עלם",
+    significado: "Eliminando pensamientos negativos",
+    oracion: "Estoy desconectándome ahora de los pensamientos negativos que emanan de mi ego. En el espacio que he abierto, surge un suave resplandor de Luz espiritual. "
+  },
+
+  // n5
   {
-  hebreo: "ללה",
+    hebreo: "מהש",
+    significado: "Curación",
+    oracion:
+    "El poder de este Nombre trae la energía de la sanación a los niveles más profundos de mi ser, debido a que ahora puedo aceptar toda la responsabilidad por mi condición presente y a que he usado mi energía para concentrarme en otros que también necesitan curación."
+  },
+  // n6
+  {
+    hebreo: "ללה",
     significado: "Estado de ensueño",
     oracion: "Con este Nombre soñaré verdaderamente. Mi alma ascenderá a lugares seguros y amorosos durante la noche. Despertaré con más fuerzas cada mañana. Revigorizado. Renovado en cuerpo y alma. Más sabio."
   },
+  {
+    // n8
+  hebreo: "כהת",
+    significado: "Desactivar la energia negativa y el estres",
+    oracion: "Con su potentísimo poder, te ayudará a purificar y transmutar las energías negativas que te oprimen, reconduciéndote al equilibrio e impregnando todo tu Ser de energía positiva."},
+    // n16
+    {
+    hebreo: "הקם",
+    significado: "Deshaciendose de la depresion",
+    oracion: "Me ha sido conferida la fortaleza emocional para mantenerme erguida/o después de haber tropezado, para levantarme después de haber caído y para resistir cuando el camino parece intolerable."
+  },
    {
+     // n20
    hebreo: "פהל",
     significado: "Victoria sobre las adicciones",
     oracion: "Este Nombre garantiza mi victoria sobre las fuerzas del ego. Estoy impregnada/o de la fortaleza emocional y la disciplina necesaria para triunfar sobre mis impulsos egocéntricos. "
   },
-  
+   {
+     // n21
+   hebreo: "נלך",
+    significado: "Erradicar la plaga",
+    oracion: "Usando este Nombre hago un llamado a la fuerza de la Luz para destruir las plagas de raíz. Pienso en la contaminación, el odio y cualquier otra plaga que infecte el mundo. Ahora invoco la fuerza de la Luz para arrancar estas plagas de raíz.  "
+  },
+   {
+   // n26
+   hebreo: "האא",
+    significado: "Orden a partir del caos",
+    oracion: "Si sientes que necesitas reestructurar tu vida, ya sea a nivel genérico como en algún ámbito concreto, conecta con este Nombre. "
+  },
+   {
+   // n30
+   hebreo: "אום",
+    significado: "Construyendo Puentes",
+    oracion: "Con el poder de este Nombre, extiendo una mano amistosa a las personas con quienes estoy en conflicto, ¡aun si el conflicto es sobre dinero! Despierto la compasión e invoco el coraje para levantar el teléfono y llamar a esa persona justo ahora. ¡Y eso significa ahora mismo! En consecuencia, será construido para mí un puente hacia el Mundo Superior.. "
+  },
+    {
+   // n34
+   hebreo: "להח",
+    significado: "Olvidarse de si mismo",
+    oracion: "Trasciendo ahora los límites de mi propio ser. Me aferro al Árbol de la Vida. La felicidad me descubre ahora que el ego está fuera de mi atención. Puedo apartarme de mi propio camino, dejando ir toda terquedad. . "
+  },
 
+  
+   {
+   // n41
+   hebreo: "ההה",
+    significado: "Sanación general",
+    oracion: "Este Nombre e ayuda a trabajar la conexión con tu parte divina, abriéndote a la sabiduría interior y capacitándote para sanar aquellas heridas que aún están abiertas. "
+  },
+    {
+   // n45
+   hebreo: "סאל",
+    significado: "El poder de la prosperidad",
+    oracion: "Este Nombre es el que nos abre las puertas del Cielo para experimentar la Abundancia Económica. Nos conecta con el sustento y el dinero, abriendo el recipiente para que esto ocurra. Es importante tener en cuenta que la energía de la Prosperidad es el Creador: Él es quien genera toda buena fortuna. Teniendo presente esto, cuando conectes con este Nombre invocarás la energía de la Abundancia para materializar el dinero y el sustento en el Mundo físico. "
+  },
+     {
+   // n51
+   hebreo: "סאל",
+    significado: "El poder de la prosperidad",
+    oracion: "Este Nombre es el que nos abre las puertas del Cielo para experimentar la Abundancia Económica. Nos conecta con el sustento y el dinero, abriendo el recipiente para que esto ocurra. Es importante tener en cuenta que la energía de la Prosperidad es el Creador: Él es quien genera toda buena fortuna. Teniendo presente esto, cuando conectes con este Nombre invocarás la energía de la Abundancia para materializar el dinero y el sustento en el Mundo físico. "
+  },
 ];
 
 export default function Kabala() {
@@ -244,15 +312,13 @@ export default function Kabala() {
           text-shadow: 0 0 40px rgba(255,255,255,0.8);
           animation: float 4s ease-in-out infinite;
           margin-bottom: 1rem;
-           font-family: 'Alef', sans-serif;
         }
         h1 {
-            font-family: 'Alef', sans-serif;
           font-size: 4rem;
           margin: 0;
         }
         h2 {
-             font-family: 'Alef', sans-serif;
+             font-size: clamp(6rem, 20vw, 12rem);
           font-size: 2rem;
           margin-bottom: 1rem;
         }

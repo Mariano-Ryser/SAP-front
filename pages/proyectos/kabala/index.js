@@ -6,7 +6,7 @@ export default function KabalaIndex() {
       <h1 className="titulo">Kabala</h1>
       <ul className="menu">
         <li>
-          <Link href="/proyectos/kabalah/abecedario">Abecedario / 72 Nombre de Dios / Matrix</Link>
+          <Link href="/proyectos/kabala/abecedario">Abecedario / 72 Nombre de Dios / Matrix</Link>
         </li>
         <li>
           <Link href="/proyectos/kabalah/fundamentosCabala">Fundamentos de la Kabala</Link>

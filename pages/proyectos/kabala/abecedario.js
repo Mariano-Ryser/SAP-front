@@ -367,7 +367,7 @@ export default function Kabala() {
 
 @media (max-width: 600px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem; /* un poquito menos de separación */
   }
 
